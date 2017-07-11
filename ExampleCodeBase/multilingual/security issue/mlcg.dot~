@@ -1,0 +1,19 @@
+digraph "Multilingual Call Graph" {
+	label="Multilingual Call Graph";
+
+	Node0x1021684 [shape=rectangle, label="verifyAccount.py"];
+	Node0x6604059 [shape=rectangle, label="checkDb(username, password)"];
+	Node0x1021684 -> Node0x6604059;
+	Node0x6671399 [shape=rectangle, label="printWelcome()"];
+	Node0x1021684 -> Node0x6671399;
+	Node0x4701704 [shape=rectangle, label="open(jsString)"];
+	Node0x6671399 -> Node0x4701704;
+	Node0x6037166 [shape=rectangle, label="OBJ.read()"];
+	Node0x6671399 -> Node0x6037166;
+	Node0x7181784 [shape=rectangle, label="OBJ.JSContext()"];
+	Node0x6671399 -> Node0x7181784;
+	Node0x9415106 [shape=hexagon, color=red, label="ERROR_JavaScript_File_Cannot_Be_Discerned"];
+	Node0x6671399 -> Node0x9415106;
+	Node0x1772266 [shape=rectangle, label="printError()"];
+	Node0x1021684 -> Node0x1772266;
+}

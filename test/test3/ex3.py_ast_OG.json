@@ -1,0 +1,101 @@
+{
+    "body": [
+        {
+            "_type": "ImportFrom", 
+            "col_offset": 0, 
+            "level": 0, 
+            "module": "time", 
+            "names": [
+                {
+                    "_type": "alias", 
+                    "name": "time", 
+                    "asname": null
+                }, 
+                {
+                    "_type": "alias", 
+                    "name": "ctime", 
+                    "asname": null
+                }
+            ], 
+            "lineno": 1
+        }, 
+        {
+            "_type": "Print", 
+            "nl": true, 
+            "col_offset": 0, 
+            "dest": null, 
+            "values": [
+                {
+                    "elts": [
+                        {
+                            "s": "Today is", 
+                            "_type": "Str", 
+                            "lineno": 2, 
+                            "col_offset": 6
+                        }, 
+                        {
+                            "_type": "Call", 
+                            "col_offset": 18, 
+                            "starargs": null, 
+                            "args": [
+                                {
+                                    "_type": "Call", 
+                                    "col_offset": 24, 
+                                    "starargs": null, 
+                                    "args": [], 
+                                    "lineno": 2, 
+                                    "func": {
+                                        "_type": "Name", 
+                                        "ctx": {
+                                            "_type": "Load"
+                                        }, 
+                                        "id": "time", 
+                                        "col_offset": 24, 
+                                        "lineno": 2
+                                    }, 
+                                    "kwargs": null, 
+                                    "keywords": []
+                                }
+                            ], 
+                            "lineno": 2, 
+                            "func": {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "ctime", 
+                                "col_offset": 18, 
+                                "lineno": 2
+                            }, 
+                            "kwargs": null, 
+                            "keywords": []
+                        }
+                    ], 
+                    "_type": "Tuple", 
+                    "ctx": {
+                        "_type": "Load"
+                    }, 
+                    "lineno": 2, 
+                    "col_offset": 6
+                }
+            ], 
+            "lineno": 2
+        }, 
+        {
+            "_type": "Print", 
+            "nl": true, 
+            "col_offset": 0, 
+            "dest": null, 
+            "values": [
+                {
+                    "s": "This is a python file", 
+                    "_type": "Str", 
+                    "lineno": 3, 
+                    "col_offset": 6
+                }
+            ], 
+            "lineno": 3
+        }
+    ], 
+    "_type": "Module"
+}

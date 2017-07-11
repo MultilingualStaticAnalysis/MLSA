@@ -1,0 +1,1097 @@
+{
+    "body": [
+        {
+            "_type": "Import", 
+            "lineno": 14, 
+            "col_offset": 0, 
+            "names": [
+                {
+                    "_type": "alias", 
+                    "name": "os", 
+                    "asname": null
+                }
+            ]
+        }, 
+        {
+            "_type": "Import", 
+            "lineno": 15, 
+            "col_offset": 0, 
+            "names": [
+                {
+                    "_type": "alias", 
+                    "name": "sys", 
+                    "asname": null
+                }
+            ]
+        }, 
+        {
+            "_type": "Import", 
+            "lineno": 16, 
+            "col_offset": 0, 
+            "names": [
+                {
+                    "_type": "alias", 
+                    "name": "json", 
+                    "asname": null
+                }
+            ]
+        }, 
+        {
+            "_type": "ImportFrom", 
+            "col_offset": 0, 
+            "level": 0, 
+            "module": "ast2json", 
+            "names": [
+                {
+                    "_type": "alias", 
+                    "name": "ast2json", 
+                    "asname": null
+                }
+            ], 
+            "lineno": 17
+        }, 
+        {
+            "_type": "Import", 
+            "lineno": 18, 
+            "col_offset": 0, 
+            "names": [
+                {
+                    "_type": "alias", 
+                    "name": "ast", 
+                    "asname": null
+                }
+            ]
+        }, 
+        {
+            "_type": "Import", 
+            "lineno": 19, 
+            "col_offset": 0, 
+            "names": [
+                {
+                    "_type": "alias", 
+                    "name": "testing5", 
+                    "asname": null
+                }
+            ]
+        }, 
+        {
+            "_type": "Import", 
+            "lineno": 20, 
+            "col_offset": 0, 
+            "names": [
+                {
+                    "_type": "alias", 
+                    "name": "testing6", 
+                    "asname": null
+                }
+            ]
+        }, 
+        {
+            "value": {
+                "s": "MLSA: pySA; ", 
+                "_type": "Str", 
+                "lineno": 23, 
+                "col_offset": 8
+            }, 
+            "_type": "Assign", 
+            "lineno": 23, 
+            "col_offset": 0, 
+            "targets": [
+                {
+                    "_type": "Name", 
+                    "ctx": {
+                        "_type": "Store"
+                    }, 
+                    "id": "error", 
+                    "col_offset": 0, 
+                    "lineno": 23
+                }
+            ]
+        }, 
+        {
+            "body": [
+                {
+                    "_type": "Global", 
+                    "lineno": 26, 
+                    "col_offset": 4, 
+                    "names": [
+                        "error"
+                    ]
+                }, 
+                {
+                    "body": [
+                        {
+                            "value": {
+                                "_type": "Call", 
+                                "col_offset": 8, 
+                                "starargs": null, 
+                                "args": [
+                                    {
+                                        "_type": "BinOp", 
+                                        "right": {
+                                            "s": "file passed is not Python", 
+                                            "_type": "Str", 
+                                            "lineno": 29, 
+                                            "col_offset": 23
+                                        }, 
+                                        "col_offset": 17, 
+                                        "lineno": 29, 
+                                        "left": {
+                                            "_type": "Name", 
+                                            "ctx": {
+                                                "_type": "Load"
+                                            }, 
+                                            "id": "error", 
+                                            "col_offset": 17, 
+                                            "lineno": 29
+                                        }, 
+                                        "op": {
+                                            "_type": "Add"
+                                        }
+                                    }
+                                ], 
+                                "lineno": 29, 
+                                "func": {
+                                    "_type": "Attribute", 
+                                    "attr": "exit", 
+                                    "col_offset": 8, 
+                                    "ctx": {
+                                        "_type": "Load"
+                                    }, 
+                                    "value": {
+                                        "_type": "Name", 
+                                        "ctx": {
+                                            "_type": "Load"
+                                        }, 
+                                        "id": "sys", 
+                                        "col_offset": 8, 
+                                        "lineno": 29
+                                    }, 
+                                    "lineno": 29
+                                }, 
+                                "kwargs": null, 
+                                "keywords": []
+                            }, 
+                            "_type": "Expr", 
+                            "lineno": 29, 
+                            "col_offset": 8
+                        }
+                    ], 
+                    "_type": "If", 
+                    "col_offset": 4, 
+                    "lineno": 28, 
+                    "test": {
+                        "_type": "Compare", 
+                        "col_offset": 7, 
+                        "ops": [
+                            {
+                                "_type": "NotIn"
+                            }
+                        ], 
+                        "lineno": 28, 
+                        "comparators": [
+                            {
+                                "_type": "Subscript", 
+                                "slice": {
+                                    "step": null, 
+                                    "upper": null, 
+                                    "_type": "Slice", 
+                                    "lower": {
+                                        "_type": "Num", 
+                                        "lineno": 28, 
+                                        "col_offset": 27, 
+                                        "n": -3
+                                    }
+                                }, 
+                                "col_offset": 20, 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "value": {
+                                    "_type": "Name", 
+                                    "ctx": {
+                                        "_type": "Load"
+                                    }, 
+                                    "id": "pyfile", 
+                                    "col_offset": 20, 
+                                    "lineno": 28
+                                }, 
+                                "lineno": 28
+                            }
+                        ], 
+                        "left": {
+                            "s": ".py", 
+                            "_type": "Str", 
+                            "lineno": 28, 
+                            "col_offset": 7
+                        }
+                    }, 
+                    "orelse": []
+                }, 
+                {
+                    "value": {
+                        "_type": "BinOp", 
+                        "right": {
+                            "s": "_ast.json", 
+                            "_type": "Str", 
+                            "lineno": 32, 
+                            "col_offset": 21
+                        }, 
+                        "col_offset": 14, 
+                        "lineno": 32, 
+                        "left": {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "id": "pyfile", 
+                            "col_offset": 14, 
+                            "lineno": 32
+                        }, 
+                        "op": {
+                            "_type": "Add"
+                        }
+                    }, 
+                    "_type": "Assign", 
+                    "lineno": 32, 
+                    "col_offset": 4, 
+                    "targets": [
+                        {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Store"
+                            }, 
+                            "id": "astfile", 
+                            "col_offset": 4, 
+                            "lineno": 32
+                        }
+                    ]
+                }, 
+                {
+                    "value": {
+                        "_type": "BinOp", 
+                        "right": {
+                            "s": "_call.csv", 
+                            "_type": "Str", 
+                            "lineno": 34, 
+                            "col_offset": 21
+                        }, 
+                        "col_offset": 14, 
+                        "lineno": 34, 
+                        "left": {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "id": "pyfile", 
+                            "col_offset": 14, 
+                            "lineno": 34
+                        }, 
+                        "op": {
+                            "_type": "Add"
+                        }
+                    }, 
+                    "_type": "Assign", 
+                    "lineno": 34, 
+                    "col_offset": 4, 
+                    "targets": [
+                        {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Store"
+                            }, 
+                            "id": "csvfile", 
+                            "col_offset": 4, 
+                            "lineno": 34
+                        }
+                    ]
+                }, 
+                {
+                    "value": {
+                        "_type": "BinOp", 
+                        "right": {
+                            "s": "_rda.csv", 
+                            "_type": "Str", 
+                            "lineno": 36, 
+                            "col_offset": 21
+                        }, 
+                        "col_offset": 14, 
+                        "lineno": 36, 
+                        "left": {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "id": "pyfile", 
+                            "col_offset": 14, 
+                            "lineno": 36
+                        }, 
+                        "op": {
+                            "_type": "Add"
+                        }
+                    }, 
+                    "_type": "Assign", 
+                    "lineno": 36, 
+                    "col_offset": 4, 
+                    "targets": [
+                        {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Store"
+                            }, 
+                            "id": "rdafile", 
+                            "col_offset": 4, 
+                            "lineno": 36
+                        }
+                    ]
+                }, 
+                {
+                    "value": {
+                        "_type": "BinOp", 
+                        "right": {
+                            "s": "_finalcall.csv", 
+                            "_type": "Str", 
+                            "lineno": 38, 
+                            "col_offset": 22
+                        }, 
+                        "col_offset": 15, 
+                        "lineno": 38, 
+                        "left": {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "id": "pyfile", 
+                            "col_offset": 15, 
+                            "lineno": 38
+                        }, 
+                        "op": {
+                            "_type": "Add"
+                        }
+                    }, 
+                    "_type": "Assign", 
+                    "lineno": 38, 
+                    "col_offset": 4, 
+                    "targets": [
+                        {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Store"
+                            }, 
+                            "id": "finalCsv", 
+                            "col_offset": 4, 
+                            "lineno": 38
+                        }
+                    ]
+                }, 
+                {
+                    "body": [
+                        {
+                            "body": [
+                                {
+                                    "body": [
+                                        {
+                                            "_type": "Pass", 
+                                            "lineno": 43, 
+                                            "col_offset": 16
+                                        }
+                                    ], 
+                                    "_type": "With", 
+                                    "col_offset": 17, 
+                                    "optional_vars": null, 
+                                    "lineno": 42, 
+                                    "context_expr": {
+                                        "_type": "Call", 
+                                        "col_offset": 17, 
+                                        "starargs": null, 
+                                        "args": [
+                                            {
+                                                "_type": "Name", 
+                                                "ctx": {
+                                                    "_type": "Load"
+                                                }, 
+                                                "id": "funcfile", 
+                                                "col_offset": 22, 
+                                                "lineno": 42
+                                            }, 
+                                            {
+                                                "s": "w", 
+                                                "_type": "Str", 
+                                                "lineno": 42, 
+                                                "col_offset": 32
+                                            }
+                                        ], 
+                                        "lineno": 42, 
+                                        "func": {
+                                            "_type": "Name", 
+                                            "ctx": {
+                                                "_type": "Load"
+                                            }, 
+                                            "id": "open", 
+                                            "col_offset": 17, 
+                                            "lineno": 42
+                                        }, 
+                                        "kwargs": null, 
+                                        "keywords": []
+                                    }
+                                }
+                            ], 
+                            "_type": "TryExcept", 
+                            "col_offset": 8, 
+                            "handlers": [
+                                {
+                                    "body": [
+                                        {
+                                            "value": {
+                                                "_type": "Call", 
+                                                "col_offset": 12, 
+                                                "starargs": null, 
+                                                "args": [
+                                                    {
+                                                        "_type": "BinOp", 
+                                                        "right": {
+                                                            "s": "cannot create function csv file", 
+                                                            "_type": "Str", 
+                                                            "lineno": 45, 
+                                                            "col_offset": 27
+                                                        }, 
+                                                        "col_offset": 21, 
+                                                        "lineno": 45, 
+                                                        "left": {
+                                                            "_type": "Name", 
+                                                            "ctx": {
+                                                                "_type": "Load"
+                                                            }, 
+                                                            "id": "error", 
+                                                            "col_offset": 21, 
+                                                            "lineno": 45
+                                                        }, 
+                                                        "op": {
+                                                            "_type": "Add"
+                                                        }
+                                                    }
+                                                ], 
+                                                "lineno": 45, 
+                                                "func": {
+                                                    "_type": "Attribute", 
+                                                    "attr": "exit", 
+                                                    "col_offset": 12, 
+                                                    "ctx": {
+                                                        "_type": "Load"
+                                                    }, 
+                                                    "value": {
+                                                        "_type": "Name", 
+                                                        "ctx": {
+                                                            "_type": "Load"
+                                                        }, 
+                                                        "id": "sys", 
+                                                        "col_offset": 12, 
+                                                        "lineno": 45
+                                                    }, 
+                                                    "lineno": 45
+                                                }, 
+                                                "kwargs": null, 
+                                                "keywords": []
+                                            }, 
+                                            "_type": "Expr", 
+                                            "lineno": 45, 
+                                            "col_offset": 12
+                                        }
+                                    ], 
+                                    "_type": "ExceptHandler", 
+                                    "name": null, 
+                                    "col_offset": 8, 
+                                    "lineno": 44, 
+                                    "type": {
+                                        "_type": "Name", 
+                                        "ctx": {
+                                            "_type": "Load"
+                                        }, 
+                                        "id": "IOError", 
+                                        "col_offset": 15, 
+                                        "lineno": 44
+                                    }
+                                }
+                            ], 
+                            "lineno": 41, 
+                            "orelse": []
+                        }
+                    ], 
+                    "_type": "If", 
+                    "col_offset": 4, 
+                    "lineno": 40, 
+                    "test": {
+                        "operand": {
+                            "_type": "Call", 
+                            "col_offset": 11, 
+                            "starargs": null, 
+                            "args": [
+                                {
+                                    "_type": "Name", 
+                                    "ctx": {
+                                        "_type": "Load"
+                                    }, 
+                                    "id": "funcfile", 
+                                    "col_offset": 26, 
+                                    "lineno": 40
+                                }
+                            ], 
+                            "lineno": 40, 
+                            "func": {
+                                "_type": "Attribute", 
+                                "attr": "isfile", 
+                                "col_offset": 11, 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "value": {
+                                    "_type": "Attribute", 
+                                    "attr": "path", 
+                                    "col_offset": 11, 
+                                    "ctx": {
+                                        "_type": "Load"
+                                    }, 
+                                    "value": {
+                                        "_type": "Name", 
+                                        "ctx": {
+                                            "_type": "Load"
+                                        }, 
+                                        "id": "os", 
+                                        "col_offset": 11, 
+                                        "lineno": 40
+                                    }, 
+                                    "lineno": 40
+                                }, 
+                                "lineno": 40
+                            }, 
+                            "kwargs": null, 
+                            "keywords": []
+                        }, 
+                        "_type": "UnaryOp", 
+                        "lineno": 40, 
+                        "col_offset": 7, 
+                        "op": {
+                            "_type": "Not"
+                        }
+                    }, 
+                    "orelse": []
+                }, 
+                {
+                    "body": [
+                        {
+                            "body": [
+                                {
+                                    "value": {
+                                        "_type": "Call", 
+                                        "col_offset": 20, 
+                                        "starargs": null, 
+                                        "args": [
+                                            {
+                                                "_type": "Call", 
+                                                "col_offset": 29, 
+                                                "starargs": null, 
+                                                "args": [
+                                                    {
+                                                        "_type": "Call", 
+                                                        "col_offset": 39, 
+                                                        "starargs": null, 
+                                                        "args": [], 
+                                                        "lineno": 50, 
+                                                        "func": {
+                                                            "_type": "Attribute", 
+                                                            "attr": "read", 
+                                                            "col_offset": 39, 
+                                                            "ctx": {
+                                                                "_type": "Load"
+                                                            }, 
+                                                            "value": {
+                                                                "_type": "Call", 
+                                                                "col_offset": 39, 
+                                                                "starargs": null, 
+                                                                "args": [
+                                                                    {
+                                                                        "_type": "Name", 
+                                                                        "ctx": {
+                                                                            "_type": "Load"
+                                                                        }, 
+                                                                        "id": "pyfile", 
+                                                                        "col_offset": 44, 
+                                                                        "lineno": 50
+                                                                    }
+                                                                ], 
+                                                                "lineno": 50, 
+                                                                "func": {
+                                                                    "_type": "Name", 
+                                                                    "ctx": {
+                                                                        "_type": "Load"
+                                                                    }, 
+                                                                    "id": "open", 
+                                                                    "col_offset": 39, 
+                                                                    "lineno": 50
+                                                                }, 
+                                                                "kwargs": null, 
+                                                                "keywords": []
+                                                            }, 
+                                                            "lineno": 50
+                                                        }, 
+                                                        "kwargs": null, 
+                                                        "keywords": []
+                                                    }
+                                                ], 
+                                                "lineno": 50, 
+                                                "func": {
+                                                    "_type": "Attribute", 
+                                                    "attr": "parse", 
+                                                    "col_offset": 29, 
+                                                    "ctx": {
+                                                        "_type": "Load"
+                                                    }, 
+                                                    "value": {
+                                                        "_type": "Name", 
+                                                        "ctx": {
+                                                            "_type": "Load"
+                                                        }, 
+                                                        "id": "ast", 
+                                                        "col_offset": 29, 
+                                                        "lineno": 50
+                                                    }, 
+                                                    "lineno": 50
+                                                }, 
+                                                "kwargs": null, 
+                                                "keywords": []
+                                            }
+                                        ], 
+                                        "lineno": 50, 
+                                        "func": {
+                                            "_type": "Name", 
+                                            "ctx": {
+                                                "_type": "Load"
+                                            }, 
+                                            "id": "ast2json", 
+                                            "col_offset": 20, 
+                                            "lineno": 50
+                                        }, 
+                                        "kwargs": null, 
+                                        "keywords": []
+                                    }, 
+                                    "_type": "Assign", 
+                                    "lineno": 50, 
+                                    "col_offset": 12, 
+                                    "targets": [
+                                        {
+                                            "_type": "Name", 
+                                            "ctx": {
+                                                "_type": "Store"
+                                            }, 
+                                            "id": "pyAst", 
+                                            "col_offset": 12, 
+                                            "lineno": 50
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "value": {
+                                        "_type": "Call", 
+                                        "col_offset": 12, 
+                                        "starargs": null, 
+                                        "args": [
+                                            {
+                                                "_type": "Call", 
+                                                "col_offset": 20, 
+                                                "starargs": null, 
+                                                "args": [
+                                                    {
+                                                        "_type": "Name", 
+                                                        "ctx": {
+                                                            "_type": "Load"
+                                                        }, 
+                                                        "id": "pyAst", 
+                                                        "col_offset": 31, 
+                                                        "lineno": 51
+                                                    }
+                                                ], 
+                                                "lineno": 51, 
+                                                "func": {
+                                                    "_type": "Attribute", 
+                                                    "attr": "dumps", 
+                                                    "col_offset": 20, 
+                                                    "ctx": {
+                                                        "_type": "Load"
+                                                    }, 
+                                                    "value": {
+                                                        "_type": "Name", 
+                                                        "ctx": {
+                                                            "_type": "Load"
+                                                        }, 
+                                                        "id": "json", 
+                                                        "col_offset": 20, 
+                                                        "lineno": 51
+                                                    }, 
+                                                    "lineno": 51
+                                                }, 
+                                                "kwargs": null, 
+                                                "keywords": [
+                                                    {
+                                                        "_type": "keyword", 
+                                                        "value": {
+                                                            "_type": "Num", 
+                                                            "lineno": 51, 
+                                                            "col_offset": 45, 
+                                                            "n": 4
+                                                        }, 
+                                                        "arg": "indent"
+                                                    }
+                                                ]
+                                            }
+                                        ], 
+                                        "lineno": 51, 
+                                        "func": {
+                                            "_type": "Attribute", 
+                                            "attr": "write", 
+                                            "col_offset": 12, 
+                                            "ctx": {
+                                                "_type": "Load"
+                                            }, 
+                                            "value": {
+                                                "_type": "Name", 
+                                                "ctx": {
+                                                    "_type": "Load"
+                                                }, 
+                                                "id": "f", 
+                                                "col_offset": 12, 
+                                                "lineno": 51
+                                            }, 
+                                            "lineno": 51
+                                        }, 
+                                        "kwargs": null, 
+                                        "keywords": []
+                                    }, 
+                                    "_type": "Expr", 
+                                    "lineno": 51, 
+                                    "col_offset": 12
+                                }
+                            ], 
+                            "_type": "With", 
+                            "col_offset": 13, 
+                            "optional_vars": {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Store"
+                                }, 
+                                "id": "f", 
+                                "col_offset": 35, 
+                                "lineno": 49
+                            }, 
+                            "lineno": 49, 
+                            "context_expr": {
+                                "_type": "Call", 
+                                "col_offset": 13, 
+                                "starargs": null, 
+                                "args": [
+                                    {
+                                        "_type": "Name", 
+                                        "ctx": {
+                                            "_type": "Load"
+                                        }, 
+                                        "id": "astfile", 
+                                        "col_offset": 18, 
+                                        "lineno": 49
+                                    }, 
+                                    {
+                                        "s": "w", 
+                                        "_type": "Str", 
+                                        "lineno": 49, 
+                                        "col_offset": 27
+                                    }
+                                ], 
+                                "lineno": 49, 
+                                "func": {
+                                    "_type": "Name", 
+                                    "ctx": {
+                                        "_type": "Load"
+                                    }, 
+                                    "id": "open", 
+                                    "col_offset": 13, 
+                                    "lineno": 49
+                                }, 
+                                "kwargs": null, 
+                                "keywords": []
+                            }
+                        }
+                    ], 
+                    "_type": "TryExcept", 
+                    "col_offset": 4, 
+                    "handlers": [
+                        {
+                            "body": [
+                                {
+                                    "value": {
+                                        "_type": "Call", 
+                                        "col_offset": 8, 
+                                        "starargs": null, 
+                                        "args": [
+                                            {
+                                                "_type": "BinOp", 
+                                                "right": {
+                                                    "s": " does not exist", 
+                                                    "_type": "Str", 
+                                                    "lineno": 53, 
+                                                    "col_offset": 31
+                                                }, 
+                                                "col_offset": 30, 
+                                                "lineno": 53, 
+                                                "left": {
+                                                    "_type": "BinOp", 
+                                                    "right": {
+                                                        "_type": "Name", 
+                                                        "ctx": {
+                                                            "_type": "Load"
+                                                        }, 
+                                                        "id": "astfile", 
+                                                        "col_offset": 23, 
+                                                        "lineno": 53
+                                                    }, 
+                                                    "col_offset": 17, 
+                                                    "lineno": 53, 
+                                                    "left": {
+                                                        "_type": "Name", 
+                                                        "ctx": {
+                                                            "_type": "Load"
+                                                        }, 
+                                                        "id": "error", 
+                                                        "col_offset": 17, 
+                                                        "lineno": 53
+                                                    }, 
+                                                    "op": {
+                                                        "_type": "Add"
+                                                    }
+                                                }, 
+                                                "op": {
+                                                    "_type": "Add"
+                                                }
+                                            }
+                                        ], 
+                                        "lineno": 53, 
+                                        "func": {
+                                            "_type": "Attribute", 
+                                            "attr": "exit", 
+                                            "col_offset": 8, 
+                                            "ctx": {
+                                                "_type": "Load"
+                                            }, 
+                                            "value": {
+                                                "_type": "Name", 
+                                                "ctx": {
+                                                    "_type": "Load"
+                                                }, 
+                                                "id": "sys", 
+                                                "col_offset": 8, 
+                                                "lineno": 53
+                                            }, 
+                                            "lineno": 53
+                                        }, 
+                                        "kwargs": null, 
+                                        "keywords": []
+                                    }, 
+                                    "_type": "Expr", 
+                                    "lineno": 53, 
+                                    "col_offset": 8
+                                }
+                            ], 
+                            "_type": "ExceptHandler", 
+                            "name": null, 
+                            "col_offset": 4, 
+                            "lineno": 52, 
+                            "type": {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "IOError", 
+                                "col_offset": 11, 
+                                "lineno": 52
+                            }
+                        }
+                    ], 
+                    "lineno": 48, 
+                    "orelse": []
+                }, 
+                {
+                    "value": {
+                        "_type": "Call", 
+                        "col_offset": 4, 
+                        "starargs": null, 
+                        "args": [
+                            {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "astfile", 
+                                "col_offset": 18, 
+                                "lineno": 56
+                            }, 
+                            {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "pyfile", 
+                                "col_offset": 27, 
+                                "lineno": 56
+                            }, 
+                            {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "csvfile", 
+                                "col_offset": 35, 
+                                "lineno": 56
+                            }, 
+                            {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "funcfile", 
+                                "col_offset": 44, 
+                                "lineno": 56
+                            }
+                        ], 
+                        "lineno": 56, 
+                        "func": {
+                            "_type": "Attribute", 
+                            "attr": "main", 
+                            "col_offset": 4, 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "value": {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "testing5", 
+                                "col_offset": 4, 
+                                "lineno": 56
+                            }, 
+                            "lineno": 56
+                        }, 
+                        "kwargs": null, 
+                        "keywords": []
+                    }, 
+                    "_type": "Expr", 
+                    "lineno": 56, 
+                    "col_offset": 4
+                }, 
+                {
+                    "value": {
+                        "_type": "Call", 
+                        "col_offset": 4, 
+                        "starargs": null, 
+                        "args": [
+                            {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "csvfile", 
+                                "col_offset": 18, 
+                                "lineno": 60
+                            }, 
+                            {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "pyfile", 
+                                "col_offset": 27, 
+                                "lineno": 60
+                            }, 
+                            {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "finalCsv", 
+                                "col_offset": 35, 
+                                "lineno": 60
+                            }
+                        ], 
+                        "lineno": 60, 
+                        "func": {
+                            "_type": "Attribute", 
+                            "attr": "main", 
+                            "col_offset": 4, 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "value": {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "testing6", 
+                                "col_offset": 4, 
+                                "lineno": 60
+                            }, 
+                            "lineno": 60
+                        }, 
+                        "kwargs": null, 
+                        "keywords": []
+                    }, 
+                    "_type": "Expr", 
+                    "lineno": 60, 
+                    "col_offset": 4
+                }, 
+                {
+                    "value": {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Load"
+                        }, 
+                        "id": "finalCsv", 
+                        "col_offset": 11, 
+                        "lineno": 67
+                    }, 
+                    "_type": "Return", 
+                    "lineno": 67, 
+                    "col_offset": 4
+                }
+            ], 
+            "decorator_list": [], 
+            "_type": "FunctionDef", 
+            "name": "main", 
+            "col_offset": 0, 
+            "args": {
+                "_type": "arguments", 
+                "args": [
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Param"
+                        }, 
+                        "id": "pyfile", 
+                        "col_offset": 9, 
+                        "lineno": 25
+                    }, 
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Param"
+                        }, 
+                        "id": "funcfile", 
+                        "col_offset": 17, 
+                        "lineno": 25
+                    }
+                ], 
+                "kwarg": null, 
+                "defaults": [], 
+                "vararg": null
+            }, 
+            "lineno": 25
+        }
+    ], 
+    "_type": "Module"
+}

@@ -1,0 +1,349 @@
+{
+    "body": [
+        {
+            "body": [
+                {
+                    "_type": "Print", 
+                    "nl": true, 
+                    "col_offset": 4, 
+                    "dest": null, 
+                    "values": [
+                        {
+                            "s": "what is your username and password", 
+                            "_type": "Str", 
+                            "lineno": 2, 
+                            "col_offset": 10
+                        }
+                    ], 
+                    "lineno": 2
+                }, 
+                {
+                    "value": {
+                        "elts": [
+                            {
+                                "_type": "Num", 
+                                "lineno": 3, 
+                                "col_offset": 11, 
+                                "n": 7
+                            }, 
+                            {
+                                "_type": "Num", 
+                                "lineno": 3, 
+                                "col_offset": 14, 
+                                "n": 6
+                            }
+                        ], 
+                        "_type": "Tuple", 
+                        "ctx": {
+                            "_type": "Load"
+                        }, 
+                        "lineno": 3, 
+                        "col_offset": 11
+                    }, 
+                    "_type": "Return", 
+                    "lineno": 3, 
+                    "col_offset": 4
+                }
+            ], 
+            "decorator_list": [], 
+            "_type": "FunctionDef", 
+            "name": "getUsernameAndPassword", 
+            "col_offset": 0, 
+            "args": {
+                "_type": "arguments", 
+                "args": [], 
+                "kwarg": null, 
+                "defaults": [], 
+                "vararg": null
+            }, 
+            "lineno": 1
+        }, 
+        {
+            "body": [
+                {
+                    "_type": "Print", 
+                    "nl": true, 
+                    "col_offset": 4, 
+                    "dest": null, 
+                    "values": [
+                        {
+                            "s": "finding information on client", 
+                            "_type": "Str", 
+                            "lineno": 6, 
+                            "col_offset": 10
+                        }
+                    ], 
+                    "lineno": 6
+                }, 
+                {
+                    "value": {
+                        "_type": "Call", 
+                        "col_offset": 4, 
+                        "starargs": null, 
+                        "args": [
+                            {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "uname", 
+                                "col_offset": 24, 
+                                "lineno": 7
+                            }, 
+                            {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "pword", 
+                                "col_offset": 31, 
+                                "lineno": 7
+                            }
+                        ], 
+                        "lineno": 7, 
+                        "func": {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "id": "retrieveInformation", 
+                            "col_offset": 4, 
+                            "lineno": 7
+                        }, 
+                        "kwargs": null, 
+                        "keywords": []
+                    }, 
+                    "_type": "Expr", 
+                    "lineno": 7, 
+                    "col_offset": 4
+                }, 
+                {
+                    "value": {
+                        "_type": "Num", 
+                        "lineno": 8, 
+                        "col_offset": 11, 
+                        "n": 9
+                    }, 
+                    "_type": "Return", 
+                    "lineno": 8, 
+                    "col_offset": 4
+                }
+            ], 
+            "decorator_list": [], 
+            "_type": "FunctionDef", 
+            "name": "retrieveInformation", 
+            "col_offset": 0, 
+            "args": {
+                "_type": "arguments", 
+                "args": [
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Param"
+                        }, 
+                        "id": "u", 
+                        "col_offset": 24, 
+                        "lineno": 5
+                    }, 
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Param"
+                        }, 
+                        "id": "p", 
+                        "col_offset": 27, 
+                        "lineno": 5
+                    }
+                ], 
+                "kwarg": null, 
+                "defaults": [], 
+                "vararg": null
+            }, 
+            "lineno": 5
+        }, 
+        {
+            "body": [
+                {
+                    "value": {
+                        "_type": "Call", 
+                        "col_offset": 25, 
+                        "starargs": null, 
+                        "args": [], 
+                        "lineno": 11, 
+                        "func": {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "id": "getUsernameAndPassword", 
+                            "col_offset": 25, 
+                            "lineno": 11
+                        }, 
+                        "kwargs": null, 
+                        "keywords": []
+                    }, 
+                    "_type": "Assign", 
+                    "lineno": 11, 
+                    "col_offset": 4, 
+                    "targets": [
+                        {
+                            "elts": [
+                                {
+                                    "_type": "Name", 
+                                    "ctx": {
+                                        "_type": "Store"
+                                    }, 
+                                    "id": "username", 
+                                    "col_offset": 4, 
+                                    "lineno": 11
+                                }, 
+                                {
+                                    "_type": "Name", 
+                                    "ctx": {
+                                        "_type": "Store"
+                                    }, 
+                                    "id": "password", 
+                                    "col_offset": 14, 
+                                    "lineno": 11
+                                }
+                            ], 
+                            "_type": "Tuple", 
+                            "ctx": {
+                                "_type": "Store"
+                            }, 
+                            "lineno": 11, 
+                            "col_offset": 4
+                        }
+                    ]
+                }, 
+                {
+                    "value": {
+                        "_type": "Call", 
+                        "col_offset": 23, 
+                        "starargs": null, 
+                        "args": [
+                            {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "username", 
+                                "col_offset": 43, 
+                                "lineno": 12
+                            }, 
+                            {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "password", 
+                                "col_offset": 53, 
+                                "lineno": 12
+                            }
+                        ], 
+                        "lineno": 12, 
+                        "func": {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "id": "retrieveInformation", 
+                            "col_offset": 23, 
+                            "lineno": 12
+                        }, 
+                        "kwargs": null, 
+                        "keywords": []
+                    }, 
+                    "_type": "Assign", 
+                    "lineno": 12, 
+                    "col_offset": 4, 
+                    "targets": [
+                        {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Store"
+                            }, 
+                            "id": "informationArray", 
+                            "col_offset": 4, 
+                            "lineno": 12
+                        }
+                    ]
+                }, 
+                {
+                    "_type": "Print", 
+                    "nl": true, 
+                    "col_offset": 4, 
+                    "dest": null, 
+                    "values": [
+                        {
+                            "s": "Welcome Anne Marie!", 
+                            "_type": "Str", 
+                            "lineno": 13, 
+                            "col_offset": 10
+                        }
+                    ], 
+                    "lineno": 13
+                }, 
+                {
+                    "value": {
+                        "_type": "Call", 
+                        "col_offset": 4, 
+                        "starargs": null, 
+                        "args": [], 
+                        "lineno": 14, 
+                        "func": {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "id": "printWelcome", 
+                            "col_offset": 4, 
+                            "lineno": 14
+                        }, 
+                        "kwargs": null, 
+                        "keywords": []
+                    }, 
+                    "_type": "Expr", 
+                    "lineno": 14, 
+                    "col_offset": 4
+                }
+            ], 
+            "decorator_list": [], 
+            "_type": "FunctionDef", 
+            "name": "printWelcome", 
+            "col_offset": 0, 
+            "args": {
+                "_type": "arguments", 
+                "args": [], 
+                "kwarg": null, 
+                "defaults": [], 
+                "vararg": null
+            }, 
+            "lineno": 10
+        }, 
+        {
+            "value": {
+                "_type": "Call", 
+                "col_offset": 0, 
+                "starargs": null, 
+                "args": [], 
+                "lineno": 16, 
+                "func": {
+                    "_type": "Name", 
+                    "ctx": {
+                        "_type": "Load"
+                    }, 
+                    "id": "printWelcome", 
+                    "col_offset": 0, 
+                    "lineno": 16
+                }, 
+                "kwargs": null, 
+                "keywords": []
+            }, 
+            "_type": "Expr", 
+            "lineno": 16, 
+            "col_offset": 0
+        }
+    ], 
+    "_type": "Module"
+}

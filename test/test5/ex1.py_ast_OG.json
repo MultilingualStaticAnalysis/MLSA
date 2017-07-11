@@ -1,0 +1,343 @@
+{
+    "body": [
+        {
+            "_type": "Import", 
+            "lineno": 1, 
+            "col_offset": 0, 
+            "names": [
+                {
+                    "_type": "alias", 
+                    "name": "PyV8", 
+                    "asname": null
+                }
+            ]
+        }, 
+        {
+            "body": [
+                {
+                    "_type": "Print", 
+                    "nl": true, 
+                    "col_offset": 4, 
+                    "dest": null, 
+                    "values": [
+                        {
+                            "s": "check db", 
+                            "_type": "Str", 
+                            "lineno": 4, 
+                            "col_offset": 10
+                        }
+                    ], 
+                    "lineno": 4
+                }, 
+                {
+                    "value": {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Load"
+                        }, 
+                        "id": "True", 
+                        "col_offset": 11, 
+                        "lineno": 5
+                    }, 
+                    "_type": "Return", 
+                    "lineno": 5, 
+                    "col_offset": 4
+                }
+            ], 
+            "decorator_list": [], 
+            "_type": "FunctionDef", 
+            "name": "checkDb", 
+            "col_offset": 0, 
+            "args": {
+                "_type": "arguments", 
+                "args": [
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Param"
+                        }, 
+                        "id": "u", 
+                        "col_offset": 12, 
+                        "lineno": 3
+                    }, 
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Param"
+                        }, 
+                        "id": "p", 
+                        "col_offset": 15, 
+                        "lineno": 3
+                    }
+                ], 
+                "kwarg": null, 
+                "defaults": [], 
+                "vararg": null
+            }, 
+            "lineno": 3
+        }, 
+        {
+            "body": [
+                {
+                    "_type": "Print", 
+                    "nl": true, 
+                    "col_offset": 4, 
+                    "dest": null, 
+                    "values": [
+                        {
+                            "s": "this is an error message", 
+                            "_type": "Str", 
+                            "lineno": 8, 
+                            "col_offset": 10
+                        }
+                    ], 
+                    "lineno": 8
+                }
+            ], 
+            "decorator_list": [], 
+            "_type": "FunctionDef", 
+            "name": "printError", 
+            "col_offset": 0, 
+            "args": {
+                "_type": "arguments", 
+                "args": [], 
+                "kwarg": null, 
+                "defaults": [], 
+                "vararg": null
+            }, 
+            "lineno": 7
+        }, 
+        {
+            "body": [
+                {
+                    "_type": "Print", 
+                    "nl": true, 
+                    "col_offset": 4, 
+                    "dest": null, 
+                    "values": [
+                        {
+                            "_type": "Call", 
+                            "col_offset": 10, 
+                            "starargs": null, 
+                            "args": [
+                                {
+                                    "_type": "Call", 
+                                    "col_offset": 32, 
+                                    "starargs": null, 
+                                    "args": [], 
+                                    "lineno": 11, 
+                                    "func": {
+                                        "_type": "Attribute", 
+                                        "attr": "read", 
+                                        "col_offset": 32, 
+                                        "ctx": {
+                                            "_type": "Load"
+                                        }, 
+                                        "value": {
+                                            "_type": "Call", 
+                                            "col_offset": 32, 
+                                            "starargs": null, 
+                                            "args": [
+                                                {
+                                                    "s": "ex1.js", 
+                                                    "_type": "Str", 
+                                                    "lineno": 11, 
+                                                    "col_offset": 37
+                                                }
+                                            ], 
+                                            "lineno": 11, 
+                                            "func": {
+                                                "_type": "Name", 
+                                                "ctx": {
+                                                    "_type": "Load"
+                                                }, 
+                                                "id": "open", 
+                                                "col_offset": 32, 
+                                                "lineno": 11
+                                            }, 
+                                            "kwargs": null, 
+                                            "keywords": []
+                                        }, 
+                                        "lineno": 11
+                                    }, 
+                                    "kwargs": null, 
+                                    "keywords": []
+                                }
+                            ], 
+                            "lineno": 11, 
+                            "func": {
+                                "_type": "Attribute", 
+                                "attr": "eval", 
+                                "col_offset": 10, 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "value": {
+                                    "_type": "Call", 
+                                    "col_offset": 10, 
+                                    "starargs": null, 
+                                    "args": [], 
+                                    "lineno": 11, 
+                                    "func": {
+                                        "_type": "Attribute", 
+                                        "attr": "JSContext", 
+                                        "col_offset": 10, 
+                                        "ctx": {
+                                            "_type": "Load"
+                                        }, 
+                                        "value": {
+                                            "_type": "Name", 
+                                            "ctx": {
+                                                "_type": "Load"
+                                            }, 
+                                            "id": "PyV8", 
+                                            "col_offset": 10, 
+                                            "lineno": 11
+                                        }, 
+                                        "lineno": 11
+                                    }, 
+                                    "kwargs": null, 
+                                    "keywords": []
+                                }, 
+                                "lineno": 11
+                            }, 
+                            "kwargs": null, 
+                            "keywords": []
+                        }
+                    ], 
+                    "lineno": 11
+                }
+            ], 
+            "decorator_list": [], 
+            "_type": "FunctionDef", 
+            "name": "printWelcome", 
+            "col_offset": 0, 
+            "args": {
+                "_type": "arguments", 
+                "args": [], 
+                "kwarg": null, 
+                "defaults": [], 
+                "vararg": null
+            }, 
+            "lineno": 10
+        }, 
+        {
+            "value": {
+                "_type": "Call", 
+                "col_offset": 10, 
+                "starargs": null, 
+                "args": [
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Load"
+                        }, 
+                        "id": "username", 
+                        "col_offset": 18, 
+                        "lineno": 13
+                    }, 
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Load"
+                        }, 
+                        "id": "password", 
+                        "col_offset": 28, 
+                        "lineno": 13
+                    }
+                ], 
+                "lineno": 13, 
+                "func": {
+                    "_type": "Name", 
+                    "ctx": {
+                        "_type": "Load"
+                    }, 
+                    "id": "checkDb", 
+                    "col_offset": 10, 
+                    "lineno": 13
+                }, 
+                "kwargs": null, 
+                "keywords": []
+            }, 
+            "_type": "Assign", 
+            "lineno": 13, 
+            "col_offset": 0, 
+            "targets": [
+                {
+                    "_type": "Name", 
+                    "ctx": {
+                        "_type": "Store"
+                    }, 
+                    "id": "verfied", 
+                    "col_offset": 0, 
+                    "lineno": 13
+                }
+            ]
+        }, 
+        {
+            "body": [
+                {
+                    "value": {
+                        "_type": "Call", 
+                        "col_offset": 4, 
+                        "starargs": null, 
+                        "args": [], 
+                        "lineno": 15, 
+                        "func": {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "id": "printWelcome", 
+                            "col_offset": 4, 
+                            "lineno": 15
+                        }, 
+                        "kwargs": null, 
+                        "keywords": []
+                    }, 
+                    "_type": "Expr", 
+                    "lineno": 15, 
+                    "col_offset": 4
+                }
+            ], 
+            "_type": "If", 
+            "col_offset": 0, 
+            "lineno": 14, 
+            "test": {
+                "_type": "Name", 
+                "ctx": {
+                    "_type": "Load"
+                }, 
+                "id": "verified", 
+                "col_offset": 3, 
+                "lineno": 14
+            }, 
+            "orelse": [
+                {
+                    "value": {
+                        "_type": "Call", 
+                        "col_offset": 4, 
+                        "starargs": null, 
+                        "args": [], 
+                        "lineno": 17, 
+                        "func": {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "id": "printError", 
+                            "col_offset": 4, 
+                            "lineno": 17
+                        }, 
+                        "kwargs": null, 
+                        "keywords": []
+                    }, 
+                    "_type": "Expr", 
+                    "lineno": 17, 
+                    "col_offset": 4
+                }
+            ]
+        }
+    ], 
+    "_type": "Module"
+}

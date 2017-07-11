@@ -1,0 +1,627 @@
+{
+    "body": [
+        {
+            "_type": "Import", 
+            "lineno": 14, 
+            "col_offset": 0, 
+            "names": [
+                {
+                    "_type": "alias", 
+                    "name": "os", 
+                    "asname": null
+                }
+            ]
+        }, 
+        {
+            "_type": "Import", 
+            "lineno": 15, 
+            "col_offset": 0, 
+            "names": [
+                {
+                    "_type": "alias", 
+                    "name": "sys", 
+                    "asname": null
+                }
+            ]
+        }, 
+        {
+            "_type": "Import", 
+            "lineno": 16, 
+            "col_offset": 0, 
+            "names": [
+                {
+                    "_type": "alias", 
+                    "name": "json", 
+                    "asname": null
+                }
+            ]
+        }, 
+        {
+            "_type": "Import", 
+            "lineno": 17, 
+            "col_offset": 0, 
+            "names": [
+                {
+                    "_type": "alias", 
+                    "name": "testing2", 
+                    "asname": null
+                }
+            ]
+        }, 
+        {
+            "_type": "Import", 
+            "lineno": 18, 
+            "col_offset": 0, 
+            "names": [
+                {
+                    "_type": "alias", 
+                    "name": "testing3", 
+                    "asname": null
+                }
+            ]
+        }, 
+        {
+            "value": {
+                "s": "MLSA: jsSA; ", 
+                "_type": "Str", 
+                "lineno": 21, 
+                "col_offset": 8
+            }, 
+            "_type": "Assign", 
+            "lineno": 21, 
+            "col_offset": 0, 
+            "targets": [
+                {
+                    "_type": "Name", 
+                    "ctx": {
+                        "_type": "Store"
+                    }, 
+                    "id": "error", 
+                    "col_offset": 0, 
+                    "lineno": 21
+                }
+            ]
+        }, 
+        {
+            "body": [
+                {
+                    "_type": "Global", 
+                    "lineno": 24, 
+                    "col_offset": 4, 
+                    "names": [
+                        "error"
+                    ]
+                }, 
+                {
+                    "body": [
+                        {
+                            "value": {
+                                "_type": "Call", 
+                                "col_offset": 8, 
+                                "starargs": null, 
+                                "args": [
+                                    {
+                                        "_type": "BinOp", 
+                                        "right": {
+                                            "s": "file passed is not JavaScript", 
+                                            "_type": "Str", 
+                                            "lineno": 27, 
+                                            "col_offset": 23
+                                        }, 
+                                        "col_offset": 17, 
+                                        "lineno": 27, 
+                                        "left": {
+                                            "_type": "Name", 
+                                            "ctx": {
+                                                "_type": "Load"
+                                            }, 
+                                            "id": "error", 
+                                            "col_offset": 17, 
+                                            "lineno": 27
+                                        }, 
+                                        "op": {
+                                            "_type": "Add"
+                                        }
+                                    }
+                                ], 
+                                "lineno": 27, 
+                                "func": {
+                                    "_type": "Attribute", 
+                                    "attr": "exit", 
+                                    "col_offset": 8, 
+                                    "ctx": {
+                                        "_type": "Load"
+                                    }, 
+                                    "value": {
+                                        "_type": "Name", 
+                                        "ctx": {
+                                            "_type": "Load"
+                                        }, 
+                                        "id": "sys", 
+                                        "col_offset": 8, 
+                                        "lineno": 27
+                                    }, 
+                                    "lineno": 27
+                                }, 
+                                "kwargs": null, 
+                                "keywords": []
+                            }, 
+                            "_type": "Expr", 
+                            "lineno": 27, 
+                            "col_offset": 8
+                        }
+                    ], 
+                    "_type": "If", 
+                    "col_offset": 4, 
+                    "lineno": 26, 
+                    "test": {
+                        "_type": "Compare", 
+                        "col_offset": 7, 
+                        "ops": [
+                            {
+                                "_type": "NotIn"
+                            }
+                        ], 
+                        "lineno": 26, 
+                        "comparators": [
+                            {
+                                "_type": "Subscript", 
+                                "slice": {
+                                    "step": null, 
+                                    "upper": null, 
+                                    "_type": "Slice", 
+                                    "lower": {
+                                        "_type": "Num", 
+                                        "lineno": 26, 
+                                        "col_offset": 27, 
+                                        "n": -3
+                                    }
+                                }, 
+                                "col_offset": 20, 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "value": {
+                                    "_type": "Name", 
+                                    "ctx": {
+                                        "_type": "Load"
+                                    }, 
+                                    "id": "jsfile", 
+                                    "col_offset": 20, 
+                                    "lineno": 26
+                                }, 
+                                "lineno": 26
+                            }
+                        ], 
+                        "left": {
+                            "s": ".js", 
+                            "_type": "Str", 
+                            "lineno": 26, 
+                            "col_offset": 7
+                        }
+                    }, 
+                    "orelse": []
+                }, 
+                {
+                    "value": {
+                        "_type": "BinOp", 
+                        "right": {
+                            "s": "_ast.json", 
+                            "_type": "Str", 
+                            "lineno": 30, 
+                            "col_offset": 21
+                        }, 
+                        "col_offset": 14, 
+                        "lineno": 30, 
+                        "left": {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "id": "jsfile", 
+                            "col_offset": 14, 
+                            "lineno": 30
+                        }, 
+                        "op": {
+                            "_type": "Add"
+                        }
+                    }, 
+                    "_type": "Assign", 
+                    "lineno": 30, 
+                    "col_offset": 4, 
+                    "targets": [
+                        {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Store"
+                            }, 
+                            "id": "astfile", 
+                            "col_offset": 4, 
+                            "lineno": 30
+                        }
+                    ]
+                }, 
+                {
+                    "value": {
+                        "_type": "BinOp", 
+                        "right": {
+                            "s": "_func.csv", 
+                            "_type": "Str", 
+                            "lineno": 32, 
+                            "col_offset": 21
+                        }, 
+                        "col_offset": 14, 
+                        "lineno": 32, 
+                        "left": {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "id": "jsfile", 
+                            "col_offset": 14, 
+                            "lineno": 32
+                        }, 
+                        "op": {
+                            "_type": "Add"
+                        }
+                    }, 
+                    "_type": "Assign", 
+                    "lineno": 32, 
+                    "col_offset": 4, 
+                    "targets": [
+                        {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Store"
+                            }, 
+                            "id": "csvfile", 
+                            "col_offset": 4, 
+                            "lineno": 32
+                        }
+                    ]
+                }, 
+                {
+                    "value": {
+                        "_type": "BinOp", 
+                        "right": {
+                            "s": "_rda.csv", 
+                            "_type": "Str", 
+                            "lineno": 34, 
+                            "col_offset": 21
+                        }, 
+                        "col_offset": 14, 
+                        "lineno": 34, 
+                        "left": {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "id": "jsfile", 
+                            "col_offset": 14, 
+                            "lineno": 34
+                        }, 
+                        "op": {
+                            "_type": "Add"
+                        }
+                    }, 
+                    "_type": "Assign", 
+                    "lineno": 34, 
+                    "col_offset": 4, 
+                    "targets": [
+                        {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Store"
+                            }, 
+                            "id": "rdafile", 
+                            "col_offset": 4, 
+                            "lineno": 34
+                        }
+                    ]
+                }, 
+                {
+                    "value": {
+                        "_type": "BinOp", 
+                        "right": {
+                            "s": "_edfunc.csv", 
+                            "_type": "Str", 
+                            "lineno": 36, 
+                            "col_offset": 23
+                        }, 
+                        "col_offset": 16, 
+                        "lineno": 36, 
+                        "left": {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "id": "jsfile", 
+                            "col_offset": 16, 
+                            "lineno": 36
+                        }, 
+                        "op": {
+                            "_type": "Add"
+                        }
+                    }, 
+                    "_type": "Assign", 
+                    "lineno": 36, 
+                    "col_offset": 4, 
+                    "targets": [
+                        {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Store"
+                            }, 
+                            "id": "editedCsv", 
+                            "col_offset": 4, 
+                            "lineno": 36
+                        }
+                    ]
+                }, 
+                {
+                    "value": {
+                        "_type": "Call", 
+                        "col_offset": 4, 
+                        "starargs": null, 
+                        "args": [
+                            {
+                                "_type": "BinOp", 
+                                "right": {
+                                    "_type": "Name", 
+                                    "ctx": {
+                                        "_type": "Load"
+                                    }, 
+                                    "id": "astfile", 
+                                    "col_offset": 89, 
+                                    "lineno": 39
+                                }, 
+                                "col_offset": 88, 
+                                "lineno": 39, 
+                                "left": {
+                                    "_type": "BinOp", 
+                                    "right": {
+                                        "s": "'))));\" > ", 
+                                        "_type": "Str", 
+                                        "lineno": 39, 
+                                        "col_offset": 75
+                                    }, 
+                                    "col_offset": 74, 
+                                    "lineno": 39, 
+                                    "left": {
+                                        "_type": "BinOp", 
+                                        "right": {
+                                            "_type": "Name", 
+                                            "ctx": {
+                                                "_type": "Load"
+                                            }, 
+                                            "id": "jsfile", 
+                                            "col_offset": 68, 
+                                            "lineno": 39
+                                        }, 
+                                        "col_offset": 14, 
+                                        "lineno": 39, 
+                                        "left": {
+                                            "s": "js24 -e \"print(JSON.stringify(Reflect.parse(read('", 
+                                            "_type": "Str", 
+                                            "lineno": 39, 
+                                            "col_offset": 14
+                                        }, 
+                                        "op": {
+                                            "_type": "Add"
+                                        }
+                                    }, 
+                                    "op": {
+                                        "_type": "Add"
+                                    }
+                                }, 
+                                "op": {
+                                    "_type": "Add"
+                                }
+                            }
+                        ], 
+                        "lineno": 39, 
+                        "func": {
+                            "_type": "Attribute", 
+                            "attr": "system", 
+                            "col_offset": 4, 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "value": {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "os", 
+                                "col_offset": 4, 
+                                "lineno": 39
+                            }, 
+                            "lineno": 39
+                        }, 
+                        "kwargs": null, 
+                        "keywords": []
+                    }, 
+                    "_type": "Expr", 
+                    "lineno": 39, 
+                    "col_offset": 4
+                }, 
+                {
+                    "value": {
+                        "_type": "Call", 
+                        "col_offset": 4, 
+                        "starargs": null, 
+                        "args": [
+                            {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "astfile", 
+                                "col_offset": 18, 
+                                "lineno": 42
+                            }, 
+                            {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "jsfile", 
+                                "col_offset": 27, 
+                                "lineno": 42
+                            }, 
+                            {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "csvfile", 
+                                "col_offset": 35, 
+                                "lineno": 42
+                            }
+                        ], 
+                        "lineno": 42, 
+                        "func": {
+                            "_type": "Attribute", 
+                            "attr": "main", 
+                            "col_offset": 4, 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "value": {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "testing3", 
+                                "col_offset": 4, 
+                                "lineno": 42
+                            }, 
+                            "lineno": 42
+                        }, 
+                        "kwargs": null, 
+                        "keywords": []
+                    }, 
+                    "_type": "Expr", 
+                    "lineno": 42, 
+                    "col_offset": 4
+                }, 
+                {
+                    "value": {
+                        "_type": "Call", 
+                        "col_offset": 4, 
+                        "starargs": null, 
+                        "args": [
+                            {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "csvfile", 
+                                "col_offset": 18, 
+                                "lineno": 46
+                            }, 
+                            {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "jsfile", 
+                                "col_offset": 27, 
+                                "lineno": 46
+                            }, 
+                            {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "editedCsv", 
+                                "col_offset": 35, 
+                                "lineno": 46
+                            }
+                        ], 
+                        "lineno": 46, 
+                        "func": {
+                            "_type": "Attribute", 
+                            "attr": "main", 
+                            "col_offset": 4, 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "value": {
+                                "_type": "Name", 
+                                "ctx": {
+                                    "_type": "Load"
+                                }, 
+                                "id": "testing2", 
+                                "col_offset": 4, 
+                                "lineno": 46
+                            }, 
+                            "lineno": 46
+                        }, 
+                        "kwargs": null, 
+                        "keywords": []
+                    }, 
+                    "_type": "Expr", 
+                    "lineno": 46, 
+                    "col_offset": 4
+                }, 
+                {
+                    "value": {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Load"
+                        }, 
+                        "id": "editedCsv", 
+                        "col_offset": 11, 
+                        "lineno": 53
+                    }, 
+                    "_type": "Return", 
+                    "lineno": 53, 
+                    "col_offset": 4
+                }
+            ], 
+            "decorator_list": [], 
+            "_type": "FunctionDef", 
+            "name": "main", 
+            "col_offset": 0, 
+            "args": {
+                "_type": "arguments", 
+                "args": [
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Param"
+                        }, 
+                        "id": "jsfile", 
+                        "col_offset": 9, 
+                        "lineno": 23
+                    }, 
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Param"
+                        }, 
+                        "id": "param2", 
+                        "col_offset": 17, 
+                        "lineno": 23
+                    }
+                ], 
+                "kwarg": null, 
+                "defaults": [
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Load"
+                        }, 
+                        "id": "False", 
+                        "col_offset": 24, 
+                        "lineno": 23
+                    }
+                ], 
+                "vararg": null
+            }, 
+            "lineno": 23
+        }
+    ], 
+    "_type": "Module"
+}

@@ -1,0 +1,122 @@
+{
+    "body": [
+        {
+            "_type": "Import", 
+            "lineno": 1, 
+            "col_offset": 0, 
+            "names": [
+                {
+                    "_type": "alias", 
+                    "name": "testing1", 
+                    "asname": null
+                }
+            ]
+        }, 
+        {
+            "_type": "Import", 
+            "lineno": 2, 
+            "col_offset": 0, 
+            "names": [
+                {
+                    "_type": "alias", 
+                    "name": "testing4", 
+                    "asname": null
+                }
+            ]
+        }, 
+        {
+            "value": {
+                "_type": "Call", 
+                "col_offset": 0, 
+                "starargs": null, 
+                "args": [
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Load"
+                        }, 
+                        "id": "jsFile", 
+                        "col_offset": 14, 
+                        "lineno": 4
+                    }
+                ], 
+                "lineno": 4, 
+                "func": {
+                    "_type": "Attribute", 
+                    "attr": "main", 
+                    "col_offset": 0, 
+                    "ctx": {
+                        "_type": "Load"
+                    }, 
+                    "value": {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Load"
+                        }, 
+                        "id": "testing1", 
+                        "col_offset": 0, 
+                        "lineno": 4
+                    }, 
+                    "lineno": 4
+                }, 
+                "kwargs": null, 
+                "keywords": []
+            }, 
+            "_type": "Expr", 
+            "lineno": 4, 
+            "col_offset": 0
+        }, 
+        {
+            "value": {
+                "_type": "Call", 
+                "col_offset": 0, 
+                "starargs": null, 
+                "args": [
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Load"
+                        }, 
+                        "id": "pyFile", 
+                        "col_offset": 14, 
+                        "lineno": 5
+                    }, 
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Load"
+                        }, 
+                        "id": "funcFile", 
+                        "col_offset": 22, 
+                        "lineno": 5
+                    }
+                ], 
+                "lineno": 5, 
+                "func": {
+                    "_type": "Attribute", 
+                    "attr": "main", 
+                    "col_offset": 0, 
+                    "ctx": {
+                        "_type": "Load"
+                    }, 
+                    "value": {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Load"
+                        }, 
+                        "id": "testing4", 
+                        "col_offset": 0, 
+                        "lineno": 5
+                    }, 
+                    "lineno": 5
+                }, 
+                "kwargs": null, 
+                "keywords": []
+            }, 
+            "_type": "Expr", 
+            "lineno": 5, 
+            "col_offset": 0
+        }
+    ], 
+    "_type": "Module"
+}

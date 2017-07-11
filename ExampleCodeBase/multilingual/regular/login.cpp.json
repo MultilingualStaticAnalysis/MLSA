@@ -1,0 +1,131 @@
+{
+    "id": 0,
+    "statements": [
+        {
+            "id": 1,
+            "line": 5,
+            "column": 1,
+            "type": "function-declaration",
+            "name": "retrievePassWord",
+            "return-type": {
+                "id": 2,
+                "name": "int"
+            },
+            "parameters": [],
+            "block": {
+                "id": 5,
+                "statements": [
+                    {
+                        "id": 3,
+                        "line": 6,
+                        "column": 3,
+                        "type": "return",
+                        "expression": {
+                            "type": "int",
+                            "value": 1,
+                            "id": 4,
+                            "line": 6,
+                            "column": 10
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 6,
+            "line": 9,
+            "column": 1,
+            "type": "function-declaration",
+            "name": "retrieveUserName",
+            "return-type": {
+                "id": 7,
+                "name": "int"
+            },
+            "parameters": [],
+            "block": {
+                "id": 8,
+                "statements": []
+            }
+        },
+        {
+            "id": 9,
+            "line": 13,
+            "column": 1,
+            "type": "function-declaration",
+            "name": "verifyLoginInfo",
+            "return-type": {
+                "id": 10,
+                "name": "void"
+            },
+            "parameters": [],
+            "block": {
+                "id": 11,
+                "statements": []
+            }
+        },
+        {
+            "id": 12,
+            "line": 19,
+            "column": 1,
+            "type": "function-declaration",
+            "name": "main",
+            "return-type": {
+                "id": 13,
+                "name": "int"
+            },
+            "parameters": [],
+            "block": {
+                "id": 21,
+                "statements": [
+                    {
+                        "id": 14,
+                        "line": 20,
+                        "column": 3,
+                        "type": "variable-declaration",
+                        "name": "password",
+                        "data-type": {
+                            "id": 15,
+                            "name": "int"
+                        },
+                        "is-reference": false,
+                        "is-const": false,
+                        "init": {
+                            "id": 16,
+                            "line": 20,
+                            "column": 18,
+                            "type": "function-call",
+                            "name": "retrievePassWord",
+                            "arguments": []
+                        }
+                    },
+                    {
+                        "id": 17,
+                        "line": 21,
+                        "column": 3,
+                        "type": "variable-declaration",
+                        "name": "username",
+                        "data-type": {
+                            "id": 18,
+                            "name": "int"
+                        },
+                        "is-reference": false,
+                        "is-const": false
+                    },
+                    {
+                        "id": 19,
+                        "line": 23,
+                        "column": 3,
+                        "type": "return",
+                        "expression": {
+                            "type": "int",
+                            "value": 0,
+                            "id": 20,
+                            "line": 23,
+                            "column": 10
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
