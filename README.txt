@@ -52,7 +52,7 @@ A good place to start is with the mlcg.py program in bin. This program will invo
 
 Then the multlingual pipeline is called for all the (C/C++, Python or Javascript) programs in test0 and a single call graph generated. Procedure calling between files in the same and different languages will be identified (for the limited set of interoperability calls that have been implemented) and the call graph will reflect this, but programs with no procedure calls in common are fine too. The resulting call graph is a forest of trees. Recursion is flagged after one full cycle and several other kind of interlanguage calls are flagged also.
 To get deeper into MLSA you will need to know more about the individual filter programs and pipelines that have been implemented. You can also build new pipelines or add new filters.
-
+test
 Fordham University Multilingual Software Analysis Research Group 
 
 multilingualsa@gmail.com
