@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # MLSA Multilingual Software Analysis
 # This program is part of the MLSA package under development at Fordham University Department of Computer and Information Science.
 # pySA.py takes in a Python file and generates a JSON ast file from the Python file. pyFunCall is called with the ast file passed to it, and creates a csv file of all the call graphs in the Python program. jsViaPy.py is called with that csv file, and results in a new csv file where any JavaScript files called in the Python program are substituted in for the appropriate API. That resulting csv file is then returned.
