@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # MLSA Multilingual Software Analysis
 # This program is part of the MLSA package under development at Fordham University Department of Computer and Information Science.
 # jsViaPy.py takes in the csv generated from pyFunCall.py. The program checks through the csv file to determine if a JavaScript program has been called from the Python program (through PyV8's eval function). If so, the Python file name is found and replaces the API (PyV8's eval()) in the csv file
@@ -17,6 +18,12 @@ import csv
 
 #global variables
 error = "MLSA: jsViaPy.py; " #beginning of error statement for all error messages in the program
+LAST_ELEMENT = -1
+CSV_ARGUMENTS = 4
+CSV_FUNCTION = 3
+CSV_CALL_ID = 0
+JS_SUFFIX = -4
+PY_SUFFIX = -3
 
 class Updater:
     def __init__(self, f, pyfile):
@@ -24,7 +31,7 @@ class Updater:
         self.path = ''
         if '/' in pyfile:
             p = pyfile.split('/')
-            self.path = '/'.join(p[:-1])+'/'
+            self.path = '/'.join(p[:LAST_ELEMENT])+'/'
         self.calls = []
         #copy of csv file for Updater
         self.csv = []
@@ -62,7 +69,7 @@ class Updater:
                 self.calls.append(list(newRow)) #list() creates a copy of newRow
                 if '/' not in j:
                     j = self.path+j
-                self.calls[-1].append(j)
+                self.calls[LAST_ELEMENT].append(j)
         #if jsfile list is empty, API was not found
         #add the original row to the new csv file
         else:
@@ -76,22 +83,22 @@ class Updater:
         #for now jsfile can only have one value, but when rda is added, there could be multiple potential values
         jsfile = []
         #if the eval function belongs to PyV8, OBJ.JSContext function should be found in the line above OBJ.eval in the csv file
-        #the name of the function called is found in the 4th column (hence self.csv[n-1][3]
-        if '.JSContext' in self.csv[n-1][3]:
+        #the name of the function called is found in the 4th column (hence self.csv[n-1][3])
+        if '.JSContext' in self.csv[n-1][CSV_FUNCTION]:
             for x in xrange(4, len(row)):
                 #read() should be an argument of OBJ.eval
                 if 'read()' in row[x]:
                     #because read is a function call, it has it's call id attached to the end (ex: read()6) which can be used to find the function call in the csv file
-                    m = row[x].split(')')[-1]
+                    m = row[x].split(')')[LAST_ELEMENT]
                     for i, c in enumerate(self.csv):
                         #find the read() call from OBJ.eval in the csv file using call id
-                        if m == str(c[0]):
+                        if m == str(c[CSV_CALL_ID]):
                             #open() should be found in the line above read() in the csv file
-                            if 'open' in self.csv[i-1][3]:
+                            if 'open' in self.csv[i-1][CSV_FUNCTION]:
                                 #check if the argument is a string, and if it is a JavaScript file
                                 #arguments start at column 5 in the csv file
-                                if '<' in self.csv[i-1][4] and '>' in self.csv[i-1][4] and '.js' in self.csv[i-1][4][-4:]:
-                                    jsfile = [self.csv[i-1][4][1:-1]]
+                                if '<' in self.csv[i-1][CSV_ARGUMENTS] and '>' in self.csv[i-1][CSV_ARGUMENTS] and '.js' in self.csv[i-1][CSV_ARGUMENTS][JS_SUFFIX:]:
+                                    jsfile = [self.csv[i-1][CSV_ARGUMENTS][1:-1]]
                             #if the value is not a JavaScript file or not a string (could be a variable), send error message
                                 else:
                                     jsfile = ["ERROR_JavaScript_File_Cannot_Be_Discerned"]
@@ -103,7 +110,7 @@ def main(inputCsv, pyfile, outputCsv):
     global error
 
     #check if csv file contains content from a Python program
-    if '.py' not in pyfile[-3:]:
+    if '.py' not in pyfile[PY_SUFFIX:]:
         sys.exit(error+"csv file not a Python call graph")
     
     #read from input csv file and update csv if APIs found
