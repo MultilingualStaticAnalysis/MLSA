@@ -12,5 +12,8 @@
 # if you do ./mlsapath.bash then the PATH is not updated!
 #
 echo "MLSA executable path will be `pwd`/bin"
+chmod a+x `pwd`/bin/*.py
+chmod a+x `pwd`/metrics/*.py
+chmod a+x `pwd`/test/*.py
 export PATH=$PATH:`pwd`/bin
-
+export PATH=$PATH:`pwd`/metrics
