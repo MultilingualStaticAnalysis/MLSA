@@ -11,6 +11,7 @@
 import sys
 import os
 import findIncludes
+import targetAPI
 import generateIncludeDOT
 import createPDF
 
@@ -26,6 +27,7 @@ psfile = d+"/includes.ps" #ps file name
 #get includes and prints stats
 findIncludes.main(csvfile, statfile)
 #create dot file for includes
+targetAPI.main(csvfile, statfile)
 generateIncludeDOT.main(csvfile, d, dotfile)
 #create pdf graph of includes
 createPDF.main(dotfile, psfile, pdffile)
