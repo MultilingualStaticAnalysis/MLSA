@@ -1,0 +1,66 @@
+%token <str>REQUIRE
+%token <str>DQSTRING
+%token <str>SQSTRING
+
+%{
+	#include <iostream>
+  	#include <string>
+  	#include <vector>
+  	#include <stdio.h>
+  	#include <string.h>
+	using namespace std;
+	void yyerror(string);
+	int yylex(void);
+	vector<string> sym;
+	union YYSTYPE {
+		int val;
+		char *str;
+	};
+	typedef union YYSTYPE YYSTYPE;
+
+%}
+
+%start program
+%type <str>land
+%type <str>string
+
+%%
+
+program:
+	program water
+	| program land
+	|
+	;
+
+water:
+	')'
+	| '['
+	| ']'
+	| ','
+	| DQSTRING
+	| SQSTRING
+	| REQUIRE
+
+land:
+	REQUIRE DQSTRING ')'							{ sym.push_back(string($2)); }
+	| REQUIRE SQSTRING ')'							{ sym.push_back(string($2)); }
+	| REQUIRE '[' string ']'
+
+string:
+	string ',' DQSTRING								{ sym.push_back(string($3)); }
+	| string ',' SQSTRING							{ sym.push_back(string($3)); }
+	| DQSTRING										{ sym.push_back(string($1)); }
+	| SQSTRING										{ sym.push_back(string($1)); }
+%%
+
+void yyerror(string s) {
+	cerr << s << endl;
+}
+
+int main(void) {
+	yyparse();
+	for(int k = 0; k < sym.size(); k++) {
+		cout << sym[k] << endl;
+	}
+	return 0;
+}

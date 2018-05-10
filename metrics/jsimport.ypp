@@ -1,0 +1,65 @@
+%token <str>LAKE
+%token <str>FROM
+%token <str>IMPORT
+%token <str>SQSTRING
+%token <str>DQSTRING
+
+%{
+	#include <iostream>
+  	#include <string>
+  	#include <vector>
+  	#include <stdio.h>
+  	#include <string.h>
+	using namespace std;
+	void yyerror(string);
+	int yylex(void);
+	vector<string> sym;
+	union YYSTYPE {
+		int val;
+		char *str;
+	};
+	typedef union YYSTYPE YYSTYPE;
+
+%}
+
+%start program
+%type <str>land
+%type <str>lake
+
+%%
+
+program:
+	program water
+	| program land
+	|
+	;
+
+water:
+	DQSTRING
+	| SQSTRING
+	| LAKE
+	| FROM
+
+land:
+	IMPORT lake FROM DQSTRING					{ sym.push_back(string($4)); }
+	| IMPORT lake FROM SQSTRING					{ sym.push_back(string($4)); }
+	| IMPORT DQSTRING							{ sym.push_back(string($2)); }
+	| IMPORT SQSTRING							{ sym.push_back(string($2)); }
+
+lake:
+	lake LAKE									{ $$ = $2; }
+	|
+	;
+
+%%
+
+void yyerror(string s) {
+	cerr << s << endl;
+}
+
+int main(void) {
+	yyparse();
+	for(int k = 0; k < sym.size(); k++) {
+		cout << sym[k] << endl;
+	}
+}

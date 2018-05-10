@@ -1,0 +1,57 @@
+%token <str>IFILE
+%token <str>INCLUDE
+%token <str>STRING
+
+%{
+	#include <iostream>
+  	#include <string>
+  	#include <vector>
+  	#include <stdio.h>
+  	#include <string.h>
+	using namespace std;
+	void yyerror(string);
+	int yylex(void);
+	vector<string> sym;
+	union YYSTYPE {
+		int val;
+		char *str;
+	};
+	typedef union YYSTYPE YYSTYPE;
+
+%}
+
+%start program
+%type <str>land
+
+%%
+
+program:
+	program water
+	| program land
+	|
+	;
+
+water:
+	'<'
+	| '>'
+	| IFILE
+	| STRING
+
+land:
+	INCLUDE '<' IFILE '>'				{ sym.push_back(string($3)); }
+	| INCLUDE STRING				{ sym.push_back(string($2)); }
+	| INCLUDE IFILE					{ sym.push_back("**"+string($2)); }
+
+%%
+
+void yyerror(string s) {
+	cerr << s << endl;
+}
+
+int main(void) {
+	yyparse();
+	for(int k = 0; k < sym.size(); k++) {
+		cout << sym[k] << endl;
+	}
+	return 0;
+}
