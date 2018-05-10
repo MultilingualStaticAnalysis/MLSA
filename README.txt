@@ -46,11 +46,19 @@ Next, cd to the test folder. All calls to testcode.py will automatically diff th
 
 
 If you get no differences reported for all these, then your MLSA installation is operating correctly and you can go ahead and use MLSA! 
-A good place to start is with the mlcg.py program in bin. This program will invoke the multilingual call graph pipeline on the programs and/or folders you give it as argument. For example, in the MLSA mlsa/test folder if you type:
 
-	mlcg.py test0
+A good place to start is with the mlcg.py program in bin. This program will invoke the multilingual call graph pipeline on the programs and/or folders you give it as argument. For example, in the MLSA mlsa/test/test0 folder if you type:
+
+	mlcg.py
 
 Then the multlingual pipeline is called for all the (C/C++, Python or Javascript) programs in test0 and a single call graph generated. Procedure calling between files in the same and different languages will be identified (for the limited set of interoperability calls that have been implemented) and the call graph will reflect this, but programs with no procedure calls in common are fine too. The resulting call graph is a forest of trees. Recursion is flagged after one full cycle and several other kind of interlanguage calls are flagged also.
+
+To run a dependency analysis and create a dependency graph, just cd into the folder that you want to run the analysis on and type:
+
+	mldg.py
+
+This command can easily be run on any of the test folders in mlsa by cd-ing into mlsa/test/test[0-5] and typing the command. You can change the target Interoperability API's printed out in the metrics/target_files.txt file
+
 To get deeper into MLSA you will need to know more about the individual filter programs and pipelines that have been implemented. You can also build new pipelines or add new filters.
 
 Fordham University Multilingual Software Analysis Research Group 
