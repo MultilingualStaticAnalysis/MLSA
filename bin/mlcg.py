@@ -22,7 +22,7 @@ files = []
 csvfiles = []
 
 if len(sys.argv) < 2:
-    sys.exit(ERROR+"arguments needed")
+    sys.argv.append(os.getcwd())
 
 sys.argv.pop(0)
 title = sys.argv[0]
@@ -32,12 +32,10 @@ cgDot = title+'_callgraph.dot'
 cgPs = title+'_callgraph.ps'
 cgPdf = title+'_callgraph.pdf'
 
-if not os.path.isfile(systemFuncs):
-    try:
-        with open(systemFuncs, 'w'):
-            pass
-    except IOError:
-        sys.exit(ERROR+'cannot create function csv file')
+try:
+    open(systemFuncs, 'w').close()
+except IOError:
+    sys.exit(ERROR+'cannot create function csv file')
 
 for arg in sys.argv:
     if os.path.isdir(arg):
@@ -52,6 +50,7 @@ for arg in sys.argv:
 # mlcg.py should not handle other programs' errors
 
 #need to make main function for these
+#print files
 for f in files:
     fileType = f.split('.')[-1]
     if fileType == 'c' or fileType == 'cpp':
@@ -70,6 +69,7 @@ for f in files:
 if csvfiles:
     print "merging csv files..."
     mergeFunCall.main(csvfiles, systemFuncs, cgCsv)
+    print "the merged csv can be found in "+cgCsv
     print "creating DOT file..."
     generateDOT.main(cgCsv, title, cgDot)
     print "generating call graph..."
