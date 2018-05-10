@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # MLSA Multilingual Software Analysis
 # This program is part of the MLSA package under development at Fordham University Department of Computer and Information Science.
 # pyViaJs.py takes in the csv generated from jsFunCall.py. The program checks through the csv file to determine if a Python program has been called from the JavaScript program (through JQuery's ajax function). If so, the Python file name is found and replaces the API ($.ajax()) in the csv file
@@ -17,6 +18,12 @@ import csv
 
 #global variables
 error = "MLSA: pyViaJs.py; " #beginning of error statement for all error messages in the program
+LAST_ELEMENT = -1
+CSV_FUNCTION = 3
+PY_SUFFIX = -4
+JS_SUFFIX = -3
+FIRST_ELEMENT = 0
+VAR = 1
 
 #---------------------------Updater Class------------------------------#
 class Updater:
@@ -43,8 +50,8 @@ class Updater:
         pyfile = []
         #this code is meant specifically for $.ajax() - more if-statements can be added for additional APIs 
         #row[3] is where the function name of the call is found in the csv file
-        if len(row) > 3:
-            if 'OBJ.ajax' in row[3]:
+        if len(row) > CSV_FUNCTION:
+            if 'OBJ.ajax' in row[CSV_FUNCTION]:
                 pyfile = self.findPY(row)
         else:
             sys.exit(error+"Incorrect syntax in csv file")
@@ -53,13 +60,13 @@ class Updater:
         #    0,class,scope,file.py
         if pyfile:
             #takes first 3 columns of the csv file (id,class,scope)
-            newRow = row[:3]
+            newRow = row[:CSV_FUNCTION]
             for p in pyfile:
                 #adds line to csv file with first 3 rows and the Python file name at the end
                 self.calls.append(list(newRow)) #list() creates a copy of newRow
                 if '/' not in p:
                     p = self.path+p
-                self.calls[-1].append(p)
+                self.calls[LAST_ELEMENT].append(p)
         #if pyfile list is empty, API was not found
         #add the original row to the new csv file
         else:
@@ -81,10 +88,10 @@ class Updater:
                         #url is the key, the Python file name is the value
                         f = e.split(':')
                         #value must be a string (inside <>) and must end with .py for it to be a Python file
-                        if '<' in f[1][0] and '>' in f[1][-1] and '.py' in f[1][-4:]:
-                            f[1] = f[1][1:-1] #remove <>
-                            g = f[1].split('/') #remove all / (because url has /)
-                            pyfile = [g[-1]] #file name is found after the last /
+                        if '<' in f[VAR][FIRST_ELEMENT] and '>' in f[VAR][LAST_ELEMENT] and '.py' in f[VAR][PY_SUFFIX:]:
+                            f[VAR] = f[VAR][1:LAST_ELEMENT] #remove <>
+                            g = f[VAR].split('/') #remove all / (because url has /)
+                            pyfile = [g[LAST_ELEMENT]] #file name is found after the last /
                         #if the value of url is not a Python file or not a string (could be a variable), send error message
                         else:
                             pyfile = ["ERROR_Python_File_Cannot_Be_Discerned"]
@@ -97,7 +104,7 @@ def main(inputCsv, jsfile, outputCsv):
     global error
 
     #check if csv file contains content from a JavaScript program
-    if '.js' not in jsfile[-3:]:
+    if '.js' not in jsfile[JS_SUFFIX:]:
         sys.exit(error+"csv file not a JavaScript call graph")
 
     #read from input csv file and update csv if APIs found
