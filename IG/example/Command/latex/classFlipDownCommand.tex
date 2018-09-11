@@ -1,0 +1,82 @@
+\hypertarget{classFlipDownCommand}{}\section{Flip\+Down\+Command Class Reference}
+\label{classFlipDownCommand}\index{Flip\+Down\+Command@{Flip\+Down\+Command}}
+
+
+Inheritance diagram for Flip\+Down\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{classFlipDownCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Flip\+Down\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classFlipDownCommand__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFlipDownCommand_af218198d340956c93e27033f48258bf8}{Flip\+Down\+Command} (\hyperlink{classLight}{Light} \&light)
+\item 
+virtual void \hyperlink{classFlipDownCommand_a5514f3bdf8d7601f3252361635f9c3a1}{execute} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLight}{Light} \& \hyperlink{classFlipDownCommand_a74f7f12538ecf5b5921e289a4c1129a5}{the\+Light}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Flip\+Down\+Command@{Flip\+Down\+Command}!Flip\+Down\+Command@{Flip\+Down\+Command}}
+\index{Flip\+Down\+Command@{Flip\+Down\+Command}!Flip\+Down\+Command@{Flip\+Down\+Command}}
+\subsubsection[{\texorpdfstring{Flip\+Down\+Command(\+Light \&light)}{FlipDownCommand(Light &light)}}]{\setlength{\rightskip}{0pt plus 5cm}Flip\+Down\+Command\+::\+Flip\+Down\+Command (
+\begin{DoxyParamCaption}
+\item[{{\bf Light} \&}]{light}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classFlipDownCommand_af218198d340956c93e27033f48258bf8}{}\label{classFlipDownCommand_af218198d340956c93e27033f48258bf8}
+
+\begin{DoxyCode}
+52                                   :\hyperlink{classFlipDownCommand_a74f7f12538ecf5b5921e289a4c1129a5}{theLight}(light)
+53     \{
+54 
+55     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Flip\+Down\+Command@{Flip\+Down\+Command}!execute@{execute}}
+\index{execute@{execute}!Flip\+Down\+Command@{Flip\+Down\+Command}}
+\subsubsection[{\texorpdfstring{execute()}{execute()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Flip\+Down\+Command\+::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classFlipDownCommand_a5514f3bdf8d7601f3252361635f9c3a1}{}\label{classFlipDownCommand_a5514f3bdf8d7601f3252361635f9c3a1}
+
+
+Implements \hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{Command}.
+
+
+\begin{DoxyCode}
+57     \{
+58         \hyperlink{classFlipDownCommand_a74f7f12538ecf5b5921e289a4c1129a5}{theLight}.\hyperlink{classLight_aee2ab836d8c984756e10e8e301130aa4}{turnOff}();
+59     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Flip\+Down\+Command@{Flip\+Down\+Command}!the\+Light@{the\+Light}}
+\index{the\+Light@{the\+Light}!Flip\+Down\+Command@{Flip\+Down\+Command}}
+\subsubsection[{\texorpdfstring{the\+Light}{theLight}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Light}\& Flip\+Down\+Command\+::the\+Light\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classFlipDownCommand_a74f7f12538ecf5b5921e289a4c1129a5}{}\label{classFlipDownCommand_a74f7f12538ecf5b5921e289a4c1129a5}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Command_8cpp}{Command.\+cpp}\end{DoxyCompactItemize}

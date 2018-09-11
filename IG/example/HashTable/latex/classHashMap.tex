@@ -1,0 +1,168 @@
+\hypertarget{classHashMap}{}\section{Hash\+Map Class Reference}
+\label{classHashMap}\index{Hash\+Map@{Hash\+Map}}
+
+
+Collaboration diagram for Hash\+Map\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=143pt]{classHashMap__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classHashMap_a3ae91705aa3ebfff22ce92e3c7797050}{Hash\+Map} ()
+\item 
+int \hyperlink{classHashMap_af676e8e12150e2f94ed7766103795f84}{Hash\+Func} (int key)
+\item 
+void \hyperlink{classHashMap_aa595b4e98a9ec68efa0ee9fe75126186}{Insert} (int key, int value)
+\item 
+int \hyperlink{classHashMap_a2801980039df1862de284ce00cb6d1f3}{Search} (int key)
+\item 
+void \hyperlink{classHashMap_a021573afbb91afef3b30e90d22aed366}{Remove} (int key)
+\item 
+\hyperlink{classHashMap_a7120321a936e8018fd276bcd4b4da3b8}{$\sim$\+Hash\+Map} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classHashEntry}{Hash\+Entry} $\ast$$\ast$ \hyperlink{classHashMap_a17f8fbff625a697ac94039b4a1c6cce4}{table}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Hash\+Map@{Hash\+Map}!Hash\+Map@{Hash\+Map}}
+\index{Hash\+Map@{Hash\+Map}!Hash\+Map@{Hash\+Map}}
+\subsubsection[{\texorpdfstring{Hash\+Map()}{HashMap()}}]{\setlength{\rightskip}{0pt plus 5cm}Hash\+Map\+::\+Hash\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classHashMap_a3ae91705aa3ebfff22ce92e3c7797050}{}\label{classHashMap_a3ae91705aa3ebfff22ce92e3c7797050}
+
+\begin{DoxyCode}
+35     \{
+36             \hyperlink{classHashMap_a17f8fbff625a697ac94039b4a1c6cce4}{table} = \textcolor{keyword}{new} \hyperlink{classHashEntry}{HashEntry} * [\hyperlink{HashTable_8cpp_ada4ebb227211f96616c9e6681a944bc1}{TABLE\_SIZE}];
+37             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i< \hyperlink{HashTable_8cpp_ada4ebb227211f96616c9e6681a944bc1}{TABLE\_SIZE}; i++)
+38             \{
+39                 \hyperlink{classHashMap_a17f8fbff625a697ac94039b4a1c6cce4}{table}[i] = NULL;
+40             \}
+41         \}
+\end{DoxyCode}
+\index{Hash\+Map@{Hash\+Map}!````~Hash\+Map@{$\sim$\+Hash\+Map}}
+\index{````~Hash\+Map@{$\sim$\+Hash\+Map}!Hash\+Map@{Hash\+Map}}
+\subsubsection[{\texorpdfstring{$\sim$\+Hash\+Map()}{~HashMap()}}]{\setlength{\rightskip}{0pt plus 5cm}Hash\+Map\+::$\sim$\+Hash\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classHashMap_a7120321a936e8018fd276bcd4b4da3b8}{}\label{classHashMap_a7120321a936e8018fd276bcd4b4da3b8}
+
+\begin{DoxyCode}
+103     \{
+104             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{HashTable_8cpp_ada4ebb227211f96616c9e6681a944bc1}{TABLE\_SIZE}; i++)
+105             \{
+106                 \textcolor{keywordflow}{if} (\hyperlink{classHashMap_a17f8fbff625a697ac94039b4a1c6cce4}{table}[i] != NULL)
+107                     \textcolor{keyword}{delete} \hyperlink{classHashMap_a17f8fbff625a697ac94039b4a1c6cce4}{table}[i];
+108                 \textcolor{keyword}{delete}[] \hyperlink{classHashMap_a17f8fbff625a697ac94039b4a1c6cce4}{table};
+109             \}
+110         \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Hash\+Map@{Hash\+Map}!Hash\+Func@{Hash\+Func}}
+\index{Hash\+Func@{Hash\+Func}!Hash\+Map@{Hash\+Map}}
+\subsubsection[{\texorpdfstring{Hash\+Func(int key)}{HashFunc(int key)}}]{\setlength{\rightskip}{0pt plus 5cm}int Hash\+Map\+::\+Hash\+Func (
+\begin{DoxyParamCaption}
+\item[{int}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classHashMap_af676e8e12150e2f94ed7766103795f84}{}\label{classHashMap_af676e8e12150e2f94ed7766103795f84}
+
+\begin{DoxyCode}
+46         \{
+47             \textcolor{keywordflow}{return} key % \hyperlink{HashTable_8cpp_ada4ebb227211f96616c9e6681a944bc1}{TABLE\_SIZE};
+48         \}
+\end{DoxyCode}
+\index{Hash\+Map@{Hash\+Map}!Insert@{Insert}}
+\index{Insert@{Insert}!Hash\+Map@{Hash\+Map}}
+\subsubsection[{\texorpdfstring{Insert(int key, int value)}{Insert(int key, int value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Hash\+Map\+::\+Insert (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classHashMap_aa595b4e98a9ec68efa0ee9fe75126186}{}\label{classHashMap_aa595b4e98a9ec68efa0ee9fe75126186}
+
+\begin{DoxyCode}
+53     \{
+54             \textcolor{keywordtype}{int} hash = \hyperlink{classHashMap_af676e8e12150e2f94ed7766103795f84}{HashFunc}(key);
+55             \textcolor{keywordflow}{while} (\hyperlink{classHashMap_a17f8fbff625a697ac94039b4a1c6cce4}{table}[hash] != NULL && \hyperlink{classHashMap_a17f8fbff625a697ac94039b4a1c6cce4}{table}[hash]->key != key)
+56             \{
+57                 hash = \hyperlink{classHashMap_af676e8e12150e2f94ed7766103795f84}{HashFunc}(hash + 1);
+58             \}
+59             \textcolor{keywordflow}{if} (\hyperlink{classHashMap_a17f8fbff625a697ac94039b4a1c6cce4}{table}[hash] != NULL)
+60                 \textcolor{keyword}{delete} \hyperlink{classHashMap_a17f8fbff625a697ac94039b4a1c6cce4}{table}[hash];
+61             \hyperlink{classHashMap_a17f8fbff625a697ac94039b4a1c6cce4}{table}[hash] = \textcolor{keyword}{new} \hyperlink{classHashEntry}{HashEntry}(key, value);
+62     \}
+\end{DoxyCode}
+\index{Hash\+Map@{Hash\+Map}!Remove@{Remove}}
+\index{Remove@{Remove}!Hash\+Map@{Hash\+Map}}
+\subsubsection[{\texorpdfstring{Remove(int key)}{Remove(int key)}}]{\setlength{\rightskip}{0pt plus 5cm}void Hash\+Map\+::\+Remove (
+\begin{DoxyParamCaption}
+\item[{int}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classHashMap_a021573afbb91afef3b30e90d22aed366}{}\label{classHashMap_a021573afbb91afef3b30e90d22aed366}
+
+\begin{DoxyCode}
+83     \{
+84         \textcolor{keywordtype}{int} hash = \hyperlink{classHashMap_af676e8e12150e2f94ed7766103795f84}{HashFunc}(key);
+85         \textcolor{keywordflow}{while} (\hyperlink{classHashMap_a17f8fbff625a697ac94039b4a1c6cce4}{table}[hash] != NULL)
+86         \{
+87             \textcolor{keywordflow}{if} (\hyperlink{classHashMap_a17f8fbff625a697ac94039b4a1c6cce4}{table}[hash]->key == key)
+88                 \textcolor{keywordflow}{break};
+89             hash = \hyperlink{classHashMap_af676e8e12150e2f94ed7766103795f84}{HashFunc}(hash + 1);
+90         \}
+91             \textcolor{keywordflow}{if} (\hyperlink{classHashMap_a17f8fbff625a697ac94039b4a1c6cce4}{table}[hash] == NULL)
+92         \{
+93                 cout<<\textcolor{stringliteral}{"No Element found at key "}<<key<<endl;
+94                 \textcolor{keywordflow}{return};
+95             \}
+96             \textcolor{keywordflow}{else}
+97             \{
+98                 \textcolor{keyword}{delete} \hyperlink{classHashMap_a17f8fbff625a697ac94039b4a1c6cce4}{table}[hash];
+99             \}
+100             cout<<\textcolor{stringliteral}{"Element Deleted"}<<endl;
+101         \}
+\end{DoxyCode}
+\index{Hash\+Map@{Hash\+Map}!Search@{Search}}
+\index{Search@{Search}!Hash\+Map@{Hash\+Map}}
+\subsubsection[{\texorpdfstring{Search(int key)}{Search(int key)}}]{\setlength{\rightskip}{0pt plus 5cm}int Hash\+Map\+::\+Search (
+\begin{DoxyParamCaption}
+\item[{int}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classHashMap_a2801980039df1862de284ce00cb6d1f3}{}\label{classHashMap_a2801980039df1862de284ce00cb6d1f3}
+
+\begin{DoxyCode}
+67     \{
+68         \textcolor{keywordtype}{int}  hash = \hyperlink{classHashMap_af676e8e12150e2f94ed7766103795f84}{HashFunc}(key);
+69         \textcolor{keywordflow}{while} (\hyperlink{classHashMap_a17f8fbff625a697ac94039b4a1c6cce4}{table}[hash] != NULL && \hyperlink{classHashMap_a17f8fbff625a697ac94039b4a1c6cce4}{table}[hash]->key != key)
+70         \{
+71             hash = \hyperlink{classHashMap_af676e8e12150e2f94ed7766103795f84}{HashFunc}(hash + 1);
+72         \}
+73         \textcolor{keywordflow}{if} (\hyperlink{classHashMap_a17f8fbff625a697ac94039b4a1c6cce4}{table}[hash] == NULL)
+74             \textcolor{keywordflow}{return} -1;
+75         \textcolor{keywordflow}{else}
+76             \textcolor{keywordflow}{return} \hyperlink{classHashMap_a17f8fbff625a697ac94039b4a1c6cce4}{table}[hash]->\hyperlink{classHashEntry_aa225f361520a57dbaf93e9d00bf69490}{value};
+77         \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Hash\+Map@{Hash\+Map}!table@{table}}
+\index{table@{table}!Hash\+Map@{Hash\+Map}}
+\subsubsection[{\texorpdfstring{table}{table}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hash\+Entry}$\ast$$\ast$ Hash\+Map\+::table\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classHashMap_a17f8fbff625a697ac94039b4a1c6cce4}{}\label{classHashMap_a17f8fbff625a697ac94039b4a1c6cce4}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{HashTable_8cpp}{Hash\+Table.\+cpp}\end{DoxyCompactItemize}

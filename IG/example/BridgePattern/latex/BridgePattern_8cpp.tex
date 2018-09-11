@@ -1,0 +1,65 @@
+\hypertarget{BridgePattern_8cpp}{}\section{Bridge\+Pattern.\+cpp File Reference}
+\label{BridgePattern_8cpp}\index{Bridge\+Pattern.\+cpp@{Bridge\+Pattern.\+cpp}}
+{\ttfamily \#include $<$iostream.\+h$>$}\\*
+{\ttfamily \#include $<$iomanip.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+Include dependency graph for Bridge\+Pattern.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{BridgePattern_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classTimeImp}{Time\+Imp}
+\item 
+class \hyperlink{classCivilianTimeImp}{Civilian\+Time\+Imp}
+\item 
+class \hyperlink{classZuluTimeImp}{Zulu\+Time\+Imp}
+\item 
+class \hyperlink{classTime}{Time}
+\item 
+class \hyperlink{classCivilianTime}{Civilian\+Time}
+\item 
+class \hyperlink{classZuluTime}{Zulu\+Time}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{BridgePattern_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Bridge\+Pattern.\+cpp@{Bridge\+Pattern.\+cpp}!main@{main}}
+\index{main@{main}!Bridge\+Pattern.\+cpp@{Bridge\+Pattern.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{BridgePattern_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{BridgePattern_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+80            \{
+81   \hyperlink{classTime}{Time} *times[3];
+82   times[0] = \textcolor{keyword}{new} \hyperlink{classTime}{Time}(14, 30);
+83   times[1] = \textcolor{keyword}{new} \hyperlink{classCivilianTime}{CivilianTime}(2, 30, 1);
+84   times[2] = \textcolor{keyword}{new} \hyperlink{classZuluTime}{ZuluTime}(14, 30, 6);
+85   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 3; i++)
+86     times[i]->tell();
+87 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{BridgePattern_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

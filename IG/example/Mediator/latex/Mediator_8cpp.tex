@@ -1,0 +1,67 @@
+\hypertarget{Mediator_8cpp}{}\section{Mediator.\+cpp File Reference}
+\label{Mediator_8cpp}\index{Mediator.\+cpp@{Mediator.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+Include dependency graph for Mediator.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{Mediator_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classColleagueInterface}{Colleague\+Interface}
+\item 
+class \hyperlink{classColleague}{Colleague}
+\item 
+class \hyperlink{classMediatorInterface}{Mediator\+Interface}
+\item 
+class \hyperlink{classMediator}{Mediator}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Mediator_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Mediator.\+cpp@{Mediator.\+cpp}!main@{main}}
+\index{main@{main}!Mediator.\+cpp@{Mediator.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Mediator_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Mediator_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+51            \{
+52     \hyperlink{classColleague}{Colleague} *bob = \textcolor{keyword}{new} \hyperlink{classColleague}{Colleague} (\textcolor{stringliteral}{"Bob"}),  *sam = \textcolor{keyword}{new} 
+      \hyperlink{classColleague}{Colleague} (\textcolor{stringliteral}{"Sam"}),  *frank = \textcolor{keyword}{new} \hyperlink{classColleague}{Colleague} (\textcolor{stringliteral}{"Frank"}),  *tom = \textcolor{keyword}{new} 
+      \hyperlink{classColleague}{Colleague} (\textcolor{stringliteral}{"Tom"});
+53     \hyperlink{classColleague}{Colleague}* staff[] = \{bob, sam, frank, tom\};
+54     \hyperlink{classMediator}{Mediator} mediatorStaff, mediatorSamsBuddies;
+55     \textcolor{keywordflow}{for} (\hyperlink{classColleague}{Colleague}* x : staff)
+56         mediatorStaff.\hyperlink{classMediatorInterface_acf4de17fcada54c6701c2afb11c754bd}{registerColleague}(x);
+57     bob->\hyperlink{classColleague_afb6563e15f8ea7f8931d5c51ad15cef6}{sendMessage} (mediatorStaff, \textcolor{stringliteral}{"I'm quitting this job!"});
+58     mediatorSamsBuddies.\hyperlink{classMediatorInterface_acf4de17fcada54c6701c2afb11c754bd}{registerColleague} (frank);  mediatorSamsBuddies.
+      \hyperlink{classMediatorInterface_acf4de17fcada54c6701c2afb11c754bd}{registerColleague} (tom);  \textcolor{comment}{// Sam's buddies only}
+59     sam->sendMessage (mediatorSamsBuddies, \textcolor{stringliteral}{"Hooray!  He's gone!  Let's go for a drink, guys!"}); 
+60     \textcolor{keywordflow}{return} 0;
+61 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Mediator_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

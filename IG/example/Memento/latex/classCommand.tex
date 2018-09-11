@@ -1,0 +1,174 @@
+\hypertarget{classCommand}{}\section{Command Class Reference}
+\label{classCommand}\index{Command@{Command}}
+
+
+Collaboration diagram for Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{classCommand__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCommand_ab5004b23122fa06ca3613ee5d082ddc1}{Command} (\hyperlink{classObject}{Object} $\ast$new\+Receiver, \hyperlink{classCommand_a929c81cf8ef71dc52ef78156492f2a42}{Action} new\+Action)
+\item 
+virtual void \hyperlink{classCommand_a1f73a16e8706aec4c4db746f710b88d9}{execute} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classCommand_a31a6d34a1d61f7cd994075a852714d3c}{undo} ()
+\item 
+static void \hyperlink{classCommand_ac807fae3326e22c02edc737708f9b288}{redo} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef void(Object\+::$\ast$ \hyperlink{classCommand_a929c81cf8ef71dc52ef78156492f2a42}{Action}) ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classObject}{Object} $\ast$ \hyperlink{classCommand_ac4a7e0c82bede3a8cd2f2b1478bd4763}{receiver}
+\item 
+\hyperlink{classCommand_a929c81cf8ef71dc52ef78156492f2a42}{Action} \hyperlink{classCommand_ac5473faf8b8b03ce83353838bc00c6dd}{action}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ \hyperlink{classCommand}{Command} $\ast$ $>$ \hyperlink{classCommand_a3b694e6c1b5a3e62bdc0d7d1b3178eb1}{command\+List}
+\item 
+static std\+::vector$<$ \hyperlink{classMemento}{Memento} $\ast$ $>$ \hyperlink{classCommand_a03c855537275970db8e4b9c7ea64a9f9}{memento\+List}
+\item 
+static int \hyperlink{classCommand_a661b9cfc157529504ecf44528e4640b6}{num\+Commands} = 0
+\item 
+static int \hyperlink{classCommand_a06f1310ccbfdcfd18cfae03dcb428728}{max\+Commands} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\index{Command@{Command}!Action@{Action}}
+\index{Action@{Action}!Command@{Command}}
+\subsubsection[{\texorpdfstring{Action}{Action}}]{\setlength{\rightskip}{0pt plus 5cm}typedef void(Object\+::$\ast$ Command\+::\+Action) ()\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCommand_a929c81cf8ef71dc52ef78156492f2a42}{}\label{classCommand_a929c81cf8ef71dc52ef78156492f2a42}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Command@{Command}!Command@{Command}}
+\index{Command@{Command}!Command@{Command}}
+\subsubsection[{\texorpdfstring{Command(\+Object $\ast$new\+Receiver, Action new\+Action)}{Command(Object *newReceiver, Action newAction)}}]{\setlength{\rightskip}{0pt plus 5cm}Command\+::\+Command (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{new\+Receiver, }
+\item[{{\bf Action}}]{new\+Action}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCommand_ab5004b23122fa06ca3613ee5d082ddc1}{}\label{classCommand_ab5004b23122fa06ca3613ee5d082ddc1}
+
+\begin{DoxyCode}
+59 : \hyperlink{classCommand_ac4a7e0c82bede3a8cd2f2b1478bd4763}{receiver} (newReceiver), \hyperlink{classCommand_ac5473faf8b8b03ce83353838bc00c6dd}{action} (newAction) \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Command@{Command}!execute@{execute}}
+\index{execute@{execute}!Command@{Command}}
+\subsubsection[{\texorpdfstring{execute()}{execute()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Command\+::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classCommand_a1f73a16e8706aec4c4db746f710b88d9}{}\label{classCommand_a1f73a16e8706aec4c4db746f710b88d9}
+
+\begin{DoxyCode}
+60                                \{
+61             \textcolor{keywordflow}{if} (\hyperlink{classCommand_a03c855537275970db8e4b9c7ea64a9f9}{mementoList}.size() < \hyperlink{classCommand_a661b9cfc157529504ecf44528e4640b6}{numCommands} + 1)
+62                 \hyperlink{classCommand_a03c855537275970db8e4b9c7ea64a9f9}{mementoList}.resize (\hyperlink{classCommand_a661b9cfc157529504ecf44528e4640b6}{numCommands} + 1);
+63             \hyperlink{classCommand_a03c855537275970db8e4b9c7ea64a9f9}{mementoList}[\hyperlink{classCommand_a661b9cfc157529504ecf44528e4640b6}{numCommands}] = \hyperlink{classCommand_ac4a7e0c82bede3a8cd2f2b1478bd4763}{receiver}->
+      \hyperlink{classObject_a169528dfd6ff33b21b038da8021cd748}{createMemento}();  \textcolor{comment}{// saves the last value}
+64             \textcolor{keywordflow}{if} (\hyperlink{classCommand_a3b694e6c1b5a3e62bdc0d7d1b3178eb1}{commandList}.size() < \hyperlink{classCommand_a661b9cfc157529504ecf44528e4640b6}{numCommands} + 1)
+65                 \hyperlink{classCommand_a3b694e6c1b5a3e62bdc0d7d1b3178eb1}{commandList}.resize (\hyperlink{classCommand_a661b9cfc157529504ecf44528e4640b6}{numCommands} + 1);
+66             \hyperlink{classCommand_a3b694e6c1b5a3e62bdc0d7d1b3178eb1}{commandList}[\hyperlink{classCommand_a661b9cfc157529504ecf44528e4640b6}{numCommands}] = \textcolor{keyword}{this};  \textcolor{comment}{// saves the last command}
+67             \textcolor{keywordflow}{if} (\hyperlink{classCommand_a661b9cfc157529504ecf44528e4640b6}{numCommands} > \hyperlink{classCommand_a06f1310ccbfdcfd18cfae03dcb428728}{maxCommands})
+68                 \hyperlink{classCommand_a06f1310ccbfdcfd18cfae03dcb428728}{maxCommands} = \hyperlink{classCommand_a661b9cfc157529504ecf44528e4640b6}{numCommands};
+69             \hyperlink{classCommand_a661b9cfc157529504ecf44528e4640b6}{numCommands}++;
+70             (\hyperlink{classCommand_ac4a7e0c82bede3a8cd2f2b1478bd4763}{receiver}->*\hyperlink{classCommand_ac5473faf8b8b03ce83353838bc00c6dd}{action})();
+71         \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{classCommand_a1f73a16e8706aec4c4db746f710b88d9_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Command@{Command}!redo@{redo}}
+\index{redo@{redo}!Command@{Command}}
+\subsubsection[{\texorpdfstring{redo()}{redo()}}]{\setlength{\rightskip}{0pt plus 5cm}static void Command\+::redo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classCommand_ac807fae3326e22c02edc737708f9b288}{}\label{classCommand_ac807fae3326e22c02edc737708f9b288}
+
+\begin{DoxyCode}
+81                            \{
+82             \textcolor{keywordflow}{if} (\hyperlink{classCommand_a661b9cfc157529504ecf44528e4640b6}{numCommands} > \hyperlink{classCommand_a06f1310ccbfdcfd18cfae03dcb428728}{maxCommands})
+83             \{
+84                 std::cout << \textcolor{stringliteral}{"There is nothing to redo at this point."} << std::endl;
+85                 return ;
+86             \}
+87             \hyperlink{classCommand}{Command}* commandRedo = \hyperlink{classCommand_a3b694e6c1b5a3e62bdc0d7d1b3178eb1}{commandList}[\hyperlink{classCommand_a661b9cfc157529504ecf44528e4640b6}{numCommands}];
+88             (commandRedo->\hyperlink{classCommand_ac4a7e0c82bede3a8cd2f2b1478bd4763}{receiver}->*(commandRedo->\hyperlink{classCommand_ac5473faf8b8b03ce83353838bc00c6dd}{action}))();
+89             \hyperlink{classCommand_a661b9cfc157529504ecf44528e4640b6}{numCommands}++;
+90         \}
+\end{DoxyCode}
+\index{Command@{Command}!undo@{undo}}
+\index{undo@{undo}!Command@{Command}}
+\subsubsection[{\texorpdfstring{undo()}{undo()}}]{\setlength{\rightskip}{0pt plus 5cm}static void Command\+::undo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classCommand_a31a6d34a1d61f7cd994075a852714d3c}{}\label{classCommand_a31a6d34a1d61f7cd994075a852714d3c}
+
+\begin{DoxyCode}
+72                            \{
+73             \textcolor{keywordflow}{if} (\hyperlink{classCommand_a661b9cfc157529504ecf44528e4640b6}{numCommands} == 0)
+74             \{
+75                 std::cout << \textcolor{stringliteral}{"There is nothing to undo at this point."} << std::endl;
+76                 \textcolor{keywordflow}{return};
+77             \}
+78             \hyperlink{classCommand_a3b694e6c1b5a3e62bdc0d7d1b3178eb1}{commandList}[\hyperlink{classCommand_a661b9cfc157529504ecf44528e4640b6}{numCommands} - 1]->receiver->reinstateMemento (
+      \hyperlink{classCommand_a03c855537275970db8e4b9c7ea64a9f9}{mementoList}[\hyperlink{classCommand_a661b9cfc157529504ecf44528e4640b6}{numCommands} - 1]);
+79             \hyperlink{classCommand_a661b9cfc157529504ecf44528e4640b6}{numCommands}--;
+80         \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Command@{Command}!action@{action}}
+\index{action@{action}!Command@{Command}}
+\subsubsection[{\texorpdfstring{action}{action}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Action} Command\+::action\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCommand_ac5473faf8b8b03ce83353838bc00c6dd}{}\label{classCommand_ac5473faf8b8b03ce83353838bc00c6dd}
+\index{Command@{Command}!command\+List@{command\+List}}
+\index{command\+List@{command\+List}!Command@{Command}}
+\subsubsection[{\texorpdfstring{command\+List}{commandList}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf Command} $\ast$ $>$ Command\+::command\+List\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classCommand_a3b694e6c1b5a3e62bdc0d7d1b3178eb1}{}\label{classCommand_a3b694e6c1b5a3e62bdc0d7d1b3178eb1}
+\index{Command@{Command}!max\+Commands@{max\+Commands}}
+\index{max\+Commands@{max\+Commands}!Command@{Command}}
+\subsubsection[{\texorpdfstring{max\+Commands}{maxCommands}}]{\setlength{\rightskip}{0pt plus 5cm}int Command\+::max\+Commands = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classCommand_a06f1310ccbfdcfd18cfae03dcb428728}{}\label{classCommand_a06f1310ccbfdcfd18cfae03dcb428728}
+\index{Command@{Command}!memento\+List@{memento\+List}}
+\index{memento\+List@{memento\+List}!Command@{Command}}
+\subsubsection[{\texorpdfstring{memento\+List}{mementoList}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf Memento} $\ast$ $>$ Command\+::memento\+List\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classCommand_a03c855537275970db8e4b9c7ea64a9f9}{}\label{classCommand_a03c855537275970db8e4b9c7ea64a9f9}
+\index{Command@{Command}!num\+Commands@{num\+Commands}}
+\index{num\+Commands@{num\+Commands}!Command@{Command}}
+\subsubsection[{\texorpdfstring{num\+Commands}{numCommands}}]{\setlength{\rightskip}{0pt plus 5cm}int Command\+::num\+Commands = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classCommand_a661b9cfc157529504ecf44528e4640b6}{}\label{classCommand_a661b9cfc157529504ecf44528e4640b6}
+\index{Command@{Command}!receiver@{receiver}}
+\index{receiver@{receiver}!Command@{Command}}
+\subsubsection[{\texorpdfstring{receiver}{receiver}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}$\ast$ Command\+::receiver\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCommand_ac4a7e0c82bede3a8cd2f2b1478bd4763}{}\label{classCommand_ac4a7e0c82bede3a8cd2f2b1478bd4763}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Memento_8cpp}{Memento.\+cpp}\end{DoxyCompactItemize}

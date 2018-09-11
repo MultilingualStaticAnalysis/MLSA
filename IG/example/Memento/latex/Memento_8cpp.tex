@@ -1,0 +1,113 @@
+\hypertarget{Memento_8cpp}{}\section{Memento.\+cpp File Reference}
+\label{Memento_8cpp}\index{Memento.\+cpp@{Memento.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+Include dependency graph for Memento.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{Memento_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classObject}{Object}
+\item 
+class \hyperlink{classMemento}{Memento}
+\item 
+class \hyperlink{classCommand}{Command}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string \hyperlink{Memento_8cpp_a90503872144928016292aaa273e07678}{to\+String} (const T \&t)
+\item 
+int \hyperlink{Memento_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \hyperlink{Memento_8cpp_a549853b5d8df8cf60e8d275a4df73b54}{N\+A\+ME} = \char`\"{}Object\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Memento.\+cpp@{Memento.\+cpp}!main@{main}}
+\index{main@{main}!Memento.\+cpp@{Memento.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Memento_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Memento_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+99 \{
+100     \textcolor{keywordtype}{int} i;
+101     std::cout << \textcolor{stringliteral}{"Please enter an integer: "};
+102     std::cin >> i;
+103     \hyperlink{classObject}{Object} *\textcolor{keywordtype}{object} = \textcolor{keyword}{new} \hyperlink{classObject}{Object}(i);
+104     
+105     \hyperlink{classCommand}{Command} *commands[3];
+106     commands[1] = \textcolor{keyword}{new} \hyperlink{classCommand}{Command}(\textcolor{keywordtype}{object}, &\hyperlink{classObject_a7e43ddd2f4647f67ba9d6f18dd24bf77}{Object::doubleValue});
+107     commands[2] = \textcolor{keyword}{new} \hyperlink{classCommand}{Command}(\textcolor{keywordtype}{object}, &\hyperlink{classObject_a406add870a5642dc0d931aec975288f9}{Object::increaseByOne});
+108     
+109     std::cout << \textcolor{stringliteral}{"0.Exit,  1.Double,  2.Increase by one,  3.Undo,  4.Redo: "};
+110     std::cin >> i;
+111     
+112     \textcolor{keywordflow}{while} (i != 0)
+113     \{
+114         \textcolor{keywordflow}{if} (i == 3)
+115             \hyperlink{classCommand_a31a6d34a1d61f7cd994075a852714d3c}{Command::undo}();
+116         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (i == 4)
+117             \hyperlink{classCommand_ac807fae3326e22c02edc737708f9b288}{Command::redo}();
+118         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (i > 0 && i <= 2)
+119             commands[i]->\hyperlink{classCommand_a1f73a16e8706aec4c4db746f710b88d9}{execute}();
+120         \textcolor{keywordflow}{else}
+121         \{
+122             std::cout << \textcolor{stringliteral}{"Enter a proper choice: "};
+123             std::cin >> i;
+124             \textcolor{keywordflow}{continue};
+125         \}
+126         std::cout << \textcolor{stringliteral}{"   "} << \textcolor{keywordtype}{object}->getValue() << \textcolor{stringliteral}{"  "} << \textcolor{keywordtype}{object}->getName() << \textcolor{stringliteral}{"  "} << \textcolor{keywordtype}{object}->getDecimal
+      () << std::endl;
+127         std::cout << \textcolor{stringliteral}{"0.Exit,  1.Double,  2.Increase by one,  3.Undo,  4.Redo: "};
+128         std::cin >> i;
+129     \}
+130 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Memento_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Memento.\+cpp@{Memento.\+cpp}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Memento.\+cpp@{Memento.\+cpp}}
+\subsubsection[{\texorpdfstring{to\+String(const T \&t)}{toString(const T &t)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::string to\+String (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{Memento_8cpp_a90503872144928016292aaa273e07678}{}\label{Memento_8cpp_a90503872144928016292aaa273e07678}
+
+\begin{DoxyCode}
+9                                 \{
+10     std::stringstream ss;
+11     ss << t;
+12     \textcolor{keywordflow}{return} ss.str();
+13 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{Memento.\+cpp@{Memento.\+cpp}!N\+A\+ME@{N\+A\+ME}}
+\index{N\+A\+ME@{N\+A\+ME}!Memento.\+cpp@{Memento.\+cpp}}
+\subsubsection[{\texorpdfstring{N\+A\+ME}{NAME}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string N\+A\+ME = \char`\"{}Object\char`\"{}}\hypertarget{Memento_8cpp_a549853b5d8df8cf60e8d275a4df73b54}{}\label{Memento_8cpp_a549853b5d8df8cf60e8d275a4df73b54}

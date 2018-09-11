@@ -1,0 +1,130 @@
+%token <str>FUNC
+%token <str>TAB
+%token <str>TICK
+%token <str>CALL
+%token <str>MEMCALL
+%token <str>REF
+%token <str>FUNCTION
+%token <str>INT
+%token <str>MEMBER
+%token <str>BINOP
+%token <str>UNOP
+%token <str>STR
+%token <str>VAR
+%token <str>PARMVAR
+%token <str>SUB
+%token <str>ID
+%token <str>NAME
+%token <str>NUMBER
+%token <str>STRING
+
+%{
+	#include <iostream>
+  	#include <string>
+  	#include <vector>
+  	#include <stdio.h>
+  	#include <string.h>
+  	#include "Cparse.h"
+	using namespace std;
+	void yyerror(string);
+	int yylex(void);
+	int tabcount = 0;
+	bool t = false;
+	Cparse parser;
+	union YYSTYPE {
+		int val;
+		char *str;
+	};
+	typedef union YYSTYPE YYSTYPE;
+%}
+
+%start input
+%type <str>arg
+%type <str>variable
+%type <str>node
+%type <str>name
+
+%%
+
+input:
+	input chunk
+	|
+	;
+
+chunk:
+	water
+	| keywordproductions
+
+water:
+	keyword
+	| ID
+	| NAME
+	| NUMBER
+	| STRING
+
+keywordproductions:
+	tab tick node
+
+tab:
+	tab TAB 								{ tabcount++; }
+	|
+	;
+
+tick:
+	TICK 									{ t = true; }
+	|										{ t = false; }
+
+node:
+	FUNC filler NAME '\''					{ /* saves latest function name in variable, clears call tab count */ tabcount = 0; }
+	| CALL ID								{ /* creates Call object with id, adds id and type (reg or mem) to callblock stack, adds call id to argument if the stack already has a call on it */ tabcount = 0; }
+	| MEMCALL ID 							{ /* creates Call object with id, adds id and type (reg or mem) to callblock stack, adds call id to argument if the stack already has a call on it */ tabcount = 0; }
+	| arg 									{ tabcount = 0; }
+	| NAME 									{ /* checks tab and tick to determine whether a call block or argument block is finished or not */ tabcount = 0; }
+
+arg:
+	REF variable
+	| UNOP 									{ /* checks whether in call block (whether the stack has a callblock on it or if the tab and tick ends a block), and then adds "UNOP" argument and counts argument block to make sure no other arguments are added during UNOP block */ }
+	| MEMBER filler NAME ID					{ /* checks call block, then if call is member, sets the name of the call, if not, adds attribute to mem variable */ }
+	| INT filler '\'' NUMBER				{ /* checks call block, then adds argument to last created Call object */ }
+	| STR filler STRING						{ /* checks call block, then adds argument to last created Call object */ }
+	| SUB 									{ /* checks call block, then counts argument block to make sure no other arguments are added during block, and sets sub variable to "[]" */ }
+	| BINOP 								{ /* checks call block, and then adds "BINOP" argument and counts argument block to make sure no other arguments are added during BINOP block */ }
+
+variable:
+	filler FUNCTION ID '\'' name '\''		{ /* checks call block, then adds name to last Call object created */ }
+	| filler VAR ID '\'' name '\''			{ /* checks call block, then adds argument to last Call object. Can be member variable, so add mem variable to end of string and then set mem to "" */ }
+	| filler PARMVAR ID '\'' name '\''		{ /* checks call block, then adds argument to last Call object. Can be subscript variable, so add sub variable to end of string and then set sub to "" */ }
+	| filler NAME ID '\'' name '\''			{ /* checks call block, then adds argument to last created Call object */ }
+
+name:
+	NAME 									{ $$ = $1; }
+	| NAME NAME 							{ $$ = $2; }
+	|
+	;
+
+filler:
+	filler NAME
+	| filler ID
+	| filler NUMBER
+	| filler '\''
+	|
+	;
+
+keyword:
+	VAR
+	| PARMVAR
+	| FUNCTION
+	| '\''
+
+%%
+
+void yyerror(string s) {
+	cerr << s << " " << yylval.str << endl;
+}
+
+int main(void) {
+	yyparse();
+	parser.cleanUp(); // all function calls that have no name are marked as undetermined functions
+	parser.print(); // prints out the function call information in csv format
+	return 0;
+}

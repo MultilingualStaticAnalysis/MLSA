@@ -1,0 +1,61 @@
+\hypertarget{AddressBook_8cpp}{}\section{Address\+Book.\+cpp File Reference}
+\label{AddressBook_8cpp}\index{Address\+Book.\+cpp@{Address\+Book.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$cctype$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}Contact.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Address\+Book.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Personal\+Contact.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Business\+Contact.\+h\char`\"{}}\\*
+Include dependency graph for Address\+Book.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AddressBook_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{AddressBook_8cpp_ae299771d51ad4ea07d52fbfedb2d6e93}{swap} (int a, int b, vector$<$ \hyperlink{classContact}{Contact} $\ast$ $>$ \&v)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+ifstream \hyperlink{AddressBook_8cpp_addb74eb46f4ea2191b74ab5c2a3adb30}{in\+\_\+stream}
+\item 
+ofstream \hyperlink{AddressBook_8cpp_a8fb389eff4054f4aa3513963fdaf14a9}{out\+\_\+stream}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Address\+Book.\+cpp@{Address\+Book.\+cpp}!swap@{swap}}
+\index{swap@{swap}!Address\+Book.\+cpp@{Address\+Book.\+cpp}}
+\subsubsection[{\texorpdfstring{swap(int a, int b, vector$<$ Contact $\ast$ $>$ \&v)}{swap(int a, int b, vector< Contact * > &v)}}]{\setlength{\rightskip}{0pt plus 5cm}void swap (
+\begin{DoxyParamCaption}
+\item[{int}]{a, }
+\item[{int}]{b, }
+\item[{vector$<$ {\bf Contact} $\ast$ $>$ \&}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{AddressBook_8cpp_ae299771d51ad4ea07d52fbfedb2d6e93}{}\label{AddressBook_8cpp_ae299771d51ad4ea07d52fbfedb2d6e93}
+
+\begin{DoxyCode}
+153 \{
+154    \hyperlink{classContact}{Contact}* temp = v[a];
+155    v[a] = v[b];
+156    v[b] = temp;
+157 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{Address\+Book.\+cpp@{Address\+Book.\+cpp}!in\+\_\+stream@{in\+\_\+stream}}
+\index{in\+\_\+stream@{in\+\_\+stream}!Address\+Book.\+cpp@{Address\+Book.\+cpp}}
+\subsubsection[{\texorpdfstring{in\+\_\+stream}{in_stream}}]{\setlength{\rightskip}{0pt plus 5cm}ifstream in\+\_\+stream}\hypertarget{AddressBook_8cpp_addb74eb46f4ea2191b74ab5c2a3adb30}{}\label{AddressBook_8cpp_addb74eb46f4ea2191b74ab5c2a3adb30}
+\index{Address\+Book.\+cpp@{Address\+Book.\+cpp}!out\+\_\+stream@{out\+\_\+stream}}
+\index{out\+\_\+stream@{out\+\_\+stream}!Address\+Book.\+cpp@{Address\+Book.\+cpp}}
+\subsubsection[{\texorpdfstring{out\+\_\+stream}{out_stream}}]{\setlength{\rightskip}{0pt plus 5cm}ofstream out\+\_\+stream}\hypertarget{AddressBook_8cpp_a8fb389eff4054f4aa3513963fdaf14a9}{}\label{AddressBook_8cpp_a8fb389eff4054f4aa3513963fdaf14a9}

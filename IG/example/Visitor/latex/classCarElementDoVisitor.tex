@@ -1,0 +1,140 @@
+\hypertarget{classCarElementDoVisitor}{}\section{Car\+Element\+Do\+Visitor Class Reference}
+\label{classCarElementDoVisitor}\index{Car\+Element\+Do\+Visitor@{Car\+Element\+Do\+Visitor}}
+
+
+Inheritance diagram for Car\+Element\+Do\+Visitor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classCarElementDoVisitor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Car\+Element\+Do\+Visitor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classCarElementDoVisitor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCarElementDoVisitor_a2c3ed0ee25fa1d7664d86dccb7d3d0d0}{visit} (\hyperlink{classWheel}{Wheel} \&wheel) const 
+\item 
+void \hyperlink{classCarElementDoVisitor_a51693652a685ca770761d5716ca752da}{visit} (\hyperlink{classEngine}{Engine} \&engine) const 
+\item 
+void \hyperlink{classCarElementDoVisitor_a5e3d87f05da1d9726d9518ff67993d96}{visit} (\hyperlink{classBody}{Body} \&body) const 
+\item 
+void \hyperlink{classCarElementDoVisitor_a067a72ca642eb15ebd11f975f9be2891}{visit\+Car} (\hyperlink{classCar}{Car} \&car) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Car\+Element\+Do\+Visitor@{Car\+Element\+Do\+Visitor}!visit@{visit}}
+\index{visit@{visit}!Car\+Element\+Do\+Visitor@{Car\+Element\+Do\+Visitor}}
+\subsubsection[{\texorpdfstring{visit(\+Wheel \&wheel) const }{visit(Wheel &wheel) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Car\+Element\+Do\+Visitor\+::visit (
+\begin{DoxyParamCaption}
+\item[{{\bf Wheel} \&}]{wheel}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classCarElementDoVisitor_a2c3ed0ee25fa1d7664d86dccb7d3d0d0}{}\label{classCarElementDoVisitor_a2c3ed0ee25fa1d7664d86dccb7d3d0d0}
+
+
+Implements \hyperlink{structCarElementVisitor_aba7f494a9b736bcb002176ec922890e4}{Car\+Element\+Visitor}.
+
+
+\begin{DoxyCode}
+135   \{
+136     cout << \textcolor{stringliteral}{"Kicking my "} << wheel.\hyperlink{classWheel_ad0ed291d1ec488ffcba12e28cb707c38}{getName}() << \textcolor{stringliteral}{" wheel"} << endl;
+137   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{classCarElementDoVisitor_a2c3ed0ee25fa1d7664d86dccb7d3d0d0_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Car\+Element\+Do\+Visitor@{Car\+Element\+Do\+Visitor}!visit@{visit}}
+\index{visit@{visit}!Car\+Element\+Do\+Visitor@{Car\+Element\+Do\+Visitor}}
+\subsubsection[{\texorpdfstring{visit(\+Engine \&engine) const }{visit(Engine &engine) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Car\+Element\+Do\+Visitor\+::visit (
+\begin{DoxyParamCaption}
+\item[{{\bf Engine} \&}]{engine}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classCarElementDoVisitor_a51693652a685ca770761d5716ca752da}{}\label{classCarElementDoVisitor_a51693652a685ca770761d5716ca752da}
+
+
+Implements \hyperlink{structCarElementVisitor_aa0dabf5c22b4ebad04f01ec80f4c9eba}{Car\+Element\+Visitor}.
+
+
+\begin{DoxyCode}
+139   \{
+140     cout << \textcolor{stringliteral}{"Starting my engine"} << endl;
+141   \}
+\end{DoxyCode}
+\index{Car\+Element\+Do\+Visitor@{Car\+Element\+Do\+Visitor}!visit@{visit}}
+\index{visit@{visit}!Car\+Element\+Do\+Visitor@{Car\+Element\+Do\+Visitor}}
+\subsubsection[{\texorpdfstring{visit(\+Body \&body) const }{visit(Body &body) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Car\+Element\+Do\+Visitor\+::visit (
+\begin{DoxyParamCaption}
+\item[{{\bf Body} \&}]{body}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classCarElementDoVisitor_a5e3d87f05da1d9726d9518ff67993d96}{}\label{classCarElementDoVisitor_a5e3d87f05da1d9726d9518ff67993d96}
+
+
+Implements \hyperlink{structCarElementVisitor_afc449830fe12235c3676039af8927fce}{Car\+Element\+Visitor}.
+
+
+\begin{DoxyCode}
+143   \{
+144     cout << \textcolor{stringliteral}{"Moving my body"} << endl;
+145   \}
+\end{DoxyCode}
+\index{Car\+Element\+Do\+Visitor@{Car\+Element\+Do\+Visitor}!visit\+Car@{visit\+Car}}
+\index{visit\+Car@{visit\+Car}!Car\+Element\+Do\+Visitor@{Car\+Element\+Do\+Visitor}}
+\subsubsection[{\texorpdfstring{visit\+Car(\+Car \&car) const }{visitCar(Car &car) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Car\+Element\+Do\+Visitor\+::visit\+Car (
+\begin{DoxyParamCaption}
+\item[{{\bf Car} \&}]{car}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classCarElementDoVisitor_a067a72ca642eb15ebd11f975f9be2891}{}\label{classCarElementDoVisitor_a067a72ca642eb15ebd11f975f9be2891}
+
+
+Implements \hyperlink{structCarElementVisitor_a91746881206fd9dc9b10f9e2fdb5cf58}{Car\+Element\+Visitor}.
+
+
+\begin{DoxyCode}
+147   \{
+148     cout << endl << \textcolor{stringliteral}{"Starting my car"} << endl;
+149     vector<CarElement*>& elems = car.\hyperlink{classCar_a70d9577f631b92e0537ff331c8f7409b}{getElements}();
+150     \textcolor{keywordflow}{for}(vector<CarElement*>::iterator it = elems.begin();
+151       it != elems.end(); ++it )
+152     \{
+153       (*it)->accept(*\textcolor{keyword}{this}); \textcolor{comment}{// this issues the callback i.e. to this from the element  }
+154     \}
+155     cout << \textcolor{stringliteral}{"Stopped car"} << endl;
+156   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classCarElementDoVisitor_a067a72ca642eb15ebd11f975f9be2891_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Visitor_8cpp}{Visitor.\+cpp}\end{DoxyCompactItemize}

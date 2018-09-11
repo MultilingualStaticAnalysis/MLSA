@@ -1,0 +1,74 @@
+\hypertarget{classMediatorInterface}{}\section{Mediator\+Interface Class Reference}
+\label{classMediatorInterface}\index{Mediator\+Interface@{Mediator\+Interface}}
+
+
+Inheritance diagram for Mediator\+Interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classMediatorInterface__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::list$<$ \hyperlink{classColleagueInterface}{Colleague\+Interface} $\ast$ $>$ \& \hyperlink{classMediatorInterface_ac7329ec51656cb23b2c41ada567570fc}{get\+Colleague\+List} () const 
+\item 
+virtual void \hyperlink{classMediatorInterface_a6445b79436acab5998b8a957648fadb1}{distribute\+Message} (const \hyperlink{classColleagueInterface}{Colleague\+Interface} $\ast$, const std\+::string \&) const =0
+\item 
+virtual void \hyperlink{classMediatorInterface_acf4de17fcada54c6701c2afb11c754bd}{register\+Colleague} (\hyperlink{classColleagueInterface}{Colleague\+Interface} $\ast$colleague)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::list$<$ \hyperlink{classColleagueInterface}{Colleague\+Interface} $\ast$ $>$ \hyperlink{classMediatorInterface_a6bb9dcea81ba62644bcaec1bf590cb42}{colleague\+List}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Mediator\+Interface@{Mediator\+Interface}!distribute\+Message@{distribute\+Message}}
+\index{distribute\+Message@{distribute\+Message}!Mediator\+Interface@{Mediator\+Interface}}
+\subsubsection[{\texorpdfstring{distribute\+Message(const Colleague\+Interface $\ast$, const std\+::string \&) const =0}{distributeMessage(const ColleagueInterface *, const std::string &) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Mediator\+Interface\+::distribute\+Message (
+\begin{DoxyParamCaption}
+\item[{const {\bf Colleague\+Interface} $\ast$}]{, }
+\item[{const std\+::string \&}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classMediatorInterface_a6445b79436acab5998b8a957648fadb1}{}\label{classMediatorInterface_a6445b79436acab5998b8a957648fadb1}
+
+
+Implemented in \hyperlink{classMediator_a6dafbc84aae81e04af696169924b04fc}{Mediator}.
+
+\index{Mediator\+Interface@{Mediator\+Interface}!get\+Colleague\+List@{get\+Colleague\+List}}
+\index{get\+Colleague\+List@{get\+Colleague\+List}!Mediator\+Interface@{Mediator\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Colleague\+List() const }{getColleagueList() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::list$<${\bf Colleague\+Interface}$\ast$$>$\& Mediator\+Interface\+::get\+Colleague\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMediatorInterface_ac7329ec51656cb23b2c41ada567570fc}{}\label{classMediatorInterface_ac7329ec51656cb23b2c41ada567570fc}
+
+\begin{DoxyCode}
+28 \{\textcolor{keywordflow}{return} \hyperlink{classMediatorInterface_a6bb9dcea81ba62644bcaec1bf590cb42}{colleagueList};\}
+\end{DoxyCode}
+\index{Mediator\+Interface@{Mediator\+Interface}!register\+Colleague@{register\+Colleague}}
+\index{register\+Colleague@{register\+Colleague}!Mediator\+Interface@{Mediator\+Interface}}
+\subsubsection[{\texorpdfstring{register\+Colleague(\+Colleague\+Interface $\ast$colleague)}{registerColleague(ColleagueInterface *colleague)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Mediator\+Interface\+::register\+Colleague (
+\begin{DoxyParamCaption}
+\item[{{\bf Colleague\+Interface} $\ast$}]{colleague}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classMediatorInterface_acf4de17fcada54c6701c2afb11c754bd}{}\label{classMediatorInterface_acf4de17fcada54c6701c2afb11c754bd}
+
+\begin{DoxyCode}
+30 \{\hyperlink{classMediatorInterface_a6bb9dcea81ba62644bcaec1bf590cb42}{colleagueList}.emplace\_back (colleague);\}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Mediator\+Interface@{Mediator\+Interface}!colleague\+List@{colleague\+List}}
+\index{colleague\+List@{colleague\+List}!Mediator\+Interface@{Mediator\+Interface}}
+\subsubsection[{\texorpdfstring{colleague\+List}{colleagueList}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<${\bf Colleague\+Interface}$\ast$$>$ Mediator\+Interface\+::colleague\+List\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classMediatorInterface_a6bb9dcea81ba62644bcaec1bf590cb42}{}\label{classMediatorInterface_a6bb9dcea81ba62644bcaec1bf590cb42}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Mediator_8cpp}{Mediator.\+cpp}\end{DoxyCompactItemize}

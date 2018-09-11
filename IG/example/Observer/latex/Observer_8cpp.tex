@@ -1,0 +1,80 @@
+\hypertarget{Observer_8cpp}{}\section{Observer.\+cpp File Reference}
+\label{Observer_8cpp}\index{Observer.\+cpp@{Observer.\+cpp}}
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for Observer.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{Observer_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classObserverBoardInterface}{Observer\+Board\+Interface}
+\item 
+class \hyperlink{classDisplayBoardInterface}{Display\+Board\+Interface}
+\item 
+class \hyperlink{classWeatherDataInterface}{Weather\+Data\+Interface}
+\item 
+class \hyperlink{classParaWeatherData}{Para\+Weather\+Data}
+\item 
+class \hyperlink{classCurrentConditionBoard}{Current\+Condition\+Board}
+\item 
+class \hyperlink{classStatisticBoard}{Statistic\+Board}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Observer_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Observer.\+cpp@{Observer.\+cpp}!main@{main}}
+\index{main@{main}!Observer.\+cpp@{Observer.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$argv[])}{main(int argc, char *argv[])}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{Observer_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{}\label{Observer_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+\begin{DoxyCode}
+142 \{
+143    
+144     \hyperlink{classParaWeatherData}{ParaWeatherData} * wdata = \textcolor{keyword}{new} \hyperlink{classParaWeatherData}{ParaWeatherData};
+145     \hyperlink{classCurrentConditionBoard}{CurrentConditionBoard}* currentB = \textcolor{keyword}{new} 
+      \hyperlink{classCurrentConditionBoard}{CurrentConditionBoard}(*wdata);
+146     \hyperlink{classStatisticBoard}{StatisticBoard}* statisticB = \textcolor{keyword}{new} \hyperlink{classStatisticBoard}{StatisticBoard}(*wdata);
+147 
+148     wdata->\hyperlink{classParaWeatherData_a53f58e23b6b2b8b7267fafdd0059bdc6}{SensorDataChange}(10.2, 28.2, 1001);
+149     wdata->\hyperlink{classParaWeatherData_a53f58e23b6b2b8b7267fafdd0059bdc6}{SensorDataChange}(12, 30.12, 1003);
+150     wdata->\hyperlink{classParaWeatherData_a53f58e23b6b2b8b7267fafdd0059bdc6}{SensorDataChange}(10.2, 26, 806);
+151     wdata->\hyperlink{classParaWeatherData_a53f58e23b6b2b8b7267fafdd0059bdc6}{SensorDataChange}(10.3, 35.9, 900);
+152 
+153     wdata->\hyperlink{classParaWeatherData_aea026913d5139b73aa5a7e9254d5f251}{removeOb}(currentB);
+154 
+155     wdata->\hyperlink{classParaWeatherData_a53f58e23b6b2b8b7267fafdd0059bdc6}{SensorDataChange}(100, 40, 1900);  
+156     
+157     \textcolor{keyword}{delete} statisticB;
+158     \textcolor{keyword}{delete} currentB;
+159     \textcolor{keyword}{delete} wdata;
+160 
+161     \textcolor{keywordflow}{return} 0;
+162 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{Observer_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+
+

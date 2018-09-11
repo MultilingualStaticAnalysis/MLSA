@@ -1,0 +1,35 @@
+digraph "main"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="AlgebraicExpression\l::valid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAlgebraicExpression.html#aa3c08af8a2b4d67c356f3cf69b2f6bc6"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Stack::push",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classStack.html#a3553a0aa2c9640c5266e4d8790863e2e"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Stack::isEmpty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classStack.html#ad0db0d9b249e871bb7504ed89a99d3a7"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Stack::pop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classStack.html#a2723aec5c7e2611b97fcffeb7709de33"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="AlgebraicExpression\l::evaluateInfix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAlgebraicExpression.html#a0aeff15e3d0d529bd20a59f8d312a38d"];
+  Node6 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="Stack::top",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classStack.html#ad461f6de40c8672dbf743068f4515061"];
+  Node6 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="Stack::peek",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classStack.html#adcb4774ac8aa94cbc19b461da9bdee3a"];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="AlgebraicExpression\l::precedence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAlgebraicExpression.html#a59e33cea19abab195b1c755347d07bf5"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="AlgebraicExpression\l::evaluatePostfix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAlgebraicExpression.html#ac0428ac1f1072f14e1391527baebd330"];
+  Node10 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="Stack::size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classStack.html#a3091d98f798b1b3e69b644d5b778c428"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="AlgebraicExpression\l::getResult",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAlgebraicExpression.html#afcf555b573e6083a8395677bf056aef1"];
+}

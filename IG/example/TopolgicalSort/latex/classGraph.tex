@@ -1,0 +1,127 @@
+\hypertarget{classGraph}{}\section{Graph Class Reference}
+\label{classGraph}\index{Graph@{Graph}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGraph_af3ff6b295df8bf3bee0bafd7c7d56915}{Graph} (int \hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V})
+\item 
+void \hyperlink{classGraph_a8a3b5afce00f9d260b01c188fbe73f53}{add\+Edge} (int v, int w)
+\item 
+void \hyperlink{classGraph_ab8f36e0bbf0622c08b1e0774982eb1fb}{topological\+Sort} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classGraph_a8fc78d3c96e256ebda363ffdda6c345d}{topological\+Sort\+Util} (int v, bool visited\mbox{[}$\,$\mbox{]}, stack$<$ int $>$ \&Stack)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V}
+\item 
+list$<$ int $>$ $\ast$ \hyperlink{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{adj}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{Graph(int V)}{Graph(int V)}}]{\setlength{\rightskip}{0pt plus 5cm}Graph\+::\+Graph (
+\begin{DoxyParamCaption}
+\item[{int}]{V}
+\end{DoxyParamCaption}
+)}\hypertarget{classGraph_af3ff6b295df8bf3bee0bafd7c7d56915}{}\label{classGraph_af3ff6b295df8bf3bee0bafd7c7d56915}
+
+\begin{DoxyCode}
+28 \{
+29     this->\hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V} = \hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V};
+30     \hyperlink{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{adj} = \textcolor{keyword}{new} list<int> [\hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V}];
+31 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Graph@{Graph}!add\+Edge@{add\+Edge}}
+\index{add\+Edge@{add\+Edge}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{add\+Edge(int v, int w)}{addEdge(int v, int w)}}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+::add\+Edge (
+\begin{DoxyParamCaption}
+\item[{int}]{v, }
+\item[{int}]{w}
+\end{DoxyParamCaption}
+)}\hypertarget{classGraph_a8a3b5afce00f9d260b01c188fbe73f53}{}\label{classGraph_a8a3b5afce00f9d260b01c188fbe73f53}
+
+\begin{DoxyCode}
+34 \{
+35     \hyperlink{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{adj}[v].push\_back(w); \textcolor{comment}{// Add w to v’s list.}
+36 \}
+\end{DoxyCode}
+\index{Graph@{Graph}!topological\+Sort@{topological\+Sort}}
+\index{topological\+Sort@{topological\+Sort}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{topological\+Sort()}{topologicalSort()}}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+::topological\+Sort (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classGraph_ab8f36e0bbf0622c08b1e0774982eb1fb}{}\label{classGraph_ab8f36e0bbf0622c08b1e0774982eb1fb}
+
+\begin{DoxyCode}
+56 \{
+57     stack<int> Stack;
+58  
+59     \textcolor{comment}{// Mark all the vertices as not visited}
+60     \textcolor{keywordtype}{bool} *visited = \textcolor{keyword}{new} \textcolor{keywordtype}{bool}[\hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V}];
+61     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V}; i++)
+62         visited[i] = \textcolor{keyword}{false};
+63  
+64     \textcolor{comment}{// Call the recursive helper function to store Topological Sort}
+65     \textcolor{comment}{// starting from all vertices one by one}
+66     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V}; i++)
+67         \textcolor{keywordflow}{if} (visited[i] == \textcolor{keyword}{false})
+68             \hyperlink{classGraph_a8fc78d3c96e256ebda363ffdda6c345d}{topologicalSortUtil}(i, visited, Stack);
+69  
+70     \textcolor{comment}{// Print contents of stack}
+71     \textcolor{keywordflow}{while} (Stack.empty() == \textcolor{keyword}{false})
+72     \{
+73         cout << Stack.top() << \textcolor{stringliteral}{" "};
+74         Stack.pop();
+75     \}
+76 \}
+\end{DoxyCode}
+\index{Graph@{Graph}!topological\+Sort\+Util@{topological\+Sort\+Util}}
+\index{topological\+Sort\+Util@{topological\+Sort\+Util}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{topological\+Sort\+Util(int v, bool visited[], stack$<$ int $>$ \&\+Stack)}{topologicalSortUtil(int v, bool visited[], stack< int > &Stack)}}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+::topological\+Sort\+Util (
+\begin{DoxyParamCaption}
+\item[{int}]{v, }
+\item[{bool}]{visited\mbox{[}$\,$\mbox{]}, }
+\item[{stack$<$ int $>$ \&}]{Stack}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classGraph_a8fc78d3c96e256ebda363ffdda6c345d}{}\label{classGraph_a8fc78d3c96e256ebda363ffdda6c345d}
+
+\begin{DoxyCode}
+40 \{
+41     \textcolor{comment}{// Mark the current node as visited.}
+42     visited[v] = \textcolor{keyword}{true};
+43  
+44     \textcolor{comment}{// Recur for all the vertices adjacent to this vertex}
+45     list<int>::iterator i;
+46     \textcolor{keywordflow}{for} (i = \hyperlink{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{adj}[v].begin(); i != \hyperlink{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{adj}[v].end(); ++i)
+47         \textcolor{keywordflow}{if} (!visited[*i])
+48             \hyperlink{classGraph_a8fc78d3c96e256ebda363ffdda6c345d}{topologicalSortUtil}(*i, visited, Stack);
+49  
+50     \textcolor{comment}{// Push current vertex to stack which stores result}
+51     Stack.push(v);
+52 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Graph@{Graph}!adj@{adj}}
+\index{adj@{adj}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{adj}{adj}}]{\setlength{\rightskip}{0pt plus 5cm}list$<$int$>$$\ast$ Graph\+::adj\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{}\label{classGraph_a04ab9c17ad31aa036def8db0f88b035b}
+\index{Graph@{Graph}!V@{V}}
+\index{V@{V}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{V}{V}}]{\setlength{\rightskip}{0pt plus 5cm}int Graph\+::V\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{}\label{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{TopolgicalSort_8cpp}{Topolgical\+Sort.\+cpp}\end{DoxyCompactItemize}

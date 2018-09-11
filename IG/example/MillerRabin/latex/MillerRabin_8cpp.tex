@@ -1,0 +1,173 @@
+\hypertarget{MillerRabin_8cpp}{}\section{Miller\+Rabin.\+cpp File Reference}
+\label{MillerRabin_8cpp}\index{Miller\+Rabin.\+cpp@{Miller\+Rabin.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cstring$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+Include dependency graph for Miller\+Rabin.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{MillerRabin_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{MillerRabin_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll}~long long
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{MillerRabin_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll} \hyperlink{MillerRabin_8cpp_ab15961d1fb7161ec54a9b31fbfd4b59d}{mulmod} (\hyperlink{MillerRabin_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll} a, \hyperlink{MillerRabin_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll} b, \hyperlink{MillerRabin_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll} mod)
+\item 
+\hyperlink{MillerRabin_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll} \hyperlink{MillerRabin_8cpp_ad815f4d0c344576558f86d0dd549e7f2}{modulo} (\hyperlink{MillerRabin_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll} base, \hyperlink{MillerRabin_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll} exponent, \hyperlink{MillerRabin_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll} mod)
+\item 
+bool \hyperlink{MillerRabin_8cpp_af5c7cdef8736b586ed63ccc823ed22c4}{Miller} (\hyperlink{MillerRabin_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll} p, int iteration)
+\item 
+int \hyperlink{MillerRabin_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{Miller\+Rabin.\+cpp@{Miller\+Rabin.\+cpp}!ll@{ll}}
+\index{ll@{ll}!Miller\+Rabin.\+cpp@{Miller\+Rabin.\+cpp}}
+\subsubsection[{\texorpdfstring{ll}{ll}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ll~long long}\hypertarget{MillerRabin_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{}\label{MillerRabin_8cpp_ae1d1ec9482079231e898236e2b23c9ba}
+
+
+\subsection{Function Documentation}
+\index{Miller\+Rabin.\+cpp@{Miller\+Rabin.\+cpp}!main@{main}}
+\index{main@{main}!Miller\+Rabin.\+cpp@{Miller\+Rabin.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{MillerRabin_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{MillerRabin_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+80 \{
+81     \textcolor{keywordtype}{int} iteration = 5;
+82     \hyperlink{MillerRabin_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll} num;
+83     cout<<\textcolor{stringliteral}{"Enter integer to test primality: "};
+84     cin>>num;
+85     \textcolor{keywordflow}{if} (\hyperlink{MillerRabin_8cpp_af5c7cdef8736b586ed63ccc823ed22c4}{Miller}(num, iteration))
+86         cout<<num<<\textcolor{stringliteral}{" is prime"}<<endl;
+87     \textcolor{keywordflow}{else}
+88         cout<<num<<\textcolor{stringliteral}{" is not prime"}<<endl;
+89     \textcolor{keywordflow}{return} 0;
+90 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{MillerRabin_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Miller\+Rabin.\+cpp@{Miller\+Rabin.\+cpp}!Miller@{Miller}}
+\index{Miller@{Miller}!Miller\+Rabin.\+cpp@{Miller\+Rabin.\+cpp}}
+\subsubsection[{\texorpdfstring{Miller(ll p, int iteration)}{Miller(ll p, int iteration)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Miller (
+\begin{DoxyParamCaption}
+\item[{{\bf ll}}]{p, }
+\item[{int}]{iteration}
+\end{DoxyParamCaption}
+)}\hypertarget{MillerRabin_8cpp_af5c7cdef8736b586ed63ccc823ed22c4}{}\label{MillerRabin_8cpp_af5c7cdef8736b586ed63ccc823ed22c4}
+
+\begin{DoxyCode}
+48 \{
+49     \textcolor{keywordflow}{if} (p < 2)
+50     \{
+51         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+52     \}
+53     \textcolor{keywordflow}{if} (p != 2 && p % 2==0)
+54     \{
+55         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+56     \}
+57     \hyperlink{MillerRabin_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll} s = p - 1;
+58     \textcolor{keywordflow}{while} (s % 2 == 0)
+59     \{
+60         s /= 2;
+61     \}
+62     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < iteration; i++)
+63     \{
+64         \hyperlink{MillerRabin_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll} a = rand() % (p - 1) + 1, temp = s;
+65         \hyperlink{MillerRabin_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll} mod = \hyperlink{MillerRabin_8cpp_ad815f4d0c344576558f86d0dd549e7f2}{modulo}(a, temp, p);
+66         \textcolor{keywordflow}{while} (temp != p - 1 && mod != 1 && mod != p - 1)
+67         \{
+68             mod = \hyperlink{MillerRabin_8cpp_ab15961d1fb7161ec54a9b31fbfd4b59d}{mulmod}(mod, mod, p);
+69             temp *= 2;
+70         \}
+71         \textcolor{keywordflow}{if} (mod != p - 1 && temp % 2 == 0)
+72         \{
+73             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+74         \}
+75     \}
+76     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+77 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{MillerRabin_8cpp_af5c7cdef8736b586ed63ccc823ed22c4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Miller\+Rabin.\+cpp@{Miller\+Rabin.\+cpp}!modulo@{modulo}}
+\index{modulo@{modulo}!Miller\+Rabin.\+cpp@{Miller\+Rabin.\+cpp}}
+\subsubsection[{\texorpdfstring{modulo(ll base, ll exponent, ll mod)}{modulo(ll base, ll exponent, ll mod)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ll} modulo (
+\begin{DoxyParamCaption}
+\item[{{\bf ll}}]{base, }
+\item[{{\bf ll}}]{exponent, }
+\item[{{\bf ll}}]{mod}
+\end{DoxyParamCaption}
+)}\hypertarget{MillerRabin_8cpp_ad815f4d0c344576558f86d0dd549e7f2}{}\label{MillerRabin_8cpp_ad815f4d0c344576558f86d0dd549e7f2}
+
+\begin{DoxyCode}
+31 \{
+32     \hyperlink{MillerRabin_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll} x = 1;
+33     \hyperlink{MillerRabin_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll} y = base;
+34     \textcolor{keywordflow}{while} (exponent > 0)
+35     \{
+36         \textcolor{keywordflow}{if} (exponent % 2 == 1)
+37             x = (x * y) % mod;
+38         y = (y * y) % mod;
+39         exponent = exponent / 2;
+40     \}
+41     \textcolor{keywordflow}{return} x % mod;
+42 \}
+\end{DoxyCode}
+\index{Miller\+Rabin.\+cpp@{Miller\+Rabin.\+cpp}!mulmod@{mulmod}}
+\index{mulmod@{mulmod}!Miller\+Rabin.\+cpp@{Miller\+Rabin.\+cpp}}
+\subsubsection[{\texorpdfstring{mulmod(ll a, ll b, ll mod)}{mulmod(ll a, ll b, ll mod)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ll} mulmod (
+\begin{DoxyParamCaption}
+\item[{{\bf ll}}]{a, }
+\item[{{\bf ll}}]{b, }
+\item[{{\bf ll}}]{mod}
+\end{DoxyParamCaption}
+)}\hypertarget{MillerRabin_8cpp_ab15961d1fb7161ec54a9b31fbfd4b59d}{}\label{MillerRabin_8cpp_ab15961d1fb7161ec54a9b31fbfd4b59d}
+
+\begin{DoxyCode}
+14 \{
+15     \hyperlink{MillerRabin_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll} x = 0,y = a % mod;
+16     \textcolor{keywordflow}{while} (b > 0)
+17     \{
+18         \textcolor{keywordflow}{if} (b % 2 == 1)
+19         \{    
+20             x = (x + y) % mod;
+21         \}
+22         y = (y * 2) % mod;
+23         b /= 2;
+24     \}
+25     \textcolor{keywordflow}{return} x % mod;
+26 \}
+\end{DoxyCode}

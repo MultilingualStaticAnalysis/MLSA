@@ -1,0 +1,111 @@
+{
+    "body": [
+        {
+            "body": [
+                {
+                    "value": {
+                        "_type": "BinOp", 
+                        "right": {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "id": "b", 
+                            "col_offset": 15, 
+                            "lineno": 2
+                        }, 
+                        "col_offset": 11, 
+                        "lineno": 2, 
+                        "left": {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "id": "a", 
+                            "col_offset": 11, 
+                            "lineno": 2
+                        }, 
+                        "op": {
+                            "_type": "Add"
+                        }
+                    }, 
+                    "_type": "Return", 
+                    "lineno": 2, 
+                    "col_offset": 4
+                }
+            ], 
+            "decorator_list": [], 
+            "_type": "FunctionDef", 
+            "name": "hello", 
+            "col_offset": 0, 
+            "args": {
+                "_type": "arguments", 
+                "args": [
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Param"
+                        }, 
+                        "id": "a", 
+                        "col_offset": 10, 
+                        "lineno": 1
+                    }, 
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Param"
+                        }, 
+                        "id": "b", 
+                        "col_offset": 13, 
+                        "lineno": 1
+                    }
+                ], 
+                "kwarg": null, 
+                "defaults": [], 
+                "vararg": null
+            }, 
+            "lineno": 1
+        }, 
+        {
+            "_type": "Print", 
+            "nl": true, 
+            "col_offset": 0, 
+            "dest": null, 
+            "values": [
+                {
+                    "_type": "Call", 
+                    "col_offset": 6, 
+                    "starargs": null, 
+                    "args": [
+                        {
+                            "_type": "Num", 
+                            "lineno": 4, 
+                            "col_offset": 12, 
+                            "n": 4
+                        }, 
+                        {
+                            "_type": "Num", 
+                            "lineno": 4, 
+                            "col_offset": 15, 
+                            "n": 5
+                        }
+                    ], 
+                    "lineno": 4, 
+                    "func": {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Load"
+                        }, 
+                        "id": "hello", 
+                        "col_offset": 6, 
+                        "lineno": 4
+                    }, 
+                    "kwargs": null, 
+                    "keywords": []
+                }
+            ], 
+            "lineno": 4
+        }
+    ], 
+    "_type": "Module"
+}

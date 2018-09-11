@@ -1,0 +1,73 @@
+\hypertarget{Template_8cpp}{}\section{Template.\+cpp File Reference}
+\label{Template_8cpp}\index{Template.\+cpp@{Template.\+cpp}}
+{\ttfamily \#include $<$ctime$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for Template.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{Template_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classwikibooks__design__patterns_1_1Game}{wikibooks\+\_\+design\+\_\+patterns\+::\+Game}
+\item 
+class \hyperlink{classwikibooks__design__patterns_1_1Monopoly}{wikibooks\+\_\+design\+\_\+patterns\+::\+Monopoly}
+\item 
+class \hyperlink{classwikibooks__design__patterns_1_1Chess}{wikibooks\+\_\+design\+\_\+patterns\+::\+Chess}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacewikibooks__design__patterns}{wikibooks\+\_\+design\+\_\+patterns}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Template_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Template.\+cpp@{Template.\+cpp}!main@{main}}
+\index{main@{main}!Template.\+cpp@{Template.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Template_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Template_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+153 \{
+154     \textcolor{keyword}{using namespace }\hyperlink{namespacewikibooks__design__patterns}{wikibooks\_design\_patterns};
+155 
+156     \hyperlink{classwikibooks__design__patterns_1_1Game}{Game}* game = NULL;
+157 
+158     \hyperlink{classwikibooks__design__patterns_1_1Chess}{Chess} chess;
+159     game = &chess;
+160     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} i = 0; i < 100; ++i)
+161      game->\hyperlink{classwikibooks__design__patterns_1_1Game_adaf21d3c4d07388f1cba12092ced5d38}{playOneGame}();
+162 
+163     \hyperlink{classwikibooks__design__patterns_1_1Monopoly}{Monopoly} monopoly;
+164     game = &monopoly;
+165     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} i = 0; i < 100; ++i)
+166     game->\hyperlink{classwikibooks__design__patterns_1_1Game_adaf21d3c4d07388f1cba12092ced5d38}{playOneGame}();
+167 
+168     \textcolor{keywordflow}{return} 0;
+169 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Template_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

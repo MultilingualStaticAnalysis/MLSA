@@ -1,0 +1,163 @@
+\hypertarget{classDuckingState}{}\section{Ducking\+State Class Reference}
+\label{classDuckingState}\index{Ducking\+State@{Ducking\+State}}
+
+
+Inheritance diagram for Ducking\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{classDuckingState__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ducking\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{classDuckingState__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDuckingState_a62f30e2eac4a71c01d3870cf63899725}{Ducking\+State} ()
+\item 
+virtual void \hyperlink{classDuckingState_a233ad7f72fa53e13a28a090d097a845b}{handle\+Input} (\hyperlink{classFighter}{Fighter} \&, \hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090}{Input}) override
+\item 
+virtual void \hyperlink{classDuckingState_a634612b9f2d152c8805366541a775504}{update} (\hyperlink{classFighter}{Fighter} \&) override
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classDuckingState_abb35456dc6b1c0fc15b2238ceafbb817}{charging\+Time}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{classDuckingState_a1af568ef268261b3be1773b23d343b4a}{Full\+Rest\+Time} = 5
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Ducking\+State@{Ducking\+State}!Ducking\+State@{Ducking\+State}}
+\index{Ducking\+State@{Ducking\+State}!Ducking\+State@{Ducking\+State}}
+\subsubsection[{\texorpdfstring{Ducking\+State()}{DuckingState()}}]{\setlength{\rightskip}{0pt plus 5cm}Ducking\+State\+::\+Ducking\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classDuckingState_a62f30e2eac4a71c01d3870cf63899725}{}\label{classDuckingState_a62f30e2eac4a71c01d3870cf63899725}
+
+\begin{DoxyCode}
+26 : \hyperlink{classDuckingState_abb35456dc6b1c0fc15b2238ceafbb817}{chargingTime}(0) \{\}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDuckingState_a62f30e2eac4a71c01d3870cf63899725_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Ducking\+State@{Ducking\+State}!handle\+Input@{handle\+Input}}
+\index{handle\+Input@{handle\+Input}!Ducking\+State@{Ducking\+State}}
+\subsubsection[{\texorpdfstring{handle\+Input(\+Fighter \&, Input) override}{handleInput(Fighter &, Input) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Ducking\+State\+::handle\+Input (
+\begin{DoxyParamCaption}
+\item[{{\bf Fighter} \&}]{fighter, }
+\item[{{\bf Input}}]{input}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classDuckingState_a233ad7f72fa53e13a28a090d097a845b}{}\label{classDuckingState_a233ad7f72fa53e13a28a090d097a845b}
+
+
+Implements \hyperlink{classFighterState_a84fcd7da4d232e79e1be9b32c0767861}{Fighter\+State}.
+
+
+\begin{DoxyCode}
+90                                                               \{
+91     \textcolor{keywordflow}{switch} (input) \{
+92         \textcolor{keywordflow}{case} \hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090a4e0f05b608ae82cd3d38087399f6962a}{STAND\_UP}:  fighter.\hyperlink{classFighter_add08055f60abd6e9235291b653f65be5}{changeState} (
+      \hyperlink{classFighterState_a050e9b5aff81843be5feea296a586889}{FighterState::standing});  \textcolor{keywordflow}{return} fighter.\hyperlink{classFighter_a6f54ee51d7ca6b3baa60dd19bb4546c5}{standsUp}();
+93         \textcolor{keywordflow}{case} \hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090af82233b8404f602e50c8fb3fff20db8d}{DUCK\_DOWN}:
+94             std::cout << fighter.\hyperlink{classFighter_aea4a9cf98a672b2305d1147885b91c34}{getName}() << \textcolor{stringliteral}{" remains in ducking position, "};
+95             \textcolor{keywordflow}{if} (\hyperlink{classDuckingState_abb35456dc6b1c0fc15b2238ceafbb817}{chargingTime} < \hyperlink{classDuckingState_a1af568ef268261b3be1773b23d343b4a}{FullRestTime}) std::cout << \textcolor{stringliteral}{"recovering in the
+       meantime."} << std::endl;
+96             \textcolor{keywordflow}{else} std::cout << \textcolor{stringliteral}{"fully recovered."} << std::endl;
+97             \textcolor{keywordflow}{return} \hyperlink{classDuckingState_a634612b9f2d152c8805366541a775504}{update} (fighter);
+98         \textcolor{keywordflow}{default}:
+99             std::cout << \textcolor{stringliteral}{"One cannot do that while ducking.  "} << fighter.
+      \hyperlink{classFighter_aea4a9cf98a672b2305d1147885b91c34}{getName}() << \textcolor{stringliteral}{" remains in ducking position by default."} << std::endl;
+100             \hyperlink{classDuckingState_a634612b9f2d152c8805366541a775504}{update} (fighter);
+101     \}
+102 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDuckingState_a233ad7f72fa53e13a28a090d097a845b_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Ducking\+State@{Ducking\+State}!update@{update}}
+\index{update@{update}!Ducking\+State@{Ducking\+State}}
+\subsubsection[{\texorpdfstring{update(\+Fighter \&) override}{update(Fighter &) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Ducking\+State\+::update (
+\begin{DoxyParamCaption}
+\item[{{\bf Fighter} \&}]{fighter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classDuckingState_a634612b9f2d152c8805366541a775504}{}\label{classDuckingState_a634612b9f2d152c8805366541a775504}
+
+
+Implements \hyperlink{classFighterState_af022f76c6b1fe080047ded2280ec6f8f}{Fighter\+State}.
+
+
+\begin{DoxyCode}
+104                                            \{
+105     \hyperlink{classDuckingState_abb35456dc6b1c0fc15b2238ceafbb817}{chargingTime}++;
+106     std::cout << \textcolor{stringliteral}{"Charging time = "} << \hyperlink{classDuckingState_abb35456dc6b1c0fc15b2238ceafbb817}{chargingTime} << \textcolor{stringliteral}{"."} << std::endl;
+107     \textcolor{keywordflow}{if} (fighter.\hyperlink{classFighter_a1bc4025d988b66dfceaf0005e74f34ff}{getFatigueLevel}() > 0)
+108         fighter.\hyperlink{classFighter_aa9c08ec29097e326eab0ffd69db18b9c}{changeFatigueLevelBy}(-1);
+109     \textcolor{keywordflow}{if} (\hyperlink{classDuckingState_abb35456dc6b1c0fc15b2238ceafbb817}{chargingTime} >= \hyperlink{classDuckingState_a1af568ef268261b3be1773b23d343b4a}{FullRestTime} && fighter.
+      \hyperlink{classFighter_a1bc4025d988b66dfceaf0005e74f34ff}{getFatigueLevel}() <= 3)
+110         fighter.\hyperlink{classFighter_ae54fd861131ec55b366a9163a35d9606}{feelsStrong}();
+111 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDuckingState_a634612b9f2d152c8805366541a775504_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Ducking\+State@{Ducking\+State}!charging\+Time@{charging\+Time}}
+\index{charging\+Time@{charging\+Time}!Ducking\+State@{Ducking\+State}}
+\subsubsection[{\texorpdfstring{charging\+Time}{chargingTime}}]{\setlength{\rightskip}{0pt plus 5cm}int Ducking\+State\+::charging\+Time\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDuckingState_abb35456dc6b1c0fc15b2238ceafbb817}{}\label{classDuckingState_abb35456dc6b1c0fc15b2238ceafbb817}
+\index{Ducking\+State@{Ducking\+State}!Full\+Rest\+Time@{Full\+Rest\+Time}}
+\index{Full\+Rest\+Time@{Full\+Rest\+Time}!Ducking\+State@{Ducking\+State}}
+\subsubsection[{\texorpdfstring{Full\+Rest\+Time}{FullRestTime}}]{\setlength{\rightskip}{0pt plus 5cm}const int Ducking\+State\+::\+Full\+Rest\+Time = 5\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classDuckingState_a1af568ef268261b3be1773b23d343b4a}{}\label{classDuckingState_a1af568ef268261b3be1773b23d343b4a}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{State_8cpp}{State.\+cpp}\end{DoxyCompactItemize}

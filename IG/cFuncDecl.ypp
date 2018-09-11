@@ -1,0 +1,125 @@
+%token <str>FUNC
+%token <str>MEMFUNC
+%token <str>VOID
+%token <str>ID
+%token <str>NAME
+%token <str>NUMBER
+%token <str>STRING
+%token <str>INFINITE
+%token <str>FILENAME
+
+%{
+	#include <iostream>
+  	#include <string>
+  	#include <vector>
+  	#include <stdio.h>
+  	#include <string.h>
+  	#include "Function.h"
+	using namespace std;
+	void yyerror(string);
+	int yylex(void);
+	vector<Function*> funcs;
+	int p = 0;
+	bool i = false;
+	string filename = "";
+	union YYSTYPE {
+		int val;
+		char *str;
+	};
+	typedef union YYSTYPE YYSTYPE;
+%}
+
+%start input
+%type <str>keywordproductions
+%type <str>parameters
+
+%%
+
+input:
+	input chunk
+	|
+	;
+
+chunk:
+	water
+	| keywordproductions
+
+water:
+	keyword
+	| ID 													{ /*cout << "WATER ";*/ }
+	| NAME 													{ /*cout << "WATER ";*/ }
+	| NUMBER												{ /*cout << "WATER ";*/ }
+	| STRING
+
+keywordproductions:
+	FUNC ID filler NAME '\'' filler '(' parameters ')'		{ funcs.push_back(new Function(string($4), string($2), filename, p, i)); p = 0; i = false; }
+	| MEMFUNC ID filler NAME '\'' filler '(' parameters ')'	{ funcs.push_back(new Function(string($4), string($2), filename, p, i, true)); p = 0; i = false; }
+
+parameters:
+	parameters ',' param
+	| parameters ',' INFINITE								{ i = true; }
+	| param
+	|
+	;
+
+param:
+	param NAME 												{ p++; }
+	| NAME 													{ p++; }
+	| param VOID
+	| VOID
+	| param parentheses
+
+parentheses:
+	'(' words ')'
+	| parentheses '(' words ')'
+	| '(' parentheses ')'
+
+words:
+	words NAME
+	| words ',' NAME
+	| words ',' VOID
+	| VOID
+	| NAME
+	|
+	;
+
+
+filler:
+	filler NAME
+	| filler ID
+	| filler NUMBER
+	| filler '\''
+	| filler ','
+	| filler FILENAME 											{ filename = string($2); }
+	| filler VOID
+	|
+	;
+
+keyword:
+	'\''
+	| '('
+	| ')'
+	| ','
+	| INFINITE
+	| FILENAME													{ filename = string($1); }
+	| VOID
+
+%%
+
+void yyerror(string s) {
+	cerr << s << " " << yylval.str << endl;
+}
+
+int main(void) {
+	yyparse();
+	//cout << "-----------------------------------------------------------------------------------------------------------------\n";
+	for(int k = 0; k < funcs.size(); k++) {
+		cout << funcs[k]->print() << endl;
+	}
+	for(int j=0; j<funcs.size(); j++) {
+		delete funcs[j];
+	}
+	//cout << "call boolean: " << call << endl;
+	//cout << "calltab: " << calltab << endl;
+	return 0;
+}

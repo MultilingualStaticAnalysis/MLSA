@@ -1,0 +1,187 @@
+\hypertarget{classGraph}{}\section{Graph Class Reference}
+\label{classGraph}\index{Graph@{Graph}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGraph_af3ff6b295df8bf3bee0bafd7c7d56915}{Graph} (int \hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V})
+\item 
+\hyperlink{classGraph_a902c5b3eacb66d60752525ab23297a95}{$\sim$\+Graph} ()
+\item 
+void \hyperlink{classGraph_a8a3b5afce00f9d260b01c188fbe73f53}{add\+Edge} (int v, int w)
+\item 
+bool \hyperlink{classGraph_af761afe9665b65f11beb2a604fd1a326}{is\+SC} ()
+\item 
+\hyperlink{classGraph}{Graph} \hyperlink{classGraph_abdaf0cb08811d4b30f4c85f632e0e181}{get\+Transpose} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classGraph_a47d02784c897a7e0d42a29c698161648}{D\+F\+S\+Util} (int v, bool visited\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V}
+\item 
+list$<$ int $>$ $\ast$ \hyperlink{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{adj}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{Graph(int V)}{Graph(int V)}}]{\setlength{\rightskip}{0pt plus 5cm}Graph\+::\+Graph (
+\begin{DoxyParamCaption}
+\item[{int}]{V}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classGraph_af3ff6b295df8bf3bee0bafd7c7d56915}{}\label{classGraph_af3ff6b295df8bf3bee0bafd7c7d56915}
+
+\begin{DoxyCode}
+17         \{
+18             this->\hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V} = \hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V};
+19             \hyperlink{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{adj} = \textcolor{keyword}{new} list<int> [\hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V}];
+20         \}
+\end{DoxyCode}
+\index{Graph@{Graph}!````~Graph@{$\sim$\+Graph}}
+\index{````~Graph@{$\sim$\+Graph}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{$\sim$\+Graph()}{~Graph()}}]{\setlength{\rightskip}{0pt plus 5cm}Graph\+::$\sim$\+Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classGraph_a902c5b3eacb66d60752525ab23297a95}{}\label{classGraph_a902c5b3eacb66d60752525ab23297a95}
+
+\begin{DoxyCode}
+22         \{
+23             \textcolor{keyword}{delete}[] \hyperlink{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{adj};
+24         \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Graph@{Graph}!add\+Edge@{add\+Edge}}
+\index{add\+Edge@{add\+Edge}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{add\+Edge(int v, int w)}{addEdge(int v, int w)}}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+::add\+Edge (
+\begin{DoxyParamCaption}
+\item[{int}]{v, }
+\item[{int}]{w}
+\end{DoxyParamCaption}
+)}\hypertarget{classGraph_a8a3b5afce00f9d260b01c188fbe73f53}{}\label{classGraph_a8a3b5afce00f9d260b01c188fbe73f53}
+
+\begin{DoxyCode}
+67 \{
+68     \hyperlink{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{adj}[v].push\_back(w); \textcolor{comment}{// Add w to v’s list.}
+69 \}
+\end{DoxyCode}
+\index{Graph@{Graph}!D\+F\+S\+Util@{D\+F\+S\+Util}}
+\index{D\+F\+S\+Util@{D\+F\+S\+Util}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{D\+F\+S\+Util(int v, bool visited[])}{DFSUtil(int v, bool visited[])}}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+::\+D\+F\+S\+Util (
+\begin{DoxyParamCaption}
+\item[{int}]{v, }
+\item[{bool}]{visited\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classGraph_a47d02784c897a7e0d42a29c698161648}{}\label{classGraph_a47d02784c897a7e0d42a29c698161648}
+
+\begin{DoxyCode}
+39 \{
+40     \textcolor{comment}{// Mark the current node as visited and print it}
+41     visited[v] = \textcolor{keyword}{true};
+42  
+43     \textcolor{comment}{// Recur for all the vertices adjacent to this vertex}
+44     list<int>::iterator i;
+45     \textcolor{keywordflow}{for} (i = \hyperlink{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{adj}[v].begin(); i != \hyperlink{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{adj}[v].end(); ++i)
+46         \textcolor{keywordflow}{if} (!visited[*i])
+47             \hyperlink{classGraph_a47d02784c897a7e0d42a29c698161648}{DFSUtil}(*i, visited);
+48 \}
+\end{DoxyCode}
+\index{Graph@{Graph}!get\+Transpose@{get\+Transpose}}
+\index{get\+Transpose@{get\+Transpose}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{get\+Transpose()}{getTranspose()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graph} Graph\+::get\+Transpose (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classGraph_abdaf0cb08811d4b30f4c85f632e0e181}{}\label{classGraph_abdaf0cb08811d4b30f4c85f632e0e181}
+
+\begin{DoxyCode}
+52 \{
+53     \hyperlink{classGraph}{Graph} g(\hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V});
+54     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} v = 0; v < \hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V}; v++)
+55     \{
+56         \textcolor{comment}{// Recur for all the vertices adjacent to this vertex}
+57         list<int>::iterator i;
+58         \textcolor{keywordflow}{for} (i = \hyperlink{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{adj}[v].begin(); i != \hyperlink{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{adj}[v].end(); ++i)
+59         \{
+60             g.adj[*i].push\_back(v);
+61         \}
+62     \}
+63     \textcolor{keywordflow}{return} g;
+64 \}
+\end{DoxyCode}
+\index{Graph@{Graph}!is\+SC@{is\+SC}}
+\index{is\+SC@{is\+SC}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{is\+S\+C()}{isSC()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Graph\+::is\+SC (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classGraph_af761afe9665b65f11beb2a604fd1a326}{}\label{classGraph_af761afe9665b65f11beb2a604fd1a326}
+
+\begin{DoxyCode}
+73 \{
+74     \textcolor{comment}{// St1p 1: Mark all the vertices as not visited (For first DFS)}
+75     \textcolor{keywordtype}{bool} visited[\hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V}];
+76     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V}; i++)
+77         visited[i] = \textcolor{keyword}{false};
+78  
+79     \textcolor{comment}{// Step 2: Do DFS traversal starting from first vertex.}
+80     \hyperlink{classGraph_a47d02784c897a7e0d42a29c698161648}{DFSUtil}(0, visited);
+81  
+82     \textcolor{comment}{// If DFS traversal doesn’t visit all vertices, then return false.}
+83     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V}; i++)
+84         \textcolor{keywordflow}{if} (visited[i] == \textcolor{keyword}{false})
+85             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+86  
+87     \textcolor{comment}{// Step 3: Create a reversed graph}
+88     \hyperlink{classGraph}{Graph} gr = \hyperlink{classGraph_abdaf0cb08811d4b30f4c85f632e0e181}{getTranspose}();
+89  
+90     \textcolor{comment}{// Step 4: Mark all the vertices as not visited (For second DFS)}
+91     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V}; i++)
+92         visited[i] = \textcolor{keyword}{false};
+93  
+94     \textcolor{comment}{// Step 5: Do DFS for reversed graph starting from first vertex.}
+95     \textcolor{comment}{// Staring Vertex must be same starting point of first DFS}
+96     gr.\hyperlink{classGraph_a47d02784c897a7e0d42a29c698161648}{DFSUtil}(0, visited);
+97  
+98     \textcolor{comment}{// If all vertices are not visited in second DFS, then}
+99     \textcolor{comment}{// return false}
+100     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V}; i++)
+101         \textcolor{keywordflow}{if} (visited[i] == \textcolor{keyword}{false})
+102             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+103  
+104     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+105 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{classGraph_af761afe9665b65f11beb2a604fd1a326_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Graph@{Graph}!adj@{adj}}
+\index{adj@{adj}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{adj}{adj}}]{\setlength{\rightskip}{0pt plus 5cm}list$<$int$>$$\ast$ Graph\+::adj\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{}\label{classGraph_a04ab9c17ad31aa036def8db0f88b035b}
+\index{Graph@{Graph}!V@{V}}
+\index{V@{V}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{V}{V}}]{\setlength{\rightskip}{0pt plus 5cm}int Graph\+::V\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{}\label{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{DirectedGraph_8cpp}{Directed\+Graph.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,25 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/Composite Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/Composite Call Graph"
+	];
+
+	Node0x400967982 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/Composite/Composite.cpp"];
+	Node0x626171301 [shape=oval, label="0x2e78be0. (/home/labaccount/11-2-17/mlsa/IG/example/Composite/Composite.cpp)\nCompositeGraphic::add(graphic1)"];
+	Node0x400967982 -> Node0x626171301;
+	Node0x887370099 [shape=oval, label="0x2e78ce8. (/home/labaccount/11-2-17/mlsa/IG/example/Composite/Composite.cpp)\nCompositeGraphic::add(graphic2)"];
+	Node0x400967982 -> Node0x887370099;
+	Node0x975872227 [shape=oval, label="0x2e78dc8. (/home/labaccount/11-2-17/mlsa/IG/example/Composite/Composite.cpp)\nCompositeGraphic::print()"];
+	Node0x400967982 -> Node0x975872227;
+	Node0x309398099 [shape=oval, label="0x2e72c80. (/home/labaccount/11-2-17/mlsa/IG/example/Composite/Composite.cpp)\nOBJ.push_back(aGraphic)"];
+	Node0x626171301 -> Node0x309398099;
+	Node0x174060712 [shape=oval, label="0x2e72c80. (/home/labaccount/11-2-17/mlsa/IG/example/Composite/Composite.cpp)\nOBJ.push_back(aGraphic)"];
+	Node0x887370099 -> Node0x174060712;
+	Node0x456689476 [shape=oval, label="0x2e6d4e8. (/home/labaccount/11-2-17/mlsa/IG/example/Composite/Composite.cpp)\nstd::vector::begin()"];
+	Node0x975872227 -> Node0x456689476;
+	Node0x843828764 [shape=oval, label="0x2e71218. (/home/labaccount/11-2-17/mlsa/IG/example/Composite/Composite.cpp)\nstd::vector::end()"];
+	Node0x975872227 -> Node0x843828764;
+	Node0x752582825 [shape=oval, label="0x2e72b28. (/home/labaccount/11-2-17/mlsa/IG/example/Composite/Composite.cpp)\nGraphic::print()"];
+	Node0x975872227 -> Node0x752582825;
+}

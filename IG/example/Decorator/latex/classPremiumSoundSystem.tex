@@ -1,0 +1,141 @@
+\hypertarget{classPremiumSoundSystem}{}\section{Premium\+Sound\+System Class Reference}
+\label{classPremiumSoundSystem}\index{Premium\+Sound\+System@{Premium\+Sound\+System}}
+
+
+Inheritance diagram for Premium\+Sound\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classPremiumSoundSystem__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Premium\+Sound\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classPremiumSoundSystem__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPremiumSoundSystem_a8cbc764713229e2b97af1f8e0c95b7e8}{Premium\+Sound\+System} (\hyperlink{classCar}{Car} $\ast$b)
+\item 
+string \hyperlink{classPremiumSoundSystem_a11267003bbf024bf19b811b0b28b22c1}{get\+Description} ()
+\item 
+double \hyperlink{classPremiumSoundSystem_ad14f7dae4adfb94572a80199174425af}{get\+Cost} ()
+\item 
+\hyperlink{classPremiumSoundSystem_a249ed821c592d454328b2cf54fe9e2f3}{$\sim$\+Premium\+Sound\+System} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCar}{Car} $\ast$ \hyperlink{classPremiumSoundSystem_a441bc8062467c6c45cd47bca4b8950dd}{\+\_\+b}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Premium\+Sound\+System@{Premium\+Sound\+System}!Premium\+Sound\+System@{Premium\+Sound\+System}}
+\index{Premium\+Sound\+System@{Premium\+Sound\+System}!Premium\+Sound\+System@{Premium\+Sound\+System}}
+\subsubsection[{\texorpdfstring{Premium\+Sound\+System(\+Car $\ast$b)}{PremiumSoundSystem(Car *b)}}]{\setlength{\rightskip}{0pt plus 5cm}Premium\+Sound\+System\+::\+Premium\+Sound\+System (
+\begin{DoxyParamCaption}
+\item[{{\bf Car} $\ast$}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPremiumSoundSystem_a8cbc764713229e2b97af1f8e0c95b7e8}{}\label{classPremiumSoundSystem_a8cbc764713229e2b97af1f8e0c95b7e8}
+
+\begin{DoxyCode}
+88                 \{
+89                         \hyperlink{classPremiumSoundSystem_a441bc8062467c6c45cd47bca4b8950dd}{\_b} = b;
+90                 \}
+\end{DoxyCode}
+\index{Premium\+Sound\+System@{Premium\+Sound\+System}!````~Premium\+Sound\+System@{$\sim$\+Premium\+Sound\+System}}
+\index{````~Premium\+Sound\+System@{$\sim$\+Premium\+Sound\+System}!Premium\+Sound\+System@{Premium\+Sound\+System}}
+\subsubsection[{\texorpdfstring{$\sim$\+Premium\+Sound\+System()}{~PremiumSoundSystem()}}]{\setlength{\rightskip}{0pt plus 5cm}Premium\+Sound\+System\+::$\sim$\+Premium\+Sound\+System (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPremiumSoundSystem_a249ed821c592d454328b2cf54fe9e2f3}{}\label{classPremiumSoundSystem_a249ed821c592d454328b2cf54fe9e2f3}
+
+\begin{DoxyCode}
+101                 \{
+102                         cout << \textcolor{stringliteral}{"~PremiumSoundSystem()\(\backslash\)n"};
+103                         \textcolor{keyword}{delete} \hyperlink{classPremiumSoundSystem_a441bc8062467c6c45cd47bca4b8950dd}{\_b};
+104                 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Premium\+Sound\+System@{Premium\+Sound\+System}!get\+Cost@{get\+Cost}}
+\index{get\+Cost@{get\+Cost}!Premium\+Sound\+System@{Premium\+Sound\+System}}
+\subsubsection[{\texorpdfstring{get\+Cost()}{getCost()}}]{\setlength{\rightskip}{0pt plus 5cm}double Premium\+Sound\+System\+::get\+Cost (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classPremiumSoundSystem_ad14f7dae4adfb94572a80199174425af}{}\label{classPremiumSoundSystem_ad14f7dae4adfb94572a80199174425af}
+
+
+Implements \hyperlink{classCar_a7498766d25f7d4f15272f8055dd698f4}{Car}.
+
+
+\begin{DoxyCode}
+97                 \{
+98                         \textcolor{keywordflow}{return} 0.30 + \hyperlink{classPremiumSoundSystem_a441bc8062467c6c45cd47bca4b8950dd}{\_b}->\hyperlink{classCar_a7498766d25f7d4f15272f8055dd698f4}{getCost}();
+99                 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classPremiumSoundSystem_ad14f7dae4adfb94572a80199174425af_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Premium\+Sound\+System@{Premium\+Sound\+System}!get\+Description@{get\+Description}}
+\index{get\+Description@{get\+Description}!Premium\+Sound\+System@{Premium\+Sound\+System}}
+\subsubsection[{\texorpdfstring{get\+Description()}{getDescription()}}]{\setlength{\rightskip}{0pt plus 5cm}string Premium\+Sound\+System\+::get\+Description (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classPremiumSoundSystem_a11267003bbf024bf19b811b0b28b22c1}{}\label{classPremiumSoundSystem_a11267003bbf024bf19b811b0b28b22c1}
+
+
+Implements \hyperlink{classOptionsDecorator_a620341446534468345792530d454f76c}{Options\+Decorator}.
+
+
+\begin{DoxyCode}
+92                 \{
+93                         \textcolor{keywordflow}{return} \hyperlink{classPremiumSoundSystem_a441bc8062467c6c45cd47bca4b8950dd}{\_b}->\hyperlink{classCar_a0d2f99b108e72e2a44360b38f16bbb46}{getDescription}() + \textcolor{stringliteral}{", PremiumSoundSystem"};
+94                 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classPremiumSoundSystem_a11267003bbf024bf19b811b0b28b22c1_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Premium\+Sound\+System@{Premium\+Sound\+System}!\+\_\+b@{\+\_\+b}}
+\index{\+\_\+b@{\+\_\+b}!Premium\+Sound\+System@{Premium\+Sound\+System}}
+\subsubsection[{\texorpdfstring{\+\_\+b}{_b}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Car}$\ast$ Premium\+Sound\+System\+::\+\_\+b\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPremiumSoundSystem_a441bc8062467c6c45cd47bca4b8950dd}{}\label{classPremiumSoundSystem_a441bc8062467c6c45cd47bca4b8950dd}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Decorator_8cpp}{Decorator.\+cpp}\end{DoxyCompactItemize}

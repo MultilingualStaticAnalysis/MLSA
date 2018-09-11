@@ -1,0 +1,81 @@
+\hypertarget{UserDefinedLiteral_8cpp}{}\section{User\+Defined\+Literal.\+cpp File Reference}
+\label{UserDefinedLiteral_8cpp}\index{User\+Defined\+Literal.\+cpp@{User\+Defined\+Literal.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for User\+Defined\+Literal.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{UserDefinedLiteral_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+long double \hyperlink{UserDefinedLiteral_8cpp_a90daec3c9a9225f5660cb6406617e813}{operator\char`\"{}\char`\"{}\+\_\+kg} (long double x)
+\item 
+long double \hyperlink{UserDefinedLiteral_8cpp_a85bd9a0116e836b0afe077231e9b9ac5}{operator\char`\"{}\char`\"{}\+\_\+g} (long double x)
+\item 
+long double \hyperlink{UserDefinedLiteral_8cpp_a42788678edb94f3275a3501ef7a00de2}{operator\char`\"{}\char`\"{}\+\_\+mg} (long double x)
+\item 
+int \hyperlink{UserDefinedLiteral_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{User\+Defined\+Literal.\+cpp@{User\+Defined\+Literal.\+cpp}!main@{main}}
+\index{main@{main}!User\+Defined\+Literal.\+cpp@{User\+Defined\+Literal.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{UserDefinedLiteral_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{UserDefinedLiteral_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+28 \{
+29     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} weight = 3.6\_kg;
+30     cout << weight << endl;
+31     cout << ( weight + 2.3\_mg ) << endl;
+32     cout << ( 32.3\_kg / 2.0\_g ) << endl;
+33     cout << ( 32.3\_mg *2.0\_g ) << endl;
+34     \textcolor{keywordflow}{return} 0;
+35 \}\end{DoxyCode}
+\index{User\+Defined\+Literal.\+cpp@{User\+Defined\+Literal.\+cpp}!operator\char`\"{}\char`\"{}\+\_\+g@{operator""""\+\_\+g}}
+\index{operator\char`\"{}\char`\"{}\+\_\+g@{operator""""\+\_\+g}!User\+Defined\+Literal.\+cpp@{User\+Defined\+Literal.\+cpp}}
+\subsubsection[{\texorpdfstring{operator""""\+\_\+g(long double x)}{operator""_g(long double x)}}]{\setlength{\rightskip}{0pt plus 5cm}long double operator\char`\"{}\char`\"{}\+\_\+g (
+\begin{DoxyParamCaption}
+\item[{long double}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{UserDefinedLiteral_8cpp_a85bd9a0116e836b0afe077231e9b9ac5}{}\label{UserDefinedLiteral_8cpp_a85bd9a0116e836b0afe077231e9b9ac5}
+
+\begin{DoxyCode}
+16 \{
+17     \textcolor{keywordflow}{return} x;
+18 \}
+\end{DoxyCode}
+\index{User\+Defined\+Literal.\+cpp@{User\+Defined\+Literal.\+cpp}!operator\char`\"{}\char`\"{}\+\_\+kg@{operator""""\+\_\+kg}}
+\index{operator\char`\"{}\char`\"{}\+\_\+kg@{operator""""\+\_\+kg}!User\+Defined\+Literal.\+cpp@{User\+Defined\+Literal.\+cpp}}
+\subsubsection[{\texorpdfstring{operator""""\+\_\+kg(long double x)}{operator""_kg(long double x)}}]{\setlength{\rightskip}{0pt plus 5cm}long double operator\char`\"{}\char`\"{}\+\_\+kg (
+\begin{DoxyParamCaption}
+\item[{long double}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{UserDefinedLiteral_8cpp_a90daec3c9a9225f5660cb6406617e813}{}\label{UserDefinedLiteral_8cpp_a90daec3c9a9225f5660cb6406617e813}
+
+\begin{DoxyCode}
+10 \{
+11     \textcolor{keywordflow}{return} x*1000;
+12 \}
+\end{DoxyCode}
+\index{User\+Defined\+Literal.\+cpp@{User\+Defined\+Literal.\+cpp}!operator\char`\"{}\char`\"{}\+\_\+mg@{operator""""\+\_\+mg}}
+\index{operator\char`\"{}\char`\"{}\+\_\+mg@{operator""""\+\_\+mg}!User\+Defined\+Literal.\+cpp@{User\+Defined\+Literal.\+cpp}}
+\subsubsection[{\texorpdfstring{operator""""\+\_\+mg(long double x)}{operator""_mg(long double x)}}]{\setlength{\rightskip}{0pt plus 5cm}long double operator\char`\"{}\char`\"{}\+\_\+mg (
+\begin{DoxyParamCaption}
+\item[{long double}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{UserDefinedLiteral_8cpp_a42788678edb94f3275a3501ef7a00de2}{}\label{UserDefinedLiteral_8cpp_a42788678edb94f3275a3501ef7a00de2}
+
+\begin{DoxyCode}
+22 \{
+23     \textcolor{keywordflow}{return} x / 1000;
+24 \}
+\end{DoxyCode}

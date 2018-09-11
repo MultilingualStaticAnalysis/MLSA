@@ -1,0 +1,772 @@
+Processing: /home/frcv-lab/mlsa/mlsa/test/test0-3-2/RPG.cpp.
+typedef __int128 __int128_t;
+typedef unsigned __int128 __uint128_t;
+typedef __va_list_tag __builtin_va_list[1];
+int _GLIBCXX_VISIBILITY;
+typedef unsigned short __u_short;
+typedef unsigned int __u_int;
+typedef unsigned long __u_long;
+typedef signed char __int8_t;
+typedef unsigned char __uint8_t;
+typedef short __int16_t;
+typedef unsigned short __uint16_t;
+typedef int __int32_t;
+typedef unsigned int __uint32_t;
+typedef long __int64_t;
+typedef unsigned long __uint64_t;
+typedef long __quad_t;
+typedef unsigned long __u_quad_t;
+typedef unsigned long __dev_t;
+typedef unsigned int __uid_t;
+typedef unsigned int __gid_t;
+typedef unsigned long __ino_t;
+typedef unsigned long __ino64_t;
+typedef unsigned int __mode_t;
+typedef unsigned long __nlink_t;
+typedef long __off_t;
+typedef long __off64_t;
+typedef int __pid_t;
+struct {
+    int __val[2];
+};
+typedef struct __fsid_t __fsid_t;
+typedef long __clock_t;
+typedef unsigned long __rlim_t;
+typedef unsigned long __rlim64_t;
+typedef unsigned int __id_t;
+typedef long __time_t;
+typedef unsigned int __useconds_t;
+typedef long __suseconds_t;
+typedef int __daddr_t;
+typedef int __key_t;
+typedef int __clockid_t;
+typedef void *__timer_t;
+typedef long __blksize_t;
+typedef long __blkcnt_t;
+typedef long __blkcnt64_t;
+typedef unsigned long __fsblkcnt_t;
+typedef unsigned long __fsblkcnt64_t;
+typedef unsigned long __fsfilcnt_t;
+typedef unsigned long __fsfilcnt64_t;
+typedef long __fsword_t;
+typedef long __ssize_t;
+typedef long __syscall_slong_t;
+typedef unsigned long __syscall_ulong_t;
+typedef __off64_t __loff_t;
+typedef __quad_t *__qaddr_t;
+typedef char *__caddr_t;
+typedef long __intptr_t;
+typedef unsigned int __socklen_t;
+extern "C" {
+    enum  {
+        _ISupper = (ImplicitCastExpr 0x1ee3da0 </usr/include/ctype.h:43:23, col:77> 'unsigned int' <IntegralCast>
+  (ParenExpr 0x1ed84e8 <col:23, col:77> 'int'
+    (ConditionalOperator 0x1ed84b8 <col:24, col:76> 'int'
+      (BinaryOperator 0x1ed8270 <col:24, col:32> '_Bool' '<'
+        (ParenExpr 0x1ed8230 <col:24, col:28> 'int'
+          (IntegerLiteral 0x1ed8210 <line:48:22> 'int' 0))
+        (IntegerLiteral 0x1ed8250 <line:43:32> 'int' 8))
+      (ParenExpr 0x1ed8388 <col:36, col:54> 'int'
+        (BinaryOperator 0x1ed8360 <col:37, col:53> 'int' '<<'
+          (ParenExpr 0x1ed8320 <col:37, col:48> 'int'
+            (BinaryOperator 0x1ed82f8 <col:38, col:47> 'int' '<<'
+              (IntegerLiteral 0x1ed8298 <col:38> 'int' 1)
+              (ParenExpr 0x1ed82d8 <col:43, col:47> 'int'
+                (IntegerLiteral 0x1ed82b8 <line:48:22> 'int' 0))))
+          (IntegerLiteral 0x1ed8340 <line:43:53> 'int' 8)))
+      (ParenExpr 0x1ed8498 <col:58, col:76> 'int'
+        (BinaryOperator 0x1ed8470 <col:59, col:75> 'int' '>>'
+          (ParenExpr 0x1ed8430 <col:59, col:70> 'int'
+            (BinaryOperator 0x1ed8408 <col:60, col:69> 'int' '<<'
+              (IntegerLiteral 0x1ed83a8 <col:60> 'int' 1)
+              (ParenExpr 0x1ed83e8 <col:65, col:69> 'int'
+                (IntegerLiteral 0x1ed83c8 <line:48:22> 'int' 0))))
+          (IntegerLiteral 0x1ed8450 <line:43:75> 'int' 8))))))
+,
+        _ISlower = (ImplicitCastExpr 0x1ee3db8 </usr/include/ctype.h:43:23, col:77> 'unsigned int' <IntegralCast>
+  (ParenExpr 0x1ed8838 <col:23, col:77> 'int'
+    (ConditionalOperator 0x1ed8808 <col:24, col:76> 'int'
+      (BinaryOperator 0x1ed85c0 <col:24, col:32> '_Bool' '<'
+        (ParenExpr 0x1ed8580 <col:24, col:28> 'int'
+          (IntegerLiteral 0x1ed8560 <line:49:22> 'int' 1))
+        (IntegerLiteral 0x1ed85a0 <line:43:32> 'int' 8))
+      (ParenExpr 0x1ed86d8 <col:36, col:54> 'int'
+        (BinaryOperator 0x1ed86b0 <col:37, col:53> 'int' '<<'
+          (ParenExpr 0x1ed8670 <col:37, col:48> 'int'
+            (BinaryOperator 0x1ed8648 <col:38, col:47> 'int' '<<'
+              (IntegerLiteral 0x1ed85e8 <col:38> 'int' 1)
+              (ParenExpr 0x1ed8628 <col:43, col:47> 'int'
+                (IntegerLiteral 0x1ed8608 <line:49:22> 'int' 1))))
+          (IntegerLiteral 0x1ed8690 <line:43:53> 'int' 8)))
+      (ParenExpr 0x1ed87e8 <col:58, col:76> 'int'
+        (BinaryOperator 0x1ed87c0 <col:59, col:75> 'int' '>>'
+          (ParenExpr 0x1ed8780 <col:59, col:70> 'int'
+            (BinaryOperator 0x1ed8758 <col:60, col:69> 'int' '<<'
+              (IntegerLiteral 0x1ed86f8 <col:60> 'int' 1)
+              (ParenExpr 0x1ed8738 <col:65, col:69> 'int'
+                (IntegerLiteral 0x1ed8718 <line:49:22> 'int' 1))))
+          (IntegerLiteral 0x1ed87a0 <line:43:75> 'int' 8))))))
+,
+        _ISalpha = (ImplicitCastExpr 0x1ee3dd0 </usr/include/ctype.h:43:23, col:77> 'unsigned int' <IntegralCast>
+  (ParenExpr 0x1ed8b88 <col:23, col:77> 'int'
+    (ConditionalOperator 0x1ed8b58 <col:24, col:76> 'int'
+      (BinaryOperator 0x1ed8910 <col:24, col:32> '_Bool' '<'
+        (ParenExpr 0x1ed88d0 <col:24, col:28> 'int'
+          (IntegerLiteral 0x1ed88b0 <line:50:22> 'int' 2))
+        (IntegerLiteral 0x1ed88f0 <line:43:32> 'int' 8))
+      (ParenExpr 0x1ed8a28 <col:36, col:54> 'int'
+        (BinaryOperator 0x1ed8a00 <col:37, col:53> 'int' '<<'
+          (ParenExpr 0x1ed89c0 <col:37, col:48> 'int'
+            (BinaryOperator 0x1ed8998 <col:38, col:47> 'int' '<<'
+              (IntegerLiteral 0x1ed8938 <col:38> 'int' 1)
+              (ParenExpr 0x1ed8978 <col:43, col:47> 'int'
+                (IntegerLiteral 0x1ed8958 <line:50:22> 'int' 2))))
+          (IntegerLiteral 0x1ed89e0 <line:43:53> 'int' 8)))
+      (ParenExpr 0x1ed8b38 <col:58, col:76> 'int'
+        (BinaryOperator 0x1ed8b10 <col:59, col:75> 'int' '>>'
+          (ParenExpr 0x1ed8ad0 <col:59, col:70> 'int'
+            (BinaryOperator 0x1ed8aa8 <col:60, col:69> 'int' '<<'
+              (IntegerLiteral 0x1ed8a48 <col:60> 'int' 1)
+              (ParenExpr 0x1ed8a88 <col:65, col:69> 'int'
+                (IntegerLiteral 0x1ed8a68 <line:50:22> 'int' 2))))
+          (IntegerLiteral 0x1ed8af0 <line:43:75> 'int' 8))))))
+,
+        _ISdigit = (ImplicitCastExpr 0x1ee3de8 </usr/include/ctype.h:43:23, col:77> 'unsigned int' <IntegralCast>
+  (ParenExpr 0x1ee2288 <col:23, col:77> 'int'
+    (ConditionalOperator 0x1ee2258 <col:24, col:76> 'int'
+      (BinaryOperator 0x1ed8c60 <col:24, col:32> '_Bool' '<'
+        (ParenExpr 0x1ed8c20 <col:24, col:28> 'int'
+          (IntegerLiteral 0x1ed8c00 <line:51:22> 'int' 3))
+        (IntegerLiteral 0x1ed8c40 <line:43:32> 'int' 8))
+      (ParenExpr 0x1ee2128 <col:36, col:54> 'int'
+        (BinaryOperator 0x1ee2100 <col:37, col:53> 'int' '<<'
+          (ParenExpr 0x1ed8d10 <col:37, col:48> 'int'
+            (BinaryOperator 0x1ed8ce8 <col:38, col:47> 'int' '<<'
+              (IntegerLiteral 0x1ed8c88 <col:38> 'int' 1)
+              (ParenExpr 0x1ed8cc8 <col:43, col:47> 'int'
+                (IntegerLiteral 0x1ed8ca8 <line:51:22> 'int' 3))))
+          (IntegerLiteral 0x1ee20e0 <line:43:53> 'int' 8)))
+      (ParenExpr 0x1ee2238 <col:58, col:76> 'int'
+        (BinaryOperator 0x1ee2210 <col:59, col:75> 'int' '>>'
+          (ParenExpr 0x1ee21d0 <col:59, col:70> 'int'
+            (BinaryOperator 0x1ee21a8 <col:60, col:69> 'int' '<<'
+              (IntegerLiteral 0x1ee2148 <col:60> 'int' 1)
+              (ParenExpr 0x1ee2188 <col:65, col:69> 'int'
+                (IntegerLiteral 0x1ee2168 <line:51:22> 'int' 3))))
+          (IntegerLiteral 0x1ee21f0 <line:43:75> 'int' 8))))))
+,
+        _ISxdigit = (ImplicitCastExpr 0x1ee3e00 </usr/include/ctype.h:43:23, col:77> 'unsigned int' <IntegralCast>
+  (ParenExpr 0x1ee25d8 <col:23, col:77> 'int'
+    (ConditionalOperator 0x1ee25a8 <col:24, col:76> 'int'
+      (BinaryOperator 0x1ee2360 <col:24, col:32> '_Bool' '<'
+        (ParenExpr 0x1ee2320 <col:24, col:28> 'int'
+          (IntegerLiteral 0x1ee2300 <line:52:23> 'int' 4))
+        (IntegerLiteral 0x1ee2340 <line:43:32> 'int' 8))
+      (ParenExpr 0x1ee2478 <col:36, col:54> 'int'
+        (BinaryOperator 0x1ee2450 <col:37, col:53> 'int' '<<'
+          (ParenExpr 0x1ee2410 <col:37, col:48> 'int'
+            (BinaryOperator 0x1ee23e8 <col:38, col:47> 'int' '<<'
+              (IntegerLiteral 0x1ee2388 <col:38> 'int' 1)
+              (ParenExpr 0x1ee23c8 <col:43, col:47> 'int'
+                (IntegerLiteral 0x1ee23a8 <line:52:23> 'int' 4))))
+          (IntegerLiteral 0x1ee2430 <line:43:53> 'int' 8)))
+      (ParenExpr 0x1ee2588 <col:58, col:76> 'int'
+        (BinaryOperator 0x1ee2560 <col:59, col:75> 'int' '>>'
+          (ParenExpr 0x1ee2520 <col:59, col:70> 'int'
+            (BinaryOperator 0x1ee24f8 <col:60, col:69> 'int' '<<'
+              (IntegerLiteral 0x1ee2498 <col:60> 'int' 1)
+              (ParenExpr 0x1ee24d8 <col:65, col:69> 'int'
+                (IntegerLiteral 0x1ee24b8 <line:52:23> 'int' 4))))
+          (IntegerLiteral 0x1ee2540 <line:43:75> 'int' 8))))))
+,
+        _ISspace = (ImplicitCastExpr 0x1ee3e18 </usr/include/ctype.h:43:23, col:77> 'unsigned int' <IntegralCast>
+  (ParenExpr 0x1ee2928 <col:23, col:77> 'int'
+    (ConditionalOperator 0x1ee28f8 <col:24, col:76> 'int'
+      (BinaryOperator 0x1ee26b0 <col:24, col:32> '_Bool' '<'
+        (ParenExpr 0x1ee2670 <col:24, col:28> 'int'
+          (IntegerLiteral 0x1ee2650 <line:53:22> 'int' 5))
+        (IntegerLiteral 0x1ee2690 <line:43:32> 'int' 8))
+      (ParenExpr 0x1ee27c8 <col:36, col:54> 'int'
+        (BinaryOperator 0x1ee27a0 <col:37, col:53> 'int' '<<'
+          (ParenExpr 0x1ee2760 <col:37, col:48> 'int'
+            (BinaryOperator 0x1ee2738 <col:38, col:47> 'int' '<<'
+              (IntegerLiteral 0x1ee26d8 <col:38> 'int' 1)
+              (ParenExpr 0x1ee2718 <col:43, col:47> 'int'
+                (IntegerLiteral 0x1ee26f8 <line:53:22> 'int' 5))))
+          (IntegerLiteral 0x1ee2780 <line:43:53> 'int' 8)))
+      (ParenExpr 0x1ee28d8 <col:58, col:76> 'int'
+        (BinaryOperator 0x1ee28b0 <col:59, col:75> 'int' '>>'
+          (ParenExpr 0x1ee2870 <col:59, col:70> 'int'
+            (BinaryOperator 0x1ee2848 <col:60, col:69> 'int' '<<'
+              (IntegerLiteral 0x1ee27e8 <col:60> 'int' 1)
+              (ParenExpr 0x1ee2828 <col:65, col:69> 'int'
+                (IntegerLiteral 0x1ee2808 <line:53:22> 'int' 5))))
+          (IntegerLiteral 0x1ee2890 <line:43:75> 'int' 8))))))
+,
+        _ISprint = (ImplicitCastExpr 0x1ee3e30 </usr/include/ctype.h:43:23, col:77> 'unsigned int' <IntegralCast>
+  (ParenExpr 0x1ee2c78 <col:23, col:77> 'int'
+    (ConditionalOperator 0x1ee2c48 <col:24, col:76> 'int'
+      (BinaryOperator 0x1ee2a00 <col:24, col:32> '_Bool' '<'
+        (ParenExpr 0x1ee29c0 <col:24, col:28> 'int'
+          (IntegerLiteral 0x1ee29a0 <line:54:22> 'int' 6))
+        (IntegerLiteral 0x1ee29e0 <line:43:32> 'int' 8))
+      (ParenExpr 0x1ee2b18 <col:36, col:54> 'int'
+        (BinaryOperator 0x1ee2af0 <col:37, col:53> 'int' '<<'
+          (ParenExpr 0x1ee2ab0 <col:37, col:48> 'int'
+            (BinaryOperator 0x1ee2a88 <col:38, col:47> 'int' '<<'
+              (IntegerLiteral 0x1ee2a28 <col:38> 'int' 1)
+              (ParenExpr 0x1ee2a68 <col:43, col:47> 'int'
+                (IntegerLiteral 0x1ee2a48 <line:54:22> 'int' 6))))
+          (IntegerLiteral 0x1ee2ad0 <line:43:53> 'int' 8)))
+      (ParenExpr 0x1ee2c28 <col:58, col:76> 'int'
+        (BinaryOperator 0x1ee2c00 <col:59, col:75> 'int' '>>'
+          (ParenExpr 0x1ee2bc0 <col:59, col:70> 'int'
+            (BinaryOperator 0x1ee2b98 <col:60, col:69> 'int' '<<'
+              (IntegerLiteral 0x1ee2b38 <col:60> 'int' 1)
+              (ParenExpr 0x1ee2b78 <col:65, col:69> 'int'
+                (IntegerLiteral 0x1ee2b58 <line:54:22> 'int' 6))))
+          (IntegerLiteral 0x1ee2be0 <line:43:75> 'int' 8))))))
+,
+        _ISgraph = (ImplicitCastExpr 0x1ee3e48 </usr/include/ctype.h:43:23, col:77> 'unsigned int' <IntegralCast>
+  (ParenExpr 0x1ee2fc8 <col:23, col:77> 'int'
+    (ConditionalOperator 0x1ee2f98 <col:24, col:76> 'int'
+      (BinaryOperator 0x1ee2d50 <col:24, col:32> '_Bool' '<'
+        (ParenExpr 0x1ee2d10 <col:24, col:28> 'int'
+          (IntegerLiteral 0x1ee2cf0 <line:55:22> 'int' 7))
+        (IntegerLiteral 0x1ee2d30 <line:43:32> 'int' 8))
+      (ParenExpr 0x1ee2e68 <col:36, col:54> 'int'
+        (BinaryOperator 0x1ee2e40 <col:37, col:53> 'int' '<<'
+          (ParenExpr 0x1ee2e00 <col:37, col:48> 'int'
+            (BinaryOperator 0x1ee2dd8 <col:38, col:47> 'int' '<<'
+              (IntegerLiteral 0x1ee2d78 <col:38> 'int' 1)
+              (ParenExpr 0x1ee2db8 <col:43, col:47> 'int'
+                (IntegerLiteral 0x1ee2d98 <line:55:22> 'int' 7))))
+          (IntegerLiteral 0x1ee2e20 <line:43:53> 'int' 8)))
+      (ParenExpr 0x1ee2f78 <col:58, col:76> 'int'
+        (BinaryOperator 0x1ee2f50 <col:59, col:75> 'int' '>>'
+          (ParenExpr 0x1ee2f10 <col:59, col:70> 'int'
+            (BinaryOperator 0x1ee2ee8 <col:60, col:69> 'int' '<<'
+              (IntegerLiteral 0x1ee2e88 <col:60> 'int' 1)
+              (ParenExpr 0x1ee2ec8 <col:65, col:69> 'int'
+                (IntegerLiteral 0x1ee2ea8 <line:55:22> 'int' 7))))
+          (IntegerLiteral 0x1ee2f30 <line:43:75> 'int' 8))))))
+,
+        _ISblank = (ImplicitCastExpr 0x1ee3e60 </usr/include/ctype.h:43:23, col:77> 'unsigned int' <IntegralCast>
+  (ParenExpr 0x1ee3340 <col:23, col:77> 'int'
+    (ConditionalOperator 0x1ee3310 <col:24, col:76> 'int'
+      (BinaryOperator 0x1ee30a0 <col:24, col:32> '_Bool' '<'
+        (ParenExpr 0x1ee3060 <col:24, col:28> 'int'
+          (IntegerLiteral 0x1ee3040 <line:56:22> 'int' 8))
+        (IntegerLiteral 0x1ee3080 <line:43:32> 'int' 8))
+      (ParenExpr 0x1ee31e0 <col:36, col:54> 'int'
+        (BinaryOperator 0x1ee31b8 <col:37, col:53> 'int' '<<'
+          (ParenExpr 0x1ee3178 <col:37, col:48> 'int'
+            (BinaryOperator 0x1ee3150 <col:38, col:47> 'int' '<<'
+              (IntegerLiteral 0x1ee30f0 <col:38> 'int' 1)
+              (ParenExpr 0x1ee3130 <col:43, col:47> 'int'
+                (IntegerLiteral 0x1ee3110 <line:56:22> 'int' 8))))
+          (IntegerLiteral 0x1ee3198 <line:43:53> 'int' 8)))
+      (ParenExpr 0x1ee32f0 <col:58, col:76> 'int'
+        (BinaryOperator 0x1ee32c8 <col:59, col:75> 'int' '>>'
+          (ParenExpr 0x1ee3288 <col:59, col:70> 'int'
+            (BinaryOperator 0x1ee3260 <col:60, col:69> 'int' '<<'
+              (IntegerLiteral 0x1ee3200 <col:60> 'int' 1)
+              (ParenExpr 0x1ee3240 <col:65, col:69> 'int'
+                (IntegerLiteral 0x1ee3220 <line:56:22> 'int' 8))))
+          (IntegerLiteral 0x1ee32a8 <line:43:75> 'int' 8))))))
+,
+        _IScntrl = (ImplicitCastExpr 0x1ee3e78 </usr/include/ctype.h:43:23, col:77> 'unsigned int' <IntegralCast>
+  (ParenExpr 0x1ee3688 <col:23, col:77> 'int'
+    (ConditionalOperator 0x1ee3658 <col:24, col:76> 'int'
+      (BinaryOperator 0x1ee3410 <col:24, col:32> '_Bool' '<'
+        (ParenExpr 0x1ee33d0 <col:24, col:28> 'int'
+          (IntegerLiteral 0x1ee33b0 <line:57:22> 'int' 9))
+        (IntegerLiteral 0x1ee33f0 <line:43:32> 'int' 8))
+      (ParenExpr 0x1ee3528 <col:36, col:54> 'int'
+        (BinaryOperator 0x1ee3500 <col:37, col:53> 'int' '<<'
+          (ParenExpr 0x1ee34c0 <col:37, col:48> 'int'
+            (BinaryOperator 0x1ee3498 <col:38, col:47> 'int' '<<'
+              (IntegerLiteral 0x1ee3438 <col:38> 'int' 1)
+              (ParenExpr 0x1ee3478 <col:43, col:47> 'int'
+                (IntegerLiteral 0x1ee3458 <line:57:22> 'int' 9))))
+          (IntegerLiteral 0x1ee34e0 <line:43:53> 'int' 8)))
+      (ParenExpr 0x1ee3638 <col:58, col:76> 'int'
+        (BinaryOperator 0x1ee3610 <col:59, col:75> 'int' '>>'
+          (ParenExpr 0x1ee35d0 <col:59, col:70> 'int'
+            (BinaryOperator 0x1ee35a8 <col:60, col:69> 'int' '<<'
+              (IntegerLiteral 0x1ee3548 <col:60> 'int' 1)
+              (ParenExpr 0x1ee3588 <col:65, col:69> 'int'
+                (IntegerLiteral 0x1ee3568 <line:57:22> 'int' 9))))
+          (IntegerLiteral 0x1ee35f0 <line:43:75> 'int' 8))))))
+,
+        _ISpunct = (ImplicitCastExpr 0x1ee3e90 </usr/include/ctype.h:43:23, col:77> 'unsigned int' <IntegralCast>
+  (ParenExpr 0x1ee39d8 <col:23, col:77> 'int'
+    (ConditionalOperator 0x1ee39a8 <col:24, col:76> 'int'
+      (BinaryOperator 0x1ee3760 <col:24, col:32> '_Bool' '<'
+        (ParenExpr 0x1ee3720 <col:24, col:28> 'int'
+          (IntegerLiteral 0x1ee3700 <line:58:22> 'int' 10))
+        (IntegerLiteral 0x1ee3740 <line:43:32> 'int' 8))
+      (ParenExpr 0x1ee3878 <col:36, col:54> 'int'
+        (BinaryOperator 0x1ee3850 <col:37, col:53> 'int' '<<'
+          (ParenExpr 0x1ee3810 <col:37, col:48> 'int'
+            (BinaryOperator 0x1ee37e8 <col:38, col:47> 'int' '<<'
+              (IntegerLiteral 0x1ee3788 <col:38> 'int' 1)
+              (ParenExpr 0x1ee37c8 <col:43, col:47> 'int'
+                (IntegerLiteral 0x1ee37a8 <line:58:22> 'int' 10))))
+          (IntegerLiteral 0x1ee3830 <line:43:53> 'int' 8)))
+      (ParenExpr 0x1ee3988 <col:58, col:76> 'int'
+        (BinaryOperator 0x1ee3960 <col:59, col:75> 'int' '>>'
+          (ParenExpr 0x1ee3920 <col:59, col:70> 'int'
+            (BinaryOperator 0x1ee38f8 <col:60, col:69> 'int' '<<'
+              (IntegerLiteral 0x1ee3898 <col:60> 'int' 1)
+              (ParenExpr 0x1ee38d8 <col:65, col:69> 'int'
+                (IntegerLiteral 0x1ee38b8 <line:58:22> 'int' 10))))
+          (IntegerLiteral 0x1ee3940 <line:43:75> 'int' 8))))))
+,
+        _ISalnum = (ImplicitCastExpr 0x1ee3ea8 </usr/include/ctype.h:43:23, col:77> 'unsigned int' <IntegralCast>
+  (ParenExpr 0x1ee3d28 <col:23, col:77> 'int'
+    (ConditionalOperator 0x1ee3cf8 <col:24, col:76> 'int'
+      (BinaryOperator 0x1ee3ab0 <col:24, col:32> '_Bool' '<'
+        (ParenExpr 0x1ee3a70 <col:24, col:28> 'int'
+          (IntegerLiteral 0x1ee3a50 <line:59:22> 'int' 11))
+        (IntegerLiteral 0x1ee3a90 <line:43:32> 'int' 8))
+      (ParenExpr 0x1ee3bc8 <col:36, col:54> 'int'
+        (BinaryOperator 0x1ee3ba0 <col:37, col:53> 'int' '<<'
+          (ParenExpr 0x1ee3b60 <col:37, col:48> 'int'
+            (BinaryOperator 0x1ee3b38 <col:38, col:47> 'int' '<<'
+              (IntegerLiteral 0x1ee3ad8 <col:38> 'int' 1)
+              (ParenExpr 0x1ee3b18 <col:43, col:47> 'int'
+                (IntegerLiteral 0x1ee3af8 <line:59:22> 'int' 11))))
+          (IntegerLiteral 0x1ee3b80 <line:43:53> 'int' 8)))
+      (ParenExpr 0x1ee3cd8 <col:58, col:76> 'int'
+        (BinaryOperator 0x1ee3cb0 <col:59, col:75> 'int' '>>'
+          (ParenExpr 0x1ee3c70 <col:59, col:70> 'int'
+            (BinaryOperator 0x1ee3c48 <col:60, col:69> 'int' '<<'
+              (IntegerLiteral 0x1ee3be8 <col:60> 'int' 1)
+              (ParenExpr 0x1ee3c28 <col:65, col:69> 'int'
+                (IntegerLiteral 0x1ee3c08 <line:59:22> 'int' 11))))
+          (IntegerLiteral 0x1ee3c90 <line:43:75> 'int' 8))))))
+
+    };
+    extern const unsigned short **__ctype_b_loc() throw() __attribute__((const));
+    extern const __int32_t **__ctype_tolower_loc() throw() __attribute__((const));
+    extern const __int32_t **__ctype_toupper_loc() throw() __attribute__((const));
+    extern int isalnum(int) throw();
+    extern int isalpha(int) throw();
+    extern int iscntrl(int) throw();
+    extern int isdigit(int) throw();
+    extern int islower(int) throw();
+    extern int isgraph(int) throw();
+    extern int isprint(int) throw();
+    extern int ispunct(int) throw();
+    extern int isspace(int) throw();
+    extern int isupper(int) throw();
+    extern int isxdigit(int) throw();
+    extern int tolower(int __c) throw();
+    extern int toupper(int __c) throw();
+    extern int isblank(int) throw();
+    extern int isctype(int __c, int __mask) throw();
+    extern int isascii(int __c) throw();
+    extern int toascii(int __c) throw();
+    extern int _toupper(int) throw();
+    extern int _tolower(int) throw();
+    struct __locale_struct {
+        struct __locale_struct;
+        struct __locale_data;
+        struct __locale_data *__locales[13];
+        const unsigned short *__ctype_b;
+        const int *__ctype_tolower;
+        const int *__ctype_toupper;
+        const char *__names[13];
+    };
+    typedef struct __locale_struct *__locale_t;
+    typedef __locale_t locale_t;
+    extern int isalnum_l(int, __locale_t) throw();
+    extern int isalpha_l(int, __locale_t) throw();
+    extern int iscntrl_l(int, __locale_t) throw();
+    extern int isdigit_l(int, __locale_t) throw();
+    extern int islower_l(int, __locale_t) throw();
+    extern int isgraph_l(int, __locale_t) throw();
+    extern int isprint_l(int, __locale_t) throw();
+    extern int ispunct_l(int, __locale_t) throw();
+    extern int isspace_l(int, __locale_t) throw();
+    extern int isupper_l(int, __locale_t) throw();
+    extern int isxdigit_l(int, __locale_t) throw();
+    extern int isblank_l(int, __locale_t) throw();
+    extern int __tolower_l(int __c, __locale_t __l) throw();
+    extern int tolower_l(int __c, __locale_t __l) throw();
+    extern int __toupper_l(int __c, __locale_t __l) throw();
+    extern int toupper_l(int __c, __locale_t __l) throw();
+}
+namespace std {
+    using ::isalnum;
+    ;
+    using ::isalpha;
+    ;
+    using ::iscntrl;
+    ;
+    using ::isdigit;
+    ;
+    using ::isgraph;
+    ;
+    using ::islower;
+    ;
+    using ::isprint;
+    ;
+    using ::ispunct;
+    ;
+    using ::isspace;
+    ;
+    using ::isupper;
+    ;
+    using ::isxdigit;
+    ;
+    using ::tolower;
+    ;
+    using ::toupper;
+    ;
+}
+int _GLIBCXX_VISIBILITY;
+int main() (CompoundStmt 0x1f50120 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/RPG.cpp:8:1, line:166:7>
+  (DeclStmt 0x1ef7c98 <line:9:3, col:13>
+    (0x1ef7c40 "int choice"))
+  (DeclStmt 0x1f4a600 <line:10:3, col:69>
+    (0x1ef7cc0 "int mhp")
+    (0x1ef7d30 "int hp")
+    (0x1ef7da0 "int i")
+    (0x1ef7e10 "int init")
+    (0x1f4a230 "int atk")
+    (0x1f4a2a0 "int def")
+    (0x1f4a310 "int matk")
+    (0x1f4a380 "int mdef")
+    (0x1f4a3f0 "int hurt")
+    (0x1f4a460 "int mhurt")
+    (0x1f4a4d0 "int agi")
+    (0x1f4a540 "int magi"))
+  (BinaryOperator 0x1f4a660 <line:11:3, col:9> 'int' lvalue '='
+    (DeclRefExpr 0x1f4a618 <col:3> 'int' lvalue Var 0x1f4a230 'atk' 'int')
+    (IntegerLiteral 0x1f4a640 <col:9> 'int' 10))
+  (BinaryOperator 0x1f4a6d0 <line:12:3, col:9> 'int' lvalue '='
+    (DeclRefExpr 0x1f4a688 <col:3> 'int' lvalue Var 0x1f4a2a0 'def' 'int')
+    (IntegerLiteral 0x1f4a6b0 <col:9> 'int' 15))
+  (BinaryOperator 0x1f4a740 <line:13:3, col:9> 'int' lvalue '='
+    (DeclRefExpr 0x1f4a6f8 <col:3> 'int' lvalue Var 0x1f4a4d0 'agi' 'int')
+    (IntegerLiteral 0x1f4a720 <col:9> 'int' 5))
+  (BinaryOperator 0x1f4a7b0 <line:14:3, col:10> 'int' lvalue '='
+    (DeclRefExpr 0x1f4a768 <col:3> 'int' lvalue Var 0x1f4a310 'matk' 'int')
+    (IntegerLiteral 0x1f4a790 <col:10> 'int' 10))
+  (BinaryOperator 0x1f4a820 <line:15:3, col:10> 'int' lvalue '='
+    (DeclRefExpr 0x1f4a7d8 <col:3> 'int' lvalue Var 0x1f4a380 'mdef' 'int')
+    (IntegerLiteral 0x1f4a800 <col:10> 'int' 15))
+  (BinaryOperator 0x1f4a890 <line:16:3, col:10> 'int' lvalue '='
+    (DeclRefExpr 0x1f4a848 <col:3> 'int' lvalue Var 0x1f4a540 'magi' 'int')
+    (IntegerLiteral 0x1f4a870 <col:10> 'int' 5))
+  (IfStmt 0x1f500f0 <line:22:3, line:166:5>
+    (<<<NULL>>>)
+    (BinaryOperator 0x1f4ac00 <line:22:7, col:15> '_Bool' '=='
+      (ImplicitCastExpr 0x1f4abe8 <col:7> 'int' <LValueToRValue>
+        (DeclRefExpr 0x1f4aba0 <col:7> 'int' lvalue Var 0x1ef7e10 'init' 'int'))
+      (IntegerLiteral 0x1f4abc8 <col:15> 'int' 1))
+    (CompoundStmt 0x1f4dc08 <col:18, line:92:6>
+      (WhileStmt 0x1f4dbe0 <line:24:3, line:91:6>
+        (<<<NULL>>>)
+        (BinaryOperator 0x1f4adf0 <line:24:10, col:26> '_Bool' '||'
+          (BinaryOperator 0x1f4ad40 <col:10, col:15> '_Bool' '>'
+            (ImplicitCastExpr 0x1f4ad28 <col:10> 'int' <LValueToRValue>
+              (DeclRefExpr 0x1f4ace0 <col:10> 'int' lvalue Var 0x1ef7d30 'hp' 'int'))
+            (IntegerLiteral 0x1f4ad08 <col:15> 'int' 0))
+          (BinaryOperator 0x1f4adc8 <col:20, col:26> '_Bool' '>'
+            (ImplicitCastExpr 0x1f4adb0 <col:20> 'int' <LValueToRValue>
+              (DeclRefExpr 0x1f4ad68 <col:20> 'int' lvalue Var 0x1ef7cc0 'mhp' 'int'))
+            (IntegerLiteral 0x1f4ad90 <col:26> 'int' 0)))
+        (CompoundStmt 0x1f4db70 <col:29, line:91:6>
+          (DoStmt 0x1f4b088 <line:26:6, col:48>
+            (CompoundStmt 0x1f4af38 <col:8, col:21>)
+            (BinaryOperator 0x1f4b060 <col:28, col:47> '_Bool' '||'
+              (BinaryOperator 0x1f4afb0 <col:28, col:35> '_Bool' '>'
+                (ImplicitCastExpr 0x1f4af98 <col:28> 'int' <LValueToRValue>
+                  (DeclRefExpr 0x1f4af50 <col:28> 'int' lvalue Var 0x1ef7c40 'choice' 'int'))
+                (IntegerLiteral 0x1f4af78 <col:35> 'int' 3))
+              (BinaryOperator 0x1f4b038 <col:40, col:47> '_Bool' '<'
+                (ImplicitCastExpr 0x1f4b020 <col:40> 'int' <LValueToRValue>
+                  (DeclRefExpr 0x1f4afd8 <col:40> 'int' lvalue Var 0x1ef7c40 'choice' 'int'))
+                (IntegerLiteral 0x1f4b000 <col:47> 'int' 1))))
+          (SwitchStmt 0x1f4b0f0 <line:27:5, line:43:2>
+            (<<<NULL>>>)
+            (ImplicitCastExpr 0x1f4b0d8 <line:27:13> 'int' <LValueToRValue>
+              (DeclRefExpr 0x1f4b0b0 <col:13> 'int' lvalue Var 0x1ef7c40 'choice' 'int'))
+            (CompoundStmt 0x1f4bf90 <col:21, line:43:2>
+              (CaseStmt 0x1f4b140 <line:28:7, <invalid sloc>>
+                (IntegerLiteral 0x1f4b120 <col:12> 'int' 1)
+                (<<<NULL>>>)
+                (NullStmt 0x1f4b920 <<invalid sloc>>))
+              (BreakStmt 0x1f4ba80 <line:32:2>)
+              (CaseStmt 0x1f4bab0 <line:33:7, <invalid sloc>>
+                (IntegerLiteral 0x1f4ba90 <col:12> 'int' 2)
+                (<<<NULL>>>)
+                (NullStmt 0x1f4bba0 <<invalid sloc>>))
+              (BreakStmt 0x1f4bd00 <line:37:9>)
+              (CaseStmt 0x1f4bd30 <line:38:7, <invalid sloc>>
+                (IntegerLiteral 0x1f4bd10 <col:12> 'int' 3)
+                (<<<NULL>>>)
+                (NullStmt 0x1f4be20 <<invalid sloc>>))
+              (BreakStmt 0x1f4bf80 <line:42:2>)))
+          (SwitchStmt 0x1f4c0b0 <line:45:5, line:61:2>
+            (<<<NULL>>>)
+            (ImplicitCastExpr 0x1f4c098 <line:45:13> 'int' <LValueToRValue>
+              (DeclRefExpr 0x1f4c070 <col:13> 'int' lvalue Var 0x1ef7c40 'choice' 'int'))
+            (CompoundStmt 0x1f4c860 <col:21, line:61:2>
+              (CaseStmt 0x1f4c100 <line:46:7, <invalid sloc>>
+                (IntegerLiteral 0x1f4c0e0 <col:12> 'int' 1)
+                (<<<NULL>>>)
+                (NullStmt 0x1f4c1f0 <<invalid sloc>>))
+              (BreakStmt 0x1f4c350 <line:50:2>)
+              (CaseStmt 0x1f4c380 <line:51:7, <invalid sloc>>
+                (IntegerLiteral 0x1f4c360 <col:12> 'int' 2)
+                (<<<NULL>>>)
+                (NullStmt 0x1f4c470 <<invalid sloc>>))
+              (BreakStmt 0x1f4c5d0 <line:55:9>)
+              (CaseStmt 0x1f4c600 <line:56:7, <invalid sloc>>
+                (IntegerLiteral 0x1f4c5e0 <col:12> 'int' 3)
+                (<<<NULL>>>)
+                (NullStmt 0x1f4c6f0 <<invalid sloc>>))
+              (BreakStmt 0x1f4c850 <line:60:2>)))
+          (BinaryOperator 0x1f4cac8 <line:64:5, col:37> 'int' lvalue '='
+            (DeclRefExpr 0x1f4c8a8 <col:5> 'int' lvalue Var 0x1f4a460 'mhurt' 'int')
+            (BinaryOperator 0x1f4caa0 <col:13, col:37> 'int' '-'
+              (ParenExpr 0x1f4c9b8 <col:13, col:24> 'int'
+                (BinaryOperator 0x1f4c990 <col:14, col:20> 'int' '-'
+                  (ImplicitCastExpr 0x1f4c960 <col:14> 'int' <LValueToRValue>
+                    (DeclRefExpr 0x1f4c910 <col:14> 'int' lvalue Var 0x1f4a230 'atk' 'int'))
+                  (ImplicitCastExpr 0x1f4c978 <col:20> 'int' <LValueToRValue>
+                    (DeclRefExpr 0x1f4c938 <col:20> 'int' lvalue Var 0x1f4a540 'magi' 'int'))))
+              (ParenExpr 0x1f4ca80 <col:28, col:37> 'int'
+                (BinaryOperator 0x1f4ca58 <col:29, col:34> 'int' '/'
+                  (ImplicitCastExpr 0x1f4ca28 <col:29> 'int' <LValueToRValue>
+                    (DeclRefExpr 0x1f4c9d8 <col:29> 'int' lvalue Var 0x1f4a380 'mdef' 'int'))
+                  (ImplicitCastExpr 0x1f4ca40 <col:34> 'int' <LValueToRValue>
+                    (DeclRefExpr 0x1f4ca00 <col:34> 'int' lvalue Var 0x1f4a230 'atk' 'int'))))))
+          (IfStmt 0x1f4cc08 <line:65:5, line:67:5>
+            (<<<NULL>>>)
+            (BinaryOperator 0x1f4cb50 <line:65:9, col:17> '_Bool' '<'
+              (ImplicitCastExpr 0x1f4cb38 <col:9> 'int' <LValueToRValue>
+                (DeclRefExpr 0x1f4caf0 <col:9> 'int' lvalue Var 0x1f4a460 'mhurt' 'int'))
+              (IntegerLiteral 0x1f4cb18 <col:17> 'int' 0))
+            (CompoundStmt 0x1f4cbe8 <col:20, line:67:5>
+              (BinaryOperator 0x1f4cbc0 <line:66:7, col:15> 'int' lvalue '='
+                (DeclRefExpr 0x1f4cb78 <col:7> 'int' lvalue Var 0x1f4a460 'mhurt' 'int')
+                (IntegerLiteral 0x1f4cba0 <col:15> 'int' 0)))
+            (<<<NULL>>>))
+          (BinaryOperator 0x1f4cd08 <line:68:5, col:17> 'int' lvalue '='
+            (DeclRefExpr 0x1f4cc38 <col:5> 'int' lvalue Var 0x1ef7cc0 'mhp' 'int')
+            (BinaryOperator 0x1f4cce0 <col:11, col:17> 'int' '-'
+              (ImplicitCastExpr 0x1f4ccb0 <col:11> 'int' <LValueToRValue>
+                (DeclRefExpr 0x1f4cc60 <col:11> 'int' lvalue Var 0x1ef7cc0 'mhp' 'int'))
+              (ImplicitCastExpr 0x1f4ccc8 <col:17> 'int' <LValueToRValue>
+                (DeclRefExpr 0x1f4cc88 <col:17> 'int' lvalue Var 0x1f4a460 'mhurt' 'int'))))
+          (IfStmt 0x1f4d140 <line:72:5, line:76:7>
+            (<<<NULL>>>)
+            (BinaryOperator 0x1f4cf18 <line:72:9, col:15> '_Bool' '<'
+              (ImplicitCastExpr 0x1f4cf00 <col:9> 'int' <LValueToRValue>
+                (DeclRefExpr 0x1f4ceb8 <col:9> 'int' lvalue Var 0x1ef7cc0 'mhp' 'int'))
+              (IntegerLiteral 0x1f4cee0 <col:15> 'int' 1))
+            (CompoundStmt 0x1f4d120 <col:18, line:76:7>
+              (ReturnStmt 0x1f4d100 <line:75:7, col:14>
+                (IntegerLiteral 0x1f4d0e0 <col:14> 'int' 0)))
+            (<<<NULL>>>))
+          (BinaryOperator 0x1f4d468 <line:78:5, col:36> 'int' lvalue '='
+            (DeclRefExpr 0x1f4d288 <col:5> 'int' lvalue Var 0x1f4a3f0 'hurt' 'int')
+            (BinaryOperator 0x1f4d440 <col:12, col:36> 'int' '-'
+              (ParenExpr 0x1f4d358 <col:12, col:23> 'int'
+                (BinaryOperator 0x1f4d330 <col:13, col:20> 'int' '-'
+                  (ImplicitCastExpr 0x1f4d300 <col:13> 'int' <LValueToRValue>
+                    (DeclRefExpr 0x1f4d2b0 <col:13> 'int' lvalue Var 0x1f4a310 'matk' 'int'))
+                  (ImplicitCastExpr 0x1f4d318 <col:20> 'int' <LValueToRValue>
+                    (DeclRefExpr 0x1f4d2d8 <col:20> 'int' lvalue Var 0x1f4a4d0 'agi' 'int'))))
+              (ParenExpr 0x1f4d420 <col:27, col:36> 'int'
+                (BinaryOperator 0x1f4d3f8 <col:28, col:32> 'int' '/'
+                  (ImplicitCastExpr 0x1f4d3c8 <col:28> 'int' <LValueToRValue>
+                    (DeclRefExpr 0x1f4d378 <col:28> 'int' lvalue Var 0x1f4a2a0 'def' 'int'))
+                  (ImplicitCastExpr 0x1f4d3e0 <col:32> 'int' <LValueToRValue>
+                    (DeclRefExpr 0x1f4d3a0 <col:32> 'int' lvalue Var 0x1f4a310 'matk' 'int'))))))
+          (IfStmt 0x1f4d5a8 <line:79:5, line:81:5>
+            (<<<NULL>>>)
+            (BinaryOperator 0x1f4d4f0 <line:79:9, col:16> '_Bool' '<'
+              (ImplicitCastExpr 0x1f4d4d8 <col:9> 'int' <LValueToRValue>
+                (DeclRefExpr 0x1f4d490 <col:9> 'int' lvalue Var 0x1f4a3f0 'hurt' 'int'))
+              (IntegerLiteral 0x1f4d4b8 <col:16> 'int' 0))
+            (CompoundStmt 0x1f4d588 <col:19, line:81:5>
+              (BinaryOperator 0x1f4d560 <line:80:7, col:14> 'int' lvalue '='
+                (DeclRefExpr 0x1f4d518 <col:7> 'int' lvalue Var 0x1f4a3f0 'hurt' 'int')
+                (IntegerLiteral 0x1f4d540 <col:14> 'int' 0)))
+            (<<<NULL>>>))
+          (BinaryOperator 0x1f4d6a8 <line:82:5, col:15> 'int' lvalue '='
+            (DeclRefExpr 0x1f4d5d8 <col:5> 'int' lvalue Var 0x1ef7d30 'hp' 'int')
+            (BinaryOperator 0x1f4d680 <col:10, col:15> 'int' '-'
+              (ImplicitCastExpr 0x1f4d650 <col:10> 'int' <LValueToRValue>
+                (DeclRefExpr 0x1f4d600 <col:10> 'int' lvalue Var 0x1ef7d30 'hp' 'int'))
+              (ImplicitCastExpr 0x1f4d668 <col:15> 'int' <LValueToRValue>
+                (DeclRefExpr 0x1f4d628 <col:15> 'int' lvalue Var 0x1f4a3f0 'hurt' 'int'))))
+          (IfStmt 0x1f4da28 <line:85:5, line:89:7>
+            (<<<NULL>>>)
+            (BinaryOperator 0x1f4d850 <line:85:9, col:14> '_Bool' '<'
+              (ImplicitCastExpr 0x1f4d838 <col:9> 'int' <LValueToRValue>
+                (DeclRefExpr 0x1f4d7f0 <col:9> 'int' lvalue Var 0x1ef7d30 'hp' 'int'))
+              (IntegerLiteral 0x1f4d818 <col:14> 'int' 1))
+            (CompoundStmt 0x1f4da08 <col:17, line:89:7>
+              (ReturnStmt 0x1f4d9e8 <line:88:7, col:14>
+                (IntegerLiteral 0x1f4d9c8 <col:14> 'int' 0)))
+            (<<<NULL>>>)))))
+    (CompoundStmt 0x1f500d0 <line:95:8, line:166:5>
+      (WhileStmt 0x1f500a8 <line:97:5, line:166:3>
+        (<<<NULL>>>)
+        (BinaryOperator 0x1f4ddf0 <line:97:12, col:28> '_Bool' '||'
+          (BinaryOperator 0x1f4dd40 <col:12, col:17> '_Bool' '>'
+            (ImplicitCastExpr 0x1f4dd28 <col:12> 'int' <LValueToRValue>
+              (DeclRefExpr 0x1f4dce0 <col:12> 'int' lvalue Var 0x1ef7d30 'hp' 'int'))
+            (IntegerLiteral 0x1f4dd08 <col:17> 'int' 0))
+          (BinaryOperator 0x1f4ddc8 <col:22, col:28> '_Bool' '>'
+            (ImplicitCastExpr 0x1f4ddb0 <col:22> 'int' <LValueToRValue>
+              (DeclRefExpr 0x1f4dd68 <col:22> 'int' lvalue Var 0x1ef7cc0 'mhp' 'int'))
+            (IntegerLiteral 0x1f4dd90 <col:28> 'int' 0)))
+        (CompoundStmt 0x1f50038 <col:31, line:166:3>
+          (SwitchStmt 0x1f4def0 <line:99:5, line:115:2>
+            (<<<NULL>>>)
+            (ImplicitCastExpr 0x1f4ded8 <line:99:13> 'int' <LValueToRValue>
+              (DeclRefExpr 0x1f4deb0 <col:13> 'int' lvalue Var 0x1ef7c40 'choice' 'int'))
+            (CompoundStmt 0x1f4e6a0 <col:21, line:115:2>
+              (CaseStmt 0x1f4df40 <line:100:7, <invalid sloc>>
+                (IntegerLiteral 0x1f4df20 <col:12> 'int' 1)
+                (<<<NULL>>>)
+                (NullStmt 0x1f4e030 <<invalid sloc>>))
+              (BreakStmt 0x1f4e190 <line:104:2>)
+              (CaseStmt 0x1f4e1c0 <line:105:7, <invalid sloc>>
+                (IntegerLiteral 0x1f4e1a0 <col:12> 'int' 2)
+                (<<<NULL>>>)
+                (NullStmt 0x1f4e2b0 <<invalid sloc>>))
+              (BreakStmt 0x1f4e410 <line:109:9>)
+              (CaseStmt 0x1f4e440 <line:110:7, <invalid sloc>>
+                (IntegerLiteral 0x1f4e420 <col:12> 'int' 3)
+                (<<<NULL>>>)
+                (NullStmt 0x1f4e530 <<invalid sloc>>))
+              (BreakStmt 0x1f4e690 <line:114:2>)))
+          (BinaryOperator 0x1f4e8c8 <line:117:5, col:36> 'int' lvalue '='
+            (DeclRefExpr 0x1f4e6e8 <col:5> 'int' lvalue Var 0x1f4a3f0 'hurt' 'int')
+            (BinaryOperator 0x1f4e8a0 <col:12, col:36> 'int' '-'
+              (ParenExpr 0x1f4e7b8 <col:12, col:23> 'int'
+                (BinaryOperator 0x1f4e790 <col:13, col:20> 'int' '-'
+                  (ImplicitCastExpr 0x1f4e760 <col:13> 'int' <LValueToRValue>
+                    (DeclRefExpr 0x1f4e710 <col:13> 'int' lvalue Var 0x1f4a310 'matk' 'int'))
+                  (ImplicitCastExpr 0x1f4e778 <col:20> 'int' <LValueToRValue>
+                    (DeclRefExpr 0x1f4e738 <col:20> 'int' lvalue Var 0x1f4a4d0 'agi' 'int'))))
+              (ParenExpr 0x1f4e880 <col:27, col:36> 'int'
+                (BinaryOperator 0x1f4e858 <col:28, col:32> 'int' '/'
+                  (ImplicitCastExpr 0x1f4e828 <col:28> 'int' <LValueToRValue>
+                    (DeclRefExpr 0x1f4e7d8 <col:28> 'int' lvalue Var 0x1f4a2a0 'def' 'int'))
+                  (ImplicitCastExpr 0x1f4e840 <col:32> 'int' <LValueToRValue>
+                    (DeclRefExpr 0x1f4e800 <col:32> 'int' lvalue Var 0x1f4a310 'matk' 'int'))))))
+          (IfStmt 0x1f4ea48 <line:118:5, line:120:5>
+            (<<<NULL>>>)
+            (BinaryOperator 0x1f4e990 <line:118:9, col:16> '_Bool' '<'
+              (ImplicitCastExpr 0x1f4e978 <col:9> 'int' <LValueToRValue>
+                (DeclRefExpr 0x1f4e930 <col:9> 'int' lvalue Var 0x1f4a3f0 'hurt' 'int'))
+              (IntegerLiteral 0x1f4e958 <col:16> 'int' 0))
+            (CompoundStmt 0x1f4ea28 <col:19, line:120:5>
+              (BinaryOperator 0x1f4ea00 <line:119:7, col:14> 'int' lvalue '='
+                (DeclRefExpr 0x1f4e9b8 <col:7> 'int' lvalue Var 0x1f4a3f0 'hurt' 'int')
+                (IntegerLiteral 0x1f4e9e0 <col:14> 'int' 0)))
+            (<<<NULL>>>))
+          (BinaryOperator 0x1f4eb48 <line:121:5, col:15> 'int' lvalue '='
+            (DeclRefExpr 0x1f4ea78 <col:5> 'int' lvalue Var 0x1ef7d30 'hp' 'int')
+            (BinaryOperator 0x1f4eb20 <col:10, col:15> 'int' '-'
+              (ImplicitCastExpr 0x1f4eaf0 <col:10> 'int' <LValueToRValue>
+                (DeclRefExpr 0x1f4eaa0 <col:10> 'int' lvalue Var 0x1ef7d30 'hp' 'int'))
+              (ImplicitCastExpr 0x1f4eb08 <col:15> 'int' <LValueToRValue>
+                (DeclRefExpr 0x1f4eac8 <col:15> 'int' lvalue Var 0x1f4a3f0 'hurt' 'int'))))
+          (IfStmt 0x1f4eda0 <line:124:5, line:128:7>
+            (<<<NULL>>>)
+            (BinaryOperator 0x1f4ec70 <line:124:9, col:14> '_Bool' '<'
+              (ImplicitCastExpr 0x1f4ec58 <col:9> 'int' <LValueToRValue>
+                (DeclRefExpr 0x1f4ec10 <col:9> 'int' lvalue Var 0x1ef7d30 'hp' 'int'))
+              (IntegerLiteral 0x1f4ec38 <col:14> 'int' 1))
+            (CompoundStmt 0x1f4ed80 <col:17, line:128:7>
+              (ReturnStmt 0x1f4ed60 <line:127:7, col:14>
+                (IntegerLiteral 0x1f4ed40 <col:14> 'int' 0)))
+            (<<<NULL>>>))
+          (DoStmt 0x1f4f058 <line:131:6, col:48>
+            (CompoundStmt 0x1f4ef08 <col:8, col:21>)
+            (BinaryOperator 0x1f4f030 <col:28, col:47> '_Bool' '||'
+              (BinaryOperator 0x1f4ef80 <col:28, col:35> '_Bool' '>'
+                (ImplicitCastExpr 0x1f4ef68 <col:28> 'int' <LValueToRValue>
+                  (DeclRefExpr 0x1f4ef20 <col:28> 'int' lvalue Var 0x1ef7c40 'choice' 'int'))
+                (IntegerLiteral 0x1f4ef48 <col:35> 'int' 3))
+              (BinaryOperator 0x1f4f008 <col:40, col:47> '_Bool' '<'
+                (ImplicitCastExpr 0x1f4eff0 <col:40> 'int' <LValueToRValue>
+                  (DeclRefExpr 0x1f4efa8 <col:40> 'int' lvalue Var 0x1ef7c40 'choice' 'int'))
+                (IntegerLiteral 0x1f4efd0 <col:47> 'int' 1))))
+          (SwitchStmt 0x1f4f0c0 <line:132:5, line:148:9>
+            (<<<NULL>>>)
+            (ImplicitCastExpr 0x1f4f0a8 <line:132:13> 'int' <LValueToRValue>
+              (DeclRefExpr 0x1f4f080 <col:13> 'int' lvalue Var 0x1ef7c40 'choice' 'int'))
+            (CompoundStmt 0x1f4f870 <col:21, line:148:9>
+              (CaseStmt 0x1f4f110 <line:133:7, <invalid sloc>>
+                (IntegerLiteral 0x1f4f0f0 <col:12> 'int' 1)
+                (<<<NULL>>>)
+                (NullStmt 0x1f4f200 <<invalid sloc>>))
+              (BreakStmt 0x1f4f360 <line:137:2>)
+              (CaseStmt 0x1f4f390 <line:138:7, <invalid sloc>>
+                (IntegerLiteral 0x1f4f370 <col:12> 'int' 2)
+                (<<<NULL>>>)
+                (NullStmt 0x1f4f480 <<invalid sloc>>))
+              (BreakStmt 0x1f4f5e0 <line:142:9>)
+              (CaseStmt 0x1f4f610 <line:143:7, <invalid sloc>>
+                (IntegerLiteral 0x1f4f5f0 <col:12> 'int' 3)
+                (<<<NULL>>>)
+                (NullStmt 0x1f4f700 <<invalid sloc>>))
+              (BreakStmt 0x1f4f860 <line:147:2>)))
+          (BinaryOperator 0x1f4fad0 <line:152:5, col:37> 'int' lvalue '='
+            (DeclRefExpr 0x1f4f8b8 <col:5> 'int' lvalue Var 0x1f4a460 'mhurt' 'int')
+            (BinaryOperator 0x1f4faa8 <col:13, col:37> 'int' '-'
+              (ParenExpr 0x1f4f9c0 <col:13, col:24> 'int'
+                (BinaryOperator 0x1f4f998 <col:14, col:20> 'int' '-'
+                  (ImplicitCastExpr 0x1f4f968 <col:14> 'int' <LValueToRValue>
+                    (DeclRefExpr 0x1f4f8e0 <col:14> 'int' lvalue Var 0x1f4a230 'atk' 'int'))
+                  (ImplicitCastExpr 0x1f4f980 <col:20> 'int' <LValueToRValue>
+                    (DeclRefExpr 0x1f4f940 <col:20> 'int' lvalue Var 0x1f4a540 'magi' 'int'))))
+              (ParenExpr 0x1f4fa88 <col:28, col:37> 'int'
+                (BinaryOperator 0x1f4fa60 <col:29, col:34> 'int' '/'
+                  (ImplicitCastExpr 0x1f4fa30 <col:29> 'int' <LValueToRValue>
+                    (DeclRefExpr 0x1f4f9e0 <col:29> 'int' lvalue Var 0x1f4a380 'mdef' 'int'))
+                  (ImplicitCastExpr 0x1f4fa48 <col:34> 'int' <LValueToRValue>
+                    (DeclRefExpr 0x1f4fa08 <col:34> 'int' lvalue Var 0x1f4a230 'atk' 'int'))))))
+          (IfStmt 0x1f4fc10 <line:153:5, line:155:5>
+            (<<<NULL>>>)
+            (BinaryOperator 0x1f4fb58 <line:153:9, col:17> '_Bool' '<'
+              (ImplicitCastExpr 0x1f4fb40 <col:9> 'int' <LValueToRValue>
+                (DeclRefExpr 0x1f4faf8 <col:9> 'int' lvalue Var 0x1f4a460 'mhurt' 'int'))
+              (IntegerLiteral 0x1f4fb20 <col:17> 'int' 0))
+            (CompoundStmt 0x1f4fbf0 <col:20, line:155:5>
+              (BinaryOperator 0x1f4fbc8 <line:154:7, col:15> 'int' lvalue '='
+                (DeclRefExpr 0x1f4fb80 <col:7> 'int' lvalue Var 0x1f4a460 'mhurt' 'int')
+                (IntegerLiteral 0x1f4fba8 <col:15> 'int' 0)))
+            (<<<NULL>>>))
+          (BinaryOperator 0x1f4fd10 <line:156:5, col:17> 'int' lvalue '='
+            (DeclRefExpr 0x1f4fc40 <col:5> 'int' lvalue Var 0x1ef7cc0 'mhp' 'int')
+            (BinaryOperator 0x1f4fce8 <col:11, col:17> 'int' '-'
+              (ImplicitCastExpr 0x1f4fcb8 <col:11> 'int' <LValueToRValue>
+                (DeclRefExpr 0x1f4fc68 <col:11> 'int' lvalue Var 0x1ef7cc0 'mhp' 'int'))
+              (ImplicitCastExpr 0x1f4fcd0 <col:17> 'int' <LValueToRValue>
+                (DeclRefExpr 0x1f4fc90 <col:17> 'int' lvalue Var 0x1f4a460 'mhurt' 'int'))))
+          (IfStmt 0x1f4ff68 <line:160:5, line:164:7>
+            (<<<NULL>>>)
+            (BinaryOperator 0x1f4fe30 <line:160:9, col:15> '_Bool' '<'
+              (ImplicitCastExpr 0x1f4fe18 <col:9> 'int' <LValueToRValue>
+                (DeclRefExpr 0x1f4fdd0 <col:9> 'int' lvalue Var 0x1ef7cc0 'mhp' 'int'))
+              (IntegerLiteral 0x1f4fdf8 <col:15> 'int' 1))
+            (CompoundStmt 0x1f4ff48 <col:18, line:164:7>
+              (ReturnStmt 0x1f4ff28 <line:163:7, col:14>
+                (IntegerLiteral 0x1f4ff08 <col:14> 'int' 0)))
+            (<<<NULL>>>)))))))
+
+
+Error while processing /home/frcv-lab/mlsa/mlsa/test/test0-3-2/RPG.cpp.

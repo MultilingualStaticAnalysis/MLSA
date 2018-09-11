@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # MLSA Multilingual Software Analysis
 # This program is part of the MLSA package under development at Fordham University Department of Computer and Information Science.
 # jsSA.py takes in a JavaScript file and generates a JSON ast file from that JavaScript file. jsFunCall is called with the ast file passed to it, and creates a csv file of all the call graphs in the JavaScript program. pyViaJs.py is called with that csv file, and results in a new csv file where any Python files called in the JavaScript program are substituted in for the appropriate API. That resulting csv file is then returned.
@@ -52,6 +53,7 @@ def main(jsfile, funcfile):
 
     return finalCsv
 
+#use for debugging
 #if len(sys.argv) != 2:
 #    sys.exit(error+"2 arguments needed")
 

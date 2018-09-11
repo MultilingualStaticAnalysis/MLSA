@@ -1,0 +1,57 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree Call Graph"
+	];
+
+	Node0x620125190 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c"];
+	Node0x234465753 [shape=oval, label="0x3137970. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\ncria()"];
+	Node0x620125190 -> Node0x234465753;
+	Node0x745387646 [shape=oval, label="0x3137ad0. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\nscanf(<< %d >>, UNOP)"];
+	Node0x620125190 -> Node0x745387646;
+	Node0x775165403 [shape=oval, label="0x3137c38. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\nscanf(<< %d >>, UNOP)"];
+	Node0x620125190 -> Node0x775165403;
+	Node0x864837648 [shape=oval, label="0x3137da0. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\nscanf(<< %d >>, UNOP)"];
+	Node0x620125190 -> Node0x864837648;
+	Node0x865652338 [shape=oval, label="0x3137f20. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\ninsere(g, c)"];
+	Node0x620125190 -> Node0x865652338;
+	Node0x785211228 [shape=oval, label="0x31380f0. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\nprintf(<< Case %d:\n >>, UNOP)"];
+	Node0x620125190 -> Node0x785211228;
+	Node0x993892352 [shape=oval, label="0x3138200. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\nprintf(<< Pre.: >>)"];
+	Node0x620125190 -> Node0x993892352;
+	Node0x515235354 [shape=oval, label="0x31382c8. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\npreO(g)"];
+	Node0x620125190 -> Node0x515235354;
+	Node0x664837721 [shape=oval, label="0x31383d0. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\nprintf(<< \nIn..: >>)"];
+	Node0x620125190 -> Node0x664837721;
+	Node0x906010087 [shape=oval, label="0x3138498. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\nintO(g)"];
+	Node0x620125190 -> Node0x906010087;
+	Node0x259549268 [shape=oval, label="0x3138550. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\nprintf(<< \nPost: >>)"];
+	Node0x620125190 -> Node0x259549268;
+	Node0x587525433 [shape=oval, label="0x3138618. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\nposO(g)"];
+	Node0x620125190 -> Node0x587525433;
+	Node0x381712943 [shape=oval, label="0x31386d0. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\nprintf(<< \n\n >>)"];
+	Node0x620125190 -> Node0x381712943;
+	Node0x780343479 [shape=oval, label="0x3138798. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\ncria()"];
+	Node0x620125190 -> Node0x780343479;
+	Node0x220290658 [shape=oval, label="0x31345e0. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\nmalloc()"];
+	Node0x865652338 -> Node0x220290658;
+	Node0x129088237 [shape=oval, label="0x3136730. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\nprintf(<<  %d >>, G.i)"];
+	Node0x515235354 -> Node0x129088237;
+	Node0x697487287 [shape=oval, style=dashed, label="0x31368c0. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\npreO(G.esq)"];
+	Node0x515235354 -> Node0x697487287;
+	Node0x174190900 [shape=oval, style=dashed, label="0x31369c0. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\npreO(G.dir)"];
+	Node0x515235354 -> Node0x174190900;
+	Node0x914269857 [shape=oval, style=dashed, label="0x3137238. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\nintO(G.esq)"];
+	Node0x906010087 -> Node0x914269857;
+	Node0x875230037 [shape=oval, label="0x3137378. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\nprintf(<<  %d >>, G.i)"];
+	Node0x906010087 -> Node0x875230037;
+	Node0x829971729 [shape=oval, style=dashed, label="0x31374b0. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\nintO(G.dir)"];
+	Node0x906010087 -> Node0x829971729;
+	Node0x564039125 [shape=oval, style=dashed, label="0x3136cc8. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\nposO(G.esq)"];
+	Node0x587525433 -> Node0x564039125;
+	Node0x333187303 [shape=oval, style=dashed, label="0x3136dc8. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\nposO(G.dir)"];
+	Node0x587525433 -> Node0x333187303;
+	Node0x662392476 [shape=oval, label="0x3136ef8. (/home/labaccount/11-2-17/mlsa/IG/example/BinaryTree/BinaryTree.c)\nprintf(<<  %d >>, G.i)"];
+	Node0x587525433 -> Node0x662392476;
+}

@@ -1,0 +1,116 @@
+%token <str>FUNC
+%token <str>CALL
+%token <str>INT
+%token <str>MEMBER
+%token <str>BINOP
+%token <str>UNOP
+%token <str>STR
+%token <str>VAR
+%token <str>PVAR
+%token <str>SUB
+%token <str>NODE
+%token <str>ID
+%token <str>NAME
+%token <str>NUMBER
+%token <str>STRING
+
+%{
+	#include <iostream>
+  	#include <string>
+  	#include <vector>
+  	#include <stdio.h>
+  	#include <string.h>
+	using namespace std;
+	void yyerror(string);
+	int yylex(void);
+	vector<string> sym;
+	union YYSTYPE {
+		int val;
+		char *str;
+	};
+	typedef union YYSTYPE YYSTYPE;
+
+%}
+
+%start input
+%type <str>keywordproductions
+%type <str>function
+%type <str>call
+%type <str>args
+
+%%
+
+input:
+	input chunk
+	|
+	;
+
+chunk:
+	water
+	| keywordproductions
+
+water:
+	keyword
+	| ID 															{ cout << "WATER "; }
+	| NAME 															{ cout << "WATER "; }
+	| NUMBER														{ cout << "WATER "; }
+	| STRING
+
+keywordproductions:
+	function
+	| call
+
+function:
+	FUNC filler NAME '\''											{ sym.push_back("F "+string($3)); }
+
+filler:
+	filler NAME
+	| filler NUMBER
+	| filler ID
+	| filler '\''
+	| 
+	;
+
+call:
+	CALL filler ID '\'' NAME '\'' filler args filler node	{ cout << "CALL!!! "; sym.push_back("C "+string($5)); }
+
+args:
+	args STR filler STRING filler							{ sym.push_back("A <"+string($4)+">"); }
+	| args INT filler '\'' NUMBER filler					{ sym.push_back("A <"+string($5)+">"); }
+	| args UNOP filler VAR ID filler						{ sym.push_back("A Unary Operation"); }
+	| args BINOP filler 									{ sym.push_back("A Binary Operation"); }
+	| args filler VAR ID '\'' NAME '\'' filler				{ sym.push_back("A "+string($6)); }
+	| args SUB filler PVAR ID '\'' NAME '\'' filler			{ sym.push_back("A "+string($7)+"[]"); }
+	| 
+	;
+
+node:
+	NODE
+	|
+	;
+
+keyword:
+	INT
+	| MEMBER
+	| BINOP
+	| STR
+	| VAR
+	| PVAR
+	| SUB
+	| UNOP
+	| NODE
+	| '\''
+
+%%
+
+void yyerror(string s) {
+	cerr << s << " " << yylval.str << endl;
+}
+
+int main(void) {
+	yyparse();
+	for(int k = 0; k < sym.size(); k++) {
+		cout << sym[k] << endl;
+	}
+	return 0;
+}

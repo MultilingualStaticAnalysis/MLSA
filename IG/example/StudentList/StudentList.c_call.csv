@@ -1,0 +1,26 @@
+0x2767f50,GLOBAL,init,malloc
+0x27691b0,GLOBAL,init,perror,<< malloc >>
+0x27692a0,GLOBAL,init,exit,1
+0x2769a10,GLOBAL,final,getX,q,UNOP
+0x2769b20,GLOBAL,final,free,q
+0x2769f38,GLOBAL,put,malloc
+0x276a138,GLOBAL,put,perror,<< malloc >>
+0x276a1f8,GLOBAL,put,exit,1
+0x276b330,GLOBAL,getX,free,p
+0x276b9e0,GLOBAL,writeStudentList,fopen,filename,<< w >>
+0x276bc20,GLOBAL,writeStudentList,perror,<< fopen >>
+0x276bce0,GLOBAL,writeStudentList,exit,1
+0x276be70,GLOBAL,writeStudentList,getX,q,UNOP
+0x276e190,GLOBAL,writeStudentList,fprintf,fd,<< %s %d %d %d\n >>,s.name,s.midterm,s.final,s.homeworks
+0x276e390,GLOBAL,writeStudentList,fclose,fd
+0x276e8f0,GLOBAL,readStudentList,fopen,filename,<< r >>
+0x276eaf8,GLOBAL,readStudentList,perror,<< fopen >>
+0x276ebb8,GLOBAL,readStudentList,exit,1
+0x276f180,GLOBAL,readStudentList,put,q,UNOP
+0x276f2c8,GLOBAL,readStudentList,fclose,fd
+0x276f850,GLOBAL,/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c,init
+0x276faa0,GLOBAL,/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c,printf,<< Usage: %s infile outfile\n >>,argv[]
+0x276fb80,GLOBAL,/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c,exit,0
+0x276fd80,GLOBAL,/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c,readStudentList,argv[],q
+0x276ff60,GLOBAL,/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c,writeStudentList,argv[],q
+0x27700a0,GLOBAL,/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c,final,q

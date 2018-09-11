@@ -1,0 +1,64 @@
+\hypertarget{classEngine}{}\section{Engine Class Reference}
+\label{classEngine}\index{Engine@{Engine}}
+
+
+Inheritance diagram for Engine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{classEngine__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Engine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{classEngine__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classEngine_ade04196721865cbebc12c0d34ad2a3d5}{accept} (const \hyperlink{structCarElementVisitor}{Car\+Element\+Visitor} \&visitor)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Engine@{Engine}!accept@{accept}}
+\index{accept@{accept}!Engine@{Engine}}
+\subsubsection[{\texorpdfstring{accept(const Car\+Element\+Visitor \&visitor)}{accept(const CarElementVisitor &visitor)}}]{\setlength{\rightskip}{0pt plus 5cm}void Engine\+::accept (
+\begin{DoxyParamCaption}
+\item[{const {\bf Car\+Element\+Visitor} \&}]{visitor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classEngine_ade04196721865cbebc12c0d34ad2a3d5}{}\label{classEngine_ade04196721865cbebc12c0d34ad2a3d5}
+
+
+Implements \hyperlink{structCarElement_a9cac92d2d59d9a0318600e608bbbdfd5}{Car\+Element}.
+
+
+\begin{DoxyCode}
+55   \{
+56     visitor.\hyperlink{structCarElementVisitor_aba7f494a9b736bcb002176ec922890e4}{visit}(*\textcolor{keyword}{this});
+57   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{classEngine_ade04196721865cbebc12c0d34ad2a3d5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Visitor_8cpp}{Visitor.\+cpp}\end{DoxyCompactItemize}

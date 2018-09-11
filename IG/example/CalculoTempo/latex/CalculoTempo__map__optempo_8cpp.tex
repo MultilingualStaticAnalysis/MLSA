@@ -1,0 +1,255 @@
+\hypertarget{CalculoTempo__map__optempo_8cpp}{}\section{Calculo\+Tempo\+\_\+map\+\_\+optempo.\+cpp File Reference}
+\label{CalculoTempo__map__optempo_8cpp}\index{Calculo\+Tempo\+\_\+map\+\_\+optempo.\+cpp@{Calculo\+Tempo\+\_\+map\+\_\+optempo.\+cpp}}
+{\ttfamily \#include \char`\"{}Calculo\+Tempo\+\_\+map\+\_\+optempo.\+h\char`\"{}}\\*
+Include dependency graph for Calculo\+Tempo\+\_\+map\+\_\+optempo.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CalculoTempo__map__optempo_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{CalculoTempo__map__op__prott_8h_a8cc6e6196b191b2e69236d65416dad1f}{Tile} $\ast$$\ast$ \hyperlink{CalculoTempo__map__optempo_8cpp_a2b024e0a4300733215f46f54d2995352}{gera\+\_\+mapa} (char $\ast$file\+\_\+name, int flag)
+\item 
+int $\ast$$\ast$ \hyperlink{CalculoTempo__map__optempo_8cpp_ab0fd05609824f8e988617cf6539a1cc5}{get\+Peso\+Tile} (\hyperlink{CalculoTempo__map__op__prott_8h_a8cc6e6196b191b2e69236d65416dad1f}{Tile} $\ast$$\ast$map, int flag)
+\item 
+void \hyperlink{CalculoTempo__map__optempo_8cpp_ae321f299975e9d9aee671564a197ab09}{libera\+\_\+memoria} (\hyperlink{CalculoTempo__map__op__prott_8h_a8cc6e6196b191b2e69236d65416dad1f}{Tile} $\ast$$\ast$map, int flag)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Calculo\+Tempo\+\_\+map\+\_\+optempo.\+cpp@{Calculo\+Tempo\+\_\+map\+\_\+optempo.\+cpp}!gera\+\_\+mapa@{gera\+\_\+mapa}}
+\index{gera\+\_\+mapa@{gera\+\_\+mapa}!Calculo\+Tempo\+\_\+map\+\_\+optempo.\+cpp@{Calculo\+Tempo\+\_\+map\+\_\+optempo.\+cpp}}
+\subsubsection[{\texorpdfstring{gera\+\_\+mapa(char $\ast$file\+\_\+name, int flag)}{gera_mapa(char *file_name, int flag)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tile}$\ast$$\ast$ gera\+\_\+mapa (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+\_\+name, }
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)}\hypertarget{CalculoTempo__map__optempo_8cpp_a2b024e0a4300733215f46f54d2995352}{}\label{CalculoTempo__map__optempo_8cpp_a2b024e0a4300733215f46f54d2995352}
+
+\begin{DoxyCode}
+29 \{
+30 
+31 
+32     \textcolor{keywordtype}{int} i, j;
+33     \textcolor{keywordtype}{float} x=0.0,y=0.0;
+34     \textcolor{keywordtype}{char} tipo;
+35     FILE *map;
+36     \hyperlink{structtile}{Tile} **mat\_mapa;
+37     \textcolor{keywordflow}{if}(flag == 1) \textcolor{comment}{//Cria Dungeon -> começa matriz com 0 em tudo;}
+38     \{
+39         \textcolor{comment}{//Inicializa Tiles para Dungeon.}
+40 
+41         \textcolor{comment}{//Inicialização da matriz de tiles}
+42         mat\_mapa =(\hyperlink{structtile}{Tile}**) calloc(28,\textcolor{keyword}{sizeof}(\hyperlink{structtile}{Tile}*));
+43         \textcolor{keywordflow}{for}(i = 0;i<28;i++)
+44         \{   
+45             mat\_mapa[i] =(\hyperlink{structtile}{Tile}*) calloc(28,\textcolor{keyword}{sizeof}(\hyperlink{structtile}{Tile}));
+46         \}
+47 
+48     \}
+49 
+50     \textcolor{keywordflow}{else}\textcolor{comment}{//Cria mapa -> começa matriz com 0 em tudo;}
+51     \{
+52         \textcolor{comment}{//Inicializa tiles para mapa.}
+53 
+54         \textcolor{comment}{//Inicialização da matriz de Tiles}
+55         mat\_mapa =(\hyperlink{structtile}{Tile}**) calloc(42,\textcolor{keyword}{sizeof}(\hyperlink{structtile}{Tile}*));
+56         \textcolor{keywordflow}{for}(i = 0;i<42;i++)
+57         \{   
+58             mat\_mapa[i] =(\hyperlink{structtile}{Tile}*) calloc(42,\textcolor{keyword}{sizeof}(\hyperlink{structtile}{Tile}));
+59         \}
+60     \}
+61 
+62     \textcolor{keywordflow}{if}(file\_name != NULL)\textcolor{comment}{//verifica se é para gerar randomicamente ou em cima de arquivo.}
+63     \{
+64     map = fopen (file\_name , \textcolor{stringliteral}{"r"}); \textcolor{comment}{//abertura arquivo de leitura}
+65         \textcolor{comment}{//Operações no caso de sucesso de abertura do arquivo}
+66         \textcolor{keywordflow}{if}(map != NULL)
+67         \{
+68             \textcolor{keywordflow}{if}(flag == 1) \textcolor{comment}{//Gera Dungeon por arquivo}
+69             \{
+70                 \textcolor{keywordflow}{for}(i = 0; i < 28; i++)
+71                 \{
+72                     
+73                     \textcolor{keywordflow}{if}(i > 0)
+74                         tipo = fgetc(map);
+75                     \textcolor{keywordflow}{for}(j = 0; j < 28; j++)
+76                     \{
+77                         tipo = fgetc(map);
+78                         \textcolor{keywordflow}{if}(x >= 1008) \textcolor{comment}{//Controla o X e Y para dungeon}
+79                         \{
+80                             x = 0;
+81                             y += 27;
+82                         \}
+83                         \textcolor{keywordflow}{switch}(tipo)
+84                         \{
+85                             \textcolor{keywordflow}{case} \textcolor{charliteral}{'B'}:
+86                                 mat\_mapa[i][j].\hyperlink{structtile_a0488f7fad28a756c5d51ab04f7dc0996}{peso} = 1000;
+87                                 mat\_mapa[i][j].\hyperlink{structtile_a21e774afeca2be114dbd36c2c13d25ad}{x} = x;
+88                                 mat\_mapa[i][j].\hyperlink{structtile_a7afd4ac6a97bc5d5499d85d7d7c76377}{y} = y;
+89                                 x += 36;
+90                                 \textcolor{keywordflow}{break};
+91                             \textcolor{keywordflow}{case} \textcolor{charliteral}{'C'}:           
+92                                 mat\_mapa[i][j].\hyperlink{structtile_a0488f7fad28a756c5d51ab04f7dc0996}{peso} = 10;
+93                                 mat\_mapa[i][j].\hyperlink{structtile_a21e774afeca2be114dbd36c2c13d25ad}{x} = x;
+94                                 mat\_mapa[i][j].\hyperlink{structtile_a7afd4ac6a97bc5d5499d85d7d7c76377}{y} = y;
+95                                 x += 36;
+96                                 \textcolor{keywordflow}{break};
+97                             \textcolor{keywordflow}{default}:
+98                                 \textcolor{keywordflow}{break};
+99                         \}
+100                     \}
+101 
+102                 \}
+103 
+104             \}
+105             \textcolor{keywordflow}{else} \textcolor{comment}{// Gera mapa por arquivo}
+106             \{
+107                 \textcolor{keywordflow}{for}(i = 0; i < 42; i++)
+108                 \{
+109 
+110                     \textcolor{keywordflow}{if}(i > 0)
+111                         tipo = fgetc(map);
+112                     \textcolor{keywordflow}{for}(j = 0; j < 42; j++)
+113                     \{
+114                         tipo = fgetc(map);
+115                         \textcolor{keywordflow}{if}(x >= 1008) \textcolor{comment}{//Controla o X e Y para mapa}
+116                         \{
+117                             x = 0;
+118                             y += 18;
+119                         \}
+120                         \textcolor{comment}{//Controle do tipo no arquivo}
+121                         \textcolor{keywordflow}{switch}(tipo)
+122                         \{
+123                             \textcolor{keywordflow}{case} \textcolor{charliteral}{'A'}:
+124                                 mat\_mapa[i][j].\hyperlink{structtile_a0488f7fad28a756c5d51ab04f7dc0996}{peso} = 20;
+125                                 mat\_mapa[i][j].\hyperlink{structtile_a21e774afeca2be114dbd36c2c13d25ad}{x} = x;
+126                                 mat\_mapa[i][j].\hyperlink{structtile_a7afd4ac6a97bc5d5499d85d7d7c76377}{y} = y;
+127                                 x += 24;
+128                                 \textcolor{keywordflow}{break};
+129                             \textcolor{keywordflow}{case} \textcolor{charliteral}{'G'}:
+130                                 mat\_mapa[i][j].\hyperlink{structtile_a0488f7fad28a756c5d51ab04f7dc0996}{peso} = 10;
+131                                 mat\_mapa[i][j].\hyperlink{structtile_a21e774afeca2be114dbd36c2c13d25ad}{x} = x;
+132                                 mat\_mapa[i][j].\hyperlink{structtile_a7afd4ac6a97bc5d5499d85d7d7c76377}{y} = y;
+133                                 x += 24;                            
+134                                 \textcolor{keywordflow}{break};
+135                             \textcolor{keywordflow}{case} \textcolor{charliteral}{'F'}:
+136                                 mat\_mapa[i][j].\hyperlink{structtile_a0488f7fad28a756c5d51ab04f7dc0996}{peso} = 100;
+137                                 mat\_mapa[i][j].\hyperlink{structtile_a21e774afeca2be114dbd36c2c13d25ad}{x} = x;
+138                                 mat\_mapa[i][j].\hyperlink{structtile_a7afd4ac6a97bc5d5499d85d7d7c76377}{y} = y;
+139                                 x += 24;                            
+140                                 \textcolor{keywordflow}{break};
+141                             \textcolor{keywordflow}{case} \textcolor{charliteral}{'M'}:
+142                                 mat\_mapa[i][j].\hyperlink{structtile_a0488f7fad28a756c5d51ab04f7dc0996}{peso} = 150;
+143                                 mat\_mapa[i][j].\hyperlink{structtile_a21e774afeca2be114dbd36c2c13d25ad}{x} = x;
+144                                 mat\_mapa[i][j].\hyperlink{structtile_a7afd4ac6a97bc5d5499d85d7d7c76377}{y} = y;
+145                                 x += 24;
+146                                 \textcolor{keywordflow}{break};
+147                             \textcolor{keywordflow}{case} \textcolor{charliteral}{'W'}:
+148                                 mat\_mapa[i][j].\hyperlink{structtile_a0488f7fad28a756c5d51ab04f7dc0996}{peso} = 180;
+149                                 mat\_mapa[i][j].\hyperlink{structtile_a21e774afeca2be114dbd36c2c13d25ad}{x} = x;
+150                                 mat\_mapa[i][j].\hyperlink{structtile_a7afd4ac6a97bc5d5499d85d7d7c76377}{y} = y;
+151                                 x += 24;
+152                                 \textcolor{keywordflow}{break};
+153                             \textcolor{keywordflow}{default}:    
+154                                 \textcolor{keywordflow}{break};
+155 
+156                         \}
+157                     \}
+158                 \}
+159             \}
+160         \}
+161         \textcolor{keywordflow}{else}
+162             printf(\textcolor{stringliteral}{"Error"}); \textcolor{comment}{// Retorna matriz = \{0\}}
+163     \}
+164 
+165     \textcolor{keywordflow}{else}\textcolor{comment}{//Gera aleatorio;}
+166     \{
+167         printf(\textcolor{stringliteral}{"Gerando aleatoriamente...."});
+168         \textcolor{keywordflow}{if}(flag == 1)
+169         \{
+170             printf(\textcolor{stringliteral}{"Gera dungeon aleatorio"});
+171         \}
+172         \textcolor{keywordflow}{else}
+173         \{
+174             printf(\textcolor{stringliteral}{"Gera mapa aleatorio"});  
+175         \}
+176     \}
+177     \textcolor{keywordflow}{return} mat\_mapa;
+178 
+179 \}
+\end{DoxyCode}
+\index{Calculo\+Tempo\+\_\+map\+\_\+optempo.\+cpp@{Calculo\+Tempo\+\_\+map\+\_\+optempo.\+cpp}!get\+Peso\+Tile@{get\+Peso\+Tile}}
+\index{get\+Peso\+Tile@{get\+Peso\+Tile}!Calculo\+Tempo\+\_\+map\+\_\+optempo.\+cpp@{Calculo\+Tempo\+\_\+map\+\_\+optempo.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Peso\+Tile(\+Tile $\ast$$\ast$map, int flag)}{getPesoTile(Tile **map, int flag)}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$$\ast$ get\+Peso\+Tile (
+\begin{DoxyParamCaption}
+\item[{{\bf Tile} $\ast$$\ast$}]{map, }
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)}\hypertarget{CalculoTempo__map__optempo_8cpp_ab0fd05609824f8e988617cf6539a1cc5}{}\label{CalculoTempo__map__optempo_8cpp_ab0fd05609824f8e988617cf6539a1cc5}
+
+\begin{DoxyCode}
+189 \{
+190     \textcolor{keywordtype}{int} i,j;
+191     \textcolor{keywordtype}{int} ** mat\_peso = NULL;
+192     \textcolor{keywordflow}{if}(flag == 1)\{
+193         mat\_peso =(\textcolor{keywordtype}{int}**) calloc(28,\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}*));
+194         \textcolor{keywordflow}{for}(i = 0;i<28;i++)
+195         \{   
+196             mat\_peso[i] =(\textcolor{keywordtype}{int}*) calloc(28,\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));
+197         \}
+198         \textcolor{keywordflow}{for}(i = 0;i<28;i++)\{
+199             \textcolor{keywordflow}{for}(j=0;j<28;j++)\{
+200                 mat\_peso[i][j] = map[i][j].\hyperlink{structtile_a0488f7fad28a756c5d51ab04f7dc0996}{peso};
+201             \}
+202         \}
+203 
+204     \}\textcolor{keywordflow}{else}\{
+205         mat\_peso =(\textcolor{keywordtype}{int}**) calloc(42,\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}*));
+206         \textcolor{keywordflow}{for}(i = 0;i<42;i++)
+207         \{   
+208             mat\_peso[i] =(\textcolor{keywordtype}{int}*) calloc(42,\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));
+209         \}
+210         \textcolor{keywordflow}{for}(i = 0;i<42;i++)\{
+211             \textcolor{keywordflow}{for}(j=0;j<42;j++)\{
+212                 mat\_peso[i][j] = map[i][j].\hyperlink{structtile_a0488f7fad28a756c5d51ab04f7dc0996}{peso};
+213             \}
+214         \}
+215 
+216     \}
+217 
+218     \textcolor{keywordflow}{return} mat\_peso;
+219 \}
+\end{DoxyCode}
+\index{Calculo\+Tempo\+\_\+map\+\_\+optempo.\+cpp@{Calculo\+Tempo\+\_\+map\+\_\+optempo.\+cpp}!libera\+\_\+memoria@{libera\+\_\+memoria}}
+\index{libera\+\_\+memoria@{libera\+\_\+memoria}!Calculo\+Tempo\+\_\+map\+\_\+optempo.\+cpp@{Calculo\+Tempo\+\_\+map\+\_\+optempo.\+cpp}}
+\subsubsection[{\texorpdfstring{libera\+\_\+memoria(\+Tile $\ast$$\ast$map, int flag)}{libera_memoria(Tile **map, int flag)}}]{\setlength{\rightskip}{0pt plus 5cm}void libera\+\_\+memoria (
+\begin{DoxyParamCaption}
+\item[{{\bf Tile} $\ast$$\ast$}]{map, }
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)}\hypertarget{CalculoTempo__map__optempo_8cpp_ae321f299975e9d9aee671564a197ab09}{}\label{CalculoTempo__map__optempo_8cpp_ae321f299975e9d9aee671564a197ab09}
+
+\begin{DoxyCode}
+229 \{
+230     \textcolor{keywordtype}{int} i,j;
+231     \textcolor{keywordflow}{if}(flag == 1)
+232     \{
+233         \textcolor{keywordflow}{for}(i = 0;i<28;i++)\{
+234                 free(map[i]);
+235         \}
+236         free(map);
+237     \}
+238     \textcolor{keywordflow}{else}
+239     \{
+240         \textcolor{keywordflow}{for}(i = 0;i<42;i++)\{
+241                 free(map[i]);
+242         \}
+243         free(map);
+244     \}
+245 \}
+\end{DoxyCode}

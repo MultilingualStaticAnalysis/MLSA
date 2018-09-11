@@ -1,0 +1,12 @@
+digraph "HouseFacade"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="HouseFacade",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" tv" ,fontname="Helvetica"];
+  Node2 [label="Tv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTv.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ac" ,fontname="Helvetica"];
+  Node3 [label="Ac",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAc.html"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" alarm" ,fontname="Helvetica"];
+  Node4 [label="Alarm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAlarm.html"];
+}

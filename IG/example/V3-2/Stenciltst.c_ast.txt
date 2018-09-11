@@ -1,0 +1,796 @@
+Processing: /home/frcv-lab/mlsa/mlsa/test/test0-3-2/Stenciltst.c.
+typedef __int128 __int128_t;
+typedef unsigned __int128 __uint128_t;
+typedef __va_list_tag __builtin_va_list[1];
+typedef typeof (ParenExpr 0x2325990 </home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:31:19, col:39> 'long'
+  (BinaryOperator 0x2325968 <col:20, col:38> 'long' '-'
+    (ParenExpr 0x23258c8 <col:20, col:28> 'int *'
+      (CStyleCastExpr 0x23258a0 <col:21, col:27> 'int *' <NullToPointer>
+        (IntegerLiteral 0x2325840 <col:27> 'int' 0)))
+    (ParenExpr 0x2325948 <col:30, col:38> 'int *'
+      (CStyleCastExpr 0x2325920 <col:31, col:37> 'int *' <NullToPointer>
+        (IntegerLiteral 0x23258e8 <col:37> 'int' 0)))))
+ ptrdiff_t;
+typedef typeof (ParenExpr 0x2325a68 </home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:35:19, col:31> 'unsigned long'
+  (UnaryExprOrTypeTraitExpr 0x2325a48 <col:20, col:30> 'unsigned long' sizeof 'int'))
+ size_t;
+typedef int wchar_t;
+typedef unsigned char __u_char;
+typedef unsigned short __u_short;
+typedef unsigned int __u_int;
+typedef unsigned long __u_long;
+typedef signed char __int8_t;
+typedef unsigned char __uint8_t;
+typedef short __int16_t;
+typedef unsigned short __uint16_t;
+typedef int __int32_t;
+typedef unsigned int __uint32_t;
+typedef long __int64_t;
+typedef unsigned long __uint64_t;
+typedef long __quad_t;
+typedef unsigned long __u_quad_t;
+typedef unsigned long __dev_t;
+typedef unsigned int __uid_t;
+typedef unsigned int __gid_t;
+typedef unsigned long __ino_t;
+typedef unsigned long __ino64_t;
+typedef unsigned int __mode_t;
+typedef unsigned long __nlink_t;
+typedef long __off_t;
+typedef long __off64_t;
+typedef int __pid_t;
+struct {
+    int __val[2];
+};
+typedef struct __fsid_t __fsid_t;
+typedef long __clock_t;
+typedef unsigned long __rlim_t;
+typedef unsigned long __rlim64_t;
+typedef unsigned int __id_t;
+typedef long __time_t;
+typedef unsigned int __useconds_t;
+typedef long __suseconds_t;
+typedef int __daddr_t;
+typedef int __key_t;
+typedef int __clockid_t;
+typedef void *__timer_t;
+typedef long __blksize_t;
+typedef long __blkcnt_t;
+typedef long __blkcnt64_t;
+typedef unsigned long __fsblkcnt_t;
+typedef unsigned long __fsblkcnt64_t;
+typedef unsigned long __fsfilcnt_t;
+typedef unsigned long __fsfilcnt64_t;
+typedef long __fsword_t;
+typedef long __ssize_t;
+typedef long __syscall_slong_t;
+typedef unsigned long __syscall_ulong_t;
+typedef __off64_t __loff_t;
+typedef __quad_t *__qaddr_t;
+typedef char *__caddr_t;
+typedef long __intptr_t;
+typedef unsigned int __socklen_t;
+struct _IO_FILE;
+typedef struct _IO_FILE FILE;
+typedef struct _IO_FILE __FILE;
+struct {
+    int __count;
+    union {
+        unsigned int __wch;
+        char __wchb[4];
+    };
+    union <anonymous union at /usr/include/wchar.h:85:3> __value;
+};
+typedef struct __mbstate_t __mbstate_t;
+struct {
+    __off_t __pos;
+    __mbstate_t __state;
+};
+typedef struct _G_fpos_t _G_fpos_t;
+struct {
+    __off64_t __pos;
+    __mbstate_t __state;
+};
+typedef struct _G_fpos64_t _G_fpos64_t;
+typedef __builtin_va_list va_list;
+typedef __builtin_va_list __gnuc_va_list;
+struct _IO_jump_t;
+struct _IO_FILE;
+typedef void _IO_lock_t;
+struct _IO_marker {
+    struct _IO_marker *_next;
+    struct _IO_FILE *_sbuf;
+    int _pos;
+};
+enum __codecvt_result {
+    __codecvt_ok,
+    __codecvt_partial,
+    __codecvt_error,
+    __codecvt_noconv
+};
+struct _IO_FILE {
+    int _flags;
+    char *_IO_read_ptr;
+    char *_IO_read_end;
+    char *_IO_read_base;
+    char *_IO_write_base;
+    char *_IO_write_ptr;
+    char *_IO_write_end;
+    char *_IO_buf_base;
+    char *_IO_buf_end;
+    char *_IO_save_base;
+    char *_IO_backup_base;
+    char *_IO_save_end;
+    struct _IO_marker *_markers;
+    struct _IO_FILE *_chain;
+    int _fileno;
+    int _flags2;
+    __off_t _old_offset;
+    unsigned short _cur_column;
+    signed char _vtable_offset;
+    char _shortbuf[1];
+    _IO_lock_t *_lock;
+    __off64_t _offset;
+    void *__pad1;
+    void *__pad2;
+    void *__pad3;
+    void *__pad4;
+    size_t __pad5;
+    int _mode;
+    char _unused2[20];
+};
+typedef struct _IO_FILE _IO_FILE;
+struct _IO_FILE_plus;
+extern struct _IO_FILE_plus _IO_2_1_stdin_;
+extern struct _IO_FILE_plus _IO_2_1_stdout_;
+extern struct _IO_FILE_plus _IO_2_1_stderr_;
+typedef __ssize_t (__io_read_fn)(void *, char *, size_t);
+typedef __ssize_t (__io_write_fn)(void *, const char *, size_t);
+typedef int (__io_seek_fn)(void *, __off64_t *, int);
+typedef int (__io_close_fn)(void *);
+extern int __underflow(_IO_FILE *);
+extern int __uflow(_IO_FILE *);
+extern int __overflow(_IO_FILE *, int);
+extern int _IO_getc(_IO_FILE *__fp);
+extern int _IO_putc(int __c, _IO_FILE *__fp);
+extern int _IO_feof(_IO_FILE *__fp) __attribute__((nothrow));
+extern int _IO_ferror(_IO_FILE *__fp) __attribute__((nothrow));
+extern int _IO_peekc_locked(_IO_FILE *__fp);
+extern void _IO_flockfile(_IO_FILE *) __attribute__((nothrow));
+extern void _IO_funlockfile(_IO_FILE *) __attribute__((nothrow));
+extern int _IO_ftrylockfile(_IO_FILE *) __attribute__((nothrow));
+extern int _IO_vfscanf(_IO_FILE *restrict, const char *restrict, __gnuc_va_list, int *restrict);
+extern int _IO_vfprintf(_IO_FILE *restrict, const char *restrict, __gnuc_va_list);
+extern __ssize_t _IO_padn(_IO_FILE *, int, __ssize_t);
+extern size_t _IO_sgetn(_IO_FILE *, void *, size_t);
+extern __off64_t _IO_seekoff(_IO_FILE *, __off64_t, int, int);
+extern __off64_t _IO_seekpos(_IO_FILE *, __off64_t, int);
+extern void _IO_free_backup_area(_IO_FILE *) __attribute__((nothrow));
+typedef __gnuc_va_list va_list;
+typedef __off_t off_t;
+typedef __ssize_t ssize_t;
+typedef _G_fpos_t fpos_t;
+extern struct _IO_FILE *stdin;
+extern struct _IO_FILE *stdout;
+extern struct _IO_FILE *stderr;
+extern int remove(const char *__filename) __attribute__((nothrow));
+extern int rename(const char *__old, const char *__new) __attribute__((nothrow));
+extern int renameat(int __oldfd, const char *__old, int __newfd, const char *__new) __attribute__((nothrow));
+extern FILE *tmpfile();
+extern char *tmpnam(char *__s) __attribute__((nothrow));
+extern char *tmpnam_r(char *__s) __attribute__((nothrow));
+extern char *tempnam(const char *__dir, const char *__pfx) __attribute__((malloc)) __attribute__((nothrow));
+extern int fclose(FILE *__stream);
+extern int fflush(FILE *__stream);
+extern int fflush_unlocked(FILE *__stream);
+extern FILE *fopen(const char *restrict __filename, const char *restrict __modes);
+extern FILE *freopen(const char *restrict __filename, const char *restrict __modes, FILE *restrict __stream);
+extern FILE *fdopen(int __fd, const char *__modes) __attribute__((nothrow));
+extern FILE *fmemopen(void *__s, size_t __len, const char *__modes) __attribute__((nothrow));
+extern FILE *open_memstream(char **__bufloc, size_t *__sizeloc) __attribute__((nothrow));
+extern void setbuf(FILE *restrict __stream, char *restrict __buf) __attribute__((nothrow));
+extern int setvbuf(FILE *restrict __stream, char *restrict __buf, int __modes, size_t __n) __attribute__((nothrow));
+extern void setbuffer(FILE *restrict __stream, char *restrict __buf, size_t __size) __attribute__((nothrow));
+extern void setlinebuf(FILE *__stream) __attribute__((nothrow));
+int fprintf(FILE *, const char *, ...) __attribute__((format("printf", 2, 3)));
+extern int fprintf(FILE *restrict __stream, const char *restrict __format, ...) __attribute__((format("printf", 2, 3)));
+int printf(const char *, ...) __attribute__((format("printf", 1, 2)));
+extern int printf(const char *restrict __format, ...) __attribute__((format("printf", 1, 2)));
+int sprintf(char *, const char *, ...) __attribute__((format("printf", 2, 3)));
+extern int sprintf(char *restrict __s, const char *restrict __format, ...) __attribute__((nothrow)) __attribute__((format("printf", 2, 3)));
+int vfprintf() __attribute__((format("printf", 2, 0)));
+extern int vfprintf(FILE *restrict __s, const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("printf", 2, 0)));
+int vprintf(const char *, __va_list_tag *) __attribute__((format("printf", 1, 0)));
+extern int vprintf(const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("printf", 1, 0)));
+int vsprintf(char *, const char *, __va_list_tag *) __attribute__((format("printf", 2, 0)));
+extern int vsprintf(char *restrict __s, const char *restrict __format, __gnuc_va_list __arg) __attribute__((nothrow)) __attribute__((format("printf", 2, 0)));
+int snprintf(char *, unsigned long, const char *, ...) __attribute__((format("printf", 3, 4)));
+extern int snprintf(char *restrict __s, size_t __maxlen, const char *restrict __format, ...) __attribute__((format("printf", 3, 4))) __attribute__((nothrow));
+int vsnprintf(char *, unsigned long, const char *, __va_list_tag *) __attribute__((format("printf", 3, 0)));
+extern int vsnprintf(char *restrict __s, size_t __maxlen, const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("printf", 3, 0))) __attribute__((nothrow));
+extern int vdprintf(int __fd, const char *restrict __fmt, __gnuc_va_list __arg) __attribute__((format("printf", 2, 0)));
+extern int dprintf(int __fd, const char *restrict __fmt, ...) __attribute__((format("printf", 2, 3)));
+int fscanf(FILE *restrict, const char *restrict, ...) __attribute__((format("scanf", 2, 3)));
+extern int fscanf(FILE *restrict __stream, const char *restrict __format, ...) __attribute__((format("scanf", 2, 3)));
+int scanf(const char *restrict, ...) __attribute__((format("scanf", 1, 2)));
+extern int scanf(const char *restrict __format, ...) __attribute__((format("scanf", 1, 2)));
+int sscanf(const char *restrict, const char *restrict, ...) __attribute__((format("scanf", 2, 3)));
+extern int sscanf(const char *restrict __s, const char *restrict __format, ...) __attribute__((nothrow)) __attribute__((format("scanf", 2, 3)));
+extern int fscanf(FILE *restrict __stream, const char *restrict __format, ...) __attribute__((format("scanf", 2, 3)));
+extern int scanf(const char *restrict __format, ...) __attribute__((format("scanf", 1, 2)));
+extern int sscanf(const char *restrict __s, const char *restrict __format, ...) __attribute__((nothrow)) __attribute__((format("scanf", 2, 3)));
+int vfscanf(FILE *restrict, const char *restrict, __va_list_tag *) __attribute__((format("scanf", 2, 0)));
+extern int vfscanf(FILE *restrict __s, const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("scanf", 2, 0)));
+int vscanf(const char *restrict, __va_list_tag *) __attribute__((format("scanf", 1, 0)));
+extern int vscanf(const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("scanf", 1, 0)));
+int vsscanf(const char *restrict, const char *restrict, __va_list_tag *) __attribute__((format("scanf", 2, 0)));
+extern int vsscanf(const char *restrict __s, const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("scanf", 2, 0))) __attribute__((nothrow));
+extern int vfscanf(FILE *restrict __s, const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("scanf", 2, 0)));
+extern int vscanf(const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("scanf", 1, 0)));
+extern int vsscanf(const char *restrict __s, const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("scanf", 2, 0))) __attribute__((nothrow));
+extern int fgetc(FILE *__stream);
+extern int getc(FILE *__stream);
+extern int getchar();
+extern int getc_unlocked(FILE *__stream);
+extern int getchar_unlocked();
+extern int fgetc_unlocked(FILE *__stream);
+extern int fputc(int __c, FILE *__stream);
+extern int putc(int __c, FILE *__stream);
+extern int putchar(int __c);
+extern int fputc_unlocked(int __c, FILE *__stream);
+extern int putc_unlocked(int __c, FILE *__stream);
+extern int putchar_unlocked(int __c);
+extern int getw(FILE *__stream);
+extern int putw(int __w, FILE *__stream);
+extern char *fgets(char *restrict __s, int __n, FILE *restrict __stream);
+extern char *gets(char *__s) __attribute__((deprecated("")));
+extern __ssize_t __getdelim(char **restrict __lineptr, size_t *restrict __n, int __delimiter, FILE *restrict __stream);
+extern __ssize_t getdelim(char **restrict __lineptr, size_t *restrict __n, int __delimiter, FILE *restrict __stream);
+extern __ssize_t getline(char **restrict __lineptr, size_t *restrict __n, FILE *restrict __stream);
+extern int fputs(const char *restrict __s, FILE *restrict __stream);
+extern int puts(const char *__s);
+extern int ungetc(int __c, FILE *__stream);
+extern size_t fread(void *restrict __ptr, size_t __size, size_t __n, FILE *restrict __stream);
+extern size_t fwrite(const void *restrict __ptr, size_t __size, size_t __n, FILE *restrict __s);
+extern size_t fread_unlocked(void *restrict __ptr, size_t __size, size_t __n, FILE *restrict __stream);
+extern size_t fwrite_unlocked(const void *restrict __ptr, size_t __size, size_t __n, FILE *restrict __stream);
+extern int fseek(FILE *__stream, long __off, int __whence);
+extern long ftell(FILE *__stream);
+extern void rewind(FILE *__stream);
+extern int fseeko(FILE *__stream, __off_t __off, int __whence);
+extern __off_t ftello(FILE *__stream);
+extern int fgetpos(FILE *restrict __stream, fpos_t *restrict __pos);
+extern int fsetpos(FILE *__stream, const fpos_t *__pos);
+extern void clearerr(FILE *__stream) __attribute__((nothrow));
+extern int feof(FILE *__stream) __attribute__((nothrow));
+extern int ferror(FILE *__stream) __attribute__((nothrow));
+extern void clearerr_unlocked(FILE *__stream) __attribute__((nothrow));
+extern int feof_unlocked(FILE *__stream) __attribute__((nothrow));
+extern int ferror_unlocked(FILE *__stream) __attribute__((nothrow));
+extern void perror(const char *__s);
+extern int sys_nerr;
+extern const char *const sys_errlist[];
+extern int fileno(FILE *__stream) __attribute__((nothrow));
+extern int fileno_unlocked(FILE *__stream) __attribute__((nothrow));
+extern FILE *popen(const char *__command, const char *__modes);
+extern int pclose(FILE *__stream);
+extern char *ctermid(char *__s) __attribute__((nothrow));
+extern void flockfile(FILE *__stream) __attribute__((nothrow));
+extern int ftrylockfile(FILE *__stream) __attribute__((nothrow));
+extern void funlockfile(FILE *__stream) __attribute__((nothrow));
+enum  {
+    P_ALL,
+    P_PID,
+    P_PGID
+};
+typedef enum idtype_t idtype_t;
+union wait {
+    int w_status;
+    struct {
+        unsigned int __w_termsig : (IntegerLiteral 0x23a9670 </usr/include/x86_64-linux-gnu/bits/waitstatus.h:72:27> 'int' 7)
+;
+        unsigned int __w_coredump : (IntegerLiteral 0x23a96e8 </usr/include/x86_64-linux-gnu/bits/waitstatus.h:73:28> 'int' 1)
+;
+        unsigned int __w_retcode : (IntegerLiteral 0x23a9768 </usr/include/x86_64-linux-gnu/bits/waitstatus.h:74:27> 'int' 8)
+;
+        unsigned int : (IntegerLiteral 0x23a97e8 </usr/include/x86_64-linux-gnu/bits/waitstatus.h:75:15> 'int' 16)
+;
+    };
+    struct <anonymous struct at /usr/include/x86_64-linux-gnu/bits/waitstatus.h:69:5> __wait_terminated;
+    struct {
+        unsigned int __w_stopval : (IntegerLiteral 0x23a99b0 </usr/include/x86_64-linux-gnu/bits/waitstatus.h:87:27> 'int' 8)
+;
+        unsigned int __w_stopsig : (IntegerLiteral 0x23a9a28 </usr/include/x86_64-linux-gnu/bits/waitstatus.h:88:27> 'int' 8)
+;
+        unsigned int : (IntegerLiteral 0x23a9aa8 </usr/include/x86_64-linux-gnu/bits/waitstatus.h:89:15> 'int' 16)
+;
+    };
+    struct <anonymous struct at /usr/include/x86_64-linux-gnu/bits/waitstatus.h:84:5> __wait_stopped;
+};
+union {
+    union wait *__uptr;
+    int *__iptr;
+};
+typedef union __WAIT_STATUS __WAIT_STATUS;
+struct {
+    int quot;
+    int rem;
+};
+typedef struct div_t div_t;
+struct {
+    long quot;
+    long rem;
+};
+typedef struct ldiv_t ldiv_t;
+struct {
+    long long quot;
+    long long rem;
+};
+typedef struct lldiv_t lldiv_t;
+extern size_t __ctype_get_mb_cur_max() __attribute__((nothrow));
+extern double atof(const char *__nptr) __attribute__((nonnull(0))) __attribute__((pure)) __attribute__((nothrow));
+extern int atoi(const char *__nptr) __attribute__((nonnull(0))) __attribute__((pure)) __attribute__((nothrow));
+extern long atol(const char *__nptr) __attribute__((nonnull(0))) __attribute__((pure)) __attribute__((nothrow));
+extern long long atoll(const char *__nptr) __attribute__((nonnull(0))) __attribute__((pure)) __attribute__((nothrow));
+extern double strtod(const char *restrict __nptr, char **restrict __endptr) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern float strtof(const char *restrict __nptr, char **restrict __endptr) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern long double strtold(const char *restrict __nptr, char **restrict __endptr) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern long strtol(const char *restrict __nptr, char **restrict __endptr, int __base) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern unsigned long strtoul(const char *restrict __nptr, char **restrict __endptr, int __base) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern long long strtoq(const char *restrict __nptr, char **restrict __endptr, int __base) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern unsigned long long strtouq(const char *restrict __nptr, char **restrict __endptr, int __base) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern long long strtoll(const char *restrict __nptr, char **restrict __endptr, int __base) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern unsigned long long strtoull(const char *restrict __nptr, char **restrict __endptr, int __base) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern char *l64a(long __n) __attribute__((nothrow));
+extern long a64l(const char *__s) __attribute__((nonnull(0))) __attribute__((pure)) __attribute__((nothrow));
+typedef __u_char u_char;
+typedef __u_short u_short;
+typedef __u_int u_int;
+typedef __u_long u_long;
+typedef __quad_t quad_t;
+typedef __u_quad_t u_quad_t;
+typedef __fsid_t fsid_t;
+typedef __loff_t loff_t;
+typedef __ino_t ino_t;
+typedef __dev_t dev_t;
+typedef __gid_t gid_t;
+typedef __mode_t mode_t;
+typedef __nlink_t nlink_t;
+typedef __uid_t uid_t;
+typedef __pid_t pid_t;
+typedef __id_t id_t;
+typedef __daddr_t daddr_t;
+typedef __caddr_t caddr_t;
+typedef __key_t key_t;
+typedef __clock_t clock_t;
+typedef __time_t time_t;
+typedef __clockid_t clockid_t;
+typedef __timer_t timer_t;
+typedef unsigned long ulong;
+typedef unsigned short ushort;
+typedef unsigned int uint;
+typedef signed char int8_t;
+typedef short int16_t;
+typedef int int32_t;
+typedef long int64_t;
+typedef unsigned char u_int8_t;
+typedef unsigned short u_int16_t;
+typedef unsigned int u_int32_t;
+typedef unsigned long u_int64_t;
+typedef long register_t;
+typedef int __sig_atomic_t;
+struct {
+    unsigned long __val[16];
+};
+typedef struct __sigset_t __sigset_t;
+typedef __sigset_t sigset_t;
+struct timespec {
+    __time_t tv_sec;
+    __syscall_slong_t tv_nsec;
+};
+struct timeval {
+    __time_t tv_sec;
+    __suseconds_t tv_usec;
+};
+typedef __suseconds_t suseconds_t;
+typedef long __fd_mask;
+struct {
+    __fd_mask __fds_bits[16];
+};
+typedef struct fd_set fd_set;
+typedef __fd_mask fd_mask;
+extern int select(int __nfds, fd_set *restrict __readfds, fd_set *restrict __writefds, fd_set *restrict __exceptfds, struct timeval *restrict __timeout);
+extern int pselect(int __nfds, fd_set *restrict __readfds, fd_set *restrict __writefds, fd_set *restrict __exceptfds, const struct timespec *restrict __timeout, const __sigset_t *restrict __sigmask);
+extern unsigned int gnu_dev_major(unsigned long long __dev) __attribute__((const)) __attribute__((nothrow));
+extern unsigned int gnu_dev_minor(unsigned long long __dev) __attribute__((const)) __attribute__((nothrow));
+extern unsigned long long gnu_dev_makedev(unsigned int __major, unsigned int __minor) __attribute__((const)) __attribute__((nothrow));
+typedef __blksize_t blksize_t;
+typedef __blkcnt_t blkcnt_t;
+typedef __fsblkcnt_t fsblkcnt_t;
+typedef __fsfilcnt_t fsfilcnt_t;
+typedef unsigned long pthread_t;
+union pthread_attr_t {
+    char __size[56];
+    long __align;
+};
+typedef union pthread_attr_t pthread_attr_t;
+struct __pthread_internal_list {
+    struct __pthread_internal_list *__prev;
+    struct __pthread_internal_list *__next;
+};
+typedef struct __pthread_internal_list __pthread_list_t;
+union {
+    struct __pthread_mutex_s {
+        int __lock;
+        unsigned int __count;
+        int __owner;
+        unsigned int __nusers;
+        int __kind;
+        short __spins;
+        short __elision;
+        __pthread_list_t __list;
+    };
+    struct __pthread_mutex_s __data;
+    char __size[40];
+    long __align;
+};
+typedef union pthread_mutex_t pthread_mutex_t;
+union {
+    char __size[4];
+    int __align;
+};
+typedef union pthread_mutexattr_t pthread_mutexattr_t;
+union {
+    struct {
+        int __lock;
+        unsigned int __futex;
+        unsigned long long __total_seq;
+        unsigned long long __wakeup_seq;
+        unsigned long long __woken_seq;
+        void *__mutex;
+        unsigned int __nwaiters;
+        unsigned int __broadcast_seq;
+    };
+    struct <anonymous struct at /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:140:3> __data;
+    char __size[48];
+    long long __align;
+};
+typedef union pthread_cond_t pthread_cond_t;
+union {
+    char __size[4];
+    int __align;
+};
+typedef union pthread_condattr_t pthread_condattr_t;
+typedef unsigned int pthread_key_t;
+typedef int pthread_once_t;
+union {
+    struct {
+        int __lock;
+        unsigned int __nr_readers;
+        unsigned int __readers_wakeup;
+        unsigned int __writer_wakeup;
+        unsigned int __nr_readers_queued;
+        unsigned int __nr_writers_queued;
+        int __writer;
+        int __shared;
+        unsigned long __pad1;
+        unsigned long __pad2;
+        unsigned int __flags;
+    };
+    struct <anonymous struct at /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:176:3> __data;
+    char __size[56];
+    long __align;
+};
+typedef union pthread_rwlock_t pthread_rwlock_t;
+union {
+    char __size[8];
+    long __align;
+};
+typedef union pthread_rwlockattr_t pthread_rwlockattr_t;
+typedef volatile int pthread_spinlock_t;
+union {
+    char __size[32];
+    long __align;
+};
+typedef union pthread_barrier_t pthread_barrier_t;
+union {
+    char __size[4];
+    int __align;
+};
+typedef union pthread_barrierattr_t pthread_barrierattr_t;
+extern long random() __attribute__((nothrow));
+extern void srandom(unsigned int __seed) __attribute__((nothrow));
+extern char *initstate(unsigned int __seed, char *__statebuf, size_t __statelen) __attribute__((nonnull(1))) __attribute__((nothrow));
+extern char *setstate(char *__statebuf) __attribute__((nonnull(0))) __attribute__((nothrow));
+struct random_data {
+    int32_t *fptr;
+    int32_t *rptr;
+    int32_t *state;
+    int rand_type;
+    int rand_deg;
+    int rand_sep;
+    int32_t *end_ptr;
+};
+extern int random_r(struct random_data *restrict __buf, int32_t *restrict __result) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+extern int srandom_r(unsigned int __seed, struct random_data *__buf) __attribute__((nonnull(1))) __attribute__((nothrow));
+extern int initstate_r(unsigned int __seed, char *restrict __statebuf, size_t __statelen, struct random_data *restrict __buf) __attribute__((nonnull(1, 3))) __attribute__((nothrow));
+extern int setstate_r(char *restrict __statebuf, struct random_data *restrict __buf) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+extern int rand() __attribute__((nothrow));
+extern void srand(unsigned int __seed) __attribute__((nothrow));
+extern int rand_r(unsigned int *__seed) __attribute__((nothrow));
+extern double drand48() __attribute__((nothrow));
+extern double erand48(unsigned short __xsubi[3]) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern long lrand48() __attribute__((nothrow));
+extern long nrand48(unsigned short __xsubi[3]) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern long mrand48() __attribute__((nothrow));
+extern long jrand48(unsigned short __xsubi[3]) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern void srand48(long __seedval) __attribute__((nothrow));
+extern unsigned short *seed48(unsigned short __seed16v[3]) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern void lcong48(unsigned short __param[7]) __attribute__((nonnull(0))) __attribute__((nothrow));
+struct drand48_data {
+    unsigned short __x[3];
+    unsigned short __old_x[3];
+    unsigned short __c;
+    unsigned short __init;
+    unsigned long long __a;
+};
+extern int drand48_r(struct drand48_data *restrict __buffer, double *restrict __result) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+extern int erand48_r(unsigned short __xsubi[3], struct drand48_data *restrict __buffer, double *restrict __result) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+extern int lrand48_r(struct drand48_data *restrict __buffer, long *restrict __result) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+extern int nrand48_r(unsigned short __xsubi[3], struct drand48_data *restrict __buffer, long *restrict __result) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+extern int mrand48_r(struct drand48_data *restrict __buffer, long *restrict __result) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+extern int jrand48_r(unsigned short __xsubi[3], struct drand48_data *restrict __buffer, long *restrict __result) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+extern int srand48_r(long __seedval, struct drand48_data *__buffer) __attribute__((nonnull(1))) __attribute__((nothrow));
+extern int seed48_r(unsigned short __seed16v[3], struct drand48_data *__buffer) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+extern int lcong48_r(unsigned short __param[7], struct drand48_data *__buffer) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+void *malloc(unsigned long);
+extern void *malloc(size_t __size) __attribute__((malloc)) __attribute__((nothrow));
+void *calloc(unsigned long, unsigned long);
+extern void *calloc(size_t __nmemb, size_t __size) __attribute__((malloc)) __attribute__((nothrow));
+void *realloc(void *, unsigned long);
+extern void *realloc(void *__ptr, size_t __size) __attribute__((warn_unused_result)) __attribute__((nothrow));
+extern void free(void *__ptr) __attribute__((nothrow));
+extern void cfree(void *__ptr) __attribute__((nothrow));
+void *alloca(unsigned long);
+extern void *alloca(size_t __size) __attribute__((nothrow));
+extern void *valloc(size_t __size) __attribute__((malloc)) __attribute__((nothrow));
+extern int posix_memalign(void **__memptr, size_t __alignment, size_t __size) __attribute__((nonnull(0))) __attribute__((nothrow));
+void abort();
+extern void abort() __attribute__((nothrow));
+extern int atexit(void (*__func)(void)) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern int on_exit(void (*__func)(int, void *), void *__arg) __attribute__((nonnull(0))) __attribute__((nothrow));
+void exit(int);
+extern void exit(int __status) __attribute__((nothrow));
+void _Exit(int);
+extern void _Exit(int __status) __attribute__((nothrow));
+extern char *getenv(const char *__name) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern int putenv(char *__string) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern int setenv(const char *__name, const char *__value, int __replace) __attribute__((nonnull(1))) __attribute__((nothrow));
+extern int unsetenv(const char *__name) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern int clearenv() __attribute__((nothrow));
+extern char *mktemp(char *__template) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern int mkstemp(char *__template) __attribute__((nonnull(0)));
+extern int mkstemps(char *__template, int __suffixlen) __attribute__((nonnull(0)));
+extern char *mkdtemp(char *__template) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern int system(const char *__command);
+extern char *realpath(const char *restrict __name, char *restrict __resolved) __attribute__((nothrow));
+typedef int (*__compar_fn_t)(const void *, const void *);
+extern void *bsearch(const void *__key, const void *__base, size_t __nmemb, size_t __size, __compar_fn_t __compar) __attribute__((nonnull(0, 1, 4)));
+extern void qsort(void *__base, size_t __nmemb, size_t __size, __compar_fn_t __compar) __attribute__((nonnull(0, 3)));
+extern int abs(int __x) __attribute__((const)) __attribute__((nothrow));
+extern long labs(long __x) __attribute__((const)) __attribute__((nothrow));
+extern long long llabs(long long __x) __attribute__((const)) __attribute__((nothrow));
+extern div_t div(int __numer, int __denom) __attribute__((const)) __attribute__((nothrow));
+extern ldiv_t ldiv(long __numer, long __denom) __attribute__((const)) __attribute__((nothrow));
+extern lldiv_t lldiv(long long __numer, long long __denom) __attribute__((const)) __attribute__((nothrow));
+extern char *ecvt(double __value, int __ndigit, int *restrict __decpt, int *restrict __sign) __attribute__((nonnull(2, 3))) __attribute__((nothrow));
+extern char *fcvt(double __value, int __ndigit, int *restrict __decpt, int *restrict __sign) __attribute__((nonnull(2, 3))) __attribute__((nothrow));
+extern char *gcvt(double __value, int __ndigit, char *__buf) __attribute__((nonnull(2))) __attribute__((nothrow));
+extern char *qecvt(long double __value, int __ndigit, int *restrict __decpt, int *restrict __sign) __attribute__((nonnull(2, 3))) __attribute__((nothrow));
+extern char *qfcvt(long double __value, int __ndigit, int *restrict __decpt, int *restrict __sign) __attribute__((nonnull(2, 3))) __attribute__((nothrow));
+extern char *qgcvt(long double __value, int __ndigit, char *__buf) __attribute__((nonnull(2))) __attribute__((nothrow));
+extern int ecvt_r(double __value, int __ndigit, int *restrict __decpt, int *restrict __sign, char *restrict __buf, size_t __len) __attribute__((nonnull(2, 3, 4))) __attribute__((nothrow));
+extern int fcvt_r(double __value, int __ndigit, int *restrict __decpt, int *restrict __sign, char *restrict __buf, size_t __len) __attribute__((nonnull(2, 3, 4))) __attribute__((nothrow));
+extern int qecvt_r(long double __value, int __ndigit, int *restrict __decpt, int *restrict __sign, char *restrict __buf, size_t __len) __attribute__((nonnull(2, 3, 4))) __attribute__((nothrow));
+extern int qfcvt_r(long double __value, int __ndigit, int *restrict __decpt, int *restrict __sign, char *restrict __buf, size_t __len) __attribute__((nonnull(2, 3, 4))) __attribute__((nothrow));
+extern int mblen(const char *__s, size_t __n) __attribute__((nothrow));
+extern int mbtowc(wchar_t *restrict __pwc, const char *restrict __s, size_t __n) __attribute__((nothrow));
+extern int wctomb(char *__s, wchar_t __wchar) __attribute__((nothrow));
+extern size_t mbstowcs(wchar_t *restrict __pwcs, const char *restrict __s, size_t __n) __attribute__((nothrow));
+extern size_t wcstombs(char *restrict __s, const wchar_t *restrict __pwcs, size_t __n) __attribute__((nothrow));
+extern int rpmatch(const char *__response) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern int getsubopt(char **restrict __optionp, char *const *restrict __tokens, char **restrict __valuep) __attribute__((nonnull(0, 1, 2))) __attribute__((nothrow));
+extern int getloadavg(double __loadavg[], int __nelem) __attribute__((nonnull(0))) __attribute__((nothrow));
+void *memcpy(void *, const void *, unsigned long);
+extern void *memcpy(void *restrict __dest, const void *restrict __src, size_t __n) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+void *memmove(void *, const void *, unsigned long);
+extern void *memmove(void *__dest, const void *__src, size_t __n) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+extern void *memccpy(void *restrict __dest, const void *restrict __src, int __c, size_t __n) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+void *memset(void *, int, unsigned long);
+extern void *memset(void *__s, int __c, size_t __n) __attribute__((nonnull(0))) __attribute__((nothrow));
+int memcmp(const void *, const void *, unsigned long);
+extern int memcmp(const void *__s1, const void *__s2, size_t __n) __attribute__((nonnull(0, 1))) __attribute__((pure)) __attribute__((nothrow));
+void *memchr(const void *, int, unsigned long);
+extern void *memchr(const void *__s, int __c, size_t __n) __attribute__((nonnull(0))) __attribute__((pure)) __attribute__((nothrow));
+char *strcpy(char *, const char *);
+extern char *strcpy(char *restrict __dest, const char *restrict __src) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+char *strncpy(char *, const char *, unsigned long);
+extern char *strncpy(char *restrict __dest, const char *restrict __src, size_t __n) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+char *strcat(char *, const char *);
+extern char *strcat(char *restrict __dest, const char *restrict __src) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+char *strncat(char *, const char *, unsigned long);
+extern char *strncat(char *restrict __dest, const char *restrict __src, size_t __n) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+int strcmp(const char *, const char *);
+extern int strcmp(const char *__s1, const char *__s2) __attribute__((nonnull(0, 1))) __attribute__((pure)) __attribute__((nothrow));
+int strncmp(const char *, const char *, unsigned long);
+extern int strncmp(const char *__s1, const char *__s2, size_t __n) __attribute__((nonnull(0, 1))) __attribute__((pure)) __attribute__((nothrow));
+extern int strcoll(const char *__s1, const char *__s2) __attribute__((nonnull(0, 1))) __attribute__((pure)) __attribute__((nothrow));
+unsigned long strxfrm(char *, const char *, unsigned long);
+extern size_t strxfrm(char *restrict __dest, const char *restrict __src, size_t __n) __attribute__((nonnull(1))) __attribute__((nothrow));
+struct __locale_struct {
+    struct __locale_data;
+    struct __locale_data *__locales[13];
+    const unsigned short *__ctype_b;
+    const int *__ctype_tolower;
+    const int *__ctype_toupper;
+    const char *__names[13];
+};
+typedef struct __locale_struct *__locale_t;
+typedef __locale_t locale_t;
+extern int strcoll_l(const char *__s1, const char *__s2, __locale_t __l) __attribute__((nonnull(0, 1, 2))) __attribute__((pure)) __attribute__((nothrow));
+extern size_t strxfrm_l(char *__dest, const char *__src, size_t __n, __locale_t __l) __attribute__((nonnull(1, 3))) __attribute__((nothrow));
+char *strdup(const char *);
+extern char *strdup(const char *__s) __attribute__((nonnull(0))) __attribute__((malloc)) __attribute__((nothrow));
+char *strndup(const char *, unsigned long);
+extern char *strndup(const char *__string, size_t __n) __attribute__((nonnull(0))) __attribute__((malloc)) __attribute__((nothrow));
+char *strchr(const char *, int);
+extern char *strchr(const char *__s, int __c) __attribute__((nonnull(0))) __attribute__((pure)) __attribute__((nothrow));
+char *strrchr(const char *, int);
+extern char *strrchr(const char *__s, int __c) __attribute__((nonnull(0))) __attribute__((pure)) __attribute__((nothrow));
+unsigned long strcspn(const char *, const char *);
+extern size_t strcspn(const char *__s, const char *__reject) __attribute__((nonnull(0, 1))) __attribute__((pure)) __attribute__((nothrow));
+unsigned long strspn(const char *, const char *);
+extern size_t strspn(const char *__s, const char *__accept) __attribute__((nonnull(0, 1))) __attribute__((pure)) __attribute__((nothrow));
+char *strpbrk(const char *, const char *);
+extern char *strpbrk(const char *__s, const char *__accept) __attribute__((nonnull(0, 1))) __attribute__((pure)) __attribute__((nothrow));
+char *strstr(const char *, const char *);
+extern char *strstr(const char *__haystack, const char *__needle) __attribute__((nonnull(0, 1))) __attribute__((pure)) __attribute__((nothrow));
+char *strtok(char *, const char *);
+extern char *strtok(char *restrict __s, const char *restrict __delim) __attribute__((nonnull(1))) __attribute__((nothrow));
+extern char *__strtok_r(char *restrict __s, const char *restrict __delim, char **restrict __save_ptr) __attribute__((nonnull(1, 2))) __attribute__((nothrow));
+extern char *strtok_r(char *restrict __s, const char *restrict __delim, char **restrict __save_ptr) __attribute__((nonnull(1, 2))) __attribute__((nothrow));
+unsigned long strlen(const char *);
+extern size_t strlen(const char *__s) __attribute__((nonnull(0))) __attribute__((pure)) __attribute__((nothrow));
+extern size_t strnlen(const char *__string, size_t __maxlen) __attribute__((nonnull(0))) __attribute__((pure)) __attribute__((nothrow));
+char *strerror(int);
+extern char *strerror(int __errnum) __attribute__((nothrow));
+extern int strerror_r(int __errnum, char *__buf, size_t __buflen) __attribute__((nonnull(1))) __attribute__((nothrow));
+extern char *strerror_l(int __errnum, __locale_t __l) __attribute__((nothrow));
+extern void __bzero(void *__s, size_t __n) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern void bcopy(const void *__src, void *__dest, size_t __n) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+void bzero(void *, unsigned long);
+extern void bzero(void *__s, size_t __n) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern int bcmp(const void *__s1, const void *__s2, size_t __n) __attribute__((nonnull(0, 1))) __attribute__((pure)) __attribute__((nothrow));
+char *index(const char *, int);
+extern char *index(const char *__s, int __c) __attribute__((nonnull(0))) __attribute__((pure)) __attribute__((nothrow));
+char *rindex(const char *, int);
+extern char *rindex(const char *__s, int __c) __attribute__((nonnull(0))) __attribute__((pure)) __attribute__((nothrow));
+extern int ffs(int __i) __attribute__((const)) __attribute__((nothrow));
+int strcasecmp(const char *, const char *);
+extern int strcasecmp(const char *__s1, const char *__s2) __attribute__((nonnull(0, 1))) __attribute__((pure)) __attribute__((nothrow));
+int strncasecmp(const char *, const char *, unsigned long);
+extern int strncasecmp(const char *__s1, const char *__s2, size_t __n) __attribute__((nonnull(0, 1))) __attribute__((pure)) __attribute__((nothrow));
+extern char *strsep(char **restrict __stringp, const char *restrict __delim) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+extern char *strsignal(int __sig) __attribute__((nothrow));
+extern char *__stpcpy(char *restrict __dest, const char *restrict __src) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+char *stpcpy(char *, const char *);
+extern char *stpcpy(char *restrict __dest, const char *restrict __src) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+extern char *__stpncpy(char *restrict __dest, const char *restrict __src, size_t __n) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+char *stpncpy(char *, const char *, unsigned long);
+extern char *stpncpy(char *restrict __dest, const char *restrict __src, size_t __n) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+int doubleBuffer;
+static void Key(unsigned char key, int x, int y) (CompoundStmt 0x24002e0 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Stenciltst.c:52:1, line:57:1>
+  (SwitchStmt 0x2400180 <line:53:3, line:56:3>
+    (<<<NULL>>>)
+    (ImplicitCastExpr 0x2400168 <line:53:11> 'int' <IntegralCast>
+      (ImplicitCastExpr 0x2400150 <col:11> 'unsigned char' <LValueToRValue>
+        (DeclRefExpr 0x2400128 <col:11> 'unsigned char' lvalue ParmVar 0x23ffe80 'key' 'unsigned char')))
+    (CompoundStmt 0x24002c0 <col:16, line:56:3>
+      (CaseStmt 0x24001d0 <line:54:3, line:55:11>
+        (IntegerLiteral 0x24001b0 <line:54:8> 'int' 27)
+        (<<<NULL>>>)
+        (CallExpr 0x2400290 <line:55:5, col:11> 'void'
+          (ImplicitCastExpr 0x2400278 <col:5> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+            (DeclRefExpr 0x2400208 <col:5> 'void (int) __attribute__((noreturn))' Function 0x23e6410 'exit' 'void (int) __attribute__((noreturn))'))
+          (IntegerLiteral 0x2400230 <col:10> 'int' 0))))))
+
+
+static void Draw() (CompoundStmt 0x24005e0 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Stenciltst.c:61:1, line:106:1>
+  (IfStmt 0x24005b0 <line:99:3, line:105:3>
+    (<<<NULL>>>)
+    (ImplicitCastExpr 0x2400458 <line:99:7> 'int' <LValueToRValue>
+      (DeclRefExpr 0x2400430 <col:7> 'int' lvalue Var 0x23ffe10 'doubleBuffer' 'int'))
+    (CompoundStmt 0x24004f0 <col:21, line:102:3>
+      (DeclStmt 0x24004d8 <line:101:5, col:10>
+        (0x2400480 "int i")))
+    (CompoundStmt 0x2400590 <line:102:10, line:105:3>
+      (DeclStmt 0x2400578 <line:103:5, col:10>
+        (0x2400520 "int j")))))
+
+
+static void Args(int argc, char **argv) (CompoundStmt 0x2401048 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Stenciltst.c:110:1, line:122:1>
+  (DeclStmt 0x2400868 <line:112:1, col:6>
+    (0x2400810 "int i"))
+  (BinaryOperator 0x24008c8 <line:114:3, col:18> 'int' '='
+    (DeclRefExpr 0x2400880 <col:3> 'int' lvalue Var 0x23ffe10 'doubleBuffer' 'int')
+    (IntegerLiteral 0x24008a8 <col:18> 'int' 1))
+  (ForStmt 0x2401008 <line:115:3, line:121:3>
+    (BinaryOperator 0x2400938 <line:115:8, col:12> 'int' '='
+      (DeclRefExpr 0x24008f0 <col:8> 'int' lvalue Var 0x2400810 'i' 'int')
+      (IntegerLiteral 0x2400918 <col:12> 'int' 1))
+    (<<<NULL>>>)
+    (BinaryOperator 0x24009e0 <col:15, col:19> 'int' '<'
+      (ImplicitCastExpr 0x24009b0 <col:15> 'int' <LValueToRValue>
+        (DeclRefExpr 0x2400960 <col:15> 'int' lvalue Var 0x2400810 'i' 'int'))
+      (ImplicitCastExpr 0x24009c8 <col:19> 'int' <LValueToRValue>
+        (DeclRefExpr 0x2400988 <col:19> 'int' lvalue ParmVar 0x2400610 'argc' 'int')))
+    (UnaryOperator 0x2400a30 <col:25, col:26> 'int' postfix '++'
+      (DeclRefExpr 0x2400a08 <col:25> 'int' lvalue Var 0x2400810 'i' 'int'))
+    (CompoundStmt 0x2400fe8 <col:30, line:121:3>
+      (IfStmt 0x2400fb8 <line:116:5, line:120:5>
+        (<<<NULL>>>)
+        (BinaryOperator 0x2400c48 <line:116:9, col:35> 'int' '=='
+          (CallExpr 0x2400b90 <col:9, col:30> 'int'
+            (ImplicitCastExpr 0x2400b78 <col:9> 'int (*)(const char *, const char *)' <FunctionToPointerDecay>
+              (DeclRefExpr 0x2400a50 <col:9> 'int (const char *, const char *)' Function 0x23f23c0 'strcmp' 'int (const char *, const char *)'))
+            (ImplicitCastExpr 0x2400be0 <col:16, col:22> 'const char *' <BitCast>
+              (ImplicitCastExpr 0x2400bc8 <col:16, col:22> 'char *' <LValueToRValue>
+                (ArraySubscriptExpr 0x2400af8 <col:16, col:22> 'char *' lvalue
+                  (ImplicitCastExpr 0x2400ac8 <col:16> 'char **' <LValueToRValue>
+                    (DeclRefExpr 0x2400a78 <col:16> 'char **' lvalue ParmVar 0x2400680 'argv' 'char **'))
+                  (ImplicitCastExpr 0x2400ae0 <col:21> 'int' <LValueToRValue>
+                    (DeclRefExpr 0x2400aa0 <col:21> 'int' lvalue Var 0x2400810 'i' 'int')))))
+            (ImplicitCastExpr 0x2400c10 <col:25> 'const char *' <BitCast>
+              (ImplicitCastExpr 0x2400bf8 <col:25> 'char *' <ArrayToPointerDecay>
+                (StringLiteral 0x2400b20 <col:25> 'char [4]' lvalue "-sb"))))
+          (IntegerLiteral 0x2400c28 <col:35> 'int' 0))
+        (CompoundStmt 0x2400ce0 <col:38, line:118:5>
+          (BinaryOperator 0x2400cb8 <line:117:7, col:22> 'int' '='
+            (DeclRefExpr 0x2400c70 <col:7> 'int' lvalue Var 0x23ffe10 'doubleBuffer' 'int')
+            (IntegerLiteral 0x2400c98 <col:22> 'int' 0)))
+        (IfStmt 0x2400f88 <line:118:12, line:120:5>
+          (<<<NULL>>>)
+          (BinaryOperator 0x2400ed0 <line:118:16, col:42> 'int' '=='
+            (CallExpr 0x2400e18 <col:16, col:37> 'int'
+              (ImplicitCastExpr 0x2400e00 <col:16> 'int (*)(const char *, const char *)' <FunctionToPointerDecay>
+                (DeclRefExpr 0x2400d00 <col:16> 'int (const char *, const char *)' Function 0x23f23c0 'strcmp' 'int (const char *, const char *)'))
+              (ImplicitCastExpr 0x2400e68 <col:23, col:29> 'const char *' <BitCast>
+                (ImplicitCastExpr 0x2400e50 <col:23, col:29> 'char *' <LValueToRValue>
+                  (ArraySubscriptExpr 0x2400da8 <col:23, col:29> 'char *' lvalue
+                    (ImplicitCastExpr 0x2400d78 <col:23> 'char **' <LValueToRValue>
+                      (DeclRefExpr 0x2400d28 <col:23> 'char **' lvalue ParmVar 0x2400680 'argv' 'char **'))
+                    (ImplicitCastExpr 0x2400d90 <col:28> 'int' <LValueToRValue>
+                      (DeclRefExpr 0x2400d50 <col:28> 'int' lvalue Var 0x2400810 'i' 'int')))))
+              (ImplicitCastExpr 0x2400e98 <col:32> 'const char *' <BitCast>
+                (ImplicitCastExpr 0x2400e80 <col:32> 'char *' <ArrayToPointerDecay>
+                  (StringLiteral 0x2400dd0 <col:32> 'char [4]' lvalue "-db"))))
+            (IntegerLiteral 0x2400eb0 <col:42> 'int' 0))
+          (CompoundStmt 0x2400f68 <col:45, line:120:5>
+            (BinaryOperator 0x2400f40 <line:119:7, col:22> 'int' '='
+              (DeclRefExpr 0x2400ef8 <col:7> 'int' lvalue Var 0x23ffe10 'doubleBuffer' 'int')
+              (IntegerLiteral 0x2400f20 <col:22> 'int' 1)))
+          (<<<NULL>>>))))))
+
+
+int main(int argc, char **argv) (CompoundStmt 0x2401768 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Stenciltst.c:126:1, line:151:1>
+  (CallExpr 0x24016c0 <line:130:3, col:18> 'void'
+    (ImplicitCastExpr 0x24016a8 <col:3> 'void (*)(int, char **)' <FunctionToPointerDecay>
+      (DeclRefExpr 0x2401600 <col:3> 'void (int, char **)' Function 0x2400750 'Args' 'void (int, char **)'))
+    (ImplicitCastExpr 0x24016f8 <col:8> 'int' <LValueToRValue>
+      (DeclRefExpr 0x2401628 <col:8> 'int' lvalue ParmVar 0x2401090 'argc' 'int'))
+    (ImplicitCastExpr 0x2401710 <col:14> 'char **' <LValueToRValue>
+      (DeclRefExpr 0x2401650 <col:14> 'char **' lvalue ParmVar 0x2401480 'argv' 'char **')))
+  (ReturnStmt 0x2401748 <line:150:3, col:10>
+    (IntegerLiteral 0x2401728 <col:10> 'int' 0)))
+
+

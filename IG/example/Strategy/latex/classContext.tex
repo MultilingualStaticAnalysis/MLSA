@@ -1,0 +1,94 @@
+\hypertarget{classContext}{}\section{Context Class Reference}
+\label{classContext}\index{Context@{Context}}
+
+
+Collaboration diagram for Context\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classContext__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classContext_a4a38a1bd4ea50da0c91d8e5335467156}{Context} (\hyperlink{classStrategyInterface}{Strategy\+Interface} $\ast$strategy)
+\item 
+void \hyperlink{classContext_aac5a580be500769aac21a0d0a92ee902}{set\+\_\+strategy} (\hyperlink{classStrategyInterface}{Strategy\+Interface} $\ast$strategy)
+\item 
+void \hyperlink{classContext_a0f1e35fbff90abf753c54fbe5914805f}{execute} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classStrategyInterface}{Strategy\+Interface} $\ast$ \hyperlink{classContext_afbfabe689b09b6558cd8b40c25a7d04b}{strategy\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Context@{Context}!Context@{Context}}
+\index{Context@{Context}!Context@{Context}}
+\subsubsection[{\texorpdfstring{Context(\+Strategy\+Interface $\ast$strategy)}{Context(StrategyInterface *strategy)}}]{\setlength{\rightskip}{0pt plus 5cm}Context\+::\+Context (
+\begin{DoxyParamCaption}
+\item[{{\bf Strategy\+Interface} $\ast$}]{strategy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classContext_a4a38a1bd4ea50da0c91d8e5335467156}{}\label{classContext_a4a38a1bd4ea50da0c91d8e5335467156}
+
+\begin{DoxyCode}
+43                                                      :\hyperlink{classContext_afbfabe689b09b6558cd8b40c25a7d04b}{strategy\_}(strategy)
+44         \{
+45         \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Context@{Context}!execute@{execute}}
+\index{execute@{execute}!Context@{Context}}
+\subsubsection[{\texorpdfstring{execute() const }{execute() const }}]{\setlength{\rightskip}{0pt plus 5cm}void Context\+::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classContext_a0f1e35fbff90abf753c54fbe5914805f}{}\label{classContext_a0f1e35fbff90abf753c54fbe5914805f}
+
+\begin{DoxyCode}
+53         \{
+54             \hyperlink{classContext_afbfabe689b09b6558cd8b40c25a7d04b}{strategy\_}->\hyperlink{classStrategyInterface_a546e9e32a79d823262eb861919fd6653}{execute}();
+55         \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classContext_a0f1e35fbff90abf753c54fbe5914805f_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Context@{Context}!set\+\_\+strategy@{set\+\_\+strategy}}
+\index{set\+\_\+strategy@{set\+\_\+strategy}!Context@{Context}}
+\subsubsection[{\texorpdfstring{set\+\_\+strategy(\+Strategy\+Interface $\ast$strategy)}{set_strategy(StrategyInterface *strategy)}}]{\setlength{\rightskip}{0pt plus 5cm}void Context\+::set\+\_\+strategy (
+\begin{DoxyParamCaption}
+\item[{{\bf Strategy\+Interface} $\ast$}]{strategy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classContext_aac5a580be500769aac21a0d0a92ee902}{}\label{classContext_aac5a580be500769aac21a0d0a92ee902}
+
+\begin{DoxyCode}
+48         \{
+49             \hyperlink{classContext_afbfabe689b09b6558cd8b40c25a7d04b}{strategy\_} = strategy;
+50         \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Context@{Context}!strategy\+\_\+@{strategy\+\_\+}}
+\index{strategy\+\_\+@{strategy\+\_\+}!Context@{Context}}
+\subsubsection[{\texorpdfstring{strategy\+\_\+}{strategy_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Strategy\+Interface}$\ast$ Context\+::strategy\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classContext_afbfabe689b09b6558cd8b40c25a7d04b}{}\label{classContext_afbfabe689b09b6558cd8b40c25a7d04b}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Strategy_8cpp}{Strategy.\+cpp}\end{DoxyCompactItemize}

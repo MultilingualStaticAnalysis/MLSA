@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # MLSA Multilingual Software Analysis
 # This program is part of the MLSA package under development at Fordham University Department of Computer and Information Science.
 # <This program generates and solves the entry/exit lists for a given program>
@@ -15,12 +16,14 @@ import csv
 
 
 
+
 workList = []
 
 workSet = ()
 
 
 def getFV(killGenList):
+	#prettyPrint(killGenList)
 
 	FV = []
 	subFV1 = ()
@@ -29,7 +32,8 @@ def getFV(killGenList):
 
 	for index in killGenList:
 		duplicate = 0
-		scope = index[1]	
+		scope = index[1]
+		#print 'broh', scope	
 		varID = index[2]['Gen'][0]
 		for i in FV:
 			if varID == i:
@@ -49,7 +53,7 @@ def getFV(killGenList):
 def getGV(killGenList):
 	GV = []
 	for i in killGenList:
-		if i[1] == ('0', '-1'):
+		if i[1][1] == '-1':
 			GV.append(i)
 	return GV
 
@@ -63,10 +67,22 @@ def getInit(controlFlow):
 
 	return init
 
+def checkGlobLocation(controlFlow, statement, globVar):
+	#Get index of each
+	for indexCount, index in enumerate(controlFlow):
+		if statement == index[0]:
+			statementIndex = indexCount
+		if globVar[0] == index[0]:
+			globVarIndex = indexCount
+	if statementIndex > globVarIndex:
+		return True
+	else:
+		return False
+
 
 
 #Get entry set for a given line number, control flow graph, and kill/gen list
-def getEntry(lineNumber, controlFlow, FV, GV):
+def getEntry(statement, controlFlow, FV, GV):
 
 	#Definition of entry (for RDA):
 	
@@ -78,7 +94,7 @@ def getEntry(lineNumber, controlFlow, FV, GV):
 	#if the line number is anything else, then it composed of the exit lists for all lines that could have
 	# entered the line of interest
 
-	entry = ('RDentry', lineNumber)
+	entry = ('RDentry', statement)
 	entrySet = []
 	subSet1 = []
 	subSet2 = []
@@ -87,20 +103,27 @@ def getEntry(lineNumber, controlFlow, FV, GV):
 	
 	for index in controlFlow:
 		varFlag = False
-		if index[0] == lineNumber:
+		if index[0] == statement:
 			if index[0] in getInit(controlFlow):
 			
 				for var in FV:
+					#print var
 					#var[1][0] and var[1][1] represent the boundaries of the scope
-					if ((int(index[0]) == int(var[1][0])) or (int(index[0]) == int(var[1][1]))):
+					
+					if ((index[0] == var[1][2])):
 						var2 = (var[0], '?')
 						varFlag = True 
 						subSet1.append(var2)
 						entrySet = [entry, [subSet1], set()]
 
 				globCheck = False
+
+				
 				for globVar in GV[::-1]:
-					if int(index[0]) > int(globVar[0]):
+
+					
+					#Must replace this:
+					if checkGlobLocation(controlFlow, index[0], globVar):
 						varName = globVar[2]['Gen'][0]	
 						if varName not in GVused:
 							varVal = globVar[2]['Gen'][1]
@@ -126,7 +149,7 @@ def getEntry(lineNumber, controlFlow, FV, GV):
 	return entrySet
 	
 
-def getExit(lineNumber, controlFlow, killGenList):
+def getExit(statement, controlFlow, killGenList):
 	#Definition for exit (RDA):
 	
 	#if the line of interest has an assignment,
@@ -136,15 +159,15 @@ def getExit(lineNumber, controlFlow, killGenList):
 	# The order tells us that we Union the entry list, difference the kill list, 
 	# then union the gen list. 
 
-	exit = ('RDexit', lineNumber)
-	entry = ('RDentry', lineNumber)
+	exit = ('RDexit', statement)
+	entry = ('RDentry', statement)
 	subSet1 = []
 	exitSet = []
 	
 	varFlag = False
 
 	for index in killGenList:
-		if index[0] == lineNumber:
+		if index[0] == statement:
 			varFlag = True
 			kill = index[2]['Kill']
 			gen = index[2]['Gen']
@@ -417,18 +440,14 @@ def main(controlFlow, killGenList, outputFile):
 
 	#Initialize the entryExitList (before solving)
 	entryExitList = getEntryExitList(controlFlow, killGenList)
+
+
 	#Solve the initialied list
 	backSubstitueList(entryExitList)
 	#Output the solution to a file
 	writeCSV(entryExitList, outputFile)
 	#Return the solution
 	return entryExitList
-
-
-
-
-
-
 
 
 

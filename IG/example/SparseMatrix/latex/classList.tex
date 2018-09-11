@@ -1,0 +1,170 @@
+\hypertarget{classList}{}\section{List Class Reference}
+\label{classList}\index{List@{List}}
+
+
+Collaboration diagram for List\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classList__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classList_abff7b193d6391a5c5913be5fdc2c768f}{List} (int \hyperlink{classList_abfa64c9cd203a37cf5396b56777c8fc9}{index})
+\item 
+\hyperlink{classList_a64d878a92d11f7c63c70cbe4e7dd4176}{List} ()
+\item 
+void \hyperlink{classList_ae769414aa9a0fc3374df51f3b787c5e9}{store} (int \hyperlink{classList_abfa64c9cd203a37cf5396b56777c8fc9}{index}, int \hyperlink{classList_a481a3c1548a0e45daad6f2721f88c999}{value})
+\item 
+int \hyperlink{classList_a7c24ac131f6731a4909424cde96064d0}{fetch} (int \hyperlink{classList_abfa64c9cd203a37cf5396b56777c8fc9}{index})
+\item 
+int \hyperlink{classList_a5ee9aff9e61a566f7ce0ac9c6153cda5}{element\+Count} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classList_abfa64c9cd203a37cf5396b56777c8fc9}{index}
+\item 
+int \hyperlink{classList_a481a3c1548a0e45daad6f2721f88c999}{value}
+\item 
+\hyperlink{classList}{List} $\ast$ \hyperlink{classList_a09744c906650fff0fc8ca5130fd717b1}{nextindex}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{List@{List}!List@{List}}
+\index{List@{List}!List@{List}}
+\subsubsection[{\texorpdfstring{List(int index)}{List(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}List\+::\+List (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classList_abff7b193d6391a5c5913be5fdc2c768f}{}\label{classList_abff7b193d6391a5c5913be5fdc2c768f}
+
+\begin{DoxyCode}
+20         \{
+21             this->\hyperlink{classList_abfa64c9cd203a37cf5396b56777c8fc9}{index} = \hyperlink{classList_abfa64c9cd203a37cf5396b56777c8fc9}{index};
+22             \hyperlink{classList_a09744c906650fff0fc8ca5130fd717b1}{nextindex} = NULL;
+23             \hyperlink{classList_a481a3c1548a0e45daad6f2721f88c999}{value} = NULL;
+24         \}
+\end{DoxyCode}
+\index{List@{List}!List@{List}}
+\index{List@{List}!List@{List}}
+\subsubsection[{\texorpdfstring{List()}{List()}}]{\setlength{\rightskip}{0pt plus 5cm}List\+::\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classList_a64d878a92d11f7c63c70cbe4e7dd4176}{}\label{classList_a64d878a92d11f7c63c70cbe4e7dd4176}
+
+\begin{DoxyCode}
+26         \{
+27             \hyperlink{classList_abfa64c9cd203a37cf5396b56777c8fc9}{index} = -1;
+28             \hyperlink{classList_a481a3c1548a0e45daad6f2721f88c999}{value} = NULL;
+29             \hyperlink{classList_a09744c906650fff0fc8ca5130fd717b1}{nextindex} = NULL;
+30         \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{List@{List}!element\+Count@{element\+Count}}
+\index{element\+Count@{element\+Count}!List@{List}}
+\subsubsection[{\texorpdfstring{element\+Count()}{elementCount()}}]{\setlength{\rightskip}{0pt plus 5cm}int List\+::element\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classList_a5ee9aff9e61a566f7ce0ac9c6153cda5}{}\label{classList_a5ee9aff9e61a566f7ce0ac9c6153cda5}
+
+\begin{DoxyCode}
+79         \{
+80             \textcolor{keywordtype}{int} \hyperlink{classList_a5ee9aff9e61a566f7ce0ac9c6153cda5}{elementCount} = 0;
+81             \hyperlink{classList}{List} *current = this->\hyperlink{classList_a09744c906650fff0fc8ca5130fd717b1}{nextindex};
+82             \textcolor{keywordflow}{for} ( ; (current != NULL); current = current->\hyperlink{classList_a09744c906650fff0fc8ca5130fd717b1}{nextindex})
+83             \{
+84                 elementCount++;
+85             \}
+86             \textcolor{keywordflow}{return} \hyperlink{classList_a5ee9aff9e61a566f7ce0ac9c6153cda5}{elementCount};
+87         \}
+\end{DoxyCode}
+\index{List@{List}!fetch@{fetch}}
+\index{fetch@{fetch}!List@{List}}
+\subsubsection[{\texorpdfstring{fetch(int index)}{fetch(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}int List\+::fetch (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classList_a7c24ac131f6731a4909424cde96064d0}{}\label{classList_a7c24ac131f6731a4909424cde96064d0}
+
+\begin{DoxyCode}
+60         \{
+61             \hyperlink{classList}{List} *current = \textcolor{keyword}{this};
+62             \textcolor{keywordtype}{int} \hyperlink{classList_a481a3c1548a0e45daad6f2721f88c999}{value} = NULL;
+63             \textcolor{keywordflow}{while} (current != NULL && current->\hyperlink{classList_abfa64c9cd203a37cf5396b56777c8fc9}{index} != \hyperlink{classList_abfa64c9cd203a37cf5396b56777c8fc9}{index})
+64             \{
+65                 current = current->\hyperlink{classList_a09744c906650fff0fc8ca5130fd717b1}{nextindex};
+66             \}
+67             \textcolor{keywordflow}{if} (current != NULL)
+68             \{
+69                 value = current->\hyperlink{classList_a481a3c1548a0e45daad6f2721f88c999}{value};
+70             \} 
+71             \textcolor{keywordflow}{else}
+72             \{
+73                 value = NULL;
+74             \}
+75             \textcolor{keywordflow}{return} \hyperlink{classList_a481a3c1548a0e45daad6f2721f88c999}{value};
+76         \}
+\end{DoxyCode}
+\index{List@{List}!store@{store}}
+\index{store@{store}!List@{List}}
+\subsubsection[{\texorpdfstring{store(int index, int value)}{store(int index, int value)}}]{\setlength{\rightskip}{0pt plus 5cm}void List\+::store (
+\begin{DoxyParamCaption}
+\item[{int}]{index, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classList_ae769414aa9a0fc3374df51f3b787c5e9}{}\label{classList_ae769414aa9a0fc3374df51f3b787c5e9}
+
+\begin{DoxyCode}
+32         \{
+33             \hyperlink{classList}{List} *current = \textcolor{keyword}{this};
+34             \hyperlink{classList}{List} *previous = NULL;
+35             \hyperlink{classList}{List} *node = \textcolor{keyword}{new} \hyperlink{classList_a64d878a92d11f7c63c70cbe4e7dd4176}{List}(\hyperlink{classList_abfa64c9cd203a37cf5396b56777c8fc9}{index});
+36             node->\hyperlink{classList_a481a3c1548a0e45daad6f2721f88c999}{value} = \hyperlink{classList_a481a3c1548a0e45daad6f2721f88c999}{value};
+37             \textcolor{keywordflow}{while} (current != NULL && current->\hyperlink{classList_abfa64c9cd203a37cf5396b56777c8fc9}{index} < \hyperlink{classList_abfa64c9cd203a37cf5396b56777c8fc9}{index})
+38             \{
+39                 previous = current;
+40                 current = current->\hyperlink{classList_a09744c906650fff0fc8ca5130fd717b1}{nextindex};
+41             \}
+42             \textcolor{keywordflow}{if} (current == NULL)
+43             \{
+44                 previous->\hyperlink{classList_a09744c906650fff0fc8ca5130fd717b1}{nextindex} = node;
+45             \} 
+46             \textcolor{keywordflow}{else}
+47             \{
+48                 \textcolor{keywordflow}{if} (current->\hyperlink{classList_abfa64c9cd203a37cf5396b56777c8fc9}{index} == \hyperlink{classList_abfa64c9cd203a37cf5396b56777c8fc9}{index})
+49                 \{
+50                     cout<<\textcolor{stringliteral}{"DUPLICATE INDEX"}<<endl;
+51                     \textcolor{keywordflow}{return};
+52                 \}
+53                 previous->\hyperlink{classList_a09744c906650fff0fc8ca5130fd717b1}{nextindex} = node;
+54                 node->\hyperlink{classList_a09744c906650fff0fc8ca5130fd717b1}{nextindex} = current;
+55             \}
+56             \textcolor{keywordflow}{return};
+57         \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{List@{List}!index@{index}}
+\index{index@{index}!List@{List}}
+\subsubsection[{\texorpdfstring{index}{index}}]{\setlength{\rightskip}{0pt plus 5cm}int List\+::index\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classList_abfa64c9cd203a37cf5396b56777c8fc9}{}\label{classList_abfa64c9cd203a37cf5396b56777c8fc9}
+\index{List@{List}!nextindex@{nextindex}}
+\index{nextindex@{nextindex}!List@{List}}
+\subsubsection[{\texorpdfstring{nextindex}{nextindex}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List}$\ast$ List\+::nextindex\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classList_a09744c906650fff0fc8ca5130fd717b1}{}\label{classList_a09744c906650fff0fc8ca5130fd717b1}
+\index{List@{List}!value@{value}}
+\index{value@{value}!List@{List}}
+\subsubsection[{\texorpdfstring{value}{value}}]{\setlength{\rightskip}{0pt plus 5cm}int List\+::value\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classList_a481a3c1548a0e45daad6f2721f88c999}{}\label{classList_a481a3c1548a0e45daad6f2721f88c999}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{SparseMatrix_8cpp}{Sparse\+Matrix.\+cpp}\end{DoxyCompactItemize}

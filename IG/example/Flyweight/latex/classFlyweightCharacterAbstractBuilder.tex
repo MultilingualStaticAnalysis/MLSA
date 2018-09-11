@@ -1,0 +1,102 @@
+\hypertarget{classFlyweightCharacterAbstractBuilder}{}\section{Flyweight\+Character\+Abstract\+Builder Class Reference}
+\label{classFlyweightCharacterAbstractBuilder}\index{Flyweight\+Character\+Abstract\+Builder@{Flyweight\+Character\+Abstract\+Builder}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classFlyweightCharacterAbstractBuilder_ac5913cdc99a7af95a502d2665106a21f}{set\+Fonts\+And\+Names} ()
+\item 
+static \hyperlink{classFlyweightCharacter}{Flyweight\+Character} \hyperlink{classFlyweightCharacterAbstractBuilder_a06267194fa4fda26efc159c0e3b69762}{create\+Flyweight\+Character} (unsigned short font\+Size\+Index, unsigned short font\+Name\+Index, unsigned short position\+In\+Stream)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ float $>$ \hyperlink{classFlyweightCharacterAbstractBuilder_ad218358c55dae716e3ac08f453e5ab0a}{font\+Sizes}
+\item 
+static std\+::vector$<$ std\+::string $>$ \hyperlink{classFlyweightCharacterAbstractBuilder_a9b25dfdcb7fb87b00acb05616ba50dc2}{font\+Names}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFlyweightCharacterAbstractBuilder_a32d31a8c1a4d7987fef5273d86ec3f7c}{Flyweight\+Character\+Abstract\+Builder} ()
+\item 
+\hyperlink{classFlyweightCharacterAbstractBuilder_a0553f2afdf91ca5e4b7821c1e3895595}{$\sim$\+Flyweight\+Character\+Abstract\+Builder} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Flyweight\+Character\+Abstract\+Builder@{Flyweight\+Character\+Abstract\+Builder}!Flyweight\+Character\+Abstract\+Builder@{Flyweight\+Character\+Abstract\+Builder}}
+\index{Flyweight\+Character\+Abstract\+Builder@{Flyweight\+Character\+Abstract\+Builder}!Flyweight\+Character\+Abstract\+Builder@{Flyweight\+Character\+Abstract\+Builder}}
+\subsubsection[{\texorpdfstring{Flyweight\+Character\+Abstract\+Builder()}{FlyweightCharacterAbstractBuilder()}}]{\setlength{\rightskip}{0pt plus 5cm}Flyweight\+Character\+Abstract\+Builder\+::\+Flyweight\+Character\+Abstract\+Builder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classFlyweightCharacterAbstractBuilder_a32d31a8c1a4d7987fef5273d86ec3f7c}{}\label{classFlyweightCharacterAbstractBuilder_a32d31a8c1a4d7987fef5273d86ec3f7c}
+
+\begin{DoxyCode}
+16 \{\}
+\end{DoxyCode}
+\index{Flyweight\+Character\+Abstract\+Builder@{Flyweight\+Character\+Abstract\+Builder}!````~Flyweight\+Character\+Abstract\+Builder@{$\sim$\+Flyweight\+Character\+Abstract\+Builder}}
+\index{````~Flyweight\+Character\+Abstract\+Builder@{$\sim$\+Flyweight\+Character\+Abstract\+Builder}!Flyweight\+Character\+Abstract\+Builder@{Flyweight\+Character\+Abstract\+Builder}}
+\subsubsection[{\texorpdfstring{$\sim$\+Flyweight\+Character\+Abstract\+Builder()}{~FlyweightCharacterAbstractBuilder()}}]{\setlength{\rightskip}{0pt plus 5cm}Flyweight\+Character\+Abstract\+Builder\+::$\sim$\+Flyweight\+Character\+Abstract\+Builder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classFlyweightCharacterAbstractBuilder_a0553f2afdf91ca5e4b7821c1e3895595}{}\label{classFlyweightCharacterAbstractBuilder_a0553f2afdf91ca5e4b7821c1e3895595}
+
+\begin{DoxyCode}
+17 \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Flyweight\+Character\+Abstract\+Builder@{Flyweight\+Character\+Abstract\+Builder}!create\+Flyweight\+Character@{create\+Flyweight\+Character}}
+\index{create\+Flyweight\+Character@{create\+Flyweight\+Character}!Flyweight\+Character\+Abstract\+Builder@{Flyweight\+Character\+Abstract\+Builder}}
+\subsubsection[{\texorpdfstring{create\+Flyweight\+Character(unsigned short font\+Size\+Index, unsigned short font\+Name\+Index, unsigned short position\+In\+Stream)}{createFlyweightCharacter(unsigned short fontSizeIndex, unsigned short fontNameIndex, unsigned short positionInStream)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Flyweight\+Character} Flyweight\+Character\+Abstract\+Builder\+::create\+Flyweight\+Character (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{font\+Size\+Index, }
+\item[{unsigned short}]{font\+Name\+Index, }
+\item[{unsigned short}]{position\+In\+Stream}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classFlyweightCharacterAbstractBuilder_a06267194fa4fda26efc159c0e3b69762}{}\label{classFlyweightCharacterAbstractBuilder_a06267194fa4fda26efc159c0e3b69762}
+
+\begin{DoxyCode}
+58                                                                                                            
+                                                                     \{
+59     \hyperlink{classFlyweightCharacter}{FlyweightCharacter} fc(fontSizeIndex, fontNameIndex, positionInStream);
+60 
+61     \textcolor{keywordflow}{return} fc;
+62 \}
+\end{DoxyCode}
+\index{Flyweight\+Character\+Abstract\+Builder@{Flyweight\+Character\+Abstract\+Builder}!set\+Fonts\+And\+Names@{set\+Fonts\+And\+Names}}
+\index{set\+Fonts\+And\+Names@{set\+Fonts\+And\+Names}!Flyweight\+Character\+Abstract\+Builder@{Flyweight\+Character\+Abstract\+Builder}}
+\subsubsection[{\texorpdfstring{set\+Fonts\+And\+Names()}{setFontsAndNames()}}]{\setlength{\rightskip}{0pt plus 5cm}void Flyweight\+Character\+Abstract\+Builder\+::set\+Fonts\+And\+Names (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classFlyweightCharacterAbstractBuilder_ac5913cdc99a7af95a502d2665106a21f}{}\label{classFlyweightCharacterAbstractBuilder_ac5913cdc99a7af95a502d2665106a21f}
+
+\begin{DoxyCode}
+30                                                          \{
+31     \hyperlink{classFlyweightCharacterAbstractBuilder_ad218358c55dae716e3ac08f453e5ab0a}{fontSizes}[0] = 1.0;
+32     \hyperlink{classFlyweightCharacterAbstractBuilder_ad218358c55dae716e3ac08f453e5ab0a}{fontSizes}[1] = 1.5;
+33     \hyperlink{classFlyweightCharacterAbstractBuilder_ad218358c55dae716e3ac08f453e5ab0a}{fontSizes}[2] = 2.0;
+34 
+35     \hyperlink{classFlyweightCharacterAbstractBuilder_a9b25dfdcb7fb87b00acb05616ba50dc2}{fontNames}[0] = \textcolor{stringliteral}{"first\_font"};
+36     \hyperlink{classFlyweightCharacterAbstractBuilder_a9b25dfdcb7fb87b00acb05616ba50dc2}{fontNames}[1] = \textcolor{stringliteral}{"second\_font"};
+37     \hyperlink{classFlyweightCharacterAbstractBuilder_a9b25dfdcb7fb87b00acb05616ba50dc2}{fontNames}[2] = \textcolor{stringliteral}{"third\_font"};
+38 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Flyweight\+Character\+Abstract\+Builder@{Flyweight\+Character\+Abstract\+Builder}!font\+Names@{font\+Names}}
+\index{font\+Names@{font\+Names}!Flyweight\+Character\+Abstract\+Builder@{Flyweight\+Character\+Abstract\+Builder}}
+\subsubsection[{\texorpdfstring{font\+Names}{fontNames}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::string $>$ Flyweight\+Character\+Abstract\+Builder\+::font\+Names\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classFlyweightCharacterAbstractBuilder_a9b25dfdcb7fb87b00acb05616ba50dc2}{}\label{classFlyweightCharacterAbstractBuilder_a9b25dfdcb7fb87b00acb05616ba50dc2}
+\index{Flyweight\+Character\+Abstract\+Builder@{Flyweight\+Character\+Abstract\+Builder}!font\+Sizes@{font\+Sizes}}
+\index{font\+Sizes@{font\+Sizes}!Flyweight\+Character\+Abstract\+Builder@{Flyweight\+Character\+Abstract\+Builder}}
+\subsubsection[{\texorpdfstring{font\+Sizes}{fontSizes}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ float $>$ Flyweight\+Character\+Abstract\+Builder\+::font\+Sizes\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classFlyweightCharacterAbstractBuilder_ad218358c55dae716e3ac08f453e5ab0a}{}\label{classFlyweightCharacterAbstractBuilder_ad218358c55dae716e3ac08f453e5ab0a}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Flyweight_8cpp}{Flyweight.\+cpp}\end{DoxyCompactItemize}

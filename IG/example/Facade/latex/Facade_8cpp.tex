@@ -1,0 +1,59 @@
+\hypertarget{Facade_8cpp}{}\section{Facade.\+cpp File Reference}
+\label{Facade_8cpp}\index{Facade.\+cpp@{Facade.\+cpp}}
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for Facade.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{Facade_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classAlarm}{Alarm}
+\item 
+class \hyperlink{classAc}{Ac}
+\item 
+class \hyperlink{classTv}{Tv}
+\item 
+class \hyperlink{classHouseFacade}{House\+Facade}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Facade_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Facade.\+cpp@{Facade.\+cpp}!main@{main}}
+\index{main@{main}!Facade.\+cpp@{Facade.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Facade_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Facade_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+84 \{
+85     \hyperlink{classHouseFacade}{HouseFacade} hf;
+86 
+87     \textcolor{comment}{//Rather than calling 100 different on and off functions thanks to facade I only have 2 functions...}
+88     hf.\hyperlink{classHouseFacade_af62723fc617325d0ea4918349cb66dbb}{goToWork}();
+89     hf.\hyperlink{classHouseFacade_a806337202c3a039456a180777d034684}{comeHome}();
+90 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Facade_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

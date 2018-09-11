@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# MLSA Multilingual Software Analysis
+# This program is part of the MLSA package under development at Fordham University Department of Computer and Information Science.
 # pyViaC.py takes in the csv generated from functionChecker.py. The program checks through the csv file to determine if a python program has been called from the C program (through PyRun_SimpleFile). If so, the Python file name is found and replaces the API (PyRun_SimpleFile) in the csv file
 # Author: Anne Marie Bogar
 # Date: July 11, 2017

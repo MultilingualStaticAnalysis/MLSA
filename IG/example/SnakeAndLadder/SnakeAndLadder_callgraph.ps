@@ -1,0 +1,7381 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.38.0 (20140413.2041)
+%%Title: /home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder Call Graph
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 150 150 754 3150
+%%PageOrientation: Portrait
+<< /PageSize [754 3150] >> setpagedevice
+0 0 1 beginpage
+gsave
+150 150 604 3000 boxprim clip newpath
+0.195365 0.195365 set_scale 0 rotate 771.796 771.796 translate
+[ /CropBox [150 150 754 3150] /PAGES pdfmark
+0 0 0 graphcolor
+14 /Times-Roman set_font
+1340.01 7.8 moveto 404 (/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder Call Graph) alignedtext
+% Node0x636370238
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+310.67 9612.07 310.84 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+79.67 9608.37 moveto 462 (/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp) alignedtext
+grestore
+% Node0x527060824
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1049.79 9612.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+780.29 9615.87 moveto 539 (0x2922b90. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1027.29 9600.87 moveto 45 (sohaib\(\)) alignedtext
+grestore
+% Node0x636370238->Node0x527060824
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 621.61 9612.07 moveto
+630.1 9612.07 638.63 9612.07 647.18 9612.07 curveto
+stroke
+0 0 0 edgecolor
+newpath 647.24 9615.57 moveto
+657.24 9612.07 lineto
+647.24 9608.57 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 647.24 9615.57 moveto
+657.24 9612.07 lineto
+647.24 9608.57 lineto
+closepath stroke
+grestore
+% Node0x557708556
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1870.68 11538.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1601.18 11541.87 moveto 539 (0x2924228. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1830.18 11526.87 moveto 81 (dice::rolldice\(\)) alignedtext
+grestore
+% Node0x527060824->Node0x557708556
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1062.21 9638.93 moveto
+1152.46 9851.2 1749.91 11256.38 1854.17 11501.6 curveto
+stroke
+0 0 0 edgecolor
+newpath 1851.09 11503.29 moveto
+1858.22 11511.12 lineto
+1857.53 11500.55 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1851.09 11503.29 moveto
+1858.22 11511.12 lineto
+1857.53 11500.55 lineto
+closepath stroke
+grestore
+% Node0x259732810
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1870.68 7686.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1601.68 7689.87 moveto 538 (0x29244a0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1819.68 7674.87 moveto 102 (graph\(y, one, two\)) alignedtext
+grestore
+% Node0x527060824->Node0x259732810
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1062.21 9585.21 moveto
+1152.46 9372.94 1749.91 7967.77 1854.17 7722.54 curveto
+stroke
+0 0 0 edgecolor
+newpath 1857.53 7723.59 moveto
+1858.22 7713.02 lineto
+1851.09 7720.85 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1857.53 7723.59 moveto
+1858.22 7713.02 lineto
+1851.09 7720.85 lineto
+closepath stroke
+grestore
+% Node0x995290322
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 15318.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 15321.87 moveto 539 (0x2920840. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2674.57 15306.87 moveto 34 (rand\(\)) alignedtext
+grestore
+% Node0x557708556->Node0x995290322
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.73 11565.39 moveto
+1885.53 11890.07 2015.46 15004.57 2299.12 15282.07 curveto
+2365.29 15346.8 2471.22 15353.05 2556.21 15344.61 curveto
+stroke
+0 0 0 edgecolor
+newpath 2556.63 15348.09 moveto
+2566.2 15343.54 lineto
+2555.89 15341.13 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2556.63 15348.09 moveto
+2566.2 15343.54 lineto
+2555.89 15341.13 lineto
+closepath stroke
+grestore
+% Node0x906718683
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 15246.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 15249.87 moveto 539 (0x2933190. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2618.07 15234.87 moveto 147 (ladder\(392, 214, 566, 286\)) alignedtext
+grestore
+% Node0x259732810->Node0x906718683
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.45 7713.3 moveto
+1910.12 7964.99 2174.09 9912.88 2263.12 11502.07 curveto
+2266 11553.49 2264.23 15172.19 2299.12 15210.07 curveto
+2365.24 15281.85 2479.62 15284.67 2567.72 15273.18 curveto
+stroke
+0 0 0 edgecolor
+newpath 2568.36 15276.63 moveto
+2577.78 15271.79 lineto
+2567.4 15269.69 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2568.36 15276.63 moveto
+2577.78 15271.79 lineto
+2567.4 15269.69 lineto
+closepath stroke
+grestore
+% Node0x979645021
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 15174.07 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.07 15177.87 moveto 537 (0x29332f0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2618.07 15162.87 moveto 147 (ladder\(218, 142, 276, 166\)) alignedtext
+grestore
+% Node0x259732810->Node0x979645021
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.45 7713.3 moveto
+1910.1 7964.99 2173.94 9912.89 2263.12 11502.07 curveto
+2265.95 11552.5 2264.9 15100.93 2299.12 15138.07 curveto
+2365.24 15209.84 2479.62 15212.67 2567.72 15201.18 curveto
+stroke
+0 0 0 edgecolor
+newpath 2568.36 15204.62 moveto
+2577.79 15199.79 lineto
+2567.4 15197.69 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2568.36 15204.62 moveto
+2577.79 15199.79 lineto
+2567.4 15197.69 lineto
+closepath stroke
+grestore
+% Node0x909037466
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 15102.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 15105.87 moveto 539 (0x2933450. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2621.57 15090.87 moveto 140 (ladder\(44, 166, 218, 238\)) alignedtext
+grestore
+% Node0x259732810->Node0x909037466
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.44 7713.3 moveto
+1910.07 7964.99 2173.78 9912.9 2263.12 11502.07 curveto
+2265.9 11551.5 2265.58 15029.67 2299.12 15066.07 curveto
+2365.14 15137.71 2479.25 15140.65 2567.28 15129.23 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.91 15132.68 moveto
+2577.34 15127.85 lineto
+2566.96 15125.74 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.91 15132.68 moveto
+2577.34 15127.85 lineto
+2566.96 15125.74 lineto
+closepath stroke
+grestore
+% Node0x476818116
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 15030.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 15033.87 moveto 539 (0x29335b0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2618.07 15018.87 moveto 147 (ladder\(160, 190, 450, 166\)) alignedtext
+grestore
+% Node0x259732810->Node0x476818116
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.44 7713.3 moveto
+1910.05 7965 2173.61 9912.91 2263.12 11502.07 curveto
+2265.85 11550.5 2266.25 14958.41 2299.12 14994.07 curveto
+2365.15 15065.7 2479.25 15068.64 2567.29 15057.23 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.91 15060.67 moveto
+2577.35 15055.85 lineto
+2566.96 15053.74 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.91 15060.67 moveto
+2577.35 15055.85 lineto
+2566.96 15053.74 lineto
+closepath stroke
+grestore
+% Node0x344662174
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 14958.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 14961.87 moveto 539 (0x2933710. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2625.07 14946.87 moveto 133 (ladder\(450, 70, 450, 94\)) alignedtext
+grestore
+% Node0x259732810->Node0x344662174
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.44 7713.3 moveto
+1910.03 7965 2173.44 9912.92 2263.12 11502.07 curveto
+2265.8 11549.5 2266.92 14887.15 2299.12 14922.07 curveto
+2365.16 14993.7 2479.26 14996.64 2567.29 14985.22 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.92 14988.67 moveto
+2577.35 14983.84 lineto
+2566.97 14981.73 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.92 14988.67 moveto
+2577.35 14983.84 lineto
+2566.97 14981.73 lineto
+closepath stroke
+grestore
+% Node0x466825714
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 14886.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 14889.87 moveto 539 (0x2933870. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2623.07 14874.87 moveto 137 (snake\(508, 70, 556, 238\)) alignedtext
+grestore
+% Node0x259732810->Node0x466825714
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.44 7713.3 moveto
+1910.01 7965 2173.26 9912.93 2263.12 11502.07 curveto
+2265.75 11548.5 2267.6 14815.89 2299.12 14850.07 curveto
+2365.16 14921.69 2479.27 14924.63 2567.3 14913.22 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.92 14916.66 moveto
+2577.35 14911.84 lineto
+2566.97 14909.73 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.92 14916.66 moveto
+2577.35 14911.84 lineto
+2566.97 14909.73 lineto
+closepath stroke
+grestore
+% Node0x541271911
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 14814.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 14817.87 moveto 539 (0x29339d0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2619.57 14802.87 moveto 144 (snake\(334, 166, 334, 238\)) alignedtext
+grestore
+% Node0x259732810->Node0x541271911
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.44 7713.3 moveto
+1909.98 7965 2173.07 9912.94 2263.12 11502.07 curveto
+2265.7 11547.5 2268.27 14744.62 2299.12 14778.07 curveto
+2365.17 14849.68 2479.27 14852.62 2567.3 14841.21 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.93 14844.66 moveto
+2577.36 14839.83 lineto
+2566.98 14837.73 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.93 14844.66 moveto
+2577.36 14839.83 lineto
+2566.98 14837.73 lineto
+closepath stroke
+grestore
+% Node0x332335239
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 14742.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 14745.87 moveto 539 (0x2933b30. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2619.57 14730.87 moveto 144 (snake\(392, 118, 102, 166\)) alignedtext
+grestore
+% Node0x259732810->Node0x332335239
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.43 7713.3 moveto
+1909.95 7965 2172.88 9912.95 2263.12 11502.07 curveto
+2265.65 11546.5 2268.94 14673.36 2299.12 14706.07 curveto
+2365.18 14777.67 2479.28 14780.62 2567.31 14769.21 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.93 14772.66 moveto
+2577.36 14767.83 lineto
+2566.98 14765.72 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.93 14772.66 moveto
+2577.36 14767.83 lineto
+2566.98 14765.72 lineto
+closepath stroke
+grestore
+% Node0x522035589
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 14670.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 14673.87 moveto 538 (0x2933c90. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2619.57 14658.87 moveto 144 (snake\(450, 238, 160, 262\)) alignedtext
+grestore
+% Node0x259732810->Node0x522035589
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.43 7713.3 moveto
+1909.93 7965 2172.67 9912.96 2263.12 11502.07 curveto
+2265.59 11545.5 2269.62 14602.1 2299.12 14634.07 curveto
+2365.19 14705.67 2479.29 14708.61 2567.31 14697.2 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.94 14700.65 moveto
+2577.37 14695.82 lineto
+2566.99 14693.72 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.94 14700.65 moveto
+2577.37 14695.82 lineto
+2566.99 14693.72 lineto
+closepath stroke
+grestore
+% Node0x917260714
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 14598.07 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.07 14601.87 moveto 537 (0x2933df0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2619.57 14586.87 moveto 144 (snake\(508, 142, 508, 214\)) alignedtext
+grestore
+% Node0x259732810->Node0x917260714
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.43 7713.3 moveto
+1909.9 7965 2172.46 9912.97 2263.12 11502.07 curveto
+2265.54 11544.51 2270.29 14530.84 2299.12 14562.07 curveto
+2365.2 14633.66 2479.3 14636.6 2567.32 14625.2 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.94 14628.65 moveto
+2577.37 14623.82 lineto
+2566.99 14621.71 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.94 14628.65 moveto
+2577.37 14623.82 lineto
+2566.99 14621.71 lineto
+closepath stroke
+grestore
+% Node0x621107459
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 14526.07 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.07 14529.87 moveto 537 (0x2933f50. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 14514.87 moveto 77 (cp1\(515, 310\)) alignedtext
+grestore
+% Node0x259732810->Node0x621107459
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.42 7713.3 moveto
+1909.87 7965.01 2172.23 9912.99 2263.12 11502.07 curveto
+2265.49 11543.51 2270.97 14459.58 2299.12 14490.07 curveto
+2365.21 14561.65 2479.31 14564.59 2567.32 14553.19 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.95 14556.64 moveto
+2577.38 14551.81 lineto
+2567 14549.7 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.95 14556.64 moveto
+2577.38 14551.81 lineto
+2567 14549.7 lineto
+closepath stroke
+grestore
+% Node0x121032026
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 14454.07 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.07 14457.87 moveto 537 (0x29341f8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 14442.87 moveto 77 (cp2\(515, 330\)) alignedtext
+grestore
+% Node0x259732810->Node0x121032026
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.42 7713.3 moveto
+1909.84 7965.01 2171.99 9913 2263.12 11502.07 curveto
+2265.44 11542.51 2271.64 14388.32 2299.12 14418.07 curveto
+2365.22 14489.64 2479.32 14492.58 2567.33 14481.19 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.95 14484.63 moveto
+2577.39 14479.81 lineto
+2567 14477.7 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.95 14484.63 moveto
+2577.39 14479.81 lineto
+2567 14477.7 lineto
+closepath stroke
+grestore
+% Node0x315364304
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 14382.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 14385.87 moveto 538 (0x29344a8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 14370.87 moveto 70 (cp1\(44, 286\)) alignedtext
+grestore
+% Node0x259732810->Node0x315364304
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.42 7713.3 moveto
+1909.8 7965.01 2171.75 9913.01 2263.12 11502.07 curveto
+2265.39 11541.51 2272.31 14317.06 2299.12 14346.07 curveto
+2365.23 14417.63 2479.33 14420.58 2567.34 14409.18 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.96 14412.63 moveto
+2577.39 14407.8 lineto
+2567.01 14405.69 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.96 14412.63 moveto
+2577.39 14407.8 lineto
+2567.01 14405.69 lineto
+closepath stroke
+grestore
+% Node0x916428320
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 14310.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 14313.87 moveto 539 (0x2934690. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 14298.87 moveto 77 (cp1\(102, 286\)) alignedtext
+grestore
+% Node0x259732810->Node0x916428320
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.41 7713.3 moveto
+1909.77 7965.01 2171.48 9913.03 2263.12 11502.07 curveto
+2265.34 11540.51 2272.99 14245.8 2299.12 14274.07 curveto
+2365.24 14345.62 2479.34 14348.57 2567.34 14337.17 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.97 14340.62 moveto
+2577.4 14335.8 lineto
+2567.02 14333.69 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.97 14340.62 moveto
+2577.4 14335.8 lineto
+2567.02 14333.69 lineto
+closepath stroke
+grestore
+% Node0x314121143
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 14238.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 14241.87 moveto 539 (0x2934878. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 14226.87 moveto 77 (cp1\(160, 286\)) alignedtext
+grestore
+% Node0x259732810->Node0x314121143
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.41 7713.3 moveto
+1909.73 7965.01 2171.21 9913.04 2263.12 11502.07 curveto
+2265.29 11539.51 2273.66 14174.53 2299.12 14202.07 curveto
+2365.26 14273.6 2479.35 14276.56 2567.35 14265.17 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.97 14268.62 moveto
+2577.41 14263.79 lineto
+2567.02 14261.68 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.97 14268.62 moveto
+2577.41 14263.79 lineto
+2567.02 14261.68 lineto
+closepath stroke
+grestore
+% Node0x970849661
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 14166.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 14169.87 moveto 538 (0x2934a60. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 14154.87 moveto 77 (cp1\(218, 286\)) alignedtext
+grestore
+% Node0x259732810->Node0x970849661
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.41 7713.3 moveto
+1909.69 7965.02 2170.92 9913.06 2263.12 11502.07 curveto
+2267.35 11574.96 2249.55 14076.47 2299.12 14130.07 curveto
+2365.27 14201.59 2479.36 14204.55 2567.36 14193.16 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.98 14196.61 moveto
+2577.41 14191.78 lineto
+2567.03 14189.67 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.98 14196.61 moveto
+2577.41 14191.78 lineto
+2567.03 14189.67 lineto
+closepath stroke
+grestore
+% Node0x116936266
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 14094.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 14097.87 moveto 538 (0x2934c48. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 14082.87 moveto 77 (cp1\(276, 286\)) alignedtext
+grestore
+% Node0x259732810->Node0x116936266
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.4 7713.3 moveto
+1909.65 7965.02 2170.61 9913.08 2263.12 11502.07 curveto
+2267.25 11572.96 2250.9 14005.95 2299.12 14058.07 curveto
+2365.28 14129.58 2479.37 14132.53 2567.37 14121.15 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.99 14124.6 moveto
+2577.42 14119.78 lineto
+2567.04 14117.67 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.99 14124.6 moveto
+2577.42 14119.78 lineto
+2567.04 14117.67 lineto
+closepath stroke
+grestore
+% Node0x635147504
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 14022.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 14025.87 moveto 538 (0x2934e48. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 14010.87 moveto 77 (cp1\(334, 286\)) alignedtext
+grestore
+% Node0x259732810->Node0x635147504
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.4 7713.3 moveto
+1909.61 7965.02 2170.29 9913.1 2263.12 11502.07 curveto
+2267.15 11570.96 2252.25 13935.43 2299.12 13986.07 curveto
+2365.19 14057.45 2479 14060.51 2566.93 14049.2 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.54 14052.65 moveto
+2576.98 14047.83 lineto
+2566.6 14045.72 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.54 14052.65 moveto
+2576.98 14047.83 lineto
+2566.6 14045.72 lineto
+closepath stroke
+grestore
+% Node0x801978216
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 13950.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 13953.87 moveto 539 (0x2935030. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 13938.87 moveto 77 (cp1\(392, 286\)) alignedtext
+grestore
+% Node0x259732810->Node0x801978216
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.39 7713.3 moveto
+1909.57 7965.02 2169.95 9913.12 2263.12 11502.07 curveto
+2267.04 11568.96 2253.59 13864.91 2299.12 13914.07 curveto
+2365.2 13985.43 2479.01 13988.5 2566.94 13977.19 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.55 13980.64 moveto
+2576.99 13975.83 lineto
+2566.6 13973.71 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.55 13980.64 moveto
+2576.99 13975.83 lineto
+2566.6 13973.71 lineto
+closepath stroke
+grestore
+% Node0x856108059
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 13878.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 13881.87 moveto 539 (0x2935218. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 13866.87 moveto 77 (cp1\(450, 286\)) alignedtext
+grestore
+% Node0x259732810->Node0x856108059
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.39 7713.3 moveto
+1909.52 7965.03 2169.58 9913.14 2263.12 11502.07 curveto
+2266.94 11566.97 2254.94 13794.38 2299.12 13842.07 curveto
+2365.22 13913.42 2479.03 13916.49 2566.95 13905.19 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.56 13908.63 moveto
+2576.99 13903.82 lineto
+2566.61 13901.7 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.56 13908.63 moveto
+2576.99 13903.82 lineto
+2566.61 13901.7 lineto
+closepath stroke
+grestore
+% Node0x516339700
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 13806.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 13809.87 moveto 539 (0x2935400. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 13794.87 moveto 77 (cp1\(508, 286\)) alignedtext
+grestore
+% Node0x259732810->Node0x516339700
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.38 7713.3 moveto
+1909.47 7965.03 2169.19 9913.16 2263.12 11502.07 curveto
+2266.84 11564.97 2256.29 13723.86 2299.12 13770.07 curveto
+2365.24 13841.4 2479.04 13844.47 2566.96 13833.18 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.57 13836.63 moveto
+2577 13831.81 lineto
+2566.62 13829.69 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.57 13836.63 moveto
+2577 13831.81 lineto
+2566.62 13829.69 lineto
+closepath stroke
+grestore
+% Node0x591946267
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 13734.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 13737.87 moveto 538 (0x29355e8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 13722.87 moveto 77 (cp1\(566, 286\)) alignedtext
+grestore
+% Node0x259732810->Node0x591946267
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.38 7713.3 moveto
+1909.41 7965.03 2168.78 9913.19 2263.12 11502.07 curveto
+2266.74 11562.97 2257.64 13653.34 2299.12 13698.07 curveto
+2365.25 13769.38 2479.06 13772.46 2566.97 13761.17 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.58 13764.62 moveto
+2577.01 13759.8 lineto
+2566.63 13757.68 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.58 13764.62 moveto
+2577.01 13759.8 lineto
+2566.63 13757.68 lineto
+closepath stroke
+grestore
+% Node0x605055007
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 13662.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 13665.87 moveto 539 (0x29357d0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 13650.87 moveto 70 (cp1\(44, 262\)) alignedtext
+grestore
+% Node0x259732810->Node0x605055007
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.37 7713.3 moveto
+1909.35 7965.04 2168.34 9913.21 2263.12 11502.07 curveto
+2266.64 11560.98 2258.99 13582.82 2299.12 13626.07 curveto
+2365.27 13697.36 2479.08 13700.44 2566.98 13689.15 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.59 13692.6 moveto
+2577.03 13687.79 lineto
+2566.64 13685.67 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.59 13692.6 moveto
+2577.03 13687.79 lineto
+2566.64 13685.67 lineto
+closepath stroke
+grestore
+% Node0x101576878
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 13590.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 13593.87 moveto 539 (0x29359b8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 13578.87 moveto 77 (cp1\(102, 262\)) alignedtext
+grestore
+% Node0x259732810->Node0x101576878
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.37 7713.3 moveto
+1909.29 7965.04 2167.87 9913.24 2263.12 11502.07 curveto
+2266.53 11558.98 2260.33 13512.29 2299.12 13554.07 curveto
+2365.3 13625.34 2479.1 13628.42 2566.99 13617.14 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.6 13620.59 moveto
+2577.04 13615.78 lineto
+2566.66 13613.66 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.6 13620.59 moveto
+2577.04 13615.78 lineto
+2566.66 13613.66 lineto
+closepath stroke
+grestore
+% Node0x334626942
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 13518.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 13521.87 moveto 538 (0x2935ba0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 13506.87 moveto 77 (cp1\(160, 262\)) alignedtext
+grestore
+% Node0x259732810->Node0x334626942
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.36 7713.3 moveto
+1909.22 7965.04 2167.36 9913.27 2263.12 11502.07 curveto
+2266.43 11556.98 2261.68 13441.77 2299.12 13482.07 curveto
+2365.21 13553.2 2478.73 13556.39 2566.56 13545.19 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.16 13548.64 moveto
+2576.6 13543.83 lineto
+2566.22 13541.7 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.16 13548.64 moveto
+2576.6 13543.83 lineto
+2566.22 13541.7 lineto
+closepath stroke
+grestore
+% Node0x690766842
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 13446.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 13449.87 moveto 539 (0x2935d88. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 13434.87 moveto 77 (cp1\(218, 262\)) alignedtext
+grestore
+% Node0x259732810->Node0x690766842
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.35 7713.3 moveto
+1909.15 7965.05 2166.81 9913.3 2263.12 11502.07 curveto
+2266.33 11554.98 2263.03 13371.25 2299.12 13410.07 curveto
+2365.23 13481.18 2478.75 13484.37 2566.58 13473.17 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.17 13476.63 moveto
+2576.61 13471.82 lineto
+2566.23 13469.69 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.17 13476.63 moveto
+2576.61 13471.82 lineto
+2566.23 13469.69 lineto
+closepath stroke
+grestore
+% Node0x933218533
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 13374.07 390.15 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.57 13377.87 moveto 536 (0x2935fa0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 13362.87 moveto 77 (cp1\(276, 262\)) alignedtext
+grestore
+% Node0x259732810->Node0x933218533
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.35 7713.3 moveto
+1909.07 7965.05 2166.23 9913.34 2263.12 11502.07 curveto
+2266.23 11552.99 2264.38 13300.73 2299.12 13338.07 curveto
+2365.26 13409.16 2478.78 13412.35 2566.59 13401.16 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.18 13404.61 moveto
+2576.63 13399.8 lineto
+2566.25 13397.67 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.18 13404.61 moveto
+2576.63 13399.8 lineto
+2566.25 13397.67 lineto
+closepath stroke
+grestore
+% Node0x473559044
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 13302.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 13305.87 moveto 539 (0x2936188. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 13290.87 moveto 77 (cp1\(334, 262\)) alignedtext
+grestore
+% Node0x259732810->Node0x473559044
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.34 7713.3 moveto
+1908.99 7965.06 2165.59 9913.38 2263.12 11502.07 curveto
+2266.13 11550.99 2265.72 13230.2 2299.12 13266.07 curveto
+2365.29 13337.13 2478.8 13340.33 2566.61 13329.14 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.2 13332.6 moveto
+2576.64 13327.79 lineto
+2566.26 13325.66 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.2 13332.6 moveto
+2576.64 13327.79 lineto
+2566.26 13325.66 lineto
+closepath stroke
+grestore
+% Node0x680297861
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 13230.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 13233.87 moveto 539 (0x2936370. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 13218.87 moveto 77 (cp1\(392, 262\)) alignedtext
+grestore
+% Node0x259732810->Node0x680297861
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.33 7713.3 moveto
+1908.9 7965.06 2164.9 9913.42 2263.12 11502.07 curveto
+2266.02 11548.99 2267.07 13159.68 2299.12 13194.07 curveto
+2365.32 13265.1 2478.83 13268.3 2566.63 13257.13 curveto
+stroke
+0 0 0 edgecolor
+newpath 2567.22 13260.58 moveto
+2576.66 13255.77 lineto
+2566.28 13253.64 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2567.22 13260.58 moveto
+2576.66 13255.77 lineto
+2566.28 13253.64 lineto
+closepath stroke
+grestore
+% Node0x517685481
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 13158.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 13161.87 moveto 539 (0x2936558. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 13146.87 moveto 77 (cp1\(450, 262\)) alignedtext
+grestore
+% Node0x259732810->Node0x517685481
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.32 7713.3 moveto
+1908.8 7965.07 2164.15 9913.47 2263.12 11502.07 curveto
+2265.92 11547 2268.42 13089.16 2299.12 13122.07 curveto
+2365.24 13192.95 2478.48 13196.26 2566.2 13185.17 curveto
+stroke
+0 0 0 edgecolor
+newpath 2566.78 13188.62 moveto
+2576.23 13183.82 lineto
+2565.85 13181.68 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2566.78 13188.62 moveto
+2576.23 13183.82 lineto
+2565.85 13181.68 lineto
+closepath stroke
+grestore
+% Node0x554219882
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 13086.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 13089.87 moveto 539 (0x2936740. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 13074.87 moveto 77 (cp1\(508, 262\)) alignedtext
+grestore
+% Node0x259732810->Node0x554219882
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.31 7713.31 moveto
+1908.69 7965.08 2163.33 9913.52 2263.12 11502.07 curveto
+2265.82 11545 2269.77 13018.64 2299.12 13050.07 curveto
+2365.27 13120.92 2478.51 13124.23 2566.22 13113.14 curveto
+stroke
+0 0 0 edgecolor
+newpath 2566.8 13116.6 moveto
+2576.25 13111.8 lineto
+2565.87 13109.66 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2566.8 13116.6 moveto
+2576.25 13111.8 lineto
+2565.87 13109.66 lineto
+closepath stroke
+grestore
+% Node0x523691705
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 13014.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 13017.87 moveto 539 (0x2936928. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 13002.87 moveto 77 (cp1\(566, 262\)) alignedtext
+grestore
+% Node0x259732810->Node0x523691705
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.29 7713.31 moveto
+1908.57 7965.08 2162.43 9913.58 2263.12 11502.07 curveto
+2265.72 11543 2271.11 12948.11 2299.12 12978.07 curveto
+2365.31 13048.88 2478.54 13052.2 2566.25 13041.12 curveto
+stroke
+0 0 0 edgecolor
+newpath 2566.82 13044.58 moveto
+2576.27 13039.78 lineto
+2565.89 13037.64 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2566.82 13044.58 moveto
+2576.27 13039.78 lineto
+2565.89 13037.64 lineto
+closepath stroke
+grestore
+% Node0x154022421
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 12942.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 12945.87 moveto 539 (0x2936b10. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 12930.87 moveto 70 (cp1\(44, 238\)) alignedtext
+grestore
+% Node0x259732810->Node0x154022421
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.28 7713.31 moveto
+1908.44 7965.09 2161.44 9913.64 2263.12 11502.07 curveto
+2265.61 11541.01 2272.46 12877.59 2299.12 12906.07 curveto
+2365.36 12976.84 2478.58 12980.16 2566.27 12969.1 curveto
+stroke
+0 0 0 edgecolor
+newpath 2566.85 12972.55 moveto
+2576.29 12967.76 lineto
+2565.92 12965.61 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2566.85 12972.55 moveto
+2576.29 12967.76 lineto
+2565.92 12965.61 lineto
+closepath stroke
+grestore
+% Node0x754359404
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 12870.07 390.15 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.57 12873.87 moveto 536 (0x2936cf8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 12858.87 moveto 77 (cp1\(102, 238\)) alignedtext
+grestore
+% Node0x259732810->Node0x754359404
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.27 7713.31 moveto
+1908.29 7965.1 2160.34 9913.71 2263.12 11502.07 curveto
+2267.9 11575.94 2248.5 12780.06 2299.12 12834.07 curveto
+2365.3 12904.67 2478.24 12908.11 2565.86 12897.13 curveto
+stroke
+0 0 0 edgecolor
+newpath 2566.42 12900.58 moveto
+2575.87 12895.8 lineto
+2565.49 12893.64 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2566.42 12900.58 moveto
+2575.87 12895.8 lineto
+2565.49 12893.64 lineto
+closepath stroke
+grestore
+% Node0x961395789
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 12798.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 12801.87 moveto 539 (0x2937138. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 12786.87 moveto 77 (cp1\(160, 238\)) alignedtext
+grestore
+% Node0x259732810->Node0x961395789
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.25 7713.31 moveto
+1908.13 7965.11 2159.11 9913.79 2263.12 11502.07 curveto
+2267.7 11571.95 2251.19 12711.02 2299.12 12762.07 curveto
+2365.35 12832.62 2478.29 12836.06 2565.89 12825.1 curveto
+stroke
+0 0 0 edgecolor
+newpath 2566.45 12828.55 moveto
+2575.9 12823.77 lineto
+2565.53 12821.61 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2566.45 12828.55 moveto
+2575.9 12823.77 lineto
+2565.53 12821.61 lineto
+closepath stroke
+grestore
+% Node0x233802592
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 12726.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 12729.87 moveto 539 (0x2937320. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 12714.87 moveto 77 (cp1\(218, 238\)) alignedtext
+grestore
+% Node0x259732810->Node0x233802592
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.23 7713.31 moveto
+1907.94 7965.13 2157.74 9913.88 2263.12 11502.07 curveto
+2267.49 11567.96 2253.89 12641.97 2299.12 12690.07 curveto
+2365.3 12760.44 2477.96 12764 2565.48 12753.12 curveto
+stroke
+0 0 0 edgecolor
+newpath 2566.02 12756.58 moveto
+2575.48 12751.8 lineto
+2565.11 12749.64 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2566.02 12756.58 moveto
+2575.48 12751.8 lineto
+2565.11 12749.64 lineto
+closepath stroke
+grestore
+% Node0x509064084
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 12654.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 12657.87 moveto 539 (0x2937508. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 12642.87 moveto 77 (cp1\(276, 238\)) alignedtext
+grestore
+% Node0x259732810->Node0x509064084
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.21 7713.31 moveto
+1907.74 7965.14 2156.19 9913.98 2263.12 11502.07 curveto
+2267.29 11563.96 2256.58 12572.92 2299.12 12618.07 curveto
+2365.37 12688.38 2478.02 12691.94 2565.52 12681.08 curveto
+stroke
+0 0 0 edgecolor
+newpath 2566.06 12684.54 moveto
+2575.52 12679.76 lineto
+2565.15 12677.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2566.06 12684.54 moveto
+2575.52 12679.76 lineto
+2565.15 12677.6 lineto
+closepath stroke
+grestore
+% Node0x416022588
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 12582.07 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.07 12585.87 moveto 537 (0x29376f0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 12570.87 moveto 77 (cp1\(334, 238\)) alignedtext
+grestore
+% Node0x259732810->Node0x416022588
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.19 7713.31 moveto
+1907.5 7965.15 2154.42 9914.1 2263.12 11502.07 curveto
+2267.09 11559.97 2259.28 12503.88 2299.12 12546.07 curveto
+2365.33 12616.18 2477.71 12619.87 2565.12 12609.09 curveto
+stroke
+0 0 0 edgecolor
+newpath 2565.65 12612.55 moveto
+2575.11 12607.78 lineto
+2564.74 12605.61 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2565.65 12612.55 moveto
+2575.11 12607.78 lineto
+2564.74 12605.61 lineto
+closepath stroke
+grestore
+% Node0x419411574
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 12510.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 12513.87 moveto 539 (0x29378d8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 12498.87 moveto 77 (cp1\(392, 238\)) alignedtext
+grestore
+% Node0x259732810->Node0x419411574
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.16 7713.31 moveto
+1907.23 7965.17 2152.4 9914.24 2263.12 11502.07 curveto
+2266.88 11555.98 2261.97 12434.83 2299.12 12474.07 curveto
+2365.42 12544.1 2477.79 12547.79 2565.17 12537.04 curveto
+stroke
+0 0 0 edgecolor
+newpath 2565.7 12540.5 moveto
+2575.16 12535.73 lineto
+2564.79 12533.56 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2565.7 12540.5 moveto
+2575.16 12535.73 lineto
+2564.79 12533.56 lineto
+closepath stroke
+grestore
+% Node0x613190354
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 12438.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 12441.87 moveto 538 (0x2937ac0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 12426.87 moveto 77 (cp1\(450, 238\)) alignedtext
+grestore
+% Node0x259732810->Node0x613190354
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.13 7713.32 moveto
+1906.92 7965.2 2150.05 9914.41 2263.12 11502.07 curveto
+2266.68 11551.99 2264.67 12365.79 2299.12 12402.07 curveto
+2365.41 12471.88 2477.5 12475.69 2564.79 12465.03 curveto
+stroke
+0 0 0 edgecolor
+newpath 2565.3 12468.5 moveto
+2574.77 12463.74 lineto
+2564.4 12461.56 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2565.3 12468.5 moveto
+2574.77 12463.74 lineto
+2564.4 12461.56 lineto
+closepath stroke
+grestore
+% Node0x130081862
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 12366.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 12369.87 moveto 538 (0x2937ca8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 12354.87 moveto 77 (cp1\(508, 238\)) alignedtext
+grestore
+% Node0x259732810->Node0x130081862
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.09 7713.32 moveto
+1906.56 7965.22 2147.29 9914.61 2263.12 11502.07 curveto
+2266.47 11547.99 2267.36 12296.74 2299.12 12330.07 curveto
+2365.42 12399.65 2477.23 12403.57 2564.42 12393.02 curveto
+stroke
+0 0 0 edgecolor
+newpath 2564.91 12396.48 moveto
+2574.38 12391.74 lineto
+2564.02 12389.54 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2564.91 12396.48 moveto
+2574.38 12391.74 lineto
+2564.02 12389.54 lineto
+closepath stroke
+grestore
+% Node0x481063063
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 12294.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 12297.87 moveto 538 (0x2937e90. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 12282.87 moveto 77 (cp1\(566, 238\)) alignedtext
+grestore
+% Node0x259732810->Node0x481063063
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.05 7713.32 moveto
+1906.12 7965.25 2144.01 9914.85 2263.12 11502.07 curveto
+2266.27 11544 2270.05 12227.69 2299.12 12258.07 curveto
+2365.45 12327.39 2476.98 12331.44 2564.06 12320.99 curveto
+stroke
+0 0 0 edgecolor
+newpath 2564.53 12324.46 moveto
+2574.01 12319.72 lineto
+2563.65 12317.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2564.53 12324.46 moveto
+2574.01 12319.72 lineto
+2563.65 12317.51 lineto
+closepath stroke
+grestore
+% Node0x242574535
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 12222.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 12225.87 moveto 539 (0x2938088. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 12210.87 moveto 70 (cp1\(44, 214\)) alignedtext
+grestore
+% Node0x259732810->Node0x242574535
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875 7713.33 moveto
+1905.59 7965.29 2140.04 9915.15 2263.12 11502.07 curveto
+2269.01 11577.95 2246.37 12131.22 2299.12 12186.07 curveto
+2365.39 12254.99 2476.37 12259.26 2563.27 12248.99 curveto
+stroke
+0 0 0 edgecolor
+newpath 2563.72 12252.47 moveto
+2573.2 12247.75 lineto
+2562.84 12245.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2563.72 12252.47 moveto
+2573.2 12247.75 lineto
+2562.84 12245.52 lineto
+closepath stroke
+grestore
+% Node0x845558742
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 12150.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 12153.87 moveto 539 (0x2938270. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 12138.87 moveto 77 (cp1\(102, 214\)) alignedtext
+grestore
+% Node0x259732810->Node0x845558742
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1874.93 7713.33 moveto
+1904.94 7965.35 2135.15 9915.54 2263.12 11502.07 curveto
+2268.6 11569.97 2251.76 12065.12 2299.12 12114.07 curveto
+2365.43 12182.6 2475.95 12187.05 2562.69 12176.95 curveto
+stroke
+0 0 0 edgecolor
+newpath 2563.38 12180.39 moveto
+2572.87 12175.69 lineto
+2562.52 12173.45 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2563.38 12180.39 moveto
+2572.87 12175.69 lineto
+2562.52 12173.45 lineto
+closepath stroke
+grestore
+% Node0x244070376
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 12078.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 12081.87 moveto 539 (0x2938458. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 12066.87 moveto 77 (cp1\(160, 214\)) alignedtext
+grestore
+% Node0x259732810->Node0x244070376
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1874.81 7712.94 moveto
+1903.89 7963.37 2128.88 9915.22 2263.12 11502.07 curveto
+2268.19 11561.99 2257.14 11999.02 2299.12 12042.07 curveto
+2365.35 12109.99 2475.06 12114.76 2561.51 12104.95 curveto
+stroke
+0 0 0 edgecolor
+newpath 2562.16 12108.39 moveto
+2571.66 12103.71 lineto
+2561.31 12101.44 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2562.16 12108.39 moveto
+2571.66 12103.71 lineto
+2561.31 12101.44 lineto
+closepath stroke
+grestore
+% Node0x759612516
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 12006.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 12009.87 moveto 539 (0x2938640. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 11994.87 moveto 77 (cp1\(218, 214\)) alignedtext
+grestore
+% Node0x259732810->Node0x759612516
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1874.7 7712.95 moveto
+1902.82 7963.47 2120.79 9915.93 2263.12 11502.07 curveto
+2267.78 11554.02 2262.52 11932.92 2299.12 11970.07 curveto
+2365.35 12037.3 2474.24 12042.4 2560.38 12032.88 curveto
+stroke
+0 0 0 edgecolor
+newpath 2560.98 12036.34 moveto
+2570.5 12031.69 lineto
+2560.16 12029.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2560.98 12036.34 moveto
+2570.5 12031.69 lineto
+2560.16 12029.39 lineto
+closepath stroke
+grestore
+% Node0x332117933
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 11934.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 11937.87 moveto 539 (0x2938828. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 11922.87 moveto 77 (cp1\(276, 214\)) alignedtext
+grestore
+% Node0x259732810->Node0x332117933
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1874.56 7712.97 moveto
+1901.37 7963.6 2109.78 9916.96 2263.12 11502.07 curveto
+2267.38 11546.05 2267.9 11866.81 2299.12 11898.07 curveto
+2365.35 11964.37 2473.15 11969.9 2558.87 11960.78 curveto
+stroke
+0 0 0 edgecolor
+newpath 2559.41 11964.25 moveto
+2568.95 11959.64 lineto
+2558.62 11957.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2559.41 11964.25 moveto
+2568.95 11959.64 lineto
+2558.62 11957.29 lineto
+closepath stroke
+grestore
+% Node0x450652843
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 11862.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 11865.87 moveto 538 (0x2938a10. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 11850.87 moveto 77 (cp1\(334, 214\)) alignedtext
+grestore
+% Node0x259732810->Node0x450652843
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1874.43 7713.02 moveto
+1910.75 8068.49 2294.23 11821.23 2299.12 11826.07 curveto
+2365.29 11891.5 2472.02 11897.45 2557.33 11888.71 curveto
+stroke
+0 0 0 edgecolor
+newpath 2557.8 11892.18 moveto
+2567.36 11887.61 lineto
+2557.04 11885.22 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2557.8 11892.18 moveto
+2567.36 11887.61 lineto
+2557.04 11885.22 lineto
+closepath stroke
+grestore
+% Node0x532328949
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 11790.07 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.07 11793.87 moveto 537 (0x2938bf8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 11778.87 moveto 77 (cp1\(392, 214\)) alignedtext
+grestore
+% Node0x259732810->Node0x532328949
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1874.39 7712.99 moveto
+1909.76 8064.26 2279.87 11735.07 2299.12 11754.07 curveto
+2365.35 11819.44 2472.07 11825.39 2557.37 11816.67 curveto
+stroke
+0 0 0 edgecolor
+newpath 2557.84 11820.14 moveto
+2567.4 11815.57 lineto
+2557.08 11813.18 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2557.84 11820.14 moveto
+2567.4 11815.57 lineto
+2557.08 11813.18 lineto
+closepath stroke
+grestore
+% Node0x538664021
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 11718.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 11721.87 moveto 538 (0x2938de0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 11706.87 moveto 77 (cp1\(450, 214\)) alignedtext
+grestore
+% Node0x259732810->Node0x538664021
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1874.34 7713.19 moveto
+1908.53 8061.3 2261.29 11644.8 2299.12 11682.07 curveto
+2365.29 11747.27 2471.75 11753.31 2556.96 11744.68 curveto
+stroke
+0 0 0 edgecolor
+newpath 2557.41 11748.15 moveto
+2566.98 11743.58 lineto
+2556.66 11741.19 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2557.41 11748.15 moveto
+2566.98 11743.58 lineto
+2556.66 11741.19 lineto
+closepath stroke
+grestore
+% Node0x351038092
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 11646.07 390.15 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.57 11649.87 moveto 536 (0x2938fc8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 11634.87 moveto 77 (cp1\(508, 214\)) alignedtext
+grestore
+% Node0x259732810->Node0x351038092
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1874.13 7712.96 moveto
+1905.3 8054.57 2224.78 11536.97 2299.12 11610.07 curveto
+2365.35 11675.2 2471.81 11681.25 2557 11672.63 curveto
+stroke
+0 0 0 edgecolor
+newpath 2557.45 11676.11 moveto
+2567.02 11671.54 lineto
+2556.7 11669.15 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2557.45 11676.11 moveto
+2567.02 11671.54 lineto
+2556.7 11669.15 lineto
+closepath stroke
+grestore
+% Node0x718531387
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 11574.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 11577.87 moveto 538 (0x29391e0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 11562.87 moveto 77 (cp1\(566, 214\)) alignedtext
+grestore
+% Node0x259732810->Node0x718531387
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.63 7713.15 moveto
+1884.48 8041.59 2007.53 11251.91 2299.12 11538.07 curveto
+2365.3 11603.02 2471.5 11609.17 2556.59 11600.64 curveto
+stroke
+0 0 0 edgecolor
+newpath 2557.03 11604.11 moveto
+2566.6 11599.56 lineto
+2556.28 11597.15 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2557.03 11604.11 moveto
+2566.6 11599.56 lineto
+2556.28 11597.15 lineto
+closepath stroke
+grestore
+% Node0x694225776
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 11502.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 11505.87 moveto 538 (0x29393c8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 11490.87 moveto 70 (cp1\(44, 190\)) alignedtext
+grestore
+% Node0x259732810->Node0x694225776
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.69 7713.15 moveto
+1885.14 8038.21 2012.77 11185.64 2299.12 11466.07 curveto
+2365.25 11530.84 2471.19 11537.08 2556.19 11528.63 curveto
+stroke
+0 0 0 edgecolor
+newpath 2556.61 11532.11 moveto
+2566.18 11527.56 lineto
+2555.86 11525.15 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2556.61 11532.11 moveto
+2566.18 11527.56 lineto
+2555.86 11525.15 lineto
+closepath stroke
+grestore
+% Node0x684657808
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 11430.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 11433.87 moveto 539 (0x29395b0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 11418.87 moveto 77 (cp1\(102, 190\)) alignedtext
+grestore
+% Node0x259732810->Node0x684657808
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.75 7713.13 moveto
+1885.8 8034.7 2018 11119.36 2299.12 11394.07 curveto
+2365.21 11458.65 2470.88 11464.99 2555.78 11456.63 curveto
+stroke
+0 0 0 edgecolor
+newpath 2556.19 11460.11 moveto
+2565.76 11455.57 lineto
+2555.45 11453.15 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2556.19 11460.11 moveto
+2565.76 11455.57 lineto
+2555.45 11453.15 lineto
+closepath stroke
+grestore
+% Node0x414919856
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 11358.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 11361.87 moveto 539 (0x2939798. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 11346.87 moveto 77 (cp1\(160, 190\)) alignedtext
+grestore
+% Node0x259732810->Node0x414919856
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.82 7713.1 moveto
+1886.47 8031.07 2023.23 11053.07 2299.12 11322.07 curveto
+2365.16 11386.46 2470.57 11392.9 2555.38 11384.63 curveto
+stroke
+0 0 0 edgecolor
+newpath 2555.77 11388.1 moveto
+2565.35 11383.58 lineto
+2555.04 11381.14 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2555.77 11388.1 moveto
+2565.35 11383.58 lineto
+2555.04 11381.14 lineto
+closepath stroke
+grestore
+% Node0x273050299
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 11286.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 11289.87 moveto 539 (0x2939980. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 11274.87 moveto 77 (cp1\(218, 190\)) alignedtext
+grestore
+% Node0x259732810->Node0x273050299
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.88 7713.05 moveto
+1887.15 8027.32 2028.44 10986.78 2299.12 11250.07 curveto
+2365.24 11314.38 2470.64 11320.82 2555.43 11312.57 curveto
+stroke
+0 0 0 edgecolor
+newpath 2555.82 11316.05 moveto
+2565.4 11311.53 lineto
+2555.09 11309.09 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2555.82 11316.05 moveto
+2565.4 11311.53 lineto
+2555.09 11309.09 lineto
+closepath stroke
+grestore
+% Node0x708923020
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 11214.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 11217.87 moveto 539 (0x2939b68. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 11202.87 moveto 77 (cp1\(276, 190\)) alignedtext
+grestore
+% Node0x259732810->Node0x708923020
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.95 7712.98 moveto
+1887.84 8023.44 2033.66 10920.48 2299.12 11178.07 curveto
+2365.2 11242.19 2470.34 11248.73 2555.03 11240.56 curveto
+stroke
+0 0 0 edgecolor
+newpath 2555.4 11244.04 moveto
+2564.98 11239.53 lineto
+2554.68 11237.08 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2555.4 11244.04 moveto
+2564.98 11239.53 lineto
+2554.68 11237.08 lineto
+closepath stroke
+grestore
+% Node0x677328244
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 11142.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 11145.87 moveto 539 (0x2939d50. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 11130.87 moveto 77 (cp1\(334, 190\)) alignedtext
+grestore
+% Node0x259732810->Node0x677328244
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.04 7713.38 moveto
+1888.7 8022.37 2039 10854.3 2299.12 11106.07 curveto
+2365.16 11169.99 2470.04 11176.62 2554.63 11168.55 curveto
+stroke
+0 0 0 edgecolor
+newpath 2554.99 11172.03 moveto
+2564.57 11167.53 lineto
+2554.27 11165.07 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2554.99 11172.03 moveto
+2564.57 11167.53 lineto
+2554.27 11165.07 lineto
+closepath stroke
+grestore
+% Node0x434712278
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 11070.07 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.07 11073.87 moveto 537 (0x2939f38. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 11058.87 moveto 77 (cp1\(392, 190\)) alignedtext
+grestore
+% Node0x259732810->Node0x434712278
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.11 7713.28 moveto
+1889.41 8018.18 2044.19 10787.98 2299.12 11034.07 curveto
+2365.06 11097.72 2469.54 11104.5 2553.97 11096.56 curveto
+stroke
+0 0 0 edgecolor
+newpath 2554.57 11100.02 moveto
+2564.17 11095.52 lineto
+2553.86 11093.05 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2554.57 11100.02 moveto
+2564.17 11095.52 lineto
+2553.86 11093.05 lineto
+closepath stroke
+grestore
+% Node0x576185093
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 10998.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 11001.87 moveto 538 (0x293a168. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 10986.87 moveto 77 (cp1\(450, 190\)) alignedtext
+grestore
+% Node0x259732810->Node0x576185093
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.18 7713.16 moveto
+1890.14 8013.87 2049.39 10721.66 2299.12 10962.07 curveto
+2365.03 11025.52 2469.25 11032.39 2553.58 11024.54 curveto
+stroke
+0 0 0 edgecolor
+newpath 2554.16 11028 moveto
+2563.76 11023.51 lineto
+2553.46 11021.03 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2554.16 11028 moveto
+2563.76 11023.51 lineto
+2553.46 11021.03 lineto
+closepath stroke
+grestore
+% Node0x833089935
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 10926.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 10929.87 moveto 538 (0x293a350. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 10914.87 moveto 77 (cp1\(508, 190\)) alignedtext
+grestore
+% Node0x259732810->Node0x833089935
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.26 7713.02 moveto
+1890.87 8009.43 2054.57 10655.33 2299.12 10890.07 curveto
+2365 10953.31 2468.96 10960.28 2553.19 10952.52 curveto
+stroke
+0 0 0 edgecolor
+newpath 2553.76 10955.98 moveto
+2563.36 10951.5 lineto
+2553.06 10949.01 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2553.76 10955.98 moveto
+2563.36 10951.5 lineto
+2553.06 10949.01 lineto
+closepath stroke
+grestore
+% Node0x166362002
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 10854.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 10857.87 moveto 538 (0x293a538. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 10842.87 moveto 77 (cp1\(566, 190\)) alignedtext
+grestore
+% Node0x259732810->Node0x166362002
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.36 7713.33 moveto
+1891.78 8007.54 2059.87 10589.11 2299.12 10818.07 curveto
+2364.98 10881.1 2468.68 10888.16 2552.8 10880.49 curveto
+stroke
+0 0 0 edgecolor
+newpath 2553.35 10883.95 moveto
+2562.96 10879.49 lineto
+2552.66 10876.99 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2553.35 10883.95 moveto
+2562.96 10879.49 lineto
+2552.66 10876.99 lineto
+closepath stroke
+grestore
+% Node0x679797477
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 10782.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 10785.87 moveto 538 (0x293a720. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 10770.87 moveto 70 (cp1\(44, 166\)) alignedtext
+grestore
+% Node0x259732810->Node0x679797477
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.44 7713.15 moveto
+1892.54 8002.8 2065.04 10522.76 2299.12 10746.07 curveto
+2364.96 10808.88 2468.4 10816.03 2552.41 10808.46 curveto
+stroke
+0 0 0 edgecolor
+newpath 2552.95 10811.93 moveto
+2562.56 10807.47 lineto
+2552.27 10804.96 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2552.95 10811.93 moveto
+2562.56 10807.47 lineto
+2552.27 10804.96 lineto
+closepath stroke
+grestore
+% Node0x261831105
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 10710.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 10713.87 moveto 538 (0x293a908. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 10698.87 moveto 77 (cp1\(102, 166\)) alignedtext
+grestore
+% Node0x259732810->Node0x261831105
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.52 7712.96 moveto
+1893.3 7997.93 2070.2 10456.4 2299.12 10674.07 curveto
+2364.94 10736.66 2468.13 10743.9 2552.03 10736.43 curveto
+stroke
+0 0 0 edgecolor
+newpath 2552.55 10739.89 moveto
+2562.16 10735.45 lineto
+2551.87 10732.93 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2552.55 10739.89 moveto
+2562.16 10735.45 lineto
+2551.87 10732.93 lineto
+closepath stroke
+grestore
+% Node0x678639866
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 10638.07 389.73 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2424.07 10641.87 moveto 535 (0x293aaf0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 10626.87 moveto 77 (cp1\(160, 166\)) alignedtext
+grestore
+% Node0x259732810->Node0x678639866
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.64 7713.19 moveto
+1894.27 7995.42 2075.47 10390.15 2299.12 10602.07 curveto
+2364.93 10664.43 2467.86 10671.76 2551.65 10664.39 curveto
+stroke
+0 0 0 edgecolor
+newpath 2552.15 10667.86 moveto
+2561.77 10663.42 lineto
+2551.48 10660.89 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2552.15 10667.86 moveto
+2561.77 10663.42 lineto
+2551.48 10660.89 lineto
+closepath stroke
+grestore
+% Node0x771474924
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 10566.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 10569.87 moveto 538 (0x293acd8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 10554.87 moveto 77 (cp1\(218, 166\)) alignedtext
+grestore
+% Node0x259732810->Node0x771474924
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.37 7713.19 moveto
+1868.98 7979.05 1863.46 10118.75 2299.12 10530.07 curveto
+2364.81 10592.09 2467.22 10599.6 2550.82 10592.38 curveto
+stroke
+0 0 0 edgecolor
+newpath 2551.29 10595.86 moveto
+2560.92 10591.43 lineto
+2550.63 10588.89 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2551.29 10595.86 moveto
+2560.92 10591.43 lineto
+2550.63 10588.89 lineto
+closepath stroke
+grestore
+% Node0x359261469
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 10494.07 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.07 10497.87 moveto 537 (0x293aec0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 10482.87 moveto 77 (cp1\(276, 166\)) alignedtext
+grestore
+% Node0x259732810->Node0x359261469
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.49 7713.33 moveto
+1870.24 7976.05 1873.92 10058.16 2299.12 10458.07 curveto
+2364.81 10519.85 2466.96 10527.45 2550.45 10520.34 curveto
+stroke
+0 0 0 edgecolor
+newpath 2550.9 10523.81 moveto
+2560.53 10519.4 lineto
+2550.25 10516.84 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2550.9 10523.81 moveto
+2560.53 10519.4 lineto
+2550.25 10516.84 lineto
+closepath stroke
+grestore
+% Node0x576899221
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 10422.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 10425.87 moveto 539 (0x293b9d8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 10410.87 moveto 77 (cp1\(334, 166\)) alignedtext
+grestore
+% Node0x259732810->Node0x576899221
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.61 7713.03 moveto
+1871.52 7970.7 1884.14 9997.34 2299.12 10386.07 curveto
+2364.69 10447.49 2466.34 10455.26 2549.62 10448.32 curveto
+stroke
+0 0 0 edgecolor
+newpath 2550.04 10451.8 moveto
+2559.69 10447.4 lineto
+2549.41 10444.82 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2550.04 10451.8 moveto
+2559.69 10447.4 lineto
+2549.41 10444.82 lineto
+closepath stroke
+grestore
+% Node0x858000790
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 10350.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 10353.87 moveto 538 (0x293bbc0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 10338.87 moveto 77 (cp1\(392, 166\)) alignedtext
+grestore
+% Node0x259732810->Node0x858000790
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.73 7713.11 moveto
+1872.85 7967.31 1894.55 9936.7 2299.12 10314.07 curveto
+2364.58 10375.13 2465.73 10383.07 2548.8 10376.3 curveto
+stroke
+0 0 0 edgecolor
+newpath 2549.19 10379.78 moveto
+2558.84 10375.4 lineto
+2548.57 10372.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2549.19 10379.78 moveto
+2558.84 10375.4 lineto
+2548.57 10372.8 lineto
+closepath stroke
+grestore
+% Node0x592861230
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 10278.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 10281.87 moveto 538 (0x293bda8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 10266.87 moveto 77 (cp1\(450, 166\)) alignedtext
+grestore
+% Node0x259732810->Node0x592861230
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.87 7713.16 moveto
+1874.21 7963.68 1904.94 9876.03 2299.12 10242.07 curveto
+2364.6 10302.87 2465.49 10310.9 2548.44 10304.23 curveto
+stroke
+0 0 0 edgecolor
+newpath 2548.81 10307.71 moveto
+2558.47 10303.35 lineto
+2548.2 10300.74 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2548.81 10307.71 moveto
+2558.47 10303.35 lineto
+2548.2 10300.74 lineto
+closepath stroke
+grestore
+% Node0x673832166
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 10206.07 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.07 10209.87 moveto 537 (0x293bf90. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 10194.87 moveto 77 (cp1\(508, 166\)) alignedtext
+grestore
+% Node0x259732810->Node0x673832166
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.01 7713.17 moveto
+1875.6 7959.83 1915.3 9815.33 2299.12 10170.07 curveto
+2364.5 10230.5 2464.89 10238.69 2547.63 10232.19 curveto
+stroke
+0 0 0 edgecolor
+newpath 2547.97 10235.67 moveto
+2557.63 10231.33 lineto
+2547.37 10228.7 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2547.97 10235.67 moveto
+2557.63 10231.33 lineto
+2547.37 10228.7 lineto
+closepath stroke
+grestore
+% Node0x235474259
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 10134.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 10137.87 moveto 538 (0x293c178. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 10122.87 moveto 77 (cp1\(566, 166\)) alignedtext
+grestore
+% Node0x259732810->Node0x235474259
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.16 7713.15 moveto
+1877.03 7955.75 1925.64 9754.6 2299.12 10098.07 curveto
+2364.22 10157.94 2463.73 10166.42 2546.12 10160.2 curveto
+stroke
+0 0 0 edgecolor
+newpath 2546.66 10163.66 moveto
+2556.33 10159.35 lineto
+2546.08 10156.69 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2546.66 10163.66 moveto
+2556.33 10159.35 lineto
+2546.08 10156.69 lineto
+closepath stroke
+grestore
+% Node0x115690784
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 10062.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 10065.87 moveto 538 (0x293c360. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 10050.87 moveto 70 (cp1\(44, 142\)) alignedtext
+grestore
+% Node0x259732810->Node0x115690784
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.31 7713.1 moveto
+1878.5 7951.44 1935.94 9693.85 2299.12 10026.07 curveto
+2364.14 10085.55 2463.14 10094.19 2545.32 10088.14 curveto
+stroke
+0 0 0 edgecolor
+newpath 2545.83 10091.61 moveto
+2555.51 10087.31 lineto
+2545.26 10084.63 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2545.83 10091.61 moveto
+2555.51 10087.31 lineto
+2545.26 10084.63 lineto
+closepath stroke
+grestore
+% Node0x613764309
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 9990.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 9993.87 moveto 538 (0x293c548. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 9978.87 moveto 77 (cp1\(102, 142\)) alignedtext
+grestore
+% Node0x259732810->Node0x613764309
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.48 7713.01 moveto
+1880 7946.91 1946.22 9633.06 2299.12 9954.07 curveto
+2364.06 10013.14 2462.57 10021.94 2544.52 10016.07 curveto
+stroke
+0 0 0 edgecolor
+newpath 2545 10019.55 moveto
+2554.69 10015.26 lineto
+2544.44 10012.57 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2545 10019.55 moveto
+2554.69 10015.26 lineto
+2544.44 10012.57 lineto
+closepath stroke
+grestore
+% Node0x311924194
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 9918.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 9921.87 moveto 538 (0x293c730. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 9906.87 moveto 77 (cp1\(160, 142\)) alignedtext
+grestore
+% Node0x259732810->Node0x311924194
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.66 7713.24 moveto
+1881.62 7943.86 1956.65 9572.41 2299.12 9882.07 curveto
+2363.81 9940.56 2461.45 9949.63 2543.03 9944.04 curveto
+stroke
+0 0 0 edgecolor
+newpath 2543.7 9947.5 moveto
+2553.4 9943.25 lineto
+2543.17 9940.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2543.7 9947.5 moveto
+2553.4 9943.25 lineto
+2543.17 9940.52 lineto
+closepath stroke
+grestore
+% Node0x304247973
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 9846.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 9849.87 moveto 538 (0x293c918. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 9834.87 moveto 77 (cp1\(218, 142\)) alignedtext
+grestore
+% Node0x259732810->Node0x304247973
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.85 7713.07 moveto
+1883.2 7938.82 1966.86 9511.55 2299.12 9810.07 curveto
+2363.63 9868.03 2460.54 9877.32 2541.79 9871.98 curveto
+stroke
+0 0 0 edgecolor
+newpath 2542.41 9875.44 moveto
+2552.12 9871.22 lineto
+2541.89 9868.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2542.41 9875.44 moveto
+2552.12 9871.22 lineto
+2541.89 9868.46 lineto
+closepath stroke
+grestore
+% Node0x576197164
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 9774.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 9777.87 moveto 538 (0x293cb30. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 9762.87 moveto 77 (cp1\(276, 142\)) alignedtext
+grestore
+% Node0x259732810->Node0x576197164
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.06 7713.21 moveto
+1884.92 7935.15 1977.21 9450.82 2299.12 9738.07 curveto
+2363.46 9795.48 2459.64 9804.99 2540.56 9799.9 curveto
+stroke
+0 0 0 edgecolor
+newpath 2541.13 9803.37 moveto
+2550.85 9799.17 lineto
+2540.63 9796.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2541.13 9803.37 moveto
+2550.85 9799.17 lineto
+2540.63 9796.39 lineto
+closepath stroke
+grestore
+% Node0x702219464
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 9702.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 9705.87 moveto 538 (0x293cd18. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 9690.87 moveto 77 (cp1\(334, 142\)) alignedtext
+grestore
+% Node0x259732810->Node0x702219464
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.26 7712.95 moveto
+1886.58 7929.6 1987.35 9389.89 2299.12 9666.07 curveto
+2363.18 9722.81 2458.39 9732.61 2538.87 9727.83 curveto
+stroke
+0 0 0 edgecolor
+newpath 2539.37 9731.31 moveto
+2549.12 9727.14 lineto
+2538.9 9724.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2539.37 9731.31 moveto
+2549.12 9727.14 lineto
+2538.9 9724.32 lineto
+closepath stroke
+grestore
+% Node0x223278752
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 9630.07 390.15 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.57 9633.87 moveto 536 (0x293cf00. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 9618.87 moveto 77 (cp1\(392, 142\)) alignedtext
+grestore
+% Node0x259732810->Node0x223278752
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.49 7712.98 moveto
+1888.38 7925.3 1997.62 9329.07 2299.12 9594.07 curveto
+2363.03 9650.24 2457.52 9660.24 2537.66 9655.72 curveto
+stroke
+0 0 0 edgecolor
+newpath 2538.11 9659.2 moveto
+2547.86 9655.06 lineto
+2537.66 9652.21 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2538.11 9659.2 moveto
+2547.86 9655.06 lineto
+2537.66 9652.21 lineto
+closepath stroke
+grestore
+% Node0x686016059
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 9558.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 9561.87 moveto 538 (0x293d0e8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 9546.87 moveto 77 (cp1\(450, 142\)) alignedtext
+grestore
+% Node0x259732810->Node0x686016059
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.74 7712.96 moveto
+1890.24 7920.67 2007.84 9268.2 2299.12 9522.07 curveto
+2362.64 9577.44 2455.95 9587.77 2535.53 9583.63 curveto
+stroke
+0 0 0 edgecolor
+newpath 2535.89 9587.12 moveto
+2545.66 9583.02 lineto
+2535.47 9580.13 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2535.89 9587.12 moveto
+2545.66 9583.02 lineto
+2535.47 9580.13 lineto
+closepath stroke
+grestore
+% Node0x920240986
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 9486.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 9489.87 moveto 539 (0x293d2d0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 9474.87 moveto 77 (cp1\(508, 142\)) alignedtext
+grestore
+% Node0x259732810->Node0x920240986
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1874.03 7713.2 moveto
+1892.29 7917.06 2018.16 9207.41 2299.12 9450.07 curveto
+2307.52 9457.33 2316.44 9463.81 2325.77 9469.58 curveto
+stroke
+0 0 0 edgecolor
+newpath 2324.06 9472.64 moveto
+2334.45 9474.69 lineto
+2327.61 9466.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2324.06 9472.64 moveto
+2334.45 9474.69 lineto
+2327.61 9466.6 lineto
+closepath stroke
+grestore
+% Node0x297941312
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 9414.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 9417.87 moveto 539 (0x293d4b8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 9402.87 moveto 77 (cp1\(566, 142\)) alignedtext
+grestore
+% Node0x259732810->Node0x297941312
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1874.31 7713.05 moveto
+1894.26 7911.7 2028.28 9146.44 2299.12 9378.07 curveto
+2307.66 9385.37 2316.72 9391.89 2326.19 9397.68 curveto
+stroke
+0 0 0 edgecolor
+newpath 2324.61 9400.8 moveto
+2335.01 9402.8 lineto
+2328.12 9394.75 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2324.61 9400.8 moveto
+2335.01 9402.8 lineto
+2328.12 9394.75 lineto
+closepath stroke
+grestore
+% Node0x794934741
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 9342.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 9345.87 moveto 538 (0x293d6a0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 9330.87 moveto 70 (cp1\(44, 118\)) alignedtext
+grestore
+% Node0x259732810->Node0x794934741
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1874.64 7713.15 moveto
+1896.43 7907.24 2038.49 9085.54 2299.12 9306.07 curveto
+2307.7 9313.33 2316.79 9319.8 2326.29 9325.56 curveto
+stroke
+0 0 0 edgecolor
+newpath 2324.72 9328.69 moveto
+2335.14 9330.65 lineto
+2328.22 9322.63 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2324.72 9328.69 moveto
+2335.14 9330.65 lineto
+2328.22 9322.63 lineto
+closepath stroke
+grestore
+% Node0x428892895
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 9270.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 9273.87 moveto 539 (0x293d888. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 9258.87 moveto 77 (cp1\(102, 118\)) alignedtext
+grestore
+% Node0x259732810->Node0x428892895
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1874.99 7713.16 moveto
+1898.66 7902.34 2048.64 9024.56 2299.12 9234.07 curveto
+2307.84 9241.36 2317.08 9247.86 2326.74 9253.63 curveto
+stroke
+0 0 0 edgecolor
+newpath 2325.29 9256.84 moveto
+2335.72 9258.73 lineto
+2328.75 9250.75 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2325.29 9256.84 moveto
+2335.72 9258.73 lineto
+2328.75 9250.75 lineto
+closepath stroke
+grestore
+% Node0x870766881
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 9198.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 9201.87 moveto 538 (0x293dab8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 9186.87 moveto 77 (cp1\(160, 118\)) alignedtext
+grestore
+% Node0x259732810->Node0x870766881
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.35 7713.08 moveto
+1900.96 7896.98 2058.71 8963.53 2299.12 9162.07 curveto
+2307.88 9169.31 2317.16 9175.76 2326.85 9181.49 curveto
+stroke
+0 0 0 edgecolor
+newpath 2325.43 9184.7 moveto
+2335.87 9186.55 lineto
+2328.86 9178.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2325.43 9184.7 moveto
+2335.87 9186.55 lineto
+2328.86 9178.6 lineto
+closepath stroke
+grestore
+% Node0x603043400
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 9126.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 9129.87 moveto 538 (0x293dca0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 9114.87 moveto 77 (cp1\(218, 118\)) alignedtext
+grestore
+% Node0x259732810->Node0x603043400
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.79 7713.21 moveto
+1903.5 7892.25 2068.84 8902.52 2299.12 9090.07 curveto
+2308.13 9097.41 2317.66 9103.92 2327.62 9109.7 curveto
+stroke
+0 0 0 edgecolor
+newpath 2326.03 9112.82 moveto
+2336.48 9114.59 lineto
+2329.41 9106.69 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2326.03 9112.82 moveto
+2336.48 9114.59 lineto
+2329.41 9106.69 lineto
+closepath stroke
+grestore
+% Node0x756807425
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 9054.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 9057.87 moveto 538 (0x293de88. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 9042.87 moveto 77 (cp1\(276, 118\)) alignedtext
+grestore
+% Node0x259732810->Node0x756807425
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1876.25 7713.22 moveto
+1906.12 7886.96 2078.88 8841.43 2299.12 9018.07 curveto
+2308.28 9025.42 2317.98 9031.94 2328.1 9037.72 curveto
+stroke
+0 0 0 edgecolor
+newpath 2326.65 9040.91 moveto
+2337.11 9042.6 lineto
+2329.99 9034.76 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2326.65 9040.91 moveto
+2337.11 9042.6 lineto
+2329.99 9034.76 lineto
+closepath stroke
+grestore
+% Node0x659331758
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 8982.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 8985.87 moveto 538 (0x293e070. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 8970.87 moveto 77 (cp1\(334, 118\)) alignedtext
+grestore
+% Node0x259732810->Node0x659331758
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.09 7713.23 moveto
+1869.41 7865.47 1882.84 8617.81 2299.12 8946.07 curveto
+2308.34 8953.34 2318.1 8959.8 2328.26 8965.52 curveto
+stroke
+0 0 0 edgecolor
+newpath 2326.83 8968.73 moveto
+2337.3 8970.36 lineto
+2330.14 8962.55 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2326.83 8968.73 moveto
+2337.3 8970.36 lineto
+2330.14 8962.55 lineto
+closepath stroke
+grestore
+% Node0x391915436
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 8910.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 8913.87 moveto 538 (0x293e258. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 8898.87 moveto 77 (cp1\(392, 118\)) alignedtext
+grestore
+% Node0x259732810->Node0x391915436
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.7 7713.16 moveto
+1873.41 7860.2 1902.57 8567.22 2299.12 8874.07 curveto
+2308.61 8881.41 2318.64 8887.92 2329.09 8893.66 curveto
+stroke
+0 0 0 edgecolor
+newpath 2327.49 8896.77 moveto
+2337.97 8898.31 lineto
+2330.74 8890.57 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2327.49 8896.77 moveto
+2337.97 8898.31 lineto
+2330.74 8890.57 lineto
+closepath stroke
+grestore
+% Node0x611724699
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 8838.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 8841.87 moveto 538 (0x293e440. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 8826.87 moveto 77 (cp1\(450, 118\)) alignedtext
+grestore
+% Node0x259732810->Node0x611724699
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.37 7712.95 moveto
+1877.59 7854.36 1922.07 8516.41 2299.12 8802.07 curveto
+2308.79 8809.4 2319 8815.88 2329.64 8821.6 curveto
+stroke
+0 0 0 edgecolor
+newpath 2328.17 8824.78 moveto
+2338.67 8826.23 lineto
+2331.36 8818.55 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2328.17 8824.78 moveto
+2338.67 8826.23 lineto
+2331.36 8818.55 lineto
+closepath stroke
+grestore
+% Node0x395058388
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 8766.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 8769.87 moveto 538 (0x293e628. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 8754.87 moveto 77 (cp1\(508, 118\)) alignedtext
+grestore
+% Node0x259732810->Node0x395058388
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.13 7713.05 moveto
+1882.06 7849.3 1941.71 8465.66 2299.12 8730.07 curveto
+2308.98 8737.37 2319.38 8743.81 2330.21 8749.5 curveto
+stroke
+0 0 0 edgecolor
+newpath 2328.88 8752.75 moveto
+2339.39 8754.09 lineto
+2332.02 8746.49 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2328.88 8752.75 moveto
+2339.39 8754.09 lineto
+2332.02 8746.49 lineto
+closepath stroke
+grestore
+% Node0x112591290
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 8694.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 8697.87 moveto 538 (0x293e810. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 8682.87 moveto 77 (cp1\(566, 118\)) alignedtext
+grestore
+% Node0x259732810->Node0x112591290
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.98 7712.96 moveto
+1886.75 7843.48 1961.04 8414.61 2299.12 8658.07 curveto
+2309.39 8665.47 2320.23 8671.98 2331.49 8677.7 curveto
+stroke
+0 0 0 edgecolor
+newpath 2330.09 8680.91 moveto
+2340.62 8682.12 lineto
+2333.14 8674.61 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2330.09 8680.91 moveto
+2340.62 8682.12 lineto
+2333.14 8674.61 lineto
+closepath stroke
+grestore
+% Node0x849914899
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 8622.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 8625.87 moveto 538 (0x293ea08. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2659.57 8610.87 moveto 64 (cp1\(44, 94\)) alignedtext
+grestore
+% Node0x259732810->Node0x849914899
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1874.98 7713.08 moveto
+1891.84 7838.05 1980.37 8363.5 2299.12 8586.07 curveto
+2309.61 8593.39 2320.66 8599.84 2332.13 8605.49 curveto
+stroke
+0 0 0 edgecolor
+newpath 2330.88 8608.77 moveto
+2341.42 8609.86 lineto
+2333.86 8602.44 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2330.88 8608.77 moveto
+2341.42 8609.86 lineto
+2333.86 8602.44 lineto
+closepath stroke
+grestore
+% Node0x565083554
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 8550.07 390.15 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.57 8553.87 moveto 536 (0x293ebf0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 8538.87 moveto 70 (cp1\(102, 94\)) alignedtext
+grestore
+% Node0x259732810->Node0x565083554
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1876.1 7712.95 moveto
+1897.19 7831.66 1999.28 8312.02 2299.12 8514.07 curveto
+2310.17 8521.52 2321.81 8528.04 2333.89 8533.73 curveto
+stroke
+0 0 0 edgecolor
+newpath 2332.65 8537.01 moveto
+2343.21 8537.92 lineto
+2335.52 8530.63 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2332.65 8537.01 moveto
+2343.21 8537.92 lineto
+2335.52 8530.63 lineto
+closepath stroke
+grestore
+% Node0x881731546
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 8478.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 8481.87 moveto 538 (0x293edd8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 8466.87 moveto 70 (cp1\(160, 94\)) alignedtext
+grestore
+% Node0x259732810->Node0x881731546
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1877.51 7713.3 moveto
+1903.27 7826.25 2018.35 8260.54 2299.12 8442.07 curveto
+2310.42 8449.38 2322.31 8455.78 2334.62 8461.36 curveto
+stroke
+0 0 0 edgecolor
+newpath 2333.55 8464.71 moveto
+2344.11 8465.47 lineto
+2336.33 8458.28 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2333.55 8464.71 moveto
+2344.11 8465.47 lineto
+2336.33 8458.28 lineto
+closepath stroke
+grestore
+% Node0x525047688
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 8406.07 389.73 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2424.07 8409.87 moveto 535 (0x293efc0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 8394.87 moveto 70 (cp1\(218, 94\)) alignedtext
+grestore
+% Node0x259732810->Node0x525047688
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1879.1 7713.26 moveto
+1909.67 7819.49 2036.81 8208.53 2299.12 8370.07 curveto
+2311.16 8377.49 2323.82 8383.94 2336.91 8389.53 curveto
+stroke
+0 0 0 edgecolor
+newpath 2335.94 8392.92 moveto
+2346.52 8393.46 lineto
+2338.59 8386.43 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2335.94 8392.92 moveto
+2346.52 8393.46 lineto
+2338.59 8386.43 lineto
+closepath stroke
+grestore
+% Node0x715498134
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 8334.07 390.15 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.57 8337.87 moveto 536 (0x293f1a8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 8322.87 moveto 70 (cp1\(276, 94\)) alignedtext
+grestore
+% Node0x259732810->Node0x715498134
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1880.99 7713.14 moveto
+1916.64 7812.13 2054.84 8156.12 2299.12 8298.07 curveto
+2311.83 8305.46 2325.16 8311.85 2338.94 8317.37 curveto
+stroke
+0 0 0 edgecolor
+newpath 2337.95 8320.74 moveto
+2348.54 8321.06 lineto
+2340.46 8314.21 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2337.95 8320.74 moveto
+2348.54 8321.06 lineto
+2340.46 8314.21 lineto
+closepath stroke
+grestore
+% Node0x308975770
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 8262.07 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.07 8265.87 moveto 537 (0x293f390. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 8250.87 moveto 70 (cp1\(334, 94\)) alignedtext
+grestore
+% Node0x259732810->Node0x308975770
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1883.38 7713.13 moveto
+1924.54 7804.58 2072.56 8103.34 2299.12 8226.07 curveto
+2312.78 8233.47 2327.11 8239.84 2341.87 8245.3 curveto
+stroke
+0 0 0 edgecolor
+newpath 2341.04 8248.72 moveto
+2351.64 8248.76 lineto
+2343.38 8242.12 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2341.04 8248.72 moveto
+2351.64 8248.76 lineto
+2343.38 8242.12 lineto
+closepath stroke
+grestore
+% Node0x169336043
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 8190.07 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.07 8193.87 moveto 537 (0x293f578. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 8178.87 moveto 70 (cp1\(392, 94\)) alignedtext
+grestore
+% Node0x259732810->Node0x169336043
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1886.37 7713 moveto
+1933.44 7796.24 2089.72 8050.01 2299.12 8154.07 curveto
+2314.07 8161.5 2329.73 8167.83 2345.83 8173.22 curveto
+stroke
+0 0 0 edgecolor
+newpath 2344.77 8176.56 moveto
+2355.36 8176.28 lineto
+2346.91 8169.89 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2344.77 8176.56 moveto
+2355.36 8176.28 lineto
+2346.91 8169.89 lineto
+closepath stroke
+grestore
+% Node0x919754336
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 8118.07 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.07 8121.87 moveto 537 (0x293f760. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 8106.87 moveto 70 (cp1\(450, 94\)) alignedtext
+grestore
+% Node0x259732810->Node0x919754336
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1890.47 7713.04 moveto
+1944.1 7787.51 2106.49 7996.17 2299.12 8082.07 curveto
+2315.62 8089.43 2332.9 8095.65 2350.61 8100.89 curveto
+stroke
+0 0 0 edgecolor
+newpath 2349.91 8104.33 moveto
+2360.49 8103.7 lineto
+2351.83 8097.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2349.91 8104.33 moveto
+2360.49 8103.7 lineto
+2351.83 8097.6 lineto
+closepath stroke
+grestore
+% Node0x836987871
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 8046.07 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.07 8049.87 moveto 537 (0x293f948. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 8034.87 moveto 70 (cp1\(508, 94\)) alignedtext
+grestore
+% Node0x259732810->Node0x836987871
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1896.39 7713.19 moveto
+1957.38 7778.03 2122.89 7941.69 2299.12 8010.07 curveto
+2317.99 8017.39 2337.73 8023.5 2357.9 8028.58 curveto
+stroke
+0 0 0 edgecolor
+newpath 2357.29 8032.03 moveto
+2367.83 8030.99 lineto
+2358.94 8025.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2357.29 8032.03 moveto
+2367.83 8030.99 lineto
+2358.94 8025.23 lineto
+closepath stroke
+grestore
+% Node0x979380944
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 7974.07 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.07 7977.87 moveto 537 (0x293fb60. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 7962.87 moveto 70 (cp1\(566, 94\)) alignedtext
+grestore
+% Node0x259732810->Node0x979380944
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1905.16 7712.98 moveto
+1974.08 7766.66 2138.85 7886.34 2299.12 7938.07 curveto
+2321.38 7945.26 2344.7 7951.16 2368.39 7956.01 curveto
+stroke
+0 0 0 edgecolor
+newpath 2367.72 7959.44 moveto
+2378.21 7957.95 lineto
+2369.08 7952.57 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2367.72 7959.44 moveto
+2378.21 7957.95 lineto
+2369.08 7952.57 lineto
+closepath stroke
+grestore
+% Node0x638095256
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 7902.07 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.07 7905.87 moveto 537 (0x293fd48. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2659.57 7890.87 moveto 64 (cp1\(44, 70\)) alignedtext
+grestore
+% Node0x259732810->Node0x638095256
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1920.94 7712.74 moveto
+1998.74 7753.49 2155.98 7830.26 2299.12 7866.07 curveto
+2326.44 7872.91 2355.12 7878.47 2384.01 7883 curveto
+stroke
+0 0 0 edgecolor
+newpath 2383.83 7886.51 moveto
+2394.24 7884.56 lineto
+2384.88 7879.59 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2383.83 7886.51 moveto
+2394.24 7884.56 lineto
+2384.88 7879.59 lineto
+closepath stroke
+grestore
+% Node0x150321174
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 7830.07 389.73 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2424.07 7833.87 moveto 535 (0x293ff30. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 7818.87 moveto 70 (cp1\(102, 70\)) alignedtext
+grestore
+% Node0x259732810->Node0x150321174
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1958.83 7712.34 moveto
+2044.61 7737.19 2179.73 7773.63 2299.12 7794.07 curveto
+2334.94 7800.21 2372.79 7805.34 2410.27 7809.64 curveto
+stroke
+0 0 0 edgecolor
+newpath 2409.98 7813.13 moveto
+2420.31 7810.77 lineto
+2410.77 7806.17 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2409.98 7813.13 moveto
+2420.31 7810.77 lineto
+2410.77 7806.17 lineto
+closepath stroke
+grestore
+% Node0x648726348
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 7758.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 7761.87 moveto 539 (0x2940118. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 7746.87 moveto 70 (cp1\(160, 70\)) alignedtext
+grestore
+% Node0x259732810->Node0x648726348
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2112.39 7707.24 moveto
+2215.35 7716.29 2335.57 7726.86 2439.64 7736.01 curveto
+stroke
+0 0 0 edgecolor
+newpath 2439.39 7739.5 moveto
+2449.66 7736.89 lineto
+2440 7732.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2439.39 7739.5 moveto
+2449.66 7736.89 lineto
+2440 7732.53 lineto
+closepath stroke
+grestore
+% Node0x392538029
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 7686.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 7689.87 moveto 539 (0x2940300. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 7674.87 moveto 70 (cp1\(218, 70\)) alignedtext
+grestore
+% Node0x259732810->Node0x392538029
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2262.53 7686.07 moveto
+2271.26 7686.07 2280 7686.07 2288.73 7686.07 curveto
+stroke
+0 0 0 edgecolor
+newpath 2288.98 7689.57 moveto
+2298.98 7686.07 lineto
+2288.98 7682.57 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2288.98 7689.57 moveto
+2298.98 7686.07 lineto
+2288.98 7682.57 lineto
+closepath stroke
+grestore
+% Node0x553619289
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 7614.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 7617.87 moveto 538 (0x29404e8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 7602.87 moveto 70 (cp1\(276, 70\)) alignedtext
+grestore
+% Node0x259732810->Node0x553619289
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2112.39 7664.91 moveto
+2215.35 7655.85 2335.57 7645.28 2439.64 7636.13 curveto
+stroke
+0 0 0 edgecolor
+newpath 2440 7639.62 moveto
+2449.66 7635.25 lineto
+2439.39 7632.64 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2440 7639.62 moveto
+2449.66 7635.25 lineto
+2439.39 7632.64 lineto
+closepath stroke
+grestore
+% Node0x978091764
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 7542.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 7545.87 moveto 539 (0x29406d0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 7530.87 moveto 70 (cp1\(334, 70\)) alignedtext
+grestore
+% Node0x259732810->Node0x978091764
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1958.83 7659.8 moveto
+2044.61 7634.95 2179.73 7598.52 2299.12 7578.07 curveto
+2334.7 7571.98 2372.3 7566.87 2409.55 7562.59 curveto
+stroke
+0 0 0 edgecolor
+newpath 2409.98 7566.06 moveto
+2419.52 7561.46 lineto
+2409.19 7559.11 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2409.98 7566.06 moveto
+2419.52 7561.46 lineto
+2409.19 7559.11 lineto
+closepath stroke
+grestore
+% Node0x868627257
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 7470.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 7473.87 moveto 539 (0x29408b8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 7458.87 moveto 70 (cp1\(392, 70\)) alignedtext
+grestore
+% Node0x259732810->Node0x868627257
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1920.94 7659.4 moveto
+1998.74 7618.66 2155.98 7541.88 2299.12 7506.07 curveto
+2326.36 7499.26 2354.96 7493.7 2383.78 7489.18 curveto
+stroke
+0 0 0 edgecolor
+newpath 2384.62 7492.59 moveto
+2393.98 7487.62 lineto
+2383.56 7485.67 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2384.62 7492.59 moveto
+2393.98 7487.62 lineto
+2383.56 7485.67 lineto
+closepath stroke
+grestore
+% Node0x117426217
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 7398.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 7401.87 moveto 538 (0x2940ae8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 7386.87 moveto 70 (cp1\(450, 70\)) alignedtext
+grestore
+% Node0x259732810->Node0x117426217
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1905.16 7659.17 moveto
+1974.08 7605.49 2138.85 7485.8 2299.12 7434.07 curveto
+2321.38 7426.89 2344.7 7420.98 2368.39 7416.14 curveto
+stroke
+0 0 0 edgecolor
+newpath 2369.08 7419.57 moveto
+2378.21 7414.2 lineto
+2367.72 7412.71 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2369.08 7419.57 moveto
+2378.21 7414.2 lineto
+2367.72 7412.71 lineto
+closepath stroke
+grestore
+% Node0x507440477
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 7326.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 7329.87 moveto 538 (0x2940cd0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 7314.87 moveto 70 (cp1\(508, 70\)) alignedtext
+grestore
+% Node0x259732810->Node0x507440477
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1896.39 7658.95 moveto
+1957.38 7594.12 2122.89 7430.46 2299.12 7362.07 curveto
+2317.92 7354.78 2337.59 7348.69 2357.68 7343.62 curveto
+stroke
+0 0 0 edgecolor
+newpath 2358.68 7346.98 moveto
+2367.57 7341.22 lineto
+2357.03 7340.18 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2358.68 7346.98 moveto
+2367.57 7341.22 lineto
+2357.03 7340.18 lineto
+closepath stroke
+grestore
+% Node0x346389601
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 7254.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 7257.87 moveto 538 (0x2940eb8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 7242.87 moveto 70 (cp1\(566, 70\)) alignedtext
+grestore
+% Node0x259732810->Node0x346389601
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1890.47 7659.1 moveto
+1944.1 7584.63 2106.49 7375.98 2299.12 7290.07 curveto
+2315.62 7282.71 2332.9 7276.49 2350.61 7271.25 curveto
+stroke
+0 0 0 edgecolor
+newpath 2351.83 7274.54 moveto
+2360.49 7268.44 lineto
+2349.91 7267.81 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2351.83 7274.54 moveto
+2360.49 7268.44 lineto
+2349.91 7267.81 lineto
+closepath stroke
+grestore
+% Node0x846350143
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 7182.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 7185.87 moveto 538 (0x29410a0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 7170.87 moveto 70 (cp2\(44, 286\)) alignedtext
+grestore
+% Node0x259732810->Node0x846350143
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1886.37 7659.14 moveto
+1933.44 7575.9 2089.72 7322.13 2299.12 7218.07 curveto
+2313.8 7210.78 2329.17 7204.54 2344.97 7199.21 curveto
+stroke
+0 0 0 edgecolor
+newpath 2346.42 7202.42 moveto
+2354.86 7196.02 lineto
+2344.27 7195.76 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2346.42 7202.42 moveto
+2354.86 7196.02 lineto
+2344.27 7195.76 lineto
+closepath stroke
+grestore
+% Node0x388765244
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 7110.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 7113.87 moveto 539 (0x2941288. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 7098.87 moveto 77 (cp2\(102, 286\)) alignedtext
+grestore
+% Node0x259732810->Node0x388765244
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1883.38 7659.02 moveto
+1924.54 7567.56 2072.56 7268.8 2299.12 7146.07 curveto
+2312.66 7138.74 2326.85 7132.42 2341.47 7126.99 curveto
+stroke
+0 0 0 edgecolor
+newpath 2342.9 7130.2 moveto
+2351.14 7123.55 lineto
+2340.55 7123.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2342.9 7130.2 moveto
+2351.14 7123.55 lineto
+2340.55 7123.6 lineto
+closepath stroke
+grestore
+% Node0x363225061
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 7038.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 7041.87 moveto 539 (0x2941470. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 7026.87 moveto 77 (cp2\(160, 286\)) alignedtext
+grestore
+% Node0x259732810->Node0x363225061
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1880.99 7659 moveto
+1916.64 7560.01 2054.84 7216.02 2299.12 7074.07 curveto
+2311.71 7066.76 2324.91 7060.41 2338.55 7054.93 curveto
+stroke
+0 0 0 edgecolor
+newpath 2339.98 7058.13 moveto
+2348.05 7051.27 lineto
+2337.46 7051.59 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2339.98 7058.13 moveto
+2348.05 7051.27 lineto
+2337.46 7051.59 lineto
+closepath stroke
+grestore
+% Node0x568454607
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 6966.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 6969.87 moveto 539 (0x2941658. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 6954.87 moveto 77 (cp2\(218, 286\)) alignedtext
+grestore
+% Node0x259732810->Node0x568454607
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1879.1 7658.88 moveto
+1909.67 7552.66 2036.81 7163.62 2299.12 7002.07 curveto
+2311.05 6994.73 2323.57 6988.33 2336.53 6982.78 curveto
+stroke
+0 0 0 edgecolor
+newpath 2338.11 6985.91 moveto
+2346.04 6978.88 lineto
+2335.46 6979.43 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2338.11 6985.91 moveto
+2346.04 6978.88 lineto
+2335.46 6979.43 lineto
+closepath stroke
+grestore
+% Node0x981108371
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 6894.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 6897.87 moveto 539 (0x2941840. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 6882.87 moveto 77 (cp2\(276, 286\)) alignedtext
+grestore
+% Node0x259732810->Node0x981108371
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1877.51 7658.85 moveto
+1903.27 7545.89 2018.35 7111.61 2299.12 6930.07 curveto
+2310.42 6922.76 2322.31 6916.37 2334.62 6910.79 curveto
+stroke
+0 0 0 edgecolor
+newpath 2336.33 6913.86 moveto
+2344.11 6906.68 lineto
+2333.55 6907.44 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2336.33 6913.86 moveto
+2344.11 6906.68 lineto
+2333.55 6907.44 lineto
+closepath stroke
+grestore
+% Node0x903822161
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 6822.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 6825.87 moveto 538 (0x2941a38. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 6810.87 moveto 77 (cp2\(334, 286\)) alignedtext
+grestore
+% Node0x259732810->Node0x903822161
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1876.1 7659.2 moveto
+1897.19 7540.49 1999.28 7060.13 2299.12 6858.07 curveto
+2310.06 6850.7 2321.57 6844.24 2333.52 6838.59 curveto
+stroke
+0 0 0 edgecolor
+newpath 2335.06 6841.73 moveto
+2342.74 6834.43 lineto
+2332.18 6835.35 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2335.06 6841.73 moveto
+2342.74 6834.43 lineto
+2332.18 6835.35 lineto
+closepath stroke
+grestore
+% Node0x814533792
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 6750.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 6753.87 moveto 538 (0x2941c20. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 6738.87 moveto 77 (cp2\(392, 286\)) alignedtext
+grestore
+% Node0x259732810->Node0x814533792
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1874.98 7659.06 moveto
+1891.84 7534.09 1980.37 7008.64 2299.12 6786.07 curveto
+2309.61 6778.75 2320.66 6772.31 2332.13 6766.65 curveto
+stroke
+0 0 0 edgecolor
+newpath 2333.86 6769.71 moveto
+2341.42 6762.29 lineto
+2330.88 6763.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2333.86 6769.71 moveto
+2341.42 6762.29 lineto
+2330.88 6763.37 lineto
+closepath stroke
+grestore
+% Node0x825730532
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 6678.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 6681.87 moveto 538 (0x2941e08. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 6666.87 moveto 77 (cp2\(450, 286\)) alignedtext
+grestore
+% Node0x259732810->Node0x825730532
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.98 7659.19 moveto
+1886.75 7528.67 1961.04 6957.53 2299.12 6714.07 curveto
+2309.39 6706.68 2320.23 6700.16 2331.49 6694.45 curveto
+stroke
+0 0 0 edgecolor
+newpath 2333.14 6697.54 moveto
+2340.62 6690.03 lineto
+2330.09 6691.24 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2333.14 6697.54 moveto
+2340.62 6690.03 lineto
+2330.09 6691.24 lineto
+closepath stroke
+grestore
+% Node0x631526936
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 6606.07 389.73 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2424.07 6609.87 moveto 535 (0x2941ff0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 6594.87 moveto 77 (cp2\(508, 286\)) alignedtext
+grestore
+% Node0x259732810->Node0x631526936
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.13 7659.1 moveto
+1882.06 7522.85 1941.71 6906.49 2299.12 6642.07 curveto
+2309.19 6634.63 2319.82 6628.06 2330.89 6622.29 curveto
+stroke
+0 0 0 edgecolor
+newpath 2332.46 6625.42 moveto
+2339.85 6617.83 lineto
+2329.34 6619.15 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2332.46 6625.42 moveto
+2339.85 6617.83 lineto
+2329.34 6619.15 lineto
+closepath stroke
+grestore
+% Node0x163792655
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 6534.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 6537.87 moveto 539 (0x29421d8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 6522.87 moveto 77 (cp2\(566, 286\)) alignedtext
+grestore
+% Node0x259732810->Node0x163792655
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.37 7659.19 moveto
+1877.59 7517.79 1922.07 6855.74 2299.12 6570.07 curveto
+2308.79 6562.75 2319 6556.27 2329.64 6550.55 curveto
+stroke
+0 0 0 edgecolor
+newpath 2331.36 6553.59 moveto
+2338.67 6545.92 lineto
+2328.17 6547.36 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2331.36 6553.59 moveto
+2338.67 6545.92 lineto
+2328.17 6547.36 lineto
+closepath stroke
+grestore
+% Node0x823016110
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 6462.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 6465.87 moveto 538 (0x29423c0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 6450.87 moveto 70 (cp2\(44, 262\)) alignedtext
+grestore
+% Node0x259732810->Node0x823016110
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.7 7658.99 moveto
+1873.41 7511.94 1902.57 6804.92 2299.12 6498.07 curveto
+2308.61 6490.73 2318.64 6484.23 2329.09 6478.48 curveto
+stroke
+0 0 0 edgecolor
+newpath 2330.74 6481.57 moveto
+2337.97 6473.83 lineto
+2327.49 6475.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2330.74 6481.57 moveto
+2337.97 6473.83 lineto
+2327.49 6475.37 lineto
+closepath stroke
+grestore
+% Node0x120331589
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 6390.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 6393.87 moveto 538 (0x29425a8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 6378.87 moveto 77 (cp2\(102, 262\)) alignedtext
+grestore
+% Node0x259732810->Node0x120331589
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.09 7658.92 moveto
+1869.41 7506.67 1882.84 6754.33 2299.12 6426.07 curveto
+2308.34 6418.8 2318.1 6412.34 2328.26 6406.62 curveto
+stroke
+0 0 0 edgecolor
+newpath 2330.14 6409.59 moveto
+2337.3 6401.79 lineto
+2326.83 6403.42 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2330.14 6409.59 moveto
+2337.3 6401.79 lineto
+2326.83 6403.42 lineto
+closepath stroke
+grestore
+% Node0x801950298
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 6318.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 6321.87 moveto 539 (0x2942790. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 6306.87 moveto 77 (cp2\(160, 262\)) alignedtext
+grestore
+% Node0x259732810->Node0x801950298
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1876.25 7658.93 moveto
+1906.12 7485.18 2078.88 6530.72 2299.12 6354.07 curveto
+2308.18 6346.81 2317.76 6340.35 2327.76 6334.62 curveto
+stroke
+0 0 0 edgecolor
+newpath 2329.55 6337.63 moveto
+2336.66 6329.77 lineto
+2326.2 6331.49 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2329.55 6337.63 moveto
+2336.66 6329.77 lineto
+2326.2 6331.49 lineto
+closepath stroke
+grestore
+% Node0x234323958
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 6246.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 6249.87 moveto 539 (0x2942978. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 6234.87 moveto 77 (cp2\(218, 262\)) alignedtext
+grestore
+% Node0x259732810->Node0x234323958
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.79 7658.94 moveto
+1903.5 7479.89 2068.84 6469.63 2299.12 6282.07 curveto
+2308.13 6274.74 2317.66 6268.22 2327.62 6262.44 curveto
+stroke
+0 0 0 edgecolor
+newpath 2329.41 6265.45 moveto
+2336.48 6257.55 lineto
+2326.03 6259.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2329.41 6265.45 moveto
+2336.48 6257.55 lineto
+2326.03 6259.32 lineto
+closepath stroke
+grestore
+% Node0x315411985
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 6174.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 6177.87 moveto 539 (0x29433d0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 6162.87 moveto 77 (cp2\(276, 262\)) alignedtext
+grestore
+% Node0x259732810->Node0x315411985
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1875.35 7659.06 moveto
+1900.96 7475.16 2058.71 6408.62 2299.12 6210.07 curveto
+2307.88 6202.84 2317.16 6196.39 2326.85 6190.66 curveto
+stroke
+0 0 0 edgecolor
+newpath 2328.86 6193.54 moveto
+2335.87 6185.59 lineto
+2325.43 6187.44 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2328.86 6193.54 moveto
+2335.87 6185.59 lineto
+2325.43 6187.44 lineto
+closepath stroke
+grestore
+% Node0x639013725
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 6102.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 6105.87 moveto 539 (0x29435b8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 6090.87 moveto 77 (cp2\(334, 262\)) alignedtext
+grestore
+% Node0x259732810->Node0x639013725
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1874.99 7658.99 moveto
+1898.66 7469.81 2048.64 6347.58 2299.12 6138.07 curveto
+2307.84 6130.78 2317.08 6124.29 2326.74 6118.51 curveto
+stroke
+0 0 0 edgecolor
+newpath 2328.75 6121.4 moveto
+2335.72 6113.42 lineto
+2325.29 6115.31 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2328.75 6121.4 moveto
+2335.72 6113.42 lineto
+2325.29 6115.31 lineto
+closepath stroke
+grestore
+% Node0x302316714
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 6030.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 6033.87 moveto 538 (0x29437a0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 6018.87 moveto 77 (cp2\(392, 262\)) alignedtext
+grestore
+% Node0x259732810->Node0x302316714
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1874.64 7659 moveto
+1896.43 7464.9 2038.49 6286.61 2299.12 6066.07 curveto
+2307.7 6058.82 2316.79 6052.34 2326.29 6046.58 curveto
+stroke
+0 0 0 edgecolor
+newpath 2328.22 6049.52 moveto
+2335.14 6041.49 lineto
+2324.72 6043.45 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2328.22 6049.52 moveto
+2335.14 6041.49 lineto
+2324.72 6043.45 lineto
+closepath stroke
+grestore
+% Node0x916770081
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 5958.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 5961.87 moveto 539 (0x2943988. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 5946.87 moveto 77 (cp2\(450, 262\)) alignedtext
+grestore
+% Node0x259732810->Node0x916770081
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1874.31 7659.09 moveto
+1894.26 7460.45 2028.28 6225.7 2299.12 5994.07 curveto
+2307.66 5986.77 2316.72 5980.26 2326.19 5974.47 curveto
+stroke
+0 0 0 edgecolor
+newpath 2328.12 5977.39 moveto
+2335.01 5969.35 lineto
+2324.61 5971.34 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2328.12 5977.39 moveto
+2335.01 5969.35 lineto
+2324.61 5971.34 lineto
+closepath stroke
+grestore
+% Node0x351979626
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 5886.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 5889.87 moveto 539 (0x2943b70. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 5874.87 moveto 77 (cp2\(508, 262\)) alignedtext
+grestore
+% Node0x259732810->Node0x351979626
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1874.03 7658.94 moveto
+1892.29 7455.08 2018.16 6164.73 2299.12 5922.07 curveto
+2307.52 5914.81 2316.44 5908.33 2325.77 5902.56 curveto
+stroke
+0 0 0 edgecolor
+newpath 2327.61 5905.54 moveto
+2334.45 5897.46 lineto
+2324.06 5899.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2327.61 5905.54 moveto
+2334.45 5897.46 lineto
+2324.06 5899.51 lineto
+closepath stroke
+grestore
+% Node0x964592457
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 5814.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 5817.87 moveto 539 (0x2943d58. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 5802.87 moveto 77 (cp2\(566, 262\)) alignedtext
+grestore
+% Node0x259732810->Node0x964592457
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.74 7659.18 moveto
+1890.24 7451.48 2007.84 6103.94 2299.12 5850.07 curveto
+2362.64 5794.71 2455.95 5784.37 2535.53 5788.51 curveto
+stroke
+0 0 0 edgecolor
+newpath 2535.47 5792.02 moveto
+2545.66 5789.12 lineto
+2535.89 5785.03 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2535.47 5792.02 moveto
+2545.66 5789.12 lineto
+2535.89 5785.03 lineto
+closepath stroke
+grestore
+% Node0x218865429
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 5742.07 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.07 5745.87 moveto 537 (0x2943f40. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 5730.87 moveto 70 (cp2\(44, 238\)) alignedtext
+grestore
+% Node0x259732810->Node0x218865429
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.49 7659.16 moveto
+1888.38 7446.84 1997.62 6043.08 2299.12 5778.07 curveto
+2362.9 5722.01 2457.16 5711.94 2537.2 5716.4 curveto
+stroke
+0 0 0 edgecolor
+newpath 2537.18 5719.91 moveto
+2547.39 5717.05 lineto
+2537.63 5712.92 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2537.18 5719.91 moveto
+2547.39 5717.05 lineto
+2537.63 5712.92 lineto
+closepath stroke
+grestore
+% Node0x561617137
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 5670.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 5673.87 moveto 539 (0x2944128. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 5658.87 moveto 77 (cp2\(102, 238\)) alignedtext
+grestore
+% Node0x259732810->Node0x561617137
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.26 7659.2 moveto
+1886.58 7442.55 1987.35 5982.26 2299.12 5706.07 curveto
+2363.18 5649.33 2458.39 5639.54 2538.87 5644.31 curveto
+stroke
+0 0 0 edgecolor
+newpath 2538.9 5647.82 moveto
+2549.12 5645 lineto
+2539.37 5640.84 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2538.9 5647.82 moveto
+2549.12 5645 lineto
+2539.37 5640.84 lineto
+closepath stroke
+grestore
+% Node0x678938690
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 5598.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 5601.87 moveto 539 (0x2944358. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 5586.87 moveto 77 (cp2\(160, 238\)) alignedtext
+grestore
+% Node0x259732810->Node0x678938690
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.06 7658.94 moveto
+1884.92 7437 1977.21 5921.33 2299.12 5634.07 curveto
+2363.46 5576.66 2459.64 5567.15 2540.56 5572.24 curveto
+stroke
+0 0 0 edgecolor
+newpath 2540.63 5575.76 moveto
+2550.85 5572.98 lineto
+2541.13 5568.78 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2540.63 5575.76 moveto
+2550.85 5572.98 lineto
+2541.13 5568.78 lineto
+closepath stroke
+grestore
+% Node0x914830374
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 5526.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 5529.87 moveto 539 (0x2944540. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 5514.87 moveto 77 (cp2\(218, 238\)) alignedtext
+grestore
+% Node0x259732810->Node0x914830374
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.85 7659.08 moveto
+1883.2 7433.33 1966.86 5860.59 2299.12 5562.07 curveto
+2363.63 5504.12 2460.54 5494.82 2541.79 5500.17 curveto
+stroke
+0 0 0 edgecolor
+newpath 2541.89 5503.68 moveto
+2552.12 5500.93 lineto
+2542.41 5496.7 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2541.89 5503.68 moveto
+2552.12 5500.93 lineto
+2542.41 5496.7 lineto
+closepath stroke
+grestore
+% Node0x927043026
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 5454.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 5457.87 moveto 539 (0x2944728. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 5442.87 moveto 77 (cp2\(276, 238\)) alignedtext
+grestore
+% Node0x259732810->Node0x927043026
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.66 7658.9 moveto
+1881.62 7428.28 1956.65 5799.74 2299.12 5490.07 curveto
+2363.81 5431.58 2461.45 5422.52 2543.03 5428.1 curveto
+stroke
+0 0 0 edgecolor
+newpath 2543.17 5431.62 moveto
+2553.4 5428.9 lineto
+2543.7 5424.64 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2543.17 5431.62 moveto
+2553.4 5428.9 lineto
+2543.7 5424.64 lineto
+closepath stroke
+grestore
+% Node0x838594490
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 5382.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 5385.87 moveto 539 (0x2944910. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 5370.87 moveto 77 (cp2\(334, 238\)) alignedtext
+grestore
+% Node0x259732810->Node0x838594490
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.48 7659.14 moveto
+1880 7425.24 1946.22 5739.08 2299.12 5418.07 curveto
+2364.06 5359 2462.57 5350.2 2544.52 5356.07 curveto
+stroke
+0 0 0 edgecolor
+newpath 2544.44 5359.58 moveto
+2554.69 5356.88 lineto
+2545 5352.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2544.44 5359.58 moveto
+2554.69 5356.88 lineto
+2545 5352.6 lineto
+closepath stroke
+grestore
+% Node0x419926766
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 5310.07 390.15 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.57 5313.87 moveto 536 (0x2944af8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 5298.87 moveto 77 (cp2\(392, 238\)) alignedtext
+grestore
+% Node0x259732810->Node0x419926766
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.31 7659.05 moveto
+1878.5 7420.7 1935.94 5678.3 2299.12 5346.07 curveto
+2364.14 5286.6 2463.14 5277.96 2545.32 5284 curveto
+stroke
+0 0 0 edgecolor
+newpath 2545.26 5287.51 moveto
+2555.51 5284.84 lineto
+2545.83 5280.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2545.26 5287.51 moveto
+2555.51 5284.84 lineto
+2545.83 5280.53 lineto
+closepath stroke
+grestore
+% Node0x535539488
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 5238.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 5241.87 moveto 538 (0x2944ce0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 5226.87 moveto 77 (cp2\(450, 238\)) alignedtext
+grestore
+% Node0x259732810->Node0x535539488
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.16 7658.99 moveto
+1877.03 7416.4 1925.64 5617.54 2299.12 5274.07 curveto
+2364.22 5214.2 2463.73 5205.72 2546.12 5211.95 curveto
+stroke
+0 0 0 edgecolor
+newpath 2546.08 5215.46 moveto
+2556.33 5212.8 lineto
+2546.66 5208.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2546.08 5215.46 moveto
+2556.33 5212.8 lineto
+2546.66 5208.48 lineto
+closepath stroke
+grestore
+% Node0x624504347
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 5166.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 5169.87 moveto 538 (0x2944ec8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 5154.87 moveto 77 (cp2\(508, 238\)) alignedtext
+grestore
+% Node0x259732810->Node0x624504347
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.01 7658.97 moveto
+1875.6 7412.32 1915.3 5556.81 2299.12 5202.07 curveto
+2364.5 5141.65 2464.89 5133.46 2547.63 5139.95 curveto
+stroke
+0 0 0 edgecolor
+newpath 2547.37 5143.44 moveto
+2557.63 5140.82 lineto
+2547.97 5136.47 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2547.37 5143.44 moveto
+2557.63 5140.82 lineto
+2547.97 5136.47 lineto
+closepath stroke
+grestore
+% Node0x347238545
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 5094.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 5097.87 moveto 539 (0x29450b0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 5082.87 moveto 77 (cp2\(566, 238\)) alignedtext
+grestore
+% Node0x259732810->Node0x347238545
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.87 7658.99 moveto
+1874.21 7408.46 1904.94 5496.11 2299.12 5130.07 curveto
+2364.48 5069.38 2465.12 5061.27 2547.99 5067.88 curveto
+stroke
+0 0 0 edgecolor
+newpath 2547.73 5071.37 moveto
+2558 5068.75 lineto
+2548.34 5064.4 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2547.73 5071.37 moveto
+2558 5068.75 lineto
+2548.34 5064.4 lineto
+closepath stroke
+grestore
+% Node0x942326998
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 5022.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 5025.87 moveto 538 (0x29452a8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 5010.87 moveto 70 (cp2\(44, 214\)) alignedtext
+grestore
+% Node0x259732810->Node0x942326998
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.73 7659.04 moveto
+1872.85 7404.84 1894.55 5435.45 2299.12 5058.07 curveto
+2364.58 4997.01 2465.73 4989.07 2548.8 4995.85 curveto
+stroke
+0 0 0 edgecolor
+newpath 2548.57 4999.34 moveto
+2558.84 4996.74 lineto
+2549.19 4992.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2548.57 4999.34 moveto
+2558.84 4996.74 lineto
+2549.19 4992.37 lineto
+closepath stroke
+grestore
+% Node0x999473793
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 4950.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 4953.87 moveto 539 (0x2945490. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 4938.87 moveto 77 (cp2\(102, 214\)) alignedtext
+grestore
+% Node0x259732810->Node0x999473793
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.61 7659.12 moveto
+1871.52 7401.44 1884.14 5374.8 2299.12 4986.07 curveto
+2364.69 4924.65 2466.34 4916.88 2549.62 4923.83 curveto
+stroke
+0 0 0 edgecolor
+newpath 2549.41 4927.32 moveto
+2559.69 4924.74 lineto
+2550.04 4920.35 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2549.41 4927.32 moveto
+2559.69 4924.74 lineto
+2550.04 4920.35 lineto
+closepath stroke
+grestore
+% Node0x842506184
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 4878.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 4881.87 moveto 539 (0x2945678. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 4866.87 moveto 77 (cp2\(160, 214\)) alignedtext
+grestore
+% Node0x259732810->Node0x842506184
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.49 7658.82 moveto
+1870.24 7396.1 1873.92 5313.98 2299.12 4914.07 curveto
+2364.69 4852.41 2466.59 4844.72 2549.99 4851.77 curveto
+stroke
+0 0 0 edgecolor
+newpath 2549.79 4855.27 moveto
+2560.07 4852.7 lineto
+2550.43 4848.3 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2549.79 4855.27 moveto
+2560.07 4852.7 lineto
+2550.43 4848.3 lineto
+closepath stroke
+grestore
+% Node0x494170693
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 4806.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 4809.87 moveto 539 (0x2945860. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 4794.87 moveto 77 (cp2\(218, 214\)) alignedtext
+grestore
+% Node0x259732810->Node0x494170693
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.37 7658.95 moveto
+1868.98 7393.1 1863.46 5253.39 2299.12 4842.07 curveto
+2364.81 4780.06 2467.22 4772.55 2550.82 4779.76 curveto
+stroke
+0 0 0 edgecolor
+newpath 2550.63 4783.26 moveto
+2560.92 4780.71 lineto
+2551.29 4776.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2550.63 4783.26 moveto
+2560.92 4780.71 lineto
+2551.29 4776.29 lineto
+closepath stroke
+grestore
+% Node0x593110703
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 4734.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 4737.87 moveto 538 (0x2945a48. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 4722.87 moveto 77 (cp2\(276, 214\)) alignedtext
+grestore
+% Node0x259732810->Node0x593110703
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.64 7658.96 moveto
+1894.27 7376.73 2075.47 4982 2299.12 4770.07 curveto
+2364.81 4707.82 2467.49 4700.41 2551.2 4707.72 curveto
+stroke
+0 0 0 edgecolor
+newpath 2551.02 4711.22 moveto
+2561.31 4708.68 lineto
+2551.68 4704.25 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2551.02 4711.22 moveto
+2561.31 4708.68 lineto
+2551.68 4704.25 lineto
+closepath stroke
+grestore
+% Node0x846966971
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 4662.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 4665.87 moveto 538 (0x2945c30. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 4650.87 moveto 77 (cp2\(334, 214\)) alignedtext
+grestore
+% Node0x259732810->Node0x846966971
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.52 7659.18 moveto
+1893.3 7374.22 2070.2 4915.74 2299.12 4698.07 curveto
+2364.94 4635.48 2468.13 4628.24 2552.03 4635.72 curveto
+stroke
+0 0 0 edgecolor
+newpath 2551.87 4639.22 moveto
+2562.16 4636.7 lineto
+2552.55 4632.25 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2551.87 4639.22 moveto
+2562.16 4636.7 lineto
+2552.55 4632.25 lineto
+closepath stroke
+grestore
+% Node0x587951841
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 4590.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 4593.87 moveto 538 (0x2945e18. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 4578.87 moveto 77 (cp2\(392, 214\)) alignedtext
+grestore
+% Node0x259732810->Node0x587951841
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.44 7658.99 moveto
+1892.54 7369.35 2065.04 4849.39 2299.12 4626.07 curveto
+2364.96 4563.26 2468.4 4556.11 2552.41 4563.68 curveto
+stroke
+0 0 0 edgecolor
+newpath 2552.27 4567.19 moveto
+2562.56 4564.68 lineto
+2552.95 4560.22 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2552.27 4567.19 moveto
+2562.56 4564.68 lineto
+2552.95 4560.22 lineto
+closepath stroke
+grestore
+% Node0x893648228
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 4518.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 4521.87 moveto 539 (0x2946000. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 4506.87 moveto 77 (cp2\(450, 214\)) alignedtext
+grestore
+% Node0x259732810->Node0x893648228
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.36 7658.82 moveto
+1891.78 7364.6 2059.87 4783.04 2299.12 4554.07 curveto
+2364.98 4491.05 2468.68 4483.99 2552.8 4491.65 curveto
+stroke
+0 0 0 edgecolor
+newpath 2552.66 4495.16 moveto
+2562.96 4492.66 lineto
+2553.35 4488.19 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2552.66 4495.16 moveto
+2562.96 4492.66 lineto
+2553.35 4488.19 lineto
+closepath stroke
+grestore
+% Node0x896825639
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 4446.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 4449.87 moveto 538 (0x29461e8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 4434.87 moveto 77 (cp2\(508, 214\)) alignedtext
+grestore
+% Node0x259732810->Node0x896825639
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.26 7659.12 moveto
+1890.87 7362.71 2054.57 4716.82 2299.12 4482.07 curveto
+2365 4418.83 2468.96 4411.87 2553.19 4419.63 curveto
+stroke
+0 0 0 edgecolor
+newpath 2553.06 4423.13 moveto
+2563.36 4420.64 lineto
+2553.76 4416.17 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2553.06 4423.13 moveto
+2563.36 4420.64 lineto
+2553.76 4416.17 lineto
+closepath stroke
+grestore
+% Node0x248076852
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 4374.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 4377.87 moveto 539 (0x2946400. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 4362.87 moveto 77 (cp2\(566, 214\)) alignedtext
+grestore
+% Node0x259732810->Node0x248076852
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.18 7658.99 moveto
+1890.14 7358.28 2049.39 4650.49 2299.12 4410.07 curveto
+2365.03 4346.63 2469.25 4339.75 2553.58 4347.6 curveto
+stroke
+0 0 0 edgecolor
+newpath 2553.46 4351.11 moveto
+2563.76 4348.63 lineto
+2554.16 4344.15 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2553.46 4351.11 moveto
+2563.76 4348.63 lineto
+2554.16 4344.15 lineto
+closepath stroke
+grestore
+% Node0x949027196
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 4302.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 4305.87 moveto 538 (0x29465e8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 4290.87 moveto 70 (cp2\(44, 190\)) alignedtext
+grestore
+% Node0x259732810->Node0x949027196
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.11 7658.87 moveto
+1889.41 7353.96 2044.19 4584.16 2299.12 4338.07 curveto
+2365.06 4274.42 2469.54 4267.64 2553.97 4275.58 curveto
+stroke
+0 0 0 edgecolor
+newpath 2553.86 4279.09 moveto
+2564.17 4276.62 lineto
+2554.57 4272.13 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2553.86 4279.09 moveto
+2564.17 4276.62 lineto
+2554.57 4272.13 lineto
+closepath stroke
+grestore
+% Node0x264829689
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 4230.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 4233.87 moveto 539 (0x29467d0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 4218.87 moveto 77 (cp2\(102, 190\)) alignedtext
+grestore
+% Node0x259732810->Node0x264829689
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1873.04 7658.77 moveto
+1888.7 7349.78 2039 4517.84 2299.12 4266.07 curveto
+2365.16 4202.15 2470.04 4195.52 2554.63 4203.59 curveto
+stroke
+0 0 0 edgecolor
+newpath 2554.27 4207.07 moveto
+2564.57 4204.62 lineto
+2554.99 4200.11 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2554.27 4207.07 moveto
+2564.57 4204.62 lineto
+2554.99 4200.11 lineto
+closepath stroke
+grestore
+% Node0x902333977
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 4158.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 4161.87 moveto 539 (0x29469b8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 4146.87 moveto 77 (cp2\(160, 190\)) alignedtext
+grestore
+% Node0x259732810->Node0x902333977
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.95 7659.16 moveto
+1887.84 7348.7 2033.66 4451.67 2299.12 4194.07 curveto
+2365.2 4129.96 2470.34 4123.42 2555.03 4131.58 curveto
+stroke
+0 0 0 edgecolor
+newpath 2554.68 4135.06 moveto
+2564.98 4132.62 lineto
+2555.4 4128.1 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2554.68 4135.06 moveto
+2564.98 4132.62 lineto
+2555.4 4128.1 lineto
+closepath stroke
+grestore
+% Node0x223819483
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 4086.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 4089.87 moveto 538 (0x2946ba0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 4074.87 moveto 77 (cp2\(218, 190\)) alignedtext
+grestore
+% Node0x259732810->Node0x223819483
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.88 7659.1 moveto
+1887.15 7344.82 2028.44 4385.37 2299.12 4122.07 curveto
+2365.24 4057.76 2470.64 4051.32 2555.43 4059.57 curveto
+stroke
+0 0 0 edgecolor
+newpath 2555.09 4063.05 moveto
+2565.4 4060.62 lineto
+2555.82 4056.09 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2555.09 4063.05 moveto
+2565.4 4060.62 lineto
+2555.82 4056.09 lineto
+closepath stroke
+grestore
+% Node0x488276372
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 4014.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 4017.87 moveto 539 (0x2946d88. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 4002.87 moveto 77 (cp2\(276, 190\)) alignedtext
+grestore
+% Node0x259732810->Node0x488276372
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.82 7659.05 moveto
+1886.47 7341.07 2023.23 4319.07 2299.12 4050.07 curveto
+2365.16 3985.68 2470.57 3979.25 2555.38 3987.52 curveto
+stroke
+0 0 0 edgecolor
+newpath 2555.04 3991 moveto
+2565.35 3988.57 lineto
+2555.77 3984.04 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2555.04 3991 moveto
+2565.35 3988.57 lineto
+2555.77 3984.04 lineto
+closepath stroke
+grestore
+% Node0x953195605
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 3942.07 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.07 3945.87 moveto 537 (0x2946f70. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 3930.87 moveto 77 (cp2\(334, 190\)) alignedtext
+grestore
+% Node0x259732810->Node0x953195605
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.75 7659.01 moveto
+1885.8 7337.44 2018 4252.78 2299.12 3978.07 curveto
+2365.21 3913.49 2470.88 3907.15 2555.78 3915.51 curveto
+stroke
+0 0 0 edgecolor
+newpath 2555.45 3919 moveto
+2565.76 3916.57 lineto
+2556.19 3912.04 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2555.45 3919 moveto
+2565.76 3916.57 lineto
+2556.19 3912.04 lineto
+closepath stroke
+grestore
+% Node0x204870255
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 3870.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 3873.87 moveto 539 (0x2947158. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 3858.87 moveto 77 (cp2\(392, 190\)) alignedtext
+grestore
+% Node0x259732810->Node0x204870255
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.69 7659 moveto
+1885.14 7333.94 2012.77 4186.5 2299.12 3906.07 curveto
+2365.25 3841.31 2471.19 3835.06 2556.19 3843.51 curveto
+stroke
+0 0 0 edgecolor
+newpath 2555.86 3847 moveto
+2566.18 3844.58 lineto
+2556.61 3840.04 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2555.86 3847 moveto
+2566.18 3844.58 lineto
+2556.61 3840.04 lineto
+closepath stroke
+grestore
+% Node0x195408357
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 3798.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 3801.87 moveto 539 (0x2947388. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 3786.87 moveto 77 (cp2\(450, 190\)) alignedtext
+grestore
+% Node0x259732810->Node0x195408357
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.63 7658.99 moveto
+1884.48 7330.56 2007.53 4120.23 2299.12 3834.07 curveto
+2365.3 3769.12 2471.5 3762.98 2556.59 3771.51 curveto
+stroke
+0 0 0 edgecolor
+newpath 2556.28 3775 moveto
+2566.6 3772.59 lineto
+2557.03 3768.04 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2556.28 3775 moveto
+2566.6 3772.59 lineto
+2557.03 3768.04 lineto
+closepath stroke
+grestore
+% Node0x769635749
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 3726.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 3729.87 moveto 539 (0x2947570. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 3714.87 moveto 77 (cp2\(508, 190\)) alignedtext
+grestore
+% Node0x259732810->Node0x769635749
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.58 7659 moveto
+1883.84 7327.31 2002.29 4053.96 2299.12 3762.07 curveto
+2365.24 3697.06 2471.44 3690.91 2556.55 3699.47 curveto
+stroke
+0 0 0 edgecolor
+newpath 2556.24 3702.95 moveto
+2566.56 3700.55 lineto
+2556.99 3695.99 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2556.24 3702.95 moveto
+2566.56 3700.55 lineto
+2556.99 3695.99 lineto
+closepath stroke
+grestore
+% Node0x813695075
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 3654.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 3657.87 moveto 539 (0x2947758. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 3642.87 moveto 77 (cp2\(566, 190\)) alignedtext
+grestore
+% Node0x259732810->Node0x813695075
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.52 7659.03 moveto
+1883.21 7324.18 1997.04 3987.7 2299.12 3690.07 curveto
+2365.29 3624.88 2471.75 3618.83 2556.96 3627.47 curveto
+stroke
+0 0 0 edgecolor
+newpath 2556.66 3630.96 moveto
+2566.98 3628.56 lineto
+2557.41 3624 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2556.66 3630.96 moveto
+2566.98 3628.56 lineto
+2557.41 3624 lineto
+closepath stroke
+grestore
+% Node0x259800785
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 3582.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 3585.87 moveto 539 (0x2947940. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 3570.87 moveto 70 (cp2\(44, 166\)) alignedtext
+grestore
+% Node0x259732810->Node0x259800785
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.47 7659.06 moveto
+1882.58 7321.17 1991.78 3921.45 2299.12 3618.07 curveto
+2365.35 3552.7 2472.07 3546.75 2557.37 3555.47 curveto
+stroke
+0 0 0 edgecolor
+newpath 2557.08 3558.96 moveto
+2567.4 3556.58 lineto
+2557.84 3552 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2557.08 3558.96 moveto
+2567.4 3556.58 lineto
+2557.84 3552 lineto
+closepath stroke
+grestore
+% Node0x419079408
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 3510.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 3513.87 moveto 539 (0x2947b28. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 3498.87 moveto 77 (cp2\(102, 166\)) alignedtext
+grestore
+% Node0x259732810->Node0x419079408
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.41 7659.11 moveto
+1881.97 7318.29 1986.52 3855.2 2299.12 3546.07 curveto
+2365.29 3480.64 2472.02 3474.7 2557.33 3483.43 curveto
+stroke
+0 0 0 edgecolor
+newpath 2557.04 3486.92 moveto
+2567.36 3484.54 lineto
+2557.8 3479.97 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2557.04 3486.92 moveto
+2567.36 3484.54 lineto
+2557.8 3479.97 lineto
+closepath stroke
+grestore
+% Node0x904058695
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 3438.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 3441.87 moveto 539 (0x2947d10. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 3426.87 moveto 77 (cp2\(160, 166\)) alignedtext
+grestore
+% Node0x259732810->Node0x904058695
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.36 7659.18 moveto
+1881.36 7315.54 1981.25 3788.96 2299.12 3474.07 curveto
+2365.35 3408.47 2472.34 3402.62 2557.75 3411.44 curveto
+stroke
+0 0 0 edgecolor
+newpath 2557.46 3414.93 moveto
+2567.78 3412.56 lineto
+2558.23 3407.98 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2557.46 3414.93 moveto
+2567.78 3412.56 lineto
+2558.23 3407.98 lineto
+closepath stroke
+grestore
+% Node0x921316259
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 3366.07 390.15 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.57 3369.87 moveto 536 (0x2947ef8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 3354.87 moveto 77 (cp2\(218, 166\)) alignedtext
+grestore
+% Node0x259732810->Node0x921316259
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.32 7658.99 moveto
+1880.81 7311.07 1976.06 3722.64 2299.12 3402.07 curveto
+2365.41 3336.3 2472.67 3330.55 2558.16 3339.45 curveto
+stroke
+0 0 0 edgecolor
+newpath 2557.88 3342.94 moveto
+2568.21 3340.58 lineto
+2558.66 3335.99 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2557.88 3342.94 moveto
+2568.21 3340.58 lineto
+2558.66 3335.99 lineto
+closepath stroke
+grestore
+% Node0x155855565
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 3294.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 3297.87 moveto 538 (0x29480e0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 3282.87 moveto 77 (cp2\(276, 166\)) alignedtext
+grestore
+% Node0x259732810->Node0x155855565
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.27 7659.08 moveto
+1880.22 7308.53 1970.78 3656.42 2299.12 3330.07 curveto
+2365.35 3264.24 2472.62 3258.5 2558.13 3267.42 curveto
+stroke
+0 0 0 edgecolor
+newpath 2557.85 3270.91 moveto
+2568.18 3268.54 lineto
+2558.63 3263.95 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2557.85 3270.91 moveto
+2568.18 3268.54 lineto
+2558.63 3263.95 lineto
+closepath stroke
+grestore
+% Node0x658067987
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 3222.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 3225.87 moveto 539 (0x29482d8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 3210.87 moveto 77 (cp2\(334, 166\)) alignedtext
+grestore
+% Node0x259732810->Node0x658067987
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.22 7659.18 moveto
+1879.64 7306.12 1965.5 3590.19 2299.12 3258.07 curveto
+2365.3 3192.19 2472.57 3186.45 2558.09 3195.38 curveto
+stroke
+0 0 0 edgecolor
+newpath 2557.82 3198.88 moveto
+2568.14 3196.51 lineto
+2558.6 3191.92 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2557.82 3198.88 moveto
+2568.14 3196.51 lineto
+2558.6 3191.92 lineto
+closepath stroke
+grestore
+% Node0x585119772
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 3150.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 3153.87 moveto 538 (0x29484c0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 3138.87 moveto 77 (cp2\(392, 166\)) alignedtext
+grestore
+% Node0x259732810->Node0x585119772
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.18 7659.02 moveto
+1879.11 7301.9 1960.29 3523.89 2299.12 3186.07 curveto
+2365.37 3120.02 2472.9 3114.38 2558.51 3123.4 curveto
+stroke
+0 0 0 edgecolor
+newpath 2558.24 3126.89 moveto
+2568.57 3124.54 lineto
+2559.03 3119.94 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2558.24 3126.89 moveto
+2568.57 3124.54 lineto
+2559.03 3119.94 lineto
+closepath stroke
+grestore
+% Node0x471636195
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 3078.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 3081.87 moveto 538 (0x29486a8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 3066.87 moveto 77 (cp2\(450, 166\)) alignedtext
+grestore
+% Node0x259732810->Node0x471636195
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.14 7659.14 moveto
+1878.55 7299.71 1955 3457.68 2299.12 3114.07 curveto
+2365.32 3047.97 2472.85 3042.34 2558.48 3051.37 curveto
+stroke
+0 0 0 edgecolor
+newpath 2558.21 3054.86 moveto
+2568.54 3052.51 lineto
+2559 3047.9 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2558.21 3054.86 moveto
+2568.54 3052.51 lineto
+2559 3047.9 lineto
+closepath stroke
+grestore
+% Node0x439115590
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 3006.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 3009.87 moveto 539 (0x2948890. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 2994.87 moveto 77 (cp2\(508, 166\)) alignedtext
+grestore
+% Node0x259732810->Node0x439115590
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.1 7659 moveto
+1878.03 7295.64 1949.79 3391.38 2299.12 3042.07 curveto
+2365.39 2975.81 2473.19 2970.28 2558.9 2979.38 curveto
+stroke
+0 0 0 edgecolor
+newpath 2558.64 2982.88 moveto
+2568.97 2980.53 lineto
+2559.43 2975.92 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2558.64 2982.88 moveto
+2568.97 2980.53 lineto
+2559.43 2975.92 lineto
+closepath stroke
+grestore
+% Node0x612139599
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 2934.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 2937.87 moveto 538 (0x2948a78. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 2922.87 moveto 77 (cp2\(566, 166\)) alignedtext
+grestore
+% Node0x259732810->Node0x612139599
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.06 7659.14 moveto
+1877.49 7293.67 1944.48 3325.18 2299.12 2970.07 curveto
+2365.34 2903.77 2473.14 2898.23 2558.87 2907.35 curveto
+stroke
+0 0 0 edgecolor
+newpath 2558.61 2910.85 moveto
+2568.94 2908.5 lineto
+2559.4 2903.89 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2558.61 2910.85 moveto
+2568.94 2908.5 lineto
+2559.4 2903.89 lineto
+closepath stroke
+grestore
+% Node0x982574703
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 2862.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 2865.87 moveto 538 (0x2948c60. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 2850.87 moveto 70 (cp2\(44, 142\)) alignedtext
+grestore
+% Node0x259732810->Node0x982574703
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.02 7659.02 moveto
+1876.98 7289.76 1939.26 3258.9 2299.12 2898.07 curveto
+2365.41 2831.6 2473.48 2826.17 2559.29 2835.37 curveto
+stroke
+0 0 0 edgecolor
+newpath 2559.04 2838.87 moveto
+2569.37 2836.53 lineto
+2559.84 2831.91 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2559.04 2838.87 moveto
+2569.37 2836.53 lineto
+2559.84 2831.91 lineto
+closepath stroke
+grestore
+% Node0x847767135
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 2790.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 2793.87 moveto 538 (0x2948e48. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 2778.87 moveto 77 (cp2\(102, 142\)) alignedtext
+grestore
+% Node0x259732810->Node0x847767135
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.98 7659.19 moveto
+1876.45 7288 1933.95 3192.71 2299.12 2826.07 curveto
+2365.37 2759.56 2473.44 2754.13 2559.26 2763.35 curveto
+stroke
+0 0 0 edgecolor
+newpath 2559.01 2766.84 moveto
+2569.35 2764.51 lineto
+2559.81 2759.89 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2559.01 2766.84 moveto
+2569.35 2764.51 lineto
+2559.81 2759.89 lineto
+closepath stroke
+grestore
+% Node0x521893042
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 2718.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 2721.87 moveto 539 (0x2949030. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 2706.87 moveto 77 (cp2\(160, 142\)) alignedtext
+grestore
+% Node0x259732810->Node0x521893042
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.95 7659.08 moveto
+1875.96 7284.25 1928.72 3126.43 2299.12 2754.07 curveto
+2365.33 2687.52 2473.4 2682.09 2559.23 2691.32 curveto
+stroke
+0 0 0 edgecolor
+newpath 2558.99 2694.81 moveto
+2569.32 2692.48 lineto
+2559.79 2687.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2558.99 2694.81 moveto
+2569.32 2692.48 lineto
+2559.79 2687.86 lineto
+closepath stroke
+grestore
+% Node0x837002339
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 2646.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 2649.87 moveto 539 (0x2949218. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 2634.87 moveto 77 (cp2\(218, 142\)) alignedtext
+grestore
+% Node0x259732810->Node0x837002339
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.91 7658.97 moveto
+1875.47 7280.56 1923.49 3060.15 2299.12 2682.07 curveto
+2365.4 2615.36 2473.74 2610.04 2559.66 2619.34 curveto
+stroke
+0 0 0 edgecolor
+newpath 2559.42 2622.84 moveto
+2569.75 2620.51 lineto
+2560.22 2615.88 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2559.42 2622.84 moveto
+2569.75 2620.51 lineto
+2560.22 2615.88 lineto
+closepath stroke
+grestore
+% Node0x349109624
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 2574.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 2577.87 moveto 539 (0x2949430. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 2562.87 moveto 77 (cp2\(276, 142\)) alignedtext
+grestore
+% Node0x259732810->Node0x349109624
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.88 7659.17 moveto
+1874.96 7279.12 1918.16 2993.98 2299.12 2610.07 curveto
+2365.36 2543.32 2473.7 2538 2559.63 2547.32 curveto
+stroke
+0 0 0 edgecolor
+newpath 2559.39 2550.81 moveto
+2569.73 2548.49 lineto
+2560.2 2543.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2559.39 2550.81 moveto
+2569.73 2548.49 lineto
+2560.2 2543.86 lineto
+closepath stroke
+grestore
+% Node0x552135545
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 2502.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 2505.87 moveto 539 (0x2949618. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 2490.87 moveto 77 (cp2\(334, 142\)) alignedtext
+grestore
+% Node0x259732810->Node0x552135545
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.85 7659.09 moveto
+1874.49 7275.59 1912.92 2927.71 2299.12 2538.07 curveto
+2365.32 2471.28 2473.67 2465.96 2559.61 2475.29 curveto
+stroke
+0 0 0 edgecolor
+newpath 2559.37 2478.79 moveto
+2569.71 2476.46 lineto
+2560.18 2471.83 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2559.37 2478.79 moveto
+2569.71 2476.46 lineto
+2560.18 2471.83 lineto
+closepath stroke
+grestore
+% Node0x403007219
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 2430.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 2433.87 moveto 539 (0x2949800. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 2418.87 moveto 77 (cp2\(392, 142\)) alignedtext
+grestore
+% Node0x259732810->Node0x403007219
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.81 7659.01 moveto
+1874.02 7272.11 1907.68 2861.45 2299.12 2466.07 curveto
+2365.4 2399.13 2474.01 2393.91 2560.03 2403.32 curveto
+stroke
+0 0 0 edgecolor
+newpath 2559.8 2406.81 moveto
+2570.14 2404.5 lineto
+2560.61 2399.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2559.8 2406.81 moveto
+2570.14 2404.5 lineto
+2560.61 2399.86 lineto
+closepath stroke
+grestore
+% Node0x653161347
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 2358.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 2361.87 moveto 538 (0x29499e8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 2346.87 moveto 77 (cp2\(450, 142\)) alignedtext
+grestore
+% Node0x259732810->Node0x653161347
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.78 7658.93 moveto
+1873.55 7268.7 1902.44 2795.19 2299.12 2394.07 curveto
+2365.36 2327.09 2473.98 2321.88 2560.01 2331.29 curveto
+stroke
+0 0 0 edgecolor
+newpath 2559.78 2334.79 moveto
+2570.12 2332.48 lineto
+2560.59 2327.84 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2559.78 2334.79 moveto
+2570.12 2332.48 lineto
+2560.59 2327.84 lineto
+closepath stroke
+grestore
+% Node0x487669631
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 2286.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 2289.87 moveto 539 (0x2949bd0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 2274.87 moveto 77 (cp2\(508, 142\)) alignedtext
+grestore
+% Node0x259732810->Node0x487669631
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.75 7659.17 moveto
+1873.08 7267.67 1897.09 2729.03 2299.12 2322.07 curveto
+2365.33 2255.06 2473.94 2249.84 2559.99 2259.27 curveto
+stroke
+0 0 0 edgecolor
+newpath 2559.76 2262.77 moveto
+2570.1 2260.46 lineto
+2560.57 2255.81 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2559.76 2262.77 moveto
+2570.1 2260.46 lineto
+2560.57 2255.81 lineto
+closepath stroke
+grestore
+% Node0x647190694
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 2214.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 2217.87 moveto 539 (0x2949db8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 2202.87 moveto 77 (cp2\(566, 142\)) alignedtext
+grestore
+% Node0x259732810->Node0x647190694
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.72 7659.11 moveto
+1872.62 7264.42 1891.84 2662.78 2299.12 2250.07 curveto
+2365.41 2182.9 2474.29 2177.79 2560.41 2187.3 curveto
+stroke
+0 0 0 edgecolor
+newpath 2560.19 2190.79 moveto
+2570.53 2188.49 lineto
+2561.01 2183.84 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2560.19 2190.79 moveto
+2570.53 2188.49 lineto
+2561.01 2183.84 lineto
+closepath stroke
+grestore
+% Node0x461703272
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 2142.07 390.15 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.57 2145.87 moveto 536 (0x2949fa0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 2130.87 moveto 70 (cp2\(44, 118\)) alignedtext
+grestore
+% Node0x259732810->Node0x461703272
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.69 7659.06 moveto
+1872.17 7261.23 1886.59 2596.53 2299.12 2178.07 curveto
+2365.37 2110.87 2474.26 2105.76 2560.39 2115.28 curveto
+stroke
+0 0 0 edgecolor
+newpath 2560.17 2118.77 moveto
+2570.51 2116.47 lineto
+2560.99 2111.82 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2560.17 2118.77 moveto
+2570.51 2116.47 lineto
+2560.99 2111.82 lineto
+closepath stroke
+grestore
+% Node0x651986514
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 2070.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 2073.87 moveto 538 (0x294a188. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 2058.87 moveto 77 (cp2\(102, 118\)) alignedtext
+grestore
+% Node0x259732810->Node0x651986514
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.66 7659.02 moveto
+1871.73 7258.1 1881.33 2530.28 2299.12 2106.07 curveto
+2365.34 2038.84 2474.23 2033.73 2560.37 2043.25 curveto
+stroke
+0 0 0 edgecolor
+newpath 2560.15 2046.75 moveto
+2570.49 2044.45 lineto
+2560.97 2039.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2560.15 2046.75 moveto
+2570.49 2044.45 lineto
+2560.97 2039.8 lineto
+closepath stroke
+grestore
+% Node0x822265325
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 1998.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 2001.87 moveto 538 (0x294a3b8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 1986.87 moveto 77 (cp2\(160, 118\)) alignedtext
+grestore
+% Node0x259732810->Node0x822265325
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.64 7658.98 moveto
+1871.29 7255.04 1876.07 2464.04 2299.12 2034.07 curveto
+2365.42 1966.69 2474.58 1961.68 2560.8 1971.28 curveto
+stroke
+0 0 0 edgecolor
+newpath 2560.58 1974.78 moveto
+2570.93 1972.49 lineto
+2561.41 1967.83 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2560.58 1974.78 moveto
+2570.93 1972.49 lineto
+2561.41 1967.83 lineto
+closepath stroke
+grestore
+% Node0x697613551
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 1926.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 1929.87 moveto 538 (0x294a5a0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 1914.87 moveto 77 (cp2\(218, 118\)) alignedtext
+grestore
+% Node0x259732810->Node0x697613551
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.61 7658.94 moveto
+1870.85 7252.03 1870.81 2397.8 2299.12 1962.07 curveto
+2365.39 1894.66 2474.55 1889.66 2560.78 1899.26 curveto
+stroke
+0 0 0 edgecolor
+newpath 2560.57 1902.76 moveto
+2570.91 1900.47 lineto
+2561.39 1895.81 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2560.57 1902.76 moveto
+2570.91 1900.47 lineto
+2561.39 1895.81 lineto
+closepath stroke
+grestore
+% Node0x308382701
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 1854.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 1857.87 moveto 538 (0x294a788. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 1842.87 moveto 77 (cp2\(276, 118\)) alignedtext
+grestore
+% Node0x259732810->Node0x308382701
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.58 7658.92 moveto
+1870.42 7249.09 1865.55 2331.56 2299.12 1890.07 curveto
+2365.36 1822.63 2474.52 1817.63 2560.76 1827.24 curveto
+stroke
+0 0 0 edgecolor
+newpath 2560.55 1830.74 moveto
+2570.89 1828.45 lineto
+2561.38 1823.79 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2560.55 1830.74 moveto
+2570.89 1828.45 lineto
+2561.38 1823.79 lineto
+closepath stroke
+grestore
+% Node0x938259654
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 1782.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 1785.87 moveto 538 (0x294a970. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 1770.87 moveto 77 (cp2\(334, 118\)) alignedtext
+grestore
+% Node0x259732810->Node0x938259654
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.56 7658.9 moveto
+1870 7246.22 1860.28 2265.33 2299.12 1818.07 curveto
+2365.44 1750.48 2474.87 1745.58 2561.19 1755.28 curveto
+stroke
+0 0 0 edgecolor
+newpath 2560.98 1758.78 moveto
+2571.33 1756.49 lineto
+2561.82 1751.83 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2560.98 1758.78 moveto
+2571.33 1756.49 lineto
+2561.82 1751.83 lineto
+closepath stroke
+grestore
+% Node0x717595710
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 1710.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 1713.87 moveto 538 (0x294ab58. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 1698.87 moveto 77 (cp2\(392, 118\)) alignedtext
+grestore
+% Node0x259732810->Node0x717595710
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.53 7659.2 moveto
+1869.58 7245.97 1854.9 2199.21 2299.12 1746.07 curveto
+2365.41 1678.45 2474.84 1673.56 2561.17 1683.26 curveto
+stroke
+0 0 0 edgecolor
+newpath 2560.97 1686.76 moveto
+2571.31 1684.48 lineto
+2561.8 1679.81 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2560.97 1686.76 moveto
+2571.31 1684.48 lineto
+2561.8 1679.81 lineto
+closepath stroke
+grestore
+% Node0x776856650
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 1638.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 1641.87 moveto 538 (0x294ad40. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 1626.87 moveto 77 (cp2\(450, 118\)) alignedtext
+grestore
+% Node0x259732810->Node0x776856650
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1871.51 7659.19 moveto
+1869.17 7243.25 1849.62 2132.99 2299.12 1674.07 curveto
+2365.38 1606.42 2474.81 1601.53 2561.15 1611.24 curveto
+stroke
+0 0 0 edgecolor
+newpath 2560.95 1614.74 moveto
+2571.29 1612.46 lineto
+2561.78 1607.79 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2560.95 1614.74 moveto
+2571.29 1612.46 lineto
+2561.78 1607.79 lineto
+closepath stroke
+grestore
+% Node0x650817082
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 1566.07 390.15 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.57 1569.87 moveto 536 (0x294af28. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 1554.87 moveto 77 (cp2\(508, 118\)) alignedtext
+grestore
+% Node0x259732810->Node0x650817082
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.57 7659.04 moveto
+1886.91 7229.99 2071.56 1834.6 2299.12 1602.07 curveto
+2365.36 1534.39 2474.79 1529.51 2561.13 1539.22 curveto
+stroke
+0 0 0 edgecolor
+newpath 2560.93 1542.72 moveto
+2571.28 1540.44 lineto
+2561.77 1535.77 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2560.93 1542.72 moveto
+2571.28 1540.44 lineto
+2561.77 1535.77 lineto
+closepath stroke
+grestore
+% Node0x355848755
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 1494.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 1497.87 moveto 539 (0x294b110. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.07 1482.87 moveto 77 (cp2\(566, 118\)) alignedtext
+grestore
+% Node0x259732810->Node0x355848755
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.55 7659.05 moveto
+1886.61 7227.37 2068.92 1765.49 2299.12 1530.07 curveto
+2365.44 1462.25 2475.14 1457.46 2561.57 1467.26 curveto
+stroke
+0 0 0 edgecolor
+newpath 2561.37 1470.76 moveto
+2571.72 1468.48 lineto
+2562.21 1463.81 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2561.37 1470.76 moveto
+2571.72 1468.48 lineto
+2562.21 1463.81 lineto
+closepath stroke
+grestore
+% Node0x323744515
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 1422.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 1425.87 moveto 539 (0x294b308. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2659.57 1410.87 moveto 64 (cp2\(44, 94\)) alignedtext
+grestore
+% Node0x259732810->Node0x323744515
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.53 7659.07 moveto
+1886.32 7224.83 2066.27 1696.38 2299.12 1458.07 curveto
+2365.42 1390.22 2475.12 1385.44 2561.55 1395.24 curveto
+stroke
+0 0 0 edgecolor
+newpath 2561.35 1398.74 moveto
+2571.7 1396.47 lineto
+2562.19 1391.79 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2561.35 1398.74 moveto
+2571.7 1396.47 lineto
+2562.19 1391.79 lineto
+closepath stroke
+grestore
+% Node0x442160668
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 1350.07 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.07 1353.87 moveto 537 (0x294b4f0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 1338.87 moveto 70 (cp2\(102, 94\)) alignedtext
+grestore
+% Node0x259732810->Node0x442160668
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.51 7659.09 moveto
+1886.02 7222.34 2063.63 1627.28 2299.12 1386.07 curveto
+2365.39 1318.2 2475.09 1313.42 2561.53 1323.22 curveto
+stroke
+0 0 0 edgecolor
+newpath 2561.34 1326.73 moveto
+2571.69 1324.45 lineto
+2562.18 1319.78 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2561.34 1326.73 moveto
+2571.69 1324.45 lineto
+2562.18 1319.78 lineto
+closepath stroke
+grestore
+% Node0x824883361
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 1278.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 1281.87 moveto 539 (0x294b6d8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 1266.87 moveto 70 (cp2\(160, 94\)) alignedtext
+grestore
+% Node0x259732810->Node0x824883361
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.48 7659.12 moveto
+1885.73 7219.92 2060.98 1558.17 2299.12 1314.07 curveto
+2365.36 1246.17 2475.07 1241.39 2561.52 1251.21 curveto
+stroke
+0 0 0 edgecolor
+newpath 2561.32 1254.71 moveto
+2571.67 1252.44 lineto
+2562.16 1247.76 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2561.32 1254.71 moveto
+2571.67 1252.44 lineto
+2562.16 1247.76 lineto
+closepath stroke
+grestore
+% Node0x971254970
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 1206.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 1209.87 moveto 538 (0x294b8c0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 1194.87 moveto 70 (cp2\(218, 94\)) alignedtext
+grestore
+% Node0x259732810->Node0x971254970
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.46 7659.15 moveto
+1885.44 7217.57 2058.33 1489.07 2299.12 1242.07 curveto
+2365.34 1174.15 2475.05 1169.37 2561.5 1179.19 curveto
+stroke
+0 0 0 edgecolor
+newpath 2561.31 1182.69 moveto
+2571.65 1180.42 lineto
+2562.15 1175.75 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2561.31 1182.69 moveto
+2571.65 1180.42 lineto
+2562.15 1175.75 lineto
+closepath stroke
+grestore
+% Node0x132917424
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 1134.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 1137.87 moveto 538 (0x294baa8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 1122.87 moveto 70 (cp2\(276, 94\)) alignedtext
+grestore
+% Node0x259732810->Node0x132917424
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.44 7659.19 moveto
+1885.16 7215.29 2055.68 1419.97 2299.12 1170.07 curveto
+2365.43 1102.01 2475.4 1097.33 2561.93 1107.23 curveto
+stroke
+0 0 0 edgecolor
+newpath 2561.75 1110.73 moveto
+2572.1 1108.47 lineto
+2562.59 1103.78 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2561.75 1110.73 moveto
+2572.1 1108.47 lineto
+2562.59 1103.78 lineto
+closepath stroke
+grestore
+% Node0x922895621
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 1062.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 1065.87 moveto 538 (0x294bc90. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 1050.87 moveto 70 (cp2\(334, 94\)) alignedtext
+grestore
+% Node0x259732810->Node0x922895621
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.43 7658.89 moveto
+1884.96 7210.09 2053.1 1350.81 2299.12 1098.07 curveto
+2365.4 1029.98 2475.38 1025.31 2561.92 1035.21 curveto
+stroke
+0 0 0 edgecolor
+newpath 2561.73 1038.72 moveto
+2572.08 1036.46 lineto
+2562.58 1031.77 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2561.73 1038.72 moveto
+2572.08 1036.46 lineto
+2562.58 1031.77 lineto
+closepath stroke
+grestore
+% Node0x791525511
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 990.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 993.87 moveto 538 (0x294be78. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 978.87 moveto 70 (cp2\(392, 94\)) alignedtext
+grestore
+% Node0x259732810->Node0x791525511
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.41 7658.94 moveto
+1884.67 7207.9 2050.45 1281.71 2299.12 1026.07 curveto
+2365.38 957.96 2475.36 953.29 2561.9 963.2 curveto
+stroke
+0 0 0 edgecolor
+newpath 2561.72 966.7 moveto
+2572.07 964.44 lineto
+2562.57 959.75 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2561.72 966.7 moveto
+2572.07 964.44 lineto
+2562.57 959.75 lineto
+closepath stroke
+grestore
+% Node0x502219492
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 918.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 921.87 moveto 538 (0x294c060. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 906.87 moveto 70 (cp2\(450, 94\)) alignedtext
+grestore
+% Node0x259732810->Node0x502219492
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.39 7658.99 moveto
+1884.39 7205.78 2047.79 1212.62 2299.12 954.07 curveto
+2365.36 885.94 2475.34 881.27 2561.89 891.18 curveto
+stroke
+0 0 0 edgecolor
+newpath 2561.7 894.69 moveto
+2572.05 892.43 lineto
+2562.55 887.74 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2561.7 894.69 moveto
+2572.05 892.43 lineto
+2562.55 887.74 lineto
+closepath stroke
+grestore
+% Node0x544735634
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 846.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 849.87 moveto 538 (0x294c248. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 834.87 moveto 70 (cp2\(508, 94\)) alignedtext
+grestore
+% Node0x259732810->Node0x544735634
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.37 7659.05 moveto
+1884.12 7203.72 2045.14 1143.52 2299.12 882.07 curveto
+2365.33 813.91 2475.32 809.25 2561.87 819.17 curveto
+stroke
+0 0 0 edgecolor
+newpath 2561.69 822.67 moveto
+2572.04 820.42 lineto
+2562.54 815.73 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2561.69 822.67 moveto
+2572.04 820.42 lineto
+2562.54 815.73 lineto
+closepath stroke
+grestore
+% Node0x853712872
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 774.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 777.87 moveto 538 (0x294c460. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 762.87 moveto 70 (cp2\(566, 94\)) alignedtext
+grestore
+% Node0x259732810->Node0x853712872
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.35 7659.11 moveto
+1883.84 7201.73 2042.48 1074.43 2299.12 810.07 curveto
+2365.43 741.77 2475.68 737.21 2562.31 747.21 curveto
+stroke
+0 0 0 edgecolor
+newpath 2562.13 750.71 moveto
+2572.48 748.46 lineto
+2562.99 743.77 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2562.13 750.71 moveto
+2572.48 748.46 lineto
+2562.99 743.77 lineto
+closepath stroke
+grestore
+% Node0x822886198
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 702.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 705.87 moveto 538 (0x294c648. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2659.57 690.87 moveto 64 (cp2\(44, 70\)) alignedtext
+grestore
+% Node0x259732810->Node0x822886198
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.33 7659.18 moveto
+1883.57 7199.8 2039.83 1005.34 2299.12 738.07 curveto
+2365.4 669.75 2475.66 665.19 2562.29 675.2 curveto
+stroke
+0 0 0 edgecolor
+newpath 2562.12 678.7 moveto
+2572.47 676.45 lineto
+2562.97 671.75 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2562.12 678.7 moveto
+2572.47 676.45 lineto
+2562.97 671.75 lineto
+closepath stroke
+grestore
+% Node0x304142623
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 630.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 633.87 moveto 538 (0x294c830. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 618.87 moveto 70 (cp2\(102, 70\)) alignedtext
+grestore
+% Node0x259732810->Node0x304142623
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.32 7658.9 moveto
+1883.38 7194.77 2037.23 936.18 2299.12 666.07 curveto
+2365.38 597.73 2475.64 593.17 2562.28 603.18 curveto
+stroke
+0 0 0 edgecolor
+newpath 2562.1 606.69 moveto
+2572.46 604.44 lineto
+2562.96 599.74 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2562.1 606.69 moveto
+2572.46 604.44 lineto
+2562.96 599.74 lineto
+closepath stroke
+grestore
+% Node0x494397365
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 558.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 561.87 moveto 538 (0x294ca18. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 546.87 moveto 70 (cp2\(160, 70\)) alignedtext
+grestore
+% Node0x259732810->Node0x494397365
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.3 7658.98 moveto
+1883.11 7192.94 2034.57 867.09 2299.12 594.07 curveto
+2365.36 525.71 2475.62 521.16 2562.27 531.17 curveto
+stroke
+0 0 0 edgecolor
+newpath 2562.09 534.67 moveto
+2572.45 532.43 lineto
+2562.95 527.73 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2562.09 534.67 moveto
+2572.45 532.43 lineto
+2562.95 527.73 lineto
+closepath stroke
+grestore
+% Node0x162048701
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 486.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 489.87 moveto 538 (0x294cc00. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 474.87 moveto 70 (cp2\(218, 70\)) alignedtext
+grestore
+% Node0x259732810->Node0x162048701
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.28 7659.06 moveto
+1882.84 7191.18 2031.91 798 2299.12 522.07 curveto
+2365.34 453.69 2475.6 449.14 2562.26 459.16 curveto
+stroke
+0 0 0 edgecolor
+newpath 2562.08 462.66 moveto
+2572.43 460.41 lineto
+2562.94 455.72 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2562.08 462.66 moveto
+2572.43 460.41 lineto
+2562.94 455.72 lineto
+closepath stroke
+grestore
+% Node0x965595515
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 414.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 417.87 moveto 538 (0x294cde8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 402.87 moveto 70 (cp2\(276, 70\)) alignedtext
+grestore
+% Node0x259732810->Node0x965595515
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.26 7659.15 moveto
+1882.58 7189.49 2029.25 728.92 2299.12 450.07 curveto
+2365.43 381.55 2475.96 377.1 2562.69 387.2 curveto
+stroke
+0 0 0 edgecolor
+newpath 2562.52 390.7 moveto
+2572.88 388.46 lineto
+2563.38 383.76 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2562.52 390.7 moveto
+2572.88 388.46 lineto
+2563.38 383.76 lineto
+closepath stroke
+grestore
+% Node0x408462420
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 342.07 390.15 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2423.57 345.87 moveto 536 (0x294cfd0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 330.87 moveto 70 (cp2\(334, 70\)) alignedtext
+grestore
+% Node0x259732810->Node0x408462420
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.25 7658.88 moveto
+1882.39 7184.55 2026.66 659.76 2299.12 378.07 curveto
+2365.41 309.54 2475.94 305.09 2562.68 315.19 curveto
+stroke
+0 0 0 edgecolor
+newpath 2562.51 318.69 moveto
+2572.86 316.45 lineto
+2563.37 311.74 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2562.51 318.69 moveto
+2572.86 316.45 lineto
+2563.37 311.74 lineto
+closepath stroke
+grestore
+% Node0x316931199
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 270.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 273.87 moveto 539 (0x294d1b8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 258.87 moveto 70 (cp2\(392, 70\)) alignedtext
+grestore
+% Node0x259732810->Node0x316931199
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.23 7658.98 moveto
+1882.13 7182.95 2023.99 590.68 2299.12 306.07 curveto
+2365.39 237.52 2475.93 233.07 2562.67 243.17 curveto
+stroke
+0 0 0 edgecolor
+newpath 2562.5 246.68 moveto
+2572.85 244.44 lineto
+2563.36 239.73 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2562.5 246.68 moveto
+2572.85 244.44 lineto
+2563.36 239.73 lineto
+closepath stroke
+grestore
+% Node0x177303680
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 198.07 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.57 201.87 moveto 538 (0x294d3e8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 186.87 moveto 70 (cp2\(450, 70\)) alignedtext
+grestore
+% Node0x259732810->Node0x177303680
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.22 7659.08 moveto
+1881.87 7181.42 2021.33 521.59 2299.12 234.07 curveto
+2365.44 165.43 2476.13 161.04 2562.92 171.19 curveto
+stroke
+0 0 0 edgecolor
+newpath 2562.49 174.67 moveto
+2572.84 172.43 lineto
+2563.35 167.72 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2562.49 174.67 moveto
+2572.84 172.43 lineto
+2563.35 167.72 lineto
+closepath stroke
+grestore
+% Node0x580584377
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 126.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 129.87 moveto 539 (0x294d5d0. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 114.87 moveto 70 (cp2\(508, 70\)) alignedtext
+grestore
+% Node0x259732810->Node0x580584377
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.2 7659.18 moveto
+1881.61 7179.96 2018.66 452.51 2299.12 162.07 curveto
+2365.42 93.41 2476.12 89.03 2562.91 99.18 curveto
+stroke
+0 0 0 edgecolor
+newpath 2562.48 102.66 moveto
+2572.83 100.42 lineto
+2563.34 95.71 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2562.48 102.66 moveto
+2572.83 100.42 lineto
+2563.34 95.71 lineto
+closepath stroke
+grestore
+% Node0x674662948
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2691.57 54.07 392.39 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2422.07 57.87 moveto 539 (0x294d7b8. \(/home/labaccount/11-2-17/mlsa/IG/example/SnakeAndLadder/SnakeAndLadder.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.57 42.87 moveto 70 (cp2\(566, 70\)) alignedtext
+grestore
+% Node0x259732810->Node0x674662948
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1872.19 7658.93 moveto
+1881.43 7175.12 2016.06 383.36 2299.12 90.07 curveto
+2365.41 21.39 2476.1 17.01 2562.9 27.17 curveto
+stroke
+0 0 0 edgecolor
+newpath 2562.46 30.64 moveto
+2572.82 28.41 lineto
+2563.33 23.7 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2562.46 30.64 moveto
+2572.82 28.41 lineto
+2563.33 23.7 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 150 150 754 3150
+end
+restore
+%%EOF

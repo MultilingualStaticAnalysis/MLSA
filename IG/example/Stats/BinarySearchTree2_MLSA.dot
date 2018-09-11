@@ -1,0 +1,87 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2 Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2 Call Graph"
+	];
+
+	Node0x948151315 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c"];
+	Node0x697718668 [shape=oval, label="0x333a690. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\ncria()"];
+	Node0x948151315 -> Node0x697718668;
+	Node0x945140677 [shape=oval, label="0x333ada0. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\natoi(UNOP)"];
+	Node0x948151315 -> Node0x945140677;
+	Node0x524657279 [shape=oval, label="0x333aec8. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\ninsere(g, x)"];
+	Node0x948151315 -> Node0x524657279;
+	Node0x889610736 [shape=oval, label="0x333b2d8. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\natoi(UNOP)"];
+	Node0x948151315 -> Node0x889610736;
+	Node0x608350099 [shape=oval, label="0x333b3d8. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nprocura(g, x)"];
+	Node0x948151315 -> Node0x608350099;
+	Node0x753943067 [shape=oval, label="0x333b520. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nprintf(<< %d existe\n >>, x)"];
+	Node0x948151315 -> Node0x753943067;
+	Node0x410334984 [shape=oval, label="0x333b640. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nprintf(<< %d nao existe\n >>, x)"];
+	Node0x948151315 -> Node0x410334984;
+	Node0x516489345 [shape=oval, label="0x333ba48. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\ninfixa(g)"];
+	Node0x948151315 -> Node0x516489345;
+	Node0x144621784 [shape=oval, label="0x333bb00. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nprintf(<< \n >>)"];
+	Node0x948151315 -> Node0x144621784;
+	Node0x249091970 [shape=oval, label="0x333beb0. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nposfixa(g)"];
+	Node0x948151315 -> Node0x249091970;
+	Node0x447079865 [shape=oval, label="0x333bf68. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nprintf(<< \n >>)"];
+	Node0x948151315 -> Node0x447079865;
+	Node0x208007528 [shape=oval, label="0x333c318. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nprefixa(g)"];
+	Node0x948151315 -> Node0x208007528;
+	Node0x974088088 [shape=oval, label="0x333c3d0. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nprintf(<< \n >>)"];
+	Node0x948151315 -> Node0x974088088;
+	Node0x817748398 [shape=oval, label="0x333c698. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\natoi(UNOP)"];
+	Node0x948151315 -> Node0x817748398;
+	Node0x484440157 [shape=oval, label="0x333c7c0. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nretira(g, x)"];
+	Node0x948151315 -> Node0x484440157;
+	Node0x319553735 [shape=oval, label="0x333c910. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\ngetchar()"];
+	Node0x948151315 -> Node0x319553735;
+	Node0x520600785 [shape=oval, label="0x3339a60. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nmalloc()"];
+	Node0x524657279 -> Node0x520600785;
+	Node0x612826667 [shape=oval, style=dashed, label="0x333a020. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\ninsere(a.esq, v)"];
+	Node0x524657279 -> Node0x612826667;
+	Node0x312408119 [shape=oval, style=dashed, label="0x333a300. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\ninsere(a.dir, v)"];
+	Node0x524657279 -> Node0x312408119;
+	Node0x887164535 [shape=oval, style=dashed, label="0x33392a8. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nprocura(r.esq, v)"];
+	Node0x608350099 -> Node0x887164535;
+	Node0x201892727 [shape=oval, style=dashed, label="0x3339500. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nprocura(r.dir, v)"];
+	Node0x608350099 -> Node0x201892727;
+	Node0x133993946 [shape=oval, style=dashed, label="0x3336540. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\ninfixa(a.esq)"];
+	Node0x516489345 -> Node0x133993946;
+	Node0x994285348 [shape=oval, label="0x33366f0. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nprintf(<<   >>)"];
+	Node0x516489345 -> Node0x994285348;
+	Node0x431016303 [shape=oval, label="0x3337a58. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nprintf(<< %d >>, a.info)"];
+	Node0x516489345 -> Node0x431016303;
+	Node0x803318760 [shape=oval, style=dashed, label="0x3337c00. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\ninfixa(a.dir)"];
+	Node0x516489345 -> Node0x803318760;
+	Node0x856386539 [shape=oval, style=dashed, label="0x3338800. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nposfixa(a.esq)"];
+	Node0x249091970 -> Node0x856386539;
+	Node0x372725589 [shape=oval, style=dashed, label="0x3338900. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nposfixa(a.dir)"];
+	Node0x249091970 -> Node0x372725589;
+	Node0x706323428 [shape=oval, label="0x3338a40. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nprintf(<<   >>)"];
+	Node0x249091970 -> Node0x706323428;
+	Node0x363700581 [shape=oval, label="0x3338bb8. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nprintf(<< %d >>, a.info)"];
+	Node0x249091970 -> Node0x363700581;
+	Node0x730476113 [shape=oval, label="0x3338010. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nprintf(<<   >>)"];
+	Node0x208007528 -> Node0x730476113;
+	Node0x951442569 [shape=oval, label="0x3338188. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nprintf(<< %d >>, a.info)"];
+	Node0x208007528 -> Node0x951442569;
+	Node0x900426355 [shape=oval, style=dashed, label="0x3338330. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nprefixa(a.esq)"];
+	Node0x208007528 -> Node0x900426355;
+	Node0x881629624 [shape=oval, style=dashed, label="0x3338430. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nprefixa(a.dir)"];
+	Node0x208007528 -> Node0x881629624;
+	Node0x780869228 [shape=oval, style=dashed, label="0x33347b0. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nretira(r.esq, v)"];
+	Node0x484440157 -> Node0x780869228;
+	Node0x325316795 [shape=oval, style=dashed, label="0x3334a90. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nretira(r.dir, v)"];
+	Node0x484440157 -> Node0x325316795;
+	Node0x961592330 [shape=oval, label="0x3334e70. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nfree(r)"];
+	Node0x484440157 -> Node0x961592330;
+	Node0x906767809 [shape=oval, label="0x3335378. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nfree(t)"];
+	Node0x484440157 -> Node0x906767809;
+	Node0x642428806 [shape=oval, label="0x3335760. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nfree(t)"];
+	Node0x484440157 -> Node0x642428806;
+	Node0x301793727 [shape=oval, style=dashed, label="0x3335ed8. (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c)\nretira(r.esq, v)"];
+	Node0x484440157 -> Node0x301793727;
+}

@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # Jun 15, 2016
 # Author: Bruno Sergio Cardoso Vieira
 # Project MLSA
@@ -22,10 +23,11 @@ class GraphNode():	# holds the information about a call. It is the node to the c
 #------------------------------Call Class--------------------------------#
 
 class Call():		# holds the information of the call of a function, with its name, the line it was called, the number of arguments and a list of the arguments used
-	def __init__(self, line, callee, function, nArgs, args):
+	def __init__(self, ID, line, callee, function, nArgs, args):
 		self.callee = callee
 		self.function = function
 		self.line = line
+		self.ID = ID
 		self.nArgs = nArgs
 		self.args = args
 
@@ -134,9 +136,9 @@ def saveGraph(listOfFunctions, csvFile):
                                                                 if(arg.kind == "Variable"):							
                                                                         found = arg.type.find("char")
                                                                         if(found == -1):
-                                                                                printable[-1].append(arg.name+'-'+call.line)
+                                                                                printable[-1].append(arg.name+'-'+call.ID)
                                                                         else:
-                                                                                printable[-1].append(arg.name+'-'+call.line)
+                                                                                printable[-1].append(arg.name+'-'+call.ID)
                                                                 elif(arg.kind == "Literal"):
                                                                         found = arg.type.find("char")
                                                                         if(found == -1):
@@ -219,6 +221,17 @@ def analyzeFunctionCall(callee):
 
 	lineCalled = getLineCall()			
 	name = getFunctionName(currentLine)
+
+	ID = "not found"
+	IDnext = False
+	if "CallExpr" in lineString:
+		IDsearch = lineString.split()
+		for i in IDsearch:
+			if IDnext == True:
+				ID = i
+				break
+			if "CallExpr" in i:
+				IDnext = True
 
 	graph.append(GraphNode(lineCalled,callee, name))
 
@@ -426,7 +439,7 @@ def analyzeFunctionCall(callee):
 		f.used = "True"
         if funcprog != program:
                 name = funcprog+'.'+name
-	f.calls.append(Call(lineCalled, callee, name, nArguments, args)) # add the call to the function
+	f.calls.append(Call(ID, lineCalled, callee, name, nArguments, args)) # add the call to the function
 	return
 
 #Takes everything AFTER the colon

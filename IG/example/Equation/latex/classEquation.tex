@@ -1,0 +1,263 @@
+\hypertarget{classEquation}{}\section{Equation Class Reference}
+\label{classEquation}\index{Equation@{Equation}}
+
+
+{\ttfamily \#include $<$Equation.\+h$>$}
+
+
+
+Collaboration diagram for Equation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{classEquation__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classEquation_a68511fc719250ed80f86c50de9136733}{Equation} ()
+\item 
+\hyperlink{classEquation_a060d0b8c9e447fb40baf7e7fcb154680}{Equation} (\hyperlink{classHugeInteger}{Huge\+Integer} \&h1, \hyperlink{classHugeInteger}{Huge\+Integer} \&h2, char s, bool c)
+\item 
+\hyperlink{classEquation}{Equation} \& \hyperlink{classEquation_a4949bc3e558de91e58376d85808fe068}{operator=} (const \hyperlink{classEquation}{Equation} \&e2)
+\item 
+void \hyperlink{classEquation_ab5694559600529bd6da9bb37428bfc5d}{calculate} ()
+\item 
+bool \hyperlink{classEquation_a373d8f9b57a3b63f1ebaafcaa92a1eb7}{end} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classHugeInteger}{Huge\+Integer} \hyperlink{classEquation_af03ee24dda87646ad14a87363fe6a459}{op1}
+\item 
+\hyperlink{classHugeInteger}{Huge\+Integer} \hyperlink{classEquation_ab437f2357b6156b3e70c195cbb9304a5}{op2}
+\item 
+\hyperlink{classHugeInteger}{Huge\+Integer} \hyperlink{classEquation_a7696f7ad262ed21259b3fd3d2d628549}{result}
+\item 
+char \hyperlink{classEquation_a4d9ef234f54586c639efa69d7e958760}{sign}
+\item 
+bool \hyperlink{classEquation_a9340b6a41fa360cb1df326c7523b33d1}{condition}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classEquation_a11de2729f9a3f21898a8af0207b20deb}{operator$<$$<$} (ostream \&outs, const \hyperlink{classEquation}{Equation} \&hi)
+\item 
+istream \& \hyperlink{classEquation_a439363053bfdea95eac9c46131e22fa2}{operator$>$$>$} (istream \&ins, \hyperlink{classEquation}{Equation} \&hi)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Equation@{Equation}!Equation@{Equation}}
+\index{Equation@{Equation}!Equation@{Equation}}
+\subsubsection[{\texorpdfstring{Equation()}{Equation()}}]{\setlength{\rightskip}{0pt plus 5cm}Equation\+::\+Equation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classEquation_a68511fc719250ed80f86c50de9136733}{}\label{classEquation_a68511fc719250ed80f86c50de9136733}
+
+\begin{DoxyCode}
+12 \{
+13    \hyperlink{classEquation_a9340b6a41fa360cb1df326c7523b33d1}{condition} = \textcolor{keyword}{true};
+14 \}
+\end{DoxyCode}
+\index{Equation@{Equation}!Equation@{Equation}}
+\index{Equation@{Equation}!Equation@{Equation}}
+\subsubsection[{\texorpdfstring{Equation(\+Huge\+Integer \&h1, Huge\+Integer \&h2, char s, bool c)}{Equation(HugeInteger &h1, HugeInteger &h2, char s, bool c)}}]{\setlength{\rightskip}{0pt plus 5cm}Equation\+::\+Equation (
+\begin{DoxyParamCaption}
+\item[{{\bf Huge\+Integer} \&}]{h1, }
+\item[{{\bf Huge\+Integer} \&}]{h2, }
+\item[{char}]{s, }
+\item[{bool}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{classEquation_a060d0b8c9e447fb40baf7e7fcb154680}{}\label{classEquation_a060d0b8c9e447fb40baf7e7fcb154680}
+
+\begin{DoxyCode}
+17 \{
+18    \hyperlink{classEquation_af03ee24dda87646ad14a87363fe6a459}{op1} = h1;
+19    \hyperlink{classEquation_ab437f2357b6156b3e70c195cbb9304a5}{op2} = h2;
+20    \hyperlink{classEquation_a4d9ef234f54586c639efa69d7e958760}{sign} = s;
+21    \hyperlink{classEquation_a9340b6a41fa360cb1df326c7523b33d1}{condition} = c;
+22 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Equation@{Equation}!calculate@{calculate}}
+\index{calculate@{calculate}!Equation@{Equation}}
+\subsubsection[{\texorpdfstring{calculate()}{calculate()}}]{\setlength{\rightskip}{0pt plus 5cm}void Equation\+::calculate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classEquation_ab5694559600529bd6da9bb37428bfc5d}{}\label{classEquation_ab5694559600529bd6da9bb37428bfc5d}
+
+\begin{DoxyCode}
+36 \{
+37    \textcolor{keywordflow}{if}(!\hyperlink{classEquation_a9340b6a41fa360cb1df326c7523b33d1}{condition})\textcolor{comment}{//checks to see if HugeIntegers in the equation are good                         
+                                                                                                                }
+38       cout << \textcolor{stringliteral}{"Error! The numbers in the equation exceed the digit limit."} << endl << endl;
+39    \textcolor{keywordflow}{else}
+40    \{
+41       \textcolor{keywordflow}{switch}(\hyperlink{classEquation_a4d9ef234f54586c639efa69d7e958760}{sign})\textcolor{comment}{//decideds which operation to do based on user input                                 
+                                                                                                           }
+42       \{
+43          \textcolor{keywordflow}{case} \textcolor{charliteral}{'+'}:
+44             \hyperlink{classEquation_a7696f7ad262ed21259b3fd3d2d628549}{result} = \hyperlink{classEquation_af03ee24dda87646ad14a87363fe6a459}{op1} + \hyperlink{classEquation_ab437f2357b6156b3e70c195cbb9304a5}{op2};
+45             \textcolor{keywordflow}{if}(\hyperlink{classEquation_a7696f7ad262ed21259b3fd3d2d628549}{result}.\hyperlink{classHugeInteger_a49c11f16dad4dbb56d277ddb0eb71342}{isBad}())\textcolor{comment}{//if the sum exceeds digit limit, the HugeInteger returned will
+       have a "bad" array                                                                                            }
+46                \textcolor{keywordflow}{break};
+47             cout << *\textcolor{keyword}{this};
+48             \textcolor{keywordflow}{break};
+49          \textcolor{keywordflow}{case} \textcolor{charliteral}{'*'}:
+50             \hyperlink{classEquation_a7696f7ad262ed21259b3fd3d2d628549}{result} = \hyperlink{classEquation_af03ee24dda87646ad14a87363fe6a459}{op1} * \hyperlink{classEquation_ab437f2357b6156b3e70c195cbb9304a5}{op2};
+51             \textcolor{keywordflow}{if}(\hyperlink{classEquation_a7696f7ad262ed21259b3fd3d2d628549}{result}.\hyperlink{classHugeInteger_a49c11f16dad4dbb56d277ddb0eb71342}{isBad}())
+52                \textcolor{keywordflow}{break};
+53             cout << *\textcolor{keyword}{this};
+54             \textcolor{keywordflow}{break};
+55          \textcolor{keywordflow}{case} \textcolor{charliteral}{'-'}:
+56             \hyperlink{classEquation_a7696f7ad262ed21259b3fd3d2d628549}{result} = \hyperlink{classEquation_af03ee24dda87646ad14a87363fe6a459}{op1} - \hyperlink{classEquation_ab437f2357b6156b3e70c195cbb9304a5}{op2};
+57             \textcolor{keywordflow}{if}(\hyperlink{classEquation_a7696f7ad262ed21259b3fd3d2d628549}{result}.\hyperlink{classHugeInteger_a49c11f16dad4dbb56d277ddb0eb71342}{isBad}())
+58                \textcolor{keywordflow}{break};
+59             cout << *\textcolor{keyword}{this};
+60             \textcolor{keywordflow}{break};
+61          \textcolor{keywordflow}{case} \textcolor{charliteral}{'='}:
+62             \textcolor{keywordflow}{if}(\hyperlink{classEquation_af03ee24dda87646ad14a87363fe6a459}{op1} == op2)
+63                cout << *\textcolor{keyword}{this} << \textcolor{stringliteral}{"is true."} << endl << endl;
+64             \textcolor{keywordflow}{else}
+65                cout << *\textcolor{keyword}{this} << \textcolor{stringliteral}{"is false."} << endl << endl;
+66             \textcolor{keywordflow}{break};
+67          \textcolor{keywordflow}{case} \textcolor{charliteral}{'!'}:
+68             \textcolor{keywordflow}{if}(\hyperlink{classEquation_af03ee24dda87646ad14a87363fe6a459}{op1} != op2)
+69                cout << *\textcolor{keyword}{this} << \textcolor{stringliteral}{"is true."} << endl << endl;
+70             \textcolor{keywordflow}{else}
+71                cout << *\textcolor{keyword}{this} << \textcolor{stringliteral}{"is false."} << endl << endl;
+72             \textcolor{keywordflow}{break};
+73          \textcolor{keywordflow}{case} \textcolor{charliteral}{'<'}:
+74             \textcolor{keywordflow}{if}(\hyperlink{classEquation_af03ee24dda87646ad14a87363fe6a459}{op1} <= op2)
+75                cout << *\textcolor{keyword}{this} << \textcolor{stringliteral}{"is true."} << endl << endl;
+76             \textcolor{keywordflow}{else}
+77                cout << *\textcolor{keyword}{this} << \textcolor{stringliteral}{"is false."} << endl << endl;
+78             \textcolor{keywordflow}{break};
+79          \textcolor{keywordflow}{case} \textcolor{charliteral}{'>'}:
+80             \textcolor{keywordflow}{if}(\hyperlink{classEquation_af03ee24dda87646ad14a87363fe6a459}{op1} >= op2)
+81                cout << *\textcolor{keyword}{this} << \textcolor{stringliteral}{"is true."} << endl << endl;
+82             \textcolor{keywordflow}{else}
+83                cout << *\textcolor{keyword}{this} << \textcolor{stringliteral}{"is false."} << endl << endl;
+84             \textcolor{keywordflow}{break};
+85          \textcolor{keywordflow}{default}: \textcolor{comment}{//if the requested operation is not offered, default will run                            
+                                                                                                       }
+86             cout << \textcolor{stringliteral}{"The equation entered is: INVALID"} << endl << endl;
+87       \}
+88    \}
+89    \textcolor{keywordflow}{return};
+90 \}
+\end{DoxyCode}
+\index{Equation@{Equation}!end@{end}}
+\index{end@{end}!Equation@{Equation}}
+\subsubsection[{\texorpdfstring{end() const }{end() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Equation\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classEquation_a373d8f9b57a3b63f1ebaafcaa92a1eb7}{}\label{classEquation_a373d8f9b57a3b63f1ebaafcaa92a1eb7}
+
+\begin{DoxyCode}
+93 \{
+94    \textcolor{keywordflow}{return} (\hyperlink{classEquation_af03ee24dda87646ad14a87363fe6a459}{op1}.\hyperlink{classHugeInteger_a183190948f2862b4dfd6a10e25a9b9ab}{isZero}() && \hyperlink{classEquation_ab437f2357b6156b3e70c195cbb9304a5}{op2}.\hyperlink{classHugeInteger_a183190948f2862b4dfd6a10e25a9b9ab}{isZero}() && \hyperlink{classEquation_a4d9ef234f54586c639efa69d7e958760}{sign}==\textcolor{charliteral}{'x'});
+95 \}
+\end{DoxyCode}
+\index{Equation@{Equation}!operator=@{operator=}}
+\index{operator=@{operator=}!Equation@{Equation}}
+\subsubsection[{\texorpdfstring{operator=(const Equation \&e2)}{operator=(const Equation &e2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Equation} \& Equation\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Equation} \&}]{e2}
+\end{DoxyParamCaption}
+)}\hypertarget{classEquation_a4949bc3e558de91e58376d85808fe068}{}\label{classEquation_a4949bc3e558de91e58376d85808fe068}
+
+\begin{DoxyCode}
+25 \{
+26    \hyperlink{classEquation_af03ee24dda87646ad14a87363fe6a459}{op1} = e2.\hyperlink{classEquation_af03ee24dda87646ad14a87363fe6a459}{op1};
+27    \hyperlink{classEquation_ab437f2357b6156b3e70c195cbb9304a5}{op2} = e2.\hyperlink{classEquation_ab437f2357b6156b3e70c195cbb9304a5}{op2};
+28    \hyperlink{classEquation_a7696f7ad262ed21259b3fd3d2d628549}{result} = e2.\hyperlink{classEquation_a7696f7ad262ed21259b3fd3d2d628549}{result};
+29    \hyperlink{classEquation_a4d9ef234f54586c639efa69d7e958760}{sign} = e2.\hyperlink{classEquation_a4d9ef234f54586c639efa69d7e958760}{sign};
+30    \hyperlink{classEquation_a9340b6a41fa360cb1df326c7523b33d1}{condition} = e2.\hyperlink{classEquation_a9340b6a41fa360cb1df326c7523b33d1}{condition};
+31 
+32    \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+33 \}
+\end{DoxyCode}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Equation@{Equation}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Equation@{Equation}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{outs, }
+\item[{const {\bf Equation} \&}]{hi}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classEquation_a11de2729f9a3f21898a8af0207b20deb}{}\label{classEquation_a11de2729f9a3f21898a8af0207b20deb}
+
+\begin{DoxyCode}
+98 \{
+99    \textcolor{keywordflow}{if}(e.sign == \textcolor{charliteral}{'+'} || e.sign == \textcolor{charliteral}{'*'} || e.sign == \textcolor{charliteral}{'-'}) \textcolor{comment}{//if the operation was +,*, or -, the anser will
+       have a result                                                                                       }
+100       outs << endl << e.op1 << \textcolor{stringliteral}{" "} << e.sign << \textcolor{stringliteral}{" "} << e.op2 << \textcolor{stringliteral}{" = "} << e.result << endl << endl;
+101    \textcolor{keywordflow}{else} \textcolor{comment}{//for the comparison operators                                                                     
+                                                                                                       }
+102       outs << endl << e.op1 << \textcolor{stringliteral}{" "} << e.sign << \textcolor{stringliteral}{"= "} << e.op2 << \textcolor{stringliteral}{" "};
+103    \textcolor{keywordflow}{return} outs;
+104 \}
+\end{DoxyCode}
+\index{Equation@{Equation}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Equation@{Equation}}
+\subsubsection[{\texorpdfstring{operator$>$$>$}{operator>>}}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{ins, }
+\item[{{\bf Equation} \&}]{hi}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classEquation_a439363053bfdea95eac9c46131e22fa2}{}\label{classEquation_a439363053bfdea95eac9c46131e22fa2}
+
+\begin{DoxyCode}
+107 \{
+108    \textcolor{keywordtype}{bool} c;
+109    \textcolor{keywordtype}{char} s;
+110    \hyperlink{classHugeInteger}{HugeInteger} h1, h2;
+111 
+112    ins >> h1 >> s >> h2;
+113    \textcolor{keywordflow}{if}(h1.\hyperlink{classHugeInteger_a49c11f16dad4dbb56d277ddb0eb71342}{isBad}() || h2.isBad()) \textcolor{comment}{//registers that the equation is bad                                  
+                                                                                                            }
+114       c = \textcolor{keyword}{false};
+115    \textcolor{keywordflow}{else}
+116       c = \textcolor{keyword}{true};
+117 
+118    \hyperlink{classEquation}{Equation} temp(h1, h2, s, c);
+119    e = temp;
+120 
+121    \textcolor{keywordflow}{return} ins;
+122 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Equation@{Equation}!condition@{condition}}
+\index{condition@{condition}!Equation@{Equation}}
+\subsubsection[{\texorpdfstring{condition}{condition}}]{\setlength{\rightskip}{0pt plus 5cm}bool Equation\+::condition\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classEquation_a9340b6a41fa360cb1df326c7523b33d1}{}\label{classEquation_a9340b6a41fa360cb1df326c7523b33d1}
+\index{Equation@{Equation}!op1@{op1}}
+\index{op1@{op1}!Equation@{Equation}}
+\subsubsection[{\texorpdfstring{op1}{op1}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Huge\+Integer} Equation\+::op1\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classEquation_af03ee24dda87646ad14a87363fe6a459}{}\label{classEquation_af03ee24dda87646ad14a87363fe6a459}
+\index{Equation@{Equation}!op2@{op2}}
+\index{op2@{op2}!Equation@{Equation}}
+\subsubsection[{\texorpdfstring{op2}{op2}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Huge\+Integer} Equation\+::op2\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classEquation_ab437f2357b6156b3e70c195cbb9304a5}{}\label{classEquation_ab437f2357b6156b3e70c195cbb9304a5}
+\index{Equation@{Equation}!result@{result}}
+\index{result@{result}!Equation@{Equation}}
+\subsubsection[{\texorpdfstring{result}{result}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Huge\+Integer} Equation\+::result\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classEquation_a7696f7ad262ed21259b3fd3d2d628549}{}\label{classEquation_a7696f7ad262ed21259b3fd3d2d628549}
+\index{Equation@{Equation}!sign@{sign}}
+\index{sign@{sign}!Equation@{Equation}}
+\subsubsection[{\texorpdfstring{sign}{sign}}]{\setlength{\rightskip}{0pt plus 5cm}char Equation\+::sign\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classEquation_a4d9ef234f54586c639efa69d7e958760}{}\label{classEquation_a4d9ef234f54586c639efa69d7e958760}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Equation_8h}{Equation.\+h}\item 
+\hyperlink{Equation_8cpp}{Equation.\+cpp}\end{DoxyCompactItemize}

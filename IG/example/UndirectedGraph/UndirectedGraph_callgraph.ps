@@ -1,0 +1,2657 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.38.0 (20140413.2041)
+%%Title: /home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph Call Graph
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 150 150 2400 2247
+%%PageOrientation: Portrait
+<< /PageSize [2400 2247] >> setpagedevice
+0 0 1 beginpage
+gsave
+150 150 2250 2097 boxprim clip newpath
+0.729296 0.729296 set_scale 0 rotate 209.678 209.678 translate
+[ /CropBox [150 150 2400 2247] /PAGES pdfmark
+0 0 0 graphcolor
+14 /Times-Roman set_font
+1337.08 7.8 moveto 403 (/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph Call Graph) alignedtext
+% Node0x812987401
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+309.37 1741.87 309.25 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+79.37 1738.17 moveto 460 (/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp) alignedtext
+grestore
+% Node0x534509044
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1046.48 2767.87 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+777.98 2771.67 moveto 537 (0x2833cd0. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+986.98 2756.67 moveto 119 (Graph::addEdge\(0, 1\)) alignedtext
+grestore
+% Node0x812987401->Node0x534509044
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 311.37 1760.18 moveto
+318.09 1865.2 365.84 2395.65 654.75 2659.87 curveto
+700.01 2701.26 759.73 2726.99 818.83 2742.92 curveto
+stroke
+0 0 0 edgecolor
+newpath 818.13 2746.35 moveto
+828.69 2745.49 lineto
+819.9 2739.58 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 818.13 2746.35 moveto
+828.69 2745.49 lineto
+819.9 2739.58 lineto
+closepath stroke
+grestore
+% Node0x242569106
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1046.48 2623.87 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+777.98 2627.67 moveto 537 (0x2833da8. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+986.98 2612.67 moveto 119 (Graph::addEdge\(0, 2\)) alignedtext
+grestore
+% Node0x812987401->Node0x242569106
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 312.76 1760.08 moveto
+326.16 1855.03 400.92 2297.3 654.75 2515.87 curveto
+702.77 2557.23 765.37 2582.85 826.33 2598.7 curveto
+stroke
+0 0 0 edgecolor
+newpath 825.55 2602.11 moveto
+836.1 2601.16 lineto
+827.26 2595.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 825.55 2602.11 moveto
+836.1 2601.16 lineto
+827.26 2595.32 lineto
+closepath stroke
+grestore
+% Node0x272161632
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1046.48 2479.87 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+777.98 2483.67 moveto 537 (0x2833e80. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+986.98 2468.67 moveto 119 (Graph::addEdge\(1, 2\)) alignedtext
+grestore
+% Node0x812987401->Node0x272161632
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 314.7 1759.96 moveto
+335.71 1843.81 435.18 2197.88 654.75 2371.87 curveto
+706.75 2413.08 773.45 2438.59 836.97 2454.37 curveto
+stroke
+0 0 0 edgecolor
+newpath 836.18 2457.78 moveto
+846.72 2456.72 lineto
+837.82 2450.97 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 836.18 2457.78 moveto
+846.72 2456.72 lineto
+837.82 2450.97 lineto
+closepath stroke
+grestore
+% Node0x149039830
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1046.48 2335.87 389.73 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+778.98 2339.67 moveto 535 (0x2833f58. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+986.98 2324.67 moveto 119 (Graph::addEdge\(2, 3\)) alignedtext
+grestore
+% Node0x812987401->Node0x149039830
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 317.84 1760.25 moveto
+348.05 1832.19 468.53 2097.17 654.75 2227.87 curveto
+712.81 2268.62 785.72 2294.03 852.79 2309.85 curveto
+stroke
+0 0 0 edgecolor
+newpath 852.11 2313.29 moveto
+862.64 2312.12 lineto
+853.68 2306.47 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 852.11 2313.29 moveto
+862.64 2312.12 lineto
+853.68 2306.47 lineto
+closepath stroke
+grestore
+% Node0x298060819
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1046.48 2191.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+777.48 2195.67 moveto 538 (0x2834030. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+986.98 2180.67 moveto 119 (Graph::addEdge\(3, 3\)) alignedtext
+grestore
+% Node0x812987401->Node0x298060819
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 339.64 1759.79 moveto
+450.94 1827.92 848.74 2071.43 992.87 2159.66 curveto
+stroke
+0 0 0 edgecolor
+newpath 991.22 2162.76 moveto
+1001.58 2164.99 lineto
+994.88 2156.79 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 991.22 2162.76 moveto
+1001.58 2164.99 lineto
+994.88 2156.79 lineto
+closepath stroke
+grestore
+% Node0x989551358
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1046.48 1903.87 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+777.98 1907.67 moveto 537 (0x28340c8. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+987.48 1892.67 moveto 118 (Graph::isConnected\(\)) alignedtext
+grestore
+% Node0x812987401->Node0x989551358
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 389.39 1759.28 moveto
+516.39 1787.27 767.05 1842.51 919.11 1876.02 curveto
+stroke
+0 0 0 edgecolor
+newpath 918.46 1879.46 moveto
+928.98 1878.2 lineto
+919.97 1872.63 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 918.46 1879.46 moveto
+928.98 1878.2 lineto
+919.97 1872.63 lineto
+closepath stroke
+grestore
+% Node0x869118697
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1046.48 1741.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+777.48 1745.67 moveto 538 (0x2836098. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+986.98 1730.67 moveto 119 (Graph::addEdge\(0, 1\)) alignedtext
+grestore
+% Node0x812987401->Node0x869118697
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 618.93 1741.87 moveto
+627.4 1741.87 635.92 1741.87 644.46 1741.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 644.49 1745.37 moveto
+654.49 1741.87 lineto
+644.49 1738.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 644.49 1745.37 moveto
+654.49 1741.87 lineto
+644.49 1738.37 lineto
+closepath stroke
+grestore
+% Node0x546546780
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1046.48 1633.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+777.48 1637.67 moveto 538 (0x2836170. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+986.98 1622.67 moveto 119 (Graph::addEdge\(1, 2\)) alignedtext
+grestore
+% Node0x812987401->Node0x546546780
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 424.43 1725.11 moveto
+543.44 1707.63 731.59 1679.99 869.64 1659.7 curveto
+stroke
+0 0 0 edgecolor
+newpath 870.52 1663.11 moveto
+879.91 1658.2 lineto
+869.5 1656.19 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 870.52 1663.11 moveto
+879.91 1658.2 lineto
+869.5 1656.19 lineto
+closepath stroke
+grestore
+% Node0x679343865
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1046.48 1489.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+777.48 1493.67 moveto 538 (0x2836248. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+986.98 1478.67 moveto 119 (Graph::addEdge\(2, 3\)) alignedtext
+grestore
+% Node0x812987401->Node0x679343865
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 348.74 1723.94 moveto
+411.7 1694.96 541.29 1637.1 654.75 1597.87 curveto
+745.17 1566.61 849.73 1538.1 927.93 1518.23 curveto
+stroke
+0 0 0 edgecolor
+newpath 928.98 1521.57 moveto
+937.81 1515.72 lineto
+927.26 1514.78 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 928.98 1521.57 moveto
+937.81 1515.72 lineto
+927.26 1514.78 lineto
+closepath stroke
+grestore
+% Node0x168273815
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1046.48 1345.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+777.48 1349.67 moveto 538 (0x2836320. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+986.98 1334.67 moveto 119 (Graph::addEdge\(3, 0\)) alignedtext
+grestore
+% Node0x812987401->Node0x168273815
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 326.68 1723.6 moveto
+372.91 1672.92 510.84 1529.35 654.75 1453.87 curveto
+727.66 1415.62 815.55 1389.78 889.48 1372.99 curveto
+stroke
+0 0 0 edgecolor
+newpath 890.36 1376.38 moveto
+899.35 1370.78 lineto
+888.83 1369.54 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 890.36 1376.38 moveto
+899.35 1370.78 lineto
+888.83 1369.54 lineto
+closepath stroke
+grestore
+% Node0x711543518
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1046.48 1201.87 389.73 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+778.98 1205.67 moveto 535 (0x28363f8. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+986.98 1190.67 moveto 119 (Graph::addEdge\(2, 4\)) alignedtext
+grestore
+% Node0x812987401->Node0x711543518
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 319.35 1723.76 moveto
+353.22 1657.35 480.28 1425.11 654.75 1309.87 curveto
+715.9 1269.48 791.95 1244.08 860.66 1228.16 curveto
+stroke
+0 0 0 edgecolor
+newpath 861.76 1231.49 moveto
+870.74 1225.87 lineto
+860.22 1224.67 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 861.76 1231.49 moveto
+870.74 1225.87 lineto
+860.22 1224.67 lineto
+closepath stroke
+grestore
+% Node0x889385132
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1046.48 1057.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+777.48 1061.67 moveto 538 (0x28364d0. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+986.98 1046.67 moveto 119 (Graph::addEdge\(4, 2\)) alignedtext
+grestore
+% Node0x812987401->Node0x889385132
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 315.68 1723.74 moveto
+339.9 1644.24 447.8 1323.45 654.75 1165.87 curveto
+708.67 1124.81 777.32 1099.35 841.99 1083.58 curveto
+stroke
+0 0 0 edgecolor
+newpath 842.99 1086.94 moveto
+851.91 1081.23 lineto
+841.37 1080.13 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 842.99 1086.94 moveto
+851.91 1081.23 lineto
+841.37 1080.13 lineto
+closepath stroke
+grestore
+% Node0x651390829
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1046.48 787.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+777.48 791.67 moveto 538 (0x2836568. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+987.48 776.67 moveto 118 (Graph::isConnected\(\)) alignedtext
+grestore
+% Node0x812987401->Node0x651390829
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 314.84 1723.77 moveto
+337.18 1636.42 444.13 1253.15 654.75 1021.87 curveto
+743.1 924.85 881.1 855.28 967.25 818.35 curveto
+stroke
+0 0 0 edgecolor
+newpath 968.62 821.57 moveto
+976.46 814.44 lineto
+965.89 815.12 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 968.62 821.57 moveto
+976.46 814.44 lineto
+965.89 815.12 lineto
+closepath stroke
+grestore
+% Node0x657759686
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 2839.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 2843.67 moveto 538 (0x2825690. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1818.46 2828.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x534509044->Node0x657759686
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1287.78 2789.03 moveto
+1390.57 2798.09 1510.58 2808.66 1614.46 2817.81 curveto
+stroke
+0 0 0 edgecolor
+newpath 1614.19 2821.3 moveto
+1624.46 2818.69 lineto
+1614.81 2814.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1614.19 2821.3 moveto
+1624.46 2818.69 lineto
+1614.81 2814.32 lineto
+closepath stroke
+grestore
+% Node0x595018279
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 2767.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 2771.67 moveto 538 (0x2825808. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1818.46 2756.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x534509044->Node0x595018279
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1437.66 2767.87 moveto
+1446.38 2767.87 1455.1 2767.87 1463.82 2767.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1464.05 2771.37 moveto
+1474.05 2767.87 lineto
+1464.05 2764.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1464.05 2771.37 moveto
+1474.05 2767.87 lineto
+1464.05 2764.37 lineto
+closepath stroke
+grestore
+% Node0x854005898
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 2695.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 2699.67 moveto 538 (0x2825690. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1818.46 2684.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x242569106->Node0x854005898
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1287.78 2645.03 moveto
+1390.57 2654.09 1510.58 2664.66 1614.46 2673.81 curveto
+stroke
+0 0 0 edgecolor
+newpath 1614.19 2677.3 moveto
+1624.46 2674.69 lineto
+1614.81 2670.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1614.19 2677.3 moveto
+1624.46 2674.69 lineto
+1614.81 2670.32 lineto
+closepath stroke
+grestore
+% Node0x579853313
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 2623.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 2627.67 moveto 538 (0x2825808. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1818.46 2612.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x242569106->Node0x579853313
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1437.66 2623.87 moveto
+1446.38 2623.87 1455.1 2623.87 1463.82 2623.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1464.05 2627.37 moveto
+1474.05 2623.87 lineto
+1464.05 2620.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1464.05 2627.37 moveto
+1474.05 2623.87 lineto
+1464.05 2620.37 lineto
+closepath stroke
+grestore
+% Node0x132774310
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 2551.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 2555.67 moveto 538 (0x2825690. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1818.46 2540.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x272161632->Node0x132774310
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1287.78 2501.03 moveto
+1390.57 2510.09 1510.58 2520.66 1614.46 2529.81 curveto
+stroke
+0 0 0 edgecolor
+newpath 1614.19 2533.3 moveto
+1624.46 2530.69 lineto
+1614.81 2526.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1614.19 2533.3 moveto
+1624.46 2530.69 lineto
+1614.81 2526.32 lineto
+closepath stroke
+grestore
+% Node0x699240892
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 2479.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 2483.67 moveto 538 (0x2825808. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1818.46 2468.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x272161632->Node0x699240892
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1437.66 2479.87 moveto
+1446.38 2479.87 1455.1 2479.87 1463.82 2479.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1464.05 2483.37 moveto
+1474.05 2479.87 lineto
+1464.05 2476.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1464.05 2483.37 moveto
+1474.05 2479.87 lineto
+1464.05 2476.37 lineto
+closepath stroke
+grestore
+% Node0x298586848
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 2407.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 2411.67 moveto 538 (0x2825690. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1818.46 2396.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x149039830->Node0x298586848
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1287.5 2357.01 moveto
+1390.3 2366.06 1510.36 2376.64 1614.3 2385.79 curveto
+stroke
+0 0 0 edgecolor
+newpath 1614.04 2389.28 moveto
+1624.31 2386.67 lineto
+1614.65 2382.31 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1614.04 2389.28 moveto
+1624.31 2386.67 lineto
+1614.65 2382.31 lineto
+closepath stroke
+grestore
+% Node0x670715064
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 2335.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 2339.67 moveto 538 (0x2825808. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1818.46 2324.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x149039830->Node0x670715064
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1436.17 2335.87 moveto
+1445.47 2335.87 1454.78 2335.87 1464.09 2335.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1464.18 2339.37 moveto
+1474.18 2335.87 lineto
+1464.18 2332.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1464.18 2339.37 moveto
+1474.18 2335.87 lineto
+1464.18 2332.37 lineto
+closepath stroke
+grestore
+% Node0x777874783
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 2263.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 2267.67 moveto 538 (0x2825690. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1818.46 2252.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x298060819->Node0x777874783
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1288.05 2213.06 moveto
+1390.83 2222.11 1510.79 2232.68 1614.62 2241.82 curveto
+stroke
+0 0 0 edgecolor
+newpath 1614.35 2245.31 moveto
+1624.62 2242.7 lineto
+1614.96 2238.34 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1614.35 2245.31 moveto
+1624.62 2242.7 lineto
+1614.96 2238.34 lineto
+closepath stroke
+grestore
+% Node0x574367030
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 2191.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 2195.67 moveto 538 (0x2825808. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1818.46 2180.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x298060819->Node0x574367030
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1438.26 2191.87 moveto
+1446.82 2191.87 1455.39 2191.87 1463.95 2191.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1464 2195.37 moveto
+1474 2191.87 lineto
+1464 2188.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1464 2195.37 moveto
+1474 2191.87 lineto
+1464 2188.37 lineto
+closepath stroke
+grestore
+% Node0x440316181
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 2119.87 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1597.46 2123.67 moveto 537 (0x2832c18. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1803.46 2108.67 moveto 125 (Graph::BFS\(0, visited\)) alignedtext
+grestore
+% Node0x989551358->Node0x440316181
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1146.09 1929.92 moveto
+1300.09 1970.62 1596.59 2048.96 1756.46 2091.2 curveto
+stroke
+0 0 0 edgecolor
+newpath 1755.76 2094.64 moveto
+1766.32 2093.81 lineto
+1757.55 2087.87 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1755.76 2094.64 moveto
+1766.32 2093.81 lineto
+1757.55 2087.87 lineto
+closepath stroke
+grestore
+% Node0x419887150
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 1957.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 1961.67 moveto 538 (0x28330b0. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1804.46 1946.67 moveto 123 (Graph::getTranspose\(\)) alignedtext
+grestore
+% Node0x989551358->Node0x419887150
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1329.1 1922.47 moveto
+1407.92 1927.68 1493.75 1933.35 1573.15 1938.59 curveto
+stroke
+0 0 0 edgecolor
+newpath 1573.09 1942.1 moveto
+1583.3 1939.26 lineto
+1573.55 1935.11 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1573.09 1942.1 moveto
+1583.3 1939.26 lineto
+1573.55 1935.11 lineto
+closepath stroke
+grestore
+% Node0x584768354
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 1849.87 389.73 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1598.46 1853.67 moveto 535 (0x28335f0. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1803.46 1838.67 moveto 125 (Graph::BFS\(0, visited\)) alignedtext
+grestore
+% Node0x989551358->Node0x584768354
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1329.1 1885.27 moveto
+1408.14 1880.05 1494.23 1874.36 1573.81 1869.1 curveto
+stroke
+0 0 0 edgecolor
+newpath 1574.24 1872.58 moveto
+1583.99 1868.43 lineto
+1573.78 1865.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1574.24 1872.58 moveto
+1583.99 1868.43 lineto
+1573.78 1865.6 lineto
+closepath stroke
+grestore
+% Node0x456207904
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 1777.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 1781.67 moveto 538 (0x2825690. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1818.46 1766.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x869118697->Node0x456207904
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1376.45 1756.36 moveto
+1425.63 1758.52 1476.42 1760.76 1525.81 1762.93 curveto
+stroke
+0 0 0 edgecolor
+newpath 1525.86 1766.44 moveto
+1536 1763.38 lineto
+1526.16 1759.45 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1525.86 1766.44 moveto
+1536 1763.38 lineto
+1526.16 1759.45 lineto
+closepath stroke
+grestore
+% Node0x547496679
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 1705.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 1709.67 moveto 538 (0x2825808. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1818.46 1694.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x869118697->Node0x547496679
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1376.45 1727.38 moveto
+1425.63 1725.22 1476.42 1722.98 1525.81 1720.81 curveto
+stroke
+0 0 0 edgecolor
+newpath 1526.16 1724.29 moveto
+1536 1720.36 lineto
+1525.86 1717.3 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1526.16 1724.29 moveto
+1536 1720.36 lineto
+1525.86 1717.3 lineto
+closepath stroke
+grestore
+% Node0x518802832
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 1633.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 1637.67 moveto 538 (0x2825690. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1818.46 1622.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x546546780->Node0x518802832
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1438.26 1633.87 moveto
+1446.82 1633.87 1455.39 1633.87 1463.95 1633.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1464 1637.37 moveto
+1474 1633.87 lineto
+1464 1630.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1464 1637.37 moveto
+1474 1633.87 lineto
+1464 1630.37 lineto
+closepath stroke
+grestore
+% Node0x769862554
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 1561.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 1565.67 moveto 538 (0x2825808. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1818.46 1550.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x546546780->Node0x769862554
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1288.05 1612.68 moveto
+1390.83 1603.63 1510.79 1593.06 1614.62 1583.92 curveto
+stroke
+0 0 0 edgecolor
+newpath 1614.96 1587.4 moveto
+1624.62 1583.04 lineto
+1614.35 1580.43 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1614.96 1587.4 moveto
+1624.62 1583.04 lineto
+1614.35 1580.43 lineto
+closepath stroke
+grestore
+% Node0x979044147
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 1489.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 1493.67 moveto 538 (0x2825690. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1818.46 1478.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x679343865->Node0x979044147
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1438.26 1489.87 moveto
+1446.82 1489.87 1455.39 1489.87 1463.95 1489.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1464 1493.37 moveto
+1474 1489.87 lineto
+1464 1486.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1464 1493.37 moveto
+1474 1489.87 lineto
+1464 1486.37 lineto
+closepath stroke
+grestore
+% Node0x702829057
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 1417.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 1421.67 moveto 538 (0x2825808. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1818.46 1406.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x679343865->Node0x702829057
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1288.05 1468.68 moveto
+1390.83 1459.63 1510.79 1449.06 1614.62 1439.92 curveto
+stroke
+0 0 0 edgecolor
+newpath 1614.96 1443.4 moveto
+1624.62 1439.04 lineto
+1614.35 1436.43 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1614.96 1443.4 moveto
+1624.62 1439.04 lineto
+1614.35 1436.43 lineto
+closepath stroke
+grestore
+% Node0x693460120
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 1345.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 1349.67 moveto 538 (0x2825690. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1818.46 1334.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x168273815->Node0x693460120
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1438.26 1345.87 moveto
+1446.82 1345.87 1455.39 1345.87 1463.95 1345.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1464 1349.37 moveto
+1474 1345.87 lineto
+1464 1342.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1464 1349.37 moveto
+1474 1345.87 lineto
+1464 1342.37 lineto
+closepath stroke
+grestore
+% Node0x836997650
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 1273.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 1277.67 moveto 538 (0x2825808. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1818.46 1262.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x168273815->Node0x836997650
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1288.05 1324.68 moveto
+1390.83 1315.63 1510.79 1305.06 1614.62 1295.92 curveto
+stroke
+0 0 0 edgecolor
+newpath 1614.96 1299.4 moveto
+1624.62 1295.04 lineto
+1614.35 1292.43 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1614.96 1299.4 moveto
+1624.62 1295.04 lineto
+1614.35 1292.43 lineto
+closepath stroke
+grestore
+% Node0x599284166
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 1201.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 1205.67 moveto 538 (0x2825690. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1818.46 1190.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x711543518->Node0x599284166
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1436.17 1201.87 moveto
+1445.47 1201.87 1454.78 1201.87 1464.09 1201.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1464.18 1205.37 moveto
+1474.18 1201.87 lineto
+1464.18 1198.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1464.18 1205.37 moveto
+1474.18 1201.87 lineto
+1464.18 1198.37 lineto
+closepath stroke
+grestore
+% Node0x378623778
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 1129.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 1133.67 moveto 538 (0x2825808. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1818.46 1118.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x711543518->Node0x378623778
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1287.5 1180.73 moveto
+1390.3 1171.68 1510.36 1161.1 1614.3 1151.95 curveto
+stroke
+0 0 0 edgecolor
+newpath 1614.65 1155.43 moveto
+1624.31 1151.07 lineto
+1614.04 1148.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1614.65 1155.43 moveto
+1624.31 1151.07 lineto
+1614.04 1148.46 lineto
+closepath stroke
+grestore
+% Node0x243893742
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 1057.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 1061.67 moveto 538 (0x2825690. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1818.46 1046.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x889385132->Node0x243893742
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1438.26 1057.87 moveto
+1446.82 1057.87 1455.39 1057.87 1463.95 1057.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1464 1061.37 moveto
+1474 1057.87 lineto
+1464 1054.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1464 1061.37 moveto
+1474 1057.87 lineto
+1464 1054.37 lineto
+closepath stroke
+grestore
+% Node0x612336595
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 985.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 989.67 moveto 538 (0x2825808. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1818.46 974.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x889385132->Node0x612336595
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1288.05 1036.68 moveto
+1390.83 1027.63 1510.79 1017.06 1614.62 1007.92 curveto
+stroke
+0 0 0 edgecolor
+newpath 1614.96 1011.4 moveto
+1624.62 1007.04 lineto
+1614.35 1004.43 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1614.96 1011.4 moveto
+1624.62 1007.04 lineto
+1614.35 1004.43 lineto
+closepath stroke
+grestore
+% Node0x911847528
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 913.87 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1597.46 917.67 moveto 537 (0x2832c18. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1803.46 902.67 moveto 125 (Graph::BFS\(0, visited\)) alignedtext
+grestore
+% Node0x651390829->Node0x911847528
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1207.04 812.46 moveto
+1347.71 834.14 1552.04 865.64 1695.57 887.76 curveto
+stroke
+0 0 0 edgecolor
+newpath 1695.38 891.27 moveto
+1705.8 889.34 lineto
+1696.45 884.36 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1695.38 891.27 moveto
+1705.8 889.34 lineto
+1696.45 884.36 lineto
+closepath stroke
+grestore
+% Node0x850785867
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 661.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1596.96 665.67 moveto 538 (0x28330b0. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1804.46 650.67 moveto 123 (Graph::getTranspose\(\)) alignedtext
+grestore
+% Node0x651390829->Node0x850785867
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1207.04 763.28 moveto
+1347.71 741.6 1552.04 710.1 1695.57 687.98 curveto
+stroke
+0 0 0 edgecolor
+newpath 1696.45 691.38 moveto
+1705.8 686.4 lineto
+1695.38 684.47 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1696.45 691.38 moveto
+1705.8 686.4 lineto
+1695.38 684.47 lineto
+closepath stroke
+grestore
+% Node0x732164253
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1865.96 301.87 389.73 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1598.46 305.67 moveto 535 (0x28335f0. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1803.46 290.67 moveto 125 (Graph::BFS\(0, visited\)) alignedtext
+grestore
+% Node0x651390829->Node0x732164253
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1092.6 761.05 moveto
+1232.73 677.74 1660.11 423.65 1811.28 333.78 curveto
+stroke
+0 0 0 edgecolor
+newpath 1813.17 336.73 moveto
+1819.98 328.61 lineto
+1809.6 330.71 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1813.17 336.73 moveto
+1819.98 328.61 lineto
+1809.6 330.71 lineto
+closepath stroke
+grestore
+% Node0x473977391
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 2551.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.43 2555.67 moveto 538 (0x2827750. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2635.43 2540.67 moveto 100 (OBJ.push_back\(s\)) alignedtext
+grestore
+% Node0x440316181->Node0x473977391
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1990.01 2094.34 moveto
+2076.71 2084.12 2189.15 2087.85 2257.69 2155.87 curveto
+2314.77 2212.5 2236.62 2459.24 2293.69 2515.87 curveto
+2359.63 2581.29 2466.18 2587.24 2551.37 2578.5 curveto
+stroke
+0 0 0 edgecolor
+newpath 2551.82 2581.97 moveto
+2561.38 2577.4 lineto
+2551.06 2575.02 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2551.82 2581.97 moveto
+2561.38 2577.4 lineto
+2551.06 2575.02 lineto
+closepath stroke
+grestore
+% Node0x252993342
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 2479.87 389.73 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2417.93 2483.67 moveto 535 (0x28277f8. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2612.93 2468.67 moveto 145 (std::__cxx11::list::empty\(\)) alignedtext
+grestore
+% Node0x440316181->Node0x252993342
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1993.18 2094.44 moveto
+2079.13 2085 2189.29 2089.65 2257.69 2155.87 curveto
+2350.38 2245.59 2201.01 2354.15 2293.69 2443.87 curveto
+2359.42 2507.5 2463.72 2514.28 2548.03 2506.34 curveto
+stroke
+0 0 0 edgecolor
+newpath 2548.61 2509.8 moveto
+2558.2 2505.3 lineto
+2547.9 2502.84 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2548.61 2509.8 moveto
+2558.2 2505.3 lineto
+2547.9 2502.84 lineto
+closepath stroke
+grestore
+% Node0x438359591
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 2407.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.43 2411.67 moveto 538 (0x2827978. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.43 2396.67 moveto 64 (OBJ.front\(\)) alignedtext
+grestore
+% Node0x440316181->Node0x438359591
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1999.76 2094.57 moveto
+2084.18 2086.61 2189.95 2092.92 2257.69 2155.87 curveto
+2328.99 2222.12 2222.4 2305.62 2293.69 2371.87 curveto
+2358.79 2432.36 2459 2440.55 2541.64 2434.04 curveto
+stroke
+0 0 0 edgecolor
+newpath 2541.96 2437.52 moveto
+2551.63 2433.17 lineto
+2541.36 2430.55 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2541.96 2437.52 moveto
+2551.63 2433.17 lineto
+2541.36 2430.55 lineto
+closepath stroke
+grestore
+% Node0x261316514
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 2335.87 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.93 2339.67 moveto 537 (0x2827a40. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2639.93 2324.67 moveto 91 (OBJ.pop_front\(\)) alignedtext
+grestore
+% Node0x440316181->Node0x261316514
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2221.9 2131.15 moveto
+2234.57 2138.15 2246.58 2146.34 2257.69 2155.87 curveto
+2307.77 2198.81 2243.62 2256.93 2293.69 2299.87 curveto
+2302.21 2307.17 2311.24 2313.68 2320.69 2319.47 curveto
+stroke
+0 0 0 edgecolor
+newpath 2319.08 2322.58 moveto
+2329.49 2324.59 lineto
+2322.6 2316.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2319.08 2322.58 moveto
+2329.49 2324.59 lineto
+2322.6 2316.53 lineto
+closepath stroke
+grestore
+% Node0x499921476
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 2263.87 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.93 2267.67 moveto 537 (0x2827c08. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2651.93 2252.67 moveto 67 (OBJ.begin\(\)) alignedtext
+grestore
+% Node0x440316181->Node0x499921476
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2214.78 2132.25 moveto
+2229.79 2138.83 2244.2 2146.64 2257.69 2155.87 curveto
+2287.23 2176.06 2264.16 2207.68 2293.69 2227.87 curveto
+2304.34 2235.15 2315.56 2241.55 2327.19 2247.16 curveto
+stroke
+0 0 0 edgecolor
+newpath 2326.06 2250.49 moveto
+2336.61 2251.49 lineto
+2328.99 2244.13 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2326.06 2250.49 moveto
+2336.61 2251.49 lineto
+2328.99 2244.13 lineto
+closepath stroke
+grestore
+% Node0x344667266
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 2191.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.43 2195.67 moveto 538 (0x2828348. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.93 2180.67 moveto 57 (OBJ.end\(\)) alignedtext
+grestore
+% Node0x440316181->Node0x344667266
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2107.25 2141.03 moveto
+2210.04 2150.09 2330.05 2160.66 2433.94 2169.81 curveto
+stroke
+0 0 0 edgecolor
+newpath 2433.67 2173.3 moveto
+2443.94 2170.69 lineto
+2434.28 2166.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2433.67 2173.3 moveto
+2443.94 2170.69 lineto
+2434.28 2166.32 lineto
+closepath stroke
+grestore
+% Node0x488294912
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 2119.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.43 2123.67 moveto 538 (0x2828d70. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2609.93 2108.67 moveto 151 (OBJ.push_back\(operator, i\)) alignedtext
+grestore
+% Node0x440316181->Node0x488294912
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2257.14 2119.87 moveto
+2265.85 2119.87 2274.57 2119.87 2283.29 2119.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 2283.52 2123.37 moveto
+2293.52 2119.87 lineto
+2283.52 2116.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2283.52 2123.37 moveto
+2293.52 2119.87 lineto
+2283.52 2116.37 lineto
+closepath stroke
+grestore
+% Node0x157875918
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 2047.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.43 2051.67 moveto 538 (0x2831958. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2651.93 2036.67 moveto 67 (OBJ.begin\(\)) alignedtext
+grestore
+% Node0x419887150->Node0x157875918
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2045.1 1981.78 moveto
+2121.56 1991.69 2211.94 2002.93 2293.69 2011.87 curveto
+2338.25 2016.74 2385.72 2021.49 2431.65 2025.85 curveto
+stroke
+0 0 0 edgecolor
+newpath 2431.45 2029.34 moveto
+2441.74 2026.8 lineto
+2432.11 2022.38 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2431.45 2029.34 moveto
+2441.74 2026.8 lineto
+2432.11 2022.38 lineto
+closepath stroke
+grestore
+% Node0x241288309
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 1975.87 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.93 1979.67 moveto 537 (0x2831c08. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.93 1964.67 moveto 57 (OBJ.end\(\)) alignedtext
+grestore
+% Node0x419887150->Node0x241288309
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2239.21 1966.07 moveto
+2260.32 1966.53 2281.55 1967 2302.68 1967.46 curveto
+stroke
+0 0 0 edgecolor
+newpath 2302.64 1970.96 moveto
+2312.72 1967.69 lineto
+2302.8 1963.97 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2302.64 1970.96 moveto
+2312.72 1967.69 lineto
+2302.8 1963.97 lineto
+closepath stroke
+grestore
+% Node0x394205857
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 1903.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.43 1907.67 moveto 538 (0x28322b0. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2637.93 1892.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x419887150->Node0x394205857
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2148.86 1939.25 moveto
+2227.55 1934.05 2313.21 1928.39 2392.48 1923.16 curveto
+stroke
+0 0 0 edgecolor
+newpath 2392.86 1926.64 moveto
+2402.61 1922.49 lineto
+2392.4 1919.65 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2392.86 1926.64 moveto
+2402.61 1922.49 lineto
+2392.4 1919.65 lineto
+closepath stroke
+grestore
+% Node0x789639113
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 1831.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.43 1835.67 moveto 538 (0x2827750. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2635.43 1820.67 moveto 100 (OBJ.push_back\(s\)) alignedtext
+grestore
+% Node0x584768354->Node0x789639113
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2237.42 1841.71 moveto
+2258.85 1841.24 2280.42 1840.77 2301.89 1840.29 curveto
+stroke
+0 0 0 edgecolor
+newpath 2302.16 1843.79 moveto
+2312.08 1840.07 lineto
+2302.01 1836.79 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2302.16 1843.79 moveto
+2312.08 1840.07 lineto
+2302.01 1836.79 lineto
+closepath stroke
+grestore
+% Node0x374688737
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 1759.87 389.73 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2417.93 1763.67 moveto 535 (0x28277f8. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2612.93 1748.67 moveto 145 (std::__cxx11::list::empty\(\)) alignedtext
+grestore
+% Node0x584768354->Node0x374688737
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2170.87 1833.08 moveto
+2200.48 1828.1 2229.85 1821.81 2257.69 1813.87 curveto
+2274.9 1808.96 2276.49 1800.78 2293.69 1795.87 curveto
+2318.38 1788.83 2344.27 1783.08 2370.47 1778.4 curveto
+stroke
+0 0 0 edgecolor
+newpath 2371.27 1781.81 moveto
+2380.52 1776.66 lineto
+2370.07 1774.92 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2371.27 1781.81 moveto
+2380.52 1776.66 lineto
+2370.07 1774.92 lineto
+closepath stroke
+grestore
+% Node0x972055880
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 1687.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.43 1691.67 moveto 538 (0x2827978. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.43 1676.67 moveto 64 (OBJ.front\(\)) alignedtext
+grestore
+% Node0x584768354->Node0x972055880
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2217.13 1838.2 moveto
+2231.39 1831.39 2245 1823.34 2257.69 1813.87 curveto
+2292.22 1788.1 2259.17 1749.64 2293.69 1723.87 curveto
+2303.5 1716.55 2313.86 1710.08 2324.64 1704.38 curveto
+stroke
+0 0 0 edgecolor
+newpath 2326.44 1707.39 moveto
+2333.8 1699.76 lineto
+2323.29 1701.14 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2326.44 1707.39 moveto
+2333.8 1699.76 lineto
+2323.29 1701.14 lineto
+closepath stroke
+grestore
+% Node0x417969576
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 1615.87 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.93 1619.67 moveto 537 (0x2827a40. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2639.93 1604.67 moveto 91 (OBJ.pop_front\(\)) alignedtext
+grestore
+% Node0x584768354->Node0x417969576
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2009.92 1874.86 moveto
+2091.89 1880.74 2191.36 1872.29 2257.69 1813.87 curveto
+2313.05 1765.13 2238.34 1700.61 2293.69 1651.87 curveto
+2357.31 1595.85 2451.39 1585.78 2531.3 1590.23 curveto
+stroke
+0 0 0 edgecolor
+newpath 2531.27 1593.74 moveto
+2541.47 1590.88 lineto
+2531.71 1586.75 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2531.27 1593.74 moveto
+2541.47 1590.88 lineto
+2531.71 1586.75 lineto
+closepath stroke
+grestore
+% Node0x479472424
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 1543.87 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.93 1547.67 moveto 537 (0x2827c08. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2651.93 1532.67 moveto 67 (OBJ.begin\(\)) alignedtext
+grestore
+% Node0x584768354->Node0x479472424
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1997.23 1875.18 moveto
+2082.21 1883.66 2189.6 1877.95 2257.69 1813.87 curveto
+2334.32 1741.76 2217.06 1651.98 2293.69 1579.87 curveto
+2359.01 1518.41 2460.48 1510.64 2543.65 1517.6 curveto
+stroke
+0 0 0 edgecolor
+newpath 2543.42 1521.09 moveto
+2553.69 1518.51 lineto
+2544.05 1514.12 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2543.42 1521.09 moveto
+2553.69 1518.51 lineto
+2544.05 1514.12 lineto
+closepath stroke
+grestore
+% Node0x657128192
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 1471.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.43 1475.67 moveto 538 (0x2828348. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.93 1460.67 moveto 57 (OBJ.end\(\)) alignedtext
+grestore
+% Node0x584768354->Node0x657128192
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1991.95 1875.3 moveto
+2078.16 1885.01 2189.17 1880.69 2257.69 1813.87 curveto
+2355.74 1718.27 2195.65 1603.47 2293.69 1507.87 curveto
+2359.49 1443.71 2464.46 1437.17 2549.03 1445.35 curveto
+stroke
+0 0 0 edgecolor
+newpath 2548.67 1448.83 moveto
+2558.98 1446.38 lineto
+2549.39 1441.87 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2548.67 1448.83 moveto
+2558.98 1446.38 lineto
+2549.39 1441.87 lineto
+closepath stroke
+grestore
+% Node0x127663005
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 1399.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.43 1403.67 moveto 538 (0x2828d70. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2609.93 1388.67 moveto 151 (OBJ.push_back\(operator, i\)) alignedtext
+grestore
+% Node0x584768354->Node0x127663005
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1989.19 1875.39 moveto
+2076.06 1885.79 2189.07 1882.29 2257.69 1813.87 curveto
+2317.45 1754.3 2233.94 1495.44 2293.69 1435.87 curveto
+2359.71 1370.06 2466.78 1364.31 2552.17 1373.23 curveto
+stroke
+0 0 0 edgecolor
+newpath 2551.87 1376.72 moveto
+2562.2 1374.35 lineto
+2552.65 1369.76 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2551.87 1376.72 moveto
+2562.2 1374.35 lineto
+2552.65 1369.76 lineto
+closepath stroke
+grestore
+% Node0x704549335
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 1201.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.43 1205.67 moveto 538 (0x2827750. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2635.43 1190.67 moveto 100 (OBJ.push_back\(s\)) alignedtext
+grestore
+% Node0x911847528->Node0x704549335
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1999.76 888.57 moveto
+2084.18 880.61 2189.95 886.92 2257.69 949.87 curveto
+2328.99 1016.12 2222.4 1099.62 2293.69 1165.87 curveto
+2358.79 1226.36 2459 1234.55 2541.64 1228.04 curveto
+stroke
+0 0 0 edgecolor
+newpath 2541.96 1231.52 moveto
+2551.63 1227.17 lineto
+2541.36 1224.55 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2541.96 1231.52 moveto
+2551.63 1227.17 lineto
+2541.36 1224.55 lineto
+closepath stroke
+grestore
+% Node0x841442995
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 1129.87 389.73 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2417.93 1133.67 moveto 535 (0x28277f8. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2612.93 1118.67 moveto 145 (std::__cxx11::list::empty\(\)) alignedtext
+grestore
+% Node0x911847528->Node0x841442995
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2221.9 925.15 moveto
+2234.57 932.15 2246.58 940.34 2257.69 949.87 curveto
+2307.77 992.81 2243.62 1050.93 2293.69 1093.87 curveto
+2302.31 1101.25 2311.45 1107.83 2321.02 1113.67 curveto
+stroke
+0 0 0 edgecolor
+newpath 2319.52 1116.85 moveto
+2329.93 1118.83 lineto
+2323.03 1110.79 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2319.52 1116.85 moveto
+2329.93 1118.83 lineto
+2323.03 1110.79 lineto
+closepath stroke
+grestore
+% Node0x217961430
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 1057.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.43 1061.67 moveto 538 (0x2827978. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.43 1046.67 moveto 64 (OBJ.front\(\)) alignedtext
+grestore
+% Node0x911847528->Node0x217961430
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2214.78 926.25 moveto
+2229.79 932.83 2244.2 940.64 2257.69 949.87 curveto
+2287.23 970.06 2264.16 1001.68 2293.69 1021.87 curveto
+2304.34 1029.15 2315.56 1035.55 2327.19 1041.16 curveto
+stroke
+0 0 0 edgecolor
+newpath 2326.06 1044.49 moveto
+2336.61 1045.49 lineto
+2328.99 1038.13 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2326.06 1044.49 moveto
+2336.61 1045.49 lineto
+2328.99 1038.13 lineto
+closepath stroke
+grestore
+% Node0x204876499
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 985.87 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.93 989.67 moveto 537 (0x2827a40. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2639.93 974.67 moveto 91 (OBJ.pop_front\(\)) alignedtext
+grestore
+% Node0x911847528->Node0x204876499
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2107.25 935.03 moveto
+2210.04 944.09 2330.05 954.66 2433.94 963.81 curveto
+stroke
+0 0 0 edgecolor
+newpath 2433.67 967.3 moveto
+2443.94 964.69 lineto
+2434.28 960.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2433.67 967.3 moveto
+2443.94 964.69 lineto
+2434.28 960.32 lineto
+closepath stroke
+grestore
+% Node0x210547644
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 913.87 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.93 917.67 moveto 537 (0x2827c08. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2651.93 902.67 moveto 67 (OBJ.begin\(\)) alignedtext
+grestore
+% Node0x911847528->Node0x210547644
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2257.14 913.87 moveto
+2266.09 913.87 2275.06 913.87 2284.02 913.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 2284.14 917.37 moveto
+2294.14 913.87 lineto
+2284.14 910.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2284.14 917.37 moveto
+2294.14 913.87 lineto
+2284.14 910.37 lineto
+closepath stroke
+grestore
+% Node0x390914953
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 841.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.43 845.67 moveto 538 (0x2828348. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.93 830.67 moveto 57 (OBJ.end\(\)) alignedtext
+grestore
+% Node0x911847528->Node0x390914953
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2107.25 892.71 moveto
+2210.04 883.65 2330.05 873.08 2433.94 863.93 curveto
+stroke
+0 0 0 edgecolor
+newpath 2434.28 867.42 moveto
+2443.94 863.05 lineto
+2433.67 860.44 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2434.28 867.42 moveto
+2443.94 863.05 lineto
+2433.67 860.44 lineto
+closepath stroke
+grestore
+% Node0x420859457
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 769.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.43 773.67 moveto 538 (0x2828d70. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2609.93 758.67 moveto 151 (OBJ.push_back\(operator, i\)) alignedtext
+grestore
+% Node0x911847528->Node0x420859457
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1953.96 887.6 moveto
+2039.6 862.75 2174.5 826.32 2293.69 805.87 curveto
+2329.21 799.78 2366.73 794.67 2403.92 790.39 curveto
+stroke
+0 0 0 edgecolor
+newpath 2404.33 793.87 moveto
+2413.87 789.26 lineto
+2403.54 786.91 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2404.33 793.87 moveto
+2413.87 789.26 lineto
+2403.54 786.91 lineto
+closepath stroke
+grestore
+% Node0x218671820
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 697.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.43 701.67 moveto 538 (0x2831958. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2651.93 686.67 moveto 67 (OBJ.begin\(\)) alignedtext
+grestore
+% Node0x850785867->Node0x218671820
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2195.92 676.36 moveto
+2245.11 678.52 2295.9 680.76 2345.29 682.93 curveto
+stroke
+0 0 0 edgecolor
+newpath 2345.33 686.44 moveto
+2355.47 683.38 lineto
+2345.64 679.45 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2345.33 686.44 moveto
+2355.47 683.38 lineto
+2345.64 679.45 lineto
+closepath stroke
+grestore
+% Node0x358113358
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 625.87 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.93 629.67 moveto 537 (0x2831c08. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.93 614.67 moveto 57 (OBJ.end\(\)) alignedtext
+grestore
+% Node0x850785867->Node0x358113358
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2195.92 647.38 moveto
+2245.21 645.21 2296.11 642.97 2345.6 640.79 curveto
+stroke
+0 0 0 edgecolor
+newpath 2345.97 644.28 moveto
+2355.81 640.34 lineto
+2345.66 637.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2345.97 644.28 moveto
+2355.81 640.34 lineto
+2345.66 637.29 lineto
+closepath stroke
+grestore
+% Node0x919302569
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 553.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.43 557.67 moveto 538 (0x28322b0. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2637.93 542.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x850785867->Node0x919302569
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2001.11 636.57 moveto
+2084.97 621.42 2195.35 602.68 2293.69 589.87 curveto
+2334.98 584.49 2378.82 579.63 2421.65 575.35 curveto
+stroke
+0 0 0 edgecolor
+newpath 2422.03 578.83 moveto
+2431.63 574.36 lineto
+2421.34 571.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2422.03 578.83 moveto
+2431.63 574.36 lineto
+2421.34 571.86 lineto
+closepath stroke
+grestore
+% Node0x120182235
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 481.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.43 485.67 moveto 538 (0x2827750. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2635.43 470.67 moveto 100 (OBJ.push_back\(s\)) alignedtext
+grestore
+% Node0x732164253->Node0x120182235
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1930.35 328.48 moveto
+2012.57 361.78 2161.17 417.81 2293.69 445.87 curveto
+2324.57 452.41 2357.07 457.76 2389.6 462.14 curveto
+stroke
+0 0 0 edgecolor
+newpath 2389.32 465.63 moveto
+2399.69 463.47 lineto
+2390.23 458.69 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2389.32 465.63 moveto
+2399.69 463.47 lineto
+2390.23 458.69 lineto
+closepath stroke
+grestore
+% Node0x880683774
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 409.87 389.73 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2417.93 413.67 moveto 535 (0x28277f8. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2612.93 398.67 moveto 145 (std::__cxx11::list::empty\(\)) alignedtext
+grestore
+% Node0x732164253->Node0x880683774
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2001.11 327.17 moveto
+2084.97 342.32 2195.35 361.06 2293.69 373.87 curveto
+2335.14 379.27 2379.15 384.15 2422.13 388.44 curveto
+stroke
+0 0 0 edgecolor
+newpath 2421.86 391.93 moveto
+2432.16 389.44 lineto
+2422.55 384.97 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2421.86 391.93 moveto
+2432.16 389.44 lineto
+2422.55 384.97 lineto
+closepath stroke
+grestore
+% Node0x671008842
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 337.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.43 341.67 moveto 538 (0x2827978. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2653.43 326.67 moveto 64 (OBJ.front\(\)) alignedtext
+grestore
+% Node0x732164253->Node0x671008842
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2194.74 316.31 moveto
+2244.2 318.48 2295.3 320.73 2344.99 322.92 curveto
+stroke
+0 0 0 edgecolor
+newpath 2345.09 326.43 moveto
+2355.24 323.37 lineto
+2345.4 319.44 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2345.09 326.43 moveto
+2355.24 323.37 lineto
+2345.4 319.44 lineto
+closepath stroke
+grestore
+% Node0x766750618
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 265.87 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.93 269.67 moveto 537 (0x2827a40. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2639.93 254.67 moveto 91 (OBJ.pop_front\(\)) alignedtext
+grestore
+% Node0x732164253->Node0x766750618
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2194.74 287.43 moveto
+2244.4 285.25 2295.73 282.99 2345.61 280.79 curveto
+stroke
+0 0 0 edgecolor
+newpath 2346.07 284.27 moveto
+2355.9 280.34 lineto
+2345.76 277.28 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2346.07 284.27 moveto
+2355.9 280.34 lineto
+2345.76 277.28 lineto
+closepath stroke
+grestore
+% Node0x715282590
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 193.87 391.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.93 197.67 moveto 537 (0x2827c08. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2651.93 182.67 moveto 67 (OBJ.begin\(\)) alignedtext
+grestore
+% Node0x732164253->Node0x715282590
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2001.11 276.57 moveto
+2084.97 261.42 2195.35 242.68 2293.69 229.87 curveto
+2335.06 224.48 2378.99 219.61 2421.89 215.32 curveto
+stroke
+0 0 0 edgecolor
+newpath 2422.29 218.8 moveto
+2431.89 214.33 lineto
+2421.6 211.83 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2422.29 218.8 moveto
+2431.89 214.33 lineto
+2421.6 211.83 lineto
+closepath stroke
+grestore
+% Node0x799924478
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 121.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.43 125.67 moveto 538 (0x2828348. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2656.93 110.67 moveto 57 (OBJ.end\(\)) alignedtext
+grestore
+% Node0x732164253->Node0x799924478
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1930.35 275.26 moveto
+2012.57 241.96 2161.17 185.93 2293.69 157.87 curveto
+2324.57 151.33 2357.07 145.98 2389.6 141.6 curveto
+stroke
+0 0 0 edgecolor
+newpath 2390.23 145.05 moveto
+2399.69 140.27 lineto
+2389.32 138.11 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2390.23 145.05 moveto
+2399.69 140.27 lineto
+2389.32 138.11 lineto
+closepath stroke
+grestore
+% Node0x388364182
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2685.43 49.87 391.97 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2416.43 53.67 moveto 538 (0x2828d70. \(/home/labaccount/11-2-17/mlsa/IG/example/UndirectedGraph/UndirectedGraph.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2609.93 38.67 moveto 151 (OBJ.push_back\(operator, i\)) alignedtext
+grestore
+% Node0x732164253->Node0x388364182
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1906.9 275.09 moveto
+1980.03 227.61 2141.88 129.56 2293.69 85.87 curveto
+2318.07 78.85 2343.63 73.12 2369.51 68.43 curveto
+stroke
+0 0 0 edgecolor
+newpath 2370.19 71.87 moveto
+2379.44 66.69 lineto
+2368.98 64.97 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2370.19 71.87 moveto
+2379.44 66.69 lineto
+2368.98 64.97 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 150 150 2400 2247
+end
+restore
+%%EOF

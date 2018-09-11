@@ -1,0 +1,369 @@
+\hypertarget{classAddressBook}{}\section{Address\+Book Class Reference}
+\label{classAddressBook}\index{Address\+Book@{Address\+Book}}
+
+
+{\ttfamily \#include $<$Address\+Book.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAddressBook_ad2d2cebd2a3aa00130f769684bc8ddea}{Address\+Book} ()
+\item 
+\hyperlink{classAddressBook_a5638d9e7361248f33d52894f65597d47}{$\sim$\+Address\+Book} ()
+\item 
+void \hyperlink{classAddressBook_a55d96137f232d3a52ffb51917d31b32b}{add} ()
+\item 
+void \hyperlink{classAddressBook_ae4483418575343aa8d53244365a7e475}{search} ()
+\item 
+void \hyperlink{classAddressBook_ade80a4ffa27ed8a4f9c5c62372d34ea3}{display\+\_\+book} ()
+\item 
+void \hyperlink{classAddressBook_a524c975a4983e6a0b50f1e89acafa6bb}{edit\+\_\+contact} ()
+\item 
+void \hyperlink{classAddressBook_a96636dca787ba1a6e3d6ab7b8eb55e45}{delete\+\_\+contact} ()
+\item 
+void \hyperlink{classAddressBook_a7021de85815ec3aed9d2173fc15faa9b}{sort} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \hyperlink{classContact}{Contact} $\ast$ $>$ \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classAddressBook_ae299771d51ad4ea07d52fbfedb2d6e93}{swap} (int a, int b, vector$<$ \hyperlink{classContact}{Contact} $\ast$ $>$ \&v)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Address\+Book@{Address\+Book}!Address\+Book@{Address\+Book}}
+\index{Address\+Book@{Address\+Book}!Address\+Book@{Address\+Book}}
+\subsubsection[{\texorpdfstring{Address\+Book()}{AddressBook()}}]{\setlength{\rightskip}{0pt plus 5cm}Address\+Book\+::\+Address\+Book (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAddressBook_ad2d2cebd2a3aa00130f769684bc8ddea}{}\label{classAddressBook_ad2d2cebd2a3aa00130f769684bc8ddea}
+
+\begin{DoxyCode}
+21 \{
+22    \hyperlink{classContact}{Contact}* c;
+23    \textcolor{keywordtype}{char} contact\_type;
+24    \hyperlink{AddressBook_8cpp_addb74eb46f4ea2191b74ab5c2a3adb30}{in\_stream}.open(\textcolor{stringliteral}{"AddressBook2.txt"}); \textcolor{comment}{// opens file AddressBook.txt                              
+                                                                                                                }
+25    \textcolor{keywordflow}{if}(\hyperlink{AddressBook_8cpp_addb74eb46f4ea2191b74ab5c2a3adb30}{in\_stream}.fail()) \textcolor{comment}{// If the file does not open, the program will exit                       
+                                                                                                                }
+26    \{
+27       cout << \textcolor{stringliteral}{"Input file opening failed.\(\backslash\)n"};
+28       exit(1);
+29    \}
+30 
+31    \textcolor{keywordflow}{while}(!\hyperlink{AddressBook_8cpp_addb74eb46f4ea2191b74ab5c2a3adb30}{in\_stream}.eof()) \textcolor{comment}{// reads in the values from the file to the end of the file            
+                                                                                                                }
+32    \{
+33       \hyperlink{AddressBook_8cpp_addb74eb46f4ea2191b74ab5c2a3adb30}{in\_stream} >> contact\_type;
+34       \textcolor{keywordflow}{if}(contact\_type == \textcolor{charliteral}{'p'})
+35       \{
+36          c = \textcolor{keyword}{new} \hyperlink{classPersonalContact}{PersonalContact};
+37       \}
+38       \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(contact\_type == \textcolor{charliteral}{'b'})
+39       \{
+40          c = \textcolor{keyword}{new} \hyperlink{classBusinessContact}{BusinessContact};
+41       \}
+42       c->\hyperlink{classContact_a129d7132ff55adf52737ca7e364d6420}{read}(\hyperlink{AddressBook_8cpp_addb74eb46f4ea2191b74ab5c2a3adb30}{in\_stream});
+43       \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}.push\_back(c);
+44    \}
+45    \hyperlink{AddressBook_8cpp_addb74eb46f4ea2191b74ab5c2a3adb30}{in\_stream}.close(); \textcolor{comment}{// closes the file                                                          
+                                                                                                                }
+46    \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}.pop\_back();
+47 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classAddressBook_ad2d2cebd2a3aa00130f769684bc8ddea_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Address\+Book@{Address\+Book}!````~Address\+Book@{$\sim$\+Address\+Book}}
+\index{````~Address\+Book@{$\sim$\+Address\+Book}!Address\+Book@{Address\+Book}}
+\subsubsection[{\texorpdfstring{$\sim$\+Address\+Book()}{~AddressBook()}}]{\setlength{\rightskip}{0pt plus 5cm}Address\+Book\+::$\sim$\+Address\+Book (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAddressBook_a5638d9e7361248f33d52894f65597d47}{}\label{classAddressBook_a5638d9e7361248f33d52894f65597d47}
+
+\begin{DoxyCode}
+186 \{
+187    \hyperlink{AddressBook_8cpp_a8fb389eff4054f4aa3513963fdaf14a9}{out\_stream}.open(\textcolor{stringliteral}{"AddressBook2.txt"}); \textcolor{comment}{// opens file AddressBook.txt                            
+                                                                                                                 }
+188    \textcolor{keywordflow}{if}(\hyperlink{AddressBook_8cpp_a8fb389eff4054f4aa3513963fdaf14a9}{out\_stream}.fail()) \textcolor{comment}{// If the file cannot open, the program ends                            
+                                                                                                                 }
+189    \{
+190       cout << \textcolor{stringliteral}{"Output file opening failed.\(\backslash\)n"};
+191       exit(1);
+192    \}
+193 
+194    \textcolor{comment}{//for(int k = 0; k < book.size(); k++)                                                                  
+                                                                                                       }
+195    \textcolor{keywordflow}{for}(vector<Contact*>::iterator it = \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}.begin(); it != \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}.end(); it++)
+196    \{
+197       (*it)->print(\hyperlink{AddressBook_8cpp_a8fb389eff4054f4aa3513963fdaf14a9}{out\_stream}); \textcolor{comment}{// Puts the Contacts from list into the file                     
+                                                                                                                 }
+198    \}
+199    \hyperlink{AddressBook_8cpp_a8fb389eff4054f4aa3513963fdaf14a9}{out\_stream}.close(); \textcolor{comment}{// closes the file                                                        
+                                                                                                                 }
+200    \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k = 0; k < \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}.size(); k++)
+201    \{
+202       \textcolor{keyword}{delete} \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}[k];
+203    \}
+204 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Address\+Book@{Address\+Book}!add@{add}}
+\index{add@{add}!Address\+Book@{Address\+Book}}
+\subsubsection[{\texorpdfstring{add()}{add()}}]{\setlength{\rightskip}{0pt plus 5cm}void Address\+Book\+::add (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAddressBook_a55d96137f232d3a52ffb51917d31b32b}{}\label{classAddressBook_a55d96137f232d3a52ffb51917d31b32b}
+
+\begin{DoxyCode}
+50 \{
+51    \textcolor{keywordtype}{int} choice = 0;
+52    \textcolor{keywordflow}{while}(choice != 1 && choice != 2)
+53    \{
+54       cout << \textcolor{stringliteral}{"Would you like to create a (1) personal contact, or (2) business contact? "};
+55       cin >> choice;
+56       \textcolor{keywordflow}{if}(choice != 1 && choice != 2)
+57          cout << \textcolor{stringliteral}{"Not a possible choice.\(\backslash\)n"};
+58    \}
+59 
+60    cout << \textcolor{stringliteral}{"Please enter the information for the contact in all six fields:\(\backslash\)n"};
+61    cout << \textcolor{stringliteral}{"1. First Name\(\backslash\)n"};
+62    cout << \textcolor{stringliteral}{"2. Last Name\(\backslash\)n"};
+63    cout << \textcolor{stringliteral}{"3. Telephone Number\(\backslash\)n"};
+64    cout << \textcolor{stringliteral}{"4. Date of Birth (mm/dd/yyyy)\(\backslash\)n"};
+65    cout << \textcolor{stringliteral}{"5. Email Address\(\backslash\)n"};
+66    \textcolor{keywordflow}{if}(choice == 1)
+67    \{
+68       cout << \textcolor{stringliteral}{"6. Age\(\backslash\)n"};
+69       \hyperlink{classContact}{Contact}* pc = \textcolor{keyword}{new} \hyperlink{classPersonalContact}{PersonalContact};
+70       pc->\hyperlink{classContact_a129d7132ff55adf52737ca7e364d6420}{read}(cin);
+71       \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}.push\_back(pc);
+72    \}
+73    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(choice == 2)
+74    \{
+75       cout << \textcolor{stringliteral}{"6. Fax\(\backslash\)n"};
+76       \hyperlink{classContact}{Contact}* bc = \textcolor{keyword}{new} \hyperlink{classBusinessContact}{BusinessContact};
+77       bc->\hyperlink{classContact_a129d7132ff55adf52737ca7e364d6420}{read}(cin);
+78       \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}.push\_back(bc);
+79    \}
+80 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{classAddressBook_a55d96137f232d3a52ffb51917d31b32b_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Address\+Book@{Address\+Book}!delete\+\_\+contact@{delete\+\_\+contact}}
+\index{delete\+\_\+contact@{delete\+\_\+contact}!Address\+Book@{Address\+Book}}
+\subsubsection[{\texorpdfstring{delete\+\_\+contact()}{delete_contact()}}]{\setlength{\rightskip}{0pt plus 5cm}void Address\+Book\+::delete\+\_\+contact (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAddressBook_a96636dca787ba1a6e3d6ab7b8eb55e45}{}\label{classAddressBook_a96636dca787ba1a6e3d6ab7b8eb55e45}
+
+\begin{DoxyCode}
+114 \{
+115    \textcolor{keywordtype}{string} Fname, Lname;
+116    cout << \textcolor{stringliteral}{"Enter the first and last names of the contact you would like to delete: "};
+117    cin >> Fname >> Lname;
+118    cout << endl;
+119 
+120    \textcolor{keywordflow}{for}(vector<Contact*>::iterator it = \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}.begin(); it != \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}.end(); it++)
+121    \{
+122       \textcolor{keywordflow}{if}((*it)->match(Fname, Lname))
+123       \{
+124          \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}.erase(it); \textcolor{comment}{// deletes the Contact from book                                              
+                                                                                                           }
+125          \textcolor{keywordflow}{return};
+126       \}
+127    \}
+128    cout << \textcolor{stringliteral}{"Contact not found. "} << endl;
+129 \}
+\end{DoxyCode}
+\index{Address\+Book@{Address\+Book}!display\+\_\+book@{display\+\_\+book}}
+\index{display\+\_\+book@{display\+\_\+book}!Address\+Book@{Address\+Book}}
+\subsubsection[{\texorpdfstring{display\+\_\+book()}{display_book()}}]{\setlength{\rightskip}{0pt plus 5cm}void Address\+Book\+::display\+\_\+book (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAddressBook_ade80a4ffa27ed8a4f9c5c62372d34ea3}{}\label{classAddressBook_ade80a4ffa27ed8a4f9c5c62372d34ea3}
+
+\begin{DoxyCode}
+103 \{
+104    \textcolor{keywordtype}{int} pnum = 0, bnum = 0;
+105    cout << \textcolor{stringliteral}{"-----------------------------------------"} << endl;
+106    \textcolor{keywordflow}{for}(vector<Contact*>::iterator it = \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}.begin(); it != \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}.end(); it++)\textcolor{comment}{// access all Contact*s
+       in book                                                                                                 }
+107    \{
+108       (*it)->display();
+109    \}
+110    cout << \textcolor{stringliteral}{"There are "} << \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}.size() << \textcolor{stringliteral}{" contacts in the address book.\(\backslash\)n"};
+111 \}
+\end{DoxyCode}
+\index{Address\+Book@{Address\+Book}!edit\+\_\+contact@{edit\+\_\+contact}}
+\index{edit\+\_\+contact@{edit\+\_\+contact}!Address\+Book@{Address\+Book}}
+\subsubsection[{\texorpdfstring{edit\+\_\+contact()}{edit_contact()}}]{\setlength{\rightskip}{0pt plus 5cm}void Address\+Book\+::edit\+\_\+contact (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAddressBook_a524c975a4983e6a0b50f1e89acafa6bb}{}\label{classAddressBook_a524c975a4983e6a0b50f1e89acafa6bb}
+
+\begin{DoxyCode}
+132 \{
+133    \textcolor{keywordtype}{string} Fname, Lname;
+134    cout << \textcolor{stringliteral}{"Enter the first and last names of the contact you would like to edit: "};
+135    cin >> Fname >> Lname;
+136    cout << endl;
+137    \textcolor{keywordflow}{for}(vector<Contact*>::iterator it = \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}.begin(); it != \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}.end(); it++)
+138    \{
+139       \textcolor{keywordflow}{if}((*it)->match(Fname, Lname))
+140       \{
+141          (*it)->edit(); \textcolor{comment}{// edits the Contact through edit function                                         
+                                                                                                       }
+142          cout << \textcolor{stringliteral}{"Your edited contact:\(\backslash\)n"} << endl;
+143          cout << \textcolor{stringliteral}{"-----------------------------------------"} << endl;
+144          (*it)->display(); \textcolor{comment}{// displays the Contact information through display function                    
+                                                                                                       }
+145          \textcolor{keywordflow}{return};
+146       \}
+147    \}
+148     \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}[0]->display();
+149    cout << \textcolor{stringliteral}{"Contact not found."} << endl;
+150 \}
+\end{DoxyCode}
+\index{Address\+Book@{Address\+Book}!search@{search}}
+\index{search@{search}!Address\+Book@{Address\+Book}}
+\subsubsection[{\texorpdfstring{search()}{search()}}]{\setlength{\rightskip}{0pt plus 5cm}void Address\+Book\+::search (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAddressBook_ae4483418575343aa8d53244365a7e475}{}\label{classAddressBook_ae4483418575343aa8d53244365a7e475}
+
+\begin{DoxyCode}
+83 \{
+84    \textcolor{keywordtype}{string} name;
+85    cout << \textcolor{stringliteral}{"Please enter a last name to search: "};
+86    cin >> name;
+87    cout << endl;
+88    \textcolor{keywordtype}{int} found = 0;
+89    cout << \textcolor{stringliteral}{"-----------------------------------------"} << endl;
+90    \textcolor{keywordflow}{for}(vector<Contact*>::iterator it = \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}.begin(); it != \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}.end(); it++) \textcolor{comment}{//searches vector book
+                                                                                                               }
+91    \{
+92       \textcolor{keywordflow}{if}((*it)->matchLastName(name)) \textcolor{comment}{// if the last names are the same                                     
+                                                                                                       }
+93       \{
+94          (*it)->display(); \textcolor{comment}{// displays Contact values on screen by calling display function                
+                                                                                                       }
+95          found++;
+96       \}
+97    \}
+98    \textcolor{keywordflow}{if}(found == 0) \textcolor{comment}{// No Contact was found that has the same last name                                      
+                                                                                                       }
+99       cout << \textcolor{stringliteral}{"Contact not found. "} << endl;
+100 \}
+\end{DoxyCode}
+\index{Address\+Book@{Address\+Book}!sort@{sort}}
+\index{sort@{sort}!Address\+Book@{Address\+Book}}
+\subsubsection[{\texorpdfstring{sort()}{sort()}}]{\setlength{\rightskip}{0pt plus 5cm}void Address\+Book\+::sort (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAddressBook_a7021de85815ec3aed9d2173fc15faa9b}{}\label{classAddressBook_a7021de85815ec3aed9d2173fc15faa9b}
+
+\begin{DoxyCode}
+160 \{
+161    \textcolor{keywordtype}{bool} swaped;
+162    \hyperlink{classContact}{Contact} temp;
+163    \textcolor{keywordflow}{do}
+164    \{
+165       swaped = \textcolor{keyword}{false};
+166       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k = 0; k < \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}.size()-1; k++)
+167       \{
+168          \textcolor{keywordflow}{if}(\hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}[k]->last\_name > \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}[k+1]->last\_name)
+169          \{
+170             \hyperlink{classAddressBook_ae299771d51ad4ea07d52fbfedb2d6e93}{swap}(k, k+1, \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book});
+171             swaped = \textcolor{keyword}{true};
+172          \}
+173          \textcolor{keywordflow}{if}(\hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}[k]->last\_name == \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}[k+1]->last\_name)
+174          \{
+175             \textcolor{keywordflow}{if}(\hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}[k]->first\_name > \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book}[k+1]->first\_name)
+176             \{
+177                \hyperlink{classAddressBook_ae299771d51ad4ea07d52fbfedb2d6e93}{swap}(k, k+1, \hyperlink{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{book});
+178                swaped = \textcolor{keyword}{true};
+179             \}
+180          \}
+181       \}  
+182    \}\textcolor{keywordflow}{while}(swaped);
+183 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{classAddressBook_a7021de85815ec3aed9d2173fc15faa9b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Address\+Book@{Address\+Book}!swap@{swap}}
+\index{swap@{swap}!Address\+Book@{Address\+Book}}
+\subsubsection[{\texorpdfstring{swap}{swap}}]{\setlength{\rightskip}{0pt plus 5cm}void swap (
+\begin{DoxyParamCaption}
+\item[{int}]{a, }
+\item[{int}]{b, }
+\item[{vector$<$ {\bf Contact} $\ast$ $>$ \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classAddressBook_ae299771d51ad4ea07d52fbfedb2d6e93}{}\label{classAddressBook_ae299771d51ad4ea07d52fbfedb2d6e93}
+
+\begin{DoxyCode}
+153 \{
+154    \hyperlink{classContact}{Contact}* temp = v[a];
+155    v[a] = v[b];
+156    v[b] = temp;
+157 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Address\+Book@{Address\+Book}!book@{book}}
+\index{book@{book}!Address\+Book@{Address\+Book}}
+\subsubsection[{\texorpdfstring{book}{book}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Contact}$\ast$$>$ Address\+Book\+::book\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}{}\label{classAddressBook_a2a42a2a0314d0b2c788834caf03b452e}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{AddressBook_8h}{Address\+Book.\+h}\item 
+\hyperlink{AddressBook_8cpp}{Address\+Book.\+cpp}\end{DoxyCompactItemize}

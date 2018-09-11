@@ -1,0 +1,61 @@
+\hypertarget{Pmain_8cpp}{}\section{Pmain.\+cpp File Reference}
+\label{Pmain_8cpp}\index{Pmain.\+cpp@{Pmain.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include \char`\"{}Point.\+h\char`\"{}}\\*
+Include dependency graph for Pmain.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{Pmain_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Pmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Pmain.\+cpp@{Pmain.\+cpp}!main@{main}}
+\index{main@{main}!Pmain.\+cpp@{Pmain.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Pmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Pmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+7            \{
+8    \textcolor{comment}{// Construct an instance of Point p1}
+9    \hyperlink{classPoint}{Point} p1(3, 4);
+10    p1.print();
+11    cout << \textcolor{stringliteral}{"x = "} << p1.getX() << endl;
+12    cout << \textcolor{stringliteral}{"y = "} << p1.getY() << endl;
+13    cout << fixed << setprecision(2);
+14    cout << \textcolor{stringliteral}{"mag = "} << p1.getMagnitude() << endl;
+15    cout << \textcolor{stringliteral}{"arg = "} << p1.getArgument() << endl;
+16    p1.setX(6);
+17    p1.setY(8);
+18    p1.print();
+19    p1.setXY(1, 2);
+20    p1.print();
+21  
+22    \textcolor{comment}{// Construct an instance of Point using default constructor}
+23    \hyperlink{classPoint}{Point} p2;
+24    p2.\hyperlink{classPoint_a20b27dff6a871012fa5e7c0d52fd6b98}{print}();
+25 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Pmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

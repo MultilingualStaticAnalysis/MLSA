@@ -1,0 +1,101 @@
+\hypertarget{classmRND}{}\section{m\+R\+ND Class Reference}
+\label{classmRND}\index{m\+R\+ND@{m\+R\+ND}}
+
+
+Inheritance diagram for m\+R\+ND\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classmRND__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classmRND_ad6c73a1c7292e22dfba539d658beab9e}{seed} (unsigned int s)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmRND_ad1fb0b9caed5cb4378ae41f31f712f88}{m\+R\+ND} ()
+\item 
+int \hyperlink{classmRND_af757c98d18750ecf464a2748f4958ea1}{rnd} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classmRND_a96a1801422b5e22ac46da273b9ac68cf}{\+\_\+a}
+\item 
+int \hyperlink{classmRND_acfb6e24a4a40bd036057d667efb5f15c}{\+\_\+c}
+\item 
+unsigned int \hyperlink{classmRND_a77107d3df520656372e80e8934bc93bc}{\+\_\+m}
+\item 
+unsigned int \hyperlink{classmRND_a7c8375524993fb98192122643deac7d7}{\+\_\+seed}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{m\+R\+ND@{m\+R\+ND}!m\+R\+ND@{m\+R\+ND}}
+\index{m\+R\+ND@{m\+R\+ND}!m\+R\+ND@{m\+R\+ND}}
+\subsubsection[{\texorpdfstring{m\+R\+N\+D()}{mRND()}}]{\setlength{\rightskip}{0pt plus 5cm}m\+R\+N\+D\+::m\+R\+ND (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classmRND_ad1fb0b9caed5cb4378ae41f31f712f88}{}\label{classmRND_ad1fb0b9caed5cb4378ae41f31f712f88}
+
+\begin{DoxyCode}
+14                :
+15             \hyperlink{classmRND_a7c8375524993fb98192122643deac7d7}{\_seed}(0), \hyperlink{classmRND_a96a1801422b5e22ac46da273b9ac68cf}{\_a}(0), \hyperlink{classmRND_acfb6e24a4a40bd036057d667efb5f15c}{\_c}(0), \hyperlink{classmRND_a77107d3df520656372e80e8934bc93bc}{\_m}(2147483648)
+16         \{
+17         \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{m\+R\+ND@{m\+R\+ND}!rnd@{rnd}}
+\index{rnd@{rnd}!m\+R\+ND@{m\+R\+ND}}
+\subsubsection[{\texorpdfstring{rnd()}{rnd()}}]{\setlength{\rightskip}{0pt plus 5cm}int m\+R\+N\+D\+::rnd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classmRND_af757c98d18750ecf464a2748f4958ea1}{}\label{classmRND_af757c98d18750ecf464a2748f4958ea1}
+
+\begin{DoxyCode}
+19         \{
+20             \textcolor{keywordflow}{return} (\hyperlink{classmRND_a7c8375524993fb98192122643deac7d7}{\_seed} = (\hyperlink{classmRND_a96a1801422b5e22ac46da273b9ac68cf}{\_a} * \hyperlink{classmRND_a7c8375524993fb98192122643deac7d7}{\_seed} + \hyperlink{classmRND_acfb6e24a4a40bd036057d667efb5f15c}{\_c}) % \hyperlink{classmRND_a77107d3df520656372e80e8934bc93bc}{\_m});
+21         \}
+\end{DoxyCode}
+\index{m\+R\+ND@{m\+R\+ND}!seed@{seed}}
+\index{seed@{seed}!m\+R\+ND@{m\+R\+ND}}
+\subsubsection[{\texorpdfstring{seed(unsigned int s)}{seed(unsigned int s)}}]{\setlength{\rightskip}{0pt plus 5cm}void m\+R\+N\+D\+::seed (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmRND_ad6c73a1c7292e22dfba539d658beab9e}{}\label{classmRND_ad6c73a1c7292e22dfba539d658beab9e}
+
+\begin{DoxyCode}
+9         \{
+10             \hyperlink{classmRND_a7c8375524993fb98192122643deac7d7}{\_seed} = s;
+11         \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{m\+R\+ND@{m\+R\+ND}!\+\_\+a@{\+\_\+a}}
+\index{\+\_\+a@{\+\_\+a}!m\+R\+ND@{m\+R\+ND}}
+\subsubsection[{\texorpdfstring{\+\_\+a}{_a}}]{\setlength{\rightskip}{0pt plus 5cm}int m\+R\+N\+D\+::\+\_\+a\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classmRND_a96a1801422b5e22ac46da273b9ac68cf}{}\label{classmRND_a96a1801422b5e22ac46da273b9ac68cf}
+\index{m\+R\+ND@{m\+R\+ND}!\+\_\+c@{\+\_\+c}}
+\index{\+\_\+c@{\+\_\+c}!m\+R\+ND@{m\+R\+ND}}
+\subsubsection[{\texorpdfstring{\+\_\+c}{_c}}]{\setlength{\rightskip}{0pt plus 5cm}int m\+R\+N\+D\+::\+\_\+c\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classmRND_acfb6e24a4a40bd036057d667efb5f15c}{}\label{classmRND_acfb6e24a4a40bd036057d667efb5f15c}
+\index{m\+R\+ND@{m\+R\+ND}!\+\_\+m@{\+\_\+m}}
+\index{\+\_\+m@{\+\_\+m}!m\+R\+ND@{m\+R\+ND}}
+\subsubsection[{\texorpdfstring{\+\_\+m}{_m}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int m\+R\+N\+D\+::\+\_\+m\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classmRND_a77107d3df520656372e80e8934bc93bc}{}\label{classmRND_a77107d3df520656372e80e8934bc93bc}
+\index{m\+R\+ND@{m\+R\+ND}!\+\_\+seed@{\+\_\+seed}}
+\index{\+\_\+seed@{\+\_\+seed}!m\+R\+ND@{m\+R\+ND}}
+\subsubsection[{\texorpdfstring{\+\_\+seed}{_seed}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int m\+R\+N\+D\+::\+\_\+seed\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classmRND_a7c8375524993fb98192122643deac7d7}{}\label{classmRND_a7c8375524993fb98192122643deac7d7}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{PRNgen_8cpp}{P\+R\+Ngen.\+cpp}\end{DoxyCompactItemize}

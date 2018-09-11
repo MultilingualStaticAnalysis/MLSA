@@ -1,0 +1,85 @@
+TranslationUnitDecl 0x1c17170 <<invalid sloc>>
+|-TypedefDecl 0x1c17670 <<invalid sloc>> __int128_t '__int128'
+|-TypedefDecl 0x1c176d0 <<invalid sloc>> __uint128_t 'unsigned __int128'
+|-TypedefDecl 0x1c17760 <<invalid sloc>> SEL 'SEL *'
+|-TypedefDecl 0x1c17830 <<invalid sloc>> id 'id'
+|-TypedefDecl 0x1c17900 <<invalid sloc>> Class 'Class *'
+|-ObjCInterfaceDecl 0x1c17950 <<invalid sloc>> Protocol
+|-TypedefDecl 0x1c17cf0 <<invalid sloc>> __builtin_va_list '__va_list_tag [1]'
+|-ObjCInterfaceDecl 0x1c17d50 </home/frcv-lab/mlsa/mlsa/test/EditEventWindowController.m:22:1, <invalid sloc>> EditEventWindowController
+| `-ObjCImplementation 0x1c63620 'EditEventWindowController'
+`-ObjCImplementationDecl 0x1c63620 <col:1, line:155:1> EditEventWindowController
+  |-ObjCInterface 0x1c17d50 'EditEventWindowController' invalid
+  |-ObjCIvarDecl 0x1c638d0 parent 0x1c17d50 <line:23:3, col:77> completionHandler_ 'void (^)(int, int *)' private
+  |-ObjCIvarDecl 0x1c63940 parent 0x1c17d50 <line:25:3, col:23> _event 'int *' private invalid
+  |-ObjCMethodDecl 0x1c63a70 <line:28:1, line:30:1> - init 'id':'id'
+  | |-ImplicitParamDecl 0x1c64310 <<invalid sloc>> self 'EditEventWindowController *'
+  | |-ImplicitParamDecl 0x1c64390 <<invalid sloc>> _cmd 'SEL':'SEL *'
+  | `-CompoundStmt 0x1c645f0 <line:28:12, line:30:1>
+  |   `-ReturnStmt 0x1c645d0 <line:29:3, col:56>
+  |     `-ImplicitCastExpr 0x1c645b8 <col:10, col:56> 'id':'id' <BitCast>
+  |       `-ObjCMessageExpr 0x1c64580 <col:10, col:56> 'id':'id' selector=initWithWindowNibName:
+  |         |-ImplicitCastExpr 0x1c64568 <col:11> 'EditEventWindowController *' <LValueToRValue>
+  |         | `-DeclRefExpr 0x1c643e8 <col:11> 'EditEventWindowController *' lvalue ImplicitParam 0x1c64310 'self' 'EditEventWindowController *'
+  |         `-ObjCStringLiteral 0x1c64548 <col:38, col:39> 'NSString *'
+  |           `-StringLiteral 0x1c64448 <col:39> 'char [16]' lvalue "EditEventWindow"
+  |-ObjCMethodDecl 0x1c63b10 <line:32:1, line:76:1> - awakeFromNib 'void'
+  | |-ImplicitParamDecl 0x1c7f320 <<invalid sloc>> self 'EditEventWindowController *'
+  | |-ImplicitParamDecl 0x1c7f380 <<invalid sloc>> _cmd 'SEL':'SEL *'
+  | `-CompoundStmt 0x1c7f4d8 <line:32:22, line:76:1>
+  |-ObjCMethodDecl 0x1c63ba0 <line:80:1, line:121:1> - event 'id':'id'
+  | |-ImplicitParamDecl 0x1c7f4f0 <<invalid sloc>> self 'EditEventWindowController *'
+  | |-ImplicitParamDecl 0x1c7f550 <<invalid sloc>> _cmd 'SEL':'SEL *'
+  | `-CompoundStmt 0x1c7f5f0 <line:80:31, line:121:1>
+  |-ObjCMethodDecl 0x1c63d60 <line:123:1, line:133:1> - runModalForWindow:event:completionHandler: 'void'
+  | |-ImplicitParamDecl 0x1c7f610 <<invalid sloc>> self 'EditEventWindowController *'
+  | |-ImplicitParamDecl 0x1c7f670 <<invalid sloc>> _cmd 'SEL':'SEL *'
+  | |-ParmVarDecl 0x1c63df0 <line:123:39> window 'id':'id'
+  | |-ParmVarDecl 0x1c63e50 <line:124:49> event 'id':'id'
+  | |-ParmVarDecl 0x1c63eb0 <line:125:28, col:86> handler 'void (^)(int, int *)'
+  | `-CompoundStmt 0x1c7f878 <col:94, line:133:1>
+  |   `-BinaryOperator 0x1c7f7c0 <line:126:3, col:37> 'void (^)(int, int *)' '='
+  |     |-ObjCIvarRefExpr 0x1c7f708 <col:3> 'void (^)(int, int *)' lvalue ObjCIvarDecl='completionHandler_' 0x1c638d0 isFreeIvar
+  |     | `-ImplicitCastExpr 0x1c7f6f0 <<invalid sloc>> 'EditEventWindowController *' <LValueToRValue>
+  |     |   `-DeclRefExpr 0x1c7f6c8 <<invalid sloc>> 'EditEventWindowController *' lvalue ImplicitParam 0x1c7f610 'self' 'EditEventWindowController *'
+  |     `-ImplicitCastExpr 0x1c7f7a8 <col:24, col:37> 'void (^)(int, int *)' <AnyPointerToBlockPointerCast>
+  |       `-ObjCMessageExpr 0x1c7f778 <col:24, col:37> 'id':'id' selector=copy
+  |         `-ImplicitCastExpr 0x1c7f760 <col:25> 'void (^)(int, int *)' <LValueToRValue>
+  |           `-DeclRefExpr 0x1c7f738 <col:25> 'void (^)(int, int *)' lvalue ParmVar 0x1c63eb0 'handler' 'void (^)(int, int *)'
+  |-ObjCMethodDecl 0x1c63f40 <line:135:1, line:145:1> - closeDialogWithReturnCode: 'void'
+  | |-ImplicitParamDecl 0x1c7f8a0 <<invalid sloc>> self 'EditEventWindowController *'
+  | |-ImplicitParamDecl 0x1c7f900 <<invalid sloc>> _cmd 'SEL':'SEL *'
+  | |-ParmVarDecl 0x1c63fd0 <line:135:46> returnCode 'id':'id'
+  | `-CompoundStmt 0x1c7fc80 <col:57, line:145:1>
+  |   `-IfStmt 0x1c7fc10 <line:137:3, line:140:3>
+  |     |-<<<NULL>>>
+  |     |-ImplicitCastExpr 0x1c7f9c8 <line:137:7> 'void (^)(int, int *)' <LValueToRValue>
+  |     | `-ObjCIvarRefExpr 0x1c7f998 <col:7> 'void (^)(int, int *)' lvalue ObjCIvarDecl='completionHandler_' 0x1c638d0 isFreeIvar
+  |     |   `-ImplicitCastExpr 0x1c7f980 <<invalid sloc>> 'EditEventWindowController *' <LValueToRValue>
+  |     |     `-DeclRefExpr 0x1c7f958 <<invalid sloc>> 'EditEventWindowController *' lvalue ImplicitParam 0x1c7f8a0 'self' 'EditEventWindowController *'
+  |     |-CompoundStmt 0x1c7fbf0 <col:27, line:140:3>
+  |     | `-CallExpr 0x1c7fb00 <line:138:5, col:48> 'void'
+  |     |   |-ImplicitCastExpr 0x1c7fae8 <col:5> 'void (^)(int, int *)' <LValueToRValue>
+  |     |   | `-ObjCIvarRefExpr 0x1c7fa20 <col:5> 'void (^)(int, int *)' lvalue ObjCIvarDecl='completionHandler_' 0x1c638d0 isFreeIvar
+  |     |   |   `-ImplicitCastExpr 0x1c7fa08 <<invalid sloc>> 'EditEventWindowController *' <LValueToRValue>
+  |     |   |     `-DeclRefExpr 0x1c7f9e0 <<invalid sloc>> 'EditEventWindowController *' lvalue ImplicitParam 0x1c7f8a0 'self' 'EditEventWindowController *'
+  |     |   |-ImplicitCastExpr 0x1c7fb50 <col:24> 'int' <PointerToIntegral>
+  |     |   | `-ImplicitCastExpr 0x1c7fb38 <col:24> 'id':'id' <LValueToRValue>
+  |     |   |   `-DeclRefExpr 0x1c7fa50 <col:24> 'id':'id' lvalue ParmVar 0x1c63fd0 'returnCode' 'id':'id'
+  |     |   `-ImplicitCastExpr 0x1c7fb68 <col:36, col:47> 'int *' <BitCast>
+  |     |     `-ObjCMessageExpr 0x1c7fab8 <col:36, col:47> 'id':'id' selector=event
+  |     |       `-ImplicitCastExpr 0x1c7faa0 <col:37> 'EditEventWindowController *' <LValueToRValue>
+  |     |         `-DeclRefExpr 0x1c7fa78 <col:37> 'EditEventWindowController *' lvalue ImplicitParam 0x1c7f8a0 'self' 'EditEventWindowController *'
+  |     `-<<<NULL>>>
+  |-ObjCMethodDecl 0x1c64060 <line:147:1, line:149:1> - saveButtonClicked: 'void'
+  | |-ImplicitParamDecl 0x1c7fca0 <<invalid sloc>> self 'EditEventWindowController *'
+  | |-ImplicitParamDecl 0x1c7fd00 <<invalid sloc>> _cmd 'SEL':'SEL *'
+  | |-ParmVarDecl 0x1c640f0 <line:147:32, col:35> sender 'id':'id'
+  | |-CompoundStmt 0x1c7fd80 <col:42, line:149:1>
+  | `-IBActionAttr 0x1c64150 <<built-in>:21:38>
+  `-ObjCMethodDecl 0x1c641b0 </home/frcv-lab/mlsa/mlsa/test/EditEventWindowController.m:151:1, line:153:1> - cancelButtonClicked: 'void'
+    |-ImplicitParamDecl 0x1c7fda0 <<invalid sloc>> self 'EditEventWindowController *'
+    |-ImplicitParamDecl 0x1c7fe00 <<invalid sloc>> _cmd 'SEL':'SEL *'
+    |-ParmVarDecl 0x1c64240 <line:151:34, col:37> sender 'id':'id'
+    |-CompoundStmt 0x1c7fe80 <col:44, line:153:1>
+    `-IBActionAttr 0x1c642a0 <<built-in>:21:38>

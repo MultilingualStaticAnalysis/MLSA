@@ -1,0 +1,47 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/Complex Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/Complex Call Graph"
+	];
+
+	Node0x158039015 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/Complex/Cmain.cpp"];
+	Node0x157570907 [shape=oval, label="0x2283930. (/home/labaccount/11-2-17/mlsa/IG/example/Complex/Complex.cpp)\nComplex::print()"];
+	Node0x158039015 -> Node0x157570907;
+	Node0x276013988 [shape=oval, label="0x2283a00. (/home/labaccount/11-2-17/mlsa/IG/example/Complex/Complex.cpp)\nComplex::print()"];
+	Node0x158039015 -> Node0x276013988;
+	Node0x375569297 [shape=oval, label="0x2283ae0. (/home/labaccount/11-2-17/mlsa/IG/example/Complex/Complex.cpp)\nComplex::setValue(6, 7)"];
+	Node0x158039015 -> Node0x375569297;
+	Node0x173700984 [shape=oval, label="0x2283ba8. (/home/labaccount/11-2-17/mlsa/IG/example/Complex/Complex.cpp)\nComplex::print()"];
+	Node0x158039015 -> Node0x173700984;
+	Node0x942541782 [shape=oval, label="0x2283c68. (/home/labaccount/11-2-17/mlsa/IG/example/Complex/Complex.cpp)\nComplex::setReal(0)"];
+	Node0x158039015 -> Node0x942541782;
+	Node0x952372020 [shape=oval, label="0x2283d30. (/home/labaccount/11-2-17/mlsa/IG/example/Complex/Complex.cpp)\nComplex::setImag(8)"];
+	Node0x158039015 -> Node0x952372020;
+	Node0x556852719 [shape=oval, label="0x2283dd8. (/home/labaccount/11-2-17/mlsa/IG/example/Complex/Complex.cpp)\nComplex::print()"];
+	Node0x158039015 -> Node0x556852719;
+	Node0x113868550 [shape=oval, label="0x2285aa8. (/home/labaccount/11-2-17/mlsa/IG/example/Complex/Complex.cpp)\nComplex::isReal()"];
+	Node0x158039015 -> Node0x113868550;
+	Node0x213361077 [shape=oval, label="0x2291040. (/home/labaccount/11-2-17/mlsa/IG/example/Complex/Complex.cpp)\nComplex::isImaginary()"];
+	Node0x158039015 -> Node0x213361077;
+	Node0x216747084 [shape=oval, label="0x2292840. (/home/labaccount/11-2-17/mlsa/IG/example/Complex/Complex.cpp)\nComplex::print()"];
+	Node0x158039015 -> Node0x216747084;
+	Node0x296282565 [shape=oval, label="0x22927a0. (/home/labaccount/11-2-17/mlsa/IG/example/Complex/Cmain.cpp)\nOBJ.addInto(1, 1)"];
+	Node0x158039015 -> Node0x296282565;
+	Node0x400270803 [shape=oval, label="0x2292670. (/home/labaccount/11-2-17/mlsa/IG/example/Complex/Complex.cpp)\nComplex::addInto(c2)"];
+	Node0x158039015 -> Node0x400270803;
+	Node0x269087688 [shape=oval, label="0x22928e0. (/home/labaccount/11-2-17/mlsa/IG/example/Complex/Complex.cpp)\nComplex::print()"];
+	Node0x158039015 -> Node0x269087688;
+	Node0x120599680 [shape=oval, label="0x2292bc0. (/home/labaccount/11-2-17/mlsa/IG/example/Complex/Complex.cpp)\nComplex::print()"];
+	Node0x158039015 -> Node0x120599680;
+	Node0x731248453 [shape=oval, label="0x2292a18. (/home/labaccount/11-2-17/mlsa/IG/example/Complex/Complex.cpp)\nComplex::addReturnNew(c2)"];
+	Node0x158039015 -> Node0x731248453;
+	Node0x984970800 [shape=oval, label="0x2292c60. (/home/labaccount/11-2-17/mlsa/IG/example/Complex/Complex.cpp)\nComplex::print()"];
+	Node0x158039015 -> Node0x984970800;
+	Node0x173782389 [shape=oval, label="0x2292e68. (/home/labaccount/11-2-17/mlsa/IG/example/Complex/Complex.cpp)\nComplex::print()"];
+	Node0x158039015 -> Node0x173782389;
+	Node0x348361823 [shape=oval, label="0x2292db0. (/home/labaccount/11-2-17/mlsa/IG/example/Complex/Complex.cpp)\nComplex::addReturnNew(1, 1)"];
+	Node0x158039015 -> Node0x348361823;
+	Node0x533176630 [shape=oval, label="0x2292f08. (/home/labaccount/11-2-17/mlsa/IG/example/Complex/Complex.cpp)\nComplex::print()"];
+	Node0x158039015 -> Node0x533176630;
+}

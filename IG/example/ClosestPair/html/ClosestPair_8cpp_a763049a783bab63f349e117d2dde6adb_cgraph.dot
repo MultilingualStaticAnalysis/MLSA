@@ -1,0 +1,20 @@
+digraph "closest"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="closest",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="compareX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ClosestPair_8cpp.html#a525d5d1c143aba1f71e6d705cb62760a"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="compareY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ClosestPair_8cpp.html#a32bf76c194f25bd405c772667da96543"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="closestUtil",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ClosestPair_8cpp.html#a1c20ec65873b12c96bee312d4b226eb3"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="small_dist",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ClosestPair_8cpp.html#a146964a2a60bc7aad744097a83fbea22"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="dist",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ClosestPair_8cpp.html#a0b64710c8f93238fd1c94b878bbd182c"];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="stripClosest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ClosestPair_8cpp.html#a4cd5164639ea4c319b1fad38ab8e29bf"];
+  Node7 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

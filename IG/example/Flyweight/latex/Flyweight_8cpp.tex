@@ -1,0 +1,105 @@
+\hypertarget{Flyweight_8cpp}{}\section{Flyweight.\+cpp File Reference}
+\label{Flyweight_8cpp}\index{Flyweight.\+cpp@{Flyweight.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+Include dependency graph for Flyweight.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{Flyweight_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classFlyweightCharacterAbstractBuilder}{Flyweight\+Character\+Abstract\+Builder}
+\item 
+class \hyperlink{classFlyweightCharacter}{Flyweight\+Character}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{Flyweight_8cpp_a3d4f434225794ef00f375fcde5fc00cf}{N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+A\+M\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+H\+A\+RS}~3;
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Flyweight_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{Flyweight.\+cpp@{Flyweight.\+cpp}!N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+A\+M\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+H\+A\+RS@{N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+A\+M\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+H\+A\+RS}}
+\index{N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+A\+M\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+H\+A\+RS@{N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+A\+M\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+H\+A\+RS}!Flyweight.\+cpp@{Flyweight.\+cpp}}
+\subsubsection[{\texorpdfstring{N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+A\+M\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+H\+A\+RS}{NUMBER_OF_SAME_TYPE_CHARS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+A\+M\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+H\+A\+RS~3;}\hypertarget{Flyweight_8cpp_a3d4f434225794ef00f375fcde5fc00cf}{}\label{Flyweight_8cpp_a3d4f434225794ef00f375fcde5fc00cf}
+
+
+\subsection{Function Documentation}
+\index{Flyweight.\+cpp@{Flyweight.\+cpp}!main@{main}}
+\index{main@{main}!Flyweight.\+cpp@{Flyweight.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{Flyweight_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{Flyweight_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCode}
+64                                 \{
+65     std::vector<FlyweightCharacter> chars;
+66 
+67     \hyperlink{classFlyweightCharacterAbstractBuilder_ac5913cdc99a7af95a502d2665106a21f}{FlyweightCharacterAbstractBuilder::setFontsAndNames}(
+      );
+68     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} limit = \hyperlink{Flyweight_8cpp_a3d4f434225794ef00f375fcde5fc00cf}{NUMBER\_OF\_SAME\_TYPE\_CHARS};
+69 
+70     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} i = 0; i < limit; i++) \{
+71         chars.push\_back(
+      \hyperlink{classFlyweightCharacterAbstractBuilder_a06267194fa4fda26efc159c0e3b69762}{FlyweightCharacterAbstractBuilder::createFlyweightCharacter}
+      (0, 0, i));
+72         chars.push\_back(
+      \hyperlink{classFlyweightCharacterAbstractBuilder_a06267194fa4fda26efc159c0e3b69762}{FlyweightCharacterAbstractBuilder::createFlyweightCharacter}
+      (1, 1, i + 1 * limit));
+73         chars.push\_back(
+      \hyperlink{classFlyweightCharacterAbstractBuilder_a06267194fa4fda26efc159c0e3b69762}{FlyweightCharacterAbstractBuilder::createFlyweightCharacter}
+      (2, 2, i + 2 * limit));
+74     \}
+75     \textcolor{comment}{/*}
+76 \textcolor{comment}{        Each char stores links to its fontName and fontSize so what we get is:}
+77 \textcolor{comment}{}
+78 \textcolor{comment}{        each object instead of allocating 6 bytes (convention above) for string}
+79 \textcolor{comment}{        and 4 bytes for float allocates 2 bytes for fontNameIndex and fontSizeIndex.}
+80 \textcolor{comment}{}
+81 \textcolor{comment}{        That means for each char we save 6 + 4 - 2 - 2 = 6 bytes.}
+82 \textcolor{comment}{        Now imagine we have NUMBER\_OF\_SAME\_TYPE\_CHARS = 1000 i.e. with our code}
+83 \textcolor{comment}{        we will have 3 groups of chars with 1000 chars in each group which will save }
+84 \textcolor{comment}{        3 * 1000 * 6 - (3 * 6 + 3 * 4) = 17970 saved bytes.}
+85 \textcolor{comment}{}
+86 \textcolor{comment}{        3 * 6 + 3 * 4 is a number of bytes allocated by FlyweightCharacterAbstractBuilder.}
+87 \textcolor{comment}{}
+88 \textcolor{comment}{        So the idea of the pattern is to move properties shared by many objects to some}
+89 \textcolor{comment}{        external container. The objects in that case don't store the data themselves they}
+90 \textcolor{comment}{        store only links to the data which saves memory and make the objects lighter.}
+91 \textcolor{comment}{        The data size of properties stored externally may be significant which will save REALLY}
+92 \textcolor{comment}{        huge amount of memory and will make each object super light in comparison to its counterpart.}
+93 \textcolor{comment}{        That's where the name of the pattern comes from: flyweight (i.e. very light).}
+94 \textcolor{comment}{    */}
+95     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} i = 0; i < chars.size(); i++) \{
+96         chars[i].print();
+97     \}
+98 
+99     std::cin.get(); \textcolor{keywordflow}{return} 0;
+100 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{Flyweight_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph}
+\end{center}
+\end{figure}
+
+

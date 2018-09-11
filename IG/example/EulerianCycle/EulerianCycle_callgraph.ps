@@ -1,0 +1,3765 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.38.0 (20140413.2041)
+%%Title: /home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle Call Graph
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 150 150 2400 1846
+%%PageOrientation: Portrait
+<< /PageSize [2400 1846] >> setpagedevice
+0 0 1 beginpage
+gsave
+150 150 2250 1696 boxprim clip newpath
+0.50586 0.50586 set_scale 0 rotate 300.525 300.525 translate
+[ /CropBox [150 150 2400 1846] /PAGES pdfmark
+0 0 0 graphcolor
+14 /Times-Roman set_font
+2026.44 7.8 moveto 387 (/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle Call Graph) alignedtext
+% Node0x148857303
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+287.92 1660.87 287.85 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+74.42 1657.17 moveto 427 (/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp) alignedtext
+grestore
+% Node0x623683426
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 3244.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+727.75 3248.67 moveto 505 (0x2b7d468. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+920.75 3233.67 moveto 119 (Graph::addEdge\(1, 0\)) alignedtext
+grestore
+% Node0x148857303->Node0x623683426
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 290.41 1679.31 moveto
+303.22 1833.55 399.49 2908.98 611.85 3136.87 curveto
+650.44 3178.28 704 3204.09 758.3 3220.1 curveto
+stroke
+0 0 0 edgecolor
+newpath 757.51 3223.51 moveto
+768.08 3222.88 lineto
+759.42 3216.78 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 757.51 3223.51 moveto
+768.08 3222.88 lineto
+759.42 3216.78 lineto
+closepath stroke
+grestore
+% Node0x202580414
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 3100.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+727.75 3104.67 moveto 505 (0x2b7d540. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+920.75 3089.67 moveto 119 (Graph::addEdge\(0, 2\)) alignedtext
+grestore
+% Node0x148857303->Node0x202580414
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 290.83 1678.87 moveto
+306.44 1822.99 417.52 2788.97 611.85 2992.87 curveto
+651.22 3034.19 705.51 3059.94 760.27 3075.92 curveto
+stroke
+0 0 0 edgecolor
+newpath 759.56 3079.35 moveto
+770.14 3078.69 lineto
+761.46 3072.61 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 759.56 3079.35 moveto
+770.14 3078.69 lineto
+761.46 3072.61 lineto
+closepath stroke
+grestore
+% Node0x970786077
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 2956.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+727.75 2960.67 moveto 505 (0x2b7d618. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+920.75 2945.67 moveto 119 (Graph::addEdge\(2, 1\)) alignedtext
+grestore
+% Node0x148857303->Node0x970786077
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 291.42 1679.05 moveto
+310.36 1814.73 435.72 2669.1 611.85 2848.87 curveto
+652.42 2890.28 707.99 2916.02 763.62 2931.94 curveto
+stroke
+0 0 0 edgecolor
+newpath 762.7 2935.32 moveto
+773.27 2934.61 lineto
+764.57 2928.57 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 762.7 2935.32 moveto
+773.27 2934.61 lineto
+764.57 2928.57 lineto
+closepath stroke
+grestore
+% Node0x304120950
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 2812.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+729.25 2816.67 moveto 502 (0x2b7d6f0. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+920.75 2801.67 moveto 119 (Graph::addEdge\(0, 3\)) alignedtext
+grestore
+% Node0x148857303->Node0x304120950
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 288.64 1678.89 moveto
+287.89 1790.81 298.77 2396.16 611.85 2704.87 curveto
+653.8 2746.24 710.74 2771.91 767.26 2787.79 curveto
+stroke
+0 0 0 edgecolor
+newpath 766.49 2791.21 moveto
+777.06 2790.45 lineto
+768.33 2784.45 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 766.49 2791.21 moveto
+777.06 2790.45 lineto
+768.33 2784.45 lineto
+closepath stroke
+grestore
+% Node0x461745637
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 2668.87 367.89 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+728.25 2672.67 moveto 504 (0x2b7d7c8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+920.75 2657.67 moveto 119 (Graph::addEdge\(3, 4\)) alignedtext
+grestore
+% Node0x148857303->Node0x461745637
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 289 1679.14 moveto
+290.5 1786.24 312.93 2336.78 611.85 2596.87 curveto
+637.62 2619.3 668.3 2635.55 700.78 2647.22 curveto
+stroke
+0 0 0 edgecolor
+newpath 699.86 2650.6 moveto
+710.45 2650.54 lineto
+702.13 2643.98 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 699.86 2650.6 moveto
+710.45 2650.54 lineto
+702.13 2643.98 lineto
+closepath stroke
+grestore
+% Node0x806391137
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 2560.87 367.89 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+728.25 2564.67 moveto 504 (0x2b7dcd0. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+959.25 2549.67 moveto 42 (test\(g1\)) alignedtext
+grestore
+% Node0x148857303->Node0x806391137
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 289.9 1679 moveto
+296.26 1778.52 340.74 2262.27 611.85 2488.87 curveto
+638.74 2511.35 670.61 2527.56 704.17 2539.13 curveto
+stroke
+0 0 0 edgecolor
+newpath 703.08 2542.46 moveto
+713.67 2542.27 lineto
+705.28 2535.81 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 703.08 2542.46 moveto
+713.67 2542.27 lineto
+705.28 2535.81 lineto
+closepath stroke
+grestore
+% Node0x159738154
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 2452.87 367.89 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+728.25 2456.67 moveto 504 (0x2b7deb0. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+920.75 2441.67 moveto 119 (Graph::addEdge\(1, 0\)) alignedtext
+grestore
+% Node0x148857303->Node0x159738154
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 291.9 1678.9 moveto
+307.33 1766.56 386.36 2151.91 611.85 2344.87 curveto
+659.82 2385.92 722.76 2411.37 782.96 2427.16 curveto
+stroke
+0 0 0 edgecolor
+newpath 782.43 2430.63 moveto
+792.98 2429.7 lineto
+784.15 2423.85 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 782.43 2430.63 moveto
+792.98 2429.7 lineto
+784.15 2423.85 lineto
+closepath stroke
+grestore
+% Node0x555947687
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 2308.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+729.25 2312.67 moveto 502 (0x2b7df88. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+920.75 2297.67 moveto 119 (Graph::addEdge\(0, 2\)) alignedtext
+grestore
+% Node0x148857303->Node0x555947687
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 294.35 1679.06 moveto
+318.07 1755.35 420.11 2052.41 611.85 2200.87 curveto
+664.37 2241.53 731.85 2266.91 794.62 2282.73 curveto
+stroke
+0 0 0 edgecolor
+newpath 794.1 2286.21 moveto
+804.65 2285.19 lineto
+795.77 2279.41 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 794.1 2286.21 moveto
+804.65 2285.19 lineto
+795.77 2279.41 lineto
+closepath stroke
+grestore
+% Node0x104435877
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 2164.87 367.89 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+728.25 2168.67 moveto 504 (0x2b7e060. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+920.75 2153.67 moveto 119 (Graph::addEdge\(2, 1\)) alignedtext
+grestore
+% Node0x148857303->Node0x104435877
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 298.42 1679.09 moveto
+332.07 1741.82 452.23 1950.85 611.85 2056.87 curveto
+671.76 2096.66 746.64 2122.11 813.15 2138.23 curveto
+stroke
+0 0 0 edgecolor
+newpath 812.36 2141.64 moveto
+822.9 2140.54 lineto
+813.97 2134.83 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 812.36 2141.64 moveto
+822.9 2140.54 lineto
+813.97 2134.83 lineto
+closepath stroke
+grestore
+% Node0x982323881
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 2020.87 367.89 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+728.25 2024.67 moveto 504 (0x2b7e138. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+920.75 2009.67 moveto 119 (Graph::addEdge\(0, 3\)) alignedtext
+grestore
+% Node0x148857303->Node0x982323881
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 306.83 1678.96 moveto
+353.1 1724.75 482.16 1846.29 611.85 1912.87 curveto
+683.59 1949.7 769.83 1975.87 840.72 1993.22 curveto
+stroke
+0 0 0 edgecolor
+newpath 840.08 1996.67 moveto
+850.62 1995.61 lineto
+841.72 1989.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 840.08 1996.67 moveto
+850.62 1995.61 lineto
+841.72 1989.86 lineto
+closepath stroke
+grestore
+% Node0x329955996
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 1876.87 367.89 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+728.25 1880.67 moveto 504 (0x2b7e210. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+920.75 1865.67 moveto 119 (Graph::addEdge\(3, 4\)) alignedtext
+grestore
+% Node0x148857303->Node0x329955996
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 340.19 1678.66 moveto
+403.72 1700.57 515.41 1738.58 611.85 1768.87 curveto
+701.23 1796.94 803.54 1826.84 877.46 1848.04 curveto
+stroke
+0 0 0 edgecolor
+newpath 876.67 1851.45 moveto
+887.24 1850.84 lineto
+878.59 1844.72 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 876.67 1851.45 moveto
+887.24 1850.84 lineto
+878.59 1844.72 lineto
+closepath stroke
+grestore
+% Node0x763410537
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 1732.87 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+728.75 1736.67 moveto 503 (0x2b7e2e8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+920.75 1721.67 moveto 119 (Graph::addEdge\(4, 0\)) alignedtext
+grestore
+% Node0x148857303->Node0x763410537
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 426.77 1676.65 moveto
+484.01 1683.09 551.12 1690.51 611.85 1696.87 curveto
+655.41 1701.43 701.89 1706.12 746.63 1710.55 curveto
+stroke
+0 0 0 edgecolor
+newpath 746.45 1714.05 moveto
+756.75 1711.55 lineto
+747.14 1707.08 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 746.45 1714.05 moveto
+756.75 1711.55 lineto
+747.14 1707.08 lineto
+closepath stroke
+grestore
+% Node0x892223731
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 1660.87 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+728.75 1664.67 moveto 503 (0x2b7e7c0. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+959.25 1649.67 moveto 42 (test\(g2\)) alignedtext
+grestore
+% Node0x148857303->Node0x892223731
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 576.19 1660.87 moveto
+585.06 1660.87 593.99 1660.87 602.95 1660.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 603.07 1664.37 moveto
+613.07 1660.87 lineto
+603.07 1657.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 603.07 1664.37 moveto
+613.07 1660.87 lineto
+603.07 1657.37 lineto
+closepath stroke
+grestore
+% Node0x216561410
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 1588.87 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+728.75 1592.67 moveto 503 (0x2b7e9a0. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+920.75 1577.67 moveto 119 (Graph::addEdge\(1, 0\)) alignedtext
+grestore
+% Node0x148857303->Node0x216561410
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 426.77 1645.09 moveto
+484.01 1638.65 551.12 1631.23 611.85 1624.87 curveto
+655.41 1620.31 701.89 1615.62 746.63 1611.19 curveto
+stroke
+0 0 0 edgecolor
+newpath 747.14 1614.66 moveto
+756.75 1610.19 lineto
+746.45 1607.69 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 747.14 1614.66 moveto
+756.75 1610.19 lineto
+746.45 1607.69 lineto
+closepath stroke
+grestore
+% Node0x186986577
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 1444.87 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+728.75 1448.67 moveto 503 (0x2b7ea78. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+920.75 1433.67 moveto 119 (Graph::addEdge\(0, 2\)) alignedtext
+grestore
+% Node0x148857303->Node0x186986577
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 340.19 1643.08 moveto
+403.72 1621.17 515.41 1583.16 611.85 1552.87 curveto
+701.23 1524.8 803.54 1494.9 877.46 1473.7 curveto
+stroke
+0 0 0 edgecolor
+newpath 878.59 1477.02 moveto
+887.24 1470.9 lineto
+876.67 1470.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 878.59 1477.02 moveto
+887.24 1470.9 lineto
+876.67 1470.29 lineto
+closepath stroke
+grestore
+% Node0x874124133
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 1300.87 367.89 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+728.25 1304.67 moveto 504 (0x2b7eb50. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+920.75 1289.67 moveto 119 (Graph::addEdge\(2, 1\)) alignedtext
+grestore
+% Node0x148857303->Node0x874124133
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 306.83 1642.78 moveto
+353.1 1596.99 482.16 1475.45 611.85 1408.87 curveto
+683.59 1372.04 769.83 1345.87 840.72 1328.52 curveto
+stroke
+0 0 0 edgecolor
+newpath 841.72 1331.88 moveto
+850.62 1326.13 lineto
+840.08 1325.07 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 841.72 1331.88 moveto
+850.62 1326.13 lineto
+840.08 1325.07 lineto
+closepath stroke
+grestore
+% Node0x578918955
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 1156.87 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+728.75 1160.67 moveto 503 (0x2b7ec28. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+920.75 1145.67 moveto 119 (Graph::addEdge\(0, 3\)) alignedtext
+grestore
+% Node0x148857303->Node0x578918955
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 298.42 1642.65 moveto
+332.07 1579.92 452.23 1370.89 611.85 1264.87 curveto
+671.76 1225.08 746.64 1199.63 813.15 1183.51 curveto
+stroke
+0 0 0 edgecolor
+newpath 813.97 1186.91 moveto
+822.9 1181.2 lineto
+812.36 1180.1 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 813.97 1186.91 moveto
+822.9 1181.2 lineto
+812.36 1180.1 lineto
+closepath stroke
+grestore
+% Node0x240826622
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 1012.87 367.89 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+728.25 1016.67 moveto 504 (0x2b7ed00. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+920.75 1001.67 moveto 119 (Graph::addEdge\(3, 4\)) alignedtext
+grestore
+% Node0x148857303->Node0x240826622
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 294.35 1642.68 moveto
+318.07 1566.39 420.11 1269.33 611.85 1120.87 curveto
+664.37 1080.21 731.85 1054.83 794.62 1039.01 curveto
+stroke
+0 0 0 edgecolor
+newpath 795.77 1042.33 moveto
+804.65 1036.55 lineto
+794.1 1035.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 795.77 1042.33 moveto
+804.65 1036.55 lineto
+794.1 1035.53 lineto
+closepath stroke
+grestore
+% Node0x442940174
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 868.87 367.89 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+728.25 872.67 moveto 504 (0x2b7edd8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+920.75 857.67 moveto 119 (Graph::addEdge\(1, 3\)) alignedtext
+grestore
+% Node0x148857303->Node0x442940174
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 291.9 1642.84 moveto
+307.33 1555.18 386.36 1169.83 611.85 976.87 curveto
+659.82 935.82 722.76 910.37 782.96 894.58 curveto
+stroke
+0 0 0 edgecolor
+newpath 784.15 897.89 moveto
+792.98 892.04 lineto
+782.43 891.11 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 784.15 897.89 moveto
+792.98 892.04 lineto
+782.43 891.11 lineto
+closepath stroke
+grestore
+% Node0x271670194
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 760.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+729.25 764.67 moveto 502 (0x2b7f2b0. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+959.25 749.67 moveto 42 (test\(g3\)) alignedtext
+grestore
+% Node0x148857303->Node0x271670194
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 289.9 1642.74 moveto
+296.26 1543.22 340.74 1059.47 611.85 832.87 curveto
+638.74 810.39 670.61 794.19 704.17 782.61 curveto
+stroke
+0 0 0 edgecolor
+newpath 705.28 785.93 moveto
+713.67 779.47 lineto
+703.08 779.28 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 705.28 785.93 moveto
+713.67 779.47 lineto
+703.08 779.28 lineto
+closepath stroke
+grestore
+% Node0x136486672
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 652.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+729.25 656.67 moveto 502 (0x2b7f490. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+920.75 641.67 moveto 119 (Graph::addEdge\(0, 1\)) alignedtext
+grestore
+% Node0x148857303->Node0x136486672
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 289 1642.6 moveto
+290.5 1535.5 312.93 984.96 611.85 724.87 curveto
+637.62 702.44 668.3 686.19 700.78 674.52 curveto
+stroke
+0 0 0 edgecolor
+newpath 702.13 677.76 moveto
+710.45 671.2 lineto
+699.86 671.14 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 702.13 677.76 moveto
+710.45 671.2 lineto
+699.86 671.14 lineto
+closepath stroke
+grestore
+% Node0x828337102
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 508.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+729.25 512.67 moveto 502 (0x2b7f568. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+920.75 497.67 moveto 119 (Graph::addEdge\(1, 2\)) alignedtext
+grestore
+% Node0x148857303->Node0x828337102
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 288.64 1642.85 moveto
+287.89 1530.93 298.77 925.58 611.85 616.87 curveto
+653.8 575.5 710.74 549.83 767.26 533.95 curveto
+stroke
+0 0 0 edgecolor
+newpath 768.33 537.29 moveto
+777.06 531.29 lineto
+766.49 530.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 768.33 537.29 moveto
+777.06 531.29 lineto
+766.49 530.53 lineto
+closepath stroke
+grestore
+% Node0x915679540
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 364.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+729.25 368.67 moveto 502 (0x2b7f640. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+920.75 353.67 moveto 119 (Graph::addEdge\(2, 0\)) alignedtext
+grestore
+% Node0x148857303->Node0x915679540
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 291.42 1642.69 moveto
+310.36 1507.01 435.72 652.64 611.85 472.87 curveto
+652.42 431.46 707.99 405.72 763.62 389.8 curveto
+stroke
+0 0 0 edgecolor
+newpath 764.57 393.17 moveto
+773.27 387.13 lineto
+762.7 386.42 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 764.57 393.17 moveto
+773.27 387.13 lineto
+762.7 386.42 lineto
+closepath stroke
+grestore
+% Node0x373769671
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 256.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+729.25 260.67 moveto 502 (0x2b7fb18. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+959.25 245.67 moveto 42 (test\(g4\)) alignedtext
+grestore
+% Node0x148857303->Node0x373769671
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 290.68 1642.71 moveto
+305.05 1497.36 408.31 523.58 611.85 328.87 curveto
+635.26 306.47 663.48 290.07 693.75 278.17 curveto
+stroke
+0 0 0 edgecolor
+newpath 695.08 281.42 moveto
+703.21 274.63 lineto
+692.62 274.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 695.08 281.42 moveto
+703.21 274.63 lineto
+692.62 274.86 lineto
+closepath stroke
+grestore
+% Node0x143742925
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+980.25 175.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+729.25 179.67 moveto 502 (0x2b800f8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+959.25 164.67 moveto 42 (test\(g5\)) alignedtext
+grestore
+% Node0x148857303->Node0x143742925
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 290.21 1642.6 moveto
+301.32 1489.79 386.36 425.13 611.85 220.87 curveto
+623.57 210.25 636.43 201.26 650.11 193.68 curveto
+stroke
+0 0 0 edgecolor
+newpath 651.98 196.65 moveto
+659.21 188.9 lineto
+648.73 190.45 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 651.98 196.65 moveto
+659.21 188.9 lineto
+648.73 190.45 lineto
+closepath stroke
+grestore
+% Node0x953415478
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 3316.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1500.56 3320.67 moveto 505 (0x2b77480. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 3305.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x623683426->Node0x953415478
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1207.83 3266.03 moveto
+1304.66 3275.08 1417.7 3285.64 1515.6 3294.78 curveto
+stroke
+0 0 0 edgecolor
+newpath 1515.34 3298.27 moveto
+1525.63 3295.72 lineto
+1516 3291.3 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1515.34 3298.27 moveto
+1525.63 3295.72 lineto
+1516 3291.3 lineto
+closepath stroke
+grestore
+% Node0x985600188
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 3244.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1502.06 3248.67 moveto 502 (0x2b775f8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 3233.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x623683426->Node0x985600188
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1348.88 3244.87 moveto
+1358.13 3244.87 1367.39 3244.87 1376.65 3244.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1376.69 3248.37 moveto
+1386.69 3244.87 lineto
+1376.69 3241.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1376.69 3248.37 moveto
+1386.69 3244.87 lineto
+1376.69 3241.37 lineto
+closepath stroke
+grestore
+% Node0x656160710
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 3172.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1500.56 3176.67 moveto 505 (0x2b77480. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 3161.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x202580414->Node0x656160710
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1207.83 3122.03 moveto
+1304.66 3131.08 1417.7 3141.64 1515.6 3150.78 curveto
+stroke
+0 0 0 edgecolor
+newpath 1515.34 3154.27 moveto
+1525.63 3151.72 lineto
+1516 3147.3 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1515.34 3154.27 moveto
+1525.63 3151.72 lineto
+1516 3147.3 lineto
+closepath stroke
+grestore
+% Node0x120717870
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 3100.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1502.06 3104.67 moveto 502 (0x2b775f8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 3089.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x202580414->Node0x120717870
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1348.88 3100.87 moveto
+1358.13 3100.87 1367.39 3100.87 1376.65 3100.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1376.69 3104.37 moveto
+1386.69 3100.87 lineto
+1376.69 3097.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1376.69 3104.37 moveto
+1386.69 3100.87 lineto
+1376.69 3097.37 lineto
+closepath stroke
+grestore
+% Node0x392536187
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 3028.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1500.56 3032.67 moveto 505 (0x2b77480. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 3017.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x970786077->Node0x392536187
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1207.83 2978.03 moveto
+1304.66 2987.08 1417.7 2997.64 1515.6 3006.78 curveto
+stroke
+0 0 0 edgecolor
+newpath 1515.34 3010.27 moveto
+1525.63 3007.72 lineto
+1516 3003.3 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1515.34 3010.27 moveto
+1525.63 3007.72 lineto
+1516 3003.3 lineto
+closepath stroke
+grestore
+% Node0x636038884
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 2956.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1502.06 2960.67 moveto 502 (0x2b775f8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 2945.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x970786077->Node0x636038884
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1348.88 2956.87 moveto
+1358.13 2956.87 1367.39 2956.87 1376.65 2956.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1376.69 2960.37 moveto
+1386.69 2956.87 lineto
+1376.69 2953.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1376.69 2960.37 moveto
+1386.69 2956.87 lineto
+1376.69 2953.37 lineto
+closepath stroke
+grestore
+% Node0x155029274
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 2884.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1500.56 2888.67 moveto 505 (0x2b77480. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 2873.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x304120950->Node0x155029274
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1207.31 2833.99 moveto
+1304.26 2843.04 1417.55 2853.62 1515.62 2862.78 curveto
+stroke
+0 0 0 edgecolor
+newpath 1515.39 2866.28 moveto
+1525.67 2863.72 lineto
+1516.04 2859.31 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1515.39 2866.28 moveto
+1525.67 2863.72 lineto
+1516.04 2859.31 lineto
+closepath stroke
+grestore
+% Node0x926283400
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 2812.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1502.06 2816.67 moveto 502 (0x2b775f8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 2801.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x304120950->Node0x926283400
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1346.62 2812.87 moveto
+1356.51 2812.87 1366.41 2812.87 1376.31 2812.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1376.62 2816.37 moveto
+1386.62 2812.87 lineto
+1376.62 2809.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1376.62 2816.37 moveto
+1386.62 2812.87 lineto
+1376.62 2809.37 lineto
+closepath stroke
+grestore
+% Node0x182453281
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 2740.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1500.56 2744.67 moveto 505 (0x2b77480. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 2729.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x461745637->Node0x182453281
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1207.57 2690.01 moveto
+1304.41 2699.06 1417.5 2709.62 1515.44 2718.77 curveto
+stroke
+0 0 0 edgecolor
+newpath 1515.2 2722.26 moveto
+1525.48 2719.71 lineto
+1515.85 2715.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1515.2 2722.26 moveto
+1525.48 2719.71 lineto
+1515.85 2715.29 lineto
+closepath stroke
+grestore
+% Node0x959530786
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 2668.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1502.06 2672.67 moveto 502 (0x2b775f8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 2657.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x461745637->Node0x959530786
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1348.03 2668.87 moveto
+1357.51 2668.87 1367 2668.87 1376.48 2668.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1376.77 2672.37 moveto
+1386.77 2668.87 lineto
+1376.77 2665.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1376.77 2672.37 moveto
+1386.77 2668.87 lineto
+1376.77 2665.37 lineto
+closepath stroke
+grestore
+% Node0x545275799
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 2596.87 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1501.56 2600.67 moveto 503 (0x2b7c1e0. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1700.06 2585.67 moveto 106 (Graph::isEulerian\(\)) alignedtext
+grestore
+% Node0x806391137->Node0x545275799
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1290.6 2575.32 moveto
+1337.51 2577.51 1385.99 2579.77 1433.09 2581.97 curveto
+stroke
+0 0 0 edgecolor
+newpath 1432.97 2585.47 moveto
+1443.13 2582.44 lineto
+1433.3 2578.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1432.97 2585.47 moveto
+1443.13 2582.44 lineto
+1433.3 2578.48 lineto
+closepath stroke
+grestore
+% Node0x755671490
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 2524.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1500.56 2528.67 moveto 505 (0x2b77480. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 2513.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x159738154->Node0x755671490
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1207.57 2474.01 moveto
+1304.41 2483.06 1417.5 2493.62 1515.44 2502.77 curveto
+stroke
+0 0 0 edgecolor
+newpath 1515.2 2506.26 moveto
+1525.48 2503.71 lineto
+1515.85 2499.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1515.2 2506.26 moveto
+1525.48 2503.71 lineto
+1515.85 2499.29 lineto
+closepath stroke
+grestore
+% Node0x221717424
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 2452.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1502.06 2456.67 moveto 502 (0x2b775f8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 2441.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x159738154->Node0x221717424
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1348.03 2452.87 moveto
+1357.51 2452.87 1367 2452.87 1376.48 2452.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1376.77 2456.37 moveto
+1386.77 2452.87 lineto
+1376.77 2449.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1376.77 2456.37 moveto
+1386.77 2452.87 lineto
+1376.77 2449.37 lineto
+closepath stroke
+grestore
+% Node0x840024731
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 2380.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1500.56 2384.67 moveto 505 (0x2b77480. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 2369.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x555947687->Node0x840024731
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1207.31 2329.99 moveto
+1304.26 2339.04 1417.55 2349.62 1515.62 2358.78 curveto
+stroke
+0 0 0 edgecolor
+newpath 1515.39 2362.28 moveto
+1525.67 2359.72 lineto
+1516.04 2355.31 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1515.39 2362.28 moveto
+1525.67 2359.72 lineto
+1516.04 2355.31 lineto
+closepath stroke
+grestore
+% Node0x643925609
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 2308.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1502.06 2312.67 moveto 502 (0x2b775f8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 2297.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x555947687->Node0x643925609
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1346.62 2308.87 moveto
+1356.51 2308.87 1366.41 2308.87 1376.31 2308.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1376.62 2312.37 moveto
+1386.62 2308.87 lineto
+1376.62 2305.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1376.62 2312.37 moveto
+1386.62 2308.87 lineto
+1376.62 2305.37 lineto
+closepath stroke
+grestore
+% Node0x235509809
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 2236.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1500.56 2240.67 moveto 505 (0x2b77480. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 2225.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x104435877->Node0x235509809
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1207.57 2186.01 moveto
+1304.41 2195.06 1417.5 2205.62 1515.44 2214.77 curveto
+stroke
+0 0 0 edgecolor
+newpath 1515.2 2218.26 moveto
+1525.48 2215.71 lineto
+1515.85 2211.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1515.2 2218.26 moveto
+1525.48 2215.71 lineto
+1515.85 2211.29 lineto
+closepath stroke
+grestore
+% Node0x227734478
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 2164.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1502.06 2168.67 moveto 502 (0x2b775f8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 2153.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x104435877->Node0x227734478
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1348.03 2164.87 moveto
+1357.51 2164.87 1367 2164.87 1376.48 2164.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1376.77 2168.37 moveto
+1386.77 2164.87 lineto
+1376.77 2161.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1376.77 2168.37 moveto
+1386.77 2164.87 lineto
+1376.77 2161.37 lineto
+closepath stroke
+grestore
+% Node0x522711459
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 2092.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1500.56 2096.67 moveto 505 (0x2b77480. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 2081.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x982323881->Node0x522711459
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1207.57 2042.01 moveto
+1304.41 2051.06 1417.5 2061.62 1515.44 2070.77 curveto
+stroke
+0 0 0 edgecolor
+newpath 1515.2 2074.26 moveto
+1525.48 2071.71 lineto
+1515.85 2067.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1515.2 2074.26 moveto
+1525.48 2071.71 lineto
+1515.85 2067.29 lineto
+closepath stroke
+grestore
+% Node0x862937978
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 2020.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1502.06 2024.67 moveto 502 (0x2b775f8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 2009.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x982323881->Node0x862937978
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1348.03 2020.87 moveto
+1357.51 2020.87 1367 2020.87 1376.48 2020.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1376.77 2024.37 moveto
+1386.77 2020.87 lineto
+1376.77 2017.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1376.77 2024.37 moveto
+1386.77 2020.87 lineto
+1376.77 2017.37 lineto
+closepath stroke
+grestore
+% Node0x544975042
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 1948.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1500.56 1952.67 moveto 505 (0x2b77480. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 1937.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x329955996->Node0x544975042
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1207.57 1898.01 moveto
+1304.41 1907.06 1417.5 1917.62 1515.44 1926.77 curveto
+stroke
+0 0 0 edgecolor
+newpath 1515.2 1930.26 moveto
+1525.48 1927.71 lineto
+1515.85 1923.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1515.2 1930.26 moveto
+1525.48 1927.71 lineto
+1515.85 1923.29 lineto
+closepath stroke
+grestore
+% Node0x654253078
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 1876.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1502.06 1880.67 moveto 502 (0x2b775f8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 1865.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x329955996->Node0x654253078
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1348.03 1876.87 moveto
+1357.51 1876.87 1367 1876.87 1376.48 1876.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1376.77 1880.37 moveto
+1386.77 1876.87 lineto
+1376.77 1873.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1376.77 1880.37 moveto
+1386.77 1876.87 lineto
+1376.77 1873.37 lineto
+closepath stroke
+grestore
+% Node0x660936189
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 1804.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1500.56 1808.67 moveto 505 (0x2b77480. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 1793.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x763410537->Node0x660936189
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1207.31 1753.99 moveto
+1304.26 1763.04 1417.55 1773.62 1515.62 1782.78 curveto
+stroke
+0 0 0 edgecolor
+newpath 1515.39 1786.28 moveto
+1525.67 1783.72 lineto
+1516.04 1779.31 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1515.39 1786.28 moveto
+1525.67 1783.72 lineto
+1516.04 1779.31 lineto
+closepath stroke
+grestore
+% Node0x899283726
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 1732.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1502.06 1736.67 moveto 502 (0x2b775f8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 1721.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x763410537->Node0x899283726
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1347.47 1732.87 moveto
+1357.12 1732.87 1366.8 1732.87 1376.46 1732.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1376.53 1736.37 moveto
+1386.53 1732.87 lineto
+1376.53 1729.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1376.53 1736.37 moveto
+1386.53 1732.87 lineto
+1376.53 1729.37 lineto
+closepath stroke
+grestore
+% Node0x176834918
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 1660.87 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1501.56 1664.67 moveto 503 (0x2b7c1e0. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1700.06 1649.67 moveto 106 (Graph::isEulerian\(\)) alignedtext
+grestore
+% Node0x892223731->Node0x176834918
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1347.47 1660.87 moveto
+1356.88 1660.87 1366.31 1660.87 1375.73 1660.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1375.95 1664.37 moveto
+1385.95 1660.87 lineto
+1375.95 1657.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1375.95 1664.37 moveto
+1385.95 1660.87 lineto
+1375.95 1657.37 lineto
+closepath stroke
+grestore
+% Node0x821088367
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 1588.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1500.56 1592.67 moveto 505 (0x2b77480. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 1577.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x216561410->Node0x821088367
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1347.47 1588.87 moveto
+1356.43 1588.87 1365.4 1588.87 1374.37 1588.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1374.49 1592.37 moveto
+1384.49 1588.87 lineto
+1374.49 1585.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1374.49 1592.37 moveto
+1384.49 1588.87 lineto
+1374.49 1585.37 lineto
+closepath stroke
+grestore
+% Node0x768559019
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 1516.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1502.06 1520.67 moveto 502 (0x2b775f8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 1505.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x216561410->Node0x768559019
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1207.31 1567.75 moveto
+1304.37 1558.69 1417.8 1548.09 1515.95 1538.92 curveto
+stroke
+0 0 0 edgecolor
+newpath 1516.37 1542.4 moveto
+1526 1537.99 lineto
+1515.72 1535.43 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1516.37 1542.4 moveto
+1526 1537.99 lineto
+1515.72 1535.43 lineto
+closepath stroke
+grestore
+% Node0x704583869
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 1444.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1500.56 1448.67 moveto 505 (0x2b77480. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 1433.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x186986577->Node0x704583869
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1347.47 1444.87 moveto
+1356.43 1444.87 1365.4 1444.87 1374.37 1444.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1374.49 1448.37 moveto
+1384.49 1444.87 lineto
+1374.49 1441.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1374.49 1448.37 moveto
+1384.49 1444.87 lineto
+1374.49 1441.37 lineto
+closepath stroke
+grestore
+% Node0x474856660
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 1372.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1502.06 1376.67 moveto 502 (0x2b775f8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 1361.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x186986577->Node0x474856660
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1207.31 1423.75 moveto
+1304.37 1414.69 1417.8 1404.09 1515.95 1394.92 curveto
+stroke
+0 0 0 edgecolor
+newpath 1516.37 1398.4 moveto
+1526 1393.99 lineto
+1515.72 1391.43 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1516.37 1398.4 moveto
+1526 1393.99 lineto
+1515.72 1391.43 lineto
+closepath stroke
+grestore
+% Node0x702201331
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 1300.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1500.56 1304.67 moveto 505 (0x2b77480. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 1289.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x874124133->Node0x702201331
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1348.03 1300.87 moveto
+1356.75 1300.87 1365.48 1300.87 1374.2 1300.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1374.44 1304.37 moveto
+1384.44 1300.87 lineto
+1374.44 1297.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1374.44 1304.37 moveto
+1384.44 1300.87 lineto
+1374.44 1297.37 lineto
+closepath stroke
+grestore
+% Node0x527000441
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 1228.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1502.06 1232.67 moveto 502 (0x2b775f8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 1217.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x874124133->Node0x527000441
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1207.57 1279.73 moveto
+1304.62 1270.66 1418 1260.07 1516.1 1250.91 curveto
+stroke
+0 0 0 edgecolor
+newpath 1516.52 1254.39 moveto
+1526.15 1249.97 lineto
+1515.86 1247.42 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1516.52 1254.39 moveto
+1526.15 1249.97 lineto
+1515.86 1247.42 lineto
+closepath stroke
+grestore
+% Node0x873281296
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 1156.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1500.56 1160.67 moveto 505 (0x2b77480. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 1145.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x578918955->Node0x873281296
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1347.47 1156.87 moveto
+1356.43 1156.87 1365.4 1156.87 1374.37 1156.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1374.49 1160.37 moveto
+1384.49 1156.87 lineto
+1374.49 1153.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1374.49 1160.37 moveto
+1384.49 1156.87 lineto
+1374.49 1153.37 lineto
+closepath stroke
+grestore
+% Node0x582507476
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 1084.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1502.06 1088.67 moveto 502 (0x2b775f8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 1073.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x578918955->Node0x582507476
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1207.31 1135.75 moveto
+1304.37 1126.69 1417.8 1116.09 1515.95 1106.92 curveto
+stroke
+0 0 0 edgecolor
+newpath 1516.37 1110.4 moveto
+1526 1105.99 lineto
+1515.72 1103.43 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1516.37 1110.4 moveto
+1526 1105.99 lineto
+1515.72 1103.43 lineto
+closepath stroke
+grestore
+% Node0x783428090
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 1012.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1500.56 1016.67 moveto 505 (0x2b77480. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 1001.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x240826622->Node0x783428090
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1348.03 1012.87 moveto
+1356.75 1012.87 1365.48 1012.87 1374.2 1012.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1374.44 1016.37 moveto
+1384.44 1012.87 lineto
+1374.44 1009.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1374.44 1016.37 moveto
+1384.44 1012.87 lineto
+1374.44 1009.37 lineto
+closepath stroke
+grestore
+% Node0x220227531
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 940.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1502.06 944.67 moveto 502 (0x2b775f8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 929.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x240826622->Node0x220227531
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1207.57 991.73 moveto
+1304.62 982.66 1418 972.07 1516.1 962.91 curveto
+stroke
+0 0 0 edgecolor
+newpath 1516.52 966.39 moveto
+1526.15 961.97 lineto
+1515.86 959.42 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1516.52 966.39 moveto
+1526.15 961.97 lineto
+1515.86 959.42 lineto
+closepath stroke
+grestore
+% Node0x569577482
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 868.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1500.56 872.67 moveto 505 (0x2b77480. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 857.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x442940174->Node0x569577482
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1348.03 868.87 moveto
+1356.75 868.87 1365.48 868.87 1374.2 868.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1374.44 872.37 moveto
+1384.44 868.87 lineto
+1374.44 865.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1374.44 872.37 moveto
+1384.44 868.87 lineto
+1374.44 865.37 lineto
+closepath stroke
+grestore
+% Node0x682239146
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 796.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1502.06 800.67 moveto 502 (0x2b775f8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 785.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x442940174->Node0x682239146
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1207.57 847.73 moveto
+1304.62 838.66 1418 828.07 1516.1 818.91 curveto
+stroke
+0 0 0 edgecolor
+newpath 1516.52 822.39 moveto
+1526.15 817.97 lineto
+1515.86 815.42 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1516.52 822.39 moveto
+1526.15 817.97 lineto
+1515.86 815.42 lineto
+closepath stroke
+grestore
+% Node0x781180979
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 724.87 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1501.56 728.67 moveto 503 (0x2b7c1e0. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1700.06 713.67 moveto 106 (Graph::isEulerian\(\)) alignedtext
+grestore
+% Node0x271670194->Node0x781180979
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1289.77 746.46 moveto
+1336.92 744.26 1385.66 741.98 1433.03 739.77 curveto
+stroke
+0 0 0 edgecolor
+newpath 1433.29 743.26 moveto
+1443.12 739.3 lineto
+1432.96 736.27 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1433.29 743.26 moveto
+1443.12 739.3 lineto
+1432.96 736.27 lineto
+closepath stroke
+grestore
+% Node0x209706496
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 652.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1500.56 656.67 moveto 505 (0x2b77480. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 641.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x136486672->Node0x209706496
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1346.62 652.87 moveto
+1355.9 652.87 1365.2 652.87 1374.49 652.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1374.57 656.37 moveto
+1384.57 652.87 lineto
+1374.57 649.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1374.57 656.37 moveto
+1384.57 652.87 lineto
+1374.57 649.37 lineto
+closepath stroke
+grestore
+% Node0x425965016
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 580.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1502.06 584.67 moveto 502 (0x2b775f8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 569.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x136486672->Node0x425965016
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1207.31 631.75 moveto
+1304.37 622.69 1417.8 612.09 1515.95 602.92 curveto
+stroke
+0 0 0 edgecolor
+newpath 1516.37 606.4 moveto
+1526 601.99 lineto
+1515.72 599.43 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1516.37 606.4 moveto
+1526 601.99 lineto
+1515.72 599.43 lineto
+closepath stroke
+grestore
+% Node0x381517373
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 508.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1500.56 512.67 moveto 505 (0x2b77480. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 497.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x828337102->Node0x381517373
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1346.62 508.87 moveto
+1355.9 508.87 1365.2 508.87 1374.49 508.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1374.57 512.37 moveto
+1384.57 508.87 lineto
+1374.57 505.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1374.57 512.37 moveto
+1384.57 508.87 lineto
+1374.57 505.37 lineto
+closepath stroke
+grestore
+% Node0x525202113
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 436.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1502.06 440.67 moveto 502 (0x2b775f8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 425.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x828337102->Node0x525202113
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1207.31 487.75 moveto
+1304.37 478.69 1417.8 468.09 1515.95 458.92 curveto
+stroke
+0 0 0 edgecolor
+newpath 1516.37 462.4 moveto
+1526 457.99 lineto
+1515.72 455.43 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1516.37 462.4 moveto
+1526 457.99 lineto
+1515.72 455.43 lineto
+closepath stroke
+grestore
+% Node0x692097672
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 364.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1500.56 368.67 moveto 505 (0x2b77480. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 353.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x915679540->Node0x692097672
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1346.62 364.87 moveto
+1355.9 364.87 1365.2 364.87 1374.49 364.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1374.57 368.37 moveto
+1384.57 364.87 lineto
+1374.57 361.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1374.57 368.37 moveto
+1384.57 364.87 lineto
+1374.57 361.37 lineto
+closepath stroke
+grestore
+% Node0x295539583
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 292.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1502.06 296.67 moveto 502 (0x2b775f8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1705.56 281.67 moveto 95 (OBJ.push_back\(\)) alignedtext
+grestore
+% Node0x915679540->Node0x295539583
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1207.31 343.75 moveto
+1304.37 334.69 1417.8 324.09 1515.95 314.92 curveto
+stroke
+0 0 0 edgecolor
+newpath 1516.37 318.4 moveto
+1526 313.99 lineto
+1515.72 311.43 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1516.37 318.4 moveto
+1526 313.99 lineto
+1515.72 311.43 lineto
+closepath stroke
+grestore
+% Node0x672046060
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 220.87 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1501.56 224.67 moveto 503 (0x2b7c1e0. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1700.06 209.67 moveto 106 (Graph::isEulerian\(\)) alignedtext
+grestore
+% Node0x373769671->Node0x672046060
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1289.77 242.46 moveto
+1336.92 240.26 1385.66 237.98 1433.03 235.77 curveto
+stroke
+0 0 0 edgecolor
+newpath 1433.29 239.26 moveto
+1443.12 235.3 lineto
+1432.96 232.27 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1433.29 239.26 moveto
+1443.12 235.3 lineto
+1432.96 232.27 lineto
+closepath stroke
+grestore
+% Node0x352887140
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1753.06 130.87 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1501.56 134.67 moveto 503 (0x2b7c1e0. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1700.06 119.67 moveto 106 (Graph::isEulerian\(\)) alignedtext
+grestore
+% Node0x143742925->Node0x352887140
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1267.45 159.16 moveto
+1328.72 155.58 1393.58 151.8 1455.24 148.2 curveto
+stroke
+0 0 0 edgecolor
+newpath 1455.72 151.68 moveto
+1465.5 147.6 lineto
+1455.32 144.69 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1455.72 151.68 moveto
+1465.5 147.6 lineto
+1455.32 144.69 lineto
+closepath stroke
+grestore
+% Node0x759011616
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2525.86 2632.87 367.89 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2273.86 2636.67 moveto 504 (0x2b7b6e8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2466.86 2621.67 moveto 118 (Graph::isConnected\(\)) alignedtext
+grestore
+% Node0x545275799->Node0x759011616
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2062.85 2611.29 moveto
+2109.79 2613.48 2158.31 2615.75 2205.46 2617.95 curveto
+stroke
+0 0 0 edgecolor
+newpath 2205.35 2621.45 moveto
+2215.51 2618.42 lineto
+2205.68 2614.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2205.35 2621.45 moveto
+2215.51 2618.42 lineto
+2205.68 2614.46 lineto
+closepath stroke
+grestore
+% Node0x337153136
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2525.86 2560.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2273.36 2564.67 moveto 505 (0x2b7bb58. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2459.86 2549.67 moveto 132 (std::__cxx11::list::size\(\)) alignedtext
+grestore
+% Node0x545275799->Node0x337153136
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2062.85 2582.45 moveto
+2109.69 2580.26 2158.11 2578 2205.17 2575.8 curveto
+stroke
+0 0 0 edgecolor
+newpath 2205.37 2579.3 moveto
+2215.19 2575.33 lineto
+2205.04 2572.3 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2205.37 2579.3 moveto
+2215.19 2575.33 lineto
+2205.04 2572.3 lineto
+closepath stroke
+grestore
+% Node0x531549205
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2525.86 1696.87 367.89 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2273.86 1700.67 moveto 504 (0x2b7b6e8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2466.86 1685.67 moveto 118 (Graph::isConnected\(\)) alignedtext
+grestore
+% Node0x176834918->Node0x531549205
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2062.85 1675.29 moveto
+2109.79 1677.48 2158.31 1679.75 2205.46 1681.95 curveto
+stroke
+0 0 0 edgecolor
+newpath 2205.35 1685.45 moveto
+2215.51 1682.42 lineto
+2205.68 1678.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2205.35 1685.45 moveto
+2215.51 1682.42 lineto
+2205.68 1678.46 lineto
+closepath stroke
+grestore
+% Node0x826605022
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2525.86 1624.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2273.36 1628.67 moveto 505 (0x2b7bb58. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2459.86 1613.67 moveto 132 (std::__cxx11::list::size\(\)) alignedtext
+grestore
+% Node0x176834918->Node0x826605022
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2062.85 1646.45 moveto
+2109.69 1644.26 2158.11 1642 2205.17 1639.8 curveto
+stroke
+0 0 0 edgecolor
+newpath 2205.37 1643.3 moveto
+2215.19 1639.33 lineto
+2205.04 1636.3 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2205.37 1643.3 moveto
+2215.19 1639.33 lineto
+2205.04 1636.3 lineto
+closepath stroke
+grestore
+% Node0x787164912
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2525.86 760.87 367.89 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2273.86 764.67 moveto 504 (0x2b7b6e8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2466.86 749.67 moveto 118 (Graph::isConnected\(\)) alignedtext
+grestore
+% Node0x781180979->Node0x787164912
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2062.85 739.29 moveto
+2109.79 741.48 2158.31 743.75 2205.46 745.95 curveto
+stroke
+0 0 0 edgecolor
+newpath 2205.35 749.45 moveto
+2215.51 746.42 lineto
+2205.68 742.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2205.35 749.45 moveto
+2215.51 746.42 lineto
+2205.68 742.46 lineto
+closepath stroke
+grestore
+% Node0x398856256
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2525.86 688.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2273.36 692.67 moveto 505 (0x2b7bb58. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2459.86 677.67 moveto 132 (std::__cxx11::list::size\(\)) alignedtext
+grestore
+% Node0x781180979->Node0x398856256
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2062.85 710.45 moveto
+2109.69 708.26 2158.11 706 2205.17 703.8 curveto
+stroke
+0 0 0 edgecolor
+newpath 2205.37 707.3 moveto
+2215.19 703.33 lineto
+2205.04 700.3 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2205.37 707.3 moveto
+2215.19 703.33 lineto
+2205.04 700.3 lineto
+closepath stroke
+grestore
+% Node0x233074656
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2525.86 328.87 367.89 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2273.86 332.67 moveto 504 (0x2b7b6e8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2466.86 317.67 moveto 118 (Graph::isConnected\(\)) alignedtext
+grestore
+% Node0x672046060->Node0x233074656
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1991.55 241.37 moveto
+2034.84 245.89 2079.56 251.09 2121.46 256.87 curveto
+2210.67 269.18 2310.29 286.92 2388.21 301.71 curveto
+stroke
+0 0 0 edgecolor
+newpath 2387.61 305.16 moveto
+2398.09 303.59 lineto
+2388.92 298.28 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2387.61 305.16 moveto
+2398.09 303.59 lineto
+2388.92 298.28 lineto
+closepath stroke
+grestore
+% Node0x239994960
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2525.86 220.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2273.36 224.67 moveto 505 (0x2b7bb58. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2459.86 209.67 moveto 132 (std::__cxx11::list::size\(\)) alignedtext
+grestore
+% Node0x672046060->Node0x239994960
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2120.27 220.87 moveto
+2129.23 220.87 2138.21 220.87 2147.18 220.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 2147.3 224.37 moveto
+2157.3 220.87 lineto
+2147.3 217.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2147.3 224.37 moveto
+2157.3 220.87 lineto
+2147.3 217.37 lineto
+closepath stroke
+grestore
+% Node0x225173863
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2525.86 130.87 367.89 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2273.86 134.67 moveto 504 (0x2b7b6e8. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2466.86 119.67 moveto 118 (Graph::isConnected\(\)) alignedtext
+grestore
+% Node0x352887140->Node0x225173863
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2120.27 130.87 moveto
+2129.37 130.87 2138.49 130.87 2147.6 130.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 2147.88 134.37 moveto
+2157.88 130.87 lineto
+2147.88 127.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2147.88 134.37 moveto
+2157.88 130.87 lineto
+2147.88 127.37 lineto
+closepath stroke
+grestore
+% Node0x936128646
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2525.86 58.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2273.36 62.67 moveto 505 (0x2b7bb58. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2459.86 47.67 moveto 132 (std::__cxx11::list::size\(\)) alignedtext
+grestore
+% Node0x352887140->Node0x936128646
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1980.12 109.75 moveto
+2077.07 100.7 2190.35 90.12 2288.42 80.96 curveto
+stroke
+0 0 0 edgecolor
+newpath 2288.84 84.43 moveto
+2298.47 80.02 lineto
+2288.19 77.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2288.84 84.43 moveto
+2298.47 80.02 lineto
+2288.19 77.46 lineto
+closepath stroke
+grestore
+% Node0x857927146
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3298.67 2704.87 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3047.17 2708.67 moveto 503 (0x2b7ac60. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3232.67 2693.67 moveto 132 (std::__cxx11::list::size\(\)) alignedtext
+grestore
+% Node0x759011616->Node0x857927146
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2753.18 2654.01 moveto
+2850.13 2663.07 2963.36 2673.64 3061.38 2682.8 curveto
+stroke
+0 0 0 edgecolor
+newpath 3061.14 2686.29 moveto
+3071.42 2683.74 lineto
+3061.79 2679.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3061.14 2686.29 moveto
+3071.42 2683.74 lineto
+3061.79 2679.32 lineto
+closepath stroke
+grestore
+% Node0x740729676
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3298.67 2632.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3047.67 2636.67 moveto 502 (0x2b7af70. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3226.67 2621.67 moveto 144 (Graph::DFSUtil\(i, visited\)) alignedtext
+grestore
+% Node0x759011616->Node0x740729676
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2893.64 2632.87 moveto
+2903.12 2632.87 2912.61 2632.87 2922.09 2632.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 2922.38 2636.37 moveto
+2932.38 2632.87 lineto
+2922.38 2629.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2922.38 2636.37 moveto
+2932.38 2632.87 lineto
+2922.38 2629.37 lineto
+closepath stroke
+grestore
+% Node0x117898794
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3298.67 2560.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3046.17 2564.67 moveto 505 (0x2b7b398. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3232.67 2549.67 moveto 132 (std::__cxx11::list::size\(\)) alignedtext
+grestore
+% Node0x759011616->Node0x117898794
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2753.18 2611.73 moveto
+2850.02 2602.68 2963.11 2592.12 3061.05 2582.97 curveto
+stroke
+0 0 0 edgecolor
+newpath 3061.46 2586.45 moveto
+3071.09 2582.03 lineto
+3060.81 2579.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3061.46 2586.45 moveto
+3071.09 2582.03 lineto
+3060.81 2579.48 lineto
+closepath stroke
+grestore
+% Node0x495081070
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3298.67 1768.87 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3047.17 1772.67 moveto 503 (0x2b7ac60. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3232.67 1757.67 moveto 132 (std::__cxx11::list::size\(\)) alignedtext
+grestore
+% Node0x531549205->Node0x495081070
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2753.18 1718.01 moveto
+2850.13 1727.07 2963.36 1737.64 3061.38 1746.8 curveto
+stroke
+0 0 0 edgecolor
+newpath 3061.14 1750.29 moveto
+3071.42 1747.74 lineto
+3061.79 1743.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3061.14 1750.29 moveto
+3071.42 1747.74 lineto
+3061.79 1743.32 lineto
+closepath stroke
+grestore
+% Node0x637423676
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3298.67 1696.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3047.67 1700.67 moveto 502 (0x2b7af70. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3226.67 1685.67 moveto 144 (Graph::DFSUtil\(i, visited\)) alignedtext
+grestore
+% Node0x531549205->Node0x637423676
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2893.64 1696.87 moveto
+2903.12 1696.87 2912.61 1696.87 2922.09 1696.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 2922.38 1700.37 moveto
+2932.38 1696.87 lineto
+2922.38 1693.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2922.38 1700.37 moveto
+2932.38 1696.87 lineto
+2922.38 1693.37 lineto
+closepath stroke
+grestore
+% Node0x449608032
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3298.67 1624.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3046.17 1628.67 moveto 505 (0x2b7b398. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3232.67 1613.67 moveto 132 (std::__cxx11::list::size\(\)) alignedtext
+grestore
+% Node0x531549205->Node0x449608032
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2753.18 1675.73 moveto
+2850.02 1666.68 2963.11 1656.12 3061.05 1646.97 curveto
+stroke
+0 0 0 edgecolor
+newpath 3061.46 1650.45 moveto
+3071.09 1646.03 lineto
+3060.81 1643.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3061.46 1650.45 moveto
+3071.09 1646.03 lineto
+3060.81 1643.48 lineto
+closepath stroke
+grestore
+% Node0x227081871
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3298.67 832.87 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3047.17 836.67 moveto 503 (0x2b7ac60. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3232.67 821.67 moveto 132 (std::__cxx11::list::size\(\)) alignedtext
+grestore
+% Node0x787164912->Node0x227081871
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2753.18 782.01 moveto
+2850.13 791.07 2963.36 801.64 3061.38 810.8 curveto
+stroke
+0 0 0 edgecolor
+newpath 3061.14 814.29 moveto
+3071.42 811.74 lineto
+3061.79 807.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3061.14 814.29 moveto
+3071.42 811.74 lineto
+3061.79 807.32 lineto
+closepath stroke
+grestore
+% Node0x753159741
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3298.67 760.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3047.67 764.67 moveto 502 (0x2b7af70. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3226.67 749.67 moveto 144 (Graph::DFSUtil\(i, visited\)) alignedtext
+grestore
+% Node0x787164912->Node0x753159741
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2893.64 760.87 moveto
+2903.12 760.87 2912.61 760.87 2922.09 760.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 2922.38 764.37 moveto
+2932.38 760.87 lineto
+2922.38 757.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2922.38 764.37 moveto
+2932.38 760.87 lineto
+2922.38 757.37 lineto
+closepath stroke
+grestore
+% Node0x493084201
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3298.67 688.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3046.17 692.67 moveto 505 (0x2b7b398. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3232.67 677.67 moveto 132 (std::__cxx11::list::size\(\)) alignedtext
+grestore
+% Node0x787164912->Node0x493084201
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2753.18 739.73 moveto
+2850.02 730.68 2963.11 720.12 3061.05 710.97 curveto
+stroke
+0 0 0 edgecolor
+newpath 3061.46 714.45 moveto
+3071.09 710.03 lineto
+3060.81 707.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3061.46 714.45 moveto
+3071.09 710.03 lineto
+3060.81 707.48 lineto
+closepath stroke
+grestore
+% Node0x634633134
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3298.67 409.87 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3047.17 413.67 moveto 503 (0x2b7ac60. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3232.67 398.67 moveto 132 (std::__cxx11::list::size\(\)) alignedtext
+grestore
+% Node0x233074656->Node0x634633134
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2724.81 351.49 moveto
+2790.2 358.82 2863.33 366.86 2930.26 373.87 curveto
+2973.82 378.43 3020.3 383.13 3065.04 387.55 curveto
+stroke
+0 0 0 edgecolor
+newpath 3064.87 391.05 moveto
+3075.16 388.55 lineto
+3065.55 384.09 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3064.87 391.05 moveto
+3075.16 388.55 lineto
+3065.55 384.09 lineto
+closepath stroke
+grestore
+% Node0x838174553
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3298.67 337.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3047.67 341.67 moveto 502 (0x2b7af70. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3226.67 326.67 moveto 144 (Graph::DFSUtil\(i, visited\)) alignedtext
+grestore
+% Node0x233074656->Node0x838174553
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2889.13 333.1 moveto
+2901.62 333.25 2914.14 333.39 2926.64 333.54 curveto
+stroke
+0 0 0 edgecolor
+newpath 2926.62 337.04 moveto
+2936.66 333.65 lineto
+2926.7 330.04 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2926.62 337.04 moveto
+2936.66 333.65 lineto
+2926.7 330.04 lineto
+closepath stroke
+grestore
+% Node0x606229088
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3298.67 265.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3046.17 269.67 moveto 505 (0x2b7b398. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3232.67 254.67 moveto 132 (std::__cxx11::list::size\(\)) alignedtext
+grestore
+% Node0x233074656->Node0x606229088
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2771.54 308.87 moveto
+2857.93 301.81 2955.26 293.86 3042.5 286.73 curveto
+stroke
+0 0 0 edgecolor
+newpath 3042.86 290.21 moveto
+3052.54 285.91 lineto
+3042.29 283.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3042.86 290.21 moveto
+3052.54 285.91 lineto
+3042.29 283.23 lineto
+closepath stroke
+grestore
+% Node0x904310151
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3298.67 193.87 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3047.17 197.67 moveto 503 (0x2b7ac60. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3232.67 182.67 moveto 132 (std::__cxx11::list::size\(\)) alignedtext
+grestore
+% Node0x225173863->Node0x904310151
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2771.54 150.87 moveto
+2858.15 157.95 2955.74 165.92 3043.14 173.07 curveto
+stroke
+0 0 0 edgecolor
+newpath 3042.95 176.56 moveto
+3053.2 173.89 lineto
+3043.52 169.59 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3042.95 176.56 moveto
+3053.2 173.89 lineto
+3043.52 169.59 lineto
+closepath stroke
+grestore
+% Node0x253041211
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3298.67 121.87 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3047.67 125.67 moveto 502 (0x2b7af70. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3226.67 110.67 moveto 144 (Graph::DFSUtil\(i, visited\)) alignedtext
+grestore
+% Node0x225173863->Node0x253041211
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2889.13 126.64 moveto
+2901.62 126.49 2914.14 126.35 2926.64 126.2 curveto
+stroke
+0 0 0 edgecolor
+newpath 2926.7 129.7 moveto
+2936.66 126.09 lineto
+2926.62 122.7 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2926.7 129.7 moveto
+2936.66 126.09 lineto
+2926.62 122.7 lineto
+closepath stroke
+grestore
+% Node0x456533239
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3298.67 49.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3046.17 53.67 moveto 505 (0x2b7b398. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3232.67 38.67 moveto 132 (std::__cxx11::list::size\(\)) alignedtext
+grestore
+% Node0x225173863->Node0x456533239
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2778.03 111.23 moveto
+2817.07 106.75 2856.85 101.34 2894.26 94.87 curveto
+2910.52 92.06 2914.01 88.68 2930.26 85.87 curveto
+2964.47 79.95 3000.64 74.93 3036.42 70.68 curveto
+stroke
+0 0 0 edgecolor
+newpath 3036.98 74.14 moveto
+3046.5 69.51 lineto
+3036.16 67.19 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3036.98 74.14 moveto
+3046.5 69.51 lineto
+3036.16 67.19 lineto
+closepath stroke
+grestore
+% Node0x636132379
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4071.47 2704.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3818.97 2708.67 moveto 505 (0x2b79430. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4037.97 2693.67 moveto 67 (OBJ.begin\(\)) alignedtext
+grestore
+% Node0x740729676->Node0x636132379
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3525.73 2653.99 moveto
+3622.68 2663.04 3735.96 2673.62 3834.04 2682.78 curveto
+stroke
+0 0 0 edgecolor
+newpath 3833.8 2686.28 moveto
+3844.08 2683.72 lineto
+3834.45 2679.31 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3833.8 2686.28 moveto
+3844.08 2683.72 lineto
+3834.45 2679.31 lineto
+closepath stroke
+grestore
+% Node0x603865435
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4071.47 2632.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3818.97 2636.67 moveto 505 (0x2b79b78. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4042.97 2621.67 moveto 57 (OBJ.end\(\)) alignedtext
+grestore
+% Node0x740729676->Node0x603865435
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3665.04 2632.87 moveto
+3674.32 2632.87 3683.62 2632.87 3692.91 2632.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 3692.99 2636.37 moveto
+3702.99 2632.87 lineto
+3692.99 2629.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3692.99 2636.37 moveto
+3702.99 2632.87 lineto
+3692.99 2629.37 lineto
+closepath stroke
+grestore
+% Node0x489168343
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+4071.47 2560.87 367.89 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3819.47 2564.67 moveto 504 (0x2b7a348. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3973.47 2549.67 moveto 196 (Graph::DFSUtil\(operator, i, visited\)) alignedtext
+grestore
+% Node0x740729676->Node0x489168343
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3525.73 2611.75 moveto
+3622.68 2602.7 3735.96 2592.12 3834.04 2582.96 curveto
+stroke
+0 0 0 edgecolor
+newpath 3834.45 2586.43 moveto
+3844.08 2582.02 lineto
+3833.8 2579.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3834.45 2586.43 moveto
+3844.08 2582.02 lineto
+3833.8 2579.46 lineto
+closepath stroke
+grestore
+% Node0x481911958
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4071.47 1768.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3818.97 1772.67 moveto 505 (0x2b79430. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4037.97 1757.67 moveto 67 (OBJ.begin\(\)) alignedtext
+grestore
+% Node0x637423676->Node0x481911958
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3525.73 1717.99 moveto
+3622.68 1727.04 3735.96 1737.62 3834.04 1746.78 curveto
+stroke
+0 0 0 edgecolor
+newpath 3833.8 1750.28 moveto
+3844.08 1747.72 lineto
+3834.45 1743.31 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3833.8 1750.28 moveto
+3844.08 1747.72 lineto
+3834.45 1743.31 lineto
+closepath stroke
+grestore
+% Node0x922985972
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4071.47 1696.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3818.97 1700.67 moveto 505 (0x2b79b78. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4042.97 1685.67 moveto 57 (OBJ.end\(\)) alignedtext
+grestore
+% Node0x637423676->Node0x922985972
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3665.04 1696.87 moveto
+3674.32 1696.87 3683.62 1696.87 3692.91 1696.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 3692.99 1700.37 moveto
+3702.99 1696.87 lineto
+3692.99 1693.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3692.99 1700.37 moveto
+3702.99 1696.87 lineto
+3692.99 1693.37 lineto
+closepath stroke
+grestore
+% Node0x629982797
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+4071.47 1624.87 367.89 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3819.47 1628.67 moveto 504 (0x2b7a348. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3973.47 1613.67 moveto 196 (Graph::DFSUtil\(operator, i, visited\)) alignedtext
+grestore
+% Node0x637423676->Node0x629982797
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3525.73 1675.75 moveto
+3622.68 1666.7 3735.96 1656.12 3834.04 1646.96 curveto
+stroke
+0 0 0 edgecolor
+newpath 3834.45 1650.43 moveto
+3844.08 1646.02 lineto
+3833.8 1643.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3834.45 1650.43 moveto
+3844.08 1646.02 lineto
+3833.8 1643.46 lineto
+closepath stroke
+grestore
+% Node0x124159278
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4071.47 832.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3818.97 836.67 moveto 505 (0x2b79430. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4037.97 821.67 moveto 67 (OBJ.begin\(\)) alignedtext
+grestore
+% Node0x753159741->Node0x124159278
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3525.73 781.99 moveto
+3622.68 791.04 3735.96 801.62 3834.04 810.78 curveto
+stroke
+0 0 0 edgecolor
+newpath 3833.8 814.28 moveto
+3844.08 811.72 lineto
+3834.45 807.31 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3833.8 814.28 moveto
+3844.08 811.72 lineto
+3834.45 807.31 lineto
+closepath stroke
+grestore
+% Node0x893864188
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4071.47 760.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3818.97 764.67 moveto 505 (0x2b79b78. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4042.97 749.67 moveto 57 (OBJ.end\(\)) alignedtext
+grestore
+% Node0x753159741->Node0x893864188
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3665.04 760.87 moveto
+3674.32 760.87 3683.62 760.87 3692.91 760.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 3692.99 764.37 moveto
+3702.99 760.87 lineto
+3692.99 757.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3692.99 764.37 moveto
+3702.99 760.87 lineto
+3692.99 757.37 lineto
+closepath stroke
+grestore
+% Node0x690109178
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+4071.47 688.87 367.89 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3819.47 692.67 moveto 504 (0x2b7a348. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3973.47 677.67 moveto 196 (Graph::DFSUtil\(operator, i, visited\)) alignedtext
+grestore
+% Node0x753159741->Node0x690109178
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3525.73 739.75 moveto
+3622.68 730.7 3735.96 720.12 3834.04 710.96 curveto
+stroke
+0 0 0 edgecolor
+newpath 3834.45 714.43 moveto
+3844.08 710.02 lineto
+3833.8 707.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3834.45 714.43 moveto
+3844.08 710.02 lineto
+3833.8 707.46 lineto
+closepath stroke
+grestore
+% Node0x796477196
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4071.47 409.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3818.97 413.67 moveto 505 (0x2b79430. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4037.97 398.67 moveto 67 (OBJ.begin\(\)) alignedtext
+grestore
+% Node0x838174553->Node0x796477196
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3525.73 358.99 moveto
+3622.68 368.04 3735.96 378.62 3834.04 387.78 curveto
+stroke
+0 0 0 edgecolor
+newpath 3833.8 391.28 moveto
+3844.08 388.72 lineto
+3834.45 384.31 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3833.8 391.28 moveto
+3844.08 388.72 lineto
+3834.45 384.31 lineto
+closepath stroke
+grestore
+% Node0x293760119
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4071.47 337.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3818.97 341.67 moveto 505 (0x2b79b78. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4042.97 326.67 moveto 57 (OBJ.end\(\)) alignedtext
+grestore
+% Node0x838174553->Node0x293760119
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3665.04 337.87 moveto
+3674.32 337.87 3683.62 337.87 3692.91 337.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 3692.99 341.37 moveto
+3702.99 337.87 lineto
+3692.99 334.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3692.99 341.37 moveto
+3702.99 337.87 lineto
+3692.99 334.37 lineto
+closepath stroke
+grestore
+% Node0x663134915
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+4071.47 265.87 367.89 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3819.47 269.67 moveto 504 (0x2b7a348. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3973.47 254.67 moveto 196 (Graph::DFSUtil\(operator, i, visited\)) alignedtext
+grestore
+% Node0x838174553->Node0x663134915
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3525.73 316.75 moveto
+3622.68 307.7 3735.96 297.12 3834.04 287.96 curveto
+stroke
+0 0 0 edgecolor
+newpath 3834.45 291.43 moveto
+3844.08 287.02 lineto
+3833.8 284.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3834.45 291.43 moveto
+3844.08 287.02 lineto
+3833.8 284.46 lineto
+closepath stroke
+grestore
+% Node0x399856995
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4071.47 193.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3818.97 197.67 moveto 505 (0x2b79430. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4037.97 182.67 moveto 67 (OBJ.begin\(\)) alignedtext
+grestore
+% Node0x253041211->Node0x399856995
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3525.73 142.99 moveto
+3622.68 152.04 3735.96 162.62 3834.04 171.78 curveto
+stroke
+0 0 0 edgecolor
+newpath 3833.8 175.28 moveto
+3844.08 172.72 lineto
+3834.45 168.31 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3833.8 175.28 moveto
+3844.08 172.72 lineto
+3834.45 168.31 lineto
+closepath stroke
+grestore
+% Node0x858915408
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4071.47 121.87 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3818.97 125.67 moveto 505 (0x2b79b78. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4042.97 110.67 moveto 57 (OBJ.end\(\)) alignedtext
+grestore
+% Node0x253041211->Node0x858915408
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3665.04 121.87 moveto
+3674.32 121.87 3683.62 121.87 3692.91 121.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 3692.99 125.37 moveto
+3702.99 121.87 lineto
+3692.99 118.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3692.99 125.37 moveto
+3702.99 121.87 lineto
+3692.99 118.37 lineto
+closepath stroke
+grestore
+% Node0x593108387
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+4071.47 49.87 367.89 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3819.47 53.67 moveto 504 (0x2b7a348. \(/home/labaccount/11-2-17/mlsa/IG/example/EulerianCycle/EulerianCycle.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3973.47 38.67 moveto 196 (Graph::DFSUtil\(operator, i, visited\)) alignedtext
+grestore
+% Node0x253041211->Node0x593108387
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3525.73 100.75 moveto
+3622.68 91.7 3735.96 81.12 3834.04 71.96 curveto
+stroke
+0 0 0 edgecolor
+newpath 3834.45 75.43 moveto
+3844.08 71.02 lineto
+3833.8 68.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3834.45 75.43 moveto
+3844.08 71.02 lineto
+3833.8 68.46 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 150 150 2400 1846
+end
+restore
+%%EOF

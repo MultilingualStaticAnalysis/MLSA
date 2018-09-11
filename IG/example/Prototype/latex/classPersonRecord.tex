@@ -1,0 +1,110 @@
+\hypertarget{classPersonRecord}{}\section{Person\+Record Class Reference}
+\label{classPersonRecord}\index{Person\+Record@{Person\+Record}}
+
+
+Inheritance diagram for Person\+Record\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{classPersonRecord__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Person\+Record\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{classPersonRecord__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPersonRecord_a124548640e4d2075933e176f86d09e04}{Person\+Record} (string person\+Name, int age)
+\item 
+void \hyperlink{classPersonRecord_a5e4de1bb08b2d52adf778cda7aeb71ee}{print} () override
+\item 
+\hyperlink{classRecord}{Record} $\ast$ \hyperlink{classPersonRecord_a52c028d43ada61bb5b96c162569fbed3}{clone} () override
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classPersonRecord_af9c4e5c960723d9da2a1fd48c54d2404}{m\+\_\+person\+Name}
+\item 
+int \hyperlink{classPersonRecord_a5c3c3ed331d3b814e67922d0f4c0a13f}{m\+\_\+age}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classPersonRecord}{Person\+Record} is the Concrete Prototype 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Person\+Record@{Person\+Record}!Person\+Record@{Person\+Record}}
+\index{Person\+Record@{Person\+Record}!Person\+Record@{Person\+Record}}
+\subsubsection[{\texorpdfstring{Person\+Record(string person\+Name, int age)}{PersonRecord(string personName, int age)}}]{\setlength{\rightskip}{0pt plus 5cm}Person\+Record\+::\+Person\+Record (
+\begin{DoxyParamCaption}
+\item[{string}]{person\+Name, }
+\item[{int}]{age}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPersonRecord_a124548640e4d2075933e176f86d09e04}{}\label{classPersonRecord_a124548640e4d2075933e176f86d09e04}
+
+\begin{DoxyCode}
+75                                              : \hyperlink{classPersonRecord_af9c4e5c960723d9da2a1fd48c54d2404}{m\_personName}(personName), 
+      \hyperlink{classPersonRecord_a5c3c3ed331d3b814e67922d0f4c0a13f}{m\_age}(age)
+76     \{
+77     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Person\+Record@{Person\+Record}!clone@{clone}}
+\index{clone@{clone}!Person\+Record@{Person\+Record}}
+\subsubsection[{\texorpdfstring{clone() override}{clone() override}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Record}$\ast$ Person\+Record\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classPersonRecord_a52c028d43ada61bb5b96c162569fbed3}{}\label{classPersonRecord_a52c028d43ada61bb5b96c162569fbed3}
+
+
+Implements \hyperlink{classRecord_a78dec14d71a48508de135ee06fe48373}{Record}.
+
+
+\begin{DoxyCode}
+87     \{
+88         \textcolor{keywordflow}{return} \textcolor{keyword}{new} \hyperlink{classPersonRecord_a124548640e4d2075933e176f86d09e04}{PersonRecord}(*\textcolor{keyword}{this});
+89     \}
+\end{DoxyCode}
+\index{Person\+Record@{Person\+Record}!print@{print}}
+\index{print@{print}!Person\+Record@{Person\+Record}}
+\subsubsection[{\texorpdfstring{print() override}{print() override}}]{\setlength{\rightskip}{0pt plus 5cm}void Person\+Record\+::print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classPersonRecord_a5e4de1bb08b2d52adf778cda7aeb71ee}{}\label{classPersonRecord_a5e4de1bb08b2d52adf778cda7aeb71ee}
+
+
+Implements \hyperlink{classRecord_ad218b1bea934fb19a23a35b0b987e033}{Record}.
+
+
+\begin{DoxyCode}
+80     \{
+81         cout << \textcolor{stringliteral}{"Person Record"} << endl
+82             << \textcolor{stringliteral}{"Name : "} << \hyperlink{classPersonRecord_af9c4e5c960723d9da2a1fd48c54d2404}{m\_personName} << endl
+83             << \textcolor{stringliteral}{"Age  : "} << \hyperlink{classPersonRecord_a5c3c3ed331d3b814e67922d0f4c0a13f}{m\_age} << endl << endl;
+84     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Person\+Record@{Person\+Record}!m\+\_\+age@{m\+\_\+age}}
+\index{m\+\_\+age@{m\+\_\+age}!Person\+Record@{Person\+Record}}
+\subsubsection[{\texorpdfstring{m\+\_\+age}{m_age}}]{\setlength{\rightskip}{0pt plus 5cm}int Person\+Record\+::m\+\_\+age\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPersonRecord_a5c3c3ed331d3b814e67922d0f4c0a13f}{}\label{classPersonRecord_a5c3c3ed331d3b814e67922d0f4c0a13f}
+\index{Person\+Record@{Person\+Record}!m\+\_\+person\+Name@{m\+\_\+person\+Name}}
+\index{m\+\_\+person\+Name@{m\+\_\+person\+Name}!Person\+Record@{Person\+Record}}
+\subsubsection[{\texorpdfstring{m\+\_\+person\+Name}{m_personName}}]{\setlength{\rightskip}{0pt plus 5cm}string Person\+Record\+::m\+\_\+person\+Name\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPersonRecord_af9c4e5c960723d9da2a1fd48c54d2404}{}\label{classPersonRecord_af9c4e5c960723d9da2a1fd48c54d2404}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Prototype_8cpp}{Prototype.\+cpp}\end{DoxyCompactItemize}

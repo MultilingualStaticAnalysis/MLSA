@@ -1,0 +1,74 @@
+\hypertarget{Adapter_8cpp}{}\section{Adapter.\+cpp File Reference}
+\label{Adapter_8cpp}\index{Adapter.\+cpp@{Adapter.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for Adapter.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{Adapter_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classHindu}{Hindu}
+\item 
+class \hyperlink{classHinduFemale}{Hindu\+Female}
+\item 
+class \hyperlink{classMuslim}{Muslim}
+\item 
+class \hyperlink{classMuslimFemale}{Muslim\+Female}
+\item 
+class \hyperlink{classHinduRitual}{Hindu\+Ritual}
+\item 
+class \hyperlink{classHinduAdapter}{Hindu\+Adapter}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Adapter_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Adapter.\+cpp@{Adapter.\+cpp}!main@{main}}
+\index{main@{main}!Adapter.\+cpp@{Adapter.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Adapter_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Adapter_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+41            \{  \textcolor{comment}{// Client code}
+42     \hyperlink{classHinduFemale}{HinduFemale}* hinduGirl = \textcolor{keyword}{new} \hyperlink{classHinduFemale}{HinduFemale};
+43     \hyperlink{classMuslimFemale}{MuslimFemale}* muslimGirl = \textcolor{keyword}{new} \hyperlink{classMuslimFemale}{MuslimFemale};
+44     \hyperlink{classHinduRitual}{HinduRitual} hinduRitual;
+45 \textcolor{comment}{//  hinduRitual.carryOutRitual (muslimGirl);  // Will not compile of course since the parameter must be of
+       type Hindu*.}
+46     \hyperlink{classHinduAdapter}{HinduAdapter}* adaptedMuslim = \textcolor{keyword}{new} \hyperlink{classHinduAdapter}{HinduAdapter} (muslimGirl);  \textcolor{comment}{// muslimGirl has
+       adapted to become a Hindu!}
+47     
+48     hinduRitual.\hyperlink{classHinduRitual_af83c2fe1551849f9e294f1e19a146ee9}{carryOutRitual} (hinduGirl);
+49     hinduRitual.\hyperlink{classHinduRitual_af83c2fe1551849f9e294f1e19a146ee9}{carryOutRitual} (adaptedMuslim);  \textcolor{comment}{// So now muslimGirl, in the form of
+       adaptedMuslim, participates in the hinduRitual!}
+50                 \textcolor{comment}{// Note that muslimGirl is carrying out her own type of ritual in hinduRitual though.}
+51     
+52     \textcolor{keyword}{delete} adaptedMuslim;  \textcolor{comment}{// adaptedMuslim is not needed anymore}
+53     \textcolor{keyword}{delete} muslimGirl; \textcolor{comment}{// muslimGirl is not needed anymore}
+54         \textcolor{keyword}{delete} hinduGirl; \textcolor{comment}{// hinduGirl is not needed anymore, too}
+55     \textcolor{keywordflow}{return} 0;
+56 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Adapter_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

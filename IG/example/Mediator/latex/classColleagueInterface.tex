@@ -1,0 +1,103 @@
+\hypertarget{classColleagueInterface}{}\section{Colleague\+Interface Class Reference}
+\label{classColleagueInterface}\index{Colleague\+Interface@{Colleague\+Interface}}
+
+
+Inheritance diagram for Colleague\+Interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classColleagueInterface__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classColleagueInterface_a1615c154b4c9f05d7c35793acc170696}{Colleague\+Interface} (const std\+::string \&new\+Name)
+\item 
+std\+::string \hyperlink{classColleagueInterface_acbc50603b8b5f9e94f36bb94a53fd651}{get\+Name} () const 
+\item 
+virtual void \hyperlink{classColleagueInterface_a1b86fdff9280809073590a466280fd06}{send\+Message} (const \hyperlink{classMediatorInterface}{Mediator\+Interface} \&, const std\+::string \&) const =0
+\item 
+virtual void \hyperlink{classColleagueInterface_ad54da6a768fff80244b2f81af95cdbc1}{receive\+Message} (const \hyperlink{classColleagueInterface}{Colleague\+Interface} $\ast$, const std\+::string \&) const =0
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classColleagueInterface_aa5a767ee2b42271eadf388956525831b}{name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Colleague\+Interface@{Colleague\+Interface}!Colleague\+Interface@{Colleague\+Interface}}
+\index{Colleague\+Interface@{Colleague\+Interface}!Colleague\+Interface@{Colleague\+Interface}}
+\subsubsection[{\texorpdfstring{Colleague\+Interface(const std\+::string \&new\+Name)}{ColleagueInterface(const std::string &newName)}}]{\setlength{\rightskip}{0pt plus 5cm}Colleague\+Interface\+::\+Colleague\+Interface (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{new\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classColleagueInterface_a1615c154b4c9f05d7c35793acc170696}{}\label{classColleagueInterface_a1615c154b4c9f05d7c35793acc170696}
+
+\begin{DoxyCode}
+10 : \hyperlink{classColleagueInterface_aa5a767ee2b42271eadf388956525831b}{name} (newName) \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Colleague\+Interface@{Colleague\+Interface}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Colleague\+Interface@{Colleague\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Name() const }{getName() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Colleague\+Interface\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classColleagueInterface_acbc50603b8b5f9e94f36bb94a53fd651}{}\label{classColleagueInterface_acbc50603b8b5f9e94f36bb94a53fd651}
+
+\begin{DoxyCode}
+11 \{\textcolor{keywordflow}{return} \hyperlink{classColleagueInterface_aa5a767ee2b42271eadf388956525831b}{name};\}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{classColleagueInterface_acbc50603b8b5f9e94f36bb94a53fd651_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Colleague\+Interface@{Colleague\+Interface}!receive\+Message@{receive\+Message}}
+\index{receive\+Message@{receive\+Message}!Colleague\+Interface@{Colleague\+Interface}}
+\subsubsection[{\texorpdfstring{receive\+Message(const Colleague\+Interface $\ast$, const std\+::string \&) const =0}{receiveMessage(const ColleagueInterface *, const std::string &) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Colleague\+Interface\+::receive\+Message (
+\begin{DoxyParamCaption}
+\item[{const {\bf Colleague\+Interface} $\ast$}]{, }
+\item[{const std\+::string \&}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classColleagueInterface_ad54da6a768fff80244b2f81af95cdbc1}{}\label{classColleagueInterface_ad54da6a768fff80244b2f81af95cdbc1}
+
+
+Implemented in \hyperlink{classColleague_ac1834eb0fe9749f84294ef342b8370dc}{Colleague}.
+
+\index{Colleague\+Interface@{Colleague\+Interface}!send\+Message@{send\+Message}}
+\index{send\+Message@{send\+Message}!Colleague\+Interface@{Colleague\+Interface}}
+\subsubsection[{\texorpdfstring{send\+Message(const Mediator\+Interface \&, const std\+::string \&) const =0}{sendMessage(const MediatorInterface &, const std::string &) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Colleague\+Interface\+::send\+Message (
+\begin{DoxyParamCaption}
+\item[{const {\bf Mediator\+Interface} \&}]{, }
+\item[{const std\+::string \&}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classColleagueInterface_a1b86fdff9280809073590a466280fd06}{}\label{classColleagueInterface_a1b86fdff9280809073590a466280fd06}
+
+
+Implemented in \hyperlink{classColleague_afb6563e15f8ea7f8931d5c51ad15cef6}{Colleague}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Colleague\+Interface@{Colleague\+Interface}!name@{name}}
+\index{name@{name}!Colleague\+Interface@{Colleague\+Interface}}
+\subsubsection[{\texorpdfstring{name}{name}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Colleague\+Interface\+::name\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classColleagueInterface_aa5a767ee2b42271eadf388956525831b}{}\label{classColleagueInterface_aa5a767ee2b42271eadf388956525831b}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Mediator_8cpp}{Mediator.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,196 @@
+\hypertarget{classObject}{}\section{Object Class Reference}
+\label{classObject}\index{Object@{Object}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classObject_ae6203b4273493f4aa9177445264d3272}{Object} (int new\+Value)
+\item 
+void \hyperlink{classObject_a7e43ddd2f4647f67ba9d6f18dd24bf77}{double\+Value} ()
+\item 
+void \hyperlink{classObject_a406add870a5642dc0d931aec975288f9}{increase\+By\+One} ()
+\item 
+int \hyperlink{classObject_afb7a055f066071c9abae831e9e9485e7}{get\+Value} () const 
+\item 
+std\+::string \hyperlink{classObject_a6390f4fca865dc59e3442e9f0fb6bd5e}{get\+Name} () const 
+\item 
+double \hyperlink{classObject_a20acb478a579d175f3e6ee6f4354577b}{get\+Decimal} () const 
+\item 
+\hyperlink{classMemento}{Memento} $\ast$ \hyperlink{classObject_a169528dfd6ff33b21b038da8021cd748}{create\+Memento} () const 
+\item 
+void \hyperlink{classObject_a19d41bf5b99d4a5880aaab5640d8787a}{reinstate\+Memento} (\hyperlink{classMemento}{Memento} $\ast$mem)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classObject_aff40b305580fdacdf3e2c63dfc181152}{value}
+\item 
+std\+::string \hyperlink{classObject_a24457e0a387492c80594aec7681a2277}{name}
+\item 
+double \hyperlink{classObject_abee4fc3561439ea77b960f839f5c8616}{decimal}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Object@{Object}!Object@{Object}}
+\index{Object@{Object}!Object@{Object}}
+\subsubsection[{\texorpdfstring{Object(int new\+Value)}{Object(int newValue)}}]{\setlength{\rightskip}{0pt plus 5cm}Object\+::\+Object (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject_ae6203b4273493f4aa9177445264d3272}{}\label{classObject_ae6203b4273493f4aa9177445264d3272}
+
+\begin{DoxyCode}
+23 : \hyperlink{classObject_aff40b305580fdacdf3e2c63dfc181152}{value} (newValue), \hyperlink{classObject_a24457e0a387492c80594aec7681a2277}{name} (\hyperlink{Memento_8cpp_a549853b5d8df8cf60e8d275a4df73b54}{NAME} + \hyperlink{Memento_8cpp_a90503872144928016292aaa273e07678}{toString} (\hyperlink{classObject_aff40b305580fdacdf3e2c63dfc181152}{value})), 
+      \hyperlink{classObject_abee4fc3561439ea77b960f839f5c8616}{decimal} ((\textcolor{keywordtype}{float})\hyperlink{classObject_aff40b305580fdacdf3e2c63dfc181152}{value} / 100) \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Object@{Object}!create\+Memento@{create\+Memento}}
+\index{create\+Memento@{create\+Memento}!Object@{Object}}
+\subsubsection[{\texorpdfstring{create\+Memento() const }{createMemento() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Memento} $\ast$ Object\+::create\+Memento (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classObject_a169528dfd6ff33b21b038da8021cd748}{}\label{classObject_a169528dfd6ff33b21b038da8021cd748}
+
+\begin{DoxyCode}
+41                                      \{
+42     \textcolor{keywordflow}{return} \textcolor{keyword}{new} \hyperlink{classMemento}{Memento} (*\textcolor{keyword}{this});
+43 \}
+\end{DoxyCode}
+\index{Object@{Object}!double\+Value@{double\+Value}}
+\index{double\+Value@{double\+Value}!Object@{Object}}
+\subsubsection[{\texorpdfstring{double\+Value()}{doubleValue()}}]{\setlength{\rightskip}{0pt plus 5cm}void Object\+::double\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject_a7e43ddd2f4647f67ba9d6f18dd24bf77}{}\label{classObject_a7e43ddd2f4647f67ba9d6f18dd24bf77}
+
+\begin{DoxyCode}
+24 \{\hyperlink{classObject_aff40b305580fdacdf3e2c63dfc181152}{value} = 2 * \hyperlink{classObject_aff40b305580fdacdf3e2c63dfc181152}{value};  \hyperlink{classObject_a24457e0a387492c80594aec7681a2277}{name} = \hyperlink{Memento_8cpp_a549853b5d8df8cf60e8d275a4df73b54}{NAME} + \hyperlink{Memento_8cpp_a90503872144928016292aaa273e07678}{toString} (\hyperlink{classObject_aff40b305580fdacdf3e2c63dfc181152}{value});  
+      \hyperlink{classObject_abee4fc3561439ea77b960f839f5c8616}{decimal} = (float)\hyperlink{classObject_aff40b305580fdacdf3e2c63dfc181152}{value} / 100;\}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{classObject_a7e43ddd2f4647f67ba9d6f18dd24bf77_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Object@{Object}!get\+Decimal@{get\+Decimal}}
+\index{get\+Decimal@{get\+Decimal}!Object@{Object}}
+\subsubsection[{\texorpdfstring{get\+Decimal() const }{getDecimal() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Object\+::get\+Decimal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject_a20acb478a579d175f3e6ee6f4354577b}{}\label{classObject_a20acb478a579d175f3e6ee6f4354577b}
+
+\begin{DoxyCode}
+28 \{\textcolor{keywordflow}{return} \hyperlink{classObject_abee4fc3561439ea77b960f839f5c8616}{decimal};\}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classObject_a20acb478a579d175f3e6ee6f4354577b_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Object@{Object}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Object@{Object}}
+\subsubsection[{\texorpdfstring{get\+Name() const }{getName() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Object\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject_a6390f4fca865dc59e3442e9f0fb6bd5e}{}\label{classObject_a6390f4fca865dc59e3442e9f0fb6bd5e}
+
+\begin{DoxyCode}
+27 \{\textcolor{keywordflow}{return} \hyperlink{classObject_a24457e0a387492c80594aec7681a2277}{name};\}
+\end{DoxyCode}
+\index{Object@{Object}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!Object@{Object}}
+\subsubsection[{\texorpdfstring{get\+Value() const }{getValue() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Object\+::get\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject_afb7a055f066071c9abae831e9e9485e7}{}\label{classObject_afb7a055f066071c9abae831e9e9485e7}
+
+\begin{DoxyCode}
+26 \{\textcolor{keywordflow}{return} \hyperlink{classObject_aff40b305580fdacdf3e2c63dfc181152}{value};\}
+\end{DoxyCode}
+\index{Object@{Object}!increase\+By\+One@{increase\+By\+One}}
+\index{increase\+By\+One@{increase\+By\+One}!Object@{Object}}
+\subsubsection[{\texorpdfstring{increase\+By\+One()}{increaseByOne()}}]{\setlength{\rightskip}{0pt plus 5cm}void Object\+::increase\+By\+One (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject_a406add870a5642dc0d931aec975288f9}{}\label{classObject_a406add870a5642dc0d931aec975288f9}
+
+\begin{DoxyCode}
+25 \{\hyperlink{classObject_aff40b305580fdacdf3e2c63dfc181152}{value}++;  \hyperlink{classObject_a24457e0a387492c80594aec7681a2277}{name} = \hyperlink{Memento_8cpp_a549853b5d8df8cf60e8d275a4df73b54}{NAME} + \hyperlink{Memento_8cpp_a90503872144928016292aaa273e07678}{toString} (\hyperlink{classObject_aff40b305580fdacdf3e2c63dfc181152}{value});  \hyperlink{classObject_abee4fc3561439ea77b960f839f5c8616}{decimal} = (float)
+      \hyperlink{classObject_aff40b305580fdacdf3e2c63dfc181152}{value} / 100;\}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{classObject_a406add870a5642dc0d931aec975288f9_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Object@{Object}!reinstate\+Memento@{reinstate\+Memento}}
+\index{reinstate\+Memento@{reinstate\+Memento}!Object@{Object}}
+\subsubsection[{\texorpdfstring{reinstate\+Memento(\+Memento $\ast$mem)}{reinstateMemento(Memento *mem)}}]{\setlength{\rightskip}{0pt plus 5cm}void Object\+::reinstate\+Memento (
+\begin{DoxyParamCaption}
+\item[{{\bf Memento} $\ast$}]{mem}
+\end{DoxyParamCaption}
+)}\hypertarget{classObject_a19d41bf5b99d4a5880aaab5640d8787a}{}\label{classObject_a19d41bf5b99d4a5880aaab5640d8787a}
+
+\begin{DoxyCode}
+45                                            \{
+46     *\textcolor{keyword}{this} = mem->\hyperlink{classMemento_a13c0885085d6010835ebcfde5808f4af}{snapshot}();
+47 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classObject_a19d41bf5b99d4a5880aaab5640d8787a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Object@{Object}!decimal@{decimal}}
+\index{decimal@{decimal}!Object@{Object}}
+\subsubsection[{\texorpdfstring{decimal}{decimal}}]{\setlength{\rightskip}{0pt plus 5cm}double Object\+::decimal\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classObject_abee4fc3561439ea77b960f839f5c8616}{}\label{classObject_abee4fc3561439ea77b960f839f5c8616}
+\index{Object@{Object}!name@{name}}
+\index{name@{name}!Object@{Object}}
+\subsubsection[{\texorpdfstring{name}{name}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Object\+::name\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classObject_a24457e0a387492c80594aec7681a2277}{}\label{classObject_a24457e0a387492c80594aec7681a2277}
+\index{Object@{Object}!value@{value}}
+\index{value@{value}!Object@{Object}}
+\subsubsection[{\texorpdfstring{value}{value}}]{\setlength{\rightskip}{0pt plus 5cm}int Object\+::value\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classObject_aff40b305580fdacdf3e2c63dfc181152}{}\label{classObject_aff40b305580fdacdf3e2c63dfc181152}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Memento_8cpp}{Memento.\+cpp}\end{DoxyCompactItemize}

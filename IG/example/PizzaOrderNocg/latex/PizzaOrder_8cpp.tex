@@ -1,0 +1,85 @@
+\hypertarget{PizzaOrder_8cpp}{}\section{Pizza\+Order.\+cpp File Reference}
+\label{PizzaOrder_8cpp}\index{Pizza\+Order.\+cpp@{Pizza\+Order.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+Include dependency graph for Pizza\+Order.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{PizzaOrder_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{PizzaOrder_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Pizza\+Order.\+cpp@{Pizza\+Order.\+cpp}!main@{main}}
+\index{main@{main}!Pizza\+Order.\+cpp@{Pizza\+Order.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{PizzaOrder_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{PizzaOrder_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+6 \{
+7    cout.setf(ios::fixed); \textcolor{comment}{// These three sets of lines tell the computer to                                
+                                                                                                       }
+8    cout.setf(ios::showpoint); \textcolor{comment}{// output all double numbers so that they                                    
+                                                                                                       }
+9    cout.precision(2); \textcolor{comment}{// always have 2 decimal points, no more or less                                     
+                                                                                                       }
+10    \textcolor{keywordtype}{string} name;
+11    \textcolor{keywordtype}{int} twelve\_inch, fourteen\_inch;
+12    \textcolor{keywordtype}{double} total\_amount, amount\_recieved, change;
+13 
+14    cout << \textcolor{stringliteral}{"Welcome to Little Italy Pizza\(\backslash\)n"};
+15    cout << \textcolor{stringliteral}{"Please enter the customer's FIRST name: "};
+16    cin >> name;
+17    cout << \textcolor{stringliteral}{"How many 12 inch pizzas are ordered? "};
+18    cin >> twelve\_inch;
+19    cout << \textcolor{stringliteral}{"How many 14 inch pizzas are ordered? "};
+20    cin >> fourteen\_inch;
+21 
+22    total\_amount = (twelve\_inch * 12.39) + (fourteen\_inch * 15.98);
+23    \textcolor{comment}{/* To find the total amount, multiply the amount of 12 inch pizzas and the        amount of 14 inch
+       pizzas by how much they cost, and then add the two                                                   }
+24 \textcolor{comment}{      numbers together */}
+25    cout << \textcolor{stringliteral}{"Total amount due is: $"} << total\_amount << endl;
+26    cout << \textcolor{stringliteral}{"The amount recieved from the customer: $"};
+27    cin >> amount\_recieved;
+28    change = amount\_recieved - total\_amount;
+29 
+30    cout << endl;
+31    cout << \textcolor{stringliteral}{"------------------------------\(\backslash\)n"};
+32    cout << \textcolor{stringliteral}{"Receipt by Little Italy Pizza\(\backslash\)n"};
+33    cout << \textcolor{stringliteral}{"------------------------------\(\backslash\)n"};
+34    cout << \textcolor{stringliteral}{"Customer's First Name: "} << name << endl;
+35    cout << \textcolor{stringliteral}{"------------------------------\(\backslash\)n"};
+36    cout << \textcolor{stringliteral}{"Pizza    Num    Price\(\backslash\)n"};
+37    cout << \textcolor{stringliteral}{"12-in    "} << twelve\_inch << \textcolor{stringliteral}{"      $"} << twelve\_inch*12.39;
+38    \textcolor{comment}{// The number of 12 inch pizzas multiplied by the amount one pizza costs                                
+                                                                                                       }
+39    \textcolor{comment}{// displays the total cost of 12 inch pizzas ordered                                                    
+                                                                                                       }
+40    cout << endl;
+41    cout << \textcolor{stringliteral}{"14-in    "} << fourteen\_inch << \textcolor{stringliteral}{"      $"} << fourteen\_inch*15.98;
+42    \textcolor{comment}{// Finding the total cost of 14 inch pizzas is similar to finding the total                             
+                                                                                                       }
+43    \textcolor{comment}{// cost for 12 inch pizzas                                                                              
+                                                                                                       }
+44    cout << endl;
+45    cout << \textcolor{stringliteral}{"------------------------------\(\backslash\)n"};
+46    cout << \textcolor{stringliteral}{"Total:          $"} << total\_amount << endl;
+47    cout << \textcolor{stringliteral}{"Recieved:       $"} << amount\_recieved << endl;
+48    cout << \textcolor{stringliteral}{"Change:         $"} << change << endl;
+49    cout << \textcolor{stringliteral}{"------------------------------\(\backslash\)n"};
+50 
+51    \textcolor{keywordflow}{return} 0;
+52 \}
+\end{DoxyCode}

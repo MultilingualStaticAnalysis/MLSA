@@ -1,0 +1,331 @@
+\hypertarget{classRandomizedBinarySearchTree}{}\section{Randomized\+Binary\+Search\+Tree Class Reference}
+\label{classRandomizedBinarySearchTree}\index{Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}}
+
+
+Collaboration diagram for Randomized\+Binary\+Search\+Tree\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classRandomizedBinarySearchTree__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRandomizedBinarySearchTree_a3f7c95afaa3f2b411e14cb1d9cf04ff1}{Randomized\+Binary\+Search\+Tree} ()
+\item 
+bool \hyperlink{classRandomizedBinarySearchTree_af35c367556914452ceba60569e95e5df}{is\+Empty} ()
+\item 
+void \hyperlink{classRandomizedBinarySearchTree_ae84229d93afdce90f4f0141a04c9736c}{make\+Empty} ()
+\item 
+void \hyperlink{classRandomizedBinarySearchTree_ae5d6d97456f3d4bca2b0f4b4e184dba3}{insert} (int X)
+\item 
+\hyperlink{classRBSTNode}{R\+B\+S\+T\+Node} $\ast$ \hyperlink{classRandomizedBinarySearchTree_a0091449480c6b0a5e60ac73875e8ea01}{insert} (int X, \hyperlink{classRBSTNode}{R\+B\+S\+T\+Node} $\ast$T)
+\item 
+int \hyperlink{classRandomizedBinarySearchTree_a6e7b0de6c0f6816b9785988e34c75dcb}{count\+Nodes} ()
+\item 
+int \hyperlink{classRandomizedBinarySearchTree_ab50c995c0178f9cb2827840cde6a11f7}{count\+Nodes} (\hyperlink{classRBSTNode}{R\+B\+S\+T\+Node} $\ast$r)
+\item 
+bool \hyperlink{classRandomizedBinarySearchTree_a3113d572e9cca081f0294fd47a994922}{search} (int val)
+\item 
+bool \hyperlink{classRandomizedBinarySearchTree_a5d160c8d5176ed873ed3cb83f678983c}{search} (\hyperlink{classRBSTNode}{R\+B\+S\+T\+Node} $\ast$r, int val)
+\item 
+void \hyperlink{classRandomizedBinarySearchTree_a2581cdb7ec61a153663a44a899f7d9ec}{inorder} ()
+\item 
+void \hyperlink{classRandomizedBinarySearchTree_a3fad2430835a15aa1b4f564ca066a4c3}{inorder} (\hyperlink{classRBSTNode}{R\+B\+S\+T\+Node} $\ast$r)
+\item 
+void \hyperlink{classRandomizedBinarySearchTree_a019f49873fd8e266eb41edc0af956b38}{preorder} ()
+\item 
+void \hyperlink{classRandomizedBinarySearchTree_a6511f06f95a294d00004a8e9fa5c5f29}{preorder} (\hyperlink{classRBSTNode}{R\+B\+S\+T\+Node} $\ast$r)
+\item 
+void \hyperlink{classRandomizedBinarySearchTree_aad0f82161d579cdb36990bbc72209be5}{postorder} ()
+\item 
+void \hyperlink{classRandomizedBinarySearchTree_a54f4ac99867ea46280b480c554e42b9b}{postorder} (\hyperlink{classRBSTNode}{R\+B\+S\+T\+Node} $\ast$r)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRBSTNode}{R\+B\+S\+T\+Node} $\ast$ \hyperlink{classRandomizedBinarySearchTree_a3040b63f8697ac073513f5e90ddc9e47}{root}
+\item 
+\hyperlink{classRBSTNode}{R\+B\+S\+T\+Node} $\ast$ \hyperlink{classRandomizedBinarySearchTree_a40d1d6c2aa7c91e83570f92a47836fab}{nil}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}!Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}}
+\index{Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}!Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{Randomized\+Binary\+Search\+Tree()}{RandomizedBinarySearchTree()}}]{\setlength{\rightskip}{0pt plus 5cm}Randomized\+Binary\+Search\+Tree\+::\+Randomized\+Binary\+Search\+Tree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classRandomizedBinarySearchTree_a3f7c95afaa3f2b411e14cb1d9cf04ff1}{}\label{classRandomizedBinarySearchTree_a3f7c95afaa3f2b411e14cb1d9cf04ff1}
+
+\begin{DoxyCode}
+55          \{
+56              \hyperlink{classRandomizedBinarySearchTree_a3040b63f8697ac073513f5e90ddc9e47}{root} = \hyperlink{classRandomizedBinarySearchTree_a40d1d6c2aa7c91e83570f92a47836fab}{nil};
+57          \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}!count\+Nodes@{count\+Nodes}}
+\index{count\+Nodes@{count\+Nodes}!Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{count\+Nodes()}{countNodes()}}]{\setlength{\rightskip}{0pt plus 5cm}int Randomized\+Binary\+Search\+Tree\+::count\+Nodes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classRandomizedBinarySearchTree_a6e7b0de6c0f6816b9785988e34c75dcb}{}\label{classRandomizedBinarySearchTree_a6e7b0de6c0f6816b9785988e34c75dcb}
+
+\begin{DoxyCode}
+106          \{
+107              \textcolor{keywordflow}{return} \hyperlink{classRandomizedBinarySearchTree_a6e7b0de6c0f6816b9785988e34c75dcb}{countNodes}(\hyperlink{classRandomizedBinarySearchTree_a3040b63f8697ac073513f5e90ddc9e47}{root});
+108          \}
+\end{DoxyCode}
+\index{Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}!count\+Nodes@{count\+Nodes}}
+\index{count\+Nodes@{count\+Nodes}!Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{count\+Nodes(\+R\+B\+S\+T\+Node $\ast$r)}{countNodes(RBSTNode *r)}}]{\setlength{\rightskip}{0pt plus 5cm}int Randomized\+Binary\+Search\+Tree\+::count\+Nodes (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+B\+S\+T\+Node} $\ast$}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classRandomizedBinarySearchTree_ab50c995c0178f9cb2827840cde6a11f7}{}\label{classRandomizedBinarySearchTree_ab50c995c0178f9cb2827840cde6a11f7}
+
+\begin{DoxyCode}
+111          \{
+112              \textcolor{keywordflow}{if} (r == \hyperlink{classRandomizedBinarySearchTree_a40d1d6c2aa7c91e83570f92a47836fab}{nil})
+113                  \textcolor{keywordflow}{return} 0;
+114              \textcolor{keywordflow}{else}
+115              \{
+116                  \textcolor{keywordtype}{int} l = 1;
+117                  l += \hyperlink{classRandomizedBinarySearchTree_a6e7b0de6c0f6816b9785988e34c75dcb}{countNodes}(r->\hyperlink{classRBSTNode_aaed05c0dc1229e3ac9bfd48ca1f34c84}{left});
+118                  l += \hyperlink{classRandomizedBinarySearchTree_a6e7b0de6c0f6816b9785988e34c75dcb}{countNodes}(r->\hyperlink{classRBSTNode_a086e0e15cf51b06199e205eaeee17086}{right});
+119                  \textcolor{keywordflow}{return} l;
+120              \}
+121          \}
+\end{DoxyCode}
+\index{Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}!inorder@{inorder}}
+\index{inorder@{inorder}!Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{inorder()}{inorder()}}]{\setlength{\rightskip}{0pt plus 5cm}void Randomized\+Binary\+Search\+Tree\+::inorder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classRandomizedBinarySearchTree_a2581cdb7ec61a153663a44a899f7d9ec}{}\label{classRandomizedBinarySearchTree_a2581cdb7ec61a153663a44a899f7d9ec}
+
+\begin{DoxyCode}
+153          \{
+154              \hyperlink{classRandomizedBinarySearchTree_a2581cdb7ec61a153663a44a899f7d9ec}{inorder}(\hyperlink{classRandomizedBinarySearchTree_a3040b63f8697ac073513f5e90ddc9e47}{root});
+155          \}
+\end{DoxyCode}
+\index{Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}!inorder@{inorder}}
+\index{inorder@{inorder}!Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{inorder(\+R\+B\+S\+T\+Node $\ast$r)}{inorder(RBSTNode *r)}}]{\setlength{\rightskip}{0pt plus 5cm}void Randomized\+Binary\+Search\+Tree\+::inorder (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+B\+S\+T\+Node} $\ast$}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classRandomizedBinarySearchTree_a3fad2430835a15aa1b4f564ca066a4c3}{}\label{classRandomizedBinarySearchTree_a3fad2430835a15aa1b4f564ca066a4c3}
+
+\begin{DoxyCode}
+158          \{
+159              \textcolor{keywordflow}{if} (r != \hyperlink{classRandomizedBinarySearchTree_a40d1d6c2aa7c91e83570f92a47836fab}{nil})
+160              \{
+161                  \hyperlink{classRandomizedBinarySearchTree_a2581cdb7ec61a153663a44a899f7d9ec}{inorder}(r->\hyperlink{classRBSTNode_aaed05c0dc1229e3ac9bfd48ca1f34c84}{left});
+162                  cout<<r->\hyperlink{classRBSTNode_afe12defb7cc83803252973f1cd797464}{element} <<\textcolor{stringliteral}{"  "};
+163                  \hyperlink{classRandomizedBinarySearchTree_a2581cdb7ec61a153663a44a899f7d9ec}{inorder}(r->\hyperlink{classRBSTNode_a086e0e15cf51b06199e205eaeee17086}{right});
+164              \}
+165          \}
+\end{DoxyCode}
+\index{Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}!insert@{insert}}
+\index{insert@{insert}!Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{insert(int X)}{insert(int X)}}]{\setlength{\rightskip}{0pt plus 5cm}void Randomized\+Binary\+Search\+Tree\+::insert (
+\begin{DoxyParamCaption}
+\item[{int}]{X}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classRandomizedBinarySearchTree_ae5d6d97456f3d4bca2b0f4b4e184dba3}{}\label{classRandomizedBinarySearchTree_ae5d6d97456f3d4bca2b0f4b4e184dba3}
+
+\begin{DoxyCode}
+71          \{
+72              \hyperlink{classRandomizedBinarySearchTree_a3040b63f8697ac073513f5e90ddc9e47}{root} = \hyperlink{classRandomizedBinarySearchTree_ae5d6d97456f3d4bca2b0f4b4e184dba3}{insert}(X, \hyperlink{classRandomizedBinarySearchTree_a3040b63f8697ac073513f5e90ddc9e47}{root});
+73          \}
+\end{DoxyCode}
+\index{Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}!insert@{insert}}
+\index{insert@{insert}!Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{insert(int X, R\+B\+S\+T\+Node $\ast$\+T)}{insert(int X, RBSTNode *T)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+B\+S\+T\+Node}$\ast$ Randomized\+Binary\+Search\+Tree\+::insert (
+\begin{DoxyParamCaption}
+\item[{int}]{X, }
+\item[{{\bf R\+B\+S\+T\+Node} $\ast$}]{T}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classRandomizedBinarySearchTree_a0091449480c6b0a5e60ac73875e8ea01}{}\label{classRandomizedBinarySearchTree_a0091449480c6b0a5e60ac73875e8ea01}
+
+\begin{DoxyCode}
+75          \{
+76              \textcolor{keywordflow}{if} (T == \hyperlink{classRandomizedBinarySearchTree_a40d1d6c2aa7c91e83570f92a47836fab}{nil})
+77                  \textcolor{keywordflow}{return} \textcolor{keyword}{new} \hyperlink{classRBSTNode}{RBSTNode}(X, \hyperlink{classRandomizedBinarySearchTree_a40d1d6c2aa7c91e83570f92a47836fab}{nil}, \hyperlink{classRandomizedBinarySearchTree_a40d1d6c2aa7c91e83570f92a47836fab}{nil});
+78              \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (X < T->element)
+79              \{
+80                  T->\hyperlink{classRBSTNode_aaed05c0dc1229e3ac9bfd48ca1f34c84}{left} = \hyperlink{classRandomizedBinarySearchTree_ae5d6d97456f3d4bca2b0f4b4e184dba3}{insert}(X, T->\hyperlink{classRBSTNode_aaed05c0dc1229e3ac9bfd48ca1f34c84}{left});
+81                  \textcolor{keywordflow}{if} (T->\hyperlink{classRBSTNode_aaed05c0dc1229e3ac9bfd48ca1f34c84}{left}->\hyperlink{classRBSTNode_a834716f43484069f09fb8fabf577b64e}{priority} < T->\hyperlink{classRBSTNode_a834716f43484069f09fb8fabf577b64e}{priority})
+82                  \{
+83                       \hyperlink{classRBSTNode}{RBSTNode} *L = T->\hyperlink{classRBSTNode_aaed05c0dc1229e3ac9bfd48ca1f34c84}{left};
+84                       T->\hyperlink{classRBSTNode_aaed05c0dc1229e3ac9bfd48ca1f34c84}{left} = L->\hyperlink{classRBSTNode_a086e0e15cf51b06199e205eaeee17086}{right};
+85                       L->\hyperlink{classRBSTNode_a086e0e15cf51b06199e205eaeee17086}{right} = T;
+86                       \textcolor{keywordflow}{return} L;
+87                   \}    
+88              \}
+89              \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (X > T->\hyperlink{classRBSTNode_afe12defb7cc83803252973f1cd797464}{element})
+90              \{
+91                  T->\hyperlink{classRBSTNode_a086e0e15cf51b06199e205eaeee17086}{right} = \hyperlink{classRandomizedBinarySearchTree_ae5d6d97456f3d4bca2b0f4b4e184dba3}{insert}(X, T->\hyperlink{classRBSTNode_a086e0e15cf51b06199e205eaeee17086}{right});
+92                  \textcolor{keywordflow}{if} (T->\hyperlink{classRBSTNode_a086e0e15cf51b06199e205eaeee17086}{right}->\hyperlink{classRBSTNode_a834716f43484069f09fb8fabf577b64e}{priority} < T->\hyperlink{classRBSTNode_a834716f43484069f09fb8fabf577b64e}{priority})
+93                  \{
+94                      \hyperlink{classRBSTNode}{RBSTNode} *R = T->\hyperlink{classRBSTNode_a086e0e15cf51b06199e205eaeee17086}{right};
+95                      T->\hyperlink{classRBSTNode_a086e0e15cf51b06199e205eaeee17086}{right} = R->\hyperlink{classRBSTNode_aaed05c0dc1229e3ac9bfd48ca1f34c84}{left};
+96                      R->\hyperlink{classRBSTNode_aaed05c0dc1229e3ac9bfd48ca1f34c84}{left} = T;
+97                      \textcolor{keywordflow}{return} R;
+98                  \}
+99              \}
+100              \textcolor{keywordflow}{return} T;
+101          \}
+\end{DoxyCode}
+\index{Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{is\+Empty()}{isEmpty()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Randomized\+Binary\+Search\+Tree\+::is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classRandomizedBinarySearchTree_af35c367556914452ceba60569e95e5df}{}\label{classRandomizedBinarySearchTree_af35c367556914452ceba60569e95e5df}
+
+\begin{DoxyCode}
+60          \{
+61              \textcolor{keywordflow}{return} \hyperlink{classRandomizedBinarySearchTree_a3040b63f8697ac073513f5e90ddc9e47}{root} == \hyperlink{classRandomizedBinarySearchTree_a40d1d6c2aa7c91e83570f92a47836fab}{nil};
+62          \}
+\end{DoxyCode}
+\index{Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}!make\+Empty@{make\+Empty}}
+\index{make\+Empty@{make\+Empty}!Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{make\+Empty()}{makeEmpty()}}]{\setlength{\rightskip}{0pt plus 5cm}void Randomized\+Binary\+Search\+Tree\+::make\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classRandomizedBinarySearchTree_ae84229d93afdce90f4f0141a04c9736c}{}\label{classRandomizedBinarySearchTree_ae84229d93afdce90f4f0141a04c9736c}
+
+\begin{DoxyCode}
+65          \{
+66              \hyperlink{classRandomizedBinarySearchTree_a3040b63f8697ac073513f5e90ddc9e47}{root} = \hyperlink{classRandomizedBinarySearchTree_a40d1d6c2aa7c91e83570f92a47836fab}{nil};
+67          \}
+\end{DoxyCode}
+\index{Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}!postorder@{postorder}}
+\index{postorder@{postorder}!Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{postorder()}{postorder()}}]{\setlength{\rightskip}{0pt plus 5cm}void Randomized\+Binary\+Search\+Tree\+::postorder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classRandomizedBinarySearchTree_aad0f82161d579cdb36990bbc72209be5}{}\label{classRandomizedBinarySearchTree_aad0f82161d579cdb36990bbc72209be5}
+
+\begin{DoxyCode}
+187          \{
+188              \hyperlink{classRandomizedBinarySearchTree_aad0f82161d579cdb36990bbc72209be5}{postorder}(\hyperlink{classRandomizedBinarySearchTree_a3040b63f8697ac073513f5e90ddc9e47}{root});
+189          \}
+\end{DoxyCode}
+\index{Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}!postorder@{postorder}}
+\index{postorder@{postorder}!Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{postorder(\+R\+B\+S\+T\+Node $\ast$r)}{postorder(RBSTNode *r)}}]{\setlength{\rightskip}{0pt plus 5cm}void Randomized\+Binary\+Search\+Tree\+::postorder (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+B\+S\+T\+Node} $\ast$}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classRandomizedBinarySearchTree_a54f4ac99867ea46280b480c554e42b9b}{}\label{classRandomizedBinarySearchTree_a54f4ac99867ea46280b480c554e42b9b}
+
+\begin{DoxyCode}
+191          \{
+192              \textcolor{keywordflow}{if} (r != \hyperlink{classRandomizedBinarySearchTree_a40d1d6c2aa7c91e83570f92a47836fab}{nil})
+193              \{
+194                  \hyperlink{classRandomizedBinarySearchTree_aad0f82161d579cdb36990bbc72209be5}{postorder}(r->\hyperlink{classRBSTNode_aaed05c0dc1229e3ac9bfd48ca1f34c84}{left});             
+195                  \hyperlink{classRandomizedBinarySearchTree_aad0f82161d579cdb36990bbc72209be5}{postorder}(r->\hyperlink{classRBSTNode_a086e0e15cf51b06199e205eaeee17086}{right});
+196                  cout<<r->\hyperlink{classRBSTNode_afe12defb7cc83803252973f1cd797464}{element} <<\textcolor{stringliteral}{"  "};
+197              \}
+198          \}         
+\end{DoxyCode}
+\index{Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}!preorder@{preorder}}
+\index{preorder@{preorder}!Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{preorder()}{preorder()}}]{\setlength{\rightskip}{0pt plus 5cm}void Randomized\+Binary\+Search\+Tree\+::preorder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classRandomizedBinarySearchTree_a019f49873fd8e266eb41edc0af956b38}{}\label{classRandomizedBinarySearchTree_a019f49873fd8e266eb41edc0af956b38}
+
+\begin{DoxyCode}
+170          \{
+171              \hyperlink{classRandomizedBinarySearchTree_a019f49873fd8e266eb41edc0af956b38}{preorder}(\hyperlink{classRandomizedBinarySearchTree_a3040b63f8697ac073513f5e90ddc9e47}{root});
+172          \}
+\end{DoxyCode}
+\index{Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}!preorder@{preorder}}
+\index{preorder@{preorder}!Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{preorder(\+R\+B\+S\+T\+Node $\ast$r)}{preorder(RBSTNode *r)}}]{\setlength{\rightskip}{0pt plus 5cm}void Randomized\+Binary\+Search\+Tree\+::preorder (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+B\+S\+T\+Node} $\ast$}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classRandomizedBinarySearchTree_a6511f06f95a294d00004a8e9fa5c5f29}{}\label{classRandomizedBinarySearchTree_a6511f06f95a294d00004a8e9fa5c5f29}
+
+\begin{DoxyCode}
+174          \{
+175              \textcolor{keywordflow}{if} (r != \hyperlink{classRandomizedBinarySearchTree_a40d1d6c2aa7c91e83570f92a47836fab}{nil})
+176              \{
+177                  cout<<r->\hyperlink{classRBSTNode_afe12defb7cc83803252973f1cd797464}{element} <<\textcolor{stringliteral}{"  "};
+178                  \hyperlink{classRandomizedBinarySearchTree_a019f49873fd8e266eb41edc0af956b38}{preorder}(r->\hyperlink{classRBSTNode_aaed05c0dc1229e3ac9bfd48ca1f34c84}{left});             
+179                  \hyperlink{classRandomizedBinarySearchTree_a019f49873fd8e266eb41edc0af956b38}{preorder}(r->\hyperlink{classRBSTNode_a086e0e15cf51b06199e205eaeee17086}{right});
+180              \}
+181          \}
+\end{DoxyCode}
+\index{Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}!search@{search}}
+\index{search@{search}!Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{search(int val)}{search(int val)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Randomized\+Binary\+Search\+Tree\+::search (
+\begin{DoxyParamCaption}
+\item[{int}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classRandomizedBinarySearchTree_a3113d572e9cca081f0294fd47a994922}{}\label{classRandomizedBinarySearchTree_a3113d572e9cca081f0294fd47a994922}
+
+\begin{DoxyCode}
+126          \{
+127              \textcolor{keywordflow}{return} \hyperlink{classRandomizedBinarySearchTree_a3113d572e9cca081f0294fd47a994922}{search}(\hyperlink{classRandomizedBinarySearchTree_a3040b63f8697ac073513f5e90ddc9e47}{root}, val);
+128          \}
+\end{DoxyCode}
+\index{Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}!search@{search}}
+\index{search@{search}!Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{search(\+R\+B\+S\+T\+Node $\ast$r, int val)}{search(RBSTNode *r, int val)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Randomized\+Binary\+Search\+Tree\+::search (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+B\+S\+T\+Node} $\ast$}]{r, }
+\item[{int}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classRandomizedBinarySearchTree_a5d160c8d5176ed873ed3cb83f678983c}{}\label{classRandomizedBinarySearchTree_a5d160c8d5176ed873ed3cb83f678983c}
+
+\begin{DoxyCode}
+130          \{
+131              \textcolor{keywordtype}{bool} found = \textcolor{keyword}{false};
+132              \textcolor{keywordflow}{while} ((r != \hyperlink{classRandomizedBinarySearchTree_a40d1d6c2aa7c91e83570f92a47836fab}{nil}) && !found)
+133              \{
+134                  \textcolor{keywordtype}{int} rval = r->\hyperlink{classRBSTNode_afe12defb7cc83803252973f1cd797464}{element};
+135                  \textcolor{keywordflow}{if} (val < rval)
+136                      r = r->\hyperlink{classRBSTNode_aaed05c0dc1229e3ac9bfd48ca1f34c84}{left};
+137                  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (val > rval)
+138                      r = r->\hyperlink{classRBSTNode_a086e0e15cf51b06199e205eaeee17086}{right};
+139                  \textcolor{keywordflow}{else}
+140                  \{
+141                      found = \textcolor{keyword}{true};
+142                      \textcolor{keywordflow}{break};
+143                  \}
+144                  found = \hyperlink{classRandomizedBinarySearchTree_a3113d572e9cca081f0294fd47a994922}{search}(r, val);
+145              \}
+146              \textcolor{keywordflow}{return} found;
+147          \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}!nil@{nil}}
+\index{nil@{nil}!Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{nil}{nil}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+B\+S\+T\+Node}$\ast$ Randomized\+Binary\+Search\+Tree\+::nil\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classRandomizedBinarySearchTree_a40d1d6c2aa7c91e83570f92a47836fab}{}\label{classRandomizedBinarySearchTree_a40d1d6c2aa7c91e83570f92a47836fab}
+\index{Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}!root@{root}}
+\index{root@{root}!Randomized\+Binary\+Search\+Tree@{Randomized\+Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{root}{root}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+B\+S\+T\+Node}$\ast$ Randomized\+Binary\+Search\+Tree\+::root\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classRandomizedBinarySearchTree_a3040b63f8697ac073513f5e90ddc9e47}{}\label{classRandomizedBinarySearchTree_a3040b63f8697ac073513f5e90ddc9e47}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{RandomizedBinarySearch_8cpp}{Randomized\+Binary\+Search.\+cpp}\end{DoxyCompactItemize}

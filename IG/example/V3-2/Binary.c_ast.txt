@@ -1,0 +1,722 @@
+Processing: /home/frcv-lab/mlsa/mlsa/test/test0-3-2/Binary.c.
+typedef __int128 __int128_t;
+typedef unsigned __int128 __uint128_t;
+typedef __va_list_tag __builtin_va_list[1];
+typedef typeof (ParenExpr 0x2d9b960 </home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:31:19, col:39> 'long'
+  (BinaryOperator 0x2d9b938 <col:20, col:38> 'long' '-'
+    (ParenExpr 0x2d9b898 <col:20, col:28> 'int *'
+      (CStyleCastExpr 0x2d9b870 <col:21, col:27> 'int *' <NullToPointer>
+        (IntegerLiteral 0x2d9b808 <col:27> 'int' 0)))
+    (ParenExpr 0x2d9b918 <col:30, col:38> 'int *'
+      (CStyleCastExpr 0x2d9b8f0 <col:31, col:37> 'int *' <NullToPointer>
+        (IntegerLiteral 0x2d9b8b8 <col:37> 'int' 0)))))
+ ptrdiff_t;
+typedef typeof (ParenExpr 0x2d9ba38 </home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:35:19, col:31> 'unsigned long'
+  (UnaryExprOrTypeTraitExpr 0x2d9ba18 <col:20, col:30> 'unsigned long' sizeof 'int'))
+ size_t;
+typedef int wchar_t;
+typedef unsigned char __u_char;
+typedef unsigned short __u_short;
+typedef unsigned int __u_int;
+typedef unsigned long __u_long;
+typedef signed char __int8_t;
+typedef unsigned char __uint8_t;
+typedef short __int16_t;
+typedef unsigned short __uint16_t;
+typedef int __int32_t;
+typedef unsigned int __uint32_t;
+typedef long __int64_t;
+typedef unsigned long __uint64_t;
+typedef long __quad_t;
+typedef unsigned long __u_quad_t;
+typedef unsigned long __dev_t;
+typedef unsigned int __uid_t;
+typedef unsigned int __gid_t;
+typedef unsigned long __ino_t;
+typedef unsigned long __ino64_t;
+typedef unsigned int __mode_t;
+typedef unsigned long __nlink_t;
+typedef long __off_t;
+typedef long __off64_t;
+typedef int __pid_t;
+struct {
+    int __val[2];
+};
+typedef struct __fsid_t __fsid_t;
+typedef long __clock_t;
+typedef unsigned long __rlim_t;
+typedef unsigned long __rlim64_t;
+typedef unsigned int __id_t;
+typedef long __time_t;
+typedef unsigned int __useconds_t;
+typedef long __suseconds_t;
+typedef int __daddr_t;
+typedef int __key_t;
+typedef int __clockid_t;
+typedef void *__timer_t;
+typedef long __blksize_t;
+typedef long __blkcnt_t;
+typedef long __blkcnt64_t;
+typedef unsigned long __fsblkcnt_t;
+typedef unsigned long __fsblkcnt64_t;
+typedef unsigned long __fsfilcnt_t;
+typedef unsigned long __fsfilcnt64_t;
+typedef long __fsword_t;
+typedef long __ssize_t;
+typedef long __syscall_slong_t;
+typedef unsigned long __syscall_ulong_t;
+typedef __off64_t __loff_t;
+typedef __quad_t *__qaddr_t;
+typedef char *__caddr_t;
+typedef long __intptr_t;
+typedef unsigned int __socklen_t;
+struct _IO_FILE;
+typedef struct _IO_FILE FILE;
+typedef struct _IO_FILE __FILE;
+struct {
+    int __count;
+    union {
+        unsigned int __wch;
+        char __wchb[4];
+    };
+    union <anonymous union at /usr/include/wchar.h:85:3> __value;
+};
+typedef struct __mbstate_t __mbstate_t;
+struct {
+    __off_t __pos;
+    __mbstate_t __state;
+};
+typedef struct _G_fpos_t _G_fpos_t;
+struct {
+    __off64_t __pos;
+    __mbstate_t __state;
+};
+typedef struct _G_fpos64_t _G_fpos64_t;
+typedef __builtin_va_list va_list;
+typedef __builtin_va_list __gnuc_va_list;
+struct _IO_jump_t;
+struct _IO_FILE;
+typedef void _IO_lock_t;
+struct _IO_marker {
+    struct _IO_marker *_next;
+    struct _IO_FILE *_sbuf;
+    int _pos;
+};
+enum __codecvt_result {
+    __codecvt_ok,
+    __codecvt_partial,
+    __codecvt_error,
+    __codecvt_noconv
+};
+struct _IO_FILE {
+    int _flags;
+    char *_IO_read_ptr;
+    char *_IO_read_end;
+    char *_IO_read_base;
+    char *_IO_write_base;
+    char *_IO_write_ptr;
+    char *_IO_write_end;
+    char *_IO_buf_base;
+    char *_IO_buf_end;
+    char *_IO_save_base;
+    char *_IO_backup_base;
+    char *_IO_save_end;
+    struct _IO_marker *_markers;
+    struct _IO_FILE *_chain;
+    int _fileno;
+    int _flags2;
+    __off_t _old_offset;
+    unsigned short _cur_column;
+    signed char _vtable_offset;
+    char _shortbuf[1];
+    _IO_lock_t *_lock;
+    __off64_t _offset;
+    void *__pad1;
+    void *__pad2;
+    void *__pad3;
+    void *__pad4;
+    size_t __pad5;
+    int _mode;
+    char _unused2[20];
+};
+typedef struct _IO_FILE _IO_FILE;
+struct _IO_FILE_plus;
+extern struct _IO_FILE_plus _IO_2_1_stdin_;
+extern struct _IO_FILE_plus _IO_2_1_stdout_;
+extern struct _IO_FILE_plus _IO_2_1_stderr_;
+typedef __ssize_t (__io_read_fn)(void *, char *, size_t);
+typedef __ssize_t (__io_write_fn)(void *, const char *, size_t);
+typedef int (__io_seek_fn)(void *, __off64_t *, int);
+typedef int (__io_close_fn)(void *);
+extern int __underflow(_IO_FILE *);
+extern int __uflow(_IO_FILE *);
+extern int __overflow(_IO_FILE *, int);
+extern int _IO_getc(_IO_FILE *__fp);
+extern int _IO_putc(int __c, _IO_FILE *__fp);
+extern int _IO_feof(_IO_FILE *__fp) __attribute__((nothrow));
+extern int _IO_ferror(_IO_FILE *__fp) __attribute__((nothrow));
+extern int _IO_peekc_locked(_IO_FILE *__fp);
+extern void _IO_flockfile(_IO_FILE *) __attribute__((nothrow));
+extern void _IO_funlockfile(_IO_FILE *) __attribute__((nothrow));
+extern int _IO_ftrylockfile(_IO_FILE *) __attribute__((nothrow));
+extern int _IO_vfscanf(_IO_FILE *restrict, const char *restrict, __gnuc_va_list, int *restrict);
+extern int _IO_vfprintf(_IO_FILE *restrict, const char *restrict, __gnuc_va_list);
+extern __ssize_t _IO_padn(_IO_FILE *, int, __ssize_t);
+extern size_t _IO_sgetn(_IO_FILE *, void *, size_t);
+extern __off64_t _IO_seekoff(_IO_FILE *, __off64_t, int, int);
+extern __off64_t _IO_seekpos(_IO_FILE *, __off64_t, int);
+extern void _IO_free_backup_area(_IO_FILE *) __attribute__((nothrow));
+typedef __gnuc_va_list va_list;
+typedef __off_t off_t;
+typedef __ssize_t ssize_t;
+typedef _G_fpos_t fpos_t;
+extern struct _IO_FILE *stdin;
+extern struct _IO_FILE *stdout;
+extern struct _IO_FILE *stderr;
+extern int remove(const char *__filename) __attribute__((nothrow));
+extern int rename(const char *__old, const char *__new) __attribute__((nothrow));
+extern int renameat(int __oldfd, const char *__old, int __newfd, const char *__new) __attribute__((nothrow));
+extern FILE *tmpfile();
+extern char *tmpnam(char *__s) __attribute__((nothrow));
+extern char *tmpnam_r(char *__s) __attribute__((nothrow));
+extern char *tempnam(const char *__dir, const char *__pfx) __attribute__((malloc)) __attribute__((nothrow));
+extern int fclose(FILE *__stream);
+extern int fflush(FILE *__stream);
+extern int fflush_unlocked(FILE *__stream);
+extern FILE *fopen(const char *restrict __filename, const char *restrict __modes);
+extern FILE *freopen(const char *restrict __filename, const char *restrict __modes, FILE *restrict __stream);
+extern FILE *fdopen(int __fd, const char *__modes) __attribute__((nothrow));
+extern FILE *fmemopen(void *__s, size_t __len, const char *__modes) __attribute__((nothrow));
+extern FILE *open_memstream(char **__bufloc, size_t *__sizeloc) __attribute__((nothrow));
+extern void setbuf(FILE *restrict __stream, char *restrict __buf) __attribute__((nothrow));
+extern int setvbuf(FILE *restrict __stream, char *restrict __buf, int __modes, size_t __n) __attribute__((nothrow));
+extern void setbuffer(FILE *restrict __stream, char *restrict __buf, size_t __size) __attribute__((nothrow));
+extern void setlinebuf(FILE *__stream) __attribute__((nothrow));
+int fprintf(FILE *, const char *, ...) __attribute__((format("printf", 2, 3)));
+extern int fprintf(FILE *restrict __stream, const char *restrict __format, ...) __attribute__((format("printf", 2, 3)));
+int printf(const char *, ...) __attribute__((format("printf", 1, 2)));
+extern int printf(const char *restrict __format, ...) __attribute__((format("printf", 1, 2)));
+int sprintf(char *, const char *, ...) __attribute__((format("printf", 2, 3)));
+extern int sprintf(char *restrict __s, const char *restrict __format, ...) __attribute__((nothrow)) __attribute__((format("printf", 2, 3)));
+int vfprintf() __attribute__((format("printf", 2, 0)));
+extern int vfprintf(FILE *restrict __s, const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("printf", 2, 0)));
+int vprintf(const char *, __va_list_tag *) __attribute__((format("printf", 1, 0)));
+extern int vprintf(const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("printf", 1, 0)));
+int vsprintf(char *, const char *, __va_list_tag *) __attribute__((format("printf", 2, 0)));
+extern int vsprintf(char *restrict __s, const char *restrict __format, __gnuc_va_list __arg) __attribute__((nothrow)) __attribute__((format("printf", 2, 0)));
+int snprintf(char *, unsigned long, const char *, ...) __attribute__((format("printf", 3, 4)));
+extern int snprintf(char *restrict __s, size_t __maxlen, const char *restrict __format, ...) __attribute__((format("printf", 3, 4))) __attribute__((nothrow));
+int vsnprintf(char *, unsigned long, const char *, __va_list_tag *) __attribute__((format("printf", 3, 0)));
+extern int vsnprintf(char *restrict __s, size_t __maxlen, const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("printf", 3, 0))) __attribute__((nothrow));
+extern int vdprintf(int __fd, const char *restrict __fmt, __gnuc_va_list __arg) __attribute__((format("printf", 2, 0)));
+extern int dprintf(int __fd, const char *restrict __fmt, ...) __attribute__((format("printf", 2, 3)));
+int fscanf(FILE *restrict, const char *restrict, ...) __attribute__((format("scanf", 2, 3)));
+extern int fscanf(FILE *restrict __stream, const char *restrict __format, ...) __attribute__((format("scanf", 2, 3)));
+int scanf(const char *restrict, ...) __attribute__((format("scanf", 1, 2)));
+extern int scanf(const char *restrict __format, ...) __attribute__((format("scanf", 1, 2)));
+int sscanf(const char *restrict, const char *restrict, ...) __attribute__((format("scanf", 2, 3)));
+extern int sscanf(const char *restrict __s, const char *restrict __format, ...) __attribute__((nothrow)) __attribute__((format("scanf", 2, 3)));
+extern int fscanf(FILE *restrict __stream, const char *restrict __format, ...) __attribute__((format("scanf", 2, 3)));
+extern int scanf(const char *restrict __format, ...) __attribute__((format("scanf", 1, 2)));
+extern int sscanf(const char *restrict __s, const char *restrict __format, ...) __attribute__((nothrow)) __attribute__((format("scanf", 2, 3)));
+int vfscanf(FILE *restrict, const char *restrict, __va_list_tag *) __attribute__((format("scanf", 2, 0)));
+extern int vfscanf(FILE *restrict __s, const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("scanf", 2, 0)));
+int vscanf(const char *restrict, __va_list_tag *) __attribute__((format("scanf", 1, 0)));
+extern int vscanf(const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("scanf", 1, 0)));
+int vsscanf(const char *restrict, const char *restrict, __va_list_tag *) __attribute__((format("scanf", 2, 0)));
+extern int vsscanf(const char *restrict __s, const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("scanf", 2, 0))) __attribute__((nothrow));
+extern int vfscanf(FILE *restrict __s, const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("scanf", 2, 0)));
+extern int vscanf(const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("scanf", 1, 0)));
+extern int vsscanf(const char *restrict __s, const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("scanf", 2, 0))) __attribute__((nothrow));
+extern int fgetc(FILE *__stream);
+extern int getc(FILE *__stream);
+extern int getchar();
+extern int getc_unlocked(FILE *__stream);
+extern int getchar_unlocked();
+extern int fgetc_unlocked(FILE *__stream);
+extern int fputc(int __c, FILE *__stream);
+extern int putc(int __c, FILE *__stream);
+extern int putchar(int __c);
+extern int fputc_unlocked(int __c, FILE *__stream);
+extern int putc_unlocked(int __c, FILE *__stream);
+extern int putchar_unlocked(int __c);
+extern int getw(FILE *__stream);
+extern int putw(int __w, FILE *__stream);
+extern char *fgets(char *restrict __s, int __n, FILE *restrict __stream);
+extern char *gets(char *__s) __attribute__((deprecated("")));
+extern __ssize_t __getdelim(char **restrict __lineptr, size_t *restrict __n, int __delimiter, FILE *restrict __stream);
+extern __ssize_t getdelim(char **restrict __lineptr, size_t *restrict __n, int __delimiter, FILE *restrict __stream);
+extern __ssize_t getline(char **restrict __lineptr, size_t *restrict __n, FILE *restrict __stream);
+extern int fputs(const char *restrict __s, FILE *restrict __stream);
+extern int puts(const char *__s);
+extern int ungetc(int __c, FILE *__stream);
+extern size_t fread(void *restrict __ptr, size_t __size, size_t __n, FILE *restrict __stream);
+extern size_t fwrite(const void *restrict __ptr, size_t __size, size_t __n, FILE *restrict __s);
+extern size_t fread_unlocked(void *restrict __ptr, size_t __size, size_t __n, FILE *restrict __stream);
+extern size_t fwrite_unlocked(const void *restrict __ptr, size_t __size, size_t __n, FILE *restrict __stream);
+extern int fseek(FILE *__stream, long __off, int __whence);
+extern long ftell(FILE *__stream);
+extern void rewind(FILE *__stream);
+extern int fseeko(FILE *__stream, __off_t __off, int __whence);
+extern __off_t ftello(FILE *__stream);
+extern int fgetpos(FILE *restrict __stream, fpos_t *restrict __pos);
+extern int fsetpos(FILE *__stream, const fpos_t *__pos);
+extern void clearerr(FILE *__stream) __attribute__((nothrow));
+extern int feof(FILE *__stream) __attribute__((nothrow));
+extern int ferror(FILE *__stream) __attribute__((nothrow));
+extern void clearerr_unlocked(FILE *__stream) __attribute__((nothrow));
+extern int feof_unlocked(FILE *__stream) __attribute__((nothrow));
+extern int ferror_unlocked(FILE *__stream) __attribute__((nothrow));
+extern void perror(const char *__s);
+extern int sys_nerr;
+extern const char *const sys_errlist[];
+extern int fileno(FILE *__stream) __attribute__((nothrow));
+extern int fileno_unlocked(FILE *__stream) __attribute__((nothrow));
+extern FILE *popen(const char *__command, const char *__modes);
+extern int pclose(FILE *__stream);
+extern char *ctermid(char *__s) __attribute__((nothrow));
+extern void flockfile(FILE *__stream) __attribute__((nothrow));
+extern int ftrylockfile(FILE *__stream) __attribute__((nothrow));
+extern void funlockfile(FILE *__stream) __attribute__((nothrow));
+typedef __time_t time_t;
+struct timeval {
+    __time_t tv_sec;
+    __suseconds_t tv_usec;
+};
+typedef int __sig_atomic_t;
+struct {
+    unsigned long __val[16];
+};
+typedef struct __sigset_t __sigset_t;
+typedef __sigset_t sigset_t;
+struct timespec {
+    __time_t tv_sec;
+    __syscall_slong_t tv_nsec;
+};
+typedef __suseconds_t suseconds_t;
+typedef long __fd_mask;
+struct {
+    __fd_mask __fds_bits[16];
+};
+typedef struct fd_set fd_set;
+typedef __fd_mask fd_mask;
+extern int select(int __nfds, fd_set *restrict __readfds, fd_set *restrict __writefds, fd_set *restrict __exceptfds, struct timeval *restrict __timeout);
+extern int pselect(int __nfds, fd_set *restrict __readfds, fd_set *restrict __writefds, fd_set *restrict __exceptfds, const struct timespec *restrict __timeout, const __sigset_t *restrict __sigmask);
+struct timezone {
+    int tz_minuteswest;
+    int tz_dsttime;
+};
+typedef struct timezone *restrict __timezone_ptr_t;
+extern int gettimeofday(struct timeval *restrict __tv, __timezone_ptr_t __tz) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern int settimeofday(const struct timeval *__tv, const struct timezone *__tz) __attribute__((nothrow));
+extern int adjtime(const struct timeval *__delta, struct timeval *__olddelta) __attribute__((nothrow));
+enum __itimer_which {
+    ITIMER_REAL = (IntegerLiteral 0x2e2e800 </usr/include/x86_64-linux-gnu/sys/time.h:94:19> 'int' 0)
+,
+    ITIMER_VIRTUAL = (IntegerLiteral 0x2e2e870 </usr/include/x86_64-linux-gnu/sys/time.h:97:22> 'int' 1)
+,
+    ITIMER_PROF = (IntegerLiteral 0x2e2e8e0 </usr/include/x86_64-linux-gnu/sys/time.h:101:19> 'int' 2)
+
+};
+struct itimerval {
+    struct timeval it_interval;
+    struct timeval it_value;
+};
+typedef int __itimer_which_t;
+extern int getitimer(__itimer_which_t __which, struct itimerval *__value) __attribute__((nothrow));
+extern int setitimer(__itimer_which_t __which, const struct itimerval *restrict __new, struct itimerval *restrict __old) __attribute__((nothrow));
+extern int utimes(const char *__file, const struct timeval __tvp[2]) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern int lutimes(const char *__file, const struct timeval __tvp[2]) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern int futimes(int __fd, const struct timeval __tvp[2]) __attribute__((nothrow));
+int binary1(int n, int a[(ImplicitCastExpr 0x2e31c20 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Binary.c:11:26> 'int' <LValueToRValue>
+  (DeclRefExpr 0x2e31bf8 <col:26> 'int' lvalue ParmVar 0x2e31ba0 'n' 'int'))
+], int who) (CompoundStmt 0x2e341b8 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Binary.c:11:39, line:24:1>
+  (DeclStmt 0x2e31f38 <line:12:5, col:17>
+    (0x2e31ec0 "int left =
+      (IntegerLiteral 0x2e31f18 <col:16> 'int' 0)"))
+  (DeclStmt 0x2e32040 <line:13:5, col:20>
+    (0x2e31f60 "int right =
+      (BinaryOperator 0x2e32018 <col:17, col:19> 'int' '-'
+        (ImplicitCastExpr 0x2e32000 <col:17> 'int' <LValueToRValue>
+          (DeclRefExpr 0x2e31fb8 <col:17> 'int' lvalue ParmVar 0x2e31ba0 'n' 'int'))
+        (IntegerLiteral 0x2e31fe0 <col:19> 'int' 1))"))
+  (WhileStmt 0x2e34130 <line:14:5, line:22:5>
+    (<<<NULL>>>)
+    (BinaryOperator 0x2e320d8 <line:14:12, col:20> 'int' '<='
+      (ImplicitCastExpr 0x2e320a8 <col:12> 'int' <LValueToRValue>
+        (DeclRefExpr 0x2e32058 <col:12> 'int' lvalue Var 0x2e31ec0 'left' 'int'))
+      (ImplicitCastExpr 0x2e320c0 <col:20> 'int' <LValueToRValue>
+        (DeclRefExpr 0x2e32080 <col:20> 'int' lvalue Var 0x2e31f60 'right' 'int')))
+    (CompoundStmt 0x2e34108 <col:27, line:22:5>
+      (DeclStmt 0x2e322e0 <line:15:2, col:33>
+        (0x2e32110 "int mid =
+          (BinaryOperator 0x2e322b8 <col:12, col:32> 'int' '+'
+            (ImplicitCastExpr 0x2e322a0 <col:12> 'int' <LValueToRValue>
+              (DeclRefExpr 0x2e32168 <col:12> 'int' lvalue Var 0x2e31ec0 'left' 'int'))
+            (BinaryOperator 0x2e32278 <col:19, col:32> 'int' '/'
+              (ParenExpr 0x2e32238 <col:19, col:30> 'int'
+                (BinaryOperator 0x2e32210 <col:20, col:26> 'int' '-'
+                  (ImplicitCastExpr 0x2e321e0 <col:20> 'int' <LValueToRValue>
+                    (DeclRefExpr 0x2e32190 <col:20> 'int' lvalue Var 0x2e31f60 'right' 'int'))
+                  (ImplicitCastExpr 0x2e321f8 <col:26> 'int' <LValueToRValue>
+                    (DeclRefExpr 0x2e321b8 <col:26> 'int' lvalue Var 0x2e31ec0 'left' 'int'))))
+              (IntegerLiteral 0x2e32258 <col:32> 'int' 2)))"))
+      (IfStmt 0x2e340d8 <line:16:2, line:21:13>
+        (<<<NULL>>>)
+        (BinaryOperator 0x2e323f8 <line:16:6, col:17> 'int' '<'
+          (ImplicitCastExpr 0x2e323c8 <col:6> 'int' <LValueToRValue>
+            (DeclRefExpr 0x2e322f8 <col:6> 'int' lvalue ParmVar 0x2e31d10 'who' 'int'))
+          (ImplicitCastExpr 0x2e323e0 <col:12, col:17> 'int' <LValueToRValue>
+            (ArraySubscriptExpr 0x2e323a0 <col:12, col:17> 'int' lvalue
+              (ImplicitCastExpr 0x2e32370 <col:12> 'int *' <LValueToRValue>
+                (DeclRefExpr 0x2e32320 <col:12> 'int *' lvalue ParmVar 0x2e31ca0 'a' 'int *'))
+              (ImplicitCastExpr 0x2e32388 <col:14> 'int' <LValueToRValue>
+                (DeclRefExpr 0x2e32348 <col:14> 'int' lvalue Var 0x2e32110 'mid' 'int')))))
+        (BinaryOperator 0x2e33e20 <line:17:6, col:20> 'int' '='
+          (DeclRefExpr 0x2e32420 <col:6> 'int' lvalue Var 0x2e31f60 'right' 'int')
+          (BinaryOperator 0x2e33df8 <col:14, col:20> 'int' '-'
+            (ImplicitCastExpr 0x2e33de0 <col:14> 'int' <LValueToRValue>
+              (DeclRefExpr 0x2e32448 <col:14> 'int' lvalue Var 0x2e32110 'mid' 'int'))
+            (IntegerLiteral 0x2e32470 <col:20> 'int' 1)))
+        (IfStmt 0x2e340a8 <line:18:7, line:21:13>
+          (<<<NULL>>>)
+          (BinaryOperator 0x2e33f48 <line:18:11, col:22> 'int' '>'
+            (ImplicitCastExpr 0x2e33f18 <col:11> 'int' <LValueToRValue>
+              (DeclRefExpr 0x2e33e48 <col:11> 'int' lvalue ParmVar 0x2e31d10 'who' 'int'))
+            (ImplicitCastExpr 0x2e33f30 <col:17, col:22> 'int' <LValueToRValue>
+              (ArraySubscriptExpr 0x2e33ef0 <col:17, col:22> 'int' lvalue
+                (ImplicitCastExpr 0x2e33ec0 <col:17> 'int *' <LValueToRValue>
+                  (DeclRefExpr 0x2e33e70 <col:17> 'int *' lvalue ParmVar 0x2e31ca0 'a' 'int *'))
+                (ImplicitCastExpr 0x2e33ed8 <col:19> 'int' <LValueToRValue>
+                  (DeclRefExpr 0x2e33e98 <col:19> 'int' lvalue Var 0x2e32110 'mid' 'int')))))
+          (BinaryOperator 0x2e34020 <line:19:6, col:19> 'int' '='
+            (DeclRefExpr 0x2e33f70 <col:6> 'int' lvalue Var 0x2e31ec0 'left' 'int')
+            (BinaryOperator 0x2e33ff8 <col:13, col:19> 'int' '+'
+              (ImplicitCastExpr 0x2e33fe0 <col:13> 'int' <LValueToRValue>
+                (DeclRefExpr 0x2e33f98 <col:13> 'int' lvalue Var 0x2e32110 'mid' 'int'))
+              (IntegerLiteral 0x2e33fc0 <col:19> 'int' 1)))
+          (ReturnStmt 0x2e34088 <line:21:6, col:13>
+            (ImplicitCastExpr 0x2e34070 <col:13> 'int' <LValueToRValue>
+              (DeclRefExpr 0x2e34048 <col:13> 'int' lvalue Var 0x2e32110 'mid' 'int')))))))
+  (ReturnStmt 0x2e34198 <line:23:5, col:13>
+    (UnaryOperator 0x2e34178 <col:12, col:13> 'int' prefix '-'
+      (IntegerLiteral 0x2e34158 <col:13> 'int' 1))))
+
+
+int binary2(int n, int a[(ImplicitCastExpr 0x2e34280 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Binary.c:29:26> 'int' <LValueToRValue>
+  (DeclRefExpr 0x2e34258 <col:26> 'int' lvalue ParmVar 0x2e34200 'n' 'int'))
+], int who) (CompoundStmt 0x2e34c68 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Binary.c:29:39, line:41:1>
+  (DeclStmt 0x2e345b0 <line:30:5, col:16>
+    (0x2e344d0 "int p =
+      (BinaryOperator 0x2e34588 <col:13, col:15> 'int' '/'
+        (ImplicitCastExpr 0x2e34570 <col:13> 'int' <LValueToRValue>
+          (DeclRefExpr 0x2e34528 <col:13> 'int' lvalue ParmVar 0x2e34200 'n' 'int'))
+        (IntegerLiteral 0x2e34550 <col:15> 'int' 2))"))
+  (WhileStmt 0x2e34be0 <line:31:5, line:39:5>
+    (<<<NULL>>>)
+    (BinaryOperator 0x2e34628 <line:31:12, col:16> 'int' '>'
+      (ImplicitCastExpr 0x2e34610 <col:12> 'int' <LValueToRValue>
+        (DeclRefExpr 0x2e345c8 <col:12> 'int' lvalue ParmVar 0x2e34200 'n' 'int'))
+      (IntegerLiteral 0x2e345f0 <col:16> 'int' 0))
+    (CompoundStmt 0x2e34bb8 <col:19, line:39:5>
+      (BinaryOperator 0x2e34700 <line:32:2, col:8> 'int' '='
+        (DeclRefExpr 0x2e34650 <col:2> 'int' lvalue ParmVar 0x2e34200 'n' 'int')
+        (BinaryOperator 0x2e346d8 <col:6, col:8> 'int' '/'
+          (ImplicitCastExpr 0x2e346c0 <col:6> 'int' <LValueToRValue>
+            (DeclRefExpr 0x2e34678 <col:6> 'int' lvalue ParmVar 0x2e34200 'n' 'int'))
+          (IntegerLiteral 0x2e346a0 <col:8> 'int' 2)))
+      (IfStmt 0x2e34b88 <line:33:2, line:38:13>
+        (<<<NULL>>>)
+        (BinaryOperator 0x2e34828 <line:33:6, col:15> 'int' '<'
+          (ImplicitCastExpr 0x2e347f8 <col:6> 'int' <LValueToRValue>
+            (DeclRefExpr 0x2e34728 <col:6> 'int' lvalue ParmVar 0x2e34370 'who' 'int'))
+          (ImplicitCastExpr 0x2e34810 <col:12, col:15> 'int' <LValueToRValue>
+            (ArraySubscriptExpr 0x2e347d0 <col:12, col:15> 'int' lvalue
+              (ImplicitCastExpr 0x2e347a0 <col:12> 'int *' <LValueToRValue>
+                (DeclRefExpr 0x2e34750 <col:12> 'int *' lvalue ParmVar 0x2e34300 'a' 'int *'))
+              (ImplicitCastExpr 0x2e347b8 <col:14> 'int' <LValueToRValue>
+                (DeclRefExpr 0x2e34778 <col:14> 'int' lvalue Var 0x2e344d0 'p' 'int')))))
+        (CompoundStmt 0x2e348f0 <col:18, line:35:2>
+          (CompoundAssignOperator 0x2e348b8 <line:34:6, col:11> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+            (DeclRefExpr 0x2e34850 <col:6> 'int' lvalue Var 0x2e344d0 'p' 'int')
+            (ImplicitCastExpr 0x2e348a0 <col:11> 'int' <LValueToRValue>
+              (DeclRefExpr 0x2e34878 <col:11> 'int' lvalue ParmVar 0x2e34200 'n' 'int'))))
+        (IfStmt 0x2e34b58 <line:35:9, line:38:13>
+          (<<<NULL>>>)
+          (BinaryOperator 0x2e34a10 <line:35:13, col:22> 'int' '>'
+            (ImplicitCastExpr 0x2e349e0 <col:13> 'int' <LValueToRValue>
+              (DeclRefExpr 0x2e34910 <col:13> 'int' lvalue ParmVar 0x2e34370 'who' 'int'))
+            (ImplicitCastExpr 0x2e349f8 <col:19, col:22> 'int' <LValueToRValue>
+              (ArraySubscriptExpr 0x2e349b8 <col:19, col:22> 'int' lvalue
+                (ImplicitCastExpr 0x2e34988 <col:19> 'int *' <LValueToRValue>
+                  (DeclRefExpr 0x2e34938 <col:19> 'int *' lvalue ParmVar 0x2e34300 'a' 'int *'))
+                (ImplicitCastExpr 0x2e349a0 <col:21> 'int' <LValueToRValue>
+                  (DeclRefExpr 0x2e34960 <col:21> 'int' lvalue Var 0x2e344d0 'p' 'int')))))
+          (CompoundStmt 0x2e34ad8 <col:25, line:37:2>
+            (CompoundAssignOperator 0x2e34aa0 <line:36:6, col:11> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+              (DeclRefExpr 0x2e34a38 <col:6> 'int' lvalue Var 0x2e344d0 'p' 'int')
+              (ImplicitCastExpr 0x2e34a88 <col:11> 'int' <LValueToRValue>
+                (DeclRefExpr 0x2e34a60 <col:11> 'int' lvalue ParmVar 0x2e34200 'n' 'int'))))
+          (ReturnStmt 0x2e34b38 <line:38:6, col:13>
+            (ImplicitCastExpr 0x2e34b20 <col:13> 'int' <LValueToRValue>
+              (DeclRefExpr 0x2e34af8 <col:13> 'int' lvalue Var 0x2e344d0 'p' 'int')))))))
+  (ReturnStmt 0x2e34c48 <line:40:5, col:13>
+    (UnaryOperator 0x2e34c28 <col:12, col:13> 'int' prefix '-'
+      (IntegerLiteral 0x2e34c08 <col:13> 'int' 1))))
+
+
+long timediff(struct timeval before, struct timeval after) (CompoundStmt 0x2e356f0 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Binary.c:44:60, line:48:1>
+  (DeclStmt 0x2e35420 <line:45:5, col:44>
+    (0x2e352c0 "long sec =
+      (BinaryOperator 0x2e353f8 <col:16, col:38> 'long' '-'
+        (ImplicitCastExpr 0x2e353c8 <col:16, col:22> '__time_t':'long' <LValueToRValue>
+          (MemberExpr 0x2e35340 <col:16, col:22> '__time_t':'long' lvalue .tv_sec 0x2e1eba0
+            (DeclRefExpr 0x2e35318 <col:16> 'struct timeval':'struct timeval' lvalue ParmVar 0x2e34d40 'after' 'struct timeval':'struct timeval')))
+        (ImplicitCastExpr 0x2e353e0 <col:31, col:38> '__time_t':'long' <LValueToRValue>
+          (MemberExpr 0x2e35398 <col:31, col:38> '__time_t':'long' lvalue .tv_sec 0x2e1eba0
+            (DeclRefExpr 0x2e35370 <col:31> 'struct timeval':'struct timeval' lvalue ParmVar 0x2e34cc0 'before' 'struct timeval':'struct timeval'))))"))
+  (DeclStmt 0x2e355b0 <line:46:5, col:51>
+    (0x2e35450 "long microsec =
+      (BinaryOperator 0x2e35588 <col:21, col:44> 'long' '-'
+        (ImplicitCastExpr 0x2e35558 <col:21, col:27> '__suseconds_t':'long' <LValueToRValue>
+          (MemberExpr 0x2e354d0 <col:21, col:27> '__suseconds_t':'long' lvalue .tv_usec 0x2e1ec20
+            (DeclRefExpr 0x2e354a8 <col:21> 'struct timeval':'struct timeval' lvalue ParmVar 0x2e34d40 'after' 'struct timeval':'struct timeval')))
+        (ImplicitCastExpr 0x2e35570 <col:37, col:44> '__suseconds_t':'long' <LValueToRValue>
+          (MemberExpr 0x2e35528 <col:37, col:44> '__suseconds_t':'long' lvalue .tv_usec 0x2e1ec20
+            (DeclRefExpr 0x2e35500 <col:37> 'struct timeval':'struct timeval' lvalue ParmVar 0x2e34cc0 'before' 'struct timeval':'struct timeval'))))"))
+  (ReturnStmt 0x2e356d0 <line:47:5, col:26>
+    (BinaryOperator 0x2e356a8 <col:12, col:26> 'long' '+'
+      (BinaryOperator 0x2e35640 <col:12, col:20> 'long' '*'
+        (ImplicitCastExpr 0x2e35628 <col:12> 'long' <IntegralCast>
+          (IntegerLiteral 0x2e355c8 <col:12> 'int' 1000000))
+        (ImplicitCastExpr 0x2e35610 <col:20> 'long' <LValueToRValue>
+          (DeclRefExpr 0x2e355e8 <col:20> 'long' lvalue Var 0x2e352c0 'sec' 'long')))
+      (ImplicitCastExpr 0x2e35690 <col:26> 'long' <LValueToRValue>
+        (DeclRefExpr 0x2e35668 <col:26> 'long' lvalue Var 0x2e35450 'microsec' 'long')))))
+
+
+int main() (CompoundStmt 0x2e37f08 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Binary.c:50:12, line:80:1>
+  (DeclStmt 0x2e35de8 <line:51:5, col:62>
+    (0x2e35830 "int a[17] =
+      (InitListExpr 0x2e35b70 <col:15, col:61> 'int [17]'
+        (IntegerLiteral 0x2e35888 <col:16> 'int' 1)
+        (IntegerLiteral 0x2e358a8 <col:18> 'int' 3)
+        (IntegerLiteral 0x2e358c8 <col:20> 'int' 5)
+        (IntegerLiteral 0x2e358e8 <col:22> 'int' 7)
+        (IntegerLiteral 0x2e35908 <col:24> 'int' 9)
+        (IntegerLiteral 0x2e35928 <col:26> 'int' 11)
+        (IntegerLiteral 0x2e35948 <col:29> 'int' 13)
+        (IntegerLiteral 0x2e35968 <col:32> 'int' 15)
+        (IntegerLiteral 0x2e35988 <col:35> 'int' 17)
+        (IntegerLiteral 0x2e359a8 <col:38> 'int' 19)
+        (IntegerLiteral 0x2e359c8 <col:41> 'int' 21)
+        (IntegerLiteral 0x2e359e8 <col:44> 'int' 23)
+        (IntegerLiteral 0x2e35a08 <col:47> 'int' 25)
+        (IntegerLiteral 0x2e35a28 <col:50> 'int' 27)
+        (IntegerLiteral 0x2e35a48 <col:53> 'int' 29)
+        (IntegerLiteral 0x2e35a68 <col:56> 'int' 31)
+        (IntegerLiteral 0x2e35a88 <col:59> 'int' 33))"))
+  (DeclStmt 0x2e35f40 <line:52:5, col:34>
+    (0x2e35e10 "int n =
+      (ImplicitCastExpr 0x2e35f28 <col:13, col:33> 'int' <IntegralCast>
+        (BinaryOperator 0x2e35f00 <col:13, col:33> 'unsigned long' '/'
+          (UnaryExprOrTypeTraitExpr 0x2e35eb0 <col:13, col:21> 'unsigned long' sizeof 
+            (ParenExpr 0x2e35e90 <col:19, col:21> 'int [17]' lvalue
+              (DeclRefExpr 0x2e35e68 <col:20> 'int [17]' lvalue Var 0x2e35830 'a' 'int [17]')))
+          (UnaryExprOrTypeTraitExpr 0x2e35ee0 <col:23, col:33> 'unsigned long' sizeof 'int')))"))
+  (DeclStmt 0x2e35fc8 <line:53:5, col:14>
+    (0x2e35f70 "int where"))
+  (DeclStmt 0x2e36058 <line:54:5, col:26>
+    (0x2e36000 "struct timeval before"))
+  (DeclStmt 0x2e360e8 <line:55:5, col:25>
+    (0x2e36090 "struct timeval after"))
+  (DeclStmt 0x2e361b8 <line:56:5, col:10>
+    (0x2e36160 "int k"))
+  (DeclStmt 0x2e36238 <line:57:5, col:10>
+    (0x2e361e0 "int j"))
+  (CallExpr 0x2e363b0 <line:58:5, col:31> 'int'
+    (ImplicitCastExpr 0x2e36398 <col:5> 'int (*)(struct timeval *restrict, __timezone_ptr_t)' <FunctionToPointerDecay>
+      (DeclRefExpr 0x2e36250 <col:5> 'int (struct timeval *restrict, __timezone_ptr_t)' Function 0x2e2e000 'gettimeofday' 'int (struct timeval *restrict, __timezone_ptr_t)'))
+    (UnaryOperator 0x2e362a0 <col:18, col:19> 'struct timeval *' prefix '&'
+      (DeclRefExpr 0x2e36278 <col:19> 'struct timeval':'struct timeval' lvalue Var 0x2e36000 'before' 'struct timeval':'struct timeval'))
+    (ImplicitCastExpr 0x2e363e8 </home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:16, col:25> 'struct timezone *' <NullToPointer>
+      (ParenExpr 0x2e36318 <col:16, col:25> 'void *'
+        (CStyleCastExpr 0x2e362f0 <col:17, col:24> 'void *' <NullToPointer>
+          (IntegerLiteral 0x2e362c0 <col:24> 'int' 0)))))
+  (ForStmt 0x2e36950 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Binary.c:59:5, line:63:5>
+    (BinaryOperator 0x2e36448 <line:59:10, col:14> 'int' '='
+      (DeclRefExpr 0x2e36400 <col:10> 'int' lvalue Var 0x2e361e0 'j' 'int')
+      (IntegerLiteral 0x2e36428 <col:14> 'int' 0))
+    (<<<NULL>>>)
+    (BinaryOperator 0x2e364d0 <col:17, col:21> 'int' '<'
+      (ImplicitCastExpr 0x2e364b8 <col:17> 'int' <LValueToRValue>
+        (DeclRefExpr 0x2e36470 <col:17> 'int' lvalue Var 0x2e361e0 'j' 'int'))
+      (IntegerLiteral 0x2e36498 <col:21> 'int' 1000000))
+    (UnaryOperator 0x2e36520 <col:30, col:31> 'int' postfix '++'
+      (DeclRefExpr 0x2e364f8 <col:30> 'int' lvalue Var 0x2e361e0 'j' 'int'))
+    (ForStmt 0x2e36910 <line:60:5, line:63:5>
+      (BinaryOperator 0x2e36588 <line:60:10, col:14> 'int' '='
+        (DeclRefExpr 0x2e36540 <col:10> 'int' lvalue Var 0x2e36160 'k' 'int')
+        (IntegerLiteral 0x2e36568 <col:14> 'int' 0))
+      (<<<NULL>>>)
+      (BinaryOperator 0x2e366c0 <col:17, col:25> 'int' '<'
+        (ImplicitCastExpr 0x2e366a8 <col:17> 'int' <LValueToRValue>
+          (DeclRefExpr 0x2e365b0 <col:17> 'int' lvalue Var 0x2e36160 'k' 'int'))
+        (BinaryOperator 0x2e36680 <col:21, col:25> 'int' '+'
+          (BinaryOperator 0x2e36638 <col:21, col:23> 'int' '*'
+            (IntegerLiteral 0x2e365d8 <col:21> 'int' 2)
+            (ImplicitCastExpr 0x2e36620 <col:23> 'int' <LValueToRValue>
+              (DeclRefExpr 0x2e365f8 <col:23> 'int' lvalue Var 0x2e35e10 'n' 'int')))
+          (IntegerLiteral 0x2e36660 <col:25> 'int' 1)))
+      (UnaryOperator 0x2e36710 <col:28, col:29> 'int' postfix '++'
+        (DeclRefExpr 0x2e366e8 <col:28> 'int' lvalue Var 0x2e36160 'k' 'int'))
+      (CompoundStmt 0x2e368f0 <col:33, line:63:5>
+        (BinaryOperator 0x2e368c8 <line:61:2, col:25> 'int' '='
+          (DeclRefExpr 0x2e36730 <col:2> 'int' lvalue Var 0x2e35f70 'where' 'int')
+          (CallExpr 0x2e36840 <col:10, col:25> 'int'
+            (ImplicitCastExpr 0x2e36828 <col:10> 'int (*)(int, int *, int)' <FunctionToPointerDecay>
+              (DeclRefExpr 0x2e36758 <col:10> 'int (int, int *, int)' Function 0x2e31df0 'binary1' 'int (int, int *, int)'))
+            (ImplicitCastExpr 0x2e36880 <col:18> 'int' <LValueToRValue>
+              (DeclRefExpr 0x2e36780 <col:18> 'int' lvalue Var 0x2e35e10 'n' 'int'))
+            (ImplicitCastExpr 0x2e36898 <col:21> 'int *' <ArrayToPointerDecay>
+              (DeclRefExpr 0x2e367a8 <col:21> 'int [17]' lvalue Var 0x2e35830 'a' 'int [17]'))
+            (ImplicitCastExpr 0x2e368b0 <col:24> 'int' <LValueToRValue>
+              (DeclRefExpr 0x2e367d0 <col:24> 'int' lvalue Var 0x2e36160 'k' 'int')))))))
+  (CallExpr 0x2e36a90 <line:64:5, col:30> 'int'
+    (ImplicitCastExpr 0x2e36a78 <col:5> 'int (*)(struct timeval *restrict, __timezone_ptr_t)' <FunctionToPointerDecay>
+      (DeclRefExpr 0x2e36990 <col:5> 'int (struct timeval *restrict, __timezone_ptr_t)' Function 0x2e2e000 'gettimeofday' 'int (struct timeval *restrict, __timezone_ptr_t)'))
+    (UnaryOperator 0x2e369e0 <col:18, col:19> 'struct timeval *' prefix '&'
+      (DeclRefExpr 0x2e369b8 <col:19> 'struct timeval':'struct timeval' lvalue Var 0x2e36090 'after' 'struct timeval':'struct timeval'))
+    (ImplicitCastExpr 0x2e36ac8 </home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:16, col:25> 'struct timezone *' <NullToPointer>
+      (ParenExpr 0x2e36a58 <col:16, col:25> 'void *'
+        (CStyleCastExpr 0x2e36a30 <col:17, col:24> 'void *' <NullToPointer>
+          (IntegerLiteral 0x2e36a00 <col:24> 'int' 0)))))
+  (CallExpr 0x2e36d70 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Binary.c:65:5, line:66:31> 'int'
+    (ImplicitCastExpr 0x2e36d58 <line:65:5> 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+      (DeclRefExpr 0x2e36ae0 <col:5> 'int (const char *restrict, ...)' Function 0x2e0f710 'printf' 'int (const char *restrict, ...)'))
+    (ImplicitCastExpr 0x2e36dd8 <col:12> 'const char *' <BitCast>
+      (ImplicitCastExpr 0x2e36dc0 <col:12> 'char *' <ArrayToPointerDecay>
+        (StringLiteral 0x2e36b48 <col:12> 'char [35]' lvalue "before=[%ld,%ld], after=[%ld,%ld]\n")))
+    (ImplicitCastExpr 0x2e36df0 <col:51, col:58> '__time_t':'long' <LValueToRValue>
+      (MemberExpr 0x2e36bc0 <col:51, col:58> '__time_t':'long' lvalue .tv_sec 0x2e1eba0
+        (DeclRefExpr 0x2e36b98 <col:51> 'struct timeval':'struct timeval' lvalue Var 0x2e36000 'before' 'struct timeval':'struct timeval')))
+    (ImplicitCastExpr 0x2e36e08 <col:66, col:73> '__suseconds_t':'long' <LValueToRValue>
+      (MemberExpr 0x2e36c18 <col:66, col:73> '__suseconds_t':'long' lvalue .tv_usec 0x2e1ec20
+        (DeclRefExpr 0x2e36bf0 <col:66> 'struct timeval':'struct timeval' lvalue Var 0x2e36000 'before' 'struct timeval':'struct timeval')))
+    (ImplicitCastExpr 0x2e36e20 <line:66:4, col:10> '__time_t':'long' <LValueToRValue>
+      (MemberExpr 0x2e36c70 <col:4, col:10> '__time_t':'long' lvalue .tv_sec 0x2e1eba0
+        (DeclRefExpr 0x2e36c48 <col:4> 'struct timeval':'struct timeval' lvalue Var 0x2e36090 'after' 'struct timeval':'struct timeval')))
+    (ImplicitCastExpr 0x2e36e38 <col:18, col:24> '__suseconds_t':'long' <LValueToRValue>
+      (MemberExpr 0x2e36cc8 <col:18, col:24> '__suseconds_t':'long' lvalue .tv_usec 0x2e1ec20
+        (DeclRefExpr 0x2e36ca0 <col:18> 'struct timeval':'struct timeval' lvalue Var 0x2e36090 'after' 'struct timeval':'struct timeval'))))
+  (CallExpr 0x2e37060 <line:67:5, col:62> 'int'
+    (ImplicitCastExpr 0x2e37048 <col:5> 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+      (DeclRefExpr 0x2e36e50 <col:5> 'int (const char *restrict, ...)' Function 0x2e0f710 'printf' 'int (const char *restrict, ...)'))
+    (ImplicitCastExpr 0x2e370b0 <col:12> 'const char *' <BitCast>
+      (ImplicitCastExpr 0x2e37098 <col:12> 'char *' <ArrayToPointerDecay>
+        (StringLiteral 0x2e36eb8 <col:12> 'char [23]' lvalue "The difference is %ld\n")))
+    (CallExpr 0x2e36fe0 <col:39, col:61> 'long'
+      (ImplicitCastExpr 0x2e36fc8 <col:39> 'long (*)(struct timeval, struct timeval)' <FunctionToPointerDecay>
+        (DeclRefExpr 0x2e36ef8 <col:39> 'long (struct timeval, struct timeval)' Function 0x2e35200 'timediff' 'long (struct timeval, struct timeval)'))
+      (ImplicitCastExpr 0x2e37018 <col:48> 'struct timeval':'struct timeval' <LValueToRValue>
+        (DeclRefExpr 0x2e36f20 <col:48> 'struct timeval':'struct timeval' lvalue Var 0x2e36000 'before' 'struct timeval':'struct timeval'))
+      (ImplicitCastExpr 0x2e37030 <col:56> 'struct timeval':'struct timeval' <LValueToRValue>
+        (DeclRefExpr 0x2e36f48 <col:56> 'struct timeval':'struct timeval' lvalue Var 0x2e36090 'after' 'struct timeval':'struct timeval'))))
+  (CallExpr 0x2e371b8 <line:68:5, col:61> 'int'
+    (ImplicitCastExpr 0x2e371a0 <col:5> 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+      (DeclRefExpr 0x2e370c8 <col:5> 'int (const char *restrict, ...)' Function 0x2e0f710 'printf' 'int (const char *restrict, ...)'))
+    (ImplicitCastExpr 0x2e37200 <col:12> 'const char *' <BitCast>
+      (ImplicitCastExpr 0x2e371e8 <col:12> 'char *' <ArrayToPointerDecay>
+        (StringLiteral 0x2e37128 <col:12> 'char [47]' lvalue "---------------------------------------------\n"))))
+  (CallExpr 0x2e37318 <line:69:5, col:31> 'int'
+    (ImplicitCastExpr 0x2e37300 <col:5> 'int (*)(struct timeval *restrict, __timezone_ptr_t)' <FunctionToPointerDecay>
+      (DeclRefExpr 0x2e37218 <col:5> 'int (struct timeval *restrict, __timezone_ptr_t)' Function 0x2e2e000 'gettimeofday' 'int (struct timeval *restrict, __timezone_ptr_t)'))
+    (UnaryOperator 0x2e37268 <col:18, col:19> 'struct timeval *' prefix '&'
+      (DeclRefExpr 0x2e37240 <col:19> 'struct timeval':'struct timeval' lvalue Var 0x2e36000 'before' 'struct timeval':'struct timeval'))
+    (ImplicitCastExpr 0x2e37350 </home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:16, col:25> 'struct timezone *' <NullToPointer>
+      (ParenExpr 0x2e372e0 <col:16, col:25> 'void *'
+        (CStyleCastExpr 0x2e372b8 <col:17, col:24> 'void *' <NullToPointer>
+          (IntegerLiteral 0x2e37288 <col:24> 'int' 0)))))
+  (ForStmt 0x2e37888 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Binary.c:70:5, line:74:5>
+    (BinaryOperator 0x2e373b0 <line:70:10, col:14> 'int' '='
+      (DeclRefExpr 0x2e37368 <col:10> 'int' lvalue Var 0x2e361e0 'j' 'int')
+      (IntegerLiteral 0x2e37390 <col:14> 'int' 0))
+    (<<<NULL>>>)
+    (BinaryOperator 0x2e37438 <col:17, col:21> 'int' '<'
+      (ImplicitCastExpr 0x2e37420 <col:17> 'int' <LValueToRValue>
+        (DeclRefExpr 0x2e373d8 <col:17> 'int' lvalue Var 0x2e361e0 'j' 'int'))
+      (IntegerLiteral 0x2e37400 <col:21> 'int' 1000000))
+    (UnaryOperator 0x2e37488 <col:30, col:31> 'int' postfix '++'
+      (DeclRefExpr 0x2e37460 <col:30> 'int' lvalue Var 0x2e361e0 'j' 'int'))
+    (ForStmt 0x2e37848 <line:71:5, line:74:5>
+      (BinaryOperator 0x2e374f0 <line:71:10, col:14> 'int' '='
+        (DeclRefExpr 0x2e374a8 <col:10> 'int' lvalue Var 0x2e36160 'k' 'int')
+        (IntegerLiteral 0x2e374d0 <col:14> 'int' 0))
+      (<<<NULL>>>)
+      (BinaryOperator 0x2e37628 <col:17, col:25> 'int' '<'
+        (ImplicitCastExpr 0x2e37610 <col:17> 'int' <LValueToRValue>
+          (DeclRefExpr 0x2e37518 <col:17> 'int' lvalue Var 0x2e36160 'k' 'int'))
+        (BinaryOperator 0x2e375e8 <col:21, col:25> 'int' '+'
+          (BinaryOperator 0x2e375a0 <col:21, col:23> 'int' '*'
+            (IntegerLiteral 0x2e37540 <col:21> 'int' 2)
+            (ImplicitCastExpr 0x2e37588 <col:23> 'int' <LValueToRValue>
+              (DeclRefExpr 0x2e37560 <col:23> 'int' lvalue Var 0x2e35e10 'n' 'int')))
+          (IntegerLiteral 0x2e375c8 <col:25> 'int' 1)))
+      (UnaryOperator 0x2e37678 <col:28, col:29> 'int' postfix '++'
+        (DeclRefExpr 0x2e37650 <col:28> 'int' lvalue Var 0x2e36160 'k' 'int'))
+      (CompoundStmt 0x2e37828 <col:33, line:74:5>
+        (BinaryOperator 0x2e37800 <line:72:2, col:25> 'int' '='
+          (DeclRefExpr 0x2e37698 <col:2> 'int' lvalue Var 0x2e35f70 'where' 'int')
+          (CallExpr 0x2e37778 <col:10, col:25> 'int'
+            (ImplicitCastExpr 0x2e37760 <col:10> 'int (*)(int, int *, int)' <FunctionToPointerDecay>
+              (DeclRefExpr 0x2e376c0 <col:10> 'int (int, int *, int)' Function 0x2e34400 'binary2' 'int (int, int *, int)'))
+            (ImplicitCastExpr 0x2e377b8 <col:18> 'int' <LValueToRValue>
+              (DeclRefExpr 0x2e376e8 <col:18> 'int' lvalue Var 0x2e35e10 'n' 'int'))
+            (ImplicitCastExpr 0x2e377d0 <col:21> 'int *' <ArrayToPointerDecay>
+              (DeclRefExpr 0x2e37710 <col:21> 'int [17]' lvalue Var 0x2e35830 'a' 'int [17]'))
+            (ImplicitCastExpr 0x2e377e8 <col:24> 'int' <LValueToRValue>
+              (DeclRefExpr 0x2e37738 <col:24> 'int' lvalue Var 0x2e36160 'k' 'int')))))))
+  (CallExpr 0x2e379c8 <line:75:5, col:30> 'int'
+    (ImplicitCastExpr 0x2e379b0 <col:5> 'int (*)(struct timeval *restrict, __timezone_ptr_t)' <FunctionToPointerDecay>
+      (DeclRefExpr 0x2e378c8 <col:5> 'int (struct timeval *restrict, __timezone_ptr_t)' Function 0x2e2e000 'gettimeofday' 'int (struct timeval *restrict, __timezone_ptr_t)'))
+    (UnaryOperator 0x2e37918 <col:18, col:19> 'struct timeval *' prefix '&'
+      (DeclRefExpr 0x2e378f0 <col:19> 'struct timeval':'struct timeval' lvalue Var 0x2e36090 'after' 'struct timeval':'struct timeval'))
+    (ImplicitCastExpr 0x2e37a00 </home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:16, col:25> 'struct timezone *' <NullToPointer>
+      (ParenExpr 0x2e37990 <col:16, col:25> 'void *'
+        (CStyleCastExpr 0x2e37968 <col:17, col:24> 'void *' <NullToPointer>
+          (IntegerLiteral 0x2e37938 <col:24> 'int' 0)))))
+  (CallExpr 0x2e37c08 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Binary.c:76:5, line:77:31> 'int'
+    (ImplicitCastExpr 0x2e37bf0 <line:76:5> 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+      (DeclRefExpr 0x2e37a18 <col:5> 'int (const char *restrict, ...)' Function 0x2e0f710 'printf' 'int (const char *restrict, ...)'))
+    (ImplicitCastExpr 0x2e37c70 <col:12> 'const char *' <BitCast>
+      (ImplicitCastExpr 0x2e37c58 <col:12> 'char *' <ArrayToPointerDecay>
+        (StringLiteral 0x2e37a40 <col:12> 'char [35]' lvalue "before=[%ld,%ld], after=[%ld,%ld]\n")))
+    (ImplicitCastExpr 0x2e37c88 <col:51, col:58> '__time_t':'long' <LValueToRValue>
+      (MemberExpr 0x2e37ab8 <col:51, col:58> '__time_t':'long' lvalue .tv_sec 0x2e1eba0
+        (DeclRefExpr 0x2e37a90 <col:51> 'struct timeval':'struct timeval' lvalue Var 0x2e36000 'before' 'struct timeval':'struct timeval')))
+    (ImplicitCastExpr 0x2e37ca0 <col:66, col:73> '__suseconds_t':'long' <LValueToRValue>
+      (MemberExpr 0x2e37b10 <col:66, col:73> '__suseconds_t':'long' lvalue .tv_usec 0x2e1ec20
+        (DeclRefExpr 0x2e37ae8 <col:66> 'struct timeval':'struct timeval' lvalue Var 0x2e36000 'before' 'struct timeval':'struct timeval')))
+    (ImplicitCastExpr 0x2e37cb8 <line:77:4, col:10> '__time_t':'long' <LValueToRValue>
+      (MemberExpr 0x2e37b68 <col:4, col:10> '__time_t':'long' lvalue .tv_sec 0x2e1eba0
+        (DeclRefExpr 0x2e37b40 <col:4> 'struct timeval':'struct timeval' lvalue Var 0x2e36090 'after' 'struct timeval':'struct timeval')))
+    (ImplicitCastExpr 0x2e37cd0 <col:18, col:24> '__suseconds_t':'long' <LValueToRValue>
+      (MemberExpr 0x2e37bc0 <col:18, col:24> '__suseconds_t':'long' lvalue .tv_usec 0x2e1ec20
+        (DeclRefExpr 0x2e37b98 <col:18> 'struct timeval':'struct timeval' lvalue Var 0x2e36090 'after' 'struct timeval':'struct timeval'))))
+  (CallExpr 0x2e37e60 <line:78:5, col:62> 'int'
+    (ImplicitCastExpr 0x2e37e48 <col:5> 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+      (DeclRefExpr 0x2e37ce8 <col:5> 'int (const char *restrict, ...)' Function 0x2e0f710 'printf' 'int (const char *restrict, ...)'))
+    (ImplicitCastExpr 0x2e37eb0 <col:12> 'const char *' <BitCast>
+      (ImplicitCastExpr 0x2e37e98 <col:12> 'char *' <ArrayToPointerDecay>
+        (StringLiteral 0x2e37d10 <col:12> 'char [23]' lvalue "The difference is %ld\n")))
+    (CallExpr 0x2e37de0 <col:39, col:61> 'long'
+      (ImplicitCastExpr 0x2e37dc8 <col:39> 'long (*)(struct timeval, struct timeval)' <FunctionToPointerDecay>
+        (DeclRefExpr 0x2e37d50 <col:39> 'long (struct timeval, struct timeval)' Function 0x2e35200 'timediff' 'long (struct timeval, struct timeval)'))
+      (ImplicitCastExpr 0x2e37e18 <col:48> 'struct timeval':'struct timeval' <LValueToRValue>
+        (DeclRefExpr 0x2e37d78 <col:48> 'struct timeval':'struct timeval' lvalue Var 0x2e36000 'before' 'struct timeval':'struct timeval'))
+      (ImplicitCastExpr 0x2e37e30 <col:56> 'struct timeval':'struct timeval' <LValueToRValue>
+        (DeclRefExpr 0x2e37da0 <col:56> 'struct timeval':'struct timeval' lvalue Var 0x2e36090 'after' 'struct timeval':'struct timeval'))))
+  (ReturnStmt 0x2e37ee8 <line:79:5, col:12>
+    (IntegerLiteral 0x2e37ec8 <col:12> 'int' 0)))
+
+

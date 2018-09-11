@@ -1,0 +1,13 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/funcPointer Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/funcPointer Call Graph"
+	];
+
+	Node0x360959156 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/funcPointer/funcPointer.c"];
+	Node0x798162119 [shape=oval, label="0x2815550. (/home/labaccount/11-2-17/mlsa/IG/example/funcPointer/funcPointer.c)\n**Undetermined_Function**(foo, <<2>>)"];
+	Node0x360959156 -> Node0x798162119;
+	Node0x535269116 [shape=oval, label="0x2816658. (/home/labaccount/11-2-17/mlsa/IG/example/funcPointer/funcPointer.c)\n**Undetermined_Function**(UNOP, <<2>>)"];
+	Node0x360959156 -> Node0x535269116;
+}

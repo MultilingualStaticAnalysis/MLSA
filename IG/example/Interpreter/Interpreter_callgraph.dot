@@ -1,0 +1,15 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/Interpreter Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/Interpreter Call Graph"
+	];
+
+	Node0x107301736 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/Interpreter/Interpreter.cpp"];
+	Node0x480037654 [shape=oval, label="0x3035878. (/home/labaccount/11-2-17/mlsa/IG/example/Interpreter/Interpreter.cpp)\nwikibooks_design_patterns::Evaluator::interpret(variables)"];
+	Node0x107301736 -> Node0x480037654;
+	Node0x417483204 [shape=oval, label="0x3035b20. (/home/labaccount/11-2-17/mlsa/IG/example/Interpreter/Interpreter.cpp)\nOBJ.begin()"];
+	Node0x107301736 -> Node0x417483204;
+	Node0x192641674 [shape=oval, label="0x3036148. (/home/labaccount/11-2-17/mlsa/IG/example/Interpreter/Interpreter.cpp)\nOBJ.end()"];
+	Node0x107301736 -> Node0x192641674;
+}

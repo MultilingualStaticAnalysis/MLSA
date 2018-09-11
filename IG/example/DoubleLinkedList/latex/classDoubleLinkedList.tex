@@ -1,0 +1,380 @@
+\hypertarget{classDoubleLinkedList}{}\section{Double\+Linked\+List$<$ T $>$ Class Template Reference}
+\label{classDoubleLinkedList}\index{Double\+Linked\+List$<$ T $>$@{Double\+Linked\+List$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Double\+Linked\+List.\+h$>$}
+
+
+
+Inheritance diagram for Double\+Linked\+List$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classDoubleLinkedList__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Double\+Linked\+List$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classDoubleLinkedList__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDoubleLinkedList_a597668999f971b0ceab3809daa094dab}{Double\+Linked\+List} ()
+\item 
+\hyperlink{classDoubleLinkedList_a369216eb49cf73fdc0aba61f0cc23785}{Double\+Linked\+List} (const \hyperlink{classDoubleLinkedList}{Double\+Linked\+List}$<$ T $>$ \&dl, bool \hyperlink{classDoubleLinkedList_aaaf8f24ea7fa8c66165d09015510b897}{sort}=false)
+\item 
+\hyperlink{classDoubleLinkedList_a1899a5f1dd799983930746331d77ebb7}{$\sim$\+Double\+Linked\+List} ()
+\item 
+\hyperlink{classNode}{Node}$<$ T $>$ $\ast$ \hyperlink{classDoubleLinkedList_a7b2e49b86ff5ebeb941e64f76c6a0d4c}{get\+Tail} () const 
+\item 
+void \hyperlink{classDoubleLinkedList_a5732ebaac8186c9847363c2569a1bf49}{append} (\hyperlink{classNode}{Node}$<$ T $>$ $\ast$n)
+\item 
+void \hyperlink{classDoubleLinkedList_a13520ddb52ec28efe42b5c29e9ba27e0}{delete\+At\+Pos} (int pos)
+\item 
+void \hyperlink{classDoubleLinkedList_abd88472eeb1c4904b9e92d712e652d45}{insert\+At\+Pos} (\hyperlink{classNode}{Node}$<$ T $>$ $\ast$n, int pos)
+\item 
+void \hyperlink{classDoubleLinkedList_a2103b34aa303947d86b063747701407b}{display\+Ascending} () const 
+\item 
+void \hyperlink{classDoubleLinkedList_ab426868e7e51cd082ff2fd5c3cb3eee3}{display\+Descending} () const 
+\item 
+void \hyperlink{classDoubleLinkedList_aaaf8f24ea7fa8c66165d09015510b897}{sort} (bool ascend=true)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNode}{Node}$<$ T $>$ $\ast$ \hyperlink{classDoubleLinkedList_aa9a7bf7a1c989e7a49781ac62d49982c}{tail}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Double\+Linked\+List@{Double\+Linked\+List}!Double\+Linked\+List@{Double\+Linked\+List}}
+\index{Double\+Linked\+List@{Double\+Linked\+List}!Double\+Linked\+List@{Double\+Linked\+List}}
+\subsubsection[{\texorpdfstring{Double\+Linked\+List()}{DoubleLinkedList()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Double\+Linked\+List}$<$ T $>$\+::{\bf Double\+Linked\+List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classDoubleLinkedList_a597668999f971b0ceab3809daa094dab}{}\label{classDoubleLinkedList_a597668999f971b0ceab3809daa094dab}
+
+\begin{DoxyCode}
+15 \{
+16    \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head} = NULL;
+17    \hyperlink{classDoubleLinkedList_aa9a7bf7a1c989e7a49781ac62d49982c}{tail} = NULL;
+18 \}
+\end{DoxyCode}
+\index{Double\+Linked\+List@{Double\+Linked\+List}!Double\+Linked\+List@{Double\+Linked\+List}}
+\index{Double\+Linked\+List@{Double\+Linked\+List}!Double\+Linked\+List@{Double\+Linked\+List}}
+\subsubsection[{\texorpdfstring{Double\+Linked\+List(const Double\+Linked\+List$<$ T $>$ \&dl, bool sort=false)}{DoubleLinkedList(const DoubleLinkedList< T > &dl, bool sort=false)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Double\+Linked\+List}$<$ T $>$\+::{\bf Double\+Linked\+List} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Double\+Linked\+List}$<$ T $>$ \&}]{dl, }
+\item[{bool}]{sort = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\hypertarget{classDoubleLinkedList_a369216eb49cf73fdc0aba61f0cc23785}{}\label{classDoubleLinkedList_a369216eb49cf73fdc0aba61f0cc23785}
+
+\begin{DoxyCode}
+21 \{
+22    \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head} = NULL;
+23    \hyperlink{classDoubleLinkedList_aa9a7bf7a1c989e7a49781ac62d49982c}{tail} = NULL;
+24    \hyperlink{classNode}{Node}* nPtr;
+25    \hyperlink{classStudent}{Student}* sPtr;
+26    \textcolor{keywordflow}{if}(!dl.\hyperlink{classLinkedList_a1b28b1e19e5aa68f3d89352e307928f6}{isEmpty}())
+27    \{
+28       \hyperlink{classNode}{Node}* curr = dl.\hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head};
+29       \textcolor{keywordflow}{while}(curr) \textcolor{comment}{//copies each node                                                                       
+                                                                                                       }
+30       \{
+31          nPtr = \textcolor{keyword}{new} \hyperlink{classNode_a0ac1d44cfe588be564acf25485029bd8}{Node}(*curr); \textcolor{comment}{//creates new Node with the copy Student                              
+                                                                                                           }
+32          \hyperlink{classDoubleLinkedList_a5732ebaac8186c9847363c2569a1bf49}{append}(nPtr); \textcolor{comment}{//append new node to the new list                                             
+                                                                                                             }
+33          curr = curr -> \hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}();
+34       \}
+35       \textcolor{keywordflow}{if}(\hyperlink{classDoubleLinkedList_aaaf8f24ea7fa8c66165d09015510b897}{sort}) \textcolor{comment}{//if user requests the new list to be sorted                                            
+                                                                                                           }
+36          \hyperlink{classLinkedList_abd329a83adcec046dc482f7566cf91f4}{selectionSort}(); \textcolor{comment}{//sorts list using the selectionSort method                         
+                                                                                                                  
+        }
+37    \}
+38 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDoubleLinkedList_a369216eb49cf73fdc0aba61f0cc23785_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Double\+Linked\+List@{Double\+Linked\+List}!````~Double\+Linked\+List@{$\sim$\+Double\+Linked\+List}}
+\index{````~Double\+Linked\+List@{$\sim$\+Double\+Linked\+List}!Double\+Linked\+List@{Double\+Linked\+List}}
+\subsubsection[{\texorpdfstring{$\sim$\+Double\+Linked\+List()}{~DoubleLinkedList()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Double\+Linked\+List}$<$ T $>$\+::$\sim${\bf Double\+Linked\+List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classDoubleLinkedList_a1899a5f1dd799983930746331d77ebb7}{}\label{classDoubleLinkedList_a1899a5f1dd799983930746331d77ebb7}
+
+\begin{DoxyCode}
+41 \{
+42    \hyperlink{classNode}{Node}* curr = \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head};
+43    \hyperlink{classNode}{Node}* del;
+44    \textcolor{keywordflow}{while}(curr)
+45    \{
+46       del = curr;
+47       curr = curr -> \hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}();
+48       \textcolor{keyword}{delete} del; \textcolor{comment}{//releases the Node memory                                                               
+                                                                                                       }
+49    \}
+50    del = NULL;
+51    \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head} = NULL;
+52    \hyperlink{classDoubleLinkedList_aa9a7bf7a1c989e7a49781ac62d49982c}{tail} = NULL;
+53 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Double\+Linked\+List@{Double\+Linked\+List}!append@{append}}
+\index{append@{append}!Double\+Linked\+List@{Double\+Linked\+List}}
+\subsubsection[{\texorpdfstring{append(\+Node$<$ T $>$ $\ast$n)}{append(Node< T > *n)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Double\+Linked\+List}$<$ T $>$\+::append (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classDoubleLinkedList_a5732ebaac8186c9847363c2569a1bf49}{}\label{classDoubleLinkedList_a5732ebaac8186c9847363c2569a1bf49}
+
+
+Reimplemented from \hyperlink{classLinkedList_ac2f92598858e9ba02af8722fba803c53}{Linked\+List$<$ T $>$}.
+
+
+\begin{DoxyCode}
+61 \{
+62    \hyperlink{classNode}{Node}* curr;
+63    \textcolor{keywordflow}{if}(\hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head} == NULL)
+64       \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head} = n; \textcolor{comment}{//first Node added to the list                                                         
+                                                                                                           }
+65    \textcolor{keywordflow}{else}
+66    \{
+67       curr = \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head};
+68       \textcolor{keywordflow}{while}(curr -> \hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}()) \textcolor{comment}{//finds the last Node in the list                                    
+                                                                                                              }
+69          curr = curr -> \hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}();
+70       curr -> \hyperlink{classNode_a0f69ba4f73cd616755f4ec0ae9fa7f96}{setNext}(n); \textcolor{comment}{//appends Node onto the end of the list                                   
+                                                                                                              }
+71       n -> \hyperlink{classNode_a3c292611bdab2cbe724c841c6984fcad}{setPrev}(curr);
+72    \}
+73    \hyperlink{classDoubleLinkedList_aa9a7bf7a1c989e7a49781ac62d49982c}{tail} = n; \textcolor{comment}{//Node is added to end of list, so tail points to new Node                                
+                                                                                                           }
+74 \}
+\end{DoxyCode}
+\index{Double\+Linked\+List@{Double\+Linked\+List}!delete\+At\+Pos@{delete\+At\+Pos}}
+\index{delete\+At\+Pos@{delete\+At\+Pos}!Double\+Linked\+List@{Double\+Linked\+List}}
+\subsubsection[{\texorpdfstring{delete\+At\+Pos(int pos)}{deleteAtPos(int pos)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Double\+Linked\+List}$<$ T $>$\+::delete\+At\+Pos (
+\begin{DoxyParamCaption}
+\item[{int}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classDoubleLinkedList_a13520ddb52ec28efe42b5c29e9ba27e0}{}\label{classDoubleLinkedList_a13520ddb52ec28efe42b5c29e9ba27e0}
+
+
+Reimplemented from \hyperlink{classLinkedList_a62a89a30509d38b88c75177b8efa9a98}{Linked\+List$<$ T $>$}.
+
+
+\begin{DoxyCode}
+77 \{
+78    \hyperlink{classNode}{Node}* curr = \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head};
+79    \textcolor{keywordflow}{if}(pos <= \hyperlink{classLinkedList_ae04dbbcae32f8fb03dce3e174854981f}{getNumNode}() && pos > 0) \textcolor{comment}{//if position is in list parameters and the list is not
+       empty                                                                                                         }
+80    \{
+81       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=1; k<pos; k++) \textcolor{comment}{//loop to arrive at the position                                            
+                                                                                                       }
+82       \{
+83          curr = curr->\hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}();
+84       \}
+85       \textcolor{keywordflow}{if}(pos == \hyperlink{classLinkedList_ae04dbbcae32f8fb03dce3e174854981f}{getNumNode}()) \textcolor{comment}{//last node in the list                                            
+                                                                                                                 }
+86          \hyperlink{classDoubleLinkedList_aa9a7bf7a1c989e7a49781ac62d49982c}{tail} = curr->\hyperlink{classNode_af4e96a27c770adc291f2f7a4bc2c538d}{getPrev}(); \textcolor{comment}{//tail points to second-last node                              
+                                                                                                                  }
+87       \textcolor{keywordflow}{else}
+88          curr->\hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}()->setPrev(curr->\hyperlink{classNode_af4e96a27c770adc291f2f7a4bc2c538d}{getPrev}());
+89       \textcolor{keywordflow}{if}(pos == 1) \textcolor{comment}{//first node in the list}
+90         \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head} = curr->\hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}(); \textcolor{comment}{//head points to second node                                    
+                                                                                                                 }
+91       \textcolor{keywordflow}{else}
+92          curr->\hyperlink{classNode_af4e96a27c770adc291f2f7a4bc2c538d}{getPrev}()->setNext(curr->\hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}());
+93       \textcolor{keyword}{delete} curr; \textcolor{comment}{//deletes node                                                                          
+                                                                                                       }
+94       curr = NULL;
+95    \}
+96 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDoubleLinkedList_a13520ddb52ec28efe42b5c29e9ba27e0_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Double\+Linked\+List@{Double\+Linked\+List}!display\+Ascending@{display\+Ascending}}
+\index{display\+Ascending@{display\+Ascending}!Double\+Linked\+List@{Double\+Linked\+List}}
+\subsubsection[{\texorpdfstring{display\+Ascending() const }{displayAscending() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Double\+Linked\+List}$<$ T $>$\+::display\+Ascending (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classDoubleLinkedList_a2103b34aa303947d86b063747701407b}{}\label{classDoubleLinkedList_a2103b34aa303947d86b063747701407b}
+
+\begin{DoxyCode}
+118 \{
+119    \hyperlink{classLinkedList_afddb5dbcc39e687add40de41b975cd8d}{display}(); \textcolor{comment}{//calls display function defined in LinkedList.cpp}
+120 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classDoubleLinkedList_a2103b34aa303947d86b063747701407b_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Double\+Linked\+List@{Double\+Linked\+List}!display\+Descending@{display\+Descending}}
+\index{display\+Descending@{display\+Descending}!Double\+Linked\+List@{Double\+Linked\+List}}
+\subsubsection[{\texorpdfstring{display\+Descending() const }{displayDescending() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Double\+Linked\+List}$<$ T $>$\+::display\+Descending (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classDoubleLinkedList_ab426868e7e51cd082ff2fd5c3cb3eee3}{}\label{classDoubleLinkedList_ab426868e7e51cd082ff2fd5c3cb3eee3}
+
+\begin{DoxyCode}
+123 \{
+124    \hyperlink{classNode}{Node}* curr = \hyperlink{classDoubleLinkedList_aa9a7bf7a1c989e7a49781ac62d49982c}{tail};
+125    \textcolor{keywordflow}{while}(curr != NULL) \textcolor{comment}{//goes through all Nodes                                                            
+                                                                                                       }
+126    \{
+127       cout << curr -> getStudent() << endl; \textcolor{comment}{//displays Student information                                 
+                                                                                                       }
+128       curr = curr -> \hyperlink{classNode_af4e96a27c770adc291f2f7a4bc2c538d}{getPrev}(); \textcolor{comment}{//goes to the previous Node in the list                             
+                                                                                                              }
+129    \}
+130 \}
+\end{DoxyCode}
+\index{Double\+Linked\+List@{Double\+Linked\+List}!get\+Tail@{get\+Tail}}
+\index{get\+Tail@{get\+Tail}!Double\+Linked\+List@{Double\+Linked\+List}}
+\subsubsection[{\texorpdfstring{get\+Tail() const }{getTail() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Node}$<$ T $>$ $\ast$ {\bf Double\+Linked\+List}$<$ T $>$\+::get\+Tail (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classDoubleLinkedList_a7b2e49b86ff5ebeb941e64f76c6a0d4c}{}\label{classDoubleLinkedList_a7b2e49b86ff5ebeb941e64f76c6a0d4c}
+
+\begin{DoxyCode}
+56 \{
+57    \textcolor{keywordflow}{return} \hyperlink{classDoubleLinkedList_aa9a7bf7a1c989e7a49781ac62d49982c}{tail};
+58 \}
+\end{DoxyCode}
+\index{Double\+Linked\+List@{Double\+Linked\+List}!insert\+At\+Pos@{insert\+At\+Pos}}
+\index{insert\+At\+Pos@{insert\+At\+Pos}!Double\+Linked\+List@{Double\+Linked\+List}}
+\subsubsection[{\texorpdfstring{insert\+At\+Pos(\+Node$<$ T $>$ $\ast$n, int pos)}{insertAtPos(Node< T > *n, int pos)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Double\+Linked\+List}$<$ T $>$\+::insert\+At\+Pos (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{n, }
+\item[{int}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classDoubleLinkedList_abd88472eeb1c4904b9e92d712e652d45}{}\label{classDoubleLinkedList_abd88472eeb1c4904b9e92d712e652d45}
+
+
+Reimplemented from \hyperlink{classLinkedList_aa7b12c5f9bb22be91012d68c9da0b431}{Linked\+List$<$ T $>$}.
+
+
+\begin{DoxyCode}
+99 \{
+100    \hyperlink{classNode}{Node}* curr = \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head};
+101    \textcolor{keywordflow}{if}(pos <= \hyperlink{classLinkedList_ae04dbbcae32f8fb03dce3e174854981f}{getNumNode}() && pos > 0) \textcolor{comment}{//if position is in list parameters and the list is not
+       empty                                                                                                         }
+102    \{
+103       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=1; k<pos; k++) \textcolor{comment}{//loop to arrive at the position requested                                  
+                                                                                                       }
+104       \{
+105          curr = curr->\hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}();
+106       \}
+107       n->\hyperlink{classNode_a0f69ba4f73cd616755f4ec0ae9fa7f96}{setNext}(curr); \textcolor{comment}{//sets up new Node's next and prev pointers                                 
+                                                                                                              }
+108       n->\hyperlink{classNode_a3c292611bdab2cbe724c841c6984fcad}{setPrev}(curr->\hyperlink{classNode_af4e96a27c770adc291f2f7a4bc2c538d}{getPrev}());
+109       curr->\hyperlink{classNode_a3c292611bdab2cbe724c841c6984fcad}{setPrev}(n);
+110       \textcolor{keywordflow}{if}(pos == 1) \textcolor{comment}{//if node is the first in the list                                                      
+                                                                                                       }
+111          \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head} = n; \textcolor{comment}{//head points to the new Node                                                       
+                                                                                                           }
+112       \textcolor{keywordflow}{else}
+113          n->\hyperlink{classNode_af4e96a27c770adc291f2f7a4bc2c538d}{getPrev}()->setNext(n);
+114    \}
+115 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDoubleLinkedList_abd88472eeb1c4904b9e92d712e652d45_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Double\+Linked\+List@{Double\+Linked\+List}!sort@{sort}}
+\index{sort@{sort}!Double\+Linked\+List@{Double\+Linked\+List}}
+\subsubsection[{\texorpdfstring{sort(bool ascend=true)}{sort(bool ascend=true)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Double\+Linked\+List}$<$ T $>$\+::sort (
+\begin{DoxyParamCaption}
+\item[{bool}]{ascend = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{classDoubleLinkedList_aaaf8f24ea7fa8c66165d09015510b897}{}\label{classDoubleLinkedList_aaaf8f24ea7fa8c66165d09015510b897}
+
+\begin{DoxyCode}
+133 \{
+134    \textcolor{keywordflow}{if}(ascend) \textcolor{comment}{//ascending order                                                                            
+                                                                                                       }
+135       \hyperlink{classLinkedList_abd329a83adcec046dc482f7566cf91f4}{selectionSort}();
+136    \textcolor{keywordflow}{else} \textcolor{comment}{//descending order                                                                                 
+                                                                                                       }
+137       \hyperlink{classLinkedList_aa644d66bfb879e71d1805a794a78b928}{bubbleSort}(); \textcolor{comment}{//function was changed to accomodate descending order in LinkedList.cpp      
+                                                                                                                 }
+138 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDoubleLinkedList_aaaf8f24ea7fa8c66165d09015510b897_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Double\+Linked\+List@{Double\+Linked\+List}!tail@{tail}}
+\index{tail@{tail}!Double\+Linked\+List@{Double\+Linked\+List}}
+\subsubsection[{\texorpdfstring{tail}{tail}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Node}$<$T$>$$\ast$ {\bf Double\+Linked\+List}$<$ T $>$\+::tail\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classDoubleLinkedList_aa9a7bf7a1c989e7a49781ac62d49982c}{}\label{classDoubleLinkedList_aa9a7bf7a1c989e7a49781ac62d49982c}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{DoubleLinkedList_8h}{Double\+Linked\+List.\+h}\item 
+\hyperlink{DoubleLinkedList_8cpp}{Double\+Linked\+List.\+cpp}\end{DoxyCompactItemize}

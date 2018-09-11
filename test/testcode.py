@@ -71,8 +71,14 @@ with open(statsfile, 'w') as f:
         newfile = testPath+'/'+filename
         f.write('differences in '+filename+':\n')
         #os.system('diff --brief '+ogfile+' '+newfile+' >> '+statsfile)
-	command = 'bash -c "diff <(python ' +mlsaPath+ 'pathfilter.py '+ogfile+')' + ' <(python ' +mlsaPath+ 'pathfilter.py '+newfile+')' + ' >> '+statsfile + '"'
-	#print command
+	#command = 'bash -c "diff <(python ' +mlsaPath+ 'pathfilter.py '+ogfile+')' + ' <(python ' +mlsaPath+ 'pathfilter.py '+newfile+')' + ' >> '+statsfile + '"'
+# The following statement has been used to compare data from the two files to avoid the differences being created due to presence of unique identification numbers(hexadecimal number)
+# 'sed' command has been used to remove unique numbers from the file for avoiding the differences in files
+# NAME: Saba Zahra
+# DATE: 9/6/2018
+        command = 'bash -c "diff <(python ' +mlsaPath+ 'pathfilter.py '+ogfile+'|sed -r \'s/0x[0-9,a-f]+//g\')' + ' <(python ' +mlsaPath+ 'pathfilter.py '+newfile+'|sed -r \'s/0x[0-9,a-f]+//g\')' + ' >> '+statsfile + '"'
+
+	print command
         os.system(command)
         #os.system('bash -c "diff --brief <(python ' +mlsaPath+ 'pathfilter.py '+ogfile+')' + ' <(python ' +mlsaPath+ 'pathfilter.py '+newfile+')' + ' >> '+statsfile + '"')
 #	count = count + 1

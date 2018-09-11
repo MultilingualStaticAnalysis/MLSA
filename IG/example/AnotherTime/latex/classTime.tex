@@ -1,0 +1,213 @@
+\hypertarget{classTime}{}\section{Time Class Reference}
+\label{classTime}\index{Time@{Time}}
+
+
+{\ttfamily \#include $<$Time.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTime_a0fc29d4a1be77a0f9fe1cd28c1d34958}{Time} (int h=0, int m=0, int s=0)
+\item 
+int \hyperlink{classTime_a4e9d93c2aaaac84b0a49f44184968860}{get\+Hour} () const 
+\item 
+void \hyperlink{classTime_a79e74e17893cf244e1318ceb9b1c7f32}{set\+Hour} (int h)
+\item 
+int \hyperlink{classTime_a6ccac73be7aacc12410cea6b3d216357}{get\+Minute} () const 
+\item 
+void \hyperlink{classTime_a35779c16a9db3499a27eccd58793f3b5}{set\+Minute} (int m)
+\item 
+int \hyperlink{classTime_adc2217366bfc4bb39eb547982747b6da}{get\+Second} () const 
+\item 
+void \hyperlink{classTime_a0528cf12858546b60ebb33fdcbc3fca2}{set\+Second} (int s)
+\item 
+void \hyperlink{classTime_ae05f94882a72debabb02e0889054d89a}{set\+Time} (int h, int m, int s)
+\item 
+void \hyperlink{classTime_acd9b7522e50fc667d81468219c5756e8}{print} () const 
+\item 
+void \hyperlink{classTime_a888a02dc15e919c5bafc4dcc95f093b7}{next\+Second} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classTime_a497d35aa44ea40706dbab08f7a31d069}{hour}
+\item 
+int \hyperlink{classTime_a6c2e13147da34803a9784aa2b8bf8da8}{minute}
+\item 
+int \hyperlink{classTime_a63c9e64c7b453e10ba0f7f28bfedbcbf}{second}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Time@{Time}!Time@{Time}}
+\index{Time@{Time}!Time@{Time}}
+\subsubsection[{\texorpdfstring{Time(int h=0, int m=0, int s=0)}{Time(int h=0, int m=0, int s=0)}}]{\setlength{\rightskip}{0pt plus 5cm}Time\+::\+Time (
+\begin{DoxyParamCaption}
+\item[{int}]{h = {\ttfamily 0}, }
+\item[{int}]{m = {\ttfamily 0}, }
+\item[{int}]{s = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classTime_a0fc29d4a1be77a0f9fe1cd28c1d34958}{}\label{classTime_a0fc29d4a1be77a0f9fe1cd28c1d34958}
+
+\begin{DoxyCode}
+8                               \{
+9    \hyperlink{classTime_a497d35aa44ea40706dbab08f7a31d069}{hour} = h;
+10    \hyperlink{classTime_a6c2e13147da34803a9784aa2b8bf8da8}{minute} = m;
+11    \hyperlink{classTime_a63c9e64c7b453e10ba0f7f28bfedbcbf}{second} = s;
+12 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Time@{Time}!get\+Hour@{get\+Hour}}
+\index{get\+Hour@{get\+Hour}!Time@{Time}}
+\subsubsection[{\texorpdfstring{get\+Hour() const }{getHour() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Time\+::get\+Hour (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classTime_a4e9d93c2aaaac84b0a49f44184968860}{}\label{classTime_a4e9d93c2aaaac84b0a49f44184968860}
+
+\begin{DoxyCode}
+15                         \{
+16    \textcolor{keywordflow}{return} \hyperlink{classTime_a497d35aa44ea40706dbab08f7a31d069}{hour};
+17 \}
+\end{DoxyCode}
+\index{Time@{Time}!get\+Minute@{get\+Minute}}
+\index{get\+Minute@{get\+Minute}!Time@{Time}}
+\subsubsection[{\texorpdfstring{get\+Minute() const }{getMinute() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Time\+::get\+Minute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classTime_a6ccac73be7aacc12410cea6b3d216357}{}\label{classTime_a6ccac73be7aacc12410cea6b3d216357}
+
+\begin{DoxyCode}
+25                           \{
+26    \textcolor{keywordflow}{return} \hyperlink{classTime_a6c2e13147da34803a9784aa2b8bf8da8}{minute};
+27 \}
+\end{DoxyCode}
+\index{Time@{Time}!get\+Second@{get\+Second}}
+\index{get\+Second@{get\+Second}!Time@{Time}}
+\subsubsection[{\texorpdfstring{get\+Second() const }{getSecond() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Time\+::get\+Second (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classTime_adc2217366bfc4bb39eb547982747b6da}{}\label{classTime_adc2217366bfc4bb39eb547982747b6da}
+
+\begin{DoxyCode}
+35                           \{
+36    \textcolor{keywordflow}{return} \hyperlink{classTime_a63c9e64c7b453e10ba0f7f28bfedbcbf}{second};
+37 \}
+\end{DoxyCode}
+\index{Time@{Time}!next\+Second@{next\+Second}}
+\index{next\+Second@{next\+Second}!Time@{Time}}
+\subsubsection[{\texorpdfstring{next\+Second()}{nextSecond()}}]{\setlength{\rightskip}{0pt plus 5cm}void Time\+::next\+Second (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classTime_a888a02dc15e919c5bafc4dcc95f093b7}{}\label{classTime_a888a02dc15e919c5bafc4dcc95f093b7}
+
+\begin{DoxyCode}
+60                       \{
+61    ++\hyperlink{classTime_a63c9e64c7b453e10ba0f7f28bfedbcbf}{second};
+62    \textcolor{keywordflow}{if} (\hyperlink{classTime_a63c9e64c7b453e10ba0f7f28bfedbcbf}{second} >= 60) \{
+63       \hyperlink{classTime_a0528cf12858546b60ebb33fdcbc3fca2}{setSecond}(0);
+64       \hyperlink{classTime_a35779c16a9db3499a27eccd58793f3b5}{setMinute}(++\hyperlink{classTime_a6c2e13147da34803a9784aa2b8bf8da8}{minute});
+65    \}
+66    \textcolor{keywordflow}{if} (\hyperlink{classTime_a6c2e13147da34803a9784aa2b8bf8da8}{minute} >= 60) \{
+67       \hyperlink{classTime_a35779c16a9db3499a27eccd58793f3b5}{setMinute}(0);
+68       \hyperlink{classTime_a79e74e17893cf244e1318ceb9b1c7f32}{setHour}(++\hyperlink{classTime_a497d35aa44ea40706dbab08f7a31d069}{hour});
+69    \}
+70    \textcolor{keywordflow}{if} (\hyperlink{classTime_a497d35aa44ea40706dbab08f7a31d069}{hour} >= 24) \{
+71       \hyperlink{classTime_a79e74e17893cf244e1318ceb9b1c7f32}{setHour}(0);
+72    \}
+73 \}\end{DoxyCode}
+\index{Time@{Time}!print@{print}}
+\index{print@{print}!Time@{Time}}
+\subsubsection[{\texorpdfstring{print() const }{print() const }}]{\setlength{\rightskip}{0pt plus 5cm}void Time\+::print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classTime_acd9b7522e50fc667d81468219c5756e8}{}\label{classTime_acd9b7522e50fc667d81468219c5756e8}
+
+\begin{DoxyCode}
+52                        \{
+53    cout << setfill(\textcolor{charliteral}{'0'});    \textcolor{comment}{// zero-filled, need <iomanip>, sticky}
+54    cout << setw(2) << \hyperlink{classTime_a497d35aa44ea40706dbab08f7a31d069}{hour}  \textcolor{comment}{// set width to 2 spaces, need <iomanip>, non-sticky}
+55         << \textcolor{stringliteral}{":"} << setw(2) << \hyperlink{classTime_a6c2e13147da34803a9784aa2b8bf8da8}{minute}
+56         << \textcolor{stringliteral}{":"} << setw(2) << \hyperlink{classTime_a63c9e64c7b453e10ba0f7f28bfedbcbf}{second} << endl;
+57 \}
+\end{DoxyCode}
+\index{Time@{Time}!set\+Hour@{set\+Hour}}
+\index{set\+Hour@{set\+Hour}!Time@{Time}}
+\subsubsection[{\texorpdfstring{set\+Hour(int h)}{setHour(int h)}}]{\setlength{\rightskip}{0pt plus 5cm}void Time\+::set\+Hour (
+\begin{DoxyParamCaption}
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)}\hypertarget{classTime_a79e74e17893cf244e1318ceb9b1c7f32}{}\label{classTime_a79e74e17893cf244e1318ceb9b1c7f32}
+
+\begin{DoxyCode}
+20                         \{
+21    \hyperlink{classTime_a497d35aa44ea40706dbab08f7a31d069}{hour} = h;
+22 \}
+\end{DoxyCode}
+\index{Time@{Time}!set\+Minute@{set\+Minute}}
+\index{set\+Minute@{set\+Minute}!Time@{Time}}
+\subsubsection[{\texorpdfstring{set\+Minute(int m)}{setMinute(int m)}}]{\setlength{\rightskip}{0pt plus 5cm}void Time\+::set\+Minute (
+\begin{DoxyParamCaption}
+\item[{int}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{classTime_a35779c16a9db3499a27eccd58793f3b5}{}\label{classTime_a35779c16a9db3499a27eccd58793f3b5}
+
+\begin{DoxyCode}
+30                           \{
+31    \hyperlink{classTime_a6c2e13147da34803a9784aa2b8bf8da8}{minute} = m;
+32 \}
+\end{DoxyCode}
+\index{Time@{Time}!set\+Second@{set\+Second}}
+\index{set\+Second@{set\+Second}!Time@{Time}}
+\subsubsection[{\texorpdfstring{set\+Second(int s)}{setSecond(int s)}}]{\setlength{\rightskip}{0pt plus 5cm}void Time\+::set\+Second (
+\begin{DoxyParamCaption}
+\item[{int}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{classTime_a0528cf12858546b60ebb33fdcbc3fca2}{}\label{classTime_a0528cf12858546b60ebb33fdcbc3fca2}
+
+\begin{DoxyCode}
+40                           \{
+41    \hyperlink{classTime_a63c9e64c7b453e10ba0f7f28bfedbcbf}{second} = s;
+42 \}
+\end{DoxyCode}
+\index{Time@{Time}!set\+Time@{set\+Time}}
+\index{set\+Time@{set\+Time}!Time@{Time}}
+\subsubsection[{\texorpdfstring{set\+Time(int h, int m, int s)}{setTime(int h, int m, int s)}}]{\setlength{\rightskip}{0pt plus 5cm}void Time\+::set\+Time (
+\begin{DoxyParamCaption}
+\item[{int}]{h, }
+\item[{int}]{m, }
+\item[{int}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{classTime_ae05f94882a72debabb02e0889054d89a}{}\label{classTime_ae05f94882a72debabb02e0889054d89a}
+
+\begin{DoxyCode}
+45                                       \{
+46    \hyperlink{classTime_a79e74e17893cf244e1318ceb9b1c7f32}{setHour}(h);
+47    \hyperlink{classTime_a35779c16a9db3499a27eccd58793f3b5}{setMinute}(m);
+48    \hyperlink{classTime_a0528cf12858546b60ebb33fdcbc3fca2}{setSecond}(s);
+49 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Time@{Time}!hour@{hour}}
+\index{hour@{hour}!Time@{Time}}
+\subsubsection[{\texorpdfstring{hour}{hour}}]{\setlength{\rightskip}{0pt plus 5cm}int Time\+::hour\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classTime_a497d35aa44ea40706dbab08f7a31d069}{}\label{classTime_a497d35aa44ea40706dbab08f7a31d069}
+\index{Time@{Time}!minute@{minute}}
+\index{minute@{minute}!Time@{Time}}
+\subsubsection[{\texorpdfstring{minute}{minute}}]{\setlength{\rightskip}{0pt plus 5cm}int Time\+::minute\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classTime_a6c2e13147da34803a9784aa2b8bf8da8}{}\label{classTime_a6c2e13147da34803a9784aa2b8bf8da8}
+\index{Time@{Time}!second@{second}}
+\index{second@{second}!Time@{Time}}
+\subsubsection[{\texorpdfstring{second}{second}}]{\setlength{\rightskip}{0pt plus 5cm}int Time\+::second\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classTime_a63c9e64c7b453e10ba0f7f28bfedbcbf}{}\label{classTime_a63c9e64c7b453e10ba0f7f28bfedbcbf}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Time_8h}{Time.\+h}\item 
+\hyperlink{Time_8cpp}{Time.\+cpp}\end{DoxyCompactItemize}

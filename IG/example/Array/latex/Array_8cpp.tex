@@ -1,0 +1,93 @@
+\hypertarget{Array_8cpp}{}\section{Array.\+cpp File Reference}
+\label{Array_8cpp}\index{Array.\+cpp@{Array.\+cpp}}
+{\ttfamily \#include \char`\"{}Array.\+h\char`\"{}}\\*
+Include dependency graph for Array.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Array_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+istream \& \hyperlink{Array_8cpp_a14edf7ce8faebaaec1b5e81582fed73b}{operator$>$$>$} (istream \&input, \hyperlink{classArray}{Array} \&a)
+\item 
+ostream \& \hyperlink{Array_8cpp_a37415f259690744fe14f0589d4e74fb7}{operator$<$$<$} (ostream \&output, const \hyperlink{classArray}{Array} \&a)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Array.\+cpp@{Array.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Array.\+cpp@{Array.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(ostream \&output, const Array \&a)}{operator<<(ostream &output, const Array &a)}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{output, }
+\item[{const {\bf Array} \&}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{Array_8cpp_a37415f259690744fe14f0589d4e74fb7}{}\label{Array_8cpp_a37415f259690744fe14f0589d4e74fb7}
+
+\begin{DoxyCode}
+172 \{
+173    \textcolor{keywordtype}{int} i;
+174 
+175    cout << endl;
+176 
+177    \textcolor{comment}{// output private ptr-based array                                                                       
+                                                                                                       }
+178    \textcolor{keywordflow}{for} ( i = 0; i < a.\hyperlink{classArray_a1e2031821065f3fb9bfada13e2d6ab43}{size}; i++ )
+179    \{
+180       output << right << setw(10) << a.\hyperlink{classArray_ae2ca81aaef91da786ef75936184a178a}{dArr}[i];
+181 
+182       \textcolor{keywordflow}{if} ( (i + 1) % 4 == 0 ) \textcolor{comment}{// 4 numbers per row of output                                               
+                                                                                                       }
+183          output << endl;
+184    \}
+185 
+186    \textcolor{keywordflow}{if} ( i % 4 != 0 ) \textcolor{comment}{// end last line of output                                                            
+                                                                                                       }
+187       output << endl;
+188 
+189    \textcolor{keywordflow}{return} output; \textcolor{comment}{// enables cout << x << y;                                                               
+                                                                                                       }
+190 \}
+\end{DoxyCode}
+\index{Array.\+cpp@{Array.\+cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Array.\+cpp@{Array.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$>$$>$(istream \&input, Array \&a)}{operator>>(istream &input, Array &a)}}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{input, }
+\item[{{\bf Array} \&}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{Array_8cpp_a14edf7ce8faebaaec1b5e81582fed73b}{}\label{Array_8cpp_a14edf7ce8faebaaec1b5e81582fed73b}
+
+\begin{DoxyCode}
+146 \{
+147    vector<int> v;
+148    \textcolor{keywordtype}{int} c;
+149 
+150    input >> c;
+151    \textcolor{keywordflow}{while}(c != \hyperlink{classArray_ab425400868a291283a14fc228a344bf0}{Array::DELIM})\textcolor{comment}{//takes in all the integers entered up until DELIM is entered       
+                                                                                                                  
+       }
+152    \{
+153       v.push\_back(c);
+154       input >> c;
+155    \}
+156 
+157    \hyperlink{classArray}{Array} b(v.size());
+158    \textcolor{keywordflow}{if}(b.dArr == NULL)
+159    \{
+160       cerr << \textcolor{stringliteral}{"Error! Dynamic memory not allocated! Abort program!"} << endl << endl;
+161       exit(1);
+162    \}
+163 
+164    \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=0; k<b.size; k++)
+165       b.dArr[k] = v[k];
+166 
+167    a = b;
+168    return (input); \textcolor{comment}{// enables cin >> x >> y;                                                               
+                                                                                                       }
+169 \}
+\end{DoxyCode}

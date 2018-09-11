@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # MLSA Multilingual Software Analysis
 # This program is part of the MLSA package under development at Fordham University Department of Computer and Information Science.
 # <This program parses the Abstract Syntax Tree for a C program, and extracts the variable assignments (only literals) into a Python List>
@@ -47,7 +48,7 @@ def findSource(treeLines, fileName):
 	fileFound = False
 	
 	for line in treeLines:
-		if line.find('<') != -1 and line.find('>') != -1 and (line.find('.c') != -1 or line.find('.cpp') != -1 or line.find('.h') != -1):
+		if fileFound == False and line.find('<') != -1 and line.find('>') != -1 and (line.find('.c') != -1 or line.find('.cpp') != -1 or line.find('.h') != -1):
 			tempLine = line.split()
 			for index in tempLine:
 				if index.find('<') != -1 and (index.find('.c') != -1 or index.find('.cpp') != -1 or index.find('.h') != -1):
@@ -128,6 +129,7 @@ def AssignmentCollector(inputfile):
 	GV = []
 	subList = []
 	address = ""
+	addressDecl = ""
 	varName = ""
 	varType = ""
 	lineNumber = ""
@@ -150,9 +152,11 @@ def AssignmentCollector(inputfile):
 		temp = ""
 
 #-----------------------------StrCpy--------------------------------------#
-		#Find the line of the call number 
+		#Find the line of the call number (and the unique ID)
 		if line.find('CallExpr') != -1:
 			tempLine = line.split()
+			callIDindex = 0
+			indexCallCount = 0
 			for index in tempLine:
 				if (index.find('<') != -1):
 					if index.find(':') != -1:
@@ -161,11 +165,37 @@ def AssignmentCollector(inputfile):
 						index = colonRemoverBefore(index)
 					index = index.strip('<')
 					callLine = index
+				if (index.find('CallExpr') != -1):
+					callIDindex = indexCallCount + 1
+				indexCallCount = indexCallCount + 1
+
+				callID = tempLine[callIDindex]
+
+			
+
+				
+
 			
 		if line.find('-DeclRefExpr') != -1 and line.find('strcpy') != -1:
 			strcpyCall = True
 			declLvalFlag = True
 			declRvalFlag = True
+
+		#Find line number
+		if line.find('ImplicitCastExpr') != -1 and strcpyCall:
+			callLineCheck = False
+			tempLine = line.split()
+			for index in tempLine:
+				if index.find(fileName) != -1:
+					callLine = colonRemoverAfter(index)
+					callLine = callLine.strip('>')
+					callLine = colonRemoverBefore(callLine)
+				
+
+					
+
+
+
 		
 		#[... '<col:9>', "'char", "[20]'", 'lvalue', 'Var', '0x30b95f8', "'arr'", "'char", "[20]'"]
 
@@ -185,10 +215,10 @@ def AssignmentCollector(inputfile):
 			strcpyVal = False	
 			lineRangeTemp = lineRange
 			if (int(callLine) > int(lineRange[1])) or varName in GV:
-				lineRangeTemp = ('0', '-1')
+				lineRangeTemp = (callLine, '-1')
 			
 			varVal = varVal.strip('"')	
-			subList = [callLine, varName, lineRangeTemp, varVal]
+			subList = [callID, varName, lineRangeTemp, varVal]
 			assignmentList.append(subList)
 			declRvalFlag = False
 			
@@ -199,10 +229,9 @@ def AssignmentCollector(inputfile):
 			strcpyVal = False	
 			lineRangeTemp = lineRange
 			if (int(callLine) > int(lineRange[1])) or varName in GV:
-				lineRangeTemp = ('0', '-1')
+				lineRangeTemp = (callLine, '-1')
 			
-
-			subList = [callLine, varName, lineRangeTemp, varVal]
+			subList = [callID, varName, lineRangeTemp, varVal]
 			assignmentList.append(subList)	
 			declRvalFlag = False
 		
@@ -251,8 +280,17 @@ def AssignmentCollector(inputfile):
 			if endLine.find(':') != -1:
 				endLine = colonRemoverBefore(endLine)
 
+			#Find statement
+			indexCount1 = 0
+			for index in tempLine:
+				if (index.find('FunctionDecl') != -1):
+					addressIndex = indexCount1 + 1
+				indexCount = indexCount1 + 1
+			#Get address: Located after string
+			funcAddress = tempLine[addressIndex]
 
-			lineRange = (startLine, endLine)
+			lineRange = (startLine, endLine, funcAddress)
+
 		
 		#Find the line number of all decleration statements, initialized or not
 		#Ex: |-DeclStmt 0x7fd14c876ad0 <line:2:2, col:11>
@@ -260,6 +298,8 @@ def AssignmentCollector(inputfile):
 
 			colonCount = 0
 
+			indexCount = 0
+			addressIndex = 0
 			tempLine = line.split()
 			#We always index from the end because of the AST structure (a tree where levels are represented by spaces)
 			cut1 = tempLine[-2]
@@ -279,6 +319,14 @@ def AssignmentCollector(inputfile):
 				temp += index
 			lineNumberDecl = temp
 
+			for index in tempLine:
+				if (index.find('DeclStmt') != -1):
+					addressIndex = indexCount + 1
+				indexCount = indexCount + 1
+			#Get address: Located after string
+			addressDecl = tempLine[addressIndex]
+
+
 
 
 
@@ -296,32 +344,9 @@ def AssignmentCollector(inputfile):
 
 			#Get line number
 			cut1 = line.split()
-			
-			'''
-			#For C
-			if isCpp == False:
-				cut2 = cut1[-4]
 
-			#For C++
-			else:
-				cut2 = cut1[-5]
-			
-			
-			cut3 = cut2[6:]
-
-
-			#Get
-
-			for index in cut3:
-				if (index == ':'):
-					break
-
-				
-				temp += index
-
-
-			lineNumber = temp
-			'''
+			indexCount = 0
+			addressIndex = 0
 			for index in cut1:
 				if (index.find('<') != -1) and index.find('line') != -1:
 						if index.find(':') != -1:
@@ -330,6 +355,14 @@ def AssignmentCollector(inputfile):
 							index = colonRemoverBefore(index)
 						index = index.strip('<')
 						lineNumber = index
+				if (index.find('BinaryOperator') != -1):
+					addressIndex = indexCount + 1
+
+
+				indexCount = indexCount + 1
+			#Get address: Located after string
+			address = cut1[addressIndex]
+
 
 		
 			
@@ -340,25 +373,7 @@ def AssignmentCollector(inputfile):
 
 			if line.find('line') != -1:
 				tempLine = line.split()
-				'''
-				#get line number
-				cut1 = line.split()
 
-
-				cut2 = cut1[-5]
-
-				
-
-			
-				cut3 = cut2[6:]
-
-				for index in cut3:
-					if (index == ':'):
-						break
-
-				
-					temp += index
-				'''		
 	
 				for index in tempLine:
 					if (index.find('<') != -1):
@@ -376,6 +391,8 @@ def AssignmentCollector(inputfile):
 		#Extracting string lineNumber
 		if line.find('CXXOperatorCallExpr') != -1 and line.find('string') != -1 and line.find('line') != -1:
 			tempLine = line.split()
+			indexCount = 0
+			addressIndex = 0
 			for index in tempLine:
 				if (index.find('<') != -1) and index.find('line') != -1:
 					if index.find(':') != -1:
@@ -384,6 +401,11 @@ def AssignmentCollector(inputfile):
 						index = colonRemoverBefore(index)
 					index = index.strip('<')
 					lineNumber = index
+				if index.find('CXXOperatorCallExpr') != -1:
+					addressIndex = indexCount + 1
+				indexCount = indexCount + 1
+			address = tempLine[addressIndex]
+
 
 			#DeclRefExpr is referring to an assignment
 		#ex: | `-DeclRefExpr 0x7fd14c876ae8 <col:6> 'int' lvalue Var 0x7fd14c876a50 'x' 'int'
@@ -420,11 +442,11 @@ def AssignmentCollector(inputfile):
 			lineRangeTemp = lineRange
 			
 			if lineNumber != '' and ((int(lineNumber) > int(lineRange[1])) or varName in GV):
-				lineRangeTemp = ('0', '-1')
+				lineRangeTemp = (lineNumber, '-1')
 		
-			subList = [lineNumber, varName, lineRangeTemp, '?']
+			subList = [address, varName, lineRangeTemp, '?']
 
-			if lineRangeTemp == ('0', '-1'):
+			if lineRangeTemp[1] == '-1':
 				GV.append(varName)
 	
 			assignmentList.append(subList)
@@ -449,13 +471,21 @@ def AssignmentCollector(inputfile):
 			
 			tempName = tempLine[nameIndex]
 			GV.append(tempName)
+			indexCount = 0
+			addressIndex = 0
+			for index in tempLine:
+				if (index.find('VarDecl') != -1):
+					addressIndex = indexCount + 1
+				indexCount = indexCount + 1
+			#Get address: Located after string
+			addressDecl = tempLine[addressIndex]
 
 
 			
 		#filter for decleration statements with initializations
 		#ex: | `-VarDecl 0x7fd14c876a50 <col:2, col:10> col:6 used x 'int' cinit
 
-		if (line.find('VarDecl') != -1 and line.find('cinit') != -1):
+		if ((line.find('VarDecl') != -1) and (line.find('cinit') != -1)):
 			
 			rightValFlag = True
 
@@ -469,9 +499,16 @@ def AssignmentCollector(inputfile):
 				else:
 					count = count + 1
 
-			
-			
-			#address = tempLine[count]
+			#For globals being initialized:
+			if (addressDecl == ''):
+				for index in tempLine:
+					if (index.find('DeclStmt') != -1):
+						addressIndex = indexCount + 1
+					indexCount = indexCount + 1
+			#Get address: Located after string
+				addressDecl = tempLine[addressIndex]
+
+			address = addressDecl
 			lineNumber = lineNumberDecl
 			check = 0
 
@@ -483,7 +520,7 @@ def AssignmentCollector(inputfile):
 						lineNumber = colonRemoverBefore(lineNumber)
 
 
-
+			#For strings
 
 			for i in tempLine:
 				if ('[' in i and ']' in i) or (line.find('string') != -1):
@@ -508,11 +545,11 @@ def AssignmentCollector(inputfile):
 			lineRangeTemp = lineRange
 			
 			if lineNumber != '' and ((int(lineNumber) > int(lineRange[1])) or varName in GV):
-				lineRangeTemp = ('0', '-1')
+				lineRangeTemp = (lineNumber, '-1')
 
 
-			subList = [lineNumber, varName, lineRangeTemp, '?']
-			if lineRangeTemp == ('0', '-1'):
+			subList = [address, varName, lineRangeTemp, '?']
+			if lineRangeTemp[1] == '-1':
 				GV.append(varName)
 
 			assignmentList.append(subList)
@@ -574,4 +611,4 @@ def main(inputFile, outputFile):
 	assignmentList = AssignmentCollector(inputFile)
 	writeCSV(assignmentList, outputFile)
 
-#main('Ctable.c_ast.txt', 'Ctable.c_vars.csv')
+#main('test.cpp_ast.txt', 'test.cpp_vars.csv')

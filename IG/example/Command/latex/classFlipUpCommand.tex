@@ -1,0 +1,82 @@
+\hypertarget{classFlipUpCommand}{}\section{Flip\+Up\+Command Class Reference}
+\label{classFlipUpCommand}\index{Flip\+Up\+Command@{Flip\+Up\+Command}}
+
+
+Inheritance diagram for Flip\+Up\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{classFlipUpCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Flip\+Up\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classFlipUpCommand__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFlipUpCommand_aae6e1231a8e842aa6d91843a2b2280ca}{Flip\+Up\+Command} (\hyperlink{classLight}{Light} \&light)
+\item 
+virtual void \hyperlink{classFlipUpCommand_a5130aaef4e36aa54f5a6a466b779b225}{execute} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLight}{Light} \& \hyperlink{classFlipUpCommand_a0fbc80da677f2a8b95952585ff20b473}{the\+Light}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Flip\+Up\+Command@{Flip\+Up\+Command}!Flip\+Up\+Command@{Flip\+Up\+Command}}
+\index{Flip\+Up\+Command@{Flip\+Up\+Command}!Flip\+Up\+Command@{Flip\+Up\+Command}}
+\subsubsection[{\texorpdfstring{Flip\+Up\+Command(\+Light \&light)}{FlipUpCommand(Light &light)}}]{\setlength{\rightskip}{0pt plus 5cm}Flip\+Up\+Command\+::\+Flip\+Up\+Command (
+\begin{DoxyParamCaption}
+\item[{{\bf Light} \&}]{light}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classFlipUpCommand_aae6e1231a8e842aa6d91843a2b2280ca}{}\label{classFlipUpCommand_aae6e1231a8e842aa6d91843a2b2280ca}
+
+\begin{DoxyCode}
+34                                :\hyperlink{classFlipUpCommand_a0fbc80da677f2a8b95952585ff20b473}{theLight}(light)
+35     \{
+36 
+37     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Flip\+Up\+Command@{Flip\+Up\+Command}!execute@{execute}}
+\index{execute@{execute}!Flip\+Up\+Command@{Flip\+Up\+Command}}
+\subsubsection[{\texorpdfstring{execute()}{execute()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Flip\+Up\+Command\+::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classFlipUpCommand_a5130aaef4e36aa54f5a6a466b779b225}{}\label{classFlipUpCommand_a5130aaef4e36aa54f5a6a466b779b225}
+
+
+Implements \hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{Command}.
+
+
+\begin{DoxyCode}
+40     \{
+41         \hyperlink{classFlipUpCommand_a0fbc80da677f2a8b95952585ff20b473}{theLight}.\hyperlink{classLight_a79613afb0cf7788c131091afccb46aef}{turnOn}();
+42     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Flip\+Up\+Command@{Flip\+Up\+Command}!the\+Light@{the\+Light}}
+\index{the\+Light@{the\+Light}!Flip\+Up\+Command@{Flip\+Up\+Command}}
+\subsubsection[{\texorpdfstring{the\+Light}{theLight}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Light}\& Flip\+Up\+Command\+::the\+Light\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classFlipUpCommand_a0fbc80da677f2a8b95952585ff20b473}{}\label{classFlipUpCommand_a0fbc80da677f2a8b95952585ff20b473}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Command_8cpp}{Command.\+cpp}\end{DoxyCompactItemize}

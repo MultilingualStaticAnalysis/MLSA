@@ -1,0 +1,1521 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.38.0 (20140413.2041)
+%%Title: /home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2 Call Graph
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 150 150 2400 1782
+%%PageOrientation: Portrait
+<< /PageSize [2400 1782] >> setpagedevice
+0 0 1 beginpage
+gsave
+150 150 2250 1632 boxprim clip newpath
+0.977051 0.977051 set_scale 0 rotate 157.523 157.523 translate
+[ /CropBox [150 150 2400 1782] /PAGES pdfmark
+0 0 0 graphcolor
+14 /Times-Roman set_font
+939.92 7.8 moveto 415 (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2 Call Graph) alignedtext
+% Node0x948151315
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+315.22 1044.39 315.44 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+80.72 1040.69 moveto 469 (/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c) alignedtext
+grestore
+% Node0x697718668
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1064.55 1634.39 397.29 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+791.55 1638.19 moveto 546 (0x333a690. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1049.55 1623.19 moveto 30 (cria\(\)) alignedtext
+grestore
+% Node0x948151315->Node0x697718668
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 321.23 1062.49 moveto
+344.41 1142.44 449.47 1465.73 666.44 1598.39 curveto
+678.44 1605.72 691.04 1612.12 704.06 1617.69 curveto
+stroke
+0 0 0 edgecolor
+newpath 703.04 1621.05 moveto
+713.62 1621.59 lineto
+705.69 1614.57 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 703.04 1621.05 moveto
+713.62 1621.59 lineto
+705.69 1614.57 lineto
+closepath stroke
+grestore
+% Node0x945140677
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1064.55 1562.39 396.87 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+792.05 1566.19 moveto 545 (0x333ada0. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1031.05 1551.19 moveto 67 (atoi\(UNOP\)) alignedtext
+grestore
+% Node0x948151315->Node0x945140677
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 322.92 1062.62 moveto
+351.08 1136.31 467.66 1413.51 666.44 1526.39 curveto
+679.53 1533.82 693.26 1540.25 707.42 1545.79 curveto
+stroke
+0 0 0 edgecolor
+newpath 706.2 1549.07 moveto
+716.79 1549.3 lineto
+708.66 1542.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 706.2 1549.07 moveto
+716.79 1549.3 lineto
+708.66 1542.51 lineto
+closepath stroke
+grestore
+% Node0x524657279
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1064.55 1490.39 395.96 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+792.55 1494.19 moveto 544 (0x333aec8. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1033.05 1479.19 moveto 63 (insere\(g, x\)) alignedtext
+grestore
+% Node0x948151315->Node0x524657279
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 325.12 1062.55 moveto
+358.75 1128.98 485.47 1359.68 666.44 1453.39 curveto
+681.54 1461.21 697.4 1467.86 713.73 1473.51 curveto
+stroke
+0 0 0 edgecolor
+newpath 712.8 1476.89 moveto
+723.39 1476.72 lineto
+715.01 1470.25 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 712.8 1476.89 moveto
+723.39 1476.72 lineto
+715.01 1470.25 lineto
+closepath stroke
+grestore
+% Node0x889610736
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1064.55 1417.39 398.2 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+791.05 1421.19 moveto 547 (0x333b2d8. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1031.05 1406.19 moveto 67 (atoi\(UNOP\)) alignedtext
+grestore
+% Node0x948151315->Node0x889610736
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 328.14 1062.57 moveto
+367.81 1121.29 502.18 1306.39 666.44 1381.39 curveto
+682.58 1388.76 699.47 1395.01 716.79 1400.3 curveto
+stroke
+0 0 0 edgecolor
+newpath 715.88 1403.68 moveto
+726.46 1403.14 lineto
+717.85 1396.96 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 715.88 1403.68 moveto
+726.46 1403.14 lineto
+717.85 1396.96 lineto
+closepath stroke
+grestore
+% Node0x608350099
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1064.55 1345.39 398.2 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+791.05 1349.19 moveto 547 (0x333b3d8. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1028.55 1334.19 moveto 72 (procura\(g, x\)) alignedtext
+grestore
+% Node0x948151315->Node0x608350099
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 333.01 1062.54 moveto
+380.02 1112 519.2 1249.26 666.44 1306.39 curveto
+687.92 1314.72 710.51 1321.54 733.57 1327.11 curveto
+stroke
+0 0 0 edgecolor
+newpath 732.95 1330.56 moveto
+743.48 1329.42 lineto
+734.54 1323.74 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 732.95 1330.56 moveto
+743.48 1329.42 lineto
+734.54 1323.74 lineto
+closepath stroke
+grestore
+% Node0x753943067
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1064.55 1260.39 398.2 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+791.05 1271.69 moveto 547 (0x333b520. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1010.05 1256.69 moveto 109 (printf\(<< %d existe) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1044.55 1241.69 moveto 40 ( >>, x\)) alignedtext
+grestore
+% Node0x948151315->Node0x753943067
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 344.87 1062.32 moveto
+403.01 1097.77 540.06 1176.54 666.44 1213.39 curveto
+694.51 1221.57 724.09 1228.33 753.93 1233.92 curveto
+stroke
+0 0 0 edgecolor
+newpath 753.59 1237.42 moveto
+764.05 1235.77 lineto
+754.84 1230.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 753.59 1237.42 moveto
+764.05 1235.77 lineto
+754.84 1230.53 lineto
+closepath stroke
+grestore
+% Node0x410334984
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1064.55 1167.39 398.2 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+791.05 1178.69 moveto 547 (0x333b640. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+998.05 1163.69 moveto 133 (printf\(<< %d nao existe) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1044.55 1148.69 moveto 40 ( >>, x\)) alignedtext
+grestore
+% Node0x948151315->Node0x410334984
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 386.25 1061.97 moveto
+456.66 1079.14 568.51 1104.99 666.44 1121.39 curveto
+704.31 1127.73 744.34 1133.47 783.85 1138.59 curveto
+stroke
+0 0 0 edgecolor
+newpath 783.52 1142.07 moveto
+793.88 1139.87 lineto
+784.41 1135.13 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 783.52 1142.07 moveto
+793.88 1139.87 lineto
+784.41 1135.13 lineto
+closepath stroke
+grestore
+% Node0x516489345
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1064.55 1085.39 397.29 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+791.55 1089.19 moveto 546 (0x333ba48. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1040.55 1074.19 moveto 48 (infixa\(g\)) alignedtext
+grestore
+% Node0x948151315->Node0x516489345
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 543.23 1056.84 moveto
+606.99 1060.34 677.51 1064.21 745.52 1067.94 curveto
+stroke
+0 0 0 edgecolor
+newpath 745.36 1071.44 moveto
+755.54 1068.49 lineto
+745.74 1064.45 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 745.36 1071.44 moveto
+755.54 1068.49 lineto
+745.74 1064.45 lineto
+closepath stroke
+grestore
+% Node0x144621784
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1064.55 1003.39 398.2 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+791.05 1014.69 moveto 547 (0x333bb00. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1037.05 999.69 moveto 55 (printf\(<< ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1052.05 984.69 moveto 25 ( >>\)) alignedtext
+grestore
+% Node0x948151315->Node0x144621784
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 543.23 1031.93 moveto
+595.9 1029.04 653.19 1025.9 709.87 1022.79 curveto
+stroke
+0 0 0 edgecolor
+newpath 710.27 1026.27 moveto
+720.07 1022.23 lineto
+709.89 1019.28 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 710.27 1026.27 moveto
+720.07 1022.23 lineto
+709.89 1019.28 lineto
+closepath stroke
+grestore
+% Node0x249091970
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1064.55 916.39 397.29 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+791.55 920.19 moveto 546 (0x333beb0. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1036.55 905.19 moveto 56 (posfixa\(g\)) alignedtext
+grestore
+% Node0x948151315->Node0x249091970
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 376.41 1026.69 moveto
+445.75 1006.95 563.38 975.42 666.44 957.39 curveto
+709.6 949.84 755.66 943.52 800.56 938.28 curveto
+stroke
+0 0 0 edgecolor
+newpath 801.19 941.73 moveto
+810.72 937.11 lineto
+800.39 934.77 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 801.19 941.73 moveto
+810.72 937.11 lineto
+800.39 934.77 lineto
+closepath stroke
+grestore
+% Node0x447079865
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1064.55 834.39 395.96 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+792.55 845.69 moveto 544 (0x333bf68. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1037.05 830.69 moveto 55 (printf\(<< ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1052.05 815.69 moveto 25 ( >>\)) alignedtext
+grestore
+% Node0x948151315->Node0x447079865
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 345.85 1026.45 moveto
+404.63 991.8 541.15 915.96 666.44 880.39 curveto
+694.26 872.49 723.54 865.94 753.07 860.52 curveto
+stroke
+0 0 0 edgecolor
+newpath 753.87 863.93 moveto
+763.1 858.72 lineto
+752.64 857.04 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 753.87 863.93 moveto
+763.1 858.72 lineto
+752.64 857.04 lineto
+closepath stroke
+grestore
+% Node0x208007528
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1064.55 699.39 397.29 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+791.55 703.19 moveto 546 (0x333c318. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1037.05 688.19 moveto 55 (prefixa\(g\)) alignedtext
+grestore
+% Node0x948151315->Node0x208007528
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 334.91 1026.24 moveto
+384.48 979.19 525.15 852.48 666.44 788.39 curveto
+731.45 758.9 806.99 738.83 874.64 725.33 curveto
+stroke
+0 0 0 edgecolor
+newpath 875.42 728.74 moveto
+884.56 723.38 lineto
+874.07 721.87 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 875.42 728.74 moveto
+884.56 723.38 lineto
+874.07 721.87 lineto
+closepath stroke
+grestore
+% Node0x974088088
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1064.55 617.39 397.29 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+791.55 628.69 moveto 546 (0x333c3d0. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1037.05 613.69 moveto 55 (printf\(<< ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1052.05 598.69 moveto 25 ( >>\)) alignedtext
+grestore
+% Node0x948151315->Node0x974088088
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 326.29 1026.28 moveto
+362.48 963.14 493.14 751.72 666.44 663.39 curveto
+683.77 654.56 702.06 647.11 720.89 640.85 curveto
+stroke
+0 0 0 edgecolor
+newpath 722.03 644.16 moveto
+730.48 637.77 lineto
+719.89 637.49 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 722.03 644.16 moveto
+730.48 637.77 lineto
+719.89 637.49 lineto
+closepath stroke
+grestore
+% Node0x817748398
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1064.55 535.39 397.29 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+791.55 539.19 moveto 546 (0x333c698. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1031.05 524.19 moveto 67 (atoi\(UNOP\)) alignedtext
+grestore
+% Node0x948151315->Node0x817748398
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 323.23 1025.99 moveto
+352.14 952.91 470.03 681.75 666.44 571.39 curveto
+679.69 563.95 693.58 557.52 707.91 551.98 curveto
+stroke
+0 0 0 edgecolor
+newpath 709.22 555.22 moveto
+717.38 548.47 lineto
+706.79 548.66 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 709.22 555.22 moveto
+717.38 548.47 lineto
+706.79 548.66 lineto
+closepath stroke
+grestore
+% Node0x484440157
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1064.55 303.39 396.87 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+792.05 307.19 moveto 545 (0x333c7c0. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1035.05 292.19 moveto 59 (retira\(g, x\)) alignedtext
+grestore
+% Node0x948151315->Node0x484440157
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 323.57 1026.15 moveto
+354.47 951.47 480.86 665.16 666.44 499.39 curveto
+755.98 419.41 884.02 364.08 970.29 333.08 curveto
+stroke
+0 0 0 edgecolor
+newpath 971.56 336.35 moveto
+979.82 329.7 lineto
+969.22 329.75 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 971.56 336.35 moveto
+979.82 329.7 lineto
+969.22 329.75 lineto
+closepath stroke
+grestore
+% Node0x319553735
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1064.55 231.39 397.29 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+791.55 235.19 moveto 546 (0x333c910. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1040.05 220.19 moveto 49 (getchar\(\)) alignedtext
+grestore
+% Node0x948151315->Node0x319553735
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 317.94 1026.21 moveto
+328.26 928.56 391.05 463.53 666.44 267.39 curveto
+676.79 260.02 687.69 253.52 699.01 247.81 curveto
+stroke
+0 0 0 edgecolor
+newpath 700.69 250.89 moveto
+708.18 243.4 lineto
+697.66 244.58 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 700.69 250.89 moveto
+708.18 243.4 lineto
+697.66 244.58 lineto
+closepath stroke
+grestore
+% Node0x520600785
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1896.75 1635.39 397.29 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1623.75 1639.19 moveto 546 (0x3339a60. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1873.25 1624.19 moveto 47 (malloc\(\)) alignedtext
+grestore
+% Node0x524657279->Node0x520600785
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1419.56 1502.54 moveto
+1434.63 1509.2 1449.09 1517.08 1462.65 1526.39 curveto
+1492.47 1546.86 1468.82 1578.92 1498.65 1599.39 curveto
+1509.45 1606.8 1520.82 1613.32 1532.63 1619.02 curveto
+stroke
+0 0 0 edgecolor
+newpath 1531.19 1622.21 moveto
+1541.74 1623.23 lineto
+1534.13 1615.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1531.19 1622.21 moveto
+1541.74 1623.23 lineto
+1534.13 1615.86 lineto
+closepath stroke
+grestore
+% Node0x612826667
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1896.75 1563.39 397.29 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1623.75 1567.19 moveto 546 (0x333a020. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1854.75 1552.19 moveto 84 (insere\(a.esq, v\)) alignedtext
+grestore
+% Node0x524657279->Node0x612826667
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1307.35 1511.65 moveto
+1412.96 1520.94 1536.81 1531.83 1643.58 1541.21 curveto
+stroke
+0 0 0 edgecolor
+newpath 1643.58 1544.73 moveto
+1653.85 1542.12 lineto
+1644.2 1537.75 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1643.58 1544.73 moveto
+1653.85 1542.12 lineto
+1644.2 1537.75 lineto
+closepath stroke
+grestore
+% Node0x312408119
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1896.75 1491.39 397.29 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1623.75 1495.19 moveto 546 (0x333a300. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1856.25 1480.19 moveto 81 (insere\(a.dir, v\)) alignedtext
+grestore
+% Node0x524657279->Node0x312408119
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1460.59 1490.86 moveto
+1470.03 1490.87 1479.48 1490.89 1488.93 1490.9 curveto
+stroke
+0 0 0 edgecolor
+newpath 1489.17 1494.4 moveto
+1499.18 1490.91 lineto
+1489.18 1487.4 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1489.17 1494.4 moveto
+1499.18 1490.91 lineto
+1489.18 1487.4 lineto
+closepath stroke
+grestore
+% Node0x887164535
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1896.75 1419.39 397.29 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1623.75 1423.19 moveto 546 (0x33392a8. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1851.25 1408.19 moveto 91 (procura\(r.esq, v\)) alignedtext
+grestore
+% Node0x608350099->Node0x887164535
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1305.67 1366.79 moveto
+1412.37 1376.3 1537.94 1387.49 1645.75 1397.1 curveto
+stroke
+0 0 0 edgecolor
+newpath 1645.53 1400.6 moveto
+1655.8 1398 lineto
+1646.15 1393.63 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1645.53 1400.6 moveto
+1655.8 1398 lineto
+1646.15 1393.63 lineto
+closepath stroke
+grestore
+% Node0x201892727
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1896.75 1347.39 398.2 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1623.25 1351.19 moveto 547 (0x3339500. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1852.75 1336.19 moveto 88 (procura\(r.dir, v\)) alignedtext
+grestore
+% Node0x608350099->Node0x201892727
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1462.41 1346.34 moveto
+1471.1 1346.36 1479.8 1346.39 1488.5 1346.41 curveto
+stroke
+0 0 0 edgecolor
+newpath 1488.69 1349.91 moveto
+1498.7 1346.43 lineto
+1488.71 1342.91 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1488.69 1349.91 moveto
+1498.7 1346.43 lineto
+1488.71 1342.91 lineto
+closepath stroke
+grestore
+% Node0x133993946
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1896.75 1275.39 398.2 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1623.25 1279.19 moveto 547 (0x3336540. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1862.25 1264.19 moveto 69 (infixa\(a.esq\)) alignedtext
+grestore
+% Node0x516489345->Node0x133993946
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1425.19 1096.8 moveto
+1438.4 1103.75 1450.96 1111.89 1462.65 1121.39 curveto
+1505.19 1155.97 1456.1 1204.8 1498.65 1239.39 curveto
+1507.68 1246.73 1517.25 1253.27 1527.23 1259.07 curveto
+stroke
+0 0 0 edgecolor
+newpath 1525.66 1262.2 moveto
+1536.11 1263.98 lineto
+1529.05 1256.08 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1525.66 1262.2 moveto
+1536.11 1263.98 lineto
+1529.05 1256.08 lineto
+closepath stroke
+grestore
+% Node0x994285348
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1896.75 1203.39 395.96 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1624.75 1207.19 moveto 544 (0x33366f0. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1854.75 1192.19 moveto 84 (printf\(<<   >>\)) alignedtext
+grestore
+% Node0x516489345->Node0x994285348
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1410.42 1098.64 moveto
+1428.54 1104.86 1446.08 1112.37 1462.65 1121.39 curveto
+1485.45 1133.8 1475.85 1154.97 1498.65 1167.39 curveto
+1512.24 1174.79 1526.48 1181.17 1541.16 1186.65 curveto
+stroke
+0 0 0 edgecolor
+newpath 1540.28 1190.05 moveto
+1550.87 1190.13 lineto
+1542.64 1183.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1540.28 1190.05 moveto
+1550.87 1190.13 lineto
+1542.64 1183.46 lineto
+closepath stroke
+grestore
+% Node0x431016303
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1896.75 1131.39 397.29 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1623.75 1135.19 moveto 546 (0x3337a58. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1827.75 1120.19 moveto 138 (printf\(<< %d >>, a.info\)) alignedtext
+grestore
+% Node0x516489345->Node0x431016303
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1372.32 1102.39 moveto
+1439.54 1106.11 1510.84 1110.06 1578.46 1113.81 curveto
+stroke
+0 0 0 edgecolor
+newpath 1578.67 1117.32 moveto
+1588.85 1114.38 lineto
+1579.05 1110.33 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1578.67 1117.32 moveto
+1588.85 1114.38 lineto
+1579.05 1110.33 lineto
+closepath stroke
+grestore
+% Node0x803318760
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1896.75 1059.39 397.29 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1623.75 1063.19 moveto 546 (0x3337c00. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1863.75 1048.19 moveto 66 (infixa\(a.dir\)) alignedtext
+grestore
+% Node0x516489345->Node0x803318760
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1425.46 1074.12 moveto
+1458.6 1073.08 1492.21 1072.03 1525.44 1070.98 curveto
+stroke
+0 0 0 edgecolor
+newpath 1525.85 1074.47 moveto
+1535.74 1070.66 lineto
+1525.63 1067.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1525.85 1074.47 moveto
+1535.74 1070.66 lineto
+1525.63 1067.48 lineto
+closepath stroke
+grestore
+% Node0x856386539
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1896.75 987.39 398.2 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1623.25 991.19 moveto 547 (0x3338800. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1858.25 976.19 moveto 77 (posfixa\(a.esq\)) alignedtext
+grestore
+% Node0x249091970->Node0x856386539
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1311.82 937.45 moveto
+1414.98 946.27 1534.91 956.53 1639.15 965.44 curveto
+stroke
+0 0 0 edgecolor
+newpath 1638.92 968.94 moveto
+1649.18 966.3 lineto
+1639.52 961.96 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1638.92 968.94 moveto
+1649.18 966.3 lineto
+1639.52 961.96 lineto
+closepath stroke
+grestore
+% Node0x372725589
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1896.75 915.39 398.2 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1623.25 919.19 moveto 547 (0x3338900. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1859.75 904.19 moveto 74 (posfixa\(a.dir\)) alignedtext
+grestore
+% Node0x249091970->Node0x372725589
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1462.11 915.91 moveto
+1470.8 915.9 1479.5 915.89 1488.2 915.88 curveto
+stroke
+0 0 0 edgecolor
+newpath 1488.42 919.38 moveto
+1498.41 915.87 lineto
+1488.41 912.38 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1488.42 919.38 moveto
+1498.41 915.87 lineto
+1488.41 912.38 lineto
+closepath stroke
+grestore
+% Node0x706323428
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1896.75 843.39 397.29 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1623.75 847.19 moveto 546 (0x3338a40. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1854.75 832.19 moveto 84 (printf\(<<   >>\)) alignedtext
+grestore
+% Node0x249091970->Node0x706323428
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1307.63 895.1 moveto
+1413.11 885.83 1536.76 874.95 1643.38 865.58 curveto
+stroke
+0 0 0 edgecolor
+newpath 1643.99 869.04 moveto
+1653.65 864.68 lineto
+1643.38 862.06 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1643.99 869.04 moveto
+1653.65 864.68 lineto
+1643.38 862.06 lineto
+closepath stroke
+grestore
+% Node0x363700581
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1896.75 771.39 398.2 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1623.25 775.19 moveto 547 (0x3338bb8. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1827.75 760.19 moveto 138 (printf\(<< %d >>, a.info\)) alignedtext
+grestore
+% Node0x249091970->Node0x363700581
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1419.56 904.23 moveto
+1434.63 897.58 1449.09 889.69 1462.65 880.39 curveto
+1492.47 859.92 1468.82 827.86 1498.65 807.39 curveto
+1509.23 800.12 1520.36 793.72 1531.91 788.1 curveto
+stroke
+0 0 0 edgecolor
+newpath 1533.67 791.14 moveto
+1541.26 783.75 lineto
+1530.72 784.79 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1533.67 791.14 moveto
+1541.26 783.75 lineto
+1530.72 784.79 lineto
+closepath stroke
+grestore
+% Node0x730476113
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1896.75 699.39 398.2 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1623.25 703.19 moveto 547 (0x3338010. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1854.75 688.19 moveto 84 (printf\(<<   >>\)) alignedtext
+grestore
+% Node0x208007528->Node0x730476113
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1462.11 699.39 moveto
+1470.8 699.39 1479.5 699.39 1488.2 699.39 curveto
+stroke
+0 0 0 edgecolor
+newpath 1488.41 702.89 moveto
+1498.41 699.39 lineto
+1488.41 695.89 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1488.41 702.89 moveto
+1498.41 699.39 lineto
+1488.41 695.89 lineto
+closepath stroke
+grestore
+% Node0x951442569
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1896.75 627.39 398.2 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1623.25 631.19 moveto 547 (0x3338188. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1827.75 616.19 moveto 138 (printf\(<< %d >>, a.info\)) alignedtext
+grestore
+% Node0x208007528->Node0x951442569
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1309.58 678.22 moveto
+1413.97 669.17 1535.85 658.6 1641.35 649.45 curveto
+stroke
+0 0 0 edgecolor
+newpath 1641.85 652.92 moveto
+1651.51 648.57 lineto
+1641.24 645.95 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1641.85 652.92 moveto
+1651.51 648.57 lineto
+1641.24 645.95 lineto
+closepath stroke
+grestore
+% Node0x900426355
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1896.75 555.39 398.2 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1623.25 559.19 moveto 547 (0x3338330. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1858.75 544.19 moveto 76 (prefixa\(a.esq\)) alignedtext
+grestore
+% Node0x208007528->Node0x900426355
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1419.49 687.14 moveto
+1434.59 680.51 1449.07 672.65 1462.65 663.39 curveto
+1492.2 643.22 1469.09 611.55 1498.65 591.39 curveto
+1509.47 584 1520.86 577.51 1532.68 571.83 curveto
+stroke
+0 0 0 edgecolor
+newpath 1534.17 574.99 moveto
+1541.8 567.63 lineto
+1531.25 568.63 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1534.17 574.99 moveto
+1541.8 567.63 lineto
+1531.25 568.63 lineto
+closepath stroke
+grestore
+% Node0x881629624
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1896.75 483.39 398.2 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1623.25 487.19 moveto 547 (0x3338430. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1860.25 472.19 moveto 73 (prefixa\(a.dir\)) alignedtext
+grestore
+% Node0x208007528->Node0x881629624
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1210.73 724.41 moveto
+1293.74 730.22 1394.55 721.69 1462.65 663.39 curveto
+1512.76 620.48 1448.54 562.29 1498.65 519.39 curveto
+1563.95 463.47 1659.34 453.34 1740.27 457.72 curveto
+stroke
+0 0 0 edgecolor
+newpath 1740.37 461.23 moveto
+1750.57 458.36 lineto
+1740.8 454.25 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1740.37 461.23 moveto
+1750.57 458.36 lineto
+1740.8 454.25 lineto
+closepath stroke
+grestore
+% Node0x780869228
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1896.75 411.39 398.2 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1623.25 415.19 moveto 547 (0x33347b0. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1857.25 400.19 moveto 79 (retira\(r.esq, v\)) alignedtext
+grestore
+% Node0x484440157->Node0x780869228
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1201.71 328.69 moveto
+1286.82 343.84 1398.85 362.59 1498.65 375.39 curveto
+1540.61 380.77 1585.17 385.63 1628.69 389.92 curveto
+stroke
+0 0 0 edgecolor
+newpath 1628.55 393.42 moveto
+1638.84 390.91 lineto
+1629.23 386.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1628.55 393.42 moveto
+1638.84 390.91 lineto
+1629.23 386.46 lineto
+closepath stroke
+grestore
+% Node0x325316795
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1896.75 339.39 397.29 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1623.75 343.19 moveto 546 (0x3334a90. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1858.75 328.19 moveto 76 (retira\(r.dir, v\)) alignedtext
+grestore
+% Node0x484440157->Node0x325316795
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1399.03 317.85 moveto
+1449.33 320.03 1501.29 322.28 1551.8 324.47 curveto
+stroke
+0 0 0 edgecolor
+newpath 1551.74 327.97 moveto
+1561.89 324.91 lineto
+1552.05 320.98 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1551.74 327.97 moveto
+1561.89 324.91 lineto
+1552.05 320.98 lineto
+closepath stroke
+grestore
+% Node0x961592330
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1896.75 267.39 397.29 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1623.75 271.19 moveto 546 (0x3334e70. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1879.25 256.19 moveto 35 (free\(r\)) alignedtext
+grestore
+% Node0x484440157->Node0x961592330
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1399.03 288.93 moveto
+1449.33 286.75 1501.29 284.49 1551.8 282.3 curveto
+stroke
+0 0 0 edgecolor
+newpath 1552.05 285.79 moveto
+1561.89 281.86 lineto
+1551.74 278.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1552.05 285.79 moveto
+1561.89 281.86 lineto
+1551.74 278.8 lineto
+closepath stroke
+grestore
+% Node0x906767809
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1896.75 195.39 398.2 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1623.25 199.19 moveto 547 (0x3335378. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1879.75 184.19 moveto 34 (free\(t\)) alignedtext
+grestore
+% Node0x484440157->Node0x906767809
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1403.59 289.34 moveto
+1423.99 283.43 1443.84 276.19 1462.65 267.39 curveto
+1483.14 257.79 1478.15 240.98 1498.65 231.39 curveto
+1514.3 224.06 1530.68 217.81 1547.5 212.52 curveto
+stroke
+0 0 0 edgecolor
+newpath 1548.89 215.75 moveto
+1557.45 209.5 lineto
+1546.86 209.05 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1548.89 215.75 moveto
+1557.45 209.5 lineto
+1546.86 209.05 lineto
+closepath stroke
+grestore
+% Node0x642428806
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1896.75 123.39 398.2 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1623.25 127.19 moveto 547 (0x3335760. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1879.75 112.19 moveto 34 (free\(t\)) alignedtext
+grestore
+% Node0x484440157->Node0x642428806
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1424.43 291.84 moveto
+1437.89 284.94 1450.71 276.84 1462.65 267.39 curveto
+1502.31 235.98 1458.98 190.8 1498.65 159.39 curveto
+1507.88 152.08 1517.64 145.58 1527.82 139.81 curveto
+stroke
+0 0 0 edgecolor
+newpath 1529.72 142.76 moveto
+1536.87 134.94 lineto
+1526.4 136.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1529.72 142.76 moveto
+1536.87 134.94 lineto
+1526.4 136.6 lineto
+closepath stroke
+grestore
+% Node0x301793727
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1896.75 51.39 397.29 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1623.75 55.19 moveto 546 (0x3335ed8. \(/home/labaccount/11-2-17/mlsa/IG/example/BinarySearchTree2/BinarySearchTree2.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1857.25 40.19 moveto 79 (retira\(r.esq, v\)) alignedtext
+grestore
+% Node0x484440157->Node0x301793727
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1200.76 328.68 moveto
+1286.1 336.46 1393 329.96 1462.65 267.39 curveto
+1523.34 212.87 1437.96 141.91 1498.65 87.39 curveto
+1565.57 27.26 1666.89 18.91 1750.44 25.25 curveto
+stroke
+0 0 0 edgecolor
+newpath 1750.28 28.75 moveto
+1760.53 26.1 lineto
+1750.86 21.78 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1750.28 28.75 moveto
+1760.53 26.1 lineto
+1750.86 21.78 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 150 150 2400 1782
+end
+restore
+%%EOF

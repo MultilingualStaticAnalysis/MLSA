@@ -1,0 +1,78 @@
+\hypertarget{classCook}{}\section{Cook Class Reference}
+\label{classCook}\index{Cook@{Cook}}
+
+
+Collaboration diagram for Cook\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classCook__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCook_a980a6342fae6617fc29fdb08101d2372}{open\+Pizza} ()
+\item 
+void \hyperlink{classCook_a14b38189b02518a8fc89c10529ea59d8}{make\+Pizza} (\hyperlink{classPizzaBuilder}{Pizza\+Builder} $\ast$pb)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPizzaBuilder}{Pizza\+Builder} $\ast$ \hyperlink{classCook_a41e1afd843fef561893f8a4b54972132}{m\+\_\+pizza\+Builder}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Cook@{Cook}!make\+Pizza@{make\+Pizza}}
+\index{make\+Pizza@{make\+Pizza}!Cook@{Cook}}
+\subsubsection[{\texorpdfstring{make\+Pizza(\+Pizza\+Builder $\ast$pb)}{makePizza(PizzaBuilder *pb)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cook\+::make\+Pizza (
+\begin{DoxyParamCaption}
+\item[{{\bf Pizza\+Builder} $\ast$}]{pb}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCook_a14b38189b02518a8fc89c10529ea59d8}{}\label{classCook_a14b38189b02518a8fc89c10529ea59d8}
+
+\begin{DoxyCode}
+104     \{
+105         \hyperlink{classCook_a41e1afd843fef561893f8a4b54972132}{m\_pizzaBuilder} = pb;
+106         \hyperlink{classCook_a41e1afd843fef561893f8a4b54972132}{m\_pizzaBuilder}->\hyperlink{classPizzaBuilder_ad321d7aede0131b349c6853768ea1735}{createNewPizzaProduct}();
+107         \hyperlink{classCook_a41e1afd843fef561893f8a4b54972132}{m\_pizzaBuilder}->\hyperlink{classPizzaBuilder_ab779fb4306ae03b3d82690f5939aaf22}{buildDough}();
+108         \hyperlink{classCook_a41e1afd843fef561893f8a4b54972132}{m\_pizzaBuilder}->\hyperlink{classPizzaBuilder_a87b3cc72715e7775c8b36e610e8bb389}{buildSauce}();
+109         \hyperlink{classCook_a41e1afd843fef561893f8a4b54972132}{m\_pizzaBuilder}->\hyperlink{classPizzaBuilder_a46ff797a62789eca327a9ffab95b1b23}{buildTopping}();
+110     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCook_a14b38189b02518a8fc89c10529ea59d8_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Cook@{Cook}!open\+Pizza@{open\+Pizza}}
+\index{open\+Pizza@{open\+Pizza}!Cook@{Cook}}
+\subsubsection[{\texorpdfstring{open\+Pizza()}{openPizza()}}]{\setlength{\rightskip}{0pt plus 5cm}void Cook\+::open\+Pizza (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCook_a980a6342fae6617fc29fdb08101d2372}{}\label{classCook_a980a6342fae6617fc29fdb08101d2372}
+
+\begin{DoxyCode}
+100     \{
+101         \hyperlink{classCook_a41e1afd843fef561893f8a4b54972132}{m\_pizzaBuilder}->\hyperlink{classPizzaBuilder_a95ce87757351da71ab03f400802a0d1a}{getPizza}()->\hyperlink{classPizza_a7d812bc17133896f57459588988ffd47}{open}();
+102     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Cook@{Cook}!m\+\_\+pizza\+Builder@{m\+\_\+pizza\+Builder}}
+\index{m\+\_\+pizza\+Builder@{m\+\_\+pizza\+Builder}!Cook@{Cook}}
+\subsubsection[{\texorpdfstring{m\+\_\+pizza\+Builder}{m_pizzaBuilder}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pizza\+Builder}$\ast$ Cook\+::m\+\_\+pizza\+Builder\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCook_a41e1afd843fef561893f8a4b54972132}{}\label{classCook_a41e1afd843fef561893f8a4b54972132}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Builder_8cpp}{Builder.\+cpp}\end{DoxyCompactItemize}

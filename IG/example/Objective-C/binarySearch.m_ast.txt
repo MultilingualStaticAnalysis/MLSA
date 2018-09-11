@@ -1,0 +1,406 @@
+TranslationUnitDecl 0x247b070 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x247b568 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x247b2c0 '__int128'
+|-TypedefDecl 0x247b5c8 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x247b2e0 'unsigned __int128'
+|-TypedefDecl 0x247b658 <<invalid sloc>> <invalid sloc> implicit SEL 'SEL *'
+| `-PointerType 0x247b620 'SEL *'
+|   `-BuiltinType 0x247b4d0 'SEL'
+|-TypedefDecl 0x247b738 <<invalid sloc>> <invalid sloc> implicit id 'id'
+| `-ObjCObjectPointerType 0x247b6e0 'id'
+|   `-ObjCObjectType 0x247b6b0 'id'
+|-TypedefDecl 0x247b818 <<invalid sloc>> <invalid sloc> implicit Class 'Class'
+| `-ObjCObjectPointerType 0x247b7c0 'Class'
+|   `-ObjCObjectType 0x247b790 'Class'
+|-ObjCInterfaceDecl 0x247b868 <<invalid sloc>> <invalid sloc> implicit Protocol
+|-TypedefDecl 0x247b958 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x247b920 'char *'
+|   `-BuiltinType 0x247b100 'char'
+|-TypedefDecl 0x247bc08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x247bbb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x247ba30 'struct __va_list_tag'
+|     `-Record 0x247b9a8 '__va_list_tag'
+|-ObjCInterfaceDecl 0x247bc58 </home/labaccount/11-2-17/mlsa/IG/example/Objective-C/binarySearch.h:9:1, line:24:2> line:9:12 invalid Search
+| |-ObjCImplementation 0x24cd240 'Search'
+| |-ObjCIvarDecl 0x24cc740 <line:10:2, col:18> col:18 invalid _list 'int *' protected
+| |-ObjCIvarDecl 0x24cc7a8 <line:11:2, col:6> col:6 _length 'int' protected
+| |-ObjCIvarDecl 0x24cc810 <line:12:2, col:6> col:6 _target 'int' protected
+| |-ObjCMethodDecl 0x24cc8a0 <line:16:1, col:42> col:1 - setList: 'id':'id'
+| | `-ParmVarDecl 0x24cc928 <col:31, col:36> col:36 length 'int'
+| |-ObjCMethodDecl 0x24cca30 <line:17:1, col:31> col:1 - setTarget: 'int'
+| | `-ParmVarDecl 0x24ccab8 <col:20, col:25> col:25 target 'int'
+| |-ObjCMethodDecl 0x24ccb40 <line:18:1, col:68> col:1 - iterativeBinarySearch:: 'int'
+| | |-ParmVarDecl 0x24ccbc8 <col:50> col:50 list 'id':'id'
+| | `-ParmVarDecl 0x24ccc28 <col:57, col:62> col:62 target 'int'
+| |-ObjCMethodDecl 0x24ccce0 <line:19:1, col:90> col:1 - recursiveBinarySearch:::: 'int'
+| | |-ParmVarDecl 0x24ccd68 <col:50> col:50 list 'id':'id'
+| | |-ParmVarDecl 0x24ccdc8 <col:57, col:62> col:62 target 'int'
+| | |-ParmVarDecl 0x24cce28 <col:71, col:76> col:76 min 'int'
+| | `-ParmVarDecl 0x24cce88 <col:82, col:87> col:87 max 'int'
+| |-ObjCMethodDecl 0x24ccf28 <line:20:1, col:17> col:1 - getLength 'int'
+| |-ObjCMethodDecl 0x24ccfc0 <line:21:1, col:17> col:1 - getTarget 'int'
+| `-ObjCMethodDecl 0x24cd058 <line:22:1, col:18> col:1 - printList 'void'
+|-VarDecl 0x24cd0f0 </home/labaccount/11-2-17/mlsa/IG/example/Objective-C/binarySearch.m:13:1, col:20> col:11 used LENGTH 'const int' cinit
+| `-IntegerLiteral 0x24cd190 <col:20> 'int' 20
+|-VarDecl 0x24cd1c0 <line:14:1, col:20> col:11 used NUMBER 'const int' cinit
+| `-IntegerLiteral 0x24cd220 <col:20> 'int' 57
+|-ObjCImplementationDecl 0x24cd240 <line:18:1, line:148:1> line:18:17 Search
+| |-ObjCInterface 0x247bc58 'Search'
+| |-ObjCMethodDecl 0x24cd2d8 <line:25:1, line:46:1> line:25:1 - setList: 'id':'id'
+| | |-ImplicitParamDecl 0x24d8d78 <<invalid sloc>> <invalid sloc> implicit used self 'Search *'
+| | |-ImplicitParamDecl 0x24d8e00 <<invalid sloc>> <invalid sloc> implicit _cmd 'SEL':'SEL *'
+| | |-ParmVarDecl 0x24cd360 <col:31, col:36> col:36 used length 'int'
+| | |-VarDecl 0x24d8e70 <line:30:2, col:6> col:6 used i 'int'
+| | |-VarDecl 0x24d9058 <line:33:6, col:29> col:10 r 'int' cinit
+| | | `-BinaryOperator 0x24d9268 <col:14, col:29> 'int' '%'
+| | |   |-CallExpr 0x24d9220 <col:14, col:25> 'int'
+| | |   | `-ImplicitCastExpr 0x24d9208 <col:14> 'int (*)()' <FunctionToPointerDecay>
+| | |   |   `-DeclRefExpr 0x24d91b0 <col:14> 'int ()' Function 0x24d9108 'arc4random' 'int ()'
+| | |   `-IntegerLiteral 0x24d9248 <col:29> 'int' 15
+| | |-VarDecl 0x24d92b8 <line:36:6, col:10> col:10 prev 'int'
+| | `-CompoundStmt 0x24d9440 <line:25:43, line:46:1>
+| |   |-DeclStmt 0x24d8ed0 <line:30:2, col:7>
+| |   | `-VarDecl 0x24d8e70 <col:2, col:6> col:6 used i 'int'
+| |   `-ForStmt 0x24d9358 <line:31:5, line:41:2>
+| |     |-BinaryOperator 0x24d8f30 <line:31:10, col:12> 'int' '='
+| |     | |-DeclRefExpr 0x24d8ee8 <col:10> 'int' lvalue Var 0x24d8e70 'i' 'int'
+| |     | `-IntegerLiteral 0x24d8f10 <col:12> 'int' 1
+| |     |-<<<NULL>>>
+| |     |-BinaryOperator 0x24d8fd8 <col:15, col:17> 'int' '<'
+| |     | |-ImplicitCastExpr 0x24d8fa8 <col:15> 'int' <LValueToRValue>
+| |     | | `-DeclRefExpr 0x24d8f58 <col:15> 'int' lvalue Var 0x24d8e70 'i' 'int'
+| |     | `-ImplicitCastExpr 0x24d8fc0 <col:17> 'int' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x24d8f80 <col:17> 'int' lvalue ParmVar 0x24cd360 'length' 'int'
+| |     |-UnaryOperator 0x24d9028 <col:25, col:26> 'int' postfix '++'
+| |     | `-DeclRefExpr 0x24d9000 <col:25> 'int' lvalue Var 0x24d8e70 'i' 'int'
+| |     `-CompoundStmt 0x24d9330 <col:30, line:41:2>
+| |       |-DeclStmt 0x24d9290 <line:33:6, col:31>
+| |       | `-VarDecl 0x24d9058 <col:6, col:29> col:10 r 'int' cinit
+| |       |   `-BinaryOperator 0x24d9268 <col:14, col:29> 'int' '%'
+| |       |     |-CallExpr 0x24d9220 <col:14, col:25> 'int'
+| |       |     | `-ImplicitCastExpr 0x24d9208 <col:14> 'int (*)()' <FunctionToPointerDecay>
+| |       |     |   `-DeclRefExpr 0x24d91b0 <col:14> 'int ()' Function 0x24d9108 'arc4random' 'int ()'
+| |       |     `-IntegerLiteral 0x24d9248 <col:29> 'int' 15
+| |       `-DeclStmt 0x24d9318 <line:36:6, col:51>
+| |         `-VarDecl 0x24d92b8 <col:6, col:10> col:10 prev 'int'
+| |-ObjCMethodDecl 0x24cd3e8 <line:53:1, line:56:1> line:53:1 - setTarget: 'int'
+| | |-ImplicitParamDecl 0x24d9468 <<invalid sloc>> <invalid sloc> implicit used self 'Search *'
+| | |-ImplicitParamDecl 0x24d94c8 <<invalid sloc>> <invalid sloc> implicit _cmd 'SEL':'SEL *'
+| | |-ParmVarDecl 0x24cd470 <col:20, col:25> col:25 used target 'int'
+| | `-CompoundStmt 0x24d9658 <col:32, line:56:1>
+| |   |-BinaryOperator 0x24d95d8 <line:54:5, col:21> 'int' '='
+| |   | |-ObjCIvarRefExpr 0x24d9568 <col:5, col:11> 'int' lvalue ObjCIvarDecl='_target' 0x24cc810
+| |   | | `-ImplicitCastExpr 0x24d9550 <col:5> 'Search *' <LValueToRValue>
+| |   | |   `-DeclRefExpr 0x24d9528 <col:5> 'Search *' lvalue ImplicitParam 0x24d9468 'self' 'Search *'
+| |   | `-ImplicitCastExpr 0x24d95c0 <col:21> 'int' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x24d9598 <col:21> 'int' lvalue ParmVar 0x24cd470 'target' 'int'
+| |   `-ReturnStmt 0x24d9640 <line:55:5, col:12>
+| |     `-ImplicitCastExpr 0x24d9628 <col:12> 'int' <LValueToRValue>
+| |       `-DeclRefExpr 0x24d9600 <col:12> 'int' lvalue ParmVar 0x24cd470 'target' 'int'
+| |-ObjCMethodDecl 0x24cd4f8 <line:66:1, line:87:1> line:66:1 - iterativeBinarySearch:: 'int'
+| | |-ImplicitParamDecl 0x24d9680 <<invalid sloc>> <invalid sloc> implicit used self 'Search *'
+| | |-ImplicitParamDecl 0x24d96e0 <<invalid sloc>> <invalid sloc> implicit _cmd 'SEL':'SEL *'
+| | |-ParmVarDecl 0x24cd580 <col:50> col:50 used list 'id':'id'
+| | |-ParmVarDecl 0x24cd5e0 <col:57, col:62> col:62 used target 'int'
+| | |-VarDecl 0x24d9750 <line:67:5, col:9> col:9 used mid 'int'
+| | |-VarDecl 0x24d97d8 <line:68:2, col:12> col:6 used min 'int' cinit
+| | | `-IntegerLiteral 0x24d9838 <col:12> 'int' 0
+| | |-VarDecl 0x24d9880 <line:69:2, col:28> col:6 used max 'int' cinit
+| | | `-BinaryOperator 0x24db8b8 <col:12, col:28> 'int' '-'
+| | |   |-ImplicitCastExpr 0x24db8a0 <col:12, col:18> 'int' <LValueToRValue>
+| | |   | `-ObjCIvarRefExpr 0x24db850 <col:12, col:18> 'int' lvalue ObjCIvarDecl='_length' 0x24cc7a8
+| | |   |   `-ImplicitCastExpr 0x24d9908 <col:12> 'Search *' <LValueToRValue>
+| | |   |     `-DeclRefExpr 0x24d98e0 <col:12> 'Search *' lvalue ImplicitParam 0x24d9680 'self' 'Search *'
+| | |   `-IntegerLiteral 0x24db880 <col:28> 'int' 1
+| | |-VarDecl 0x24dbb10 <line:72:3, col:51> col:7 used current 'int' cinit
+| | | `-ImplicitCastExpr 0x24dbc58 <col:17, col:51> 'int' <PointerToIntegral>
+| | |   `-ObjCMessageExpr 0x24dbc28 <col:17, col:51> 'id':'id' selector=intValue
+| | |     `-ObjCMessageExpr 0x24dbbf0 <col:18, col:42> 'id':'id' selector=objectAtIndex:
+| | |       |-ImplicitCastExpr 0x24dbbc0 <col:19> 'id':'id' <LValueToRValue>
+| | |       | `-DeclRefExpr 0x24dbb70 <col:19> 'id':'id' lvalue ParmVar 0x24cd580 'list' 'id':'id'
+| | |       `-ImplicitCastExpr 0x24dbbd8 <col:39> 'int' <LValueToRValue>
+| | |         `-DeclRefExpr 0x24dbb98 <col:39> 'int' lvalue Var 0x24d9750 'mid' 'int'
+| | `-CompoundStmt 0x24dc790 <line:66:69, line:87:1>
+| |   |-DeclStmt 0x24d97b0 <line:67:5, col:12>
+| |   | `-VarDecl 0x24d9750 <col:5, col:9> col:9 used mid 'int'
+| |   |-DeclStmt 0x24d9858 <line:68:2, col:13>
+| |   | `-VarDecl 0x24d97d8 <col:2, col:12> col:6 used min 'int' cinit
+| |   |   `-IntegerLiteral 0x24d9838 <col:12> 'int' 0
+| |   |-DeclStmt 0x24db8e0 <line:69:2, col:29>
+| |   | `-VarDecl 0x24d9880 <col:2, col:28> col:6 used max 'int' cinit
+| |   |   `-BinaryOperator 0x24db8b8 <col:12, col:28> 'int' '-'
+| |   |     |-ImplicitCastExpr 0x24db8a0 <col:12, col:18> 'int' <LValueToRValue>
+| |   |     | `-ObjCIvarRefExpr 0x24db850 <col:12, col:18> 'int' lvalue ObjCIvarDecl='_length' 0x24cc7a8
+| |   |     |   `-ImplicitCastExpr 0x24d9908 <col:12> 'Search *' <LValueToRValue>
+| |   |     |     `-DeclRefExpr 0x24d98e0 <col:12> 'Search *' lvalue ImplicitParam 0x24d9680 'self' 'Search *'
+| |   |     `-IntegerLiteral 0x24db880 <col:28> 'int' 1
+| |   |-WhileStmt 0x24dc5a0 <line:70:2, line:84:2>
+| |   | |-<<<NULL>>>
+| |   | |-BinaryOperator 0x24db978 <line:70:9, col:14> 'int' '<='
+| |   | | |-ImplicitCastExpr 0x24db948 <col:9> 'int' <LValueToRValue>
+| |   | | | `-DeclRefExpr 0x24db8f8 <col:9> 'int' lvalue Var 0x24d97d8 'min' 'int'
+| |   | | `-ImplicitCastExpr 0x24db960 <col:14> 'int' <LValueToRValue>
+| |   | |   `-DeclRefExpr 0x24db920 <col:14> 'int' lvalue Var 0x24d9880 'max' 'int'
+| |   | `-CompoundStmt 0x24dc570 <col:19, line:84:2>
+| |   |   |-BinaryOperator 0x24dbad8 <line:71:3, col:21> 'int' '='
+| |   |   | |-DeclRefExpr 0x24db9a0 <col:3> 'int' lvalue Var 0x24d9750 'mid' 'int'
+| |   |   | `-BinaryOperator 0x24dbab0 <col:9, col:21> 'int' '/'
+| |   |   |   |-ParenExpr 0x24dba70 <col:9, col:17> 'int'
+| |   |   |   | `-BinaryOperator 0x24dba48 <col:10, col:14> 'int' '+'
+| |   |   |   |   |-ImplicitCastExpr 0x24dba18 <col:10> 'int' <LValueToRValue>
+| |   |   |   |   | `-DeclRefExpr 0x24db9c8 <col:10> 'int' lvalue Var 0x24d97d8 'min' 'int'
+| |   |   |   |   `-ImplicitCastExpr 0x24dba30 <col:14> 'int' <LValueToRValue>
+| |   |   |   |     `-DeclRefExpr 0x24db9f0 <col:14> 'int' lvalue Var 0x24d9880 'max' 'int'
+| |   |   |   `-IntegerLiteral 0x24dba90 <col:21> 'int' 2
+| |   |   |-DeclStmt 0x24dbc70 <line:72:3, col:52>
+| |   |   | `-VarDecl 0x24dbb10 <col:3, col:51> col:7 used current 'int' cinit
+| |   |   |   `-ImplicitCastExpr 0x24dbc58 <col:17, col:51> 'int' <PointerToIntegral>
+| |   |   |     `-ObjCMessageExpr 0x24dbc28 <col:17, col:51> 'id':'id' selector=intValue
+| |   |   |       `-ObjCMessageExpr 0x24dbbf0 <col:18, col:42> 'id':'id' selector=objectAtIndex:
+| |   |   |         |-ImplicitCastExpr 0x24dbbc0 <col:19> 'id':'id' <LValueToRValue>
+| |   |   |         | `-DeclRefExpr 0x24dbb70 <col:19> 'id':'id' lvalue ParmVar 0x24cd580 'list' 'id':'id'
+| |   |   |         `-ImplicitCastExpr 0x24dbbd8 <col:39> 'int' <LValueToRValue>
+| |   |   |           `-DeclRefExpr 0x24dbb98 <col:39> 'int' lvalue Var 0x24d9750 'mid' 'int'
+| |   |   `-IfStmt 0x24dc540 <line:74:3, line:83:3>
+| |   |     |-<<<NULL>>>
+| |   |     |-BinaryOperator 0x24dbd08 <line:74:8, col:19> 'int' '=='
+| |   |     | |-ImplicitCastExpr 0x24dbcd8 <col:8> 'int' <LValueToRValue>
+| |   |     | | `-DeclRefExpr 0x24dbc88 <col:8> 'int' lvalue Var 0x24dbb10 'current' 'int'
+| |   |     | `-ImplicitCastExpr 0x24dbcf0 <col:19> 'int' <LValueToRValue>
+| |   |     |   `-DeclRefExpr 0x24dbcb0 <col:19> 'int' lvalue ParmVar 0x24cd5e0 'target' 'int'
+| |   |     |-CompoundStmt 0x24dc250 <col:28, line:77:3>
+| |   |     | |-CallExpr 0x24dc170 <line:75:4, col:58> 'void'
+| |   |     | | |-ImplicitCastExpr 0x24dc158 <col:4> 'void (*)(id, ...)' <FunctionToPointerDecay>
+| |   |     | | | `-DeclRefExpr 0x24dbf00 <col:4> 'void (id, ...)' Function 0x24dbda8 'NSLog' 'void (id, ...)'
+| |   |     | | |-ImplicitCastExpr 0x24dc1b0 <col:10, col:11> 'id':'id' <BitCast>
+| |   |     | | | `-ObjCStringLiteral 0x24dc088 <col:10, col:11> 'NSString *'
+| |   |     | | |   `-StringLiteral 0x24dbf68 <col:11> 'char [33]' lvalue "Iteratively found %i at index %i"
+| |   |     | | |-ImplicitCastExpr 0x24dc1c8 <col:47> 'int' <LValueToRValue>
+| |   |     | | | `-DeclRefExpr 0x24dc0a8 <col:47> 'int' lvalue ParmVar 0x24cd5e0 'target' 'int'
+| |   |     | | `-ImplicitCastExpr 0x24dc1e0 <col:55> 'int' <LValueToRValue>
+| |   |     | |   `-DeclRefExpr 0x24dc0d0 <col:55> 'int' lvalue Var 0x24d9750 'mid' 'int'
+| |   |     | `-ReturnStmt 0x24dc238 <line:76:4, col:11>
+| |   |     |   `-ImplicitCastExpr 0x24dc220 <col:11> 'int' <LValueToRValue>
+| |   |     |     `-DeclRefExpr 0x24dc1f8 <col:11> 'int' lvalue Var 0x24d9750 'mid' 'int'
+| |   |     `-IfStmt 0x24dc510 <line:78:8, line:83:3>
+| |   |       |-<<<NULL>>>
+| |   |       |-BinaryOperator 0x24dc2f8 <line:78:13, col:23> 'int' '>'
+| |   |       | |-ImplicitCastExpr 0x24dc2c8 <col:13> 'int' <LValueToRValue>
+| |   |       | | `-DeclRefExpr 0x24dc278 <col:13> 'int' lvalue Var 0x24dbb10 'current' 'int'
+| |   |       | `-ImplicitCastExpr 0x24dc2e0 <col:23> 'int' <LValueToRValue>
+| |   |       |   `-DeclRefExpr 0x24dc2a0 <col:23> 'int' lvalue ParmVar 0x24cd5e0 'target' 'int'
+| |   |       |-CompoundStmt 0x24dc3f8 <col:32, line:80:3>
+| |   |       | `-BinaryOperator 0x24dc3d0 <line:79:4, col:16> 'int' '='
+| |   |       |   |-DeclRefExpr 0x24dc320 <col:4> 'int' lvalue Var 0x24d9880 'max' 'int'
+| |   |       |   `-BinaryOperator 0x24dc3a8 <col:10, col:16> 'int' '-'
+| |   |       |     |-ImplicitCastExpr 0x24dc390 <col:10> 'int' <LValueToRValue>
+| |   |       |     | `-DeclRefExpr 0x24dc348 <col:10> 'int' lvalue Var 0x24d9750 'mid' 'int'
+| |   |       |     `-IntegerLiteral 0x24dc370 <col:16> 'int' 1
+| |   |       `-CompoundStmt 0x24dc4f0 <line:81:8, line:83:3>
+| |   |         `-BinaryOperator 0x24dc4c8 <line:82:4, col:16> 'int' '='
+| |   |           |-DeclRefExpr 0x24dc418 <col:4> 'int' lvalue Var 0x24d97d8 'min' 'int'
+| |   |           `-BinaryOperator 0x24dc4a0 <col:10, col:16> 'int' '+'
+| |   |             |-ImplicitCastExpr 0x24dc488 <col:10> 'int' <LValueToRValue>
+| |   |             | `-DeclRefExpr 0x24dc440 <col:10> 'int' lvalue Var 0x24d9750 'mid' 'int'
+| |   |             `-IntegerLiteral 0x24dc468 <col:16> 'int' 1
+| |   |-CallExpr 0x24dc6d0 <line:85:2, col:46> 'void'
+| |   | |-ImplicitCastExpr 0x24dc6b8 <col:2> 'void (*)(id, ...)' <FunctionToPointerDecay>
+| |   | | `-DeclRefExpr 0x24dc5c0 <col:2> 'void (id, ...)' Function 0x24dbda8 'NSLog' 'void (id, ...)'
+| |   | |-ImplicitCastExpr 0x24dc708 <col:8, col:9> 'id':'id' <BitCast>
+| |   | | `-ObjCStringLiteral 0x24dc670 <col:8, col:9> 'NSString *'
+| |   | |   `-StringLiteral 0x24dc628 <col:9> 'char [28]' lvalue "Iteratively did not find %i"
+| |   | `-ImplicitCastExpr 0x24dc720 <col:40> 'int' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x24dc690 <col:40> 'int' lvalue ParmVar 0x24cd5e0 'target' 'int'
+| |   `-ReturnStmt 0x24dc778 <line:86:2, col:10>
+| |     `-UnaryOperator 0x24dc758 <col:9, col:10> 'int' prefix '-'
+| |       `-IntegerLiteral 0x24dc738 <col:10> 'int' 1
+| |-ObjCMethodDecl 0x24d8930 <line:99:1, line:119:1> line:99:1 - recursiveBinarySearch:::: 'int'
+| | |-ImplicitParamDecl 0x24dc7d8 <<invalid sloc>> <invalid sloc> implicit used self 'Search *'
+| | |-ImplicitParamDecl 0x24dcf60 <<invalid sloc>> <invalid sloc> implicit _cmd 'SEL':'SEL *'
+| | |-ParmVarDecl 0x24d89b8 <col:50> col:50 used list 'id':'id'
+| | |-ParmVarDecl 0x24d8a18 <col:57, col:62> col:62 used target 'int'
+| | |-ParmVarDecl 0x24d8a78 <col:71, col:76> col:76 used min 'int'
+| | |-ParmVarDecl 0x24d8ad8 <col:82, col:87> col:87 used max 'int'
+| | |-VarDecl 0x24dd260 <line:105:2, col:26> col:6 used mid 'int' cinit
+| | | `-BinaryOperator 0x24dd3a8 <col:12, col:26> 'int' '/'
+| | |   |-ParenExpr 0x24dd368 <col:12, col:22> 'int'
+| | |   | `-BinaryOperator 0x24dd340 <col:13, col:19> 'int' '+'
+| | |   |   |-ImplicitCastExpr 0x24dd310 <col:13> 'int' <LValueToRValue>
+| | |   |   | `-DeclRefExpr 0x24dd2c0 <col:13> 'int' lvalue ParmVar 0x24d8a78 'min' 'int'
+| | |   |   `-ImplicitCastExpr 0x24dd328 <col:19> 'int' <LValueToRValue>
+| | |   |     `-DeclRefExpr 0x24dd2e8 <col:19> 'int' lvalue ParmVar 0x24d8ad8 'max' 'int'
+| | |   `-IntegerLiteral 0x24dd388 <col:26> 'int' 2
+| | |-VarDecl 0x24dd3f8 <line:107:2, col:50> col:6 used current 'int' cinit
+| | | `-ImplicitCastExpr 0x24dd540 <col:16, col:50> 'int' <PointerToIntegral>
+| | |   `-ObjCMessageExpr 0x24dd510 <col:16, col:50> 'id':'id' selector=intValue
+| | |     `-ObjCMessageExpr 0x24dd4d8 <col:17, col:41> 'id':'id' selector=objectAtIndex:
+| | |       |-ImplicitCastExpr 0x24dd4a8 <col:18> 'id':'id' <LValueToRValue>
+| | |       | `-DeclRefExpr 0x24dd458 <col:18> 'id':'id' lvalue ParmVar 0x24d89b8 'list' 'id':'id'
+| | |       `-ImplicitCastExpr 0x24dd4c0 <col:38> 'int' <LValueToRValue>
+| | |         `-DeclRefExpr 0x24dd480 <col:38> 'int' lvalue Var 0x24dd260 'mid' 'int'
+| | `-CompoundStmt 0x24ddd40 <line:99:91, line:119:1>
+| |   |-IfStmt 0x24dd220 <line:100:2, line:103:2>
+| |   | |-<<<NULL>>>
+| |   | |-BinaryOperator 0x24dd040 <line:100:7, col:13> 'int' '>'
+| |   | | |-ImplicitCastExpr 0x24dd010 <col:7> 'int' <LValueToRValue>
+| |   | | | `-DeclRefExpr 0x24dcfc0 <col:7> 'int' lvalue ParmVar 0x24d8a78 'min' 'int'
+| |   | | `-ImplicitCastExpr 0x24dd028 <col:13> 'int' <LValueToRValue>
+| |   | |   `-DeclRefExpr 0x24dcfe8 <col:13> 'int' lvalue ParmVar 0x24d8ad8 'max' 'int'
+| |   | |-CompoundStmt 0x24dd1f8 <col:18, line:103:2>
+| |   | | |-CallExpr 0x24dd138 <line:101:3, col:47> 'void'
+| |   | | | |-ImplicitCastExpr 0x24dd120 <col:3> 'void (*)(id, ...)' <FunctionToPointerDecay>
+| |   | | | | `-DeclRefExpr 0x24dd068 <col:3> 'void (id, ...)' Function 0x24dbda8 'NSLog' 'void (id, ...)'
+| |   | | | |-ImplicitCastExpr 0x24dd170 <col:9, col:10> 'id':'id' <BitCast>
+| |   | | | | `-ObjCStringLiteral 0x24dd0d8 <col:9, col:10> 'NSString *'
+| |   | | | |   `-StringLiteral 0x24dd090 <col:10> 'char [28]' lvalue "Recursively did not find %i"
+| |   | | | `-ImplicitCastExpr 0x24dd188 <col:41> 'int' <LValueToRValue>
+| |   | | |   `-DeclRefExpr 0x24dd0f8 <col:41> 'int' lvalue ParmVar 0x24d8a18 'target' 'int'
+| |   | | `-ReturnStmt 0x24dd1e0 <line:102:3, col:11>
+| |   | |   `-UnaryOperator 0x24dd1c0 <col:10, col:11> 'int' prefix '-'
+| |   | |     `-IntegerLiteral 0x24dd1a0 <col:11> 'int' 1
+| |   | `-<<<NULL>>>
+| |   |-DeclStmt 0x24dd3d0 <line:105:2, col:27>
+| |   | `-VarDecl 0x24dd260 <col:2, col:26> col:6 used mid 'int' cinit
+| |   |   `-BinaryOperator 0x24dd3a8 <col:12, col:26> 'int' '/'
+| |   |     |-ParenExpr 0x24dd368 <col:12, col:22> 'int'
+| |   |     | `-BinaryOperator 0x24dd340 <col:13, col:19> 'int' '+'
+| |   |     |   |-ImplicitCastExpr 0x24dd310 <col:13> 'int' <LValueToRValue>
+| |   |     |   | `-DeclRefExpr 0x24dd2c0 <col:13> 'int' lvalue ParmVar 0x24d8a78 'min' 'int'
+| |   |     |   `-ImplicitCastExpr 0x24dd328 <col:19> 'int' <LValueToRValue>
+| |   |     |     `-DeclRefExpr 0x24dd2e8 <col:19> 'int' lvalue ParmVar 0x24d8ad8 'max' 'int'
+| |   |     `-IntegerLiteral 0x24dd388 <col:26> 'int' 2
+| |   |-DeclStmt 0x24dd558 <line:107:2, col:51>
+| |   | `-VarDecl 0x24dd3f8 <col:2, col:50> col:6 used current 'int' cinit
+| |   |   `-ImplicitCastExpr 0x24dd540 <col:16, col:50> 'int' <PointerToIntegral>
+| |   |     `-ObjCMessageExpr 0x24dd510 <col:16, col:50> 'id':'id' selector=intValue
+| |   |       `-ObjCMessageExpr 0x24dd4d8 <col:17, col:41> 'id':'id' selector=objectAtIndex:
+| |   |         |-ImplicitCastExpr 0x24dd4a8 <col:18> 'id':'id' <LValueToRValue>
+| |   |         | `-DeclRefExpr 0x24dd458 <col:18> 'id':'id' lvalue ParmVar 0x24d89b8 'list' 'id':'id'
+| |   |         `-ImplicitCastExpr 0x24dd4c0 <col:38> 'int' <LValueToRValue>
+| |   |           `-DeclRefExpr 0x24dd480 <col:38> 'int' lvalue Var 0x24dd260 'mid' 'int'
+| |   |-IfStmt 0x24dd818 <line:109:2, line:112:2>
+| |   | |-<<<NULL>>>
+| |   | |-BinaryOperator 0x24dd5f0 <line:109:6, col:17> 'int' '=='
+| |   | | |-ImplicitCastExpr 0x24dd5c0 <col:6> 'int' <LValueToRValue>
+| |   | | | `-DeclRefExpr 0x24dd570 <col:6> 'int' lvalue Var 0x24dd3f8 'current' 'int'
+| |   | | `-ImplicitCastExpr 0x24dd5d8 <col:17> 'int' <LValueToRValue>
+| |   | |   `-DeclRefExpr 0x24dd598 <col:17> 'int' lvalue ParmVar 0x24d8a18 'target' 'int'
+| |   | |-CompoundStmt 0x24dd7f0 <col:25, line:112:2>
+| |   | | |-CallExpr 0x24dd710 <line:110:3, col:57> 'void'
+| |   | | | |-ImplicitCastExpr 0x24dd6f8 <col:3> 'void (*)(id, ...)' <FunctionToPointerDecay>
+| |   | | | | `-DeclRefExpr 0x24dd618 <col:3> 'void (id, ...)' Function 0x24dbda8 'NSLog' 'void (id, ...)'
+| |   | | | |-ImplicitCastExpr 0x24dd750 <col:9, col:10> 'id':'id' <BitCast>
+| |   | | | | `-ObjCStringLiteral 0x24dd688 <col:9, col:10> 'NSString *'
+| |   | | | |   `-StringLiteral 0x24dd640 <col:10> 'char [33]' lvalue "Recursively found %i at index %i"
+| |   | | | |-ImplicitCastExpr 0x24dd768 <col:46> 'int' <LValueToRValue>
+| |   | | | | `-DeclRefExpr 0x24dd6a8 <col:46> 'int' lvalue ParmVar 0x24d8a18 'target' 'int'
+| |   | | | `-ImplicitCastExpr 0x24dd780 <col:54> 'int' <LValueToRValue>
+| |   | | |   `-DeclRefExpr 0x24dd6d0 <col:54> 'int' lvalue Var 0x24dd260 'mid' 'int'
+| |   | | `-ReturnStmt 0x24dd7d8 <line:111:3, col:10>
+| |   | |   `-ImplicitCastExpr 0x24dd7c0 <col:10> 'int' <LValueToRValue>
+| |   | |     `-DeclRefExpr 0x24dd798 <col:10> 'int' lvalue Var 0x24dd260 'mid' 'int'
+| |   | `-<<<NULL>>>
+| |   |-IfStmt 0x24ddb10 <line:114:2, line:116:2>
+| |   | |-<<<NULL>>>
+| |   | |-BinaryOperator 0x24dd8c8 <line:114:6, col:16> 'int' '<'
+| |   | | |-ImplicitCastExpr 0x24dd898 <col:6> 'int' <LValueToRValue>
+| |   | | | `-DeclRefExpr 0x24dd848 <col:6> 'int' lvalue Var 0x24dd3f8 'current' 'int'
+| |   | | `-ImplicitCastExpr 0x24dd8b0 <col:16> 'int' <LValueToRValue>
+| |   | |   `-DeclRefExpr 0x24dd870 <col:16> 'int' lvalue ParmVar 0x24d8a18 'target' 'int'
+| |   | |-CompoundStmt 0x24ddaf0 <col:24, line:116:2>
+| |   | | `-ReturnStmt 0x24ddad8 <line:115:3, col:63>
+| |   | |   `-ObjCMessageExpr 0x24dda78 <col:10, col:63> 'int' selector=recursiveBinarySearch::::
+| |   | |     |-ImplicitCastExpr 0x24dda18 <col:11> 'Search *' <LValueToRValue>
+| |   | |     | `-DeclRefExpr 0x24dd8f0 <col:11> 'Search *' lvalue ImplicitParam 0x24dc7d8 'self' 'Search *'
+| |   | |     |-ImplicitCastExpr 0x24dda30 <col:39> 'id':'id' <LValueToRValue>
+| |   | |     | `-DeclRefExpr 0x24dd918 <col:39> 'id':'id' lvalue ParmVar 0x24d89b8 'list' 'id':'id'
+| |   | |     |-ImplicitCastExpr 0x24dda48 <col:45> 'int' <LValueToRValue>
+| |   | |     | `-DeclRefExpr 0x24dd940 <col:45> 'int' lvalue ParmVar 0x24d8a18 'target' 'int'
+| |   | |     |-BinaryOperator 0x24dd9c8 <col:53, col:57> 'int' '+'
+| |   | |     | |-ImplicitCastExpr 0x24dd9b0 <col:53> 'int' <LValueToRValue>
+| |   | |     | | `-DeclRefExpr 0x24dd968 <col:53> 'int' lvalue Var 0x24dd260 'mid' 'int'
+| |   | |     | `-IntegerLiteral 0x24dd990 <col:57> 'int' 1
+| |   | |     `-ImplicitCastExpr 0x24dda60 <col:60> 'int' <LValueToRValue>
+| |   | |       `-DeclRefExpr 0x24dd9f0 <col:60> 'int' lvalue ParmVar 0x24d8ad8 'max' 'int'
+| |   | `-<<<NULL>>>
+| |   `-ReturnStmt 0x24ddd28 <line:118:2, col:62>
+| |     `-ObjCMessageExpr 0x24ddcc8 <col:9, col:62> 'int' selector=recursiveBinarySearch::::
+| |       |-ImplicitCastExpr 0x24ddc68 <col:10> 'Search *' <LValueToRValue>
+| |       | `-DeclRefExpr 0x24ddb40 <col:10> 'Search *' lvalue ImplicitParam 0x24dc7d8 'self' 'Search *'
+| |       |-ImplicitCastExpr 0x24ddc80 <col:38> 'id':'id' <LValueToRValue>
+| |       | `-DeclRefExpr 0x24ddb68 <col:38> 'id':'id' lvalue ParmVar 0x24d89b8 'list' 'id':'id'
+| |       |-ImplicitCastExpr 0x24ddc98 <col:44> 'int' <LValueToRValue>
+| |       | `-DeclRefExpr 0x24ddb90 <col:44> 'int' lvalue ParmVar 0x24d8a18 'target' 'int'
+| |       |-ImplicitCastExpr 0x24ddcb0 <col:52> 'int' <LValueToRValue>
+| |       | `-DeclRefExpr 0x24ddbb8 <col:52> 'int' lvalue ParmVar 0x24d8a78 'min' 'int'
+| |       `-BinaryOperator 0x24ddc40 <col:57, col:61> 'int' '-'
+| |         |-ImplicitCastExpr 0x24ddc28 <col:57> 'int' <LValueToRValue>
+| |         | `-DeclRefExpr 0x24ddbe0 <col:57> 'int' lvalue Var 0x24dd260 'mid' 'int'
+| |         `-IntegerLiteral 0x24ddc08 <col:61> 'int' 1
+| |-ObjCMethodDecl 0x24d8b78 <line:125:1, line:127:1> line:125:1 - getLength 'int'
+| | |-ImplicitParamDecl 0x24ddd88 <<invalid sloc>> <invalid sloc> implicit used self 'Search *'
+| | |-ImplicitParamDecl 0x24ddde8 <<invalid sloc>> <invalid sloc> implicit _cmd 'SEL':'SEL *'
+| | `-CompoundStmt 0x24ddee8 <col:18, line:127:1>
+| |   `-ReturnStmt 0x24dded0 <line:126:5, col:18>
+| |     `-ImplicitCastExpr 0x24ddeb8 <col:12, col:18> 'int' <LValueToRValue>
+| |       `-ObjCIvarRefExpr 0x24dde88 <col:12, col:18> 'int' lvalue ObjCIvarDecl='_length' 0x24cc7a8
+| |         `-ImplicitCastExpr 0x24dde70 <col:12> 'Search *' <LValueToRValue>
+| |           `-DeclRefExpr 0x24dde48 <col:12> 'Search *' lvalue ImplicitParam 0x24ddd88 'self' 'Search *'
+| |-ObjCMethodDecl 0x24d8c18 <line:133:1, line:135:1> line:133:1 - getTarget 'int'
+| | |-ImplicitParamDecl 0x24de140 <<invalid sloc>> <invalid sloc> implicit used self 'Search *'
+| | |-ImplicitParamDecl 0x24de1a0 <<invalid sloc>> <invalid sloc> implicit _cmd 'SEL':'SEL *'
+| | `-CompoundStmt 0x24de2a0 <col:18, line:135:1>
+| |   `-ReturnStmt 0x24de288 <line:134:5, col:18>
+| |     `-ImplicitCastExpr 0x24de270 <col:12, col:18> 'int' <LValueToRValue>
+| |       `-ObjCIvarRefExpr 0x24de240 <col:12, col:18> 'int' lvalue ObjCIvarDecl='_target' 0x24cc810
+| |         `-ImplicitCastExpr 0x24de228 <col:12> 'Search *' <LValueToRValue>
+| |           `-DeclRefExpr 0x24de200 <col:12> 'Search *' lvalue ImplicitParam 0x24de140 'self' 'Search *'
+| `-ObjCMethodDecl 0x24d8cb8 <line:141:1, line:146:1> line:141:1 - printList 'void'
+|   |-ImplicitParamDecl 0x24de2c0 <<invalid sloc>> <invalid sloc> implicit used self 'Search *'
+|   |-ImplicitParamDecl 0x24de320 <<invalid sloc>> <invalid sloc> implicit _cmd 'SEL':'SEL *'
+|   |-VarDecl 0x24de390 <line:142:2, col:6> col:6 used i 'int'
+|   `-CompoundStmt 0x24de728 <line:141:19, line:146:1>
+|     |-DeclStmt 0x24de3f0 <line:142:2, col:7>
+|     | `-VarDecl 0x24de390 <col:2, col:6> col:6 used i 'int'
+|     `-ForStmt 0x24de6f0 <line:143:2, line:145:2>
+|       |-BinaryOperator 0x24de450 <line:143:7, col:9> 'int' '='
+|       | |-DeclRefExpr 0x24de408 <col:7> 'int' lvalue Var 0x24de390 'i' 'int'
+|       | `-IntegerLiteral 0x24de430 <col:9> 'int' 0
+|       |-<<<NULL>>>
+|       |-BinaryOperator 0x24de540 <col:12, col:20> 'int' '<'
+|       | |-ImplicitCastExpr 0x24de510 <col:12> 'int' <LValueToRValue>
+|       | | `-DeclRefExpr 0x24de478 <col:12> 'int' lvalue Var 0x24de390 'i' 'int'
+|       | `-ImplicitCastExpr 0x24de528 <col:14, col:20> 'int' <LValueToRValue>
+|       |   `-ObjCIvarRefExpr 0x24de4e0 <col:14, col:20> 'int' lvalue ObjCIvarDecl='_length' 0x24cc7a8
+|       |     `-ImplicitCastExpr 0x24de4c8 <col:14> 'Search *' <LValueToRValue>
+|       |       `-DeclRefExpr 0x24de4a0 <col:14> 'Search *' lvalue ImplicitParam 0x24de2c0 'self' 'Search *'
+|       |-UnaryOperator 0x24de590 <col:29, col:30> 'int' postfix '++'
+|       | `-DeclRefExpr 0x24de568 <col:29> 'int' lvalue Var 0x24de390 'i' 'int'
+|       `-CompoundStmt 0x24de6d8 <col:34, line:145:2>
+|-FunctionDecl 0x24d9108 <<invalid sloc>> line:33:14 implicit used arc4random 'int ()'
+|-FunctionDecl 0x24dbda8 <line:75:4> col:4 implicit used NSLog 'void (id, ...)' extern
+| |-ParmVarDecl 0x24dbe50 <<invalid sloc>> <invalid sloc> 'id':'id'
+| `-FormatAttr 0x24dbeb8 <col:4> Implicit NSString 1 2
+`-FunctionDecl 0x24dea00 <line:153:1, line:177:1> line:153:5 main 'int (int, const char **)'
+  |-ParmVarDecl 0x24de7a8 <col:11, col:15> col:15 argc 'int'
+  |-ParmVarDecl 0x24de8f0 <col:21, col:39> col:34 argv 'const char **':'const char **'
+  `-CompoundStmt 0x24def40 <col:42, line:177:1>
+    |-DeclStmt 0x24deb60 <line:158:2, col:16>
+    | `-VarDecl 0x24deb00 <col:2, col:10> col:10 used search 'Search *'
+    |-BinaryOperator 0x24dec28 <line:159:2, col:31> 'Search *' '='
+    | |-DeclRefExpr 0x24deb78 <col:2> 'Search *' lvalue Var 0x24deb00 'search' 'Search *'
+    | `-ImplicitCastExpr 0x24dec10 <col:11, col:31> 'Search *' <BitCast>
+    |   `-ObjCMessageExpr 0x24debe0 <col:11, col:31> 'id':'id' selector=init
+    |     `-ObjCMessageExpr 0x24debb0 <col:12, col:25> 'id':'id' selector=alloc class='Search'
+    |-DeclStmt 0x24dee30 <line:165:2, col:41>
+    | `-VarDecl 0x24ded18 <col:2, col:40> col:6 target 'int' cinit
+    |   `-ObjCMessageExpr 0x24dedf8 <col:15, col:40> 'int' selector=setTarget:
+    |     |-ImplicitCastExpr 0x24dedc8 <col:16> 'Search *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x24ded78 <col:16> 'Search *' lvalue Var 0x24deb00 'search' 'Search *'
+    |     `-ImplicitCastExpr 0x24dede0 <col:34> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x24deda0 <col:34> 'const int' lvalue Var 0x24cd1c0 'NUMBER' 'const int'
+    |-ObjCMessageExpr 0x24dee88 <line:168:2, col:19> 'void' selector=printList
+    | `-ImplicitCastExpr 0x24dee70 <col:3> 'Search *' <LValueToRValue>
+    |   `-DeclRefExpr 0x24dee48 <col:3> 'Search *' lvalue Var 0x24deb00 'search' 'Search *'
+    `-ReturnStmt 0x24def28 <line:176:2, col:9>
+      `-IntegerLiteral 0x24def08 <col:9> 'int' 0

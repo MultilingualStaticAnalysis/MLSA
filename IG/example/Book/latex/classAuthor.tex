@@ -1,0 +1,160 @@
+\hypertarget{classAuthor}{}\section{Author Class Reference}
+\label{classAuthor}\index{Author@{Author}}
+
+
+{\ttfamily \#include $<$Author.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAuthor_a8873fad1ccf89e11a9f499d8a0e2607f}{Author} (const std\+::string \&\hyperlink{classAuthor_a618f8527df84dc680f62a967f6f5e96e}{name}, const std\+::string \&\hyperlink{classAuthor_a8542e2f9c1f481b40665cb3b32f43c8e}{email}, char \hyperlink{classAuthor_a3e7bac289b21d7f97dc2bf14e56b9a14}{gender})
+\item 
+std\+::string \hyperlink{classAuthor_a2d27943db18f822be1a301bca65fb6ef}{get\+Name} () const 
+\item 
+std\+::string \hyperlink{classAuthor_af7dd4e055b1a7ea0cf1623c1c0b46d62}{get\+Email} () const 
+\item 
+void \hyperlink{classAuthor_a3cf04f59de5f1f6cfb50a55667844cfd}{set\+Email} (const std\+::string \&\hyperlink{classAuthor_a8542e2f9c1f481b40665cb3b32f43c8e}{email})
+\item 
+char \hyperlink{classAuthor_a4ff6cc39d18894b0538e10a8e7170988}{get\+Gender} () const 
+\item 
+void \hyperlink{classAuthor_a5d5d6296cd6cf5c5017fc2f27a8f6925}{print} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classAuthor_a618f8527df84dc680f62a967f6f5e96e}{name}
+\item 
+std\+::string \hyperlink{classAuthor_a8542e2f9c1f481b40665cb3b32f43c8e}{email}
+\item 
+char \hyperlink{classAuthor_a3e7bac289b21d7f97dc2bf14e56b9a14}{gender}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Author@{Author}!Author@{Author}}
+\index{Author@{Author}!Author@{Author}}
+\subsubsection[{\texorpdfstring{Author(const std\+::string \&name, const std\+::string \&email, char gender)}{Author(const std::string &name, const std::string &email, char gender)}}]{\setlength{\rightskip}{0pt plus 5cm}Author\+::\+Author (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{const std\+::string \&}]{email, }
+\item[{char}]{gender}
+\end{DoxyParamCaption}
+)}\hypertarget{classAuthor_a8873fad1ccf89e11a9f499d8a0e2607f}{}\label{classAuthor_a8873fad1ccf89e11a9f499d8a0e2607f}
+
+\begin{DoxyCode}
+7                                                                      : \hyperlink{classAuthor_a618f8527df84dc680f62a967f6f5e96e}{name}(
+      \hyperlink{classAuthor_a618f8527df84dc680f62a967f6f5e96e}{name}) \{
+8    \hyperlink{classAuthor_a3cf04f59de5f1f6cfb50a55667844cfd}{setEmail}(\hyperlink{classAuthor_a8542e2f9c1f481b40665cb3b32f43c8e}{email});  \textcolor{comment}{// Call setter to check for valid email}
+9    \textcolor{keywordflow}{if} (\hyperlink{classAuthor_a3e7bac289b21d7f97dc2bf14e56b9a14}{gender} == \textcolor{charliteral}{'m'} || \hyperlink{classAuthor_a3e7bac289b21d7f97dc2bf14e56b9a14}{gender} == \textcolor{charliteral}{'f'}) \{
+10       this->\hyperlink{classAuthor_a3e7bac289b21d7f97dc2bf14e56b9a14}{gender} = \hyperlink{classAuthor_a3e7bac289b21d7f97dc2bf14e56b9a14}{gender};
+11    \} \textcolor{keywordflow}{else} \{
+12       cout << \textcolor{stringliteral}{"Invalid gender! Set to 'u' (unknown)."} << endl;
+13       this->\hyperlink{classAuthor_a3e7bac289b21d7f97dc2bf14e56b9a14}{gender} = \textcolor{charliteral}{'u'};
+14    \}
+15 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{classAuthor_a8873fad1ccf89e11a9f499d8a0e2607f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Author@{Author}!get\+Email@{get\+Email}}
+\index{get\+Email@{get\+Email}!Author@{Author}}
+\subsubsection[{\texorpdfstring{get\+Email() const }{getEmail() const }}]{\setlength{\rightskip}{0pt plus 5cm}string Author\+::get\+Email (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classAuthor_af7dd4e055b1a7ea0cf1623c1c0b46d62}{}\label{classAuthor_af7dd4e055b1a7ea0cf1623c1c0b46d62}
+
+\begin{DoxyCode}
+21                               \{
+22    \textcolor{keywordflow}{return} \hyperlink{classAuthor_a8542e2f9c1f481b40665cb3b32f43c8e}{email};
+23 \}
+\end{DoxyCode}
+\index{Author@{Author}!get\+Gender@{get\+Gender}}
+\index{get\+Gender@{get\+Gender}!Author@{Author}}
+\subsubsection[{\texorpdfstring{get\+Gender() const }{getGender() const }}]{\setlength{\rightskip}{0pt plus 5cm}char Author\+::get\+Gender (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classAuthor_a4ff6cc39d18894b0538e10a8e7170988}{}\label{classAuthor_a4ff6cc39d18894b0538e10a8e7170988}
+
+\begin{DoxyCode}
+37                              \{
+38    \textcolor{keywordflow}{return} \hyperlink{classAuthor_a3e7bac289b21d7f97dc2bf14e56b9a14}{gender};
+39 \}
+\end{DoxyCode}
+\index{Author@{Author}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Author@{Author}}
+\subsubsection[{\texorpdfstring{get\+Name() const }{getName() const }}]{\setlength{\rightskip}{0pt plus 5cm}string Author\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classAuthor_a2d27943db18f822be1a301bca65fb6ef}{}\label{classAuthor_a2d27943db18f822be1a301bca65fb6ef}
+
+\begin{DoxyCode}
+17                              \{
+18    \textcolor{keywordflow}{return} \hyperlink{classAuthor_a618f8527df84dc680f62a967f6f5e96e}{name};
+19 \}
+\end{DoxyCode}
+\index{Author@{Author}!print@{print}}
+\index{print@{print}!Author@{Author}}
+\subsubsection[{\texorpdfstring{print() const }{print() const }}]{\setlength{\rightskip}{0pt plus 5cm}void Author\+::print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classAuthor_a5d5d6296cd6cf5c5017fc2f27a8f6925}{}\label{classAuthor_a5d5d6296cd6cf5c5017fc2f27a8f6925}
+
+\begin{DoxyCode}
+42                          \{
+43    cout << \hyperlink{classAuthor_a618f8527df84dc680f62a967f6f5e96e}{name} << \textcolor{stringliteral}{" ("} << \hyperlink{classAuthor_a3e7bac289b21d7f97dc2bf14e56b9a14}{gender} << \textcolor{stringliteral}{") at "} << \hyperlink{classAuthor_a8542e2f9c1f481b40665cb3b32f43c8e}{email} << endl;
+44 \}\end{DoxyCode}
+\index{Author@{Author}!set\+Email@{set\+Email}}
+\index{set\+Email@{set\+Email}!Author@{Author}}
+\subsubsection[{\texorpdfstring{set\+Email(const std\+::string \&email)}{setEmail(const std::string &email)}}]{\setlength{\rightskip}{0pt plus 5cm}void Author\+::set\+Email (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{email}
+\end{DoxyParamCaption}
+)}\hypertarget{classAuthor_a3cf04f59de5f1f6cfb50a55667844cfd}{}\label{classAuthor_a3cf04f59de5f1f6cfb50a55667844cfd}
+
+\begin{DoxyCode}
+25                                           \{
+26    \textcolor{comment}{// Check for valid email. Assume that a valid email contains}
+27    \textcolor{comment}{//  a '@' that is not the first nor last character.}
+28    \textcolor{keywordtype}{size\_t} atIndex = \hyperlink{classAuthor_a8542e2f9c1f481b40665cb3b32f43c8e}{email}.find(\textcolor{charliteral}{'@'});
+29    \textcolor{keywordflow}{if} (atIndex != string::npos && atIndex != 0 && atIndex != \hyperlink{classAuthor_a8542e2f9c1f481b40665cb3b32f43c8e}{email}.length()-1) \{
+30       this->\hyperlink{classAuthor_a8542e2f9c1f481b40665cb3b32f43c8e}{email} = \hyperlink{classAuthor_a8542e2f9c1f481b40665cb3b32f43c8e}{email};
+31    \} \textcolor{keywordflow}{else} \{
+32       cout << \textcolor{stringliteral}{"Invalid email! Set to empty string."} << endl;
+33       this->\hyperlink{classAuthor_a8542e2f9c1f481b40665cb3b32f43c8e}{email} = \textcolor{stringliteral}{""};
+34    \}
+35 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Author@{Author}!email@{email}}
+\index{email@{email}!Author@{Author}}
+\subsubsection[{\texorpdfstring{email}{email}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Author\+::email\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classAuthor_a8542e2f9c1f481b40665cb3b32f43c8e}{}\label{classAuthor_a8542e2f9c1f481b40665cb3b32f43c8e}
+\index{Author@{Author}!gender@{gender}}
+\index{gender@{gender}!Author@{Author}}
+\subsubsection[{\texorpdfstring{gender}{gender}}]{\setlength{\rightskip}{0pt plus 5cm}char Author\+::gender\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classAuthor_a3e7bac289b21d7f97dc2bf14e56b9a14}{}\label{classAuthor_a3e7bac289b21d7f97dc2bf14e56b9a14}
+\index{Author@{Author}!name@{name}}
+\index{name@{name}!Author@{Author}}
+\subsubsection[{\texorpdfstring{name}{name}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Author\+::name\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classAuthor_a618f8527df84dc680f62a967f6f5e96e}{}\label{classAuthor_a618f8527df84dc680f62a967f6f5e96e}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Author_8h}{Author.\+h}\item 
+\hyperlink{Author_8cpp}{Author.\+cpp}\end{DoxyCompactItemize}

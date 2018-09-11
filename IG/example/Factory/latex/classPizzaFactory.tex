@@ -1,0 +1,66 @@
+\hypertarget{classPizzaFactory}{}\section{Pizza\+Factory Class Reference}
+\label{classPizzaFactory}\index{Pizza\+Factory@{Pizza\+Factory}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classPizzaFactory_a247cf751b7af4fd338a14303c9e67fe4}{Pizza\+Type} \{ \hyperlink{classPizzaFactory_a247cf751b7af4fd338a14303c9e67fe4ab47db230a75b01a1a531d9374a57dc23}{Ham\+Mushroom}, 
+\hyperlink{classPizzaFactory_a247cf751b7af4fd338a14303c9e67fe4ae05ccf2778af31944f7205f550c33e8b}{Deluxe}, 
+\hyperlink{classPizzaFactory_a247cf751b7af4fd338a14303c9e67fe4a43552967e3be1afe8d7bf89feb21ba4e}{Hawaiian}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static unique\+\_\+ptr$<$ \hyperlink{classPizza}{Pizza} $>$ \hyperlink{classPizzaFactory_ae03b206abf337720e9f019eb735d6131}{create\+Pizza} (\hyperlink{classPizzaFactory_a247cf751b7af4fd338a14303c9e67fe4}{Pizza\+Type} pizza\+Type)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\index{Pizza\+Factory@{Pizza\+Factory}!Pizza\+Type@{Pizza\+Type}}
+\index{Pizza\+Type@{Pizza\+Type}!Pizza\+Factory@{Pizza\+Factory}}
+\subsubsection[{\texorpdfstring{Pizza\+Type}{PizzaType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Pizza\+Factory\+::\+Pizza\+Type}}\hypertarget{classPizzaFactory_a247cf751b7af4fd338a14303c9e67fe4}{}\label{classPizzaFactory_a247cf751b7af4fd338a14303c9e67fe4}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Ham\+Mushroom@{Ham\+Mushroom}!Pizza\+Factory@{Pizza\+Factory}}\index{Pizza\+Factory@{Pizza\+Factory}!Ham\+Mushroom@{Ham\+Mushroom}}\item[{\em 
+Ham\+Mushroom\hypertarget{classPizzaFactory_a247cf751b7af4fd338a14303c9e67fe4ab47db230a75b01a1a531d9374a57dc23}{}\label{classPizzaFactory_a247cf751b7af4fd338a14303c9e67fe4ab47db230a75b01a1a531d9374a57dc23}
+}]\index{Deluxe@{Deluxe}!Pizza\+Factory@{Pizza\+Factory}}\index{Pizza\+Factory@{Pizza\+Factory}!Deluxe@{Deluxe}}\item[{\em 
+Deluxe\hypertarget{classPizzaFactory_a247cf751b7af4fd338a14303c9e67fe4ae05ccf2778af31944f7205f550c33e8b}{}\label{classPizzaFactory_a247cf751b7af4fd338a14303c9e67fe4ae05ccf2778af31944f7205f550c33e8b}
+}]\index{Hawaiian@{Hawaiian}!Pizza\+Factory@{Pizza\+Factory}}\index{Pizza\+Factory@{Pizza\+Factory}!Hawaiian@{Hawaiian}}\item[{\em 
+Hawaiian\hypertarget{classPizzaFactory_a247cf751b7af4fd338a14303c9e67fe4a43552967e3be1afe8d7bf89feb21ba4e}{}\label{classPizzaFactory_a247cf751b7af4fd338a14303c9e67fe4a43552967e3be1afe8d7bf89feb21ba4e}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+32                    \{
+33         \hyperlink{classPizzaFactory_a247cf751b7af4fd338a14303c9e67fe4ab47db230a75b01a1a531d9374a57dc23}{HamMushroom},
+34         \hyperlink{classPizzaFactory_a247cf751b7af4fd338a14303c9e67fe4ae05ccf2778af31944f7205f550c33e8b}{Deluxe},
+35         \hyperlink{classPizzaFactory_a247cf751b7af4fd338a14303c9e67fe4a43552967e3be1afe8d7bf89feb21ba4e}{Hawaiian}
+36     \};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Pizza\+Factory@{Pizza\+Factory}!create\+Pizza@{create\+Pizza}}
+\index{create\+Pizza@{create\+Pizza}!Pizza\+Factory@{Pizza\+Factory}}
+\subsubsection[{\texorpdfstring{create\+Pizza(\+Pizza\+Type pizza\+Type)}{createPizza(PizzaType pizzaType)}}]{\setlength{\rightskip}{0pt plus 5cm}static unique\+\_\+ptr$<${\bf Pizza}$>$ Pizza\+Factory\+::create\+Pizza (
+\begin{DoxyParamCaption}
+\item[{{\bf Pizza\+Type}}]{pizza\+Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classPizzaFactory_ae03b206abf337720e9f019eb735d6131}{}\label{classPizzaFactory_ae03b206abf337720e9f019eb735d6131}
+
+\begin{DoxyCode}
+38                                                               \{
+39         \textcolor{keywordflow}{switch} (pizzaType) \{
+40         \textcolor{keywordflow}{case} \hyperlink{classPizzaFactory_a247cf751b7af4fd338a14303c9e67fe4ab47db230a75b01a1a531d9374a57dc23}{HamMushroom}: \textcolor{keywordflow}{return} make\_unique<HamAndMushroomPizza>();
+41         \textcolor{keywordflow}{case} \hyperlink{classPizzaFactory_a247cf751b7af4fd338a14303c9e67fe4ae05ccf2778af31944f7205f550c33e8b}{Deluxe}:      \textcolor{keywordflow}{return} make\_unique<DeluxePizza>();
+42         \textcolor{keywordflow}{case} \hyperlink{classPizzaFactory_a247cf751b7af4fd338a14303c9e67fe4a43552967e3be1afe8d7bf89feb21ba4e}{Hawaiian}:    \textcolor{keywordflow}{return} make\_unique<HawaiianPizza>();
+43         \}
+44         \textcolor{keywordflow}{throw} \textcolor{stringliteral}{"invalid pizza type."};
+45     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Factory_8cpp}{Factory.\+cpp}\end{DoxyCompactItemize}

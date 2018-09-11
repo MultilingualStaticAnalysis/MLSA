@@ -1,0 +1,127 @@
+\hypertarget{RandomizedBinarySearch_8cpp}{}\section{Randomized\+Binary\+Search.\+cpp File Reference}
+\label{RandomizedBinarySearch_8cpp}\index{Randomized\+Binary\+Search.\+cpp@{Randomized\+Binary\+Search.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cstdio$>$}\\*
+{\ttfamily \#include $<$cstring$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+Include dependency graph for Randomized\+Binary\+Search.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{RandomizedBinarySearch_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classRBSTNode}{R\+B\+S\+T\+Node}
+\item 
+class \hyperlink{classRandomizedBinarySearchTree}{Randomized\+Binary\+Search\+Tree}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{RandomizedBinarySearch_8cpp_a4ce3e2af80a76d816ab7f8567ec4a65a}{M\+A\+X\+\_\+\+V\+A\+L\+UE}~65536
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{RandomizedBinarySearch_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{Randomized\+Binary\+Search.\+cpp@{Randomized\+Binary\+Search.\+cpp}!M\+A\+X\+\_\+\+V\+A\+L\+UE@{M\+A\+X\+\_\+\+V\+A\+L\+UE}}
+\index{M\+A\+X\+\_\+\+V\+A\+L\+UE@{M\+A\+X\+\_\+\+V\+A\+L\+UE}!Randomized\+Binary\+Search.\+cpp@{Randomized\+Binary\+Search.\+cpp}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+V\+A\+L\+UE}{MAX_VALUE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+V\+A\+L\+UE~65536}\hypertarget{RandomizedBinarySearch_8cpp_a4ce3e2af80a76d816ab7f8567ec4a65a}{}\label{RandomizedBinarySearch_8cpp_a4ce3e2af80a76d816ab7f8567ec4a65a}
+
+
+\subsection{Function Documentation}
+\index{Randomized\+Binary\+Search.\+cpp@{Randomized\+Binary\+Search.\+cpp}!main@{main}}
+\index{main@{main}!Randomized\+Binary\+Search.\+cpp@{Randomized\+Binary\+Search.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{RandomizedBinarySearch_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{RandomizedBinarySearch_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+Display tree 
+\begin{DoxyCode}
+206 \{            
+207     \hyperlink{classRandomizedBinarySearchTree}{RandomizedBinarySearchTree} rbst; 
+208     cout<<\textcolor{stringliteral}{"Randomized Binary SearchTree Test\(\backslash\)n"};          
+209     \textcolor{keywordtype}{char} ch;
+210     \textcolor{keywordtype}{int} choice, item;
+211     \textcolor{comment}{/*}
+212 \textcolor{comment}{     * Perform tree operations  }
+213 \textcolor{comment}{     */}
+214     \textcolor{keywordflow}{do}    
+215     \{
+216         cout<<\textcolor{stringliteral}{"\(\backslash\)nRandomized Binary SearchTree Operations\(\backslash\)n"};
+217         cout<<\textcolor{stringliteral}{"1. Insert "}<<endl;
+218         cout<<\textcolor{stringliteral}{"2. Search "}<<endl;
+219         cout<<\textcolor{stringliteral}{"3. Count Nodes "}<<endl;
+220         cout<<\textcolor{stringliteral}{"4. Check Empty"}<<endl;
+221         cout<<\textcolor{stringliteral}{"5. Clear"}<<endl;
+222         cout<<\textcolor{stringliteral}{"Enter your choice: "};
+223         cin>>choice;            
+224         \textcolor{keywordflow}{switch} (choice)
+225         \{
+226         \textcolor{keywordflow}{case} 1: 
+227             cout<<\textcolor{stringliteral}{"Enter integer element to insert: "};
+228             cin>>item;
+229             rbst.\hyperlink{classRandomizedBinarySearchTree_ae5d6d97456f3d4bca2b0f4b4e184dba3}{insert}(item);                     
+230             \textcolor{keywordflow}{break};                          
+231         \textcolor{keywordflow}{case} 2: 
+232             cout<<\textcolor{stringliteral}{"Enter integer element to search: "};
+233             cin>>item;
+234             \textcolor{keywordflow}{if} (rbst.\hyperlink{classRandomizedBinarySearchTree_a3113d572e9cca081f0294fd47a994922}{search}(item))
+235                 cout<<\textcolor{stringliteral}{"Element "}<<item<<\textcolor{stringliteral}{" found in the Tree"}<<endl;
+236             \textcolor{keywordflow}{else}
+237                 cout<<\textcolor{stringliteral}{"Element "}<<item<<\textcolor{stringliteral}{" not found in the Tree"}<<endl;
+238             \textcolor{keywordflow}{break};                                          
+239         \textcolor{keywordflow}{case} 3: 
+240             cout<<\textcolor{stringliteral}{"Nodes = "}<<rbst.\hyperlink{classRandomizedBinarySearchTree_a6e7b0de6c0f6816b9785988e34c75dcb}{countNodes}()<<endl;
+241             \textcolor{keywordflow}{break};     
+242         \textcolor{keywordflow}{case} 4:
+243             \textcolor{keywordflow}{if} (rbst.\hyperlink{classRandomizedBinarySearchTree_af35c367556914452ceba60569e95e5df}{isEmpty}()) 
+244                 cout<<\textcolor{stringliteral}{"Tree is Empty"}<<endl;
+245             \textcolor{keywordflow}{else}
+246                 cout<<\textcolor{stringliteral}{"Tree is not Empty"}<<endl;
+247             \textcolor{keywordflow}{break};
+248         \textcolor{keywordflow}{case} 5: 
+249             cout<<\textcolor{stringliteral}{"\(\backslash\)nRandomizedBinarySearchTree Cleared"}<<endl;
+250             rbst.\hyperlink{classRandomizedBinarySearchTree_ae84229d93afdce90f4f0141a04c9736c}{makeEmpty}();
+251             \textcolor{keywordflow}{break};            
+252         \textcolor{keywordflow}{default}: 
+253             cout<<\textcolor{stringliteral}{"Wrong Entry \(\backslash\)n "};
+254             \textcolor{keywordflow}{break};   
+255         \}
+256  
+258         cout<<\textcolor{stringliteral}{"\(\backslash\)nPost order : "};
+259         rbst.\hyperlink{classRandomizedBinarySearchTree_aad0f82161d579cdb36990bbc72209be5}{postorder}();
+260         cout<<\textcolor{stringliteral}{"\(\backslash\)nPre order : "};
+261         rbst.\hyperlink{classRandomizedBinarySearchTree_a019f49873fd8e266eb41edc0af956b38}{preorder}();    
+262         cout<<\textcolor{stringliteral}{"\(\backslash\)nIn order : "};
+263         rbst.\hyperlink{classRandomizedBinarySearchTree_a2581cdb7ec61a153663a44a899f7d9ec}{inorder}();
+264         cout<<\textcolor{stringliteral}{"\(\backslash\)nDo you want to continue (Type y or n) \(\backslash\)n"};
+265         cin>>ch;                  
+266     \} 
+267     \textcolor{keywordflow}{while} (ch == \textcolor{charliteral}{'Y'}|| ch == \textcolor{charliteral}{'y'});               
+268     \textcolor{keywordflow}{return} 0;
+269 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{RandomizedBinarySearch_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

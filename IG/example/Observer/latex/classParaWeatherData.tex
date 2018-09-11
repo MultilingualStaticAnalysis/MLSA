@@ -1,0 +1,146 @@
+\hypertarget{classParaWeatherData}{}\section{Para\+Weather\+Data Class Reference}
+\label{classParaWeatherData}\index{Para\+Weather\+Data@{Para\+Weather\+Data}}
+
+
+Inheritance diagram for Para\+Weather\+Data\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classParaWeatherData__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Para\+Weather\+Data\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classParaWeatherData__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classParaWeatherData_a53f58e23b6b2b8b7267fafdd0059bdc6}{Sensor\+Data\+Change} (float a, float b, float c)
+\item 
+void \hyperlink{classParaWeatherData_a97816831a5acc55f92e1ef3712d1ab37}{register\+Ob} (\hyperlink{classObserverBoardInterface}{Observer\+Board\+Interface} $\ast$ob)
+\item 
+void \hyperlink{classParaWeatherData_aea026913d5139b73aa5a7e9254d5f251}{remove\+Ob} (\hyperlink{classObserverBoardInterface}{Observer\+Board\+Interface} $\ast$ob)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classParaWeatherData_a7bf2ca268e2d6fb932df8012abd08c3d}{notify\+Ob} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classParaWeatherData_aeec114146e1053ee8bfc3639705e00c1}{m\+\_\+humidity}
+\item 
+float \hyperlink{classParaWeatherData_aca752f57b1b7c7a71556cb778b894ff3}{m\+\_\+temperature}
+\item 
+float \hyperlink{classParaWeatherData_a5e154d46c7b4444aeebb966383eba5b8}{m\+\_\+pressure}
+\item 
+list$<$ \hyperlink{classObserverBoardInterface}{Observer\+Board\+Interface} $\ast$ $>$ \hyperlink{classParaWeatherData_a876526d1f935d81abc5337051a76334a}{m\+\_\+obs}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Para\+Weather\+Data@{Para\+Weather\+Data}!notify\+Ob@{notify\+Ob}}
+\index{notify\+Ob@{notify\+Ob}!Para\+Weather\+Data@{Para\+Weather\+Data}}
+\subsubsection[{\texorpdfstring{notify\+Ob()}{notifyOb()}}]{\setlength{\rightskip}{0pt plus 5cm}void Para\+Weather\+Data\+::notify\+Ob (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classParaWeatherData_a7bf2ca268e2d6fb932df8012abd08c3d}{}\label{classParaWeatherData_a7bf2ca268e2d6fb932df8012abd08c3d}
+
+
+Implements \hyperlink{classWeatherDataInterface_aef2704c5ad69c82c70b0f8c2f47481c1}{Weather\+Data\+Interface}.
+
+
+\begin{DoxyCode}
+52     \{
+53         list<ObserverBoardInterface*>::iterator pos = \hyperlink{classParaWeatherData_a876526d1f935d81abc5337051a76334a}{m\_obs}.begin();
+54         \textcolor{keywordflow}{while} (pos != \hyperlink{classParaWeatherData_a876526d1f935d81abc5337051a76334a}{m\_obs}.end())
+55         \{
+56             ((\hyperlink{classObserverBoardInterface}{ObserverBoardInterface}* )(*pos))->update(
+      \hyperlink{classParaWeatherData_aeec114146e1053ee8bfc3639705e00c1}{m\_humidity},\hyperlink{classParaWeatherData_aca752f57b1b7c7a71556cb778b894ff3}{m\_temperature},\hyperlink{classParaWeatherData_a5e154d46c7b4444aeebb966383eba5b8}{m\_pressure});
+57             (\textcolor{keyword}{dynamic\_cast<}\hyperlink{classDisplayBoardInterface}{DisplayBoardInterface}*\textcolor{keyword}{>}(*pos))->show();
+58             ++pos;
+59         \}
+60     \}
+\end{DoxyCode}
+\index{Para\+Weather\+Data@{Para\+Weather\+Data}!register\+Ob@{register\+Ob}}
+\index{register\+Ob@{register\+Ob}!Para\+Weather\+Data@{Para\+Weather\+Data}}
+\subsubsection[{\texorpdfstring{register\+Ob(\+Observer\+Board\+Interface $\ast$ob)}{registerOb(ObserverBoardInterface *ob)}}]{\setlength{\rightskip}{0pt plus 5cm}void Para\+Weather\+Data\+::register\+Ob (
+\begin{DoxyParamCaption}
+\item[{{\bf Observer\+Board\+Interface} $\ast$}]{ob}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classParaWeatherData_a97816831a5acc55f92e1ef3712d1ab37}{}\label{classParaWeatherData_a97816831a5acc55f92e1ef3712d1ab37}
+
+
+Implements \hyperlink{classWeatherDataInterface_ad68a84e0ae106d3ee5289728ce821590}{Weather\+Data\+Interface}.
+
+
+\begin{DoxyCode}
+42     \{
+43         \hyperlink{classParaWeatherData_a876526d1f935d81abc5337051a76334a}{m\_obs}.push\_back(ob);
+44     \}
+\end{DoxyCode}
+\index{Para\+Weather\+Data@{Para\+Weather\+Data}!remove\+Ob@{remove\+Ob}}
+\index{remove\+Ob@{remove\+Ob}!Para\+Weather\+Data@{Para\+Weather\+Data}}
+\subsubsection[{\texorpdfstring{remove\+Ob(\+Observer\+Board\+Interface $\ast$ob)}{removeOb(ObserverBoardInterface *ob)}}]{\setlength{\rightskip}{0pt plus 5cm}void Para\+Weather\+Data\+::remove\+Ob (
+\begin{DoxyParamCaption}
+\item[{{\bf Observer\+Board\+Interface} $\ast$}]{ob}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classParaWeatherData_aea026913d5139b73aa5a7e9254d5f251}{}\label{classParaWeatherData_aea026913d5139b73aa5a7e9254d5f251}
+
+
+Implements \hyperlink{classWeatherDataInterface_aa654763e7953baa14c51f0ba67cb947b}{Weather\+Data\+Interface}.
+
+
+\begin{DoxyCode}
+47     \{
+48         \hyperlink{classParaWeatherData_a876526d1f935d81abc5337051a76334a}{m\_obs}.remove(ob);
+49     \}
+\end{DoxyCode}
+\index{Para\+Weather\+Data@{Para\+Weather\+Data}!Sensor\+Data\+Change@{Sensor\+Data\+Change}}
+\index{Sensor\+Data\+Change@{Sensor\+Data\+Change}!Para\+Weather\+Data@{Para\+Weather\+Data}}
+\subsubsection[{\texorpdfstring{Sensor\+Data\+Change(float a, float b, float c)}{SensorDataChange(float a, float b, float c)}}]{\setlength{\rightskip}{0pt plus 5cm}void Para\+Weather\+Data\+::\+Sensor\+Data\+Change (
+\begin{DoxyParamCaption}
+\item[{float}]{a, }
+\item[{float}]{b, }
+\item[{float}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classParaWeatherData_a53f58e23b6b2b8b7267fafdd0059bdc6}{}\label{classParaWeatherData_a53f58e23b6b2b8b7267fafdd0059bdc6}
+
+\begin{DoxyCode}
+34     \{
+35         \hyperlink{classParaWeatherData_aeec114146e1053ee8bfc3639705e00c1}{m\_humidity} = a;
+36         \hyperlink{classParaWeatherData_aca752f57b1b7c7a71556cb778b894ff3}{m\_temperature} = b;
+37         \hyperlink{classParaWeatherData_a5e154d46c7b4444aeebb966383eba5b8}{m\_pressure} = c;
+38         \hyperlink{classParaWeatherData_a7bf2ca268e2d6fb932df8012abd08c3d}{notifyOb}();
+39     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Para\+Weather\+Data@{Para\+Weather\+Data}!m\+\_\+humidity@{m\+\_\+humidity}}
+\index{m\+\_\+humidity@{m\+\_\+humidity}!Para\+Weather\+Data@{Para\+Weather\+Data}}
+\subsubsection[{\texorpdfstring{m\+\_\+humidity}{m_humidity}}]{\setlength{\rightskip}{0pt plus 5cm}float Para\+Weather\+Data\+::m\+\_\+humidity\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classParaWeatherData_aeec114146e1053ee8bfc3639705e00c1}{}\label{classParaWeatherData_aeec114146e1053ee8bfc3639705e00c1}
+\index{Para\+Weather\+Data@{Para\+Weather\+Data}!m\+\_\+obs@{m\+\_\+obs}}
+\index{m\+\_\+obs@{m\+\_\+obs}!Para\+Weather\+Data@{Para\+Weather\+Data}}
+\subsubsection[{\texorpdfstring{m\+\_\+obs}{m_obs}}]{\setlength{\rightskip}{0pt plus 5cm}list$<${\bf Observer\+Board\+Interface}$\ast$ $>$ Para\+Weather\+Data\+::m\+\_\+obs\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classParaWeatherData_a876526d1f935d81abc5337051a76334a}{}\label{classParaWeatherData_a876526d1f935d81abc5337051a76334a}
+\index{Para\+Weather\+Data@{Para\+Weather\+Data}!m\+\_\+pressure@{m\+\_\+pressure}}
+\index{m\+\_\+pressure@{m\+\_\+pressure}!Para\+Weather\+Data@{Para\+Weather\+Data}}
+\subsubsection[{\texorpdfstring{m\+\_\+pressure}{m_pressure}}]{\setlength{\rightskip}{0pt plus 5cm}float Para\+Weather\+Data\+::m\+\_\+pressure\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classParaWeatherData_a5e154d46c7b4444aeebb966383eba5b8}{}\label{classParaWeatherData_a5e154d46c7b4444aeebb966383eba5b8}
+\index{Para\+Weather\+Data@{Para\+Weather\+Data}!m\+\_\+temperature@{m\+\_\+temperature}}
+\index{m\+\_\+temperature@{m\+\_\+temperature}!Para\+Weather\+Data@{Para\+Weather\+Data}}
+\subsubsection[{\texorpdfstring{m\+\_\+temperature}{m_temperature}}]{\setlength{\rightskip}{0pt plus 5cm}float Para\+Weather\+Data\+::m\+\_\+temperature\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classParaWeatherData_aca752f57b1b7c7a71556cb778b894ff3}{}\label{classParaWeatherData_aca752f57b1b7c7a71556cb778b894ff3}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Observer_8cpp}{Observer.\+cpp}\end{DoxyCompactItemize}

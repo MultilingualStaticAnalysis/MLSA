@@ -1,0 +1,60 @@
+\hypertarget{Emain_8cpp}{}\section{Emain.\+cpp File Reference}
+\label{Emain_8cpp}\index{Emain.\+cpp@{Emain.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}Equation.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Huge\+Integer.\+h\char`\"{}}\\*
+Include dependency graph for Emain.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{Emain_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Emain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Emain.\+cpp@{Emain.\+cpp}!main@{main}}
+\index{main@{main}!Emain.\+cpp@{Emain.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Emain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Emain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+12 \{
+13    \hyperlink{classEquation}{Equation} e;
+14 
+15    cout << endl << \textcolor{stringliteral}{"Enter an equation: "};
+16    cin >> e;
+17 
+18    \textcolor{keywordflow}{while}(!e.end()) \textcolor{comment}{//if user enters 0x0, e.end will be true                                                
+                                                                                                       }
+19    \{
+20       e.\hyperlink{classEquation_ab5694559600529bd6da9bb37428bfc5d}{calculate}(); \textcolor{comment}{//calculates the equation requested by the user and displays the result      
+                                                                                                                }
+21       cout << \textcolor{stringliteral}{"Enter another equation (or 0x0 to exit): "};
+22       cin >> e;
+23    \}
+24 
+25    \textcolor{keywordflow}{return} 0;
+26 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{Emain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

@@ -1,0 +1,17 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/Adapter Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/Adapter Call Graph"
+	];
+
+	Node0x816339998 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/Adapter/Adapter.cpp"];
+	Node0x384699449 [shape=oval, label="0x2cb5f30. (/home/labaccount/11-2-17/mlsa/IG/example/Adapter/Adapter.cpp)\nHinduRitual::carryOutRitual(hinduGirl)"];
+	Node0x816339998 -> Node0x384699449;
+	Node0x662282699 [shape=oval, label="0x2cb6020. (/home/labaccount/11-2-17/mlsa/IG/example/Adapter/Adapter.cpp)\nHinduRitual::carryOutRitual(adaptedMuslim)"];
+	Node0x816339998 -> Node0x662282699;
+	Node0x290210186 [shape=oval, label="0x2cac7a0. (/home/labaccount/11-2-17/mlsa/IG/example/Adapter/Adapter.cpp)\nHindu::performsHinduRitual()"];
+	Node0x384699449 -> Node0x290210186;
+	Node0x345518296 [shape=oval, label="0x2cac7a0. (/home/labaccount/11-2-17/mlsa/IG/example/Adapter/Adapter.cpp)\nHindu::performsHinduRitual()"];
+	Node0x662282699 -> Node0x345518296;
+}

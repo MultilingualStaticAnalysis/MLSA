@@ -1,0 +1,141 @@
+\hypertarget{classManualTransmission}{}\section{Manual\+Transmission Class Reference}
+\label{classManualTransmission}\index{Manual\+Transmission@{Manual\+Transmission}}
+
+
+Inheritance diagram for Manual\+Transmission\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classManualTransmission__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Manual\+Transmission\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{classManualTransmission__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classManualTransmission_a5c4746be5cf077812d6d93e971129bbe}{Manual\+Transmission} (\hyperlink{classCar}{Car} $\ast$b)
+\item 
+string \hyperlink{classManualTransmission_a3c5f0113936e6f8734a659ab8331a565}{get\+Description} ()
+\item 
+double \hyperlink{classManualTransmission_a33631e1b167a3aa7a2d86f5d8e2061bf}{get\+Cost} ()
+\item 
+\hyperlink{classManualTransmission_a855eca38627c8eac4a546436f09727d7}{$\sim$\+Manual\+Transmission} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCar}{Car} $\ast$ \hyperlink{classManualTransmission_ac32c597fb255d5ce8faeaf7d4a8525c2}{\+\_\+b}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Manual\+Transmission@{Manual\+Transmission}!Manual\+Transmission@{Manual\+Transmission}}
+\index{Manual\+Transmission@{Manual\+Transmission}!Manual\+Transmission@{Manual\+Transmission}}
+\subsubsection[{\texorpdfstring{Manual\+Transmission(\+Car $\ast$b)}{ManualTransmission(Car *b)}}]{\setlength{\rightskip}{0pt plus 5cm}Manual\+Transmission\+::\+Manual\+Transmission (
+\begin{DoxyParamCaption}
+\item[{{\bf Car} $\ast$}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classManualTransmission_a5c4746be5cf077812d6d93e971129bbe}{}\label{classManualTransmission_a5c4746be5cf077812d6d93e971129bbe}
+
+\begin{DoxyCode}
+112                 \{
+113                         \hyperlink{classManualTransmission_ac32c597fb255d5ce8faeaf7d4a8525c2}{\_b} = b;
+114                 \}
+\end{DoxyCode}
+\index{Manual\+Transmission@{Manual\+Transmission}!````~Manual\+Transmission@{$\sim$\+Manual\+Transmission}}
+\index{````~Manual\+Transmission@{$\sim$\+Manual\+Transmission}!Manual\+Transmission@{Manual\+Transmission}}
+\subsubsection[{\texorpdfstring{$\sim$\+Manual\+Transmission()}{~ManualTransmission()}}]{\setlength{\rightskip}{0pt plus 5cm}Manual\+Transmission\+::$\sim$\+Manual\+Transmission (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classManualTransmission_a855eca38627c8eac4a546436f09727d7}{}\label{classManualTransmission_a855eca38627c8eac4a546436f09727d7}
+
+\begin{DoxyCode}
+125                 \{
+126                         cout << \textcolor{stringliteral}{"~ManualTransmission()\(\backslash\)n"};
+127                         \textcolor{keyword}{delete} \hyperlink{classManualTransmission_ac32c597fb255d5ce8faeaf7d4a8525c2}{\_b};
+128                 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Manual\+Transmission@{Manual\+Transmission}!get\+Cost@{get\+Cost}}
+\index{get\+Cost@{get\+Cost}!Manual\+Transmission@{Manual\+Transmission}}
+\subsubsection[{\texorpdfstring{get\+Cost()}{getCost()}}]{\setlength{\rightskip}{0pt plus 5cm}double Manual\+Transmission\+::get\+Cost (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classManualTransmission_a33631e1b167a3aa7a2d86f5d8e2061bf}{}\label{classManualTransmission_a33631e1b167a3aa7a2d86f5d8e2061bf}
+
+
+Implements \hyperlink{classCar_a7498766d25f7d4f15272f8055dd698f4}{Car}.
+
+
+\begin{DoxyCode}
+121                 \{
+122                         \textcolor{keywordflow}{return} 0.30 + \hyperlink{classManualTransmission_ac32c597fb255d5ce8faeaf7d4a8525c2}{\_b}->\hyperlink{classCar_a7498766d25f7d4f15272f8055dd698f4}{getCost}();
+123                 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{classManualTransmission_a33631e1b167a3aa7a2d86f5d8e2061bf_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Manual\+Transmission@{Manual\+Transmission}!get\+Description@{get\+Description}}
+\index{get\+Description@{get\+Description}!Manual\+Transmission@{Manual\+Transmission}}
+\subsubsection[{\texorpdfstring{get\+Description()}{getDescription()}}]{\setlength{\rightskip}{0pt plus 5cm}string Manual\+Transmission\+::get\+Description (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classManualTransmission_a3c5f0113936e6f8734a659ab8331a565}{}\label{classManualTransmission_a3c5f0113936e6f8734a659ab8331a565}
+
+
+Implements \hyperlink{classOptionsDecorator_a620341446534468345792530d454f76c}{Options\+Decorator}.
+
+
+\begin{DoxyCode}
+116                 \{
+117                 \textcolor{keywordflow}{return} \hyperlink{classManualTransmission_ac32c597fb255d5ce8faeaf7d4a8525c2}{\_b}->\hyperlink{classCar_a0d2f99b108e72e2a44360b38f16bbb46}{getDescription}()+ \textcolor{stringliteral}{", ManualTransmission"};
+118                 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classManualTransmission_a3c5f0113936e6f8734a659ab8331a565_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Manual\+Transmission@{Manual\+Transmission}!\+\_\+b@{\+\_\+b}}
+\index{\+\_\+b@{\+\_\+b}!Manual\+Transmission@{Manual\+Transmission}}
+\subsubsection[{\texorpdfstring{\+\_\+b}{_b}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Car}$\ast$ Manual\+Transmission\+::\+\_\+b\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classManualTransmission_ac32c597fb255d5ce8faeaf7d4a8525c2}{}\label{classManualTransmission_ac32c597fb255d5ce8faeaf7d4a8525c2}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Decorator_8cpp}{Decorator.\+cpp}\end{DoxyCompactItemize}

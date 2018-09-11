@@ -1,0 +1,113 @@
+\hypertarget{classList}{}\section{List Class Reference}
+\label{classList}\index{List@{List}}
+
+
+Collaboration diagram for List\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{classList__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structList_1_1Node}{Node}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classList_a06e2fd0daed0264a70fb70194e7d93b6}{List} (\hyperlink{classFruit}{Fruit} $\ast$a\+Fruit)
+\item 
+\hyperlink{classList_a70aecf37bd9d779a394e4d50377fbf5f}{$\sim$\+List} ()
+\item 
+void \hyperlink{classList_aa38578a39e87e4b5d349d50e179dfa7a}{append} (\hyperlink{classFruit}{Fruit} $\ast$a\+Fruit)
+\item 
+void \hyperlink{classList_a1bb66c2777061ab3b8260746a8c3961e}{print\+List} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structList_1_1Node}{Node} $\ast$ \hyperlink{classList_a443db628080a04a1dacfd3015d164735}{head}
+\item 
+\hyperlink{structList_1_1Node}{Node} $\ast$ \hyperlink{classList_ac35bbbb4a3103f9574e74491d52dbeba}{tail}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{List@{List}!List@{List}}
+\index{List@{List}!List@{List}}
+\subsubsection[{\texorpdfstring{List(\+Fruit $\ast$a\+Fruit)}{List(Fruit *aFruit)}}]{\setlength{\rightskip}{0pt plus 5cm}List\+::\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf Fruit} $\ast$}]{a\+Fruit}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classList_a06e2fd0daed0264a70fb70194e7d93b6}{}\label{classList_a06e2fd0daed0264a70fb70194e7d93b6}
+
+\begin{DoxyCode}
+59 \{\hyperlink{classList_a443db628080a04a1dacfd3015d164735}{head} = \hyperlink{classList_ac35bbbb4a3103f9574e74491d52dbeba}{tail} = \textcolor{keyword}{new} Node(aFruit); \}
+\end{DoxyCode}
+\index{List@{List}!````~List@{$\sim$\+List}}
+\index{````~List@{$\sim$\+List}!List@{List}}
+\subsubsection[{\texorpdfstring{$\sim$\+List()}{~List()}}]{\setlength{\rightskip}{0pt plus 5cm}List\+::$\sim$\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classList_a70aecf37bd9d779a394e4d50377fbf5f}{}\label{classList_a70aecf37bd9d779a394e4d50377fbf5f}
+
+\begin{DoxyCode}
+61             \{
+62         \textcolor{keywordflow}{while} (\hyperlink{classList_a443db628080a04a1dacfd3015d164735}{head} != NULL)\{             \textcolor{comment}{// traverse list deallocating memory}
+63            Node* save = \hyperlink{classList_a443db628080a04a1dacfd3015d164735}{head};
+64            \hyperlink{classList_a443db628080a04a1dacfd3015d164735}{head} = \hyperlink{classList_a443db628080a04a1dacfd3015d164735}{head}->\hyperlink{structList_1_1Node_a0e9bd3ca8dc4c1307c04ecb2250fdada}{next};
+65            \textcolor{keyword}{delete} save->\hyperlink{structList_1_1Node_a0014e96ae0a971590091f68233a8de2f}{fruitPtr};  save->fruitPtr = NULL;
+66            \textcolor{keyword}{delete} save;  save = NULL;
+67         \}
+68         \hyperlink{classList_ac35bbbb4a3103f9574e74491d52dbeba}{tail} = NULL;
+69      \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{List@{List}!append@{append}}
+\index{append@{append}!List@{List}}
+\subsubsection[{\texorpdfstring{append(\+Fruit $\ast$a\+Fruit)}{append(Fruit *aFruit)}}]{\setlength{\rightskip}{0pt plus 5cm}void List\+::append (
+\begin{DoxyParamCaption}
+\item[{{\bf Fruit} $\ast$}]{a\+Fruit}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classList_aa38578a39e87e4b5d349d50e179dfa7a}{}\label{classList_aa38578a39e87e4b5d349d50e179dfa7a}
+
+\begin{DoxyCode}
+71                                \{          \textcolor{comment}{// append at end of list}
+72        \hyperlink{classList_ac35bbbb4a3103f9574e74491d52dbeba}{tail}->\hyperlink{structList_1_1Node_a0e9bd3ca8dc4c1307c04ecb2250fdada}{next} = \textcolor{keyword}{new} Node(aFruit);                             
+73        \hyperlink{classList_ac35bbbb4a3103f9574e74491d52dbeba}{tail} = \hyperlink{classList_ac35bbbb4a3103f9574e74491d52dbeba}{tail}->\hyperlink{structList_1_1Node_a0e9bd3ca8dc4c1307c04ecb2250fdada}{next};
+74     \}
+\end{DoxyCode}
+\index{List@{List}!print\+List@{print\+List}}
+\index{print\+List@{print\+List}!List@{List}}
+\subsubsection[{\texorpdfstring{print\+List()}{printList()}}]{\setlength{\rightskip}{0pt plus 5cm}void List\+::print\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classList_a1bb66c2777061ab3b8260746a8c3961e}{}\label{classList_a1bb66c2777061ab3b8260746a8c3961e}
+
+\begin{DoxyCode}
+76                      \{                    \textcolor{comment}{// traverse list printing}
+77        \textcolor{keywordflow}{for} (Node* p = \hyperlink{classList_a443db628080a04a1dacfd3015d164735}{head}; p != NULL; p = p->\hyperlink{structList_1_1Node_a0e9bd3ca8dc4c1307c04ecb2250fdada}{next})
+78           p->fruitPtr->print();
+79     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{List@{List}!head@{head}}
+\index{head@{head}!List@{List}}
+\subsubsection[{\texorpdfstring{head}{head}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$ List\+::head\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classList_a443db628080a04a1dacfd3015d164735}{}\label{classList_a443db628080a04a1dacfd3015d164735}
+\index{List@{List}!tail@{tail}}
+\index{tail@{tail}!List@{List}}
+\subsubsection[{\texorpdfstring{tail}{tail}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node} $\ast$ List\+::tail\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classList_ac35bbbb4a3103f9574e74491d52dbeba}{}\label{classList_ac35bbbb4a3103f9574e74491d52dbeba}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Fruit_8cpp}{Fruit.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,154 @@
+%token <str>FUNC
+%token <str>MEMFUNC
+%token <str>TAB
+%token <str>TICK
+%token <str>CALL
+%token <str>MEMCALL
+%token <str>REF
+%token <str>FUNCTION
+%token <str>INT
+%token <str>MEMBER
+%token <str>BINOP
+%token <str>UNOP
+%token <str>STR
+%token <str>VAR
+%token <str>PARMVAR
+%token <str>SUB
+%token <str>CLASS
+%token <str>CLASSNAME
+%token <str>CAST
+%token <str>ID
+%token <str>NAME
+%token <str>NUMBER
+%token <str>STRING
+
+%{
+	#include <iostream>
+  	#include <string>
+  	#include <vector>
+  	#include <stdio.h>
+  	#include <string.h>
+  	#include "Cparse.h"
+	using namespace std;
+	void yyerror(string);
+	int yylex(void);
+	int tabcount = 0;
+	bool t = false;
+	Cparse parser;
+	union YYSTYPE {
+		int val;
+		char *str;
+	};
+	typedef union YYSTYPE YYSTYPE;
+%}
+
+%start input
+%type <str>arg
+%type <str>variable
+%type <str>node
+%type <str>vname
+%type <str>dynamclass
+
+%%
+
+input:
+	input chunk
+	|
+	;
+
+chunk:
+	water
+	| keywordproductions
+
+water:
+	keyword
+	| ID 													{ /*cout << "WATER ";*/ }
+	| NAME 													{ /*cout << "WATER ";*/ }
+	| NUMBER												{ /*cout << "WATER ";*/ }
+	| STRING
+
+keywordproductions:
+	tab tick node
+
+tab:
+	tab TAB 												{ tabcount++; }
+	|
+	;
+
+tick:
+	TICK 													{ t = true; }
+	|														{ t = false; }
+
+node:
+	FUNC filler NAME '\''									{ parser.addFunction(tabcount, t, string($3)); tabcount = 0; }
+	| MEMFUNC filler NAME '\''								{ parser.addFunction(tabcount, t, string($3), true); tabcount = 0; }
+	| CLASSNAME filler CLASS NAME 							{ parser.addClass(tabcount, t, string($4)); tabcount = 0; }
+	| CALL ID												{ parser.addCall(0, tabcount, t, string($2)); tabcount = 0; }
+	| MEMCALL ID 											{ parser.addCall(1, tabcount, t, string($2)); tabcount = 0; }
+	| arg 													{ tabcount = 0; }
+	| NAME 													{ parser.checkcall(tabcount, t); tabcount = 0; }
+
+arg:
+	REF variable
+	| UNOP 													{ parser.addOp(tabcount, t, "UNOP"); }
+	| MEMBER filler NAME ID									{ parser.addMem(tabcount, t, string($3)); }
+	| INT filler '\'' NUMBER								{ parser.addArgument(tabcount, t, string($4)); }
+	| STR filler STRING										{ parser.addArgument(tabcount, t, string($3)); }
+	| SUB 													{ parser.addSub(tabcount, t); }
+	| BINOP 												{ parser.addOp(tabcount, t, "BINOP"); }
+	| CAST filler '\'' dynamclass '\'' 						{ parser.checkcall(tabcount, t); }
+
+variable:
+	filler FUNCTION ID '\'' vname '\''						{ parser.addCallName(string($5)); }
+	| filler VAR ID '\'' vname '\'' '\'' dynamclass '\''	{ parser.addVar(tabcount, t, string($5)); }
+	| filler PARMVAR ID '\'' vname '\''						{ parser.addParmVar(tabcount, t, string($5)); }
+	| filler NAME ID '\'' vname '\''						{ parser.addArgument(tabcount, t, string($5)); }
+
+vname:
+	NAME 													{ $$ = $1; }
+	| NAME NAME 											{ $$ = $2; }
+	|
+	;
+
+dynamclass:
+	dynamclass NAME
+	| dynamclass NUMBER
+	| CLASS NAME 											{ parser.addDynamicClass(tabcount, t, string($2)); }
+	| dynamclass CLASS NAME
+	|
+	;
+
+filler:
+	filler NAME
+	| filler ID
+	| filler NUMBER
+	| filler '\''
+	| filler CLASS
+	|
+	;
+
+keyword:
+	VAR
+	| PARMVAR
+	| FUNCTION
+	| CLASS
+	| '\''
+
+%%
+
+void yyerror(string s) {
+	cerr << s << " " << yylval.str << endl;
+}
+
+int main(void) {
+	yyparse();
+	//cout << "-----------------------------------------------------------------------------------------------------------------\n";
+	parser.cleanUp();
+	parser.print();
+	/*for(int k = 0; k < sym.size(); k++) {
+		cout << sym[k] << endl;
+	}*/
+	//cout << "call boolean: " << call << endl;
+	//cout << "calltab: " << calltab << endl;
+	return 0;
+}

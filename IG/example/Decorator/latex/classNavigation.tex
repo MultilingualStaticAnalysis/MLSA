@@ -1,0 +1,141 @@
+\hypertarget{classNavigation}{}\section{Navigation Class Reference}
+\label{classNavigation}\index{Navigation@{Navigation}}
+
+
+Inheritance diagram for Navigation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{classNavigation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Navigation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classNavigation__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNavigation_a99b76cf71edd512c71d7d9b01e2df464}{Navigation} (\hyperlink{classCar}{Car} $\ast$b)
+\item 
+string \hyperlink{classNavigation_a2f7f7e9c43ecd76feabd46983b454e75}{get\+Description} ()
+\item 
+double \hyperlink{classNavigation_a2fedd3cf436e7487afc7a50d732d1054}{get\+Cost} ()
+\item 
+\hyperlink{classNavigation_addd4022d716df48f4e55a1db69361ba7}{$\sim$\+Navigation} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCar}{Car} $\ast$ \hyperlink{classNavigation_ae736423fb97d5b7993289d74e93aaff8}{\+\_\+b}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Navigation@{Navigation}!Navigation@{Navigation}}
+\index{Navigation@{Navigation}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{Navigation(\+Car $\ast$b)}{Navigation(Car *b)}}]{\setlength{\rightskip}{0pt plus 5cm}Navigation\+::\+Navigation (
+\begin{DoxyParamCaption}
+\item[{{\bf Car} $\ast$}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classNavigation_a99b76cf71edd512c71d7d9b01e2df464}{}\label{classNavigation_a99b76cf71edd512c71d7d9b01e2df464}
+
+\begin{DoxyCode}
+64                 \{
+65                         \hyperlink{classNavigation_ae736423fb97d5b7993289d74e93aaff8}{\_b} = b;
+66                 \}
+\end{DoxyCode}
+\index{Navigation@{Navigation}!````~Navigation@{$\sim$\+Navigation}}
+\index{````~Navigation@{$\sim$\+Navigation}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{$\sim$\+Navigation()}{~Navigation()}}]{\setlength{\rightskip}{0pt plus 5cm}Navigation\+::$\sim$\+Navigation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classNavigation_addd4022d716df48f4e55a1db69361ba7}{}\label{classNavigation_addd4022d716df48f4e55a1db69361ba7}
+
+\begin{DoxyCode}
+77                 \{
+78                         cout << \textcolor{stringliteral}{"~Navigation()\(\backslash\)n"};
+79                         \textcolor{keyword}{delete} \hyperlink{classNavigation_ae736423fb97d5b7993289d74e93aaff8}{\_b};
+80                 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Navigation@{Navigation}!get\+Cost@{get\+Cost}}
+\index{get\+Cost@{get\+Cost}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{get\+Cost()}{getCost()}}]{\setlength{\rightskip}{0pt plus 5cm}double Navigation\+::get\+Cost (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classNavigation_a2fedd3cf436e7487afc7a50d732d1054}{}\label{classNavigation_a2fedd3cf436e7487afc7a50d732d1054}
+
+
+Implements \hyperlink{classCar_a7498766d25f7d4f15272f8055dd698f4}{Car}.
+
+
+\begin{DoxyCode}
+73                 \{
+74                         \textcolor{keywordflow}{return} 300.56 + \hyperlink{classNavigation_ae736423fb97d5b7993289d74e93aaff8}{\_b}->\hyperlink{classCar_a7498766d25f7d4f15272f8055dd698f4}{getCost}();
+75                 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{classNavigation_a2fedd3cf436e7487afc7a50d732d1054_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Navigation@{Navigation}!get\+Description@{get\+Description}}
+\index{get\+Description@{get\+Description}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{get\+Description()}{getDescription()}}]{\setlength{\rightskip}{0pt plus 5cm}string Navigation\+::get\+Description (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classNavigation_a2f7f7e9c43ecd76feabd46983b454e75}{}\label{classNavigation_a2f7f7e9c43ecd76feabd46983b454e75}
+
+
+Implements \hyperlink{classOptionsDecorator_a620341446534468345792530d454f76c}{Options\+Decorator}.
+
+
+\begin{DoxyCode}
+68                 \{
+69                         \textcolor{keywordflow}{return} \hyperlink{classNavigation_ae736423fb97d5b7993289d74e93aaff8}{\_b}->\hyperlink{classCar_a0d2f99b108e72e2a44360b38f16bbb46}{getDescription}() + \textcolor{stringliteral}{", Navigation"};
+70                 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classNavigation_a2f7f7e9c43ecd76feabd46983b454e75_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Navigation@{Navigation}!\+\_\+b@{\+\_\+b}}
+\index{\+\_\+b@{\+\_\+b}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{\+\_\+b}{_b}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Car}$\ast$ Navigation\+::\+\_\+b\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNavigation_ae736423fb97d5b7993289d74e93aaff8}{}\label{classNavigation_ae736423fb97d5b7993289d74e93aaff8}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Decorator_8cpp}{Decorator.\+cpp}\end{DoxyCompactItemize}

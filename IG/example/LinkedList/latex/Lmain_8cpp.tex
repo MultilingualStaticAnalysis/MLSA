@@ -1,0 +1,251 @@
+\hypertarget{Lmain_8cpp}{}\section{Lmain.\+cpp File Reference}
+\label{Lmain_8cpp}\index{Lmain.\+cpp@{Lmain.\+cpp}}
+{\ttfamily \#include \char`\"{}Student.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Node.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Linked\+List.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+Include dependency graph for Lmain.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Lmain_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{Lmain_8cpp_a70ec1382d8ba4ede7bc41284e71ba46f}{create\+Student} (string \&f, string \&l, char \&m, int \&ssn, int \&a)
+\item 
+void \hyperlink{Lmain_8cpp_a384998e9dc63c57a1ab89dba2cfb8d02}{set\+Up} (\hyperlink{classLinkedList}{Linked\+List}$<$ \hyperlink{classStudent}{Student} $>$ \&list)
+\item 
+void \hyperlink{Lmain_8cpp_a35b314eba9ac1561de239605dd8289f9}{finish} (\hyperlink{classLinkedList}{Linked\+List}$<$ \hyperlink{classStudent}{Student} $>$ \&list)
+\item 
+int \hyperlink{Lmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Lmain.\+cpp@{Lmain.\+cpp}!create\+Student@{create\+Student}}
+\index{create\+Student@{create\+Student}!Lmain.\+cpp@{Lmain.\+cpp}}
+\subsubsection[{\texorpdfstring{create\+Student(string \&f, string \&l, char \&m, int \&ssn, int \&a)}{createStudent(string &f, string &l, char &m, int &ssn, int &a)}}]{\setlength{\rightskip}{0pt plus 5cm}void create\+Student (
+\begin{DoxyParamCaption}
+\item[{string \&}]{f, }
+\item[{string \&}]{l, }
+\item[{char \&}]{m, }
+\item[{int \&}]{ssn, }
+\item[{int \&}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{Lmain_8cpp_a70ec1382d8ba4ede7bc41284e71ba46f}{}\label{Lmain_8cpp_a70ec1382d8ba4ede7bc41284e71ba46f}
+
+\begin{DoxyCode}
+83 \{
+84    cout << endl <<\textcolor{stringliteral}{"Enter first name: "};
+85    cin >> f;
+86    cout << \textcolor{stringliteral}{"Enter last name: "};
+87    cin >> l;
+88    cout << \textcolor{stringliteral}{"Enter middle initial: "};
+89    cin >> m;
+90    cout << \textcolor{stringliteral}{"Enter social security number: "};
+91    cin >> ssn;
+92    cout << \textcolor{stringliteral}{"Enter age: "};
+93    cin >> a;
+94 \}
+\end{DoxyCode}
+\index{Lmain.\+cpp@{Lmain.\+cpp}!finish@{finish}}
+\index{finish@{finish}!Lmain.\+cpp@{Lmain.\+cpp}}
+\subsubsection[{\texorpdfstring{finish(\+Linked\+List$<$ Student $>$ \&list)}{finish(LinkedList< Student > &list)}}]{\setlength{\rightskip}{0pt plus 5cm}void finish (
+\begin{DoxyParamCaption}
+\item[{{\bf Linked\+List}$<$ {\bf Student} $>$ \&}]{list}
+\end{DoxyParamCaption}
+)}\hypertarget{Lmain_8cpp_a35b314eba9ac1561de239605dd8289f9}{}\label{Lmain_8cpp_a35b314eba9ac1561de239605dd8289f9}
+
+\begin{DoxyCode}
+121 \{
+122    ofstream out\_stream;
+123 
+124    out\_stream.open(\textcolor{stringliteral}{"StudentData.txt"}); \textcolor{comment}{// opens file StudentData.txt                                       
+                                                                                                       }
+125    \textcolor{keywordflow}{if}(out\_stream.fail()) \textcolor{comment}{// If the file cannot open, the program ends                                      
+                                                                                                       }
+126    \{
+127       cout << \textcolor{stringliteral}{"Output file opening failed.\(\backslash\)n"};
+128       exit(1);
+129    \}
+130 
+131    \hyperlink{classNode}{Node<Student>}* curr = list.\hyperlink{classLinkedList_af59e26b062e8e9549974adfa5bb51eb2}{getHead}();
+132    \textcolor{keywordflow}{while}(curr) \textcolor{comment}{//goes through all Nodes                                                                    
+                                                                                                       }
+133    \{
+134       curr -> getStudent().print(out\_stream); \textcolor{comment}{//prints Student information into the file                   
+                                                                                                       }
+135       curr = curr -> \hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}(); \textcolor{comment}{//goes to the next Node in the list                                 
+                                                                                                              }
+136    \}
+137 
+138    out\_stream.close(); \textcolor{comment}{// closes the file                                                                  
+                                                                                                       }
+139 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{Lmain_8cpp_a35b314eba9ac1561de239605dd8289f9_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Lmain.\+cpp@{Lmain.\+cpp}!main@{main}}
+\index{main@{main}!Lmain.\+cpp@{Lmain.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Lmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Lmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+24 \{
+25    \hyperlink{classLinkedList}{LinkedList<Student>} list;
+26    \hyperlink{classNode}{Node<Student>}* nPtr;
+27    \textcolor{keywordtype}{string} f, l;
+28    \textcolor{keywordtype}{int} n, ssn, a, count = -1;
+29    \textcolor{keywordtype}{char} ans = \textcolor{charliteral}{'y'}, m;
+30    \textcolor{keywordtype}{bool} del;
+31 
+32    \textcolor{comment}{//setUp(list); //updates list with info from the file                                                   
+                                                                                                       }
+33    cout << endl << \textcolor{stringliteral}{"Do you want to add students to your list? y/n: "};
+34    cin >> ans;
+35    \textcolor{keywordflow}{while}(ans == \textcolor{charliteral}{'y'} || ans == \textcolor{charliteral}{'Y'})
+36    \{
+37       \hyperlink{Lmain_8cpp_a70ec1382d8ba4ede7bc41284e71ba46f}{createStudent}(f, l, m, ssn, a);
+38       nPtr = \textcolor{keyword}{new} \hyperlink{classNode_a0ac1d44cfe588be564acf25485029bd8}{Node}(f, l, m, ssn, a); \textcolor{comment}{//creates new Node (which nPtr points to) with the Student
+       object just created                                                                                      }
+39       list.\hyperlink{classLinkedList_ac2f92598858e9ba02af8722fba803c53}{append}(nPtr); \textcolor{comment}{//appends the newly created Node to the list                                
+                                                                                                             }
+40       cout << \textcolor{stringliteral}{"\(\backslash\)nAdd a new student to the list? y/n: "};
+41       cin >> ans;
+42    \} \textcolor{comment}{//Nodes will be created until user does not enter y or Y                                              
+                                                                                                       }
+43 
+44    cout << \textcolor{stringliteral}{"Student list ("} << list.\hyperlink{classLinkedList_ae04dbbcae32f8fb03dce3e174854981f}{getNumNode}() << \textcolor{stringliteral}{" students):"} << endl << endl;
+45    list.\hyperlink{classLinkedList_afddb5dbcc39e687add40de41b975cd8d}{display}(); \textcolor{comment}{//displays list                                                                  
+                                                                                                              }
+46 
+47    \textcolor{keywordflow}{do}
+48    \{
+49       count++; \textcolor{comment}{//counts to see how many times deleteNode() was called                                      
+                                                                                                       }
+50       del = list.deleteNode(\textcolor{stringliteral}{"Christine"}); \textcolor{comment}{//deletes all Nodes with the name Christine                      
+                                                                                                       }
+51    \}\textcolor{keywordflow}{while}(del); \textcolor{comment}{//continue to delete Nodes until there are no more Christines in the list                  
+                                                                                                       }
+52    \textcolor{keywordflow}{if}(count > 0) \textcolor{comment}{//if any Nodes were deleted, the list will print again                                    
+                                                                                                       }
+53    \{
+54       cout << \textcolor{stringliteral}{"\(\backslash\)nAfter Christine has been deleted from list:"} << endl << endl;
+55       list.\hyperlink{classLinkedList_afddb5dbcc39e687add40de41b975cd8d}{display}();
+56    \}
+57 \textcolor{comment}{/*                                                                                                         
+                                                                                                       }
+58 \textcolor{comment}{   LinkedList bubble(list); //create copy of list                                                          
+                                                                                                       }
+59 \textcolor{comment}{   cout << "\(\backslash\)ndisplaying copied list:\(\backslash\)n\(\backslash\)n";}
+60 \textcolor{comment}{   bubble.display();                                                                                       
+                                                                                                       }
+61 \textcolor{comment}{   bubble.bubbleSort(); //sorts the new list by bubble sort                                                
+                                                                                                       }
+62 \textcolor{comment}{   cout << "\(\backslash\)ndisplaying bubble sorted list:\(\backslash\)n\(\backslash\)n";                                                         
+                                                                                                       }
+63 \textcolor{comment}{   bubble.display();                                                                                       
+                                                                                                       }
+64 \textcolor{comment}{                                                                                                           
+                                                                                                       }
+65 \textcolor{comment}{   LinkedList selection(list); //create copy of list                                                       
+                                                                                                       }
+66 \textcolor{comment}{   cout << "\(\backslash\)ndisplaying copied list:\(\backslash\)n\(\backslash\)n";                                                                
+                                                                                                       }
+67 \textcolor{comment}{   selection.display();                                                                                    
+                                                                                                       }
+68 \textcolor{comment}{   selection.selectionSort(); //sorts new list by selection sort                                           
+                                                                                                       }
+69 \textcolor{comment}{   cout << "\(\backslash\)ndisplaying selection sorted list:\(\backslash\)n\(\backslash\)n";                                                      
+                                                                                                       }
+70 \textcolor{comment}{   selection.display();                                                                                    
+                                                                                                       }
+71 \textcolor{comment}{*/}
+72    \hyperlink{classLinkedList}{LinkedList} L2(list, \textcolor{keyword}{true}); \textcolor{comment}{//creates a copy of list, but sorted                               
+                                                                                                                 }
+73    cout << \textcolor{stringliteral}{"\(\backslash\)nSORTED list copied from original list ("}  << L2.getNumNode() << \textcolor{stringliteral}{" students):"} << endl << endl
+      ;
+74    L2.display();
+75 
+76    \textcolor{comment}{//finish(list); //save Students from L2 into the file                                                   
+                                                                                                       }
+77    \textcolor{keywordflow}{return} 0;
+78 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Lmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Lmain.\+cpp@{Lmain.\+cpp}!set\+Up@{set\+Up}}
+\index{set\+Up@{set\+Up}!Lmain.\+cpp@{Lmain.\+cpp}}
+\subsubsection[{\texorpdfstring{set\+Up(\+Linked\+List$<$ Student $>$ \&list)}{setUp(LinkedList< Student > &list)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Up (
+\begin{DoxyParamCaption}
+\item[{{\bf Linked\+List}$<$ {\bf Student} $>$ \&}]{list}
+\end{DoxyParamCaption}
+)}\hypertarget{Lmain_8cpp_a384998e9dc63c57a1ab89dba2cfb8d02}{}\label{Lmain_8cpp_a384998e9dc63c57a1ab89dba2cfb8d02}
+
+\begin{DoxyCode}
+97 \{
+98    \hyperlink{classStudent}{Student}* sPtr;
+99    \hyperlink{classStudent}{Student} s;
+100    \hyperlink{classNode}{Node<Student>}* nPtr;
+101    ifstream in\_stream;
+102    \textcolor{keywordtype}{string} temp;
+103 
+104    in\_stream.open(\textcolor{stringliteral}{"StudentData.txt"}); \textcolor{comment}{// opens file StudentData.txt                                        
+                                                                                                       }
+105    \textcolor{keywordflow}{if}(in\_stream.fail()) \textcolor{comment}{// If the file does not open, the program will exit                                
+                                                                                                       }
+106    \{
+107       cout << \textcolor{stringliteral}{"Input file opening failed.\(\backslash\)n"};
+108       exit(1);
+109    \}
+110 
+111    \textcolor{keywordflow}{while}(in\_stream >> s) \textcolor{comment}{// reads in the values from the file to the end of the file                       
+                                                                                                       }
+112    \{
+113       sPtr = \textcolor{keyword}{new} \hyperlink{classStudent}{Student}(s);
+114       nPtr = \textcolor{keyword}{new} \hyperlink{classNode_a0ac1d44cfe588be564acf25485029bd8}{Node}(sPtr);
+115       list.\hyperlink{classLinkedList_ac2f92598858e9ba02af8722fba803c53}{append}(nPtr);
+116    \}
+117    in\_stream.close(); \textcolor{comment}{// closes the file                                                                   
+                                                                                                       }
+118 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Lmain_8cpp_a384998e9dc63c57a1ab89dba2cfb8d02_cgraph}
+\end{center}
+\end{figure}
+
+

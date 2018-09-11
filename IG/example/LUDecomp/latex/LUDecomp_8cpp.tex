@@ -1,0 +1,137 @@
+\hypertarget{LUDecomp_8cpp}{}\section{L\+U\+Decomp.\+cpp File Reference}
+\label{LUDecomp_8cpp}\index{L\+U\+Decomp.\+cpp@{L\+U\+Decomp.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cstdio$>$}\\*
+Include dependency graph for L\+U\+Decomp.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{LUDecomp_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{LUDecomp_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\item 
+void \hyperlink{LUDecomp_8cpp_ae9c4a9a6c6d420e1df3fed70f4faf375}{lu} (float a\mbox{[}$\,$\mbox{]}\mbox{[}10\mbox{]}, float l\mbox{[}$\,$\mbox{]}\mbox{[}10\mbox{]}, float u\mbox{[}$\,$\mbox{]}\mbox{[}10\mbox{]}, int n)
+\item 
+void \hyperlink{LUDecomp_8cpp_a03c4f4fac92a1c3266ad7002a68b4610}{output} (float x\mbox{[}$\,$\mbox{]}\mbox{[}10\mbox{]}, int n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{L\+U\+Decomp.\+cpp@{L\+U\+Decomp.\+cpp}!lu@{lu}}
+\index{lu@{lu}!L\+U\+Decomp.\+cpp@{L\+U\+Decomp.\+cpp}}
+\subsubsection[{\texorpdfstring{lu(float a[][10], float l[][10], float u[][10], int n)}{lu(float a[][10], float l[][10], float u[][10], int n)}}]{\setlength{\rightskip}{0pt plus 5cm}void lu (
+\begin{DoxyParamCaption}
+\item[{float}]{a\mbox{[}$\,$\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{float}]{l\mbox{[}$\,$\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{float}]{u\mbox{[}$\,$\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{LUDecomp_8cpp_ae9c4a9a6c6d420e1df3fed70f4faf375}{}\label{LUDecomp_8cpp_ae9c4a9a6c6d420e1df3fed70f4faf375}
+
+\begin{DoxyCode}
+30 \{
+31     \textcolor{keywordtype}{int} i = 0, j = 0, k = 0;
+32     \textcolor{keywordflow}{for} (i = 0; i < n; i++)
+33     \{
+34         \textcolor{keywordflow}{for} (j = 0; j < n; j++)
+35         \{
+36             \textcolor{keywordflow}{if} (j < i)
+37                 l[j][i] = 0;
+38             \textcolor{keywordflow}{else}
+39             \{
+40                 l[j][i] = a[j][i];
+41                 \textcolor{keywordflow}{for} (k = 0; k < i; k++)
+42                 \{
+43                     l[j][i] = l[j][i] - l[j][k] * u[k][i];
+44                 \}
+45             \}
+46         \}
+47         \textcolor{keywordflow}{for} (j = 0; j < n; j++)
+48         \{
+49             \textcolor{keywordflow}{if} (j < i)
+50                 u[i][j] = 0;
+51             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (j == i)
+52                 u[i][j] = 1;
+53             \textcolor{keywordflow}{else}
+54             \{
+55                 u[i][j] = a[i][j] / l[i][i];
+56                 \textcolor{keywordflow}{for} (k = 0; k < i; k++)
+57                 \{
+58                     u[i][j] = u[i][j] - ((l[i][k] * u[k][j]) / l[i][i]);
+59                 \}
+60             \}
+61         \}
+62     \}
+63 \}
+\end{DoxyCode}
+\index{L\+U\+Decomp.\+cpp@{L\+U\+Decomp.\+cpp}!main@{main}}
+\index{main@{main}!L\+U\+Decomp.\+cpp@{L\+U\+Decomp.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{LUDecomp_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{LUDecomp_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCode}
+7 \{
+8     \textcolor{keywordtype}{void} \hyperlink{LUDecomp_8cpp_ae9c4a9a6c6d420e1df3fed70f4faf375}{lu}(\textcolor{keywordtype}{float}[][10], \textcolor{keywordtype}{float}[][10], \textcolor{keywordtype}{float}[][10], \textcolor{keywordtype}{int} n);
+9     \textcolor{keywordtype}{void} \hyperlink{LUDecomp_8cpp_a03c4f4fac92a1c3266ad7002a68b4610}{output}(\textcolor{keywordtype}{float}[][10], \textcolor{keywordtype}{int});
+10     \textcolor{keywordtype}{float} a[10][10], l[10][10], u[10][10];
+11     \textcolor{keywordtype}{int} n = 0, i = 0, j = 0;
+12     cout << \textcolor{stringliteral}{"Enter size of 2d array(Square matrix) : "};
+13     cin >> n;
+14     \textcolor{keywordflow}{for} (i = 0; i < n; i++)
+15     \{
+16         \textcolor{keywordflow}{for} (j = 0; j < n; j++)
+17         \{
+18             cout << \textcolor{stringliteral}{"Enter values no:"} << i << \textcolor{stringliteral}{", "} << j << \textcolor{stringliteral}{": "};
+19             cin >> a[i][j];
+20         \}
+21     \}
+22     \hyperlink{LUDecomp_8cpp_ae9c4a9a6c6d420e1df3fed70f4faf375}{lu}(a, l, u, n);
+23     cout << \textcolor{stringliteral}{"\(\backslash\)nL Decomposition\(\backslash\)n\(\backslash\)n"};
+24     \hyperlink{LUDecomp_8cpp_a03c4f4fac92a1c3266ad7002a68b4610}{output}(l, n);
+25     cout << \textcolor{stringliteral}{"\(\backslash\)nU Decomposition\(\backslash\)n\(\backslash\)n"};
+26     \hyperlink{LUDecomp_8cpp_a03c4f4fac92a1c3266ad7002a68b4610}{output}(u, n);
+27     \textcolor{keywordflow}{return} 0;
+28 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{LUDecomp_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{L\+U\+Decomp.\+cpp@{L\+U\+Decomp.\+cpp}!output@{output}}
+\index{output@{output}!L\+U\+Decomp.\+cpp@{L\+U\+Decomp.\+cpp}}
+\subsubsection[{\texorpdfstring{output(float x[][10], int n)}{output(float x[][10], int n)}}]{\setlength{\rightskip}{0pt plus 5cm}void output (
+\begin{DoxyParamCaption}
+\item[{float}]{x\mbox{[}$\,$\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{LUDecomp_8cpp_a03c4f4fac92a1c3266ad7002a68b4610}{}\label{LUDecomp_8cpp_a03c4f4fac92a1c3266ad7002a68b4610}
+
+\begin{DoxyCode}
+65 \{
+66     \textcolor{keywordtype}{int} i = 0, j = 0;
+67     \textcolor{keywordflow}{for} (i = 0; i < n; i++)
+68     \{
+69         \textcolor{keywordflow}{for} (j = 0; j < n; j++)
+70         \{
+71             printf(\textcolor{stringliteral}{"%f "}, x[i][j]);
+72         \}
+73         cout << \textcolor{stringliteral}{"\(\backslash\)n"};
+74     \}
+75 \}\end{DoxyCode}

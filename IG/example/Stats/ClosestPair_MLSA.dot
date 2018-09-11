@@ -1,0 +1,47 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/ClosestPair Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/ClosestPair Call Graph"
+	];
+
+	Node0x561966975 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/ClosestPair/ClosestPair.cpp"];
+	Node0x296481810 [shape=oval, label="0x3cacdb0. (/home/labaccount/11-2-17/mlsa/IG/example/ClosestPair/ClosestPair.cpp)\nclosest(P, n)"];
+	Node0x561966975 -> Node0x296481810;
+	Node0x652820259 [shape=oval, label="0x3cab960. (/home/labaccount/11-2-17/mlsa/IG/example/ClosestPair/ClosestPair.cpp)\ncompareX(Px, n)"];
+	Node0x296481810 -> Node0x652820259;
+	Node0x154663098 [shape=oval, label="0x3cabb60. (/home/labaccount/11-2-17/mlsa/IG/example/ClosestPair/ClosestPair.cpp)\ncompareY(Py, n)"];
+	Node0x296481810 -> Node0x154663098;
+	Node0x227698119 [shape=oval, label="0x3cabd30. (/home/labaccount/11-2-17/mlsa/IG/example/ClosestPair/ClosestPair.cpp)\nclosestUtil(Px, Py, n)"];
+	Node0x296481810 -> Node0x227698119;
+	Node0x693972392 [shape=oval, label="0x3ca79e0. (/home/labaccount/11-2-17/mlsa/IG/example/ClosestPair/ClosestPair.cpp)\nsmall_dist(Px, n)"];
+	Node0x227698119 -> Node0x693972392;
+	Node0x702687101 [shape=oval, style=dashed, label="0x3ca9160. (/home/labaccount/11-2-17/mlsa/IG/example/ClosestPair/ClosestPair.cpp)\nclosestUtil(Px, Pyl, mid)"];
+	Node0x227698119 -> Node0x702687101;
+	Node0x162753844 [shape=oval, style=dashed, label="0x3ca9480. (/home/labaccount/11-2-17/mlsa/IG/example/ClosestPair/ClosestPair.cpp)\nclosestUtil(BINOP, Pyr, BINOP)"];
+	Node0x227698119 -> Node0x162753844;
+	Node0x850351807 [shape=oval, label="0x3ca9a20. (/home/labaccount/11-2-17/mlsa/IG/example/ClosestPair/ClosestPair.cpp)\nmin(dl, dr)"];
+	Node0x227698119 -> Node0x850351807;
+	Node0x525170060 [shape=oval, label="0x3caa5e0. (/home/labaccount/11-2-17/mlsa/IG/example/ClosestPair/ClosestPair.cpp)\nabs(BINOP)"];
+	Node0x227698119 -> Node0x525170060;
+	Node0x551509903 [shape=oval, label="0x3caac78. (/home/labaccount/11-2-17/mlsa/IG/example/ClosestPair/ClosestPair.cpp)\nmin(d, 0x3caab70)"];
+	Node0x227698119 -> Node0x551509903;
+	Node0x887130582 [shape=oval, label="0x3caab70. (/home/labaccount/11-2-17/mlsa/IG/example/ClosestPair/ClosestPair.cpp)\nstripClosest(strip, j, d)"];
+	Node0x227698119 -> Node0x887130582;
+	Node0x719023671 [shape=oval, label="0x3ca57d0. (/home/labaccount/11-2-17/mlsa/IG/example/ClosestPair/ClosestPair.cpp)\ndist(P[], P[])"];
+	Node0x693972392 -> Node0x719023671;
+	Node0x560770503 [shape=oval, label="0x3ca60d0. (/home/labaccount/11-2-17/mlsa/IG/example/ClosestPair/ClosestPair.cpp)\ndist(P[], P[])"];
+	Node0x693972392 -> Node0x560770503;
+	Node0x795903799 [shape=oval, label="0x3ca6f58. (/home/labaccount/11-2-17/mlsa/IG/example/ClosestPair/ClosestPair.cpp)\ndist(strip[], strip[])"];
+	Node0x887130582 -> Node0x795903799;
+	Node0x299052774 [shape=oval, label="0x3ca72a8. (/home/labaccount/11-2-17/mlsa/IG/example/ClosestPair/ClosestPair.cpp)\ndist(strip[], strip[])"];
+	Node0x887130582 -> Node0x299052774;
+	Node0x987735137 [shape=oval, label="0x3ca4e40. (/home/labaccount/11-2-17/mlsa/IG/example/ClosestPair/ClosestPair.cpp)\nsqrt(BINOP)"];
+	Node0x719023671 -> Node0x987735137;
+	Node0x490417761 [shape=oval, label="0x3ca4e40. (/home/labaccount/11-2-17/mlsa/IG/example/ClosestPair/ClosestPair.cpp)\nsqrt(BINOP)"];
+	Node0x560770503 -> Node0x490417761;
+	Node0x899805329 [shape=oval, label="0x3ca4e40. (/home/labaccount/11-2-17/mlsa/IG/example/ClosestPair/ClosestPair.cpp)\nsqrt(BINOP)"];
+	Node0x795903799 -> Node0x899805329;
+	Node0x235913434 [shape=oval, label="0x3ca4e40. (/home/labaccount/11-2-17/mlsa/IG/example/ClosestPair/ClosestPair.cpp)\nsqrt(BINOP)"];
+	Node0x299052774 -> Node0x235913434;
+}

@@ -1,0 +1,19 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/Knapsack Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/Knapsack Call Graph"
+	];
+
+	Node0x822968076 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/Knapsack/Knapsack.cpp"];
+	Node0x640198679 [shape=oval, label="0x280b398. (/home/labaccount/11-2-17/mlsa/IG/example/Knapsack/Knapsack.cpp)\nknapSack(W, wt, val, n)"];
+	Node0x822968076 -> Node0x640198679;
+	Node0x703445864 [shape=oval, style=dashed, label="0x2806cf0. (/home/labaccount/11-2-17/mlsa/IG/example/Knapsack/Knapsack.cpp)\nknapSack(W, wt, val, BINOP)"];
+	Node0x640198679 -> Node0x703445864;
+	Node0x369116677 [shape=oval, label="0x28078e0. (/home/labaccount/11-2-17/mlsa/IG/example/Knapsack/Knapsack.cpp)\nmax(BINOP, 0x2807420)"];
+	Node0x640198679 -> Node0x369116677;
+	Node0x579332700 [shape=oval, style=dashed, label="0x28071d0. (/home/labaccount/11-2-17/mlsa/IG/example/Knapsack/Knapsack.cpp)\nknapSack(BINOP, wt, val, BINOP)"];
+	Node0x640198679 -> Node0x579332700;
+	Node0x801542614 [shape=oval, style=dashed, label="0x2807420. (/home/labaccount/11-2-17/mlsa/IG/example/Knapsack/Knapsack.cpp)\nknapSack(W, wt, val, BINOP)"];
+	Node0x640198679 -> Node0x801542614;
+}

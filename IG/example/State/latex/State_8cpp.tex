@@ -1,0 +1,110 @@
+\hypertarget{State_8cpp}{}\section{State.\+cpp File Reference}
+\label{State_8cpp}\index{State.\+cpp@{State.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+Include dependency graph for State.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{State_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classFighterState}{Fighter\+State}
+\item 
+class \hyperlink{classDuckingState}{Ducking\+State}
+\item 
+class \hyperlink{classStandingState}{Standing\+State}
+\item 
+class \hyperlink{classJumpingState}{Jumping\+State}
+\item 
+class \hyperlink{classDivingState}{Diving\+State}
+\item 
+class \hyperlink{classFighter}{Fighter}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090}{Input} \{ \hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090af82233b8404f602e50c8fb3fff20db8d}{D\+U\+C\+K\+\_\+\+D\+O\+WN}, 
+\hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090a4e0f05b608ae82cd3d38087399f6962a}{S\+T\+A\+N\+D\+\_\+\+UP}, 
+\hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090a1f28d4392b1c1e7da2af2283632d81e1}{J\+U\+MP}, 
+\hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090a6e996a016e50356853001a7c431fa255}{D\+I\+VE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{State_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\index{State.\+cpp@{State.\+cpp}!Input@{Input}}
+\index{Input@{Input}!State.\+cpp@{State.\+cpp}}
+\subsubsection[{\texorpdfstring{Input}{Input}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Input}}\hypertarget{State_8cpp_a080a822f0093973313bd644e517a5090}{}\label{State_8cpp_a080a822f0093973313bd644e517a5090}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{D\+U\+C\+K\+\_\+\+D\+O\+WN@{D\+U\+C\+K\+\_\+\+D\+O\+WN}!State.\+cpp@{State.\+cpp}}\index{State.\+cpp@{State.\+cpp}!D\+U\+C\+K\+\_\+\+D\+O\+WN@{D\+U\+C\+K\+\_\+\+D\+O\+WN}}\item[{\em 
+D\+U\+C\+K\+\_\+\+D\+O\+WN\hypertarget{State_8cpp_a080a822f0093973313bd644e517a5090af82233b8404f602e50c8fb3fff20db8d}{}\label{State_8cpp_a080a822f0093973313bd644e517a5090af82233b8404f602e50c8fb3fff20db8d}
+}]\index{S\+T\+A\+N\+D\+\_\+\+UP@{S\+T\+A\+N\+D\+\_\+\+UP}!State.\+cpp@{State.\+cpp}}\index{State.\+cpp@{State.\+cpp}!S\+T\+A\+N\+D\+\_\+\+UP@{S\+T\+A\+N\+D\+\_\+\+UP}}\item[{\em 
+S\+T\+A\+N\+D\+\_\+\+UP\hypertarget{State_8cpp_a080a822f0093973313bd644e517a5090a4e0f05b608ae82cd3d38087399f6962a}{}\label{State_8cpp_a080a822f0093973313bd644e517a5090a4e0f05b608ae82cd3d38087399f6962a}
+}]\index{J\+U\+MP@{J\+U\+MP}!State.\+cpp@{State.\+cpp}}\index{State.\+cpp@{State.\+cpp}!J\+U\+MP@{J\+U\+MP}}\item[{\em 
+J\+U\+MP\hypertarget{State_8cpp_a080a822f0093973313bd644e517a5090a1f28d4392b1c1e7da2af2283632d81e1}{}\label{State_8cpp_a080a822f0093973313bd644e517a5090a1f28d4392b1c1e7da2af2283632d81e1}
+}]\index{D\+I\+VE@{D\+I\+VE}!State.\+cpp@{State.\+cpp}}\index{State.\+cpp@{State.\+cpp}!D\+I\+VE@{D\+I\+VE}}\item[{\em 
+D\+I\+VE\hypertarget{State_8cpp_a080a822f0093973313bd644e517a5090a6e996a016e50356853001a7c431fa255}{}\label{State_8cpp_a080a822f0093973313bd644e517a5090a6e996a016e50356853001a7c431fa255}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+7 \{\hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090af82233b8404f602e50c8fb3fff20db8d}{DUCK\_DOWN}, \hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090a4e0f05b608ae82cd3d38087399f6962a}{STAND\_UP}, \hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090a1f28d4392b1c1e7da2af2283632d81e1}{JUMP}, \hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090a6e996a016e50356853001a7c431fa255}{DIVE}\};
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\index{State.\+cpp@{State.\+cpp}!main@{main}}
+\index{main@{main}!State.\+cpp@{State.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{State_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{State_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+137            \{
+138     std::srand(std::time(\textcolor{keyword}{nullptr}));
+139     \hyperlink{classFighter}{Fighter} rex (\textcolor{stringliteral}{"Rex the Fighter"}), borg (\textcolor{stringliteral}{"Borg the Fighter"});
+140     std::cout << rex.getName() << \textcolor{stringliteral}{" and "} << borg.getName() << \textcolor{stringliteral}{" are currently standing."} << std::endl;
+141     \textcolor{keywordtype}{int} choice;
+142     \textcolor{keyword}{auto} chooseAction = [&choice](\hyperlink{classFighter}{Fighter}& fighter) \{
+143         std::cout << std::endl << \hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090af82233b8404f602e50c8fb3fff20db8d}{DUCK\_DOWN} + 1 << \textcolor{stringliteral}{") Duck down  "} << 
+      \hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090a4e0f05b608ae82cd3d38087399f6962a}{STAND\_UP} + 1 << \textcolor{stringliteral}{") Stand up  "} << \hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090a1f28d4392b1c1e7da2af2283632d81e1}{JUMP} + 1
+144             << \textcolor{stringliteral}{") Jump  "} << \hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090a6e996a016e50356853001a7c431fa255}{DIVE} + 1 << \textcolor{stringliteral}{") Dive in the middle of a jump"} << std::endl;
+145         std::cout << \textcolor{stringliteral}{"Choice for "} << fighter.getName() << \textcolor{stringliteral}{"? "};
+146         std::cin >> choice;
+147         \textcolor{keyword}{const} \hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090}{Input} input1 = \textcolor{keyword}{static\_cast<}\hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090}{Input}\textcolor{keyword}{>}(choice - 1);
+148         fighter.handleInput (input1);   
+149     \};
+150     \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{
+151         chooseAction (rex);
+152         chooseAction (borg);
+153     \}
+154 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{State_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

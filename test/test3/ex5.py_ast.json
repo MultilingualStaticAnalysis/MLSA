@@ -1,0 +1,121 @@
+{
+    "body": [
+        {
+            "_type": "ImportFrom", 
+            "col_offset": 0, 
+            "level": 0, 
+            "module": "my_module", 
+            "names": [
+                {
+                    "_type": "alias", 
+                    "name": "my_dict", 
+                    "asname": null
+                }
+            ], 
+            "lineno": 1
+        }, 
+        {
+            "body": [
+                {
+                    "_type": "Print", 
+                    "nl": true, 
+                    "col_offset": 2, 
+                    "dest": null, 
+                    "values": [
+                        {
+                            "s": "The key is", 
+                            "_type": "Str", 
+                            "lineno": 4, 
+                            "col_offset": 8
+                        }, 
+                        {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "id": "key", 
+                            "col_offset": 22, 
+                            "lineno": 4
+                        }, 
+                        {
+                            "s": "The value is", 
+                            "_type": "Str", 
+                            "lineno": 4, 
+                            "col_offset": 27
+                        }, 
+                        {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "id": "value", 
+                            "col_offset": 43, 
+                            "lineno": 4
+                        }
+                    ], 
+                    "lineno": 4
+                }
+            ], 
+            "_type": "For", 
+            "target": {
+                "elts": [
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Store"
+                        }, 
+                        "id": "key", 
+                        "col_offset": 4, 
+                        "lineno": 3
+                    }, 
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Store"
+                        }, 
+                        "id": "value", 
+                        "col_offset": 9, 
+                        "lineno": 3
+                    }
+                ], 
+                "_type": "Tuple", 
+                "ctx": {
+                    "_type": "Store"
+                }, 
+                "lineno": 3, 
+                "col_offset": 4
+            }, 
+            "col_offset": 0, 
+            "iter": {
+                "_type": "Call", 
+                "col_offset": 18, 
+                "starargs": null, 
+                "args": [], 
+                "lineno": 3, 
+                "func": {
+                    "_type": "Attribute", 
+                    "attr": "items", 
+                    "col_offset": 18, 
+                    "ctx": {
+                        "_type": "Load"
+                    }, 
+                    "value": {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Load"
+                        }, 
+                        "id": "my_dict", 
+                        "col_offset": 18, 
+                        "lineno": 3
+                    }, 
+                    "lineno": 3
+                }, 
+                "kwargs": null, 
+                "keywords": []
+            }, 
+            "lineno": 3, 
+            "orelse": []
+        }
+    ], 
+    "_type": "Module"
+}

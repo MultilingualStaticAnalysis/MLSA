@@ -1,0 +1,343 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.38.0 (20140413.2041)
+%%Title: /home/labaccount/11-2-17/mlsa/IG/example/WireLength Call Graph
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 150 150 2400 286
+%%PageOrientation: Portrait
+<< /PageSize [2400 286] >> setpagedevice
+0 0 1 beginpage
+gsave
+150 150 2250 136 boxprim clip newpath
+0.810907 0.810907 set_scale 0 rotate 188.978 188.978 translate
+[ /CropBox [150 150 2400 286] /PAGES pdfmark
+0 0 0 graphcolor
+14 /Times-Roman set_font
+1195.34 7.8 moveto 376 (/home/labaccount/11-2-17/mlsa/IG/example/WireLength Call Graph) alignedtext
+% Node0x786008475
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+273.63 96.48 273.75 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+71.13 92.78 moveto 405 (/home/labaccount/11-2-17/mlsa/IG/example/WireLength/WireLength.cpp) alignedtext
+grestore
+% Node0x119173258
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+934.68 96.48 351.36 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+694.18 100.28 moveto 481 (0x1d07c30. \(/home/labaccount/11-2-17/mlsa/IG/example/WireLength/WireLength.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+865.18 85.28 moveto 139 (optimizeLength\(graph, s\)) alignedtext
+grestore
+% Node0x786008475->Node0x119173258
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 547.45 96.48 moveto
+555.91 96.48 564.42 96.48 572.97 96.48 curveto
+stroke
+0 0 0 edgecolor
+newpath 573.01 99.98 moveto
+583.01 96.48 lineto
+573.01 92.98 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 573.01 99.98 moveto
+583.01 96.48 lineto
+573.01 92.98 lineto
+closepath stroke
+grestore
+% Node0x854500155
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1674.25 132.48 352.28 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1433.25 136.28 moveto 482 (0x1d03330. \(/home/labaccount/11-2-17/mlsa/IG/example/WireLength/WireLength.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1604.75 121.28 moveto 139 (minDistance\(dist, sptSet\)) alignedtext
+grestore
+% Node0x119173258->Node0x854500155
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1231.43 110.91 moveto
+1276.05 113.09 1322.16 115.34 1366.99 117.53 curveto
+stroke
+0 0 0 edgecolor
+newpath 1366.98 121.03 moveto
+1377.14 118.02 lineto
+1367.32 114.04 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1366.98 121.03 moveto
+1377.14 118.02 lineto
+1367.32 114.04 lineto
+closepath stroke
+grestore
+% Node0x682911108
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1674.25 60.48 350.95 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1434.25 64.28 moveto 480 (0x1d059f0. \(/home/labaccount/11-2-17/mlsa/IG/example/WireLength/WireLength.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1616.75 49.28 moveto 115 (printSolution\(dist, 9\)) alignedtext
+grestore
+% Node0x119173258->Node0x682911108
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1231.43 82.04 moveto
+1276.33 79.85 1322.73 77.59 1367.83 75.38 curveto
+stroke
+0 0 0 edgecolor
+newpath 1368.22 78.87 moveto
+1378.04 74.89 lineto
+1367.88 71.88 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1368.22 78.87 moveto
+1378.04 74.89 lineto
+1367.88 71.88 lineto
+closepath stroke
+grestore
+% Node0x504300651
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2414.53 60.48 352.28 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2173.53 71.78 moveto 482 (0x1d02500. \(/home/labaccount/11-2-17/mlsa/IG/example/WireLength/WireLength.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2364.53 56.78 moveto 100 (printf\(<< %dtt%d) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2378.03 41.78 moveto 73 ( >>, i, dist[]\)) alignedtext
+grestore
+% Node0x682911108->Node0x504300651
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2025.21 60.48 moveto
+2034.14 60.48 2043.08 60.48 2052.03 60.48 curveto
+stroke
+0 0 0 edgecolor
+newpath 2052.12 63.98 moveto
+2062.12 60.48 lineto
+2052.12 56.98 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2052.12 63.98 moveto
+2062.12 60.48 lineto
+2052.12 56.98 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 150 150 2400 286
+end
+restore
+%%EOF

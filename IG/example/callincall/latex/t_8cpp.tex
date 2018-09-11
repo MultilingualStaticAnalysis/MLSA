@@ -1,0 +1,52 @@
+\hypertarget{t_8cpp}{}\section{t.\+cpp File Reference}
+\label{t_8cpp}\index{t.\+cpp@{t.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+Include dependency graph for t.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{t_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structprice}{price}
+\item 
+struct \hyperlink{structproduct}{product}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{t_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{t.\+cpp@{t.\+cpp}!main@{main}}
+\index{main@{main}!t.\+cpp@{t.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{t_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{t_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+18 \{
+19   vector<string> array[10];
+20   array[1].push\_back(\textcolor{stringliteral}{"Hello"});
+21   array[1].back().size();
+22   \hyperlink{structprice}{price} pr;
+23   pr.\hyperlink{structprice_a0e896a2991e2886400502d4f8e5832fc}{dollar} = 3;
+24   \hyperlink{structproduct}{product} floss;
+25   floss.\hyperlink{structproduct_a4987f39c16924c6ef80d5d6055fcc265}{p} = pr;
+26   vector<int> yo[10];
+27   yo[2].push\_back(floss.\hyperlink{structproduct_a4987f39c16924c6ef80d5d6055fcc265}{p}.\hyperlink{structprice_a0e896a2991e2886400502d4f8e5832fc}{dollar});
+28   yo[3].push\_back(array[1].back().size());
+29   yo[4].push\_back(array[1].back().size()+1);
+30   \textcolor{keywordflow}{return} 0;
+31 \}
+\end{DoxyCode}

@@ -1,0 +1,234 @@
+\hypertarget{hmc10_8c}{}\section{hmc10.\+c File Reference}
+\label{hmc10_8c}\index{hmc10.\+c@{hmc10.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+Include dependency graph for hmc10.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{hmc10_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{hmc10_8c_a78d344caabde729a4559393a0552bf1c}{A\+R\+R\+A\+Y\+S\+I\+ZE}~2000
+\item 
+\#define \hyperlink{hmc10_8c_a0095c1e0ae26941efea12c77f2232f2f}{L\+I\+N\+E\+S\+I\+ZE}~65
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef char \hyperlink{hmc10_8c_a9e38333c54335607829268149cf3855a}{linetype}\mbox{[}\hyperlink{hmc10_8c_a0095c1e0ae26941efea12c77f2232f2f}{L\+I\+N\+E\+S\+I\+ZE}\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{hmc10_8c_ae54f82d64a650bd36ff947656fc2885f}{getline} (F\+I\+LE $\ast$fd, char buff\mbox{[}$\,$\mbox{]}, int nmax)
+\item 
+int \hyperlink{hmc10_8c_ae87b96e9c69a38ef44d8915a2a76a2d6}{get\+String\+Array} (char $\ast$filename, \hyperlink{hmc10_8c_a9e38333c54335607829268149cf3855a}{linetype} table\mbox{[}$\,$\mbox{]}, int nmax)
+\item 
+void \hyperlink{hmc10_8c_a15bea2142e99a70219bb49e6ff400f9d}{write\+String\+Array} (char $\ast$filename, \hyperlink{hmc10_8c_a9e38333c54335607829268149cf3855a}{linetype} table\mbox{[}$\,$\mbox{]}, int n)
+\item 
+void \hyperlink{hmc10_8c_ac29b7bb6177ffab2b99341426b422b03}{string\+Bubble} (\hyperlink{hmc10_8c_a9e38333c54335607829268149cf3855a}{linetype} table\mbox{[}$\,$\mbox{]}, int n)
+\item 
+int \hyperlink{hmc10_8c_a594e6934fc18035c2a074fa079a50515}{string\+Binary} (\hyperlink{hmc10_8c_a9e38333c54335607829268149cf3855a}{linetype} table\mbox{[}$\,$\mbox{]}, int n, char who\mbox{[}$\,$\mbox{]})
+\item 
+int \hyperlink{hmc10_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{hmc10.\+c@{hmc10.\+c}!A\+R\+R\+A\+Y\+S\+I\+ZE@{A\+R\+R\+A\+Y\+S\+I\+ZE}}
+\index{A\+R\+R\+A\+Y\+S\+I\+ZE@{A\+R\+R\+A\+Y\+S\+I\+ZE}!hmc10.\+c@{hmc10.\+c}}
+\subsubsection[{\texorpdfstring{A\+R\+R\+A\+Y\+S\+I\+ZE}{ARRAYSIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+R\+R\+A\+Y\+S\+I\+ZE~2000}\hypertarget{hmc10_8c_a78d344caabde729a4559393a0552bf1c}{}\label{hmc10_8c_a78d344caabde729a4559393a0552bf1c}
+\index{hmc10.\+c@{hmc10.\+c}!L\+I\+N\+E\+S\+I\+ZE@{L\+I\+N\+E\+S\+I\+ZE}}
+\index{L\+I\+N\+E\+S\+I\+ZE@{L\+I\+N\+E\+S\+I\+ZE}!hmc10.\+c@{hmc10.\+c}}
+\subsubsection[{\texorpdfstring{L\+I\+N\+E\+S\+I\+ZE}{LINESIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+I\+N\+E\+S\+I\+ZE~65}\hypertarget{hmc10_8c_a0095c1e0ae26941efea12c77f2232f2f}{}\label{hmc10_8c_a0095c1e0ae26941efea12c77f2232f2f}
+
+
+\subsection{Typedef Documentation}
+\index{hmc10.\+c@{hmc10.\+c}!linetype@{linetype}}
+\index{linetype@{linetype}!hmc10.\+c@{hmc10.\+c}}
+\subsubsection[{\texorpdfstring{linetype}{linetype}}]{\setlength{\rightskip}{0pt plus 5cm}typedef char linetype\mbox{[}{\bf L\+I\+N\+E\+S\+I\+ZE}\mbox{]}}\hypertarget{hmc10_8c_a9e38333c54335607829268149cf3855a}{}\label{hmc10_8c_a9e38333c54335607829268149cf3855a}
+
+
+\subsection{Function Documentation}
+\index{hmc10.\+c@{hmc10.\+c}!getline@{getline}}
+\index{getline@{getline}!hmc10.\+c@{hmc10.\+c}}
+\subsubsection[{\texorpdfstring{getline(\+F\+I\+L\+E $\ast$fd, char buff[], int nmax)}{getline(FILE *fd, char buff[], int nmax)}}]{\setlength{\rightskip}{0pt plus 5cm}int getline (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{fd, }
+\item[{char}]{buff\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{nmax}
+\end{DoxyParamCaption}
+)}\hypertarget{hmc10_8c_ae54f82d64a650bd36ff947656fc2885f}{}\label{hmc10_8c_ae54f82d64a650bd36ff947656fc2885f}
+
+\begin{DoxyCode}
+12                                              \{
+13   \textcolor{comment}{/* It reads a line from fd and stores up to nmax of }
+14 \textcolor{comment}{   * its characters to buff.}
+15 \textcolor{comment}{   */}
+16   \textcolor{keywordtype}{char} c;
+17   \textcolor{keywordtype}{int} n=0;
+18 
+19   \textcolor{keywordflow}{while} ((c=getc(fd))!=\textcolor{charliteral}{'\(\backslash\)n'})\{
+20     \textcolor{keywordflow}{if}(c==EOF)\textcolor{keywordflow}{return} EOF;
+21     \textcolor{keywordflow}{if}(n<nmax)
+22       buff[n++]=c;
+23   \}
+24   buff[n]=\textcolor{charliteral}{'\(\backslash\)0'};
+25   \textcolor{keywordflow}{return} n;
+26 \}
+\end{DoxyCode}
+\index{hmc10.\+c@{hmc10.\+c}!get\+String\+Array@{get\+String\+Array}}
+\index{get\+String\+Array@{get\+String\+Array}!hmc10.\+c@{hmc10.\+c}}
+\subsubsection[{\texorpdfstring{get\+String\+Array(char $\ast$filename, linetype table[], int nmax)}{getStringArray(char *filename, linetype table[], int nmax)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+String\+Array (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{{\bf linetype}}]{table\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{nmax}
+\end{DoxyParamCaption}
+)}\hypertarget{hmc10_8c_ae87b96e9c69a38ef44d8915a2a76a2d6}{}\label{hmc10_8c_ae87b96e9c69a38ef44d8915a2a76a2d6}
+
+\begin{DoxyCode}
+32 \{
+33   FILE *fdu;  \textcolor{comment}{/* File descriptor used for filename */}
+34   \textcolor{keywordtype}{int} i, j;
+35   \textcolor{keywordtype}{char} c;
+36 
+37   \textcolor{keywordflow}{if}((fdu=fopen(filename,\textcolor{stringliteral}{"r"}))==NULL)\{
+38     perror(\textcolor{stringliteral}{"fopen"});
+39     exit(1);
+40   \}
+41   i=j=0;
+42   \textcolor{keywordflow}{while}((c=getc(fdu))!=EOF)\{
+43     \textcolor{keywordflow}{if}(i==nmax)\textcolor{keywordflow}{break};  \textcolor{comment}{/* We have filled up the table */}
+44     \textcolor{keywordflow}{if} (c==\textcolor{charliteral}{'\(\backslash\)n'})\{ \textcolor{comment}{/* We have finished reading a line */}
+45       table[i++][j]=\textcolor{charliteral}{'\(\backslash\)0'};
+46       j=0;
+47     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(j<\hyperlink{hmc10_8c_a0095c1e0ae26941efea12c77f2232f2f}{LINESIZE})
+48       table[i][j++]=c;
+49   \}
+50   fclose(fdu);
+51   \textcolor{keywordflow}{return} i;
+52 \}
+\end{DoxyCode}
+\index{hmc10.\+c@{hmc10.\+c}!main@{main}}
+\index{main@{main}!hmc10.\+c@{hmc10.\+c}}
+\subsubsection[{\texorpdfstring{main(void)}{main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{hmc10_8c_a840291bc02cba5474a4cb46a9b9566fe}{}\label{hmc10_8c_a840291bc02cba5474a4cb46a9b9566fe}
+
+\begin{DoxyCode}
+86               \{
+87   \textcolor{keywordtype}{int} n;
+88   \hyperlink{hmc10_8c_a9e38333c54335607829268149cf3855a}{linetype} linearray[\hyperlink{hmc10_8c_a78d344caabde729a4559393a0552bf1c}{ARRAYSIZE}];
+89   \hyperlink{hmc10_8c_a9e38333c54335607829268149cf3855a}{linetype} who;
+90   \textcolor{keywordtype}{int} where;
+91   FILE *fdw;  \textcolor{comment}{/* FILE descriptor used for "who.dat" */}
+92   FILE *fda;  \textcolor{comment}{/* File descriptor used for "answers.dat" */}
+93   
+94   \textcolor{comment}{/* Read unsorted.dat into linearray and return number of lines read */}
+95   n = \hyperlink{hmc10_8c_ae87b96e9c69a38ef44d8915a2a76a2d6}{getStringArray}(\textcolor{stringliteral}{"unsorted.dat"}, linearray, \hyperlink{hmc10_8c_a78d344caabde729a4559393a0552bf1c}{ARRAYSIZE});
+96   \textcolor{keywordflow}{if} (n==0)\{
+97     printf(\textcolor{stringliteral}{"The unsorted.dat file is empty. Good bye.\(\backslash\)n"});
+98     exit(0);
+99   \}
+100   \textcolor{comment}{/* Sort the first n lines of linearray */}
+101   \hyperlink{hmc10_8c_ac29b7bb6177ffab2b99341426b422b03}{stringBubble}(linearray,n);
+102   \textcolor{comment}{/* Save the sorted array to sorted.dat */}
+103   \hyperlink{hmc10_8c_a15bea2142e99a70219bb49e6ff400f9d}{writeStringArray}(\textcolor{stringliteral}{"sorted.dat"},linearray,n);
+104   \textcolor{comment}{/* Open for reading who.dat */}
+105   \textcolor{keywordflow}{if}((fdw=fopen(\textcolor{stringliteral}{"who.dat"},\textcolor{stringliteral}{"r"}))==NULL)\{
+106     perror(\textcolor{stringliteral}{"fopen"});
+107     exit(1);
+108   \}
+109   \textcolor{comment}{/* Open for writing answers.dat */}
+110   \textcolor{keywordflow}{if}((fda=fopen(\textcolor{stringliteral}{"answers.dat"},\textcolor{stringliteral}{"w"}))==NULL)\{
+111     perror(\textcolor{stringliteral}{"fopen"});
+112     exit(1);
+113   \}
+114   \textcolor{keywordflow}{while} (\hyperlink{hmc10_8c_ae54f82d64a650bd36ff947656fc2885f}{getline}(fdw,who,\hyperlink{hmc10_8c_a0095c1e0ae26941efea12c77f2232f2f}{LINESIZE}-1)!=EOF)\{   \textcolor{comment}{/* Read a line from "who.dat" */}
+115     where = \hyperlink{hmc10_8c_a594e6934fc18035c2a074fa079a50515}{stringBinary}(linearray,n,who);    \textcolor{comment}{/* See where it is in table */}
+116     fprintf(fda,\textcolor{stringliteral}{"%d\(\backslash\)n"},where);            \textcolor{comment}{/* Write position to "answer.dat*/}
+117   \}
+118   fclose(fdw);
+119   fclose(fda);
+120 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{hmc10_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{hmc10.\+c@{hmc10.\+c}!string\+Binary@{string\+Binary}}
+\index{string\+Binary@{string\+Binary}!hmc10.\+c@{hmc10.\+c}}
+\subsubsection[{\texorpdfstring{string\+Binary(linetype table[], int n, char who[])}{stringBinary(linetype table[], int n, char who[])}}]{\setlength{\rightskip}{0pt plus 5cm}int string\+Binary (
+\begin{DoxyParamCaption}
+\item[{{\bf linetype}}]{table\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{n, }
+\item[{char}]{who\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{hmc10_8c_a594e6934fc18035c2a074fa079a50515}{}\label{hmc10_8c_a594e6934fc18035c2a074fa079a50515}
+
+\begin{DoxyCode}
+77                                                      \{
+78   \textcolor{comment}{/* It searches the first n positions of table looking for who.}
+79 \textcolor{comment}{   * It uses binary search. It returns the position where who is}
+80 \textcolor{comment}{   * found, or -1 if not there. This is just the prototype, or stub, }
+81 \textcolor{comment}{   * of the function.}
+82 \textcolor{comment}{   */}
+83   \textcolor{keywordflow}{return} -1;
+84 \}
+\end{DoxyCode}
+\index{hmc10.\+c@{hmc10.\+c}!string\+Bubble@{string\+Bubble}}
+\index{string\+Bubble@{string\+Bubble}!hmc10.\+c@{hmc10.\+c}}
+\subsubsection[{\texorpdfstring{string\+Bubble(linetype table[], int n)}{stringBubble(linetype table[], int n)}}]{\setlength{\rightskip}{0pt plus 5cm}void string\+Bubble (
+\begin{DoxyParamCaption}
+\item[{{\bf linetype}}]{table\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{hmc10_8c_ac29b7bb6177ffab2b99341426b422b03}{}\label{hmc10_8c_ac29b7bb6177ffab2b99341426b422b03}
+
+\begin{DoxyCode}
+71                                           \{
+72   \textcolor{comment}{/* This function sorts the first n lines of table.}
+73 \textcolor{comment}{   * Here you see just the prototype, or stub, of the function.}
+74 \textcolor{comment}{   */}
+75 \}
+\end{DoxyCode}
+\index{hmc10.\+c@{hmc10.\+c}!write\+String\+Array@{write\+String\+Array}}
+\index{write\+String\+Array@{write\+String\+Array}!hmc10.\+c@{hmc10.\+c}}
+\subsubsection[{\texorpdfstring{write\+String\+Array(char $\ast$filename, linetype table[], int n)}{writeStringArray(char *filename, linetype table[], int n)}}]{\setlength{\rightskip}{0pt plus 5cm}void write\+String\+Array (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{{\bf linetype}}]{table\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{hmc10_8c_a15bea2142e99a70219bb49e6ff400f9d}{}\label{hmc10_8c_a15bea2142e99a70219bb49e6ff400f9d}
+
+\begin{DoxyCode}
+58 \{
+59   FILE *fdu;  \textcolor{comment}{/* File descriptor used for filename */}
+60   \textcolor{keywordtype}{int} i;
+61   
+62   \textcolor{keywordflow}{if}((fdu=fopen(filename,\textcolor{stringliteral}{"w"}))==NULL)\{
+63     perror(\textcolor{stringliteral}{"fopen"});
+64     exit(1);
+65   \}
+66   \textcolor{keywordflow}{for}(i=0;i<n;i++)
+67     fprintf(fdu, \textcolor{stringliteral}{"%s\(\backslash\)n"}, table[i]);
+68   fclose(fdu);
+69 \}
+\end{DoxyCode}

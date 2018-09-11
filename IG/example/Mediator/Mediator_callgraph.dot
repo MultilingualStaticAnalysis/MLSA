@@ -1,0 +1,19 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/Mediator Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/Mediator Call Graph"
+	];
+
+	Node0x937846305 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/Mediator/Mediator.cpp"];
+	Node0x315934614 [shape=oval, label="0x1cfb648. (/home/labaccount/11-2-17/mlsa/IG/example/Mediator/Mediator.cpp)\nMediatorInterface::registerColleague(x)"];
+	Node0x937846305 -> Node0x315934614;
+	Node0x593352971 [shape=oval, label="0x1cfb7b0. (/home/labaccount/11-2-17/mlsa/IG/example/Mediator/Mediator.cpp)\nColleague::sendMessage(mediatorStaff, << I'm quitting this job! >>)"];
+	Node0x937846305 -> Node0x593352971;
+	Node0x582898729 [shape=oval, label="0x1cfbd58. (/home/labaccount/11-2-17/mlsa/IG/example/Mediator/Mediator.cpp)\nMediatorInterface::registerColleague(frank)"];
+	Node0x937846305 -> Node0x582898729;
+	Node0x349767961 [shape=oval, label="0x1cfbe68. (/home/labaccount/11-2-17/mlsa/IG/example/Mediator/Mediator.cpp)\nMediatorInterface::registerColleague(tom)"];
+	Node0x937846305 -> Node0x349767961;
+	Node0x844696719 [shape=oval, label="0x1cfc060. (/home/labaccount/11-2-17/mlsa/IG/example/Mediator/Mediator.cpp)\nColleague::sendMessage(mediatorSamsBuddies, << Hooray!  He's gone!  Let's go for a drink guys! >>)"];
+	Node0x937846305 -> Node0x844696719;
+}

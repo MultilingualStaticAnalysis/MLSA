@@ -1,0 +1,168 @@
+\hypertarget{HImain_8cpp}{}\section{H\+Imain.\+cpp File Reference}
+\label{HImain_8cpp}\index{H\+Imain.\+cpp@{H\+Imain.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}Huge\+Integer.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+Include dependency graph for H\+Imain.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{HImain_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{HImain_8cpp_a85a4b209a6e94f13f1bd489fa2c7e430}{initialize} (\hyperlink{classHugeInteger}{Huge\+Integer} \&h1, \hyperlink{classHugeInteger}{Huge\+Integer} \&h2, char \&s)
+\item 
+void \hyperlink{HImain_8cpp_ad958b06eb7356036c3b2bfca7c3ae9a0}{equate} (const \hyperlink{classHugeInteger}{Huge\+Integer} \&h1, const \hyperlink{classHugeInteger}{Huge\+Integer} \&h2, \hyperlink{classHugeInteger}{Huge\+Integer} \&h3, char s)
+\item 
+int \hyperlink{HImain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{H\+Imain.\+cpp@{H\+Imain.\+cpp}!equate@{equate}}
+\index{equate@{equate}!H\+Imain.\+cpp@{H\+Imain.\+cpp}}
+\subsubsection[{\texorpdfstring{equate(const Huge\+Integer \&h1, const Huge\+Integer \&h2, Huge\+Integer \&h3, char s)}{equate(const HugeInteger &h1, const HugeInteger &h2, HugeInteger &h3, char s)}}]{\setlength{\rightskip}{0pt plus 5cm}void equate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Huge\+Integer} \&}]{h1, }
+\item[{const {\bf Huge\+Integer} \&}]{h2, }
+\item[{{\bf Huge\+Integer} \&}]{h3, }
+\item[{char}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{HImain_8cpp_ad958b06eb7356036c3b2bfca7c3ae9a0}{}\label{HImain_8cpp_ad958b06eb7356036c3b2bfca7c3ae9a0}
+
+\begin{DoxyCode}
+37 \{
+38    cout << \textcolor{stringliteral}{"The equation you entered is: "};
+39 
+40    \textcolor{keywordflow}{switch}(s)\textcolor{comment}{//decideds which operation to do based on user input                                           
+                                                                                                       }
+41    \{
+42       \textcolor{keywordflow}{case} \textcolor{charliteral}{'+'}:
+43          cout << h1 << \textcolor{stringliteral}{" + "} << h2 << endl << endl;
+44          h3 = h1 + h2;
+45          \textcolor{keywordflow}{if}(h3.\hyperlink{classHugeInteger_a49c11f16dad4dbb56d277ddb0eb71342}{isBad}())\textcolor{comment}{//if the sum exceeds digit limit, the HugeInteger returned will have a "bad"
+       array                                                                                                   }
+46             \textcolor{keywordflow}{break};
+47          cout << \textcolor{stringliteral}{"The sum of "} << h1 << \textcolor{stringliteral}{" and "} << h2 << \textcolor{stringliteral}{" is "} << h3 << endl << endl;
+48          \textcolor{keywordflow}{break};
+49       \textcolor{keywordflow}{case} \textcolor{charliteral}{'*'}:
+50          cout << h1 << \textcolor{stringliteral}{" * "} << h2 << endl << endl;
+51          h3 = h1 * h2;
+52          \textcolor{keywordflow}{if}(h3.\hyperlink{classHugeInteger_a49c11f16dad4dbb56d277ddb0eb71342}{isBad}())
+53             \textcolor{keywordflow}{break};
+54          cout << \textcolor{stringliteral}{"The product of "} << h1 << \textcolor{stringliteral}{" and "} << h2 << \textcolor{stringliteral}{" is "} << h3 << endl << endl;
+55          \textcolor{keywordflow}{break};
+56       \textcolor{keywordflow}{case} \textcolor{charliteral}{'-'}:
+57          cout << h1 << \textcolor{stringliteral}{" - "} << h2 << endl << endl;
+58          h3 = h1 - h2;
+59          \textcolor{keywordflow}{if}(h3.\hyperlink{classHugeInteger_a49c11f16dad4dbb56d277ddb0eb71342}{isBad}())
+60             \textcolor{keywordflow}{break};
+61          cout << \textcolor{stringliteral}{"The difference between "} << h1 << \textcolor{stringliteral}{" and "} << h2 << \textcolor{stringliteral}{" is "} << h3 << endl << endl;
+62          \textcolor{keywordflow}{break};
+63       \textcolor{keywordflow}{case} \textcolor{charliteral}{'='}:
+64          cout << h1 << \textcolor{stringliteral}{" == "} << h2 << endl << endl;
+65          \textcolor{keywordflow}{if}(h1 == h2)
+66             cout << h1 << \textcolor{stringliteral}{" is equal to "} << h2 << endl << endl;
+67          \textcolor{keywordflow}{else}
+68             cout << h1 << \textcolor{stringliteral}{" is not equal to "} << h2 << endl << endl;
+69          \textcolor{keywordflow}{break};
+70       \textcolor{keywordflow}{case} \textcolor{charliteral}{'!'}:
+71          cout << h1 << \textcolor{stringliteral}{" != "} << h2 << endl << endl;
+72          \textcolor{keywordflow}{if}(h1 != h2)
+73             cout << h1 << \textcolor{stringliteral}{" is not equal to "} << h2 << endl << endl;
+74          \textcolor{keywordflow}{else}
+75             cout << h1 << \textcolor{stringliteral}{" is equal to "} << h2 << endl << endl;
+76          \textcolor{keywordflow}{break};
+77       \textcolor{keywordflow}{case} \textcolor{charliteral}{'<'}:
+78          cout << h1 << \textcolor{stringliteral}{" <= "} << h2 << endl << endl;
+79          \textcolor{keywordflow}{if}(h1 <= h2)
+80             cout << h1 << \textcolor{stringliteral}{" is less than or equal to "} << h2 << endl << endl;
+81          \textcolor{keywordflow}{else}
+82             cout << h1 << \textcolor{stringliteral}{" is greater than "} << h2 << endl << endl;
+83          \textcolor{keywordflow}{break};
+84       \textcolor{keywordflow}{case} \textcolor{charliteral}{'>'}:
+85          cout << h1 << \textcolor{stringliteral}{" >= "} << h2 << endl << endl;
+86          \textcolor{keywordflow}{if}(h1 >= h2)
+87             cout << h1 << \textcolor{stringliteral}{" is greater than or equal to "} << h2 << endl << endl;
+88          \textcolor{keywordflow}{else}
+89             cout << h1 << \textcolor{stringliteral}{" is less than "} << h2 << endl << endl;
+90          \textcolor{keywordflow}{break};
+91       \textcolor{keywordflow}{default}: \textcolor{comment}{//if the requested operation is not offered, default will run                               
+                                                                                                       }
+92          cout << \textcolor{stringliteral}{"INVALID"} << endl << endl;
+93    \}
+94 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{HImain_8cpp_ad958b06eb7356036c3b2bfca7c3ae9a0_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{H\+Imain.\+cpp@{H\+Imain.\+cpp}!initialize@{initialize}}
+\index{initialize@{initialize}!H\+Imain.\+cpp@{H\+Imain.\+cpp}}
+\subsubsection[{\texorpdfstring{initialize(\+Huge\+Integer \&h1, Huge\+Integer \&h2, char \&s)}{initialize(HugeInteger &h1, HugeInteger &h2, char &s)}}]{\setlength{\rightskip}{0pt plus 5cm}void initialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Huge\+Integer} \&}]{h1, }
+\item[{{\bf Huge\+Integer} \&}]{h2, }
+\item[{char \&}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{HImain_8cpp_a85a4b209a6e94f13f1bd489fa2c7e430}{}\label{HImain_8cpp_a85a4b209a6e94f13f1bd489fa2c7e430}
+
+\begin{DoxyCode}
+30 \{
+31    cout << endl << \textcolor{stringliteral}{"Enter an equation(+, *, -, ==, !=, <=, >=): "};
+32    cin >> h1 >> s >> h2; \textcolor{comment}{//initializes HugeIntegers with the value entered by the user, and the operation
+       sign with operation the user requested                                                            }
+33    cout << endl;
+34 \}
+\end{DoxyCode}
+\index{H\+Imain.\+cpp@{H\+Imain.\+cpp}!main@{main}}
+\index{main@{main}!H\+Imain.\+cpp@{H\+Imain.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{HImain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{HImain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+15 \{
+16    \hyperlink{classHugeInteger}{HugeInteger} hi1, hi2, hi3;
+17    \textcolor{keywordtype}{char} sign;
+18 
+19    \hyperlink{HImain_8cpp_a85a4b209a6e94f13f1bd489fa2c7e430}{initialize}(hi1, hi2, sign);\textcolor{comment}{//initializes variables with values entered by the user            
+                                                                                                                 }
+20 
+21    \textcolor{keywordflow}{if}(hi1.\hyperlink{classHugeInteger_a49c11f16dad4dbb56d277ddb0eb71342}{isBad}() || hi2.\hyperlink{classHugeInteger_a49c11f16dad4dbb56d277ddb0eb71342}{isBad}())\textcolor{comment}{//if either HugeInteger is returned with a "bad" array, then the
+       number exceeded the digit limit                                                                           }
+22       \textcolor{keywordflow}{return} 1;
+23 
+24    \hyperlink{HImain_8cpp_ad958b06eb7356036c3b2bfca7c3ae9a0}{equate}(hi1, hi2, hi3, sign); \textcolor{comment}{//equates the operation that the user requested and displays result  
+                                                                                                             }
+25 
+26    \textcolor{keywordflow}{return} 0;
+27 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{HImain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

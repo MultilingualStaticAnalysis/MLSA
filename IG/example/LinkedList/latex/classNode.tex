@@ -1,0 +1,212 @@
+\hypertarget{classNode}{}\section{Node$<$ T $>$ Class Template Reference}
+\label{classNode}\index{Node$<$ T $>$@{Node$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Node.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNode_a0ac1d44cfe588be564acf25485029bd8}{Node} ()
+\item 
+\hyperlink{classNode_a017842c62a2ea717a906c36442699d2b}{Node} (T $\ast$t)
+\item 
+\hyperlink{classNode_a6f2375c2b58a627d2c3e82c3db4b624e}{Node} (const \hyperlink{classNode}{Node}$<$ T $>$ \&n)
+\item 
+\hyperlink{classNode_ae923d0417581dd19784d55b901f0f7f0}{$\sim$\+Node} ()
+\item 
+\hyperlink{classNode}{Node}$<$ T $>$ $\ast$ \hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{get\+Next} () const 
+\item 
+\hyperlink{classNode}{Node}$<$ T $>$ $\ast$ \hyperlink{classNode_af4e96a27c770adc291f2f7a4bc2c538d}{get\+Prev} () const 
+\item 
+T \hyperlink{classNode_ac1c49a2cc713ea6e8e6a22f003843d4b}{get\+Object} () const 
+\item 
+void \hyperlink{classNode_a0f69ba4f73cd616755f4ec0ae9fa7f96}{set\+Next} (\hyperlink{classNode}{Node}$<$ T $>$ $\ast$n)
+\item 
+void \hyperlink{classNode_a3c292611bdab2cbe724c841c6984fcad}{set\+Prev} (\hyperlink{classNode}{Node}$<$ T $>$ $\ast$p)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T $\ast$ \hyperlink{classNode_ae6ced078eb7da64ab447676be5f22024}{t\+Ptr}
+\item 
+\hyperlink{classNode}{Node}$<$ T $>$ $\ast$ \hyperlink{classNode_a8bedac90cd0aedd2847dd49f671d4d4a}{next}
+\item 
+\hyperlink{classNode}{Node}$<$ T $>$ $\ast$ \hyperlink{classNode_ac953360c5f7ffae6ad13762189d34d9c}{prev}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{\texorpdfstring{Node()}{Node()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Node}$<$ T $>$\+::{\bf Node} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNode_a0ac1d44cfe588be564acf25485029bd8}{}\label{classNode_a0ac1d44cfe588be564acf25485029bd8}
+
+\begin{DoxyCode}
+15 \{
+16    sPtr = NULL;
+17    \hyperlink{classNode_a8bedac90cd0aedd2847dd49f671d4d4a}{next} = NULL;
+18    \hyperlink{classNode_ac953360c5f7ffae6ad13762189d34d9c}{prev} = NULL;
+19 \}
+\end{DoxyCode}
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{\texorpdfstring{Node(\+T $\ast$t)}{Node(T *t)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Node}$<$ T $>$\+::{\bf Node} (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{classNode_a017842c62a2ea717a906c36442699d2b}{}\label{classNode_a017842c62a2ea717a906c36442699d2b}
+
+\begin{DoxyCode}
+49 \{
+50    \hyperlink{classNode_ae6ced078eb7da64ab447676be5f22024}{tPtr} = t;
+51    \hyperlink{classNode_a8bedac90cd0aedd2847dd49f671d4d4a}{next} = NULL;
+52    \hyperlink{classNode_ac953360c5f7ffae6ad13762189d34d9c}{prev} = NULL;
+53 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{classNode_a017842c62a2ea717a906c36442699d2b_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{\texorpdfstring{Node(const Node$<$ T $>$ \&n)}{Node(const Node< T > &n)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Node}$<$ T $>$\+::{\bf Node} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Node}$<$ T $>$ \&}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{classNode_a6f2375c2b58a627d2c3e82c3db4b624e}{}\label{classNode_a6f2375c2b58a627d2c3e82c3db4b624e}
+
+\begin{DoxyCode}
+29 \{
+30    sPtr = \textcolor{keyword}{new} \hyperlink{classStudent}{Student}(n.getStudent()); \textcolor{comment}{//calls copy constructor of Student                          
+                                                                                                              }
+31    \hyperlink{classNode_a8bedac90cd0aedd2847dd49f671d4d4a}{next} = NULL;
+32    \hyperlink{classNode_ac953360c5f7ffae6ad13762189d34d9c}{prev} = NULL;
+33 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{classNode_a6f2375c2b58a627d2c3e82c3db4b624e_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Node@{Node}!````~Node@{$\sim$\+Node}}
+\index{````~Node@{$\sim$\+Node}!Node@{Node}}
+\subsubsection[{\texorpdfstring{$\sim$\+Node()}{~Node()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Node}$<$ T $>$\+::$\sim${\bf Node} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNode_ae923d0417581dd19784d55b901f0f7f0}{}\label{classNode_ae923d0417581dd19784d55b901f0f7f0}
+
+\begin{DoxyCode}
+43 \{
+44    \textcolor{keywordflow}{if}(sPtr)
+45    \{
+46       \textcolor{keyword}{delete} sPtr;
+47       sPtr = NULL;
+48    \}
+49 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Node@{Node}!get\+Next@{get\+Next}}
+\index{get\+Next@{get\+Next}!Node@{Node}}
+\subsubsection[{\texorpdfstring{get\+Next() const }{getNext() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Node}$<$ T $>$ $\ast$ {\bf Node}$<$ T $>$\+::get\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNode_af8f2d178f274dd254e6e1965971f0fd0}{}\label{classNode_af8f2d178f274dd254e6e1965971f0fd0}
+
+\begin{DoxyCode}
+52 \{
+53    \textcolor{keywordflow}{return} \hyperlink{classNode_a8bedac90cd0aedd2847dd49f671d4d4a}{next};
+54 \}
+\end{DoxyCode}
+\index{Node@{Node}!get\+Object@{get\+Object}}
+\index{get\+Object@{get\+Object}!Node@{Node}}
+\subsubsection[{\texorpdfstring{get\+Object() const }{getObject() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T {\bf Node}$<$ T $>$\+::get\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNode_ac1c49a2cc713ea6e8e6a22f003843d4b}{}\label{classNode_ac1c49a2cc713ea6e8e6a22f003843d4b}
+
+\begin{DoxyCode}
+99 \{
+100    \textcolor{keywordflow}{return} *\hyperlink{classNode_ae6ced078eb7da64ab447676be5f22024}{tPtr};
+101 \}
+\end{DoxyCode}
+\index{Node@{Node}!get\+Prev@{get\+Prev}}
+\index{get\+Prev@{get\+Prev}!Node@{Node}}
+\subsubsection[{\texorpdfstring{get\+Prev() const }{getPrev() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Node}$<$ T $>$ $\ast$ {\bf Node}$<$ T $>$\+::get\+Prev (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNode_af4e96a27c770adc291f2f7a4bc2c538d}{}\label{classNode_af4e96a27c770adc291f2f7a4bc2c538d}
+
+\begin{DoxyCode}
+57 \{
+58    \textcolor{keywordflow}{return} \hyperlink{classNode_ac953360c5f7ffae6ad13762189d34d9c}{prev};
+59 \}
+\end{DoxyCode}
+\index{Node@{Node}!set\+Next@{set\+Next}}
+\index{set\+Next@{set\+Next}!Node@{Node}}
+\subsubsection[{\texorpdfstring{set\+Next(\+Node$<$ T $>$ $\ast$n)}{setNext(Node< T > *n)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Node}$<$ T $>$\+::set\+Next (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{classNode_a0f69ba4f73cd616755f4ec0ae9fa7f96}{}\label{classNode_a0f69ba4f73cd616755f4ec0ae9fa7f96}
+
+\begin{DoxyCode}
+62 \{
+63    \hyperlink{classNode_a8bedac90cd0aedd2847dd49f671d4d4a}{next} = n;
+64 \}
+\end{DoxyCode}
+\index{Node@{Node}!set\+Prev@{set\+Prev}}
+\index{set\+Prev@{set\+Prev}!Node@{Node}}
+\subsubsection[{\texorpdfstring{set\+Prev(\+Node$<$ T $>$ $\ast$p)}{setPrev(Node< T > *p)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Node}$<$ T $>$\+::set\+Prev (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{classNode_a3c292611bdab2cbe724c841c6984fcad}{}\label{classNode_a3c292611bdab2cbe724c841c6984fcad}
+
+\begin{DoxyCode}
+67 \{
+68    \hyperlink{classNode_ac953360c5f7ffae6ad13762189d34d9c}{prev} = p;
+69 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Node@{Node}!next@{next}}
+\index{next@{next}!Node@{Node}}
+\subsubsection[{\texorpdfstring{next}{next}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Node}$<$T$>$$\ast$ {\bf Node}$<$ T $>$\+::next\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNode_a8bedac90cd0aedd2847dd49f671d4d4a}{}\label{classNode_a8bedac90cd0aedd2847dd49f671d4d4a}
+\index{Node@{Node}!prev@{prev}}
+\index{prev@{prev}!Node@{Node}}
+\subsubsection[{\texorpdfstring{prev}{prev}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Node}$<$T$>$$\ast$ {\bf Node}$<$ T $>$\+::prev\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNode_ac953360c5f7ffae6ad13762189d34d9c}{}\label{classNode_ac953360c5f7ffae6ad13762189d34d9c}
+\index{Node@{Node}!t\+Ptr@{t\+Ptr}}
+\index{t\+Ptr@{t\+Ptr}!Node@{Node}}
+\subsubsection[{\texorpdfstring{t\+Ptr}{tPtr}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T$\ast$ {\bf Node}$<$ T $>$\+::t\+Ptr\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNode_ae6ced078eb7da64ab447676be5f22024}{}\label{classNode_ae6ced078eb7da64ab447676be5f22024}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Node_8h}{Node.\+h}\item 
+\hyperlink{Node_8cpp}{Node.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,88 @@
+\hypertarget{classZuluTimeImp}{}\section{Zulu\+Time\+Imp Class Reference}
+\label{classZuluTimeImp}\index{Zulu\+Time\+Imp@{Zulu\+Time\+Imp}}
+
+
+Inheritance diagram for Zulu\+Time\+Imp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{classZuluTimeImp__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Zulu\+Time\+Imp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{classZuluTimeImp__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classZuluTimeImp_af75d85b608a7d4d783e46d868aee841c}{Zulu\+Time\+Imp} (int hr, int min, int zone)
+\item 
+void \hyperlink{classZuluTimeImp_ac7b726f1341e591e346240327dd8bbd1}{tell} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{classZuluTimeImp_a1fd091e92c79ccf25066c6f016f7892d}{zone\+\_\+} \mbox{[}30\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Zulu\+Time\+Imp@{Zulu\+Time\+Imp}!Zulu\+Time\+Imp@{Zulu\+Time\+Imp}}
+\index{Zulu\+Time\+Imp@{Zulu\+Time\+Imp}!Zulu\+Time\+Imp@{Zulu\+Time\+Imp}}
+\subsubsection[{\texorpdfstring{Zulu\+Time\+Imp(int hr, int min, int zone)}{ZuluTimeImp(int hr, int min, int zone)}}]{\setlength{\rightskip}{0pt plus 5cm}Zulu\+Time\+Imp\+::\+Zulu\+Time\+Imp (
+\begin{DoxyParamCaption}
+\item[{int}]{hr, }
+\item[{int}]{min, }
+\item[{int}]{zone}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classZuluTimeImp_af75d85b608a7d4d783e46d868aee841c}{}\label{classZuluTimeImp_af75d85b608a7d4d783e46d868aee841c}
+
+\begin{DoxyCode}
+37                                           : \hyperlink{classTimeImp_a816d73822130c581b048e223bc0d673f}{TimeImp}(hr, min) \{
+38         \textcolor{keywordflow}{if} (zone == 5)
+39           strcpy(\hyperlink{classZuluTimeImp_a1fd091e92c79ccf25066c6f016f7892d}{zone\_}, \textcolor{stringliteral}{" Eastern Standard Time"});
+40         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (zone == 6)
+41           strcpy(\hyperlink{classZuluTimeImp_a1fd091e92c79ccf25066c6f016f7892d}{zone\_}, \textcolor{stringliteral}{" Central Standard Time"});
+42     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Zulu\+Time\+Imp@{Zulu\+Time\+Imp}!tell@{tell}}
+\index{tell@{tell}!Zulu\+Time\+Imp@{Zulu\+Time\+Imp}}
+\subsubsection[{\texorpdfstring{tell()}{tell()}}]{\setlength{\rightskip}{0pt plus 5cm}void Zulu\+Time\+Imp\+::tell (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classZuluTimeImp_ac7b726f1341e591e346240327dd8bbd1}{}\label{classZuluTimeImp_ac7b726f1341e591e346240327dd8bbd1}
+
+
+Reimplemented from \hyperlink{classTimeImp_a266929eda5b78be282a9872b7785557b}{Time\+Imp}.
+
+
+\begin{DoxyCode}
+45                 \{
+46         cout << \textcolor{stringliteral}{"time is "} << setw(2) << setfill(48) << \hyperlink{classTimeImp_aa4d75bb67cdab3e797171e78996ac551}{hr\_} << \hyperlink{classTimeImp_a72b908ae45367b24517a769ec9bb613f}{min\_} << 
+      \hyperlink{classZuluTimeImp_a1fd091e92c79ccf25066c6f016f7892d}{zone\_} <<
+47           endl;
+48     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Zulu\+Time\+Imp@{Zulu\+Time\+Imp}!zone\+\_\+@{zone\+\_\+}}
+\index{zone\+\_\+@{zone\+\_\+}!Zulu\+Time\+Imp@{Zulu\+Time\+Imp}}
+\subsubsection[{\texorpdfstring{zone\+\_\+}{zone_}}]{\setlength{\rightskip}{0pt plus 5cm}char Zulu\+Time\+Imp\+::zone\+\_\+\mbox{[}30\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classZuluTimeImp_a1fd091e92c79ccf25066c6f016f7892d}{}\label{classZuluTimeImp_a1fd091e92c79ccf25066c6f016f7892d}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{BridgePattern_8cpp}{Bridge\+Pattern.\+cpp}\end{DoxyCompactItemize}

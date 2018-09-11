@@ -1,0 +1,340 @@
+\hypertarget{classContact}{}\section{Contact Class Reference}
+\label{classContact}\index{Contact@{Contact}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classContact_ac7308f96c0405d7ed945c786ad1b7d06}{Contact} (string name1, string name2, string date, string number, string e\+\_\+address, int years)
+\item 
+\hyperlink{classContact_a0cb74650123c8fb2adbaa3b27a8a45bb}{Contact} (string name1, string name2, string date, string number, string e\+\_\+address, string fax\+\_\+num)
+\item 
+\hyperlink{classContact_ae39444f378e6de7fd6c3e60981949af5}{Contact} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classContact_a1a7b491fba3111a679bfae344d75d19d}{display} ()
+\item 
+void \hyperlink{classContact_a1e8e2536913df381990b8ed35d562dd6}{edit} ()
+\item 
+bool \hyperlink{classContact_aeff0842a6152f13203db721cd7c479fd}{match\+Last\+Name} (string name)
+\item 
+bool \hyperlink{classContact_a7d5d537bfe7be46e04b99c433fa00d01}{match} (string Fname, string Lname)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classContact_ac074ba210aa0e4a52921af8353384a59}{first\+\_\+name}
+\item 
+string \hyperlink{classContact_a87032ae00ab0e8cc81d660f191bcf0fa}{last\+\_\+name}
+\item 
+string \hyperlink{classContact_a50397132da5dc66f2cb289fc650c3df6}{dob}
+\item 
+string \hyperlink{classContact_ad23a96ecf0527e8878da50da682ba794}{telephone}
+\item 
+string \hyperlink{classContact_a7cb8a0ab45d0ddc7a83df39590fcb6c1}{email}
+\item 
+string \hyperlink{classContact_a2ff4fdc6afc1afdec2dbfe5cf85f1b92}{fax}
+\item 
+int \hyperlink{classContact_a68735c7a42c6b9b80ff1b084111e6069}{age}
+\item 
+char \hyperlink{classContact_ad76971e3edec9fdbc665d149cfbd9e1a}{type}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classContact_a196c2536dfbd98b40c60736c4ca095d2}{Address\+Book}
+\item 
+bool \hyperlink{classContact_a2f605d15a9e66dc7d58a8370d7a0e6c5}{operator$>$} (\hyperlink{classContact}{Contact} \&a, \hyperlink{classContact}{Contact} \&b)
+\item 
+bool \hyperlink{classContact_a27b54514036a945e7b1e5d70eff7958d}{operator==} (\hyperlink{classContact}{Contact} \&a, \hyperlink{classContact}{Contact} \&b)
+\item 
+istream \& \hyperlink{classContact_a83e899a0c8ec90886f1634d7a14e03e2}{operator$>$$>$} (istream \&ins, \hyperlink{classContact}{Contact} \&c)
+\item 
+ostream \& \hyperlink{classContact_a94e33108c74c0d3b5a4bfd1e1b0ccefa}{operator$<$$<$} (ostream \&outs, const \hyperlink{classContact}{Contact} \&c)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Contact@{Contact}!Contact@{Contact}}
+\index{Contact@{Contact}!Contact@{Contact}}
+\subsubsection[{\texorpdfstring{Contact(string name1, string name2, string date, string number, string e\+\_\+address, int years)}{Contact(string name1, string name2, string date, string number, string e_address, int years)}}]{\setlength{\rightskip}{0pt plus 5cm}Contact\+::\+Contact (
+\begin{DoxyParamCaption}
+\item[{string}]{name1, }
+\item[{string}]{name2, }
+\item[{string}]{date, }
+\item[{string}]{number, }
+\item[{string}]{e\+\_\+address, }
+\item[{int}]{years}
+\end{DoxyParamCaption}
+)}\hypertarget{classContact_ac7308f96c0405d7ed945c786ad1b7d06}{}\label{classContact_ac7308f96c0405d7ed945c786ad1b7d06}
+
+\begin{DoxyCode}
+145 \{
+146    \hyperlink{classContact_ac074ba210aa0e4a52921af8353384a59}{first\_name} = name1;
+147    \hyperlink{classContact_a87032ae00ab0e8cc81d660f191bcf0fa}{last\_name} = name2;
+148    \hyperlink{classContact_a50397132da5dc66f2cb289fc650c3df6}{dob} = date;
+149    \hyperlink{classContact_ad23a96ecf0527e8878da50da682ba794}{telephone} = number;
+150    \hyperlink{classContact_a7cb8a0ab45d0ddc7a83df39590fcb6c1}{email} = e\_address;
+151    \hyperlink{classContact_a68735c7a42c6b9b80ff1b084111e6069}{age} = years;
+152    \hyperlink{classContact_a2ff4fdc6afc1afdec2dbfe5cf85f1b92}{fax} = \textcolor{stringliteral}{"---"};
+153    \hyperlink{classContact_ad76971e3edec9fdbc665d149cfbd9e1a}{type} = \textcolor{charliteral}{'p'};
+154 \}
+\end{DoxyCode}
+\index{Contact@{Contact}!Contact@{Contact}}
+\index{Contact@{Contact}!Contact@{Contact}}
+\subsubsection[{\texorpdfstring{Contact(string name1, string name2, string date, string number, string e\+\_\+address, string fax\+\_\+num)}{Contact(string name1, string name2, string date, string number, string e_address, string fax_num)}}]{\setlength{\rightskip}{0pt plus 5cm}Contact\+::\+Contact (
+\begin{DoxyParamCaption}
+\item[{string}]{name1, }
+\item[{string}]{name2, }
+\item[{string}]{date, }
+\item[{string}]{number, }
+\item[{string}]{e\+\_\+address, }
+\item[{string}]{fax\+\_\+num}
+\end{DoxyParamCaption}
+)}\hypertarget{classContact_a0cb74650123c8fb2adbaa3b27a8a45bb}{}\label{classContact_a0cb74650123c8fb2adbaa3b27a8a45bb}
+
+\begin{DoxyCode}
+157 \{
+158    \hyperlink{classContact_ac074ba210aa0e4a52921af8353384a59}{first\_name} = name1;
+159    \hyperlink{classContact_a87032ae00ab0e8cc81d660f191bcf0fa}{last\_name} = name2;
+160    \hyperlink{classContact_a50397132da5dc66f2cb289fc650c3df6}{dob} = date;
+161    \hyperlink{classContact_ad23a96ecf0527e8878da50da682ba794}{telephone} = number;
+162    \hyperlink{classContact_a7cb8a0ab45d0ddc7a83df39590fcb6c1}{email} = e\_address;
+163    \hyperlink{classContact_a2ff4fdc6afc1afdec2dbfe5cf85f1b92}{fax} = fax\_num;
+164    \hyperlink{classContact_a68735c7a42c6b9b80ff1b084111e6069}{age} = -1;
+165    \hyperlink{classContact_ad76971e3edec9fdbc665d149cfbd9e1a}{type} = \textcolor{charliteral}{'b'};
+166 \}
+\end{DoxyCode}
+\index{Contact@{Contact}!Contact@{Contact}}
+\index{Contact@{Contact}!Contact@{Contact}}
+\subsubsection[{\texorpdfstring{Contact()}{Contact()}}]{\setlength{\rightskip}{0pt plus 5cm}Contact\+::\+Contact (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classContact_ae39444f378e6de7fd6c3e60981949af5}{}\label{classContact_ae39444f378e6de7fd6c3e60981949af5}
+
+\begin{DoxyCode}
+53 \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Contact@{Contact}!display@{display}}
+\index{display@{display}!Contact@{Contact}}
+\subsubsection[{\texorpdfstring{display()}{display()}}]{\setlength{\rightskip}{0pt plus 5cm}void Contact\+::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classContact_a1a7b491fba3111a679bfae344d75d19d}{}\label{classContact_a1a7b491fba3111a679bfae344d75d19d}
+
+\begin{DoxyCode}
+169 \{
+170    cout << \textcolor{stringliteral}{"First Name:       "} << \hyperlink{classContact_ac074ba210aa0e4a52921af8353384a59}{first\_name} << endl;
+171    cout << \textcolor{stringliteral}{"Last Name:        "} << \hyperlink{classContact_a87032ae00ab0e8cc81d660f191bcf0fa}{last\_name} << endl;
+172    cout << \textcolor{stringliteral}{"Telephone Number: "} << \hyperlink{classContact_ad23a96ecf0527e8878da50da682ba794}{telephone} << endl;
+173    cout << \textcolor{stringliteral}{"Date of Birth:    "} << \hyperlink{classContact_a50397132da5dc66f2cb289fc650c3df6}{dob} << endl;
+174    cout << \textcolor{stringliteral}{"Email Address:    "} << \hyperlink{classContact_a7cb8a0ab45d0ddc7a83df39590fcb6c1}{email} << endl;
+175    \textcolor{keywordflow}{if}(\hyperlink{classContact_ad76971e3edec9fdbc665d149cfbd9e1a}{type} == \textcolor{charliteral}{'b'})
+176       cout << \textcolor{stringliteral}{"Fax Number:       "} << \hyperlink{classContact_a2ff4fdc6afc1afdec2dbfe5cf85f1b92}{fax} << endl;
+177    \textcolor{keywordflow}{else}
+178       cout << \textcolor{stringliteral}{"Age:              "} << \hyperlink{classContact_a68735c7a42c6b9b80ff1b084111e6069}{age} << endl;
+179    cout << \textcolor{stringliteral}{"-----------------------------------------"} << endl;
+180 \}
+\end{DoxyCode}
+\index{Contact@{Contact}!edit@{edit}}
+\index{edit@{edit}!Contact@{Contact}}
+\subsubsection[{\texorpdfstring{edit()}{edit()}}]{\setlength{\rightskip}{0pt plus 5cm}void Contact\+::edit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classContact_a1e8e2536913df381990b8ed35d562dd6}{}\label{classContact_a1e8e2536913df381990b8ed35d562dd6}
+
+\begin{DoxyCode}
+183 \{
+184    \textcolor{keywordtype}{int} choice;
+185    \textcolor{keywordflow}{do}
+186    \{
+187       cout << \textcolor{stringliteral}{"Choose the number of what you would like to edit:\(\backslash\)n"};
+188       cout << \textcolor{stringliteral}{"(1) First name\(\backslash\)n"} << \textcolor{stringliteral}{"(2) Last name\(\backslash\)n"} << \textcolor{stringliteral}{"(3) Phone number\(\backslash\)n"} << \textcolor{stringliteral}{"(4) Date of birth\(\backslash\)n"} << \textcolor{stringliteral}{"
+      (5) Email address\(\backslash\)n"};
+189       \textcolor{keywordflow}{if}(\hyperlink{classContact_ad76971e3edec9fdbc665d149cfbd9e1a}{type} == \textcolor{charliteral}{'b'})
+190          cout << \textcolor{stringliteral}{"(6) Fax Number\(\backslash\)n"} << \textcolor{stringliteral}{"(7) Save and finish\(\backslash\)n"};
+191       \textcolor{keywordflow}{else}
+192          cout << \textcolor{stringliteral}{"(6) Age\(\backslash\)n"} << \textcolor{stringliteral}{"(7) Save and finish\(\backslash\)n"};
+193       cin >> choice;
+194       cout << endl << \textcolor{stringliteral}{"Enter the new "};;
+195       \textcolor{keywordflow}{switch}(choice) \textcolor{comment}{// checks which choice the user entered                                               
+                                                                                                       }
+196       \{
+197         \textcolor{keywordflow}{case} 1:
+198             cout << \textcolor{stringliteral}{"first name: "};
+199             cin >> \hyperlink{classContact_ac074ba210aa0e4a52921af8353384a59}{first\_name};
+200             \textcolor{keywordflow}{break};
+201          \textcolor{keywordflow}{case} 2:
+202             cout << \textcolor{stringliteral}{"last name: "};
+203             cin >> \hyperlink{classContact_a87032ae00ab0e8cc81d660f191bcf0fa}{last\_name};
+204             \textcolor{keywordflow}{break};
+205          \textcolor{keywordflow}{case} 3:
+206             cout << \textcolor{stringliteral}{"phone number: "};
+207             cin >> \hyperlink{classContact_ad23a96ecf0527e8878da50da682ba794}{telephone};
+208             \textcolor{keywordflow}{break};
+209          \textcolor{keywordflow}{case} 4:
+210             cout << \textcolor{stringliteral}{"date of birth: "};
+211             cin >> \hyperlink{classContact_a50397132da5dc66f2cb289fc650c3df6}{dob};
+212             \textcolor{keywordflow}{break};
+213          \textcolor{keywordflow}{case} 5:
+214             cout << \textcolor{stringliteral}{"email address: "};
+215             cin >> \hyperlink{classContact_a7cb8a0ab45d0ddc7a83df39590fcb6c1}{email};
+216             \textcolor{keywordflow}{break};
+217          \textcolor{keywordflow}{case} 6:
+218             \textcolor{keywordflow}{if}(\hyperlink{classContact_ad76971e3edec9fdbc665d149cfbd9e1a}{type} == \textcolor{charliteral}{'b'})
+219             \{
+220                cout << \textcolor{stringliteral}{"fax number: "};
+221                cin >> \hyperlink{classContact_a2ff4fdc6afc1afdec2dbfe5cf85f1b92}{fax};
+222             \}
+223             \textcolor{keywordflow}{else}
+224             \{
+225                cout << \textcolor{stringliteral}{"age: "};
+226                cin >> \hyperlink{classContact_a68735c7a42c6b9b80ff1b084111e6069}{age};
+227             \}
+228             \textcolor{keywordflow}{break};
+229          \textcolor{keywordflow}{case} 7:
+230             \textcolor{keywordflow}{break};
+231          \textcolor{keywordflow}{default}:
+232             cout << \textcolor{stringliteral}{"Not a possible choice."};
+233       \}
+234       cout << endl;
+235    \}\textcolor{keywordflow}{while} (choice != 7);
+236 \}
+\end{DoxyCode}
+\index{Contact@{Contact}!match@{match}}
+\index{match@{match}!Contact@{Contact}}
+\subsubsection[{\texorpdfstring{match(string Fname, string Lname)}{match(string Fname, string Lname)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Contact\+::match (
+\begin{DoxyParamCaption}
+\item[{string}]{Fname, }
+\item[{string}]{Lname}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classContact_a7d5d537bfe7be46e04b99c433fa00d01}{}\label{classContact_a7d5d537bfe7be46e04b99c433fa00d01}
+
+\begin{DoxyCode}
+244 \{
+245    \textcolor{keywordflow}{return} ((\hyperlink{classContact_a87032ae00ab0e8cc81d660f191bcf0fa}{last\_name} == Lname) && (\hyperlink{classContact_ac074ba210aa0e4a52921af8353384a59}{first\_name} == Fname));
+246 \}
+\end{DoxyCode}
+\index{Contact@{Contact}!match\+Last\+Name@{match\+Last\+Name}}
+\index{match\+Last\+Name@{match\+Last\+Name}!Contact@{Contact}}
+\subsubsection[{\texorpdfstring{match\+Last\+Name(string name)}{matchLastName(string name)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Contact\+::match\+Last\+Name (
+\begin{DoxyParamCaption}
+\item[{string}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classContact_aeff0842a6152f13203db721cd7c479fd}{}\label{classContact_aeff0842a6152f13203db721cd7c479fd}
+
+\begin{DoxyCode}
+239 \{
+240    \textcolor{keywordflow}{return} \hyperlink{classContact_a87032ae00ab0e8cc81d660f191bcf0fa}{last\_name} == name;
+241 \}
+\end{DoxyCode}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Contact@{Contact}!Address\+Book@{Address\+Book}}
+\index{Address\+Book@{Address\+Book}!Contact@{Contact}}
+\subsubsection[{\texorpdfstring{Address\+Book}{AddressBook}}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Address\+Book}\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classContact_a196c2536dfbd98b40c60736c4ca095d2}{}\label{classContact_a196c2536dfbd98b40c60736c4ca095d2}
+\index{Contact@{Contact}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Contact@{Contact}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{outs, }
+\item[{const {\bf Contact} \&}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classContact_a94e33108c74c0d3b5a4bfd1e1b0ccefa}{}\label{classContact_a94e33108c74c0d3b5a4bfd1e1b0ccefa}
+
+\begin{DoxyCode}
+265 \{
+266    outs << c.\hyperlink{classContact_ac074ba210aa0e4a52921af8353384a59}{first\_name} << endl;
+267    outs << c.\hyperlink{classContact_a87032ae00ab0e8cc81d660f191bcf0fa}{last\_name} << endl;
+268    outs << c.\hyperlink{classContact_a50397132da5dc66f2cb289fc650c3df6}{dob} << endl;
+269    outs << c.\hyperlink{classContact_ad23a96ecf0527e8878da50da682ba794}{telephone} << endl;
+270    outs << c.\hyperlink{classContact_a7cb8a0ab45d0ddc7a83df39590fcb6c1}{email} << endl;
+271    outs << c.\hyperlink{classContact_a2ff4fdc6afc1afdec2dbfe5cf85f1b92}{fax} << endl;
+272    outs << c.\hyperlink{classContact_a68735c7a42c6b9b80ff1b084111e6069}{age} << endl;
+273    outs << c.\hyperlink{classContact_ad76971e3edec9fdbc665d149cfbd9e1a}{type} << endl;
+274    \textcolor{keywordflow}{return} outs;
+275 \}
+\end{DoxyCode}
+\index{Contact@{Contact}!operator==@{operator==}}
+\index{operator==@{operator==}!Contact@{Contact}}
+\subsubsection[{\texorpdfstring{operator==}{operator==}}]{\setlength{\rightskip}{0pt plus 5cm}bool operator== (
+\begin{DoxyParamCaption}
+\item[{{\bf Contact} \&}]{a, }
+\item[{{\bf Contact} \&}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classContact_a27b54514036a945e7b1e5d70eff7958d}{}\label{classContact_a27b54514036a945e7b1e5d70eff7958d}
+
+\begin{DoxyCode}
+254 \{
+255    \textcolor{keywordflow}{return} a.\hyperlink{classContact_a87032ae00ab0e8cc81d660f191bcf0fa}{last\_name} == b.\hyperlink{classContact_a87032ae00ab0e8cc81d660f191bcf0fa}{last\_name};
+256 \}
+\end{DoxyCode}
+\index{Contact@{Contact}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Contact@{Contact}}
+\subsubsection[{\texorpdfstring{operator$>$}{operator>}}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Contact} \&}]{a, }
+\item[{{\bf Contact} \&}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classContact_a2f605d15a9e66dc7d58a8370d7a0e6c5}{}\label{classContact_a2f605d15a9e66dc7d58a8370d7a0e6c5}
+
+\begin{DoxyCode}
+249 \{
+250    \textcolor{keywordflow}{return} a.\hyperlink{classContact_a87032ae00ab0e8cc81d660f191bcf0fa}{last\_name} > b.\hyperlink{classContact_a87032ae00ab0e8cc81d660f191bcf0fa}{last\_name};
+251 \}
+\end{DoxyCode}
+\index{Contact@{Contact}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Contact@{Contact}}
+\subsubsection[{\texorpdfstring{operator$>$$>$}{operator>>}}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{ins, }
+\item[{{\bf Contact} \&}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classContact_a83e899a0c8ec90886f1634d7a14e03e2}{}\label{classContact_a83e899a0c8ec90886f1634d7a14e03e2}
+
+\begin{DoxyCode}
+259 \{
+260    ins >> c.\hyperlink{classContact_ac074ba210aa0e4a52921af8353384a59}{first\_name} >> c.\hyperlink{classContact_a87032ae00ab0e8cc81d660f191bcf0fa}{last\_name} >> c.\hyperlink{classContact_a50397132da5dc66f2cb289fc650c3df6}{dob} >> c.
+      \hyperlink{classContact_ad23a96ecf0527e8878da50da682ba794}{telephone} >> c.\hyperlink{classContact_a7cb8a0ab45d0ddc7a83df39590fcb6c1}{email} >> c.\hyperlink{classContact_a2ff4fdc6afc1afdec2dbfe5cf85f1b92}{fax} >> c.\hyperlink{classContact_a68735c7a42c6b9b80ff1b084111e6069}{age} >> c.\hyperlink{classContact_ad76971e3edec9fdbc665d149cfbd9e1a}{type};;
+261    \textcolor{keywordflow}{return} ins;
+262 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Contact@{Contact}!age@{age}}
+\index{age@{age}!Contact@{Contact}}
+\subsubsection[{\texorpdfstring{age}{age}}]{\setlength{\rightskip}{0pt plus 5cm}int Contact\+::age\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classContact_a68735c7a42c6b9b80ff1b084111e6069}{}\label{classContact_a68735c7a42c6b9b80ff1b084111e6069}
+\index{Contact@{Contact}!dob@{dob}}
+\index{dob@{dob}!Contact@{Contact}}
+\subsubsection[{\texorpdfstring{dob}{dob}}]{\setlength{\rightskip}{0pt plus 5cm}string Contact\+::dob\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classContact_a50397132da5dc66f2cb289fc650c3df6}{}\label{classContact_a50397132da5dc66f2cb289fc650c3df6}
+\index{Contact@{Contact}!email@{email}}
+\index{email@{email}!Contact@{Contact}}
+\subsubsection[{\texorpdfstring{email}{email}}]{\setlength{\rightskip}{0pt plus 5cm}string Contact\+::email\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classContact_a7cb8a0ab45d0ddc7a83df39590fcb6c1}{}\label{classContact_a7cb8a0ab45d0ddc7a83df39590fcb6c1}
+\index{Contact@{Contact}!fax@{fax}}
+\index{fax@{fax}!Contact@{Contact}}
+\subsubsection[{\texorpdfstring{fax}{fax}}]{\setlength{\rightskip}{0pt plus 5cm}string Contact\+::fax\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classContact_a2ff4fdc6afc1afdec2dbfe5cf85f1b92}{}\label{classContact_a2ff4fdc6afc1afdec2dbfe5cf85f1b92}
+\index{Contact@{Contact}!first\+\_\+name@{first\+\_\+name}}
+\index{first\+\_\+name@{first\+\_\+name}!Contact@{Contact}}
+\subsubsection[{\texorpdfstring{first\+\_\+name}{first_name}}]{\setlength{\rightskip}{0pt plus 5cm}string Contact\+::first\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classContact_ac074ba210aa0e4a52921af8353384a59}{}\label{classContact_ac074ba210aa0e4a52921af8353384a59}
+\index{Contact@{Contact}!last\+\_\+name@{last\+\_\+name}}
+\index{last\+\_\+name@{last\+\_\+name}!Contact@{Contact}}
+\subsubsection[{\texorpdfstring{last\+\_\+name}{last_name}}]{\setlength{\rightskip}{0pt plus 5cm}string Contact\+::last\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classContact_a87032ae00ab0e8cc81d660f191bcf0fa}{}\label{classContact_a87032ae00ab0e8cc81d660f191bcf0fa}
+\index{Contact@{Contact}!telephone@{telephone}}
+\index{telephone@{telephone}!Contact@{Contact}}
+\subsubsection[{\texorpdfstring{telephone}{telephone}}]{\setlength{\rightskip}{0pt plus 5cm}string Contact\+::telephone\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classContact_ad23a96ecf0527e8878da50da682ba794}{}\label{classContact_ad23a96ecf0527e8878da50da682ba794}
+\index{Contact@{Contact}!type@{type}}
+\index{type@{type}!Contact@{Contact}}
+\subsubsection[{\texorpdfstring{type}{type}}]{\setlength{\rightskip}{0pt plus 5cm}char Contact\+::type\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classContact_ad76971e3edec9fdbc665d149cfbd9e1a}{}\label{classContact_ad76971e3edec9fdbc665d149cfbd9e1a}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{AddressBook2_8cpp}{Address\+Book2.\+cpp}\end{DoxyCompactItemize}

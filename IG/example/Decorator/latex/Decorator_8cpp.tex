@@ -1,0 +1,80 @@
+\hypertarget{Decorator_8cpp}{}\section{Decorator.\+cpp File Reference}
+\label{Decorator_8cpp}\index{Decorator.\+cpp@{Decorator.\+cpp}}
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for Decorator.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{Decorator_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCar}{Car}
+\item 
+class \hyperlink{classOptionsDecorator}{Options\+Decorator}
+\item 
+class \hyperlink{classCarModel1}{Car\+Model1}
+\item 
+class \hyperlink{classNavigation}{Navigation}
+\item 
+class \hyperlink{classPremiumSoundSystem}{Premium\+Sound\+System}
+\item 
+class \hyperlink{classManualTransmission}{Manual\+Transmission}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Decorator_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Decorator.\+cpp@{Decorator.\+cpp}!main@{main}}
+\index{main@{main}!Decorator.\+cpp@{Decorator.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Decorator_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Decorator_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+132 \{
+133         \textcolor{comment}{//Create our Car that we want to buy}
+134         \hyperlink{classCar}{Car} *b = \textcolor{keyword}{new} \hyperlink{classCarModel1}{CarModel1}();
+135 
+136         cout << \textcolor{stringliteral}{"Base model of "} << b->\hyperlink{classCar_a0d2f99b108e72e2a44360b38f16bbb46}{getDescription}() << \textcolor{stringliteral}{" costs $"} << b->
+      \hyperlink{classCar_a7498766d25f7d4f15272f8055dd698f4}{getCost}() << \textcolor{stringliteral}{"\(\backslash\)n"};  
+137             
+138         \textcolor{comment}{//Who wants base model let's add some more features}
+139             
+140         b = \textcolor{keyword}{new} \hyperlink{classNavigation}{Navigation}(b);
+141         cout << b->\hyperlink{classCar_a0d2f99b108e72e2a44360b38f16bbb46}{getDescription}() << \textcolor{stringliteral}{" will cost you $"} << b->
+      \hyperlink{classCar_a7498766d25f7d4f15272f8055dd698f4}{getCost}() << \textcolor{stringliteral}{"\(\backslash\)n"};
+142         b = \textcolor{keyword}{new} \hyperlink{classPremiumSoundSystem}{PremiumSoundSystem}(b);
+143         b = \textcolor{keyword}{new} \hyperlink{classManualTransmission}{ManualTransmission}(b);
+144         cout << b->\hyperlink{classCar_a0d2f99b108e72e2a44360b38f16bbb46}{getDescription}() << \textcolor{stringliteral}{" will cost you $"} << b->
+      \hyperlink{classCar_a7498766d25f7d4f15272f8055dd698f4}{getCost}() << \textcolor{stringliteral}{"\(\backslash\)n"};
+145 
+146         \textcolor{comment}{// WARNING! Here we leak the CarModel1, Navigation and PremiumSoundSystem objects!}
+147         \textcolor{comment}{// Either we delete them explicitly or rewrite the Decorators to take }
+148         \textcolor{comment}{// ownership and delete their Cars when destroyed.}
+149         \textcolor{keyword}{delete} b;
+150 
+151         \textcolor{keywordflow}{return} 0;
+152 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{Decorator_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

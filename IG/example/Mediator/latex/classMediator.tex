@@ -1,0 +1,56 @@
+\hypertarget{classMediator}{}\section{Mediator Class Reference}
+\label{classMediator}\index{Mediator@{Mediator}}
+
+
+Inheritance diagram for Mediator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classMediator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Mediator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classMediator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classMediator_a6dafbc84aae81e04af696169924b04fc}{distribute\+Message} (const \hyperlink{classColleagueInterface}{Colleague\+Interface} $\ast$, const std\+::string \&) const override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{Mediator@{Mediator}!distribute\+Message@{distribute\+Message}}
+\index{distribute\+Message@{distribute\+Message}!Mediator@{Mediator}}
+\subsubsection[{\texorpdfstring{distribute\+Message(const Colleague\+Interface $\ast$, const std\+::string \&) const override}{distributeMessage(const ColleagueInterface *, const std::string &) const override}}]{\setlength{\rightskip}{0pt plus 5cm}void Mediator\+::distribute\+Message (
+\begin{DoxyParamCaption}
+\item[{const {\bf Colleague\+Interface} $\ast$}]{sender, }
+\item[{const std\+::string \&}]{message}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}\hypertarget{classMediator_a6dafbc84aae81e04af696169924b04fc}{}\label{classMediator_a6dafbc84aae81e04af696169924b04fc}
+
+
+Implements \hyperlink{classMediatorInterface_a6445b79436acab5998b8a957648fadb1}{Mediator\+Interface}.
+
+
+\begin{DoxyCode}
+45                                                                                                   \{
+46     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \hyperlink{classColleagueInterface}{ColleagueInterface}* x : \hyperlink{classMediatorInterface_ac7329ec51656cb23b2c41ada567570fc}{getColleagueList}())
+47         \textcolor{keywordflow}{if} (x != sender)  \textcolor{comment}{// Do not send the message back to the sender}
+48             x->receiveMessage (sender, message);
+49 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Mediator_8cpp}{Mediator.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,2905 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.38.0 (20140413.2041)
+%%Title: /home/labaccount/11-2-17/mlsa/IG/example/AlgExp Call Graph
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 150 150 2400 2749
+%%PageOrientation: Portrait
+<< /PageSize [2400 2749] >> setpagedevice
+0 0 1 beginpage
+gsave
+150 150 2250 2599 boxprim clip newpath
+0.798872 0.798872 set_scale 0 rotate 191.765 191.765 translate
+[ /CropBox [150 150 2400 2749] /PAGES pdfmark
+0 0 0 graphcolor
+14 /Times-Roman set_font
+1228.24 7.8 moveto 352 (/home/labaccount/11-2-17/mlsa/IG/example/AlgExp Call Graph) alignedtext
+% Node0x806372469
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+245.03 1004.51 245.06 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+64.53 1000.81 moveto 361 (/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AEmain.cpp) alignedtext
+grestore
+% Node0x765321720
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+894.46 2642.51 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+642.96 2646.31 moveto 503 (0x2103f38. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+815.96 2631.31 moveto 157 (AlgebraicExpression::valid\(\)) alignedtext
+grestore
+% Node0x806372469->Node0x765321720
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 253.19 1022.62 moveto
+317.16 1184.47 790.24 2381.36 879.1 2606.17 curveto
+stroke
+0 0 0 edgecolor
+newpath 875.87 2607.53 moveto
+882.8 2615.54 lineto
+882.38 2604.96 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 875.87 2607.53 moveto
+882.8 2615.54 lineto
+882.38 2604.96 lineto
+closepath stroke
+grestore
+% Node0x889359735
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+894.46 1454.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+641.96 1458.31 moveto 505 (0x2104d28. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+793.46 1443.31 moveto 202 (AlgebraicExpression::evaluateInfix\(\)) alignedtext
+grestore
+% Node0x806372469->Node0x889359735
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 271.81 1022.43 moveto
+369.63 1090.42 718.79 1333.1 846.36 1421.77 curveto
+stroke
+0 0 0 edgecolor
+newpath 844.58 1424.8 moveto
+854.79 1427.63 lineto
+848.58 1419.05 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 844.58 1424.8 moveto
+854.79 1427.63 lineto
+848.58 1419.05 lineto
+closepath stroke
+grestore
+% Node0x507797657
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+894.46 518.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+641.96 522.31 moveto 505 (0x2104dc8. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+787.46 507.31 moveto 214 (AlgebraicExpression::evaluatePostfix\(\)) alignedtext
+grestore
+% Node0x806372469->Node0x507797657
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 270.23 986.34 moveto
+366.61 913.99 724.01 645.71 849.53 551.48 curveto
+stroke
+0 0 0 edgecolor
+newpath 851.91 554.07 moveto
+857.81 545.27 lineto
+847.71 548.47 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 851.91 554.07 moveto
+857.81 545.27 lineto
+847.71 548.47 lineto
+closepath stroke
+grestore
+% Node0x112115289
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+894.46 446.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+641.96 450.31 moveto 505 (0x2104e90. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+803.96 435.31 moveto 181 (AlgebraicExpression::getResult\(\)) alignedtext
+grestore
+% Node0x806372469->Node0x112115289
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 249.43 986.29 moveto
+264.85 909.38 335.88 609.3 526.06 482.51 curveto
+537 475.21 548.55 468.86 560.53 463.33 curveto
+stroke
+0 0 0 edgecolor
+newpath 562.04 466.5 moveto
+569.78 459.27 lineto
+559.22 460.09 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 562.04 466.5 moveto
+569.78 459.27 lineto
+559.22 460.09 lineto
+closepath stroke
+grestore
+% Node0x302634744
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 3218.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 3222.31 moveto 505 (0x3b13de0. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1570.76 3207.31 moveto 193 (std::__cxx11::basic_string::length\(\)) alignedtext
+grestore
+% Node0x765321720->Node0x302634744
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 906.06 2669.48 moveto
+943.5 2760.66 1079.2 3058.64 1298.86 3182.51 curveto
+1311.68 3189.73 1325.15 3195.95 1339.05 3201.29 curveto
+stroke
+0 0 0 edgecolor
+newpath 1338.15 3204.69 moveto
+1348.74 3204.84 lineto
+1340.56 3198.11 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1338.15 3204.69 moveto
+1348.74 3204.84 lineto
+1340.56 3198.11 lineto
+closepath stroke
+grestore
+% Node0x327125666
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 3146.51 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1415.76 3150.31 moveto 503 (0x3b13fd8. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1570.76 3135.31 moveto 193 (std::__cxx11::basic_string::length\(\)) alignedtext
+grestore
+% Node0x765321720->Node0x327125666
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 908.92 2669.36 moveto
+952.14 2752.37 1096.52 3005.54 1298.86 3110.51 curveto
+1313 3117.84 1327.85 3124.09 1343.14 3129.39 curveto
+stroke
+0 0 0 edgecolor
+newpath 1342.13 3132.74 moveto
+1352.72 3132.58 lineto
+1344.33 3126.1 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1342.13 3132.74 moveto
+1352.72 3132.58 lineto
+1344.33 3126.1 lineto
+closepath stroke
+grestore
+% Node0x682195693
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 3074.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 3078.31 moveto 505 (0x3b14200. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1640.26 3063.31 moveto 54 (OBJ.at\(k\)) alignedtext
+grestore
+% Node0x765321720->Node0x682195693
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 912.82 2669.41 moveto
+962.47 2743.7 1113.46 2951.93 1298.86 3038.51 curveto
+1314.27 3045.71 1330.44 3051.8 1347.04 3056.94 curveto
+stroke
+0 0 0 edgecolor
+newpath 1346.27 3060.36 moveto
+1356.86 3059.85 lineto
+1348.27 3053.65 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1346.27 3060.36 moveto
+1356.86 3059.85 lineto
+1348.27 3053.65 lineto
+closepath stroke
+grestore
+% Node0x339735605
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 3002.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 3006.31 moveto 505 (0x3b14548. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1632.76 2991.31 moveto 69 (OBJ.push\(c\)) alignedtext
+grestore
+% Node0x765321720->Node0x339735605
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 918.46 2669.57 moveto
+975.29 2734.27 1130.01 2897.66 1298.86 2966.51 curveto
+1316.42 2973.67 1334.83 2979.66 1353.66 2984.64 curveto
+stroke
+0 0 0 edgecolor
+newpath 1352.99 2988.08 moveto
+1363.55 2987.16 lineto
+1354.72 2981.3 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1352.99 2988.08 moveto
+1363.55 2987.16 lineto
+1354.72 2981.3 lineto
+closepath stroke
+grestore
+% Node0x860023551
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 2930.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 2934.31 moveto 505 (0x3b146a0. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1625.76 2919.31 moveto 83 (OBJ.isEmpty\(\)) alignedtext
+grestore
+% Node0x765321720->Node0x860023551
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 926.79 2669.36 moveto
+991.36 2722.96 1146.03 2842.5 1298.86 2894.51 curveto
+1319.61 2901.57 1341.36 2907.38 1363.49 2912.16 curveto
+stroke
+0 0 0 edgecolor
+newpath 1362.83 2915.6 moveto
+1373.34 2914.22 lineto
+1364.26 2908.75 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1362.83 2915.6 moveto
+1373.34 2914.22 lineto
+1364.26 2908.75 lineto
+closepath stroke
+grestore
+% Node0x511703123
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 2858.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 2862.31 moveto 505 (0x3b14748. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1638.26 2847.31 moveto 58 (OBJ.pop\(\)) alignedtext
+grestore
+% Node0x765321720->Node0x511703123
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 942.06 2669.31 moveto
+1015.35 2710.05 1163.19 2786.61 1298.86 2822.51 curveto
+1324.38 2829.26 1351.2 2834.77 1378.24 2839.27 curveto
+stroke
+0 0 0 edgecolor
+newpath 1377.78 2842.74 moveto
+1388.21 2840.88 lineto
+1378.9 2835.83 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1377.78 2842.74 moveto
+1388.21 2840.88 lineto
+1378.9 2835.83 lineto
+closepath stroke
+grestore
+% Node0x515670230
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 2786.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 2790.31 moveto 505 (0x3b14be8. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1632.76 2775.31 moveto 69 (OBJ.push\(c\)) alignedtext
+grestore
+% Node0x765321720->Node0x515670230
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 977.61 2668.76 moveto
+1058.5 2693.58 1185.97 2730.01 1298.86 2750.51 curveto
+1332.01 2756.53 1367.03 2761.59 1401.76 2765.84 curveto
+stroke
+0 0 0 edgecolor
+newpath 1401.69 2769.36 moveto
+1412.04 2767.08 lineto
+1402.52 2762.41 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1401.69 2769.36 moveto
+1412.04 2767.08 lineto
+1402.52 2762.41 lineto
+closepath stroke
+grestore
+% Node0x455090974
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 2714.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 2718.31 moveto 505 (0x3b14dc8. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1625.76 2703.31 moveto 83 (OBJ.isEmpty\(\)) alignedtext
+grestore
+% Node0x765321720->Node0x455090974
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1121.52 2663.62 moveto
+1218.47 2672.68 1331.75 2683.26 1429.83 2692.42 curveto
+stroke
+0 0 0 edgecolor
+newpath 1429.59 2695.92 moveto
+1439.88 2693.36 lineto
+1430.25 2688.95 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1429.59 2695.92 moveto
+1439.88 2693.36 lineto
+1430.25 2688.95 lineto
+closepath stroke
+grestore
+% Node0x561042830
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 2642.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 2646.31 moveto 505 (0x3b14e70. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1638.26 2631.31 moveto 58 (OBJ.pop\(\)) alignedtext
+grestore
+% Node0x765321720->Node0x561042830
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1261.67 2642.51 moveto
+1270.63 2642.51 1279.61 2642.51 1288.58 2642.51 curveto
+stroke
+0 0 0 edgecolor
+newpath 1288.7 2646.01 moveto
+1298.7 2642.51 lineto
+1288.7 2639.01 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1288.7 2646.01 moveto
+1298.7 2642.51 lineto
+1288.7 2639.01 lineto
+closepath stroke
+grestore
+% Node0x705448917
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 2570.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 2574.31 moveto 505 (0x3b15070. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1625.76 2559.31 moveto 83 (OBJ.isEmpty\(\)) alignedtext
+grestore
+% Node0x765321720->Node0x705448917
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1121.52 2621.39 moveto
+1218.47 2612.34 1331.75 2601.75 1429.83 2592.59 curveto
+stroke
+0 0 0 edgecolor
+newpath 1430.25 2596.07 moveto
+1439.88 2591.66 lineto
+1429.59 2589.1 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1430.25 2596.07 moveto
+1439.88 2591.66 lineto
+1429.59 2589.1 lineto
+closepath stroke
+grestore
+% Node0x231362365
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 2498.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 2502.31 moveto 505 (0x3b151b0. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1625.76 2487.31 moveto 83 (OBJ.isEmpty\(\)) alignedtext
+grestore
+% Node0x765321720->Node0x231362365
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 977.61 2616.26 moveto
+1058.5 2591.43 1185.97 2555.01 1298.86 2534.51 curveto
+1332.01 2528.49 1367.03 2523.42 1401.76 2519.18 curveto
+stroke
+0 0 0 edgecolor
+newpath 1402.52 2522.61 moveto
+1412.04 2517.94 lineto
+1401.69 2515.66 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1402.52 2522.61 moveto
+1412.04 2517.94 lineto
+1401.69 2515.66 lineto
+closepath stroke
+grestore
+% Node0x267836390
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 2426.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 2430.31 moveto 505 (0x3b15430. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1640.26 2415.31 moveto 54 (OBJ.at\(0\)) alignedtext
+grestore
+% Node0x765321720->Node0x267836390
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 942.06 2615.7 moveto
+1015.35 2574.96 1163.19 2498.41 1298.86 2462.51 curveto
+1324.38 2455.76 1351.2 2450.24 1378.24 2445.75 curveto
+stroke
+0 0 0 edgecolor
+newpath 1378.9 2449.19 moveto
+1388.21 2444.14 lineto
+1377.78 2442.28 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1378.9 2449.19 moveto
+1388.21 2444.14 lineto
+1377.78 2442.28 lineto
+closepath stroke
+grestore
+% Node0x747168269
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 2354.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 2358.31 moveto 505 (0x3b159b8. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1570.76 2343.31 moveto 193 (std::__cxx11::basic_string::length\(\)) alignedtext
+grestore
+% Node0x765321720->Node0x747168269
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 926.79 2615.65 moveto
+991.36 2562.06 1146.03 2442.52 1298.86 2390.51 curveto
+1319.61 2383.45 1341.36 2377.63 1363.49 2372.85 curveto
+stroke
+0 0 0 edgecolor
+newpath 1364.26 2376.27 moveto
+1373.34 2370.8 lineto
+1362.83 2369.42 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1364.26 2376.27 moveto
+1373.34 2370.8 lineto
+1362.83 2369.42 lineto
+closepath stroke
+grestore
+% Node0x506715266
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 2282.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 2286.31 moveto 505 (0x3b15bb0. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1570.76 2271.31 moveto 193 (std::__cxx11::basic_string::length\(\)) alignedtext
+grestore
+% Node0x765321720->Node0x506715266
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 918.46 2615.45 moveto
+975.29 2550.75 1130.01 2387.36 1298.86 2318.51 curveto
+1316.42 2311.35 1334.83 2305.36 1353.66 2300.37 curveto
+stroke
+0 0 0 edgecolor
+newpath 1354.72 2303.72 moveto
+1363.55 2297.86 lineto
+1352.99 2296.93 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1354.72 2303.72 moveto
+1363.55 2297.86 lineto
+1352.99 2296.93 lineto
+closepath stroke
+grestore
+% Node0x672551033
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 2210.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 2214.31 moveto 505 (0x3b15e38. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1640.26 2199.31 moveto 54 (OBJ.at\(k\)) alignedtext
+grestore
+% Node0x765321720->Node0x672551033
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 912.82 2615.61 moveto
+962.47 2541.32 1113.46 2333.09 1298.86 2246.51 curveto
+1314.27 2239.31 1330.44 2233.22 1347.04 2228.08 curveto
+stroke
+0 0 0 edgecolor
+newpath 1348.27 2231.37 moveto
+1356.86 2225.16 lineto
+1346.27 2224.66 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1348.27 2231.37 moveto
+1356.86 2225.16 lineto
+1346.27 2224.66 lineto
+closepath stroke
+grestore
+% Node0x304459637
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 2138.51 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1415.76 2142.31 moveto 503 (0x3b161f0. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1623.26 2127.31 moveto 88 (OBJ.at\(BINOP\)) alignedtext
+grestore
+% Node0x765321720->Node0x304459637
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 908.92 2615.65 moveto
+952.14 2532.65 1096.52 2279.47 1298.86 2174.51 curveto
+1313 2167.18 1327.85 2160.93 1343.14 2155.62 curveto
+stroke
+0 0 0 edgecolor
+newpath 1344.33 2158.92 moveto
+1352.72 2152.44 lineto
+1342.13 2152.27 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1344.33 2158.92 moveto
+1352.72 2152.44 lineto
+1342.13 2152.27 lineto
+closepath stroke
+grestore
+% Node0x831769378
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 2066.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 2070.31 moveto 505 (0x3b07bb0. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1588.76 2055.31 moveto 157 (AlgebraicExpression::valid\(\)) alignedtext
+grestore
+% Node0x889359735->Node0x831769378
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 904.89 1481.56 moveto
+939.61 1576.66 1070.38 1897.02 1298.86 2030.51 curveto
+1311.34 2037.8 1324.47 2044.08 1338.04 2049.48 curveto
+stroke
+0 0 0 edgecolor
+newpath 1336.91 2052.8 moveto
+1347.5 2053.08 lineto
+1339.4 2046.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1336.91 2052.8 moveto
+1347.5 2053.08 lineto
+1339.4 2046.26 lineto
+closepath stroke
+grestore
+% Node0x352317128
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 1994.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 1998.31 moveto 505 (0x3b07d30. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1570.76 1983.31 moveto 193 (std::__cxx11::basic_string::length\(\)) alignedtext
+grestore
+% Node0x889359735->Node0x352317128
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 907.44 1481.53 moveto
+947.78 1568.81 1088.01 1844.21 1298.86 1958.51 curveto
+1312.27 1965.77 1326.35 1972 1340.88 1977.32 curveto
+stroke
+0 0 0 edgecolor
+newpath 1339.89 1980.68 moveto
+1350.48 1980.68 lineto
+1342.2 1974.07 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1339.89 1980.68 moveto
+1350.48 1980.68 lineto
+1342.2 1974.07 lineto
+closepath stroke
+grestore
+% Node0x931025701
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 1922.51 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1415.76 1926.31 moveto 503 (0x3b07f58. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1640.26 1911.31 moveto 54 (OBJ.at\(k\)) alignedtext
+grestore
+% Node0x889359735->Node0x931025701
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 910.8 1481.53 moveto
+957.26 1560.43 1105.18 1790.88 1298.86 1886.51 curveto
+1313.61 1893.79 1329.1 1899.98 1345.03 1905.21 curveto
+stroke
+0 0 0 edgecolor
+newpath 1344.41 1908.69 moveto
+1355 1908.35 lineto
+1346.52 1902.01 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1344.41 1908.69 moveto
+1355 1908.35 lineto
+1346.52 1902.01 lineto
+closepath stroke
+grestore
+% Node0x781127746
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 1850.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 1854.31 moveto 505 (0x3b08518. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1632.76 1839.31 moveto 69 (OBJ.push\(c\)) alignedtext
+grestore
+% Node0x889359735->Node0x781127746
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 915.35 1481.46 moveto
+968.47 1551.07 1121.76 1736.87 1298.86 1814.51 curveto
+1315.33 1821.73 1332.6 1827.8 1350.3 1832.88 curveto
+stroke
+0 0 0 edgecolor
+newpath 1349.6 1836.32 moveto
+1360.18 1835.61 lineto
+1351.47 1829.57 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1349.6 1836.32 moveto
+1360.18 1835.61 lineto
+1351.47 1829.57 lineto
+closepath stroke
+grestore
+% Node0x306085672
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 1778.51 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1415.76 1782.31 moveto 503 (0x3b086f0. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1639.76 1767.31 moveto 55 (OBJ.top\(\)) alignedtext
+grestore
+% Node0x889359735->Node0x306085672
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 922.25 1481.59 moveto
+982.92 1540.99 1138.12 1682.22 1298.86 1742.51 curveto
+1318.03 1749.7 1338.13 1755.65 1358.64 1760.57 curveto
+stroke
+0 0 0 edgecolor
+newpath 1357.88 1763.99 moveto
+1368.41 1762.83 lineto
+1359.46 1757.17 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1357.88 1763.99 moveto
+1368.41 1762.83 lineto
+1359.46 1757.17 lineto
+closepath stroke
+grestore
+% Node0x105057380
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 1706.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 1710.31 moveto 505 (0x3b089b8. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1639.76 1695.31 moveto 55 (OBJ.top\(\)) alignedtext
+grestore
+% Node0x889359735->Node0x105057380
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 933 1481.25 moveto
+1001.77 1528.67 1154.23 1626.62 1298.86 1670.51 curveto
+1321.77 1677.46 1345.82 1683.15 1370.18 1687.8 curveto
+stroke
+0 0 0 edgecolor
+newpath 1369.79 1691.29 moveto
+1380.26 1689.66 lineto
+1371.07 1684.4 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1369.79 1691.29 moveto
+1380.26 1689.66 lineto
+1371.07 1684.4 lineto
+closepath stroke
+grestore
+% Node0x830202267
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 1634.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 1638.31 moveto 505 (0x3b08e38. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1625.76 1623.31 moveto 83 (OBJ.isEmpty\(\)) alignedtext
+grestore
+% Node0x889359735->Node0x830202267
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 955.25 1481.1 moveto
+1032.83 1514.36 1173.14 1570.36 1298.86 1598.51 curveto
+1327.66 1604.96 1357.98 1610.25 1388.35 1614.59 curveto
+stroke
+0 0 0 edgecolor
+newpath 1388.26 1618.12 moveto
+1398.65 1616.03 lineto
+1389.23 1611.18 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1388.26 1618.12 moveto
+1398.65 1616.03 lineto
+1389.23 1611.18 lineto
+closepath stroke
+grestore
+% Node0x189880662
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 1562.51 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1415.76 1566.31 moveto 503 (0x3b08f30. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1635.76 1551.31 moveto 63 (OBJ.peek\(\)) alignedtext
+grestore
+% Node0x889359735->Node0x189880662
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1022.23 1479.78 moveto
+1101.49 1494.93 1205.84 1513.67 1298.86 1526.51 curveto
+1337.49 1531.84 1378.51 1536.67 1418.6 1540.94 curveto
+stroke
+0 0 0 edgecolor
+newpath 1418.46 1544.44 moveto
+1428.78 1542.01 lineto
+1419.2 1537.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1418.46 1544.44 moveto
+1428.78 1542.01 lineto
+1419.2 1537.48 lineto
+closepath stroke
+grestore
+% Node0x378939649
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 1490.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 1494.31 moveto 505 (0x3b09008. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1625.76 1479.31 moveto 83 (OBJ.isEmpty\(\)) alignedtext
+grestore
+% Node0x889359735->Node0x378939649
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1205.09 1468.97 moveto
+1251.59 1471.14 1299.63 1473.39 1346.34 1475.57 curveto
+stroke
+0 0 0 edgecolor
+newpath 1346.45 1479.08 moveto
+1356.6 1476.05 lineto
+1346.78 1472.08 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1346.45 1479.08 moveto
+1356.6 1476.05 lineto
+1346.78 1472.08 lineto
+closepath stroke
+grestore
+% Node0x224518034
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 1418.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 1422.31 moveto 505 (0x3b091c8. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1558.26 1407.31 moveto 218 (AlgebraicExpression::precedence\(op, c\)) alignedtext
+grestore
+% Node0x889359735->Node0x224518034
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1205.09 1440.05 moveto
+1251.59 1437.88 1299.63 1435.63 1346.34 1433.45 curveto
+stroke
+0 0 0 edgecolor
+newpath 1346.78 1436.93 moveto
+1356.6 1432.97 lineto
+1346.45 1429.94 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1346.78 1436.93 moveto
+1356.6 1432.97 lineto
+1346.45 1429.94 lineto
+closepath stroke
+grestore
+% Node0x955106840
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 1346.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 1350.31 moveto 505 (0x3b09330. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1639.76 1335.31 moveto 55 (OBJ.top\(\)) alignedtext
+grestore
+% Node0x889359735->Node0x955106840
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1022.23 1429.23 moveto
+1101.49 1414.09 1205.84 1395.35 1298.86 1382.51 curveto
+1337.49 1377.18 1378.51 1372.35 1418.6 1368.08 curveto
+stroke
+0 0 0 edgecolor
+newpath 1419.2 1371.54 moveto
+1428.78 1367.01 lineto
+1418.46 1364.58 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1419.2 1371.54 moveto
+1428.78 1367.01 lineto
+1418.46 1364.58 lineto
+closepath stroke
+grestore
+% Node0x310026454
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 1274.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 1278.31 moveto 505 (0x3b09468. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1625.76 1263.31 moveto 83 (OBJ.isEmpty\(\)) alignedtext
+grestore
+% Node0x889359735->Node0x310026454
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 955.25 1427.92 moveto
+1032.83 1394.66 1173.14 1338.66 1298.86 1310.51 curveto
+1327.66 1304.06 1357.98 1298.77 1388.35 1294.42 curveto
+stroke
+0 0 0 edgecolor
+newpath 1389.23 1297.83 moveto
+1398.65 1292.99 lineto
+1388.26 1290.9 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1389.23 1297.83 moveto
+1398.65 1292.99 lineto
+1388.26 1290.9 lineto
+closepath stroke
+grestore
+% Node0x870760895
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 1202.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 1206.31 moveto 505 (0x3b09560. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1635.76 1191.31 moveto 63 (OBJ.peek\(\)) alignedtext
+grestore
+% Node0x889359735->Node0x870760895
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 933 1427.77 moveto
+1001.77 1380.35 1154.23 1282.4 1298.86 1238.51 curveto
+1321.77 1231.56 1345.82 1225.87 1370.18 1221.22 curveto
+stroke
+0 0 0 edgecolor
+newpath 1371.07 1224.61 moveto
+1380.26 1219.36 lineto
+1369.79 1217.73 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1371.07 1224.61 moveto
+1380.26 1219.36 lineto
+1369.79 1217.73 lineto
+closepath stroke
+grestore
+% Node0x461975217
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 1130.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 1134.31 moveto 505 (0x3b09730. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1632.76 1119.31 moveto 69 (OBJ.push\(c\)) alignedtext
+grestore
+% Node0x889359735->Node0x461975217
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 922.25 1427.43 moveto
+982.92 1368.02 1138.12 1226.8 1298.86 1166.51 curveto
+1317.81 1159.4 1337.68 1153.5 1357.95 1148.61 curveto
+stroke
+0 0 0 edgecolor
+newpath 1358.98 1151.97 moveto
+1367.93 1146.29 lineto
+1357.4 1145.15 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1358.98 1151.97 moveto
+1367.93 1146.29 lineto
+1357.4 1145.15 lineto
+closepath stroke
+grestore
+% Node0x669501890
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 1058.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 1062.31 moveto 505 (0x3b09950. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1625.76 1047.31 moveto 83 (OBJ.isEmpty\(\)) alignedtext
+grestore
+% Node0x889359735->Node0x669501890
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 915.35 1427.56 moveto
+968.47 1357.94 1121.76 1172.14 1298.86 1094.51 curveto
+1315.33 1087.29 1332.6 1081.22 1350.3 1076.14 curveto
+stroke
+0 0 0 edgecolor
+newpath 1351.47 1079.45 moveto
+1360.18 1073.41 lineto
+1349.6 1072.7 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1351.47 1079.45 moveto
+1360.18 1073.41 lineto
+1349.6 1072.7 lineto
+closepath stroke
+grestore
+% Node0x558980505
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 986.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 990.31 moveto 505 (0x3b09a48. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1639.76 975.31 moveto 55 (OBJ.top\(\)) alignedtext
+grestore
+% Node0x889359735->Node0x558980505
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 910.8 1427.48 moveto
+957.26 1348.59 1105.18 1118.14 1298.86 1022.51 curveto
+1313.5 1015.28 1328.85 1009.14 1344.65 1003.93 curveto
+stroke
+0 0 0 edgecolor
+newpath 1346.05 1007.16 moveto
+1354.53 1000.81 lineto
+1343.94 1000.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1346.05 1007.16 moveto
+1354.53 1000.81 lineto
+1343.94 1000.48 lineto
+closepath stroke
+grestore
+% Node0x106246013
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 914.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 918.31 moveto 505 (0x3b12530. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1648.76 903.31 moveto 37 (exit\(1\)) alignedtext
+grestore
+% Node0x889359735->Node0x106246013
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 907.44 1427.49 moveto
+947.78 1340.2 1088.01 1064.81 1298.86 950.51 curveto
+1312.27 943.24 1326.35 937.02 1340.88 931.7 curveto
+stroke
+0 0 0 edgecolor
+newpath 1342.2 934.94 moveto
+1350.48 928.33 lineto
+1339.89 928.34 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1342.2 934.94 moveto
+1350.48 928.33 lineto
+1339.89 928.34 lineto
+closepath stroke
+grestore
+% Node0x311947942
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 842.51 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1416.26 846.31 moveto 502 (0x3af8e80. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1588.76 831.31 moveto 157 (AlgebraicExpression::valid\(\)) alignedtext
+grestore
+% Node0x507797657->Node0x311947942
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 922.25 545.59 moveto
+982.92 604.99 1138.12 746.22 1298.86 806.51 curveto
+1318.03 813.7 1338.13 819.65 1358.64 824.57 curveto
+stroke
+0 0 0 edgecolor
+newpath 1357.88 827.99 moveto
+1368.41 826.83 lineto
+1359.46 821.17 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1357.88 827.99 moveto
+1368.41 826.83 lineto
+1359.46 821.17 lineto
+closepath stroke
+grestore
+% Node0x302880682
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 770.51 364.73 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1417.26 774.31 moveto 500 (0x3af8f30. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1570.76 759.31 moveto 193 (std::__cxx11::basic_string::length\(\)) alignedtext
+grestore
+% Node0x507797657->Node0x302880682
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 933 545.25 moveto
+1001.77 592.67 1154.23 690.62 1298.86 734.51 curveto
+1321.91 741.5 1346.1 747.22 1370.61 751.88 curveto
+stroke
+0 0 0 edgecolor
+newpath 1370.29 755.38 moveto
+1380.75 753.75 lineto
+1371.55 748.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1370.29 755.38 moveto
+1380.75 753.75 lineto
+1371.55 748.5 lineto
+closepath stroke
+grestore
+% Node0x575322096
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 698.51 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1416.26 702.31 moveto 502 (0x3af9128. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1570.76 687.31 moveto 193 (std::__cxx11::basic_string::length\(\)) alignedtext
+grestore
+% Node0x507797657->Node0x575322096
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 955.25 545.1 moveto
+1032.83 578.36 1173.14 634.36 1298.86 662.51 curveto
+1327.93 669.02 1358.54 674.35 1389.2 678.71 curveto
+stroke
+0 0 0 edgecolor
+newpath 1388.76 682.19 moveto
+1399.15 680.1 lineto
+1389.72 675.25 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1388.76 682.19 moveto
+1399.15 680.1 lineto
+1389.72 675.25 lineto
+closepath stroke
+grestore
+% Node0x554116491
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 626.51 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1416.26 630.31 moveto 502 (0x3af9350. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1640.26 615.31 moveto 54 (OBJ.at\(k\)) alignedtext
+grestore
+% Node0x507797657->Node0x554116491
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1022.23 543.78 moveto
+1101.49 558.93 1205.84 577.67 1298.86 590.51 curveto
+1337.72 595.87 1379 600.73 1419.32 605.01 curveto
+stroke
+0 0 0 edgecolor
+newpath 1418.96 608.49 moveto
+1429.27 606.06 lineto
+1419.69 601.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1418.96 608.49 moveto
+1429.27 606.06 lineto
+1419.69 601.53 lineto
+closepath stroke
+grestore
+% Node0x695172038
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 554.51 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1416.26 558.31 moveto 502 (0x3af9748. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1633.76 543.31 moveto 67 (OBJ.push\(i\)) alignedtext
+grestore
+% Node0x507797657->Node0x695172038
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1205.09 532.97 moveto
+1252.08 535.16 1300.64 537.43 1347.81 539.64 curveto
+stroke
+0 0 0 edgecolor
+newpath 1347.71 543.13 moveto
+1357.86 540.1 lineto
+1348.03 536.14 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1347.71 543.13 moveto
+1357.86 540.1 lineto
+1348.03 536.14 lineto
+closepath stroke
+grestore
+% Node0x445753003
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 482.51 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1416.26 486.31 moveto 502 (0x3af9870. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1639.76 471.31 moveto 55 (OBJ.top\(\)) alignedtext
+grestore
+% Node0x507797657->Node0x445753003
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1205.09 504.05 moveto
+1252.08 501.85 1300.64 499.58 1347.81 497.38 curveto
+stroke
+0 0 0 edgecolor
+newpath 1348.03 500.88 moveto
+1357.86 496.91 lineto
+1347.71 493.88 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1348.03 500.88 moveto
+1357.86 496.91 lineto
+1347.71 493.88 lineto
+closepath stroke
+grestore
+% Node0x594405923
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 410.51 366.06 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1416.26 414.31 moveto 502 (0x3af9970. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1639.76 399.31 moveto 55 (OBJ.top\(\)) alignedtext
+grestore
+% Node0x507797657->Node0x594405923
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1205.43 503.91 moveto
+1225.29 498.18 1244.61 491.14 1262.86 482.51 curveto
+1283.32 472.84 1278.4 456.18 1298.86 446.51 curveto
+1314.36 439.18 1330.63 432.99 1347.35 427.79 curveto
+stroke
+0 0 0 edgecolor
+newpath 1348.66 431.05 moveto
+1357.24 424.83 lineto
+1346.65 424.34 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1348.66 431.05 moveto
+1357.24 424.83 lineto
+1346.65 424.34 lineto
+closepath stroke
+grestore
+% Node0x269905901
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 338.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 342.31 moveto 505 (0x3b05d20. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1648.76 327.31 moveto 37 (exit\(1\)) alignedtext
+grestore
+% Node0x507797657->Node0x269905901
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1225.01 506.6 moveto
+1238.38 499.87 1251.09 491.9 1262.86 482.51 curveto
+1302.41 450.96 1259.31 406.06 1298.86 374.51 curveto
+1307.97 367.24 1317.63 360.83 1327.73 355.18 curveto
+stroke
+0 0 0 edgecolor
+newpath 1329.52 358.19 moveto
+1336.72 350.41 lineto
+1326.24 352.01 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1329.52 358.19 moveto
+1336.72 350.41 lineto
+1326.24 352.01 lineto
+closepath stroke
+grestore
+% Node0x506065894
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 266.51 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1415.76 270.31 moveto 503 (0x3b05f38. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1633.76 255.31 moveto 67 (OBJ.push\(r\)) alignedtext
+grestore
+% Node0x507797657->Node0x506065894
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1228.98 506.97 moveto
+1241.04 500.07 1252.41 491.97 1262.86 482.51 curveto
+1323.35 427.77 1238.37 357.25 1298.86 302.51 curveto
+1306.87 295.26 1315.43 288.81 1324.41 283.08 curveto
+stroke
+0 0 0 edgecolor
+newpath 1326.39 285.97 moveto
+1333.15 277.81 lineto
+1322.78 279.97 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1326.39 285.97 moveto
+1333.15 277.81 lineto
+1322.78 279.97 lineto
+closepath stroke
+grestore
+% Node0x917190516
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 194.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 198.31 moveto 505 (0x3b06128. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1638.26 183.31 moveto 58 (OBJ.size\(\)) alignedtext
+grestore
+% Node0x507797657->Node0x917190516
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1230.46 507.21 moveto
+1242.03 500.21 1252.91 492.03 1262.86 482.51 curveto
+1344.61 404.3 1217.11 308.72 1298.86 230.51 curveto
+1306.33 223.36 1314.31 216.98 1322.72 211.28 curveto
+stroke
+0 0 0 edgecolor
+newpath 1324.73 214.15 moveto
+1331.26 205.81 lineto
+1320.95 208.25 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1324.73 214.15 moveto
+1331.26 205.81 lineto
+1320.95 208.25 lineto
+closepath stroke
+grestore
+% Node0x675704754
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 122.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414.76 126.31 moveto 505 (0x3b06270. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1639.76 111.31 moveto 55 (OBJ.top\(\)) alignedtext
+grestore
+% Node0x507797657->Node0x675704754
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1031.76 543.47 moveto
+1109.75 549.41 1203.57 541.04 1262.86 482.51 curveto
+1365.97 380.73 1195.75 260.29 1298.86 158.51 curveto
+1355.61 102.49 1443.98 92.42 1519.82 96.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1519.75 100.37 moveto
+1529.96 97.55 lineto
+1520.22 93.38 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1519.75 100.37 moveto
+1529.96 97.55 lineto
+1520.22 93.38 lineto
+closepath stroke
+grestore
+% Node0x884092921
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1667.26 50.51 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1415.76 54.31 moveto 503 (0x3b077f8. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1648.76 39.31 moveto 37 (exit\(1\)) alignedtext
+grestore
+% Node0x507797657->Node0x884092921
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1028.15 543.57 moveto
+1107.07 550.26 1203.14 542.65 1262.86 482.51 curveto
+1325.12 419.81 1236.6 149.21 1298.86 86.51 curveto
+1356.02 28.95 1446.47 19.5 1523.31 24.67 curveto
+stroke
+0 0 0 edgecolor
+newpath 1523.34 28.18 moveto
+1533.58 25.45 lineto
+1523.87 21.2 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1523.34 28.18 moveto
+1533.58 25.45 lineto
+1523.87 21.2 lineto
+closepath stroke
+grestore
+% Node0x179581857
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 2606.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 2610.31 moveto 505 (0x3b13de0. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2343.57 2595.31 moveto 193 (std::__cxx11::basic_string::length\(\)) alignedtext
+grestore
+% Node0x831769378->Node0x179581857
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1798.56 2041.4 moveto
+1878.1 2034.19 1975.69 2041.26 2035.67 2102.51 curveto
+2108.65 2177.03 1998.69 2495.99 2071.67 2570.51 curveto
+2129.07 2629.12 2220.92 2638.12 2298.42 2632.47 curveto
+stroke
+0 0 0 edgecolor
+newpath 2299.09 2635.92 moveto
+2308.77 2631.62 lineto
+2298.52 2628.95 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2299.09 2635.92 moveto
+2308.77 2631.62 lineto
+2298.52 2628.95 lineto
+closepath stroke
+grestore
+% Node0x895228922
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 2534.51 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2188.57 2538.31 moveto 503 (0x3b13fd8. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2343.57 2523.31 moveto 193 (std::__cxx11::basic_string::length\(\)) alignedtext
+grestore
+% Node0x831769378->Node0x895228922
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1800.95 2041.45 moveto
+1879.87 2034.75 1975.94 2042.36 2035.67 2102.51 curveto
+2097.93 2165.21 2009.4 2435.81 2071.67 2498.51 curveto
+2128.82 2556.07 2219.27 2565.51 2296.12 2560.35 curveto
+stroke
+0 0 0 edgecolor
+newpath 2296.68 2563.82 moveto
+2306.38 2559.57 lineto
+2296.15 2556.84 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2296.68 2563.82 moveto
+2306.38 2559.57 lineto
+2296.15 2556.84 lineto
+closepath stroke
+grestore
+% Node0x914718165
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 2462.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 2466.31 moveto 505 (0x3b14200. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2413.07 2451.31 moveto 54 (OBJ.at\(k\)) alignedtext
+grestore
+% Node0x831769378->Node0x914718165
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1804.57 2041.55 moveto
+1882.55 2035.61 1976.37 2043.98 2035.67 2102.51 curveto
+2138.78 2204.29 1968.55 2324.73 2071.67 2426.51 curveto
+2128.42 2482.52 2216.78 2492.6 2292.63 2488.15 curveto
+stroke
+0 0 0 edgecolor
+newpath 2293.02 2491.63 moveto
+2302.77 2487.47 lineto
+2292.55 2484.65 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2293.02 2491.63 moveto
+2302.77 2487.47 lineto
+2292.55 2484.65 lineto
+closepath stroke
+grestore
+% Node0x141017810
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 2390.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 2394.31 moveto 505 (0x3b14548. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2405.57 2379.31 moveto 69 (OBJ.push\(c\)) alignedtext
+grestore
+% Node0x831769378->Node0x141017810
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2003.26 2077.81 moveto
+2014.83 2084.8 2025.71 2092.98 2035.67 2102.51 curveto
+2117.42 2180.72 1989.92 2276.3 2071.67 2354.51 curveto
+2079.13 2361.65 2087.12 2368.04 2095.53 2373.74 curveto
+stroke
+0 0 0 edgecolor
+newpath 2093.76 2376.76 moveto
+2104.07 2379.21 lineto
+2097.53 2370.87 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2093.76 2376.76 moveto
+2104.07 2379.21 lineto
+2097.53 2370.87 lineto
+closepath stroke
+grestore
+% Node0x389145295
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 2318.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 2322.31 moveto 505 (0x3b146a0. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2398.57 2307.31 moveto 83 (OBJ.isEmpty\(\)) alignedtext
+grestore
+% Node0x831769378->Node0x389145295
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2001.79 2078.04 moveto
+2013.84 2084.95 2025.21 2093.05 2035.67 2102.51 curveto
+2096.16 2157.25 2011.17 2227.77 2071.67 2282.51 curveto
+2079.59 2289.68 2088.04 2296.07 2096.91 2301.75 curveto
+stroke
+0 0 0 edgecolor
+newpath 2095.18 2304.79 moveto
+2105.55 2306.97 lineto
+2098.81 2298.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2095.18 2304.79 moveto
+2105.55 2306.97 lineto
+2098.81 2298.8 lineto
+closepath stroke
+grestore
+% Node0x664812600
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 2246.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 2250.31 moveto 505 (0x3b14748. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2411.07 2235.31 moveto 58 (OBJ.pop\(\)) alignedtext
+grestore
+% Node0x831769378->Node0x664812600
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1997.81 2078.41 moveto
+2011.18 2085.14 2023.89 2093.12 2035.67 2102.51 curveto
+2075.22 2134.06 2032.11 2178.96 2071.67 2210.51 curveto
+2080.77 2217.77 2090.44 2224.19 2100.54 2229.84 curveto
+stroke
+0 0 0 edgecolor
+newpath 2099.05 2233.01 moveto
+2109.52 2234.6 lineto
+2102.33 2226.82 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2099.05 2233.01 moveto
+2109.52 2234.6 lineto
+2102.33 2226.82 lineto
+closepath stroke
+grestore
+% Node0x712462038
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 2174.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 2178.31 moveto 505 (0x3b14be8. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2405.57 2163.31 moveto 69 (OBJ.push\(c\)) alignedtext
+grestore
+% Node0x831769378->Node0x712462038
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1978.24 2081.1 moveto
+1998.09 2086.83 2017.41 2093.88 2035.67 2102.51 curveto
+2056.12 2112.18 2051.21 2128.84 2071.67 2138.51 curveto
+2086.92 2145.72 2102.93 2151.83 2119.37 2156.99 curveto
+stroke
+0 0 0 edgecolor
+newpath 2118.51 2160.38 moveto
+2129.1 2159.91 lineto
+2120.53 2153.68 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2118.51 2160.38 moveto
+2129.1 2159.91 lineto
+2120.53 2153.68 lineto
+closepath stroke
+grestore
+% Node0x377133163
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 2102.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 2106.31 moveto 505 (0x3b14dc8. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2398.57 2091.31 moveto 83 (OBJ.isEmpty\(\)) alignedtext
+grestore
+% Node0x831769378->Node0x377133163
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1977.89 2080.97 moveto
+2024.4 2083.14 2072.43 2085.39 2119.15 2087.57 curveto
+stroke
+0 0 0 edgecolor
+newpath 2119.26 2091.08 moveto
+2129.41 2088.05 lineto
+2119.58 2084.08 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2119.26 2091.08 moveto
+2129.41 2088.05 lineto
+2119.58 2084.08 lineto
+closepath stroke
+grestore
+% Node0x805390778
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 2030.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 2034.31 moveto 505 (0x3b14e70. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2411.07 2019.31 moveto 58 (OBJ.pop\(\)) alignedtext
+grestore
+% Node0x831769378->Node0x805390778
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1977.89 2052.05 moveto
+2024.4 2049.88 2072.43 2047.63 2119.15 2045.45 curveto
+stroke
+0 0 0 edgecolor
+newpath 2119.58 2048.93 moveto
+2129.41 2044.97 lineto
+2119.26 2041.94 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2119.58 2048.93 moveto
+2129.41 2044.97 lineto
+2119.26 2041.94 lineto
+closepath stroke
+grestore
+% Node0x555658421
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 1958.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 1962.31 moveto 505 (0x3b15070. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2398.57 1947.31 moveto 83 (OBJ.isEmpty\(\)) alignedtext
+grestore
+% Node0x831769378->Node0x555658421
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1978.24 2051.91 moveto
+1998.09 2046.18 2017.41 2039.14 2035.67 2030.51 curveto
+2056.12 2020.84 2051.21 2004.18 2071.67 1994.51 curveto
+2086.92 1987.3 2102.93 1981.19 2119.37 1976.03 curveto
+stroke
+0 0 0 edgecolor
+newpath 2120.53 1979.34 moveto
+2129.1 1973.1 lineto
+2118.51 1972.63 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2120.53 1979.34 moveto
+2129.1 1973.1 lineto
+2118.51 1972.63 lineto
+closepath stroke
+grestore
+% Node0x533330363
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 1886.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 1890.31 moveto 505 (0x3b151b0. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2398.57 1875.31 moveto 83 (OBJ.isEmpty\(\)) alignedtext
+grestore
+% Node0x831769378->Node0x533330363
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1997.81 2054.6 moveto
+2011.18 2047.87 2023.89 2039.9 2035.67 2030.51 curveto
+2075.22 1998.96 2032.11 1954.06 2071.67 1922.51 curveto
+2080.77 1915.24 2090.44 1908.83 2100.54 1903.18 curveto
+stroke
+0 0 0 edgecolor
+newpath 2102.33 1906.19 moveto
+2109.52 1898.41 lineto
+2099.05 1900.01 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2102.33 1906.19 moveto
+2109.52 1898.41 lineto
+2099.05 1900.01 lineto
+closepath stroke
+grestore
+% Node0x214870558
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 1814.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 1818.31 moveto 505 (0x3b15430. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2413.07 1803.31 moveto 54 (OBJ.at\(0\)) alignedtext
+grestore
+% Node0x831769378->Node0x214870558
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2001.79 2054.97 moveto
+2013.84 2048.07 2025.21 2039.97 2035.67 2030.51 curveto
+2096.16 1975.77 2011.17 1905.25 2071.67 1850.51 curveto
+2079.59 1843.34 2088.04 1836.95 2096.91 1831.27 curveto
+stroke
+0 0 0 edgecolor
+newpath 2098.81 1834.22 moveto
+2105.55 1826.04 lineto
+2095.18 1828.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2098.81 1834.22 moveto
+2105.55 1826.04 lineto
+2095.18 1828.23 lineto
+closepath stroke
+grestore
+% Node0x728501030
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 1742.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 1746.31 moveto 505 (0x3b159b8. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2343.57 1731.31 moveto 193 (std::__cxx11::basic_string::length\(\)) alignedtext
+grestore
+% Node0x831769378->Node0x728501030
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2003.26 2055.21 moveto
+2014.83 2048.21 2025.71 2040.03 2035.67 2030.51 curveto
+2117.42 1952.3 1989.92 1856.72 2071.67 1778.51 curveto
+2079.13 1771.36 2087.12 1764.98 2095.53 1759.28 curveto
+stroke
+0 0 0 edgecolor
+newpath 2097.53 1762.15 moveto
+2104.07 1753.81 lineto
+2093.76 1756.25 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2097.53 1762.15 moveto
+2104.07 1753.81 lineto
+2093.76 1756.25 lineto
+closepath stroke
+grestore
+% Node0x106513239
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 1670.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 1674.31 moveto 505 (0x3b15bb0. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2343.57 1659.31 moveto 193 (std::__cxx11::basic_string::length\(\)) alignedtext
+grestore
+% Node0x831769378->Node0x106513239
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1804.57 2091.47 moveto
+1882.55 2097.41 1976.37 2089.04 2035.67 2030.51 curveto
+2138.78 1928.73 1968.55 1808.29 2071.67 1706.51 curveto
+2128.42 1650.49 2216.78 1640.42 2292.63 1644.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 2292.55 1648.37 moveto
+2302.77 1645.55 lineto
+2293.02 1641.38 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2292.55 1648.37 moveto
+2302.77 1645.55 lineto
+2293.02 1641.38 lineto
+closepath stroke
+grestore
+% Node0x403884894
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 1598.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 1602.31 moveto 505 (0x3b15e38. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2413.07 1587.31 moveto 54 (OBJ.at\(k\)) alignedtext
+grestore
+% Node0x831769378->Node0x403884894
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1800.95 2091.57 moveto
+1879.87 2098.26 1975.94 2090.65 2035.67 2030.51 curveto
+2097.93 1967.81 2009.4 1697.21 2071.67 1634.51 curveto
+2128.82 1576.95 2219.27 1567.5 2296.12 1572.67 curveto
+stroke
+0 0 0 edgecolor
+newpath 2296.15 1576.18 moveto
+2306.38 1573.45 lineto
+2296.68 1569.2 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2296.15 1576.18 moveto
+2306.38 1573.45 lineto
+2296.68 1569.2 lineto
+closepath stroke
+grestore
+% Node0x358682983
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 1526.51 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2188.57 1530.31 moveto 503 (0x3b161f0. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2396.07 1515.31 moveto 88 (OBJ.at\(BINOP\)) alignedtext
+grestore
+% Node0x831769378->Node0x358682983
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1798.56 2091.62 moveto
+1878.1 2098.83 1975.69 2091.75 2035.67 2030.51 curveto
+2108.65 1955.99 1998.69 1637.03 2071.67 1562.51 curveto
+2129.07 1503.9 2220.92 1494.9 2298.42 1500.55 curveto
+stroke
+0 0 0 edgecolor
+newpath 2298.52 1504.07 moveto
+2308.77 1501.4 lineto
+2299.09 1497.09 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2298.52 1504.07 moveto
+2308.77 1501.4 lineto
+2299.09 1497.09 lineto
+closepath stroke
+grestore
+% Node0x326785298
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 1382.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 1386.31 moveto 505 (0x3b13de0. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2343.57 1371.31 moveto 193 (std::__cxx11::basic_string::length\(\)) alignedtext
+grestore
+% Node0x311947942->Node0x326785298
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1798.56 817.4 moveto
+1878.1 810.19 1975.69 817.26 2035.67 878.51 curveto
+2108.65 953.03 1998.69 1271.99 2071.67 1346.51 curveto
+2129.07 1405.12 2220.92 1414.12 2298.42 1408.47 curveto
+stroke
+0 0 0 edgecolor
+newpath 2299.09 1411.92 moveto
+2308.77 1407.62 lineto
+2298.52 1404.95 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2299.09 1411.92 moveto
+2308.77 1407.62 lineto
+2298.52 1404.95 lineto
+closepath stroke
+grestore
+% Node0x928673038
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 1310.51 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2188.57 1314.31 moveto 503 (0x3b13fd8. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2343.57 1299.31 moveto 193 (std::__cxx11::basic_string::length\(\)) alignedtext
+grestore
+% Node0x311947942->Node0x928673038
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1800.95 817.45 moveto
+1879.87 810.75 1975.94 818.36 2035.67 878.51 curveto
+2097.93 941.21 2009.4 1211.81 2071.67 1274.51 curveto
+2128.82 1332.07 2219.27 1341.51 2296.12 1336.35 curveto
+stroke
+0 0 0 edgecolor
+newpath 2296.68 1339.82 moveto
+2306.38 1335.57 lineto
+2296.15 1332.84 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2296.68 1339.82 moveto
+2306.38 1335.57 lineto
+2296.15 1332.84 lineto
+closepath stroke
+grestore
+% Node0x370036036
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 1238.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 1242.31 moveto 505 (0x3b14200. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2413.07 1227.31 moveto 54 (OBJ.at\(k\)) alignedtext
+grestore
+% Node0x311947942->Node0x370036036
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1804.12 817.58 moveto
+1882.19 811.58 1976.26 819.87 2035.67 878.51 curveto
+2138.78 980.29 1968.55 1100.73 2071.67 1202.51 curveto
+2128.42 1258.52 2216.78 1268.6 2292.63 1264.15 curveto
+stroke
+0 0 0 edgecolor
+newpath 2293.02 1267.63 moveto
+2302.77 1263.47 lineto
+2292.55 1260.65 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2293.02 1267.63 moveto
+2302.77 1263.47 lineto
+2292.55 1260.65 lineto
+closepath stroke
+grestore
+% Node0x523083067
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 1166.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 1170.31 moveto 505 (0x3b14548. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2405.57 1155.31 moveto 69 (OBJ.push\(c\)) alignedtext
+grestore
+% Node0x311947942->Node0x523083067
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2002.86 853.57 moveto
+2014.58 860.61 2025.59 868.87 2035.67 878.51 curveto
+2117.42 956.72 1989.92 1052.3 2071.67 1130.51 curveto
+2079.13 1137.65 2087.12 1144.04 2095.53 1149.74 curveto
+stroke
+0 0 0 edgecolor
+newpath 2093.76 1152.76 moveto
+2104.07 1155.21 lineto
+2097.53 1146.87 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2093.76 1152.76 moveto
+2104.07 1155.21 lineto
+2097.53 1146.87 lineto
+closepath stroke
+grestore
+% Node0x135107489
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 1094.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 1098.31 moveto 505 (0x3b146a0. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2398.57 1083.31 moveto 83 (OBJ.isEmpty\(\)) alignedtext
+grestore
+% Node0x311947942->Node0x135107489
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2001.38 853.81 moveto
+2013.58 860.76 2025.09 868.94 2035.67 878.51 curveto
+2096.16 933.25 2011.17 1003.77 2071.67 1058.51 curveto
+2079.59 1065.68 2088.04 1072.07 2096.91 1077.75 curveto
+stroke
+0 0 0 edgecolor
+newpath 2095.18 1080.79 moveto
+2105.55 1082.97 lineto
+2098.81 1074.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2095.18 1080.79 moveto
+2105.55 1082.97 lineto
+2098.81 1074.8 lineto
+closepath stroke
+grestore
+% Node0x655868483
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 1022.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 1026.31 moveto 505 (0x3b14748. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2411.07 1011.31 moveto 58 (OBJ.pop\(\)) alignedtext
+grestore
+% Node0x311947942->Node0x655868483
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1997.39 854.2 moveto
+2010.91 860.98 2023.77 869.02 2035.67 878.51 curveto
+2075.22 910.06 2032.11 954.96 2071.67 986.51 curveto
+2080.77 993.77 2090.44 1000.19 2100.54 1005.84 curveto
+stroke
+0 0 0 edgecolor
+newpath 2099.05 1009.01 moveto
+2109.52 1010.6 lineto
+2102.33 1002.82 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2099.05 1009.01 moveto
+2109.52 1010.6 lineto
+2102.33 1002.82 lineto
+closepath stroke
+grestore
+% Node0x339496874
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 950.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 954.31 moveto 505 (0x3b14be8. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2405.57 939.31 moveto 69 (OBJ.push\(c\)) alignedtext
+grestore
+% Node0x311947942->Node0x339496874
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1977.29 856.83 moveto
+1997.48 862.61 2017.12 869.74 2035.67 878.51 curveto
+2056.12 888.18 2051.21 904.84 2071.67 914.51 curveto
+2086.92 921.72 2102.93 927.83 2119.37 932.99 curveto
+stroke
+0 0 0 edgecolor
+newpath 2118.51 936.38 moveto
+2129.1 935.91 lineto
+2120.53 929.68 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2118.51 936.38 moveto
+2129.1 935.91 lineto
+2120.53 929.68 lineto
+closepath stroke
+grestore
+% Node0x260420949
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 878.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 882.31 moveto 505 (0x3b14dc8. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2398.57 867.31 moveto 83 (OBJ.isEmpty\(\)) alignedtext
+grestore
+% Node0x311947942->Node0x260420949
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1976.78 856.92 moveto
+2023.74 859.11 2072.27 861.38 2119.45 863.58 curveto
+stroke
+0 0 0 edgecolor
+newpath 2119.35 867.08 moveto
+2129.5 864.05 lineto
+2119.68 860.09 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2119.35 867.08 moveto
+2129.5 864.05 lineto
+2119.68 860.09 lineto
+closepath stroke
+grestore
+% Node0x337356244
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 806.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 810.31 moveto 505 (0x3b14e70. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2411.07 795.31 moveto 58 (OBJ.pop\(\)) alignedtext
+grestore
+% Node0x311947942->Node0x337356244
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1976.78 828.1 moveto
+2023.74 825.91 2072.27 823.64 2119.45 821.44 curveto
+stroke
+0 0 0 edgecolor
+newpath 2119.68 824.93 moveto
+2129.5 820.97 lineto
+2119.35 817.94 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2119.68 824.93 moveto
+2129.5 820.97 lineto
+2119.35 817.94 lineto
+closepath stroke
+grestore
+% Node0x184990535
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 734.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 738.31 moveto 505 (0x3b15070. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2398.57 723.31 moveto 83 (OBJ.isEmpty\(\)) alignedtext
+grestore
+% Node0x311947942->Node0x184990535
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1977.29 828.19 moveto
+1997.48 822.41 2017.12 815.27 2035.67 806.51 curveto
+2056.12 796.84 2051.21 780.18 2071.67 770.51 curveto
+2086.92 763.3 2102.93 757.19 2119.37 752.03 curveto
+stroke
+0 0 0 edgecolor
+newpath 2120.53 755.34 moveto
+2129.1 749.1 lineto
+2118.51 748.63 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2120.53 755.34 moveto
+2129.1 749.1 lineto
+2118.51 748.63 lineto
+closepath stroke
+grestore
+% Node0x350781703
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 662.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 666.31 moveto 505 (0x3b151b0. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2398.57 651.31 moveto 83 (OBJ.isEmpty\(\)) alignedtext
+grestore
+% Node0x311947942->Node0x350781703
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1997.39 830.82 moveto
+2010.91 824.04 2023.77 816 2035.67 806.51 curveto
+2075.22 774.96 2032.11 730.06 2071.67 698.51 curveto
+2080.77 691.24 2090.44 684.83 2100.54 679.18 curveto
+stroke
+0 0 0 edgecolor
+newpath 2102.33 682.19 moveto
+2109.52 674.41 lineto
+2099.05 676.01 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2102.33 682.19 moveto
+2109.52 674.41 lineto
+2099.05 676.01 lineto
+closepath stroke
+grestore
+% Node0x494868427
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 590.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 594.31 moveto 505 (0x3b15430. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2413.07 579.31 moveto 54 (OBJ.at\(0\)) alignedtext
+grestore
+% Node0x311947942->Node0x494868427
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2001.38 831.21 moveto
+2013.58 824.25 2025.09 816.08 2035.67 806.51 curveto
+2096.16 751.77 2011.17 681.25 2071.67 626.51 curveto
+2079.59 619.34 2088.04 612.95 2096.91 607.27 curveto
+stroke
+0 0 0 edgecolor
+newpath 2098.81 610.22 moveto
+2105.55 602.04 lineto
+2095.18 604.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2098.81 610.22 moveto
+2105.55 602.04 lineto
+2095.18 604.23 lineto
+closepath stroke
+grestore
+% Node0x245276046
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 518.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 522.31 moveto 505 (0x3b159b8. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2343.57 507.31 moveto 193 (std::__cxx11::basic_string::length\(\)) alignedtext
+grestore
+% Node0x311947942->Node0x245276046
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2002.86 831.45 moveto
+2014.58 824.4 2025.59 816.15 2035.67 806.51 curveto
+2117.42 728.3 1989.92 632.72 2071.67 554.51 curveto
+2079.13 547.36 2087.12 540.98 2095.53 535.28 curveto
+stroke
+0 0 0 edgecolor
+newpath 2097.53 538.15 moveto
+2104.07 529.81 lineto
+2093.76 532.25 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2097.53 538.15 moveto
+2104.07 529.81 lineto
+2093.76 532.25 lineto
+closepath stroke
+grestore
+% Node0x416857189
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 446.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 450.31 moveto 505 (0x3b15bb0. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2343.57 435.31 moveto 193 (std::__cxx11::basic_string::length\(\)) alignedtext
+grestore
+% Node0x311947942->Node0x416857189
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1804.12 867.43 moveto
+1882.19 873.44 1976.26 865.15 2035.67 806.51 curveto
+2138.78 704.73 1968.55 584.29 2071.67 482.51 curveto
+2128.42 426.49 2216.78 416.42 2292.63 420.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 2292.55 424.37 moveto
+2302.77 421.55 lineto
+2293.02 417.38 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2292.55 424.37 moveto
+2302.77 421.55 lineto
+2293.02 417.38 lineto
+closepath stroke
+grestore
+% Node0x952504834
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 374.51 368.31 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2187.57 378.31 moveto 505 (0x3b15e38. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2413.07 363.31 moveto 54 (OBJ.at\(k\)) alignedtext
+grestore
+% Node0x311947942->Node0x952504834
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1800.95 867.57 moveto
+1879.87 874.26 1975.94 866.65 2035.67 806.51 curveto
+2097.93 743.81 2009.4 473.21 2071.67 410.51 curveto
+2128.82 352.95 2219.27 343.5 2296.12 348.67 curveto
+stroke
+0 0 0 edgecolor
+newpath 2296.15 352.18 moveto
+2306.38 349.45 lineto
+2296.68 345.2 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2296.15 352.18 moveto
+2306.38 349.45 lineto
+2296.68 345.2 lineto
+closepath stroke
+grestore
+% Node0x815150693
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2440.07 302.51 366.98 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2188.57 306.31 moveto 503 (0x3b161f0. \(/home/labaccount/11-2-17/mlsa/IG/example/AlgExp/AlgebraicExpression.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2396.07 291.31 moveto 88 (OBJ.at\(BINOP\)) alignedtext
+grestore
+% Node0x311947942->Node0x815150693
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1798.56 867.62 moveto
+1878.1 874.83 1975.69 867.75 2035.67 806.51 curveto
+2108.65 731.99 1998.69 413.03 2071.67 338.51 curveto
+2129.07 279.9 2220.92 270.9 2298.42 276.55 curveto
+stroke
+0 0 0 edgecolor
+newpath 2298.52 280.07 moveto
+2308.77 277.4 lineto
+2299.09 273.09 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2298.52 280.07 moveto
+2308.77 277.4 lineto
+2299.09 273.09 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 150 150 2400 2749
+end
+restore
+%%EOF

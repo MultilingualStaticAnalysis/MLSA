@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # MLSA Multilingual Software Analysis
 # This program is part of the MLSA package under development at Fordham University Department of Computer and Information Science.
 # <This program calls CAssignment Collector and extracts kill/gen information from the list that is produced>
@@ -32,12 +33,16 @@ def getAssignmentList(varsFile):
 	subList = []
 	try:
 		with open(varsFile, 'r') as f:
+
 			csv_f = csv.reader(f)
+
 			for line in csv_f:
-				lineNumber = line[0]
+				#lineNumber = line[0]
+				uniqueID = line[0]
 				varName = line[1]
 				#get scope:
 				scopeString = line[2]
+
 				
 				scopeString = scopeString.strip('"')
 				scopeString = scopeString.strip('(')
@@ -49,59 +54,29 @@ def getAssignmentList(varsFile):
 				startLine = (scopeList[0].strip("'"))
 				endLine = (scopeList[1].strip(' ').strip("'"))
 
-				scope = (startLine, endLine)
 
-				#startLine = int(scopeList[0])
-				#endLine = int(scopeList[1])
-				#scope = (startLine, endLine)
+				if len(scopeList) > 2:
+					funcAddress = scopeList[2].strip(' ').strip("'")
+				else:
+					funcAddress = '-1'
+
+
+			
+
+				scope = (startLine, endLine, funcAddress)
+
+
 
 				#get value
 				varValue = line[3]
-				subList = [lineNumber, varName, scope, varValue]
+				subList = [uniqueID, varName, scope, varValue]
 				assignmentList.append(subList)
+
 
 
 	except Exception:
 		sys.exit(error + "file " + '"' + varsFile + '"' + " not found")
-
 	return assignmentList
-
-'''
-
-def getControlFlow(inputfile):
-	error = "MLSA: CAssignmentCollector "
-	
-	cf = []
-
-	try:
-		with open(inputfile, 'r') as f:
-			csv_f = csv.reader(f)
-
-			for line in csv_f:
-				subList = []
-				subCouple = ()
-				if len(line) > 1:
-					for j in line[1:]:
-						subList.append(j)
-
-				else:
-					subList.append('')
-
-
-				subCouple = (line[0], subList)
-		
-				cf.append(subCouple)
-
-	except Exception:
-		sys.exit(error + "file " + '"' + inputfile + '"' + " not found")
-
-
-	if len(cf) == 0:
-		sys.exit(error + "control flow is empty")
-	return cf 
-
-#print getControlFlow('if.c_rcfg.csv')
-'''
 
 
 
@@ -115,6 +90,7 @@ def KillGen(inputList):
 	Final = []
 	 
 	lineNumber = ''
+	uniqueID = ''
 	name = ''
 	address = ''
 	uniqueID = ''
@@ -131,7 +107,8 @@ def KillGen(inputList):
 			sys.exit(error + "input list is of the wrong format")
 
 				
-		lineNumber = element[0]
+		#lineNumber = element[0]
+		uniqueID = element[0]
 		name = element[1]
 		#address = element[2]
 		scope = element[2]
@@ -146,7 +123,7 @@ def KillGen(inputList):
 				sys.exit(error + "input list is of the wrong format")
 
 
-			if (index[1] == name and index[2] == scope):
+			if (index[1] == name and (index[2] == scope or scope[1] == '-1') ):
 				#For line numbers
 				#subKill2 = (name, index[0])
 
@@ -164,7 +141,7 @@ def KillGen(inputList):
 
 
 
-		subList = [lineNumber, scope, {'Kill': Kill, 'Gen' : Gen}]
+		subList = [uniqueID, scope, {'Kill': Kill, 'Gen' : Gen}]
 
 		Final.append(subList)
 
@@ -175,6 +152,7 @@ def KillGen(inputList):
 def main(varsFile):
 	assignmentList = getAssignmentList(varsFile)
 	killGenList = KillGen(assignmentList)
+	#prettyPrint(killGenList)
 	return killGenList
 
 #main('test.c_vars.csv')

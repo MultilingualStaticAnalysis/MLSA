@@ -1,0 +1,131 @@
+\hypertarget{CountMinSketch_8cpp}{}\section{Count\+Min\+Sketch.\+cpp File Reference}
+\label{CountMinSketch_8cpp}\index{Count\+Min\+Sketch.\+cpp@{Count\+Min\+Sketch.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+{\ttfamily \#include $<$limits$>$}\\*
+{\ttfamily \#include $<$cstring$>$}\\*
+Include dependency graph for Count\+Min\+Sketch.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CountMinSketch_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCountMinSketch}{Count\+Min\+Sketch}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{CountMinSketch_8cpp_a550df3704559170eb0241ad9fb2af651}{L\+O\+N\+G\+\_\+\+P\+R\+I\+ME}~32993
+\item 
+\#define \hyperlink{CountMinSketch_8cpp_a3acffbd305ee72dcd4593c0d8af64a4f}{M\+IN}(a,  b)~(a $<$ b ? a \+: b)
+\item 
+\#define \hyperlink{CountMinSketch_8cpp_a38190f0ee57a4f413c87037ad3bb91c6}{ui}~unsigned int
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CountMinSketch_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{Count\+Min\+Sketch.\+cpp@{Count\+Min\+Sketch.\+cpp}!L\+O\+N\+G\+\_\+\+P\+R\+I\+ME@{L\+O\+N\+G\+\_\+\+P\+R\+I\+ME}}
+\index{L\+O\+N\+G\+\_\+\+P\+R\+I\+ME@{L\+O\+N\+G\+\_\+\+P\+R\+I\+ME}!Count\+Min\+Sketch.\+cpp@{Count\+Min\+Sketch.\+cpp}}
+\subsubsection[{\texorpdfstring{L\+O\+N\+G\+\_\+\+P\+R\+I\+ME}{LONG_PRIME}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+O\+N\+G\+\_\+\+P\+R\+I\+ME~32993}\hypertarget{CountMinSketch_8cpp_a550df3704559170eb0241ad9fb2af651}{}\label{CountMinSketch_8cpp_a550df3704559170eb0241ad9fb2af651}
+\index{Count\+Min\+Sketch.\+cpp@{Count\+Min\+Sketch.\+cpp}!M\+IN@{M\+IN}}
+\index{M\+IN@{M\+IN}!Count\+Min\+Sketch.\+cpp@{Count\+Min\+Sketch.\+cpp}}
+\subsubsection[{\texorpdfstring{M\+IN}{MIN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+IN(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~(a $<$ b ? a \+: b)}\hypertarget{CountMinSketch_8cpp_a3acffbd305ee72dcd4593c0d8af64a4f}{}\label{CountMinSketch_8cpp_a3acffbd305ee72dcd4593c0d8af64a4f}
+\index{Count\+Min\+Sketch.\+cpp@{Count\+Min\+Sketch.\+cpp}!ui@{ui}}
+\index{ui@{ui}!Count\+Min\+Sketch.\+cpp@{Count\+Min\+Sketch.\+cpp}}
+\subsubsection[{\texorpdfstring{ui}{ui}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ui~unsigned int}\hypertarget{CountMinSketch_8cpp_a38190f0ee57a4f413c87037ad3bb91c6}{}\label{CountMinSketch_8cpp_a38190f0ee57a4f413c87037ad3bb91c6}
+
+
+\subsection{Function Documentation}
+\index{Count\+Min\+Sketch.\+cpp@{Count\+Min\+Sketch.\+cpp}!main@{main}}
+\index{main@{main}!Count\+Min\+Sketch.\+cpp@{Count\+Min\+Sketch.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{CountMinSketch_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{CountMinSketch_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+165 \{
+166     \textcolor{keyword}{const} \textcolor{keywordtype}{char} *ar\_str[] = \{ \textcolor{stringliteral}{"hello"}, \textcolor{stringliteral}{"some"}, \textcolor{stringliteral}{"one"}, \textcolor{stringliteral}{"hello"}, \textcolor{stringliteral}{"alice"},
+167                              \textcolor{stringliteral}{"one"}, \textcolor{stringliteral}{"lady"}, \textcolor{stringliteral}{"let"}, \textcolor{stringliteral}{"us"}, \textcolor{stringliteral}{"lady"},
+168                              \textcolor{stringliteral}{"alice"}, \textcolor{stringliteral}{"in"}, \textcolor{stringliteral}{"us"}, \textcolor{stringliteral}{"wonderland"}, \textcolor{stringliteral}{"lady"},
+169                              \textcolor{stringliteral}{"lady"}, \textcolor{stringliteral}{"some"}, \textcolor{stringliteral}{"hello"}, \textcolor{stringliteral}{"none"}, \textcolor{stringliteral}{"pie"} \};
+170     \hyperlink{classCountMinSketch}{CountMinSketch} c(0.01, 0.1);
+171     \hyperlink{CountMinSketch_8cpp_a38190f0ee57a4f413c87037ad3bb91c6}{ui} i, total = 0, count;
+172     map<const char *, int> mapitems;
+173     map<const char *, int>::const\_iterator it;
+174     \textcolor{keywordflow}{for} (i = 0; i < 20; i++)
+175     \{
+176         \textcolor{keywordflow}{if} ((it = mapitems.find(ar\_str[i])) != mapitems.end())
+177         \{
+178             mapitems[ar\_str[i]] += i;
+179         \}
+180         \textcolor{keywordflow}{else}
+181         \{
+182             mapitems[ar\_str[i]] = i;
+183         \}
+184         c.update(ar\_str[i], i);
+185         total = total + i;
+186  
+187     \}
+188     \textcolor{comment}{// 1. test for items in ar\_str}
+189     \textcolor{keywordflow}{for} (it = mapitems.begin(); it != mapitems.end(); it++)
+190     \{
+191         \textcolor{keywordflow}{if} (c.estimate(it->first) != mapitems[it->first])
+192         \{
+193             cout << \textcolor{stringliteral}{"Incorrect count for "} << it->first << \textcolor{stringliteral}{":->error: "};
+194             count = abs(\textcolor{keywordtype}{int}(c.estimate(it->first)-mapitems[it->first]));
+195             cout << count << endl;
+196         \}
+197         \textcolor{keywordflow}{else}
+198         \{
+199             cout << \textcolor{stringliteral}{"Correct count for '"} << it->first;
+200             cout << \textcolor{stringliteral}{"' :-->count: "} << c.estimate(it->first) << endl;
+201         \}
+202     \}
+203     cout << \textcolor{stringliteral}{"c.totalcount()==total ? "};
+204     cout << (c.totalcount() == total ? \textcolor{stringliteral}{"True"} : \textcolor{stringliteral}{"False"}) << endl;
+205     cout << \textcolor{stringliteral}{"Sketch Total: "} << c.totalcount() << endl;
+206  
+207     \textcolor{comment}{// 2. test for items not in ar\_str}
+208     cout << \textcolor{stringliteral}{"Testing for strings not in ar\_str..."} << endl;
+209     \textcolor{keyword}{const} \textcolor{keywordtype}{char} *arn\_str[] = \{\textcolor{stringliteral}{"sanfoundry"}, \textcolor{stringliteral}{"hello"}, \textcolor{stringliteral}{"linux"}, \textcolor{stringliteral}{"us"}\};
+210     \textcolor{keywordflow}{for} (i = 0 ; i < 4; i++)
+211     \{
+212         \textcolor{keywordflow}{if} (!c.estimate(arn\_str[i]))
+213             cout<<arn\_str[i] << \textcolor{stringliteral}{" not found in string array"}<<endl;
+214         \textcolor{keywordflow}{else}
+215             cout<<arn\_str[i] << \textcolor{stringliteral}{" found in string array"}<<endl;
+216     \}
+217     \textcolor{keywordflow}{return} 0;
+218 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{CountMinSketch_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

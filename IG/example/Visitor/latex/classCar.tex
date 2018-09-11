@@ -1,0 +1,82 @@
+\hypertarget{classCar}{}\section{Car Class Reference}
+\label{classCar}\index{Car@{Car}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \hyperlink{structCarElement}{Car\+Element} $\ast$ $>$ \& \hyperlink{classCar_a70d9577f631b92e0537ff331c8f7409b}{get\+Elements} ()
+\item 
+\hyperlink{classCar_a1c803f7c5038d3e31b368b0d0a35493c}{Car} ()
+\item 
+\hyperlink{classCar_a5933bb06e96b159fe339a128abda888a}{$\sim$\+Car} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \hyperlink{structCarElement}{Car\+Element} $\ast$ $>$ \hyperlink{classCar_a703ef306f2c16c3819bb4a0e3c50e5b9}{elements\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Car@{Car}!Car@{Car}}
+\index{Car@{Car}!Car@{Car}}
+\subsubsection[{\texorpdfstring{Car()}{Car()}}]{\setlength{\rightskip}{0pt plus 5cm}Car\+::\+Car (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCar_a1c803f7c5038d3e31b368b0d0a35493c}{}\label{classCar_a1c803f7c5038d3e31b368b0d0a35493c}
+
+\begin{DoxyCode}
+79   \{
+80     \textcolor{comment}{// assume that neither push\_back nor Wheel(const string&) may throw}
+81     \hyperlink{classCar_a703ef306f2c16c3819bb4a0e3c50e5b9}{elements\_}.push\_back( \textcolor{keyword}{new} \hyperlink{classWheel}{Wheel}(\textcolor{stringliteral}{"front left"}) );
+82     \hyperlink{classCar_a703ef306f2c16c3819bb4a0e3c50e5b9}{elements\_}.push\_back( \textcolor{keyword}{new} \hyperlink{classWheel}{Wheel}(\textcolor{stringliteral}{"front right"}) );
+83     \hyperlink{classCar_a703ef306f2c16c3819bb4a0e3c50e5b9}{elements\_}.push\_back( \textcolor{keyword}{new} \hyperlink{classWheel}{Wheel}(\textcolor{stringliteral}{"back left"}) );
+84     \hyperlink{classCar_a703ef306f2c16c3819bb4a0e3c50e5b9}{elements\_}.push\_back( \textcolor{keyword}{new} \hyperlink{classWheel}{Wheel}(\textcolor{stringliteral}{"back right"}) );
+85     \hyperlink{classCar_a703ef306f2c16c3819bb4a0e3c50e5b9}{elements\_}.push\_back( \textcolor{keyword}{new} \hyperlink{classBody}{Body}() );
+86     \hyperlink{classCar_a703ef306f2c16c3819bb4a0e3c50e5b9}{elements\_}.push\_back( \textcolor{keyword}{new} \hyperlink{classEngine}{Engine}() );
+87   \}
+\end{DoxyCode}
+\index{Car@{Car}!````~Car@{$\sim$\+Car}}
+\index{````~Car@{$\sim$\+Car}!Car@{Car}}
+\subsubsection[{\texorpdfstring{$\sim$\+Car()}{~Car()}}]{\setlength{\rightskip}{0pt plus 5cm}Car\+::$\sim$\+Car (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCar_a5933bb06e96b159fe339a128abda888a}{}\label{classCar_a5933bb06e96b159fe339a128abda888a}
+
+\begin{DoxyCode}
+89   \{
+90     \textcolor{keywordflow}{for}(vector<CarElement*>::iterator it = \hyperlink{classCar_a703ef306f2c16c3819bb4a0e3c50e5b9}{elements\_}.begin(); 
+91       it != \hyperlink{classCar_a703ef306f2c16c3819bb4a0e3c50e5b9}{elements\_}.end(); ++it)
+92     \{
+93       \textcolor{keyword}{delete} *it;
+94     \}
+95   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Car@{Car}!get\+Elements@{get\+Elements}}
+\index{get\+Elements@{get\+Elements}!Car@{Car}}
+\subsubsection[{\texorpdfstring{get\+Elements()}{getElements()}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Car\+Element}$\ast$$>$\& Car\+::get\+Elements (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCar_a70d9577f631b92e0537ff331c8f7409b}{}\label{classCar_a70d9577f631b92e0537ff331c8f7409b}
+
+\begin{DoxyCode}
+75   \{
+76     \textcolor{keywordflow}{return} \hyperlink{classCar_a703ef306f2c16c3819bb4a0e3c50e5b9}{elements\_};
+77   \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Car@{Car}!elements\+\_\+@{elements\+\_\+}}
+\index{elements\+\_\+@{elements\+\_\+}!Car@{Car}}
+\subsubsection[{\texorpdfstring{elements\+\_\+}{elements_}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Car\+Element}$\ast$$>$ Car\+::elements\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCar_a703ef306f2c16c3819bb4a0e3c50e5b9}{}\label{classCar_a703ef306f2c16c3819bb4a0e3c50e5b9}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Visitor_8cpp}{Visitor.\+cpp}\end{DoxyCompactItemize}

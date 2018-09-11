@@ -1,0 +1,112 @@
+\hypertarget{HashTable_8cpp}{}\section{Hash\+Table.\+cpp File Reference}
+\label{HashTable_8cpp}\index{Hash\+Table.\+cpp@{Hash\+Table.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$cstdio$>$}\\*
+Include dependency graph for Hash\+Table.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{HashTable_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classHashEntry}{Hash\+Entry}
+\item 
+class \hyperlink{classHashMap}{Hash\+Map}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{HashTable_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{HashTable_8cpp_ada4ebb227211f96616c9e6681a944bc1}{T\+A\+B\+L\+E\+\_\+\+S\+I\+ZE} = 128
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Hash\+Table.\+cpp@{Hash\+Table.\+cpp}!main@{main}}
+\index{main@{main}!Hash\+Table.\+cpp@{Hash\+Table.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{HashTable_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{HashTable_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+116 \{
+117     \hyperlink{classHashMap}{HashMap} hash;
+118     \textcolor{keywordtype}{int} key, value;
+119     \textcolor{keywordtype}{int} choice;
+120     \textcolor{keywordflow}{while} (1)
+121     \{
+122         cout<<\textcolor{stringliteral}{"\(\backslash\)n----------------------"}<<endl;
+123         cout<<\textcolor{stringliteral}{"Operations on Hash Table"}<<endl;
+124         cout<<\textcolor{stringliteral}{"\(\backslash\)n----------------------"}<<endl;
+125         cout<<\textcolor{stringliteral}{"1.Insert element into the table"}<<endl;
+126         cout<<\textcolor{stringliteral}{"2.Search element from the key"}<<endl;
+127         cout<<\textcolor{stringliteral}{"3.Delete element at a key"}<<endl;
+128         cout<<\textcolor{stringliteral}{"4.Exit"}<<endl;
+129         cout<<\textcolor{stringliteral}{"Enter your choice: "};
+130         cin>>choice;
+131         \textcolor{keywordflow}{switch}(choice)
+132         \{
+133         \textcolor{keywordflow}{case} 1:
+134             cout<<\textcolor{stringliteral}{"Enter element to be inserted: "};
+135             cin>>value;
+136             cout<<\textcolor{stringliteral}{"Enter key at which element to be inserted: "};
+137             cin>>key;
+138             hash.\hyperlink{classHashMap_aa595b4e98a9ec68efa0ee9fe75126186}{Insert}(key, value);
+139             \textcolor{keywordflow}{break};
+140         \textcolor{keywordflow}{case} 2:
+141             cout<<\textcolor{stringliteral}{"Enter key of the element to be searched: "};
+142             cin>>key;
+143             \textcolor{keywordflow}{if} (hash.\hyperlink{classHashMap_a2801980039df1862de284ce00cb6d1f3}{Search}(key) == -1)
+144             \{
+145             cout<<\textcolor{stringliteral}{"No element found at key "}<<key<<endl;
+146             \textcolor{keywordflow}{continue};
+147         \}
+148         \textcolor{keywordflow}{else}
+149         \{
+150             cout<<\textcolor{stringliteral}{"Element at key "}<<key<<\textcolor{stringliteral}{" : "};
+151             cout<<hash.\hyperlink{classHashMap_a2801980039df1862de284ce00cb6d1f3}{Search}(key)<<endl;
+152         \}
+153             \textcolor{keywordflow}{break};
+154         \textcolor{keywordflow}{case} 3:
+155             cout<<\textcolor{stringliteral}{"Enter key of the element to be deleted: "};
+156             cin>>key;
+157             hash.\hyperlink{classHashMap_a021573afbb91afef3b30e90d22aed366}{Remove}(key);
+158             \textcolor{keywordflow}{break};
+159         \textcolor{keywordflow}{case} 4:
+160             exit(1);
+161         \textcolor{keywordflow}{default}:
+162            cout<<\textcolor{stringliteral}{"\(\backslash\)nEnter correct option\(\backslash\)n"};
+163        \}
+164     \}
+165     \textcolor{keywordflow}{return} 0;
+166 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{HashTable_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{Hash\+Table.\+cpp@{Hash\+Table.\+cpp}!T\+A\+B\+L\+E\+\_\+\+S\+I\+ZE@{T\+A\+B\+L\+E\+\_\+\+S\+I\+ZE}}
+\index{T\+A\+B\+L\+E\+\_\+\+S\+I\+ZE@{T\+A\+B\+L\+E\+\_\+\+S\+I\+ZE}!Hash\+Table.\+cpp@{Hash\+Table.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+A\+B\+L\+E\+\_\+\+S\+I\+ZE}{TABLE_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}const int T\+A\+B\+L\+E\+\_\+\+S\+I\+ZE = 128}\hypertarget{HashTable_8cpp_ada4ebb227211f96616c9e6681a944bc1}{}\label{HashTable_8cpp_ada4ebb227211f96616c9e6681a944bc1}

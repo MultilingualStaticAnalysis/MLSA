@@ -1,0 +1,55 @@
+\hypertarget{Student_8cpp}{}\section{Student.\+cpp File Reference}
+\label{Student_8cpp}\index{Student.\+cpp@{Student.\+cpp}}
+{\ttfamily \#include \char`\"{}Student.\+h\char`\"{}}\\*
+Include dependency graph for Student.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Student_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{Student_8cpp_a8ed16acc8384ea29641694cb182ac764}{operator$<$$<$} (ostream \&outs, const \hyperlink{classStudent}{Student} \&s)
+\item 
+istream \& \hyperlink{Student_8cpp_a2d76cee765e6e0d66e66a27d10fa0a68}{operator$>$$>$} (istream \&ins, \hyperlink{classStudent}{Student} \&s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Student.\+cpp@{Student.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Student.\+cpp@{Student.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(ostream \&outs, const Student \&s)}{operator<<(ostream &outs, const Student &s)}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{outs, }
+\item[{const {\bf Student} \&}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{Student_8cpp_a8ed16acc8384ea29641694cb182ac764}{}\label{Student_8cpp_a8ed16acc8384ea29641694cb182ac764}
+
+\begin{DoxyCode}
+65 \{
+66    cout << \textcolor{stringliteral}{"Student:\(\backslash\)t\(\backslash\)t  "} << s.\hyperlink{classStudent_a6c934004d6a468a354916bcf0f998190}{lname} << \textcolor{stringliteral}{", "} << s.\hyperlink{classStudent_a333c7d227c87fdfa821d0232e21f9006}{fname} << \textcolor{stringliteral}{" "} << s.
+      \hyperlink{classStudent_afd8d4557f2ac6bb7681c32e691248328}{mi} << endl;
+67    cout << \textcolor{stringliteral}{"Social Security number:\(\backslash\)t  "} << s.\hyperlink{classStudent_aa7181a8aac86888176481f901bee2cbd}{ssn} << endl;
+68    cout << \textcolor{stringliteral}{"Age:\(\backslash\)t\(\backslash\)t\(\backslash\)t  "} << s.\hyperlink{classStudent_a552a431a43ffc545d180424597d51f97}{age} << endl;
+69    cout << \textcolor{stringliteral}{"------------------------------------------------------"} << endl;
+70 
+71    \textcolor{keywordflow}{return} outs;
+72 \}
+\end{DoxyCode}
+\index{Student.\+cpp@{Student.\+cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Student.\+cpp@{Student.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$>$$>$(istream \&ins, Student \&s)}{operator>>(istream &ins, Student &s)}}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{ins, }
+\item[{{\bf Student} \&}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{Student_8cpp_a2d76cee765e6e0d66e66a27d10fa0a68}{}\label{Student_8cpp_a2d76cee765e6e0d66e66a27d10fa0a68}
+
+\begin{DoxyCode}
+75 \{
+76    ins >> s.\hyperlink{classStudent_a333c7d227c87fdfa821d0232e21f9006}{fname} >> s.\hyperlink{classStudent_a6c934004d6a468a354916bcf0f998190}{lname} >> s.\hyperlink{classStudent_afd8d4557f2ac6bb7681c32e691248328}{mi} >> s.\hyperlink{classStudent_aa7181a8aac86888176481f901bee2cbd}{ssn} >> s.\hyperlink{classStudent_a552a431a43ffc545d180424597d51f97}{age};
+77 \}
+\end{DoxyCode}

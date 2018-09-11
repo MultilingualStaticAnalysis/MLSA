@@ -1,0 +1,61 @@
+%token <str>STRING
+%token <str>NODE
+%token <str>LABEL
+%token <str>ARROW
+
+%{
+	#include <iostream>
+  	#include <string>
+  	#include <vector>
+  	#include <stdio.h>
+  	#include <string.h>
+  	#include "DotParse.h"
+	using namespace std;
+	void yyerror(string);
+	int yylex(void);
+	DotParse parser;
+	union YYSTYPE {
+		int val;
+		char *str;
+	};
+	typedef union YYSTYPE YYSTYPE;
+
+%}
+
+%start input
+%type <str>keywordproductions
+
+%%
+
+input:
+	input chunk
+	|
+	;
+
+chunk:
+	water
+	| keywordproductions
+
+water:
+	keyword
+	| STRING
+
+keywordproductions:
+	NODE LABEL STRING 				{ parser.addNode(string($1), string($3)); }
+	| NODE ARROW NODE				{ parser.addFlow(string($1), string($3)); }
+
+keyword:
+	LABEL
+
+%%
+
+void yyerror(string s) {
+	cerr << s << endl;
+}
+
+int main() {
+	yyparse();
+	parser.createDot();
+	parser.print();
+	return 0;
+}

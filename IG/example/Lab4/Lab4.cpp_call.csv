@@ -1,0 +1,17 @@
+0x310b9c0,GLOBAL,PriorityLock::enter,pthread_mutex_lock,UNOP
+0x310baa0,MEMBER,PriorityLock::enter,OBJ.push,priority_level
+0x310bb98,MEMBER,PriorityLock::enter,std::priority_queue::top
+0x310be20,GLOBAL,PriorityLock::enter,pthread_cond_wait,UNOP,UNOP
+0x310c3d0,MEMBER,PriorityLock::enter,std::priority_queue::size
+0x310d5b0,GLOBAL,PriorityLock::enter,pthread_mutex_unlock,UNOP
+0x310d840,GLOBAL,PriorityLock::exit,pthread_mutex_lock,UNOP
+0x310d8f8,MEMBER,PriorityLock::exit,OBJ.pop
+0x310da50,GLOBAL,PriorityLock::exit,pthread_cond_broadcast,UNOP
+0x310db88,GLOBAL,PriorityLock::exit,pthread_mutex_unlock,UNOP
+0x310f470,MEMBER,ThreadRoutine,PriorityLock::enter,priority_level
+0x3110220,MEMBER,ThreadRoutine,PriorityLock::exit
+0x3112930,GLOBAL,/home/labaccount/11-2-17/mlsa/IG/example/Lab4/Lab4.cpp,rand
+0x3112cf0,GLOBAL,/home/labaccount/11-2-17/mlsa/IG/example/Lab4/Lab4.cpp,ThreadRoutine,UNOP,UNOP
+0x3113000,GLOBAL,/home/labaccount/11-2-17/mlsa/IG/example/Lab4/Lab4.cpp,printf,<< oops pthread_create returned error code %d\n >>,status
+0x31131a0,GLOBAL,/home/labaccount/11-2-17/mlsa/IG/example/Lab4/Lab4.cpp,exit,UNOP
+0x3113570,GLOBAL,/home/labaccount/11-2-17/mlsa/IG/example/Lab4/Lab4.cpp,pthread_join,threads[]

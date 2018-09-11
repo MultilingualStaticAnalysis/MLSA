@@ -1,0 +1,159 @@
+\hypertarget{classSparseMatrix}{}\section{Sparse\+Matrix Class Reference}
+\label{classSparseMatrix}\index{Sparse\+Matrix@{Sparse\+Matrix}}
+
+
+Collaboration diagram for Sparse\+Matrix\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classSparseMatrix__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSparseMatrix_aa4635499909974beecdcf753342a0f15}{Sparse\+Matrix} (int \hyperlink{classSparseMatrix_a4295e15f08092c633480eff6527918ab}{N})
+\item 
+void \hyperlink{classSparseMatrix_a4e3b9721dcd31b6db675ab1fba2a83a3}{store} (int rowindex, int colindex, int value)
+\item 
+int \hyperlink{classSparseMatrix_a2e75c91152fd4f552b010b11aa04a6df}{get} (int rowindex, int colindex)
+\item 
+int \hyperlink{classSparseMatrix_ab81c07a21a8a25c953d9bd37773da4ee}{element\+Count} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classSparseMatrix_a4295e15f08092c633480eff6527918ab}{N}
+\item 
+\hyperlink{classSparseArray}{Sparse\+Array} $\ast$$\ast$ \hyperlink{classSparseMatrix_a20f42dd05e85c614190cd5c61c478ea0}{sparsearray}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Sparse\+Matrix@{Sparse\+Matrix}!Sparse\+Matrix@{Sparse\+Matrix}}
+\index{Sparse\+Matrix@{Sparse\+Matrix}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{\texorpdfstring{Sparse\+Matrix(int N)}{SparseMatrix(int N)}}]{\setlength{\rightskip}{0pt plus 5cm}Sparse\+Matrix\+::\+Sparse\+Matrix (
+\begin{DoxyParamCaption}
+\item[{int}]{N}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSparseMatrix_aa4635499909974beecdcf753342a0f15}{}\label{classSparseMatrix_aa4635499909974beecdcf753342a0f15}
+
+\begin{DoxyCode}
+140         \{
+141             this->\hyperlink{classSparseMatrix_a4295e15f08092c633480eff6527918ab}{N} = \hyperlink{classSparseMatrix_a4295e15f08092c633480eff6527918ab}{N};
+142             \hyperlink{classSparseMatrix_a20f42dd05e85c614190cd5c61c478ea0}{sparsearray} = \textcolor{keyword}{new} \hyperlink{classSparseArray}{SparseArray}* [\hyperlink{classSparseMatrix_a4295e15f08092c633480eff6527918ab}{N}];
+143             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} index = 0; index < \hyperlink{classSparseMatrix_a4295e15f08092c633480eff6527918ab}{N}; index++)
+144             \{
+145                 \hyperlink{classSparseMatrix_a20f42dd05e85c614190cd5c61c478ea0}{sparsearray}[index] = \textcolor{keyword}{new} \hyperlink{classSparseArray}{SparseArray}(N);
+146             \}
+147         \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Sparse\+Matrix@{Sparse\+Matrix}!element\+Count@{element\+Count}}
+\index{element\+Count@{element\+Count}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{\texorpdfstring{element\+Count()}{elementCount()}}]{\setlength{\rightskip}{0pt plus 5cm}int Sparse\+Matrix\+::element\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSparseMatrix_ab81c07a21a8a25c953d9bd37773da4ee}{}\label{classSparseMatrix_ab81c07a21a8a25c953d9bd37773da4ee}
+
+\begin{DoxyCode}
+178         \{
+179             \textcolor{keywordtype}{int} count = 0;
+180             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} index = 0; index < \hyperlink{classSparseMatrix_a4295e15f08092c633480eff6527918ab}{N}; index++)
+181             \{
+182                 count += \hyperlink{classSparseMatrix_a20f42dd05e85c614190cd5c61c478ea0}{sparsearray}[index]->\hyperlink{classSparseArray_a73aa431df6e8d5dfeea682d9e2016acd}{elementCount}();
+183             \}
+184             \textcolor{keywordflow}{return} count;
+185         \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSparseMatrix_ab81c07a21a8a25c953d9bd37773da4ee_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sparse\+Matrix@{Sparse\+Matrix}!get@{get}}
+\index{get@{get}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{\texorpdfstring{get(int rowindex, int colindex)}{get(int rowindex, int colindex)}}]{\setlength{\rightskip}{0pt plus 5cm}int Sparse\+Matrix\+::get (
+\begin{DoxyParamCaption}
+\item[{int}]{rowindex, }
+\item[{int}]{colindex}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSparseMatrix_a2e75c91152fd4f552b010b11aa04a6df}{}\label{classSparseMatrix_a2e75c91152fd4f552b010b11aa04a6df}
+
+\begin{DoxyCode}
+164         \{
+165             \textcolor{keywordflow}{if} (rowindex < 0 || colindex > \hyperlink{classSparseMatrix_a4295e15f08092c633480eff6527918ab}{N})
+166             \{
+167                 cout<<\textcolor{stringliteral}{"row index out of bounds"}<<endl;
+168                 \textcolor{keywordflow}{return} 0;
+169             \}
+170             \textcolor{keywordflow}{if} (rowindex < 0 || colindex > N)
+171             \{
+172                 cout<<\textcolor{stringliteral}{"col index out of bounds"}<<endl;
+173                 \textcolor{keywordflow}{return} 0;
+174             \}
+175             \textcolor{keywordflow}{return} (\hyperlink{classSparseMatrix_a20f42dd05e85c614190cd5c61c478ea0}{sparsearray}[rowindex]->fetch(colindex));
+176         \}
+\end{DoxyCode}
+\index{Sparse\+Matrix@{Sparse\+Matrix}!store@{store}}
+\index{store@{store}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{\texorpdfstring{store(int rowindex, int colindex, int value)}{store(int rowindex, int colindex, int value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sparse\+Matrix\+::store (
+\begin{DoxyParamCaption}
+\item[{int}]{rowindex, }
+\item[{int}]{colindex, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSparseMatrix_a4e3b9721dcd31b6db675ab1fba2a83a3}{}\label{classSparseMatrix_a4e3b9721dcd31b6db675ab1fba2a83a3}
+
+\begin{DoxyCode}
+149         \{
+150             \textcolor{keywordflow}{if} (rowindex < 0 || rowindex > \hyperlink{classSparseMatrix_a4295e15f08092c633480eff6527918ab}{N})
+151             \{
+152                 cout<<\textcolor{stringliteral}{"row index out of bounds"}<<endl;
+153                 \textcolor{keywordflow}{return};
+154             \}
+155             \textcolor{keywordflow}{if} (colindex < 0 || colindex > N)
+156             \{
+157                 cout<<\textcolor{stringliteral}{"col index out of bounds"}<<endl;
+158                 \textcolor{keywordflow}{return};
+159             \}
+160             \hyperlink{classSparseMatrix_a20f42dd05e85c614190cd5c61c478ea0}{sparsearray}[rowindex]->\hyperlink{classSparseArray_a9950c0e59ecf391266e1031863b18984}{store}(colindex, value);
+161         \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSparseMatrix_a4e3b9721dcd31b6db675ab1fba2a83a3_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Sparse\+Matrix@{Sparse\+Matrix}!N@{N}}
+\index{N@{N}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{\texorpdfstring{N}{N}}]{\setlength{\rightskip}{0pt plus 5cm}int Sparse\+Matrix\+::N\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSparseMatrix_a4295e15f08092c633480eff6527918ab}{}\label{classSparseMatrix_a4295e15f08092c633480eff6527918ab}
+\index{Sparse\+Matrix@{Sparse\+Matrix}!sparsearray@{sparsearray}}
+\index{sparsearray@{sparsearray}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{\texorpdfstring{sparsearray}{sparsearray}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sparse\+Array}$\ast$$\ast$ Sparse\+Matrix\+::sparsearray\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSparseMatrix_a20f42dd05e85c614190cd5c61c478ea0}{}\label{classSparseMatrix_a20f42dd05e85c614190cd5c61c478ea0}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{SparseMatrix_8cpp}{Sparse\+Matrix.\+cpp}\end{DoxyCompactItemize}

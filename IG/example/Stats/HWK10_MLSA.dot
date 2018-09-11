@@ -1,0 +1,39 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/HWK10 Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/HWK10 Call Graph"
+	];
+
+	Node0x612325679 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/HWK10/HWK10_main.c"];
+	Node0x160166300 [shape=oval, label="0x2e09400. (/home/labaccount/11-2-17/mlsa/IG/example/HWK10/HWK10_main.c)\ngetStringArray(<< unsorted.dat >>, linearray, 2000)"];
+	Node0x612325679 -> Node0x160166300;
+	Node0x277966371 [shape=oval, label="0x2e09620. (/home/labaccount/11-2-17/mlsa/IG/example/HWK10/HWK10_main.c)\nprintf(<< The unsorted.dat file is empty. Good bye.\n >>)"];
+	Node0x612325679 -> Node0x277966371;
+	Node0x898407812 [shape=oval, label="0x2e09710. (/home/labaccount/11-2-17/mlsa/IG/example/HWK10/HWK10_main.c)\nexit(0)"];
+	Node0x612325679 -> Node0x898407812;
+	Node0x779005175 [shape=oval, label="0x2e09880. (/home/labaccount/11-2-17/mlsa/IG/example/HWK10/HWK10_main.c)\nstringBubble(linearray, n)"];
+	Node0x612325679 -> Node0x779005175;
+	Node0x442517182 [shape=oval, label="0x2e09a60. (/home/labaccount/11-2-17/mlsa/IG/example/HWK10/HWK10_main.c)\nwriteStringArray(<< sorted.dat >>, linearray, n)"];
+	Node0x612325679 -> Node0x442517182;
+	Node0x743921953 [shape=oval, label="0x2e09c50. (/home/labaccount/11-2-17/mlsa/IG/example/HWK10/HWK10_main.c)\nfopen(<< who.dat >>, << r >>)"];
+	Node0x612325679 -> Node0x743921953;
+	Node0x963174509 [shape=oval, label="0x2e09ec0. (/home/labaccount/11-2-17/mlsa/IG/example/HWK10/HWK10_main.c)\nperror(<< fopen >>)"];
+	Node0x612325679 -> Node0x963174509;
+	Node0x765543179 [shape=oval, label="0x2e09f80. (/home/labaccount/11-2-17/mlsa/IG/example/HWK10/HWK10_main.c)\nexit(1)"];
+	Node0x612325679 -> Node0x765543179;
+	Node0x369454542 [shape=oval, label="0x2e0a118. (/home/labaccount/11-2-17/mlsa/IG/example/HWK10/HWK10_main.c)\nfopen(<< answers.dat >>, << w >>)"];
+	Node0x612325679 -> Node0x369454542;
+	Node0x710015735 [shape=oval, label="0x2e0a320. (/home/labaccount/11-2-17/mlsa/IG/example/HWK10/HWK10_main.c)\nperror(<< fopen >>)"];
+	Node0x612325679 -> Node0x710015735;
+	Node0x253837899 [shape=oval, label="0x2e0a3e0. (/home/labaccount/11-2-17/mlsa/IG/example/HWK10/HWK10_main.c)\nexit(1)"];
+	Node0x612325679 -> Node0x253837899;
+	Node0x847527558 [shape=oval, label="0x2e0a7f0. (/home/labaccount/11-2-17/mlsa/IG/example/HWK10/HWK10_main.c)\nstringBinary(linearray, n, who)"];
+	Node0x612325679 -> Node0x847527558;
+	Node0x520835115 [shape=oval, label="0x2e0c9d0. (/home/labaccount/11-2-17/mlsa/IG/example/HWK10/HWK10_main.c)\nfprintf(fda, << %d\n >>, where)"];
+	Node0x612325679 -> Node0x520835115;
+	Node0x667608520 [shape=oval, label="0x2e0cb80. (/home/labaccount/11-2-17/mlsa/IG/example/HWK10/HWK10_main.c)\nfclose(fdw)"];
+	Node0x612325679 -> Node0x667608520;
+	Node0x551169046 [shape=oval, label="0x2e0cc30. (/home/labaccount/11-2-17/mlsa/IG/example/HWK10/HWK10_main.c)\nfclose(fda)"];
+	Node0x612325679 -> Node0x551169046;
+}

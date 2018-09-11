@@ -1,0 +1,56 @@
+\hypertarget{Amain_8cpp}{}\section{Amain.\+cpp File Reference}
+\label{Amain_8cpp}\index{Amain.\+cpp@{Amain.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}Account.\+h\char`\"{}}\\*
+Include dependency graph for Amain.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{Amain_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Amain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Amain.\+cpp@{Amain.\+cpp}!main@{main}}
+\index{main@{main}!Amain.\+cpp@{Amain.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Amain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Amain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+7            \{
+8     \hyperlink{classAccount}{Account} a1(8111, 99.99);
+9     a1.print();     \textcolor{comment}{// A/C no: 8111 Balance=$99.99}
+10     a1.credit(20);
+11     a1.debit(10);
+12     a1.print();     \textcolor{comment}{// A/C no: 8111 Balance=$109.99}
+13  
+14     \hyperlink{classAccount}{Account} a2(8222);  \textcolor{comment}{// default balance}
+15     a2.print();        \textcolor{comment}{// A/C no: 8222 Balance=$0.00}
+16     a2.setBalance(100);
+17     a2.credit(20);
+18     a2.debit(200);  \textcolor{comment}{// Amount withdrawn exceeds the current balance!}
+19     a2.print();     \textcolor{comment}{// A/C no: 8222 Balance=$120.00}
+20     \textcolor{keywordflow}{return} 0;
+21 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Amain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

@@ -1,0 +1,80 @@
+\hypertarget{PQmain_8cpp}{}\section{P\+Qmain.\+cpp File Reference}
+\label{PQmain_8cpp}\index{P\+Qmain.\+cpp@{P\+Qmain.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$cstddef$>$}\\*
+{\ttfamily \#include \char`\"{}Queue.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Priority\+Queue.\+h\char`\"{}}\\*
+Include dependency graph for P\+Qmain.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PQmain_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{PQmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{P\+Qmain.\+cpp@{P\+Qmain.\+cpp}!main@{main}}
+\index{main@{main}!P\+Qmain.\+cpp@{P\+Qmain.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{PQmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{PQmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+14 \{
+15    \hyperlink{classqueuesavitch_1_1Queue}{Queue} q;
+16    q.\hyperlink{classqueuesavitch_1_1Queue_a5f208f5455b566a5ddf3bb4a7869cb31}{add}(3);
+17    q.\hyperlink{classqueuesavitch_1_1Queue_a5f208f5455b566a5ddf3bb4a7869cb31}{add}(9);
+18    q.\hyperlink{classqueuesavitch_1_1Queue_a5f208f5455b566a5ddf3bb4a7869cb31}{add}(72);
+19    q.\hyperlink{classqueuesavitch_1_1Queue_a5f208f5455b566a5ddf3bb4a7869cb31}{add}(825);
+20    q.\hyperlink{classqueuesavitch_1_1Queue_a5f208f5455b566a5ddf3bb4a7869cb31}{add}(0);
+21    q.\hyperlink{classqueuesavitch_1_1Queue_a5f208f5455b566a5ddf3bb4a7869cb31}{add}(52);
+22 
+23    cout << \textcolor{stringliteral}{"A queue filled with random numbers: \(\backslash\)n"};
+24    cout << q.\hyperlink{classqueuesavitch_1_1Queue_a607e9543f593526aee0d6a403a4ce775}{remove}() << endl;
+25    cout << q.\hyperlink{classqueuesavitch_1_1Queue_a607e9543f593526aee0d6a403a4ce775}{remove}() << endl;
+26    cout << q.\hyperlink{classqueuesavitch_1_1Queue_a607e9543f593526aee0d6a403a4ce775}{remove}() << endl;
+27    cout << q.\hyperlink{classqueuesavitch_1_1Queue_a607e9543f593526aee0d6a403a4ce775}{remove}() << endl;
+28    cout << q.\hyperlink{classqueuesavitch_1_1Queue_a607e9543f593526aee0d6a403a4ce775}{remove}() << endl;
+29    cout << q.\hyperlink{classqueuesavitch_1_1Queue_a607e9543f593526aee0d6a403a4ce775}{remove}() << endl;
+30 
+31    \hyperlink{classqueuesavitch_1_1PriorityQueue}{PriorityQueue} pq;
+32    pq.\hyperlink{classqueuesavitch_1_1Queue_a5f208f5455b566a5ddf3bb4a7869cb31}{add}(3);
+33    pq.\hyperlink{classqueuesavitch_1_1Queue_a5f208f5455b566a5ddf3bb4a7869cb31}{add}(9);
+34    pq.\hyperlink{classqueuesavitch_1_1Queue_a5f208f5455b566a5ddf3bb4a7869cb31}{add}(72);
+35    pq.\hyperlink{classqueuesavitch_1_1Queue_a5f208f5455b566a5ddf3bb4a7869cb31}{add}(825);
+36    pq.\hyperlink{classqueuesavitch_1_1Queue_a5f208f5455b566a5ddf3bb4a7869cb31}{add}(0);
+37    pq.\hyperlink{classqueuesavitch_1_1Queue_a5f208f5455b566a5ddf3bb4a7869cb31}{add}(52);
+38 
+39    cout << endl << \textcolor{stringliteral}{"A priority queue filled with the same numbers: \(\backslash\)n"};
+40    cout << pq.\hyperlink{classqueuesavitch_1_1PriorityQueue_aabec9a46c41b0601f05f55a7894d20e1}{remove}() << endl;
+41    cout << pq.\hyperlink{classqueuesavitch_1_1PriorityQueue_aabec9a46c41b0601f05f55a7894d20e1}{remove}() << endl;
+42    cout << pq.\hyperlink{classqueuesavitch_1_1PriorityQueue_aabec9a46c41b0601f05f55a7894d20e1}{remove}() << endl;
+43    cout << pq.\hyperlink{classqueuesavitch_1_1PriorityQueue_aabec9a46c41b0601f05f55a7894d20e1}{remove}() << endl;
+44    cout << pq.\hyperlink{classqueuesavitch_1_1PriorityQueue_aabec9a46c41b0601f05f55a7894d20e1}{remove}() << endl;
+45    cout << pq.\hyperlink{classqueuesavitch_1_1PriorityQueue_aabec9a46c41b0601f05f55a7894d20e1}{remove}() << endl;
+46 
+47    \textcolor{keywordflow}{return} 0;
+48 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PQmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

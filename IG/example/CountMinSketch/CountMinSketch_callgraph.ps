@@ -1,0 +1,1066 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.38.0 (20140413.2041)
+%%Title: /home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch Call Graph
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 150 150 2400 1240
+%%PageOrientation: Portrait
+<< /PageSize [2400 1240] >> setpagedevice
+0 0 1 beginpage
+gsave
+150 150 2250 1090 boxprim clip newpath
+0.997381 0.997381 set_scale 0 rotate 154.394 154.394 translate
+[ /CropBox [150 150 2400 1240] /PAGES pdfmark
+0 0 0 graphcolor
+14 /Times-Roman set_font
+922.45 7.8 moveto 403 (/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch Call Graph) alignedtext
+% Node0x978224601
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+308.72 661.87 308.95 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+79.22 658.17 moveto 459 (/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp) alignedtext
+grestore
+% Node0x641738673
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1043.06 1057.87 388.82 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+776.06 1061.67 moveto 534 (0x3aea300. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+993.56 1046.67 moveto 99 (OBJ.find\(ar_str[]\)) alignedtext
+grestore
+% Node0x978224601->Node0x641738673
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 320.22 679.96 moveto
+356.83 741.11 485.8 940.8 653.45 1021.87 curveto
+668.61 1029.21 684.5 1035.46 700.83 1040.76 curveto
+stroke
+0 0 0 edgecolor
+newpath 699.9 1044.14 moveto
+710.49 1043.78 lineto
+701.99 1037.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 699.9 1044.14 moveto
+710.49 1043.78 lineto
+701.99 1037.46 lineto
+closepath stroke
+grestore
+% Node0x408194598
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1043.06 985.87 388.82 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+776.06 989.67 moveto 534 (0x3aec0b8. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1014.56 974.67 moveto 57 (OBJ.end\(\)) alignedtext
+grestore
+% Node0x978224601->Node0x408194598
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 324.1 679.95 moveto
+367.28 732.74 502.18 886.82 653.45 949.87 curveto
+671.02 957.2 689.42 963.35 708.25 968.49 curveto
+stroke
+0 0 0 edgecolor
+newpath 707.57 971.93 moveto
+718.14 971.09 lineto
+709.36 965.16 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 707.57 971.93 moveto
+718.14 971.09 lineto
+709.36 965.16 lineto
+closepath stroke
+grestore
+% Node0x943732952
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1043.06 913.87 389.73 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+775.56 917.67 moveto 535 (0x3aed730. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+944.56 902.67 moveto 197 (CountMinSketch::update\(ar_str[], i\)) alignedtext
+grestore
+% Node0x978224601->Node0x943732952
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 330.4 679.91 moveto
+381.21 723.04 517.94 831.95 653.45 877.87 curveto
+674.55 885.02 696.64 890.93 719.12 895.79 curveto
+stroke
+0 0 0 edgecolor
+newpath 718.62 899.27 moveto
+729.13 897.89 lineto
+720.05 892.41 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 718.62 899.27 moveto
+729.13 897.89 lineto
+720.05 892.41 lineto
+closepath stroke
+grestore
+% Node0x408159338
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1043.06 841.87 388.82 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+776.06 845.67 moveto 534 (0x3aeda08. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1009.56 830.67 moveto 67 (OBJ.begin\(\)) alignedtext
+grestore
+% Node0x978224601->Node0x408159338
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 343.17 679.96 moveto
+403.3 711.54 534.49 776.18 653.45 805.87 curveto
+680.72 812.68 709.36 818.22 738.2 822.74 curveto
+stroke
+0 0 0 edgecolor
+newpath 738 826.24 moveto
+748.41 824.29 lineto
+739.05 819.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 738 826.24 moveto
+748.41 824.29 lineto
+739.05 819.32 lineto
+closepath stroke
+grestore
+% Node0x648363854
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1043.06 769.87 388.82 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+776.06 773.67 moveto 534 (0x3aedc70. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1014.56 758.67 moveto 57 (OBJ.end\(\)) alignedtext
+grestore
+% Node0x978224601->Node0x648363854
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 381.38 679.37 moveto
+450.61 695.69 558.64 719.6 653.45 733.87 curveto
+691.66 739.62 732.14 744.6 771.98 748.86 curveto
+stroke
+0 0 0 edgecolor
+newpath 771.78 752.36 moveto
+782.09 749.93 lineto
+772.52 745.4 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 771.78 752.36 moveto
+782.09 749.93 lineto
+772.52 745.4 lineto
+closepath stroke
+grestore
+% Node0x170580226
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1043.06 697.87 388.4 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+776.56 701.67 moveto 533 (0x3aee3c0. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+948.56 686.67 moveto 189 (CountMinSketch::estimate\(it.first\)) alignedtext
+grestore
+% Node0x978224601->Node0x170580226
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 545.22 673.45 moveto
+599.56 676.12 658.32 679.01 715.76 681.83 curveto
+stroke
+0 0 0 edgecolor
+newpath 715.93 685.34 moveto
+726.09 682.34 lineto
+716.28 678.35 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 715.93 685.34 moveto
+726.09 682.34 lineto
+716.28 678.35 lineto
+closepath stroke
+grestore
+% Node0x994986324
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1043.06 625.87 386.57 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+777.56 629.67 moveto 531 (0x3aefcc0. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1009.06 614.67 moveto 68 (abs\(BINOP\)) alignedtext
+grestore
+% Node0x978224601->Node0x994986324
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 545.22 650.29 moveto
+599.87 647.61 659 644.7 716.75 641.86 curveto
+stroke
+0 0 0 edgecolor
+newpath 716.94 645.36 moveto
+726.75 641.37 lineto
+716.6 638.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 716.94 645.36 moveto
+726.75 641.37 lineto
+716.6 638.37 lineto
+closepath stroke
+grestore
+% Node0x688100701
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1043.06 553.87 387.49 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+777.06 557.67 moveto 532 (0x3aef4b8. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+948.56 542.67 moveto 189 (CountMinSketch::estimate\(it.first\)) alignedtext
+grestore
+% Node0x978224601->Node0x688100701
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 381.38 644.37 moveto
+450.61 628.05 558.64 604.14 653.45 589.87 curveto
+691.74 584.1 732.31 579.12 772.22 574.85 curveto
+stroke
+0 0 0 edgecolor
+newpath 772.78 578.31 moveto
+782.36 573.78 lineto
+772.04 571.35 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 772.78 578.31 moveto
+782.36 573.78 lineto
+772.04 571.35 lineto
+closepath stroke
+grestore
+% Node0x921015483
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1043.06 445.87 388.4 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+776.56 449.67 moveto 533 (0x3af1bd0. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+948.56 434.67 moveto 189 (CountMinSketch::estimate\(it.first\)) alignedtext
+grestore
+% Node0x978224601->Node0x921015483
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 345.41 643.91 moveto
+406.85 613.68 537.2 552.55 653.45 517.87 curveto
+719.27 498.23 793.04 482.94 858.48 471.6 curveto
+stroke
+0 0 0 edgecolor
+newpath 859.22 475.02 moveto
+868.49 469.89 lineto
+858.04 468.13 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 859.22 475.02 moveto
+868.49 469.89 lineto
+858.04 468.13 lineto
+closepath stroke
+grestore
+% Node0x155950625
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1043.06 373.87 388.4 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+776.56 377.67 moveto 533 (0x3af30b8. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+961.06 362.67 moveto 164 (CountMinSketch::totalcount\(\)) alignedtext
+grestore
+% Node0x978224601->Node0x155950625
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 326.94 643.68 moveto
+373.89 595.43 510.23 464.19 653.45 409.87 curveto
+672.72 402.56 692.91 396.48 713.52 391.43 curveto
+stroke
+0 0 0 edgecolor
+newpath 714.41 394.82 moveto
+723.34 389.12 lineto
+712.8 388.01 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 714.41 394.82 moveto
+723.34 389.12 lineto
+712.8 388.01 lineto
+closepath stroke
+grestore
+% Node0x961649366
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1043.06 301.87 388.4 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+776.56 305.67 moveto 533 (0x3af4418. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+961.06 290.67 moveto 164 (CountMinSketch::totalcount\(\)) alignedtext
+grestore
+% Node0x978224601->Node0x961649366
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 322.08 643.6 moveto
+362.01 586.32 494.25 409.75 653.45 337.87 curveto
+669.79 330.49 686.92 324.25 704.48 318.99 curveto
+stroke
+0 0 0 edgecolor
+newpath 705.63 322.3 moveto
+714.28 316.17 lineto
+703.7 315.58 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 705.63 322.3 moveto
+714.28 316.17 lineto
+703.7 315.58 lineto
+closepath stroke
+grestore
+% Node0x354055367
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1043.06 157.87 387.49 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+777.06 161.67 moveto 532 (0x3af6be8. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+942.06 146.67 moveto 202 (CountMinSketch::estimate\(arn_str[]\)) alignedtext
+grestore
+% Node0x978224601->Node0x354055367
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 320.1 643.58 moveto
+356.8 580.61 487.21 370.91 653.45 265.87 curveto
+716.77 225.86 795.02 200.43 864.68 184.38 curveto
+stroke
+0 0 0 edgecolor
+newpath 865.46 187.79 moveto
+874.45 182.18 lineto
+863.92 180.96 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 865.46 187.79 moveto
+874.45 182.18 lineto
+863.92 180.96 lineto
+closepath stroke
+grestore
+% Node0x602712131
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1858.29 985.87 389.73 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1590.79 989.67 moveto 535 (0x3abdeb0. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1777.29 974.67 moveto 162 (CountMinSketch::hashstr\(str\)) alignedtext
+grestore
+% Node0x943732952->Node0x602712131
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1283.11 935.03 moveto
+1385.26 944.08 1504.51 954.64 1607.79 963.78 curveto
+stroke
+0 0 0 edgecolor
+newpath 1607.78 967.29 moveto
+1618.05 964.69 lineto
+1608.4 960.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1607.78 967.29 moveto
+1618.05 964.69 lineto
+1608.4 960.32 lineto
+closepath stroke
+grestore
+% Node0x769872288
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1858.29 913.87 389.73 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1590.79 917.67 moveto 535 (0x3abe050. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1757.79 902.67 moveto 201 (CountMinSketch::update\(hashval, c\)) alignedtext
+grestore
+% Node0x943732952->Node0x769872288
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1432.81 913.87 moveto
+1441.4 913.87 1449.99 913.87 1458.59 913.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1458.67 917.37 moveto
+1468.67 913.87 lineto
+1458.67 910.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1458.67 917.37 moveto
+1468.67 913.87 lineto
+1458.67 910.37 lineto
+closepath stroke
+grestore
+% Node0x409924598
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1858.29 841.87 389.73 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1590.79 845.67 moveto 535 (0x3abe290. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1841.29 830.67 moveto 34 (max\(\)) alignedtext
+grestore
+% Node0x170580226->Node0x409924598
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1389.53 710.16 moveto
+1404.63 716.76 1419.11 724.6 1432.68 733.87 curveto
+1462.21 754.06 1439.14 785.68 1468.68 805.87 curveto
+1479.27 813.11 1490.42 819.48 1501.99 825.06 curveto
+stroke
+0 0 0 edgecolor
+newpath 1500.81 828.37 moveto
+1511.36 829.38 lineto
+1503.74 822.01 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1500.81 828.37 moveto
+1511.36 829.38 lineto
+1503.74 822.01 lineto
+closepath stroke
+grestore
+% Node0x820742524
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1858.29 769.87 387.49 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1592.29 773.67 moveto 532 (0x3abef90. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1777.29 758.67 moveto 162 (CountMinSketch::hashstr\(str\)) alignedtext
+grestore
+% Node0x170580226->Node0x820742524
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1282.84 719.01 moveto
+1385.33 728.08 1505.07 738.69 1608.63 747.85 curveto
+stroke
+0 0 0 edgecolor
+newpath 1608.33 751.34 moveto
+1618.6 748.74 lineto
+1608.94 744.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1608.33 751.34 moveto
+1618.6 748.74 lineto
+1608.94 744.37 lineto
+closepath stroke
+grestore
+% Node0x512809072
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1858.29 697.87 388.4 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1591.79 701.67 moveto 533 (0x3abf108. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1759.79 686.67 moveto 197 (CountMinSketch::estimate\(hashval\)) alignedtext
+grestore
+% Node0x170580226->Node0x512809072
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1431.33 697.87 moveto
+1440.79 697.87 1450.27 697.87 1459.75 697.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1460.03 701.37 moveto
+1470.03 697.87 lineto
+1460.03 694.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1460.03 701.37 moveto
+1470.03 697.87 lineto
+1460.03 694.37 lineto
+closepath stroke
+grestore
+% Node0x254297717
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1858.29 625.87 389.73 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1590.79 629.67 moveto 535 (0x3abe290. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1841.29 614.67 moveto 34 (max\(\)) alignedtext
+grestore
+% Node0x688100701->Node0x254297717
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1282.84 575.01 moveto
+1385 584.05 1504.3 594.62 1607.63 603.77 curveto
+stroke
+0 0 0 edgecolor
+newpath 1607.62 607.28 moveto
+1617.89 604.67 lineto
+1608.24 600.31 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1607.62 607.28 moveto
+1617.89 604.67 lineto
+1608.24 600.31 lineto
+closepath stroke
+grestore
+% Node0x369263836
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1858.29 553.87 387.49 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1592.29 557.67 moveto 532 (0x3abef90. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1777.29 542.67 moveto 162 (CountMinSketch::hashstr\(str\)) alignedtext
+grestore
+% Node0x688100701->Node0x369263836
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1430.73 553.87 moveto
+1440.61 553.87 1450.51 553.87 1460.4 553.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1460.7 557.37 moveto
+1470.7 553.87 lineto
+1460.7 550.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1460.7 557.37 moveto
+1470.7 553.87 lineto
+1460.7 550.37 lineto
+closepath stroke
+grestore
+% Node0x934121758
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1858.29 481.87 388.4 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1591.79 485.67 moveto 533 (0x3abf108. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1759.79 470.67 moveto 197 (CountMinSketch::estimate\(hashval\)) alignedtext
+grestore
+% Node0x688100701->Node0x934121758
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1282.84 532.73 moveto
+1385.21 523.67 1504.8 513.08 1608.28 503.92 curveto
+stroke
+0 0 0 edgecolor
+newpath 1608.59 507.4 moveto
+1618.25 503.03 lineto
+1607.98 500.43 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1608.59 507.4 moveto
+1618.25 503.03 lineto
+1607.98 500.43 lineto
+closepath stroke
+grestore
+% Node0x263898037
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1858.29 409.87 389.73 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1590.79 413.67 moveto 535 (0x3abe290. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1841.29 398.67 moveto 34 (max\(\)) alignedtext
+grestore
+% Node0x921015483->Node0x263898037
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1370.44 431.42 moveto
+1419.62 429.24 1470.43 427 1519.84 424.81 curveto
+stroke
+0 0 0 edgecolor
+newpath 1520.2 428.3 moveto
+1530.03 424.36 lineto
+1519.89 421.3 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1520.2 428.3 moveto
+1530.03 424.36 lineto
+1519.89 421.3 lineto
+closepath stroke
+grestore
+% Node0x707348324
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1858.29 337.87 387.49 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1592.29 341.67 moveto 532 (0x3abef90. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1777.29 326.67 moveto 162 (CountMinSketch::hashstr\(str\)) alignedtext
+grestore
+% Node0x921015483->Node0x707348324
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1373.9 431.72 moveto
+1394.2 425.85 1413.97 418.65 1432.68 409.87 curveto
+1453.16 400.25 1448.19 383.49 1468.68 373.87 curveto
+1484.31 366.53 1500.69 360.29 1517.51 355.02 curveto
+stroke
+0 0 0 edgecolor
+newpath 1518.89 358.25 moveto
+1527.46 352.02 lineto
+1516.87 351.55 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1518.89 358.25 moveto
+1527.46 352.02 lineto
+1516.87 351.55 lineto
+closepath stroke
+grestore
+% Node0x785418507
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1858.29 265.87 388.4 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1591.79 269.67 moveto 533 (0x3abf108. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1759.79 254.67 moveto 197 (CountMinSketch::estimate\(hashval\)) alignedtext
+grestore
+% Node0x921015483->Node0x785418507
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1394.39 434.3 moveto
+1407.89 427.43 1420.73 419.35 1432.68 409.87 curveto
+1472.31 378.42 1429.04 333.32 1468.68 301.87 curveto
+1477.91 294.54 1487.69 288.04 1497.89 282.29 curveto
+stroke
+0 0 0 edgecolor
+newpath 1499.8 285.24 moveto
+1506.96 277.44 lineto
+1496.49 279.07 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1499.8 285.24 moveto
+1506.96 277.44 lineto
+1496.49 279.07 lineto
+closepath stroke
+grestore
+% Node0x271601494
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1858.29 193.87 389.73 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1590.79 197.67 moveto 535 (0x3abe290. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1841.29 182.67 moveto 34 (max\(\)) alignedtext
+grestore
+% Node0x354055367->Node0x271601494
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1370.15 172.31 moveto
+1419.34 174.48 1470.18 176.73 1519.61 178.92 curveto
+stroke
+0 0 0 edgecolor
+newpath 1519.66 182.43 moveto
+1529.81 179.37 lineto
+1519.97 175.43 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1519.66 182.43 moveto
+1529.81 179.37 lineto
+1519.97 175.43 lineto
+closepath stroke
+grestore
+% Node0x756435892
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1858.29 121.87 387.49 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1592.29 125.67 moveto 532 (0x3abef90. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1777.29 110.67 moveto 162 (CountMinSketch::hashstr\(str\)) alignedtext
+grestore
+% Node0x354055367->Node0x756435892
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1370.15 143.43 moveto
+1419.76 141.24 1471.03 138.97 1520.86 136.76 curveto
+stroke
+0 0 0 edgecolor
+newpath 1521.3 140.25 moveto
+1531.13 136.31 lineto
+1520.99 133.25 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1521.3 140.25 moveto
+1531.13 136.31 lineto
+1520.99 133.25 lineto
+closepath stroke
+grestore
+% Node0x610609203
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1858.29 49.87 388.4 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1591.79 53.67 moveto 533 (0x3abf108. \(/home/labaccount/11-2-17/mlsa/IG/example/CountMinSketch/CountMinSketch.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1759.79 38.67 moveto 197 (CountMinSketch::estimate\(hashval\)) alignedtext
+grestore
+% Node0x354055367->Node0x610609203
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1177.54 132.57 moveto
+1260.98 117.42 1370.82 98.68 1468.68 85.87 curveto
+1509.81 80.48 1553.5 75.62 1596.17 71.33 curveto
+stroke
+0 0 0 edgecolor
+newpath 1596.52 74.81 moveto
+1606.12 70.33 lineto
+1595.83 67.84 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1596.52 74.81 moveto
+1606.12 70.33 lineto
+1595.83 67.84 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 150 150 2400 1240
+end
+restore
+%%EOF

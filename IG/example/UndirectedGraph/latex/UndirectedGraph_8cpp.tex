@@ -1,0 +1,72 @@
+\hypertarget{UndirectedGraph_8cpp}{}\section{Undirected\+Graph.\+cpp File Reference}
+\label{UndirectedGraph_8cpp}\index{Undirected\+Graph.\+cpp@{Undirected\+Graph.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include $<$queue$>$}\\*
+Include dependency graph for Undirected\+Graph.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{UndirectedGraph_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classGraph}{Graph}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{UndirectedGraph_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Undirected\+Graph.\+cpp@{Undirected\+Graph.\+cpp}!main@{main}}
+\index{main@{main}!Undirected\+Graph.\+cpp@{Undirected\+Graph.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{UndirectedGraph_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{UndirectedGraph_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+101 \{
+102     \hyperlink{classGraph}{Graph} g(4);
+103     g.addEdge(0, 1);
+104     g.addEdge(0, 2);
+105     g.addEdge(1, 2);
+106     g.addEdge(2, 3);
+107     g.addEdge(3, 3);
+108     \textcolor{keywordflow}{if} (g.isConnected())
+109         cout<<\textcolor{stringliteral}{"The Graph is Connected"}<<endl;
+110     \textcolor{keywordflow}{else}
+111         cout<<\textcolor{stringliteral}{"The Graph is not Connected"}<<endl;
+112  
+113     \hyperlink{classGraph}{Graph} g1(5);
+114     g1.addEdge(0, 1);
+115     g1.addEdge(1, 2);
+116     g1.addEdge(2, 3);
+117     g1.addEdge(3, 0);
+118     g1.addEdge(2, 4);
+119     g1.addEdge(4, 2);
+120     \textcolor{keywordflow}{if} (g1.isConnected())
+121         cout<<\textcolor{stringliteral}{"The Graph is Connected"}<<endl;
+122     \textcolor{keywordflow}{else}
+123         cout<<\textcolor{stringliteral}{"The Graph is not Connected"}<<endl;
+124     \textcolor{keywordflow}{return} 0;
+125 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{UndirectedGraph_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

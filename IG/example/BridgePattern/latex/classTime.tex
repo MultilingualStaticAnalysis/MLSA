@@ -1,0 +1,103 @@
+\hypertarget{classTime}{}\section{Time Class Reference}
+\label{classTime}\index{Time@{Time}}
+
+
+Inheritance diagram for Time\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classTime__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Time\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=135pt]{classTime__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTime_a4245e409c7347d1d671858962c2ca3b5}{Time} ()
+\item 
+\hyperlink{classTime_a5c41c11dec04077f6827ee6307f8fce5}{Time} (int hr, int min)
+\item 
+virtual void \hyperlink{classTime_acf77dbaf68fc0ac9cdd238ecf9221c58}{tell} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTimeImp}{Time\+Imp} $\ast$ \hyperlink{classTime_aff6dd04cd8d4defb86a0153c17cfe6b9}{imp\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Time@{Time}!Time@{Time}}
+\index{Time@{Time}!Time@{Time}}
+\subsubsection[{\texorpdfstring{Time()}{Time()}}]{\setlength{\rightskip}{0pt plus 5cm}Time\+::\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classTime_a4245e409c7347d1d671858962c2ca3b5}{}\label{classTime_a4245e409c7347d1d671858962c2ca3b5}
+
+\begin{DoxyCode}
+55 \{\}
+\end{DoxyCode}
+\index{Time@{Time}!Time@{Time}}
+\index{Time@{Time}!Time@{Time}}
+\subsubsection[{\texorpdfstring{Time(int hr, int min)}{Time(int hr, int min)}}]{\setlength{\rightskip}{0pt plus 5cm}Time\+::\+Time (
+\begin{DoxyParamCaption}
+\item[{int}]{hr, }
+\item[{int}]{min}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classTime_a5c41c11dec04077f6827ee6307f8fce5}{}\label{classTime_a5c41c11dec04077f6827ee6307f8fce5}
+
+\begin{DoxyCode}
+56                           \{
+57         \hyperlink{classTime_aff6dd04cd8d4defb86a0153c17cfe6b9}{imp\_} = \textcolor{keyword}{new} \hyperlink{classTimeImp}{TimeImp}(hr, min);
+58     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{classTime_a5c41c11dec04077f6827ee6307f8fce5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Time@{Time}!tell@{tell}}
+\index{tell@{tell}!Time@{Time}}
+\subsubsection[{\texorpdfstring{tell()}{tell()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Time\+::tell (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classTime_acf77dbaf68fc0ac9cdd238ecf9221c58}{}\label{classTime_acf77dbaf68fc0ac9cdd238ecf9221c58}
+
+\begin{DoxyCode}
+59                         \{
+60         \hyperlink{classTime_aff6dd04cd8d4defb86a0153c17cfe6b9}{imp\_}->\hyperlink{classTimeImp_a266929eda5b78be282a9872b7785557b}{tell}();
+61     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Time@{Time}!imp\+\_\+@{imp\+\_\+}}
+\index{imp\+\_\+@{imp\+\_\+}!Time@{Time}}
+\subsubsection[{\texorpdfstring{imp\+\_\+}{imp_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Imp}$\ast$ Time\+::imp\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classTime_aff6dd04cd8d4defb86a0153c17cfe6b9}{}\label{classTime_aff6dd04cd8d4defb86a0153c17cfe6b9}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{BridgePattern_8cpp}{Bridge\+Pattern.\+cpp}\end{DoxyCompactItemize}

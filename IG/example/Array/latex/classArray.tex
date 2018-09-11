@@ -1,0 +1,404 @@
+\hypertarget{classArray}{}\section{Array$<$ T $>$ Class Template Reference}
+\label{classArray}\index{Array$<$ T $>$@{Array$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Array.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classArray_a7503e793980e6d3d5e978fa106a825c2}{Array} (int s=10)
+\item 
+\hyperlink{classArray_ae9c29e5733413ed09e9137f3c8a71d04}{Array} (const \hyperlink{classArray}{Array}$<$ T $>$ \&)
+\item 
+\hyperlink{classArray_aab89a85b1ddb86864096acdcc0db439e}{$\sim$\+Array} ()
+\item 
+const \hyperlink{classArray}{Array}$<$ T $>$ \& \hyperlink{classArray_a0bfa1f9daf4923f45cef66ed086316d7}{operator=} (const \hyperlink{classArray}{Array}$<$ T $>$ \&)
+\item 
+bool \hyperlink{classArray_ad0fb0f6e80dde0d5e293ae6cfd185ee6}{operator==} (const \hyperlink{classArray}{Array}$<$ T $>$ \&) const 
+\item 
+bool \hyperlink{classArray_a6f725ca34538a7dc52d097f6c3223a43}{operator!=} (const \hyperlink{classArray}{Array}$<$ T $>$ \&right) const 
+\item 
+T \& \hyperlink{classArray_a5bae7a87802dbc12faf74956e240c0b2}{operator\mbox{[}$\,$\mbox{]}} (int)
+\item 
+T \hyperlink{classArray_a0628bf2b0fcd81749659bcc0e2caf0e1}{operator\mbox{[}$\,$\mbox{]}} (int) const 
+\item 
+int \hyperlink{classArray_a88b824f494fefe7053adf4a5cf55e7cf}{get\+Size} () const 
+\item 
+T \hyperlink{classArray_aa9850f94775a80016a6ef59e76dac02d}{get\+D\+E\+L\+IM} ()
+\item 
+void \hyperlink{classArray_aebe3687021d31102a7d52e18bedbffbc}{set\+D\+E\+L\+IM} (T d)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T \hyperlink{classArray_ab425400868a291283a14fc228a344bf0}{D\+E\+L\+IM}
+\item 
+int \hyperlink{classArray_a1e2031821065f3fb9bfada13e2d6ab43}{size}
+\item 
+T $\ast$ \hyperlink{classArray_ae2ca81aaef91da786ef75936184a178a}{d\+Arr}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{classArray_a2fd6afd4cbdf9f82047ec1592d655f9a}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+I\+ZE} = 10
+\item 
+static T \hyperlink{classArray_a0aae993b8d3286cb4e8841cd71e1bb78}{i\+Val}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classArray_aa67e154869a1f59b76906d7215b7caff}{operator$<$$<$} (ostream \&output, const \hyperlink{classArray}{Array}$<$ T $>$ \&a)
+\item 
+istream \& \hyperlink{classArray_a6c5c4f2e4fd6da79eec8a53adf3e3f5a}{operator$>$$>$} (istream \&input, \hyperlink{classArray}{Array}$<$ T $>$ \&a)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Array@{Array}!Array@{Array}}
+\index{Array@{Array}!Array@{Array}}
+\subsubsection[{\texorpdfstring{Array(int s=10)}{Array(int s=10)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Array}$<$ T $>$\+::{\bf Array} (
+\begin{DoxyParamCaption}
+\item[{int}]{s = {\ttfamily 10}}
+\end{DoxyParamCaption}
+)}\hypertarget{classArray_a7503e793980e6d3d5e978fa106a825c2}{}\label{classArray_a7503e793980e6d3d5e978fa106a825c2}
+
+\begin{DoxyCode}
+21 \{
+22    \hyperlink{classArray_a1e2031821065f3fb9bfada13e2d6ab43}{size} = s;
+23    \hyperlink{classArray_ae2ca81aaef91da786ef75936184a178a}{dArr} = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[\hyperlink{classArray_a1e2031821065f3fb9bfada13e2d6ab43}{size}];
+24 
+25    \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i = 0; i < \hyperlink{classArray_a1e2031821065f3fb9bfada13e2d6ab43}{size}; i++ )
+26       \hyperlink{classArray_ae2ca81aaef91da786ef75936184a178a}{dArr}[i] = 0;
+27 \}
+\end{DoxyCode}
+\index{Array@{Array}!Array@{Array}}
+\index{Array@{Array}!Array@{Array}}
+\subsubsection[{\texorpdfstring{Array(const Array$<$ T $>$ \&)}{Array(const Array< T > &)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Array}$<$ T $>$\+::{\bf Array} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Array}$<$ T $>$ \&}]{array\+To\+Copy}
+\end{DoxyParamCaption}
+)}\hypertarget{classArray_ae9c29e5733413ed09e9137f3c8a71d04}{}\label{classArray_ae9c29e5733413ed09e9137f3c8a71d04}
+
+\begin{DoxyCode}
+36                                        : \hyperlink{classArray_a1e2031821065f3fb9bfada13e2d6ab43}{size}( arrayToCopy.\hyperlink{classArray_a1e2031821065f3fb9bfada13e2d6ab43}{size} )
+37 \{
+38 
+39    \textcolor{comment}{// Copy every element of the passed array to the                                                        
+                                                                                                       }
+40    \textcolor{comment}{// data member of the array object the function                                                         
+                                                                                                       }
+41    \textcolor{comment}{// was called on.                                                                                       
+                                                                                                       }
+42    \hyperlink{classArray_ae2ca81aaef91da786ef75936184a178a}{dArr} = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[\hyperlink{classArray_a1e2031821065f3fb9bfada13e2d6ab43}{size}];
+43    \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i = 0; i < \hyperlink{classArray_a1e2031821065f3fb9bfada13e2d6ab43}{size}; i++ )
+44       \hyperlink{classArray_ae2ca81aaef91da786ef75936184a178a}{dArr}[i] = arrayToCopy.\hyperlink{classArray_ae2ca81aaef91da786ef75936184a178a}{dArr}[i]; \textcolor{comment}{// copy into object                                           
+                                                                                                               }
+45 \}
+\end{DoxyCode}
+\index{Array@{Array}!````~Array@{$\sim$\+Array}}
+\index{````~Array@{$\sim$\+Array}!Array@{Array}}
+\subsubsection[{\texorpdfstring{$\sim$\+Array()}{~Array()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Array}$<$ T $>$\+::$\sim${\bf Array} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classArray_aab89a85b1ddb86864096acdcc0db439e}{}\label{classArray_aab89a85b1ddb86864096acdcc0db439e}
+
+\begin{DoxyCode}
+48 \{
+49    \textcolor{keywordflow}{if}(\hyperlink{classArray_ae2ca81aaef91da786ef75936184a178a}{dArr})
+50    \{
+51       \textcolor{keyword}{delete}[] \hyperlink{classArray_ae2ca81aaef91da786ef75936184a178a}{dArr};\textcolor{comment}{//deletes dynamically allocated memory of array when program ends                  
+                                                                                                           }
+52       \hyperlink{classArray_ae2ca81aaef91da786ef75936184a178a}{dArr} = NULL;
+53    \}
+54 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Array@{Array}!get\+D\+E\+L\+IM@{get\+D\+E\+L\+IM}}
+\index{get\+D\+E\+L\+IM@{get\+D\+E\+L\+IM}!Array@{Array}}
+\subsubsection[{\texorpdfstring{get\+D\+E\+L\+I\+M()}{getDELIM()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T {\bf Array}$<$ T $>$\+::get\+D\+E\+L\+IM (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classArray_aa9850f94775a80016a6ef59e76dac02d}{}\label{classArray_aa9850f94775a80016a6ef59e76dac02d}
+
+\begin{DoxyCode}
+254 \{
+255    \textcolor{keywordflow}{return}( \hyperlink{classArray_ab425400868a291283a14fc228a344bf0}{DELIM} );
+256 \}
+\end{DoxyCode}
+\index{Array@{Array}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!Array@{Array}}
+\subsubsection[{\texorpdfstring{get\+Size() const }{getSize() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ int {\bf Array}$<$ T $>$\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classArray_a88b824f494fefe7053adf4a5cf55e7cf}{}\label{classArray_a88b824f494fefe7053adf4a5cf55e7cf}
+
+\begin{DoxyCode}
+194 \{
+195    \textcolor{keywordflow}{return} \hyperlink{classArray_a1e2031821065f3fb9bfada13e2d6ab43}{size}; \textcolor{comment}{// number of elements in Array                                                         
+                                                                                                           }
+196 \}
+\end{DoxyCode}
+\index{Array@{Array}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Array@{Array}}
+\subsubsection[{\texorpdfstring{operator"!=(const Array$<$ T $>$ \&right) const }{operator!=(const Array< T > &right) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool {\bf Array}$<$ T $>$\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Array}$<$ T $>$ \&}]{right}
+\end{DoxyParamCaption}
+) const}\hypertarget{classArray_a6f725ca34538a7dc52d097f6c3223a43}{}\label{classArray_a6f725ca34538a7dc52d097f6c3223a43}
+
+\begin{DoxyCode}
+196 \{
+197    \textcolor{keywordflow}{return} ! ( *\textcolor{keyword}{this} == right ); \textcolor{comment}{// invokes Array::operator==                                               
+                                                                                                       }
+198 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{classArray_a6f725ca34538a7dc52d097f6c3223a43_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Array@{Array}!operator=@{operator=}}
+\index{operator=@{operator=}!Array@{Array}}
+\subsubsection[{\texorpdfstring{operator=(const Array$<$ T $>$ \&)}{operator=(const Array< T > &)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const {\bf Array}$<$ T $>$ \& {\bf Array}$<$ T $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Array}$<$ T $>$ \&}]{right}
+\end{DoxyParamCaption}
+)}\hypertarget{classArray_a0bfa1f9daf4923f45cef66ed086316d7}{}\label{classArray_a0bfa1f9daf4923f45cef66ed086316d7}
+
+\begin{DoxyCode}
+62 \{
+63    \hyperlink{classArray_a1e2031821065f3fb9bfada13e2d6ab43}{size} = right.\hyperlink{classArray_a1e2031821065f3fb9bfada13e2d6ab43}{size};
+64 
+65    \textcolor{comment}{// Check to see if the arrays are the same object                                                       
+                                                                                                       }
+66    \textcolor{keywordflow}{if} ( &right != \textcolor{keyword}{this} ) \textcolor{comment}{// this avoids self-assignment                                                    
+                                                                                                       }
+67    \{
+68       \textcolor{keywordflow}{if}(\hyperlink{classArray_ae2ca81aaef91da786ef75936184a178a}{dArr} == NULL)
+69       \{
+70          cerr << \textcolor{stringliteral}{"Error! Dynamic memory not allocated! Abort program!"} << endl << endl;
+71          exit(1);
+72       \}
+73       \textcolor{keywordflow}{else}
+74       \{
+75          \textcolor{keyword}{delete}[] \hyperlink{classArray_ae2ca81aaef91da786ef75936184a178a}{dArr};\textcolor{comment}{//delete existing dynamic array so that the new dynamic array can have the right
+       size                                                                                                }
+76          \hyperlink{classArray_ae2ca81aaef91da786ef75936184a178a}{dArr} = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[\hyperlink{classArray_a1e2031821065f3fb9bfada13e2d6ab43}{size}];
+77          \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i = 0; i < \hyperlink{classArray_a1e2031821065f3fb9bfada13e2d6ab43}{size}; i++ )
+78             \hyperlink{classArray_ae2ca81aaef91da786ef75936184a178a}{dArr}[i] = right.\hyperlink{classArray_ae2ca81aaef91da786ef75936184a178a}{dArr}[i]; \textcolor{comment}{// copy array into object                                     
+                                                                                                               }
+79       \}
+80    \}
+81 
+82    \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; \textcolor{comment}{// enables x = y = z                                                                      
+                                                                                                       }
+83 \}
+\end{DoxyCode}
+\index{Array@{Array}!operator==@{operator==}}
+\index{operator==@{operator==}!Array@{Array}}
+\subsubsection[{\texorpdfstring{operator==(const Array$<$ T $>$ \&) const }{operator==(const Array< T > &) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool {\bf Array}$<$ T $>$\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Array}$<$ T $>$ \&}]{right}
+\end{DoxyParamCaption}
+) const}\hypertarget{classArray_ad0fb0f6e80dde0d5e293ae6cfd185ee6}{}\label{classArray_ad0fb0f6e80dde0d5e293ae6cfd185ee6}
+
+\begin{DoxyCode}
+86 \{
+87    \textcolor{keywordtype}{bool} equal = \textcolor{keyword}{true};
+88 
+89    \textcolor{keywordflow}{if} ( \hyperlink{classArray_a1e2031821065f3fb9bfada13e2d6ab43}{size} != right.\hyperlink{classArray_a1e2031821065f3fb9bfada13e2d6ab43}{size} )
+90       equal = \textcolor{keyword}{false}; \textcolor{comment}{// arrays of different number of elements                                             
+                                                                                                       }
+91    \textcolor{keywordflow}{else}
+92       \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i = 0; i < \hyperlink{classArray_a1e2031821065f3fb9bfada13e2d6ab43}{size}; i++ )
+93          \textcolor{keywordflow}{if} ( \hyperlink{classArray_ae2ca81aaef91da786ef75936184a178a}{dArr}[i] != right.\hyperlink{classArray_ae2ca81aaef91da786ef75936184a178a}{dArr}[i] )
+94          \{
+95             equal = \textcolor{keyword}{false}; \textcolor{comment}{// Array contents are not equal, no need to check further                       
+                                                                                                       }
+96             \textcolor{keywordflow}{break};
+97          \}
+98    \textcolor{keywordflow}{return}( equal );
+99 \}
+\end{DoxyCode}
+\index{Array@{Array}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Array@{Array}}
+\subsubsection[{\texorpdfstring{operator[](int)}{operator[](int)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T \& {\bf Array}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{subscript}
+\end{DoxyParamCaption}
+)}\hypertarget{classArray_a5bae7a87802dbc12faf74956e240c0b2}{}\label{classArray_a5bae7a87802dbc12faf74956e240c0b2}
+
+\begin{DoxyCode}
+110 \{
+111    \textcolor{comment}{// check for subscript out-of-range error                                                               
+                                                                                                       }
+112    \textcolor{comment}{//                                                                                                      
+                                                                                                       }
+113    \textcolor{comment}{// this is an unrecoverable error so without exception handling,                                        
+                                                                                                       }
+114    \textcolor{comment}{// program can only log the error and exit.                                                             
+                                                                                                       }
+115    \textcolor{keywordflow}{if} ( subscript < 0 || (subscript >= \hyperlink{classArray_a1e2031821065f3fb9bfada13e2d6ab43}{size}) )
+116    \{
+117       cerr << \textcolor{stringliteral}{"\(\backslash\)nError: Subscript "} << subscript
+118            << \textcolor{stringliteral}{" out of range, exiting program"} << endl;
+119       exit( 1 ); \textcolor{comment}{// terminate program; subscript out of range  }
+120    \}
+121 
+122    \textcolor{keywordflow}{return} \hyperlink{classArray_ae2ca81aaef91da786ef75936184a178a}{dArr}[subscript]; \textcolor{comment}{// reference return so returning address location not contents              
+                                                                                                           }
+123 \}
+\end{DoxyCode}
+\index{Array@{Array}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Array@{Array}}
+\subsubsection[{\texorpdfstring{operator[](int) const }{operator[](int) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T {\bf Array}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{subscript}
+\end{DoxyParamCaption}
+) const}\hypertarget{classArray_a0628bf2b0fcd81749659bcc0e2caf0e1}{}\label{classArray_a0628bf2b0fcd81749659bcc0e2caf0e1}
+
+\begin{DoxyCode}
+131 \{
+132    \textcolor{comment}{// check for subscript out-of-range error                                                               
+                                                                                                       }
+133    \textcolor{keywordflow}{if} ( subscript < 0 || subscript >= \hyperlink{classArray_a1e2031821065f3fb9bfada13e2d6ab43}{size} )
+134    \{
+135       cerr << \textcolor{stringliteral}{"\(\backslash\)nError: Subscript "} << subscript
+136            << \textcolor{stringliteral}{" out of range, exiting program"} << endl;
+137       exit( 1 ); \textcolor{comment}{// terminate program; subscript out of range                                              
+                                                                                                       }
+138    \}
+139 
+140    \textcolor{keywordflow}{return} \hyperlink{classArray_ae2ca81aaef91da786ef75936184a178a}{dArr}[subscript]; \textcolor{comment}{// returns copy of this element and not the address location                
+                                                                                                           }
+141 \}
+\end{DoxyCode}
+\index{Array@{Array}!set\+D\+E\+L\+IM@{set\+D\+E\+L\+IM}}
+\index{set\+D\+E\+L\+IM@{set\+D\+E\+L\+IM}!Array@{Array}}
+\subsubsection[{\texorpdfstring{set\+D\+E\+L\+I\+M(\+T d)}{setDELIM(T d)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Array}$<$ T $>$\+::set\+D\+E\+L\+IM (
+\begin{DoxyParamCaption}
+\item[{T}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{classArray_aebe3687021d31102a7d52e18bedbffbc}{}\label{classArray_aebe3687021d31102a7d52e18bedbffbc}
+
+\begin{DoxyCode}
+260 \{
+261    \hyperlink{classArray_ab425400868a291283a14fc228a344bf0}{DELIM} = d;
+262 \}
+\end{DoxyCode}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Array@{Array}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Array@{Array}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{output, }
+\item[{const {\bf Array}$<$ T $>$ \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classArray_aa67e154869a1f59b76906d7215b7caff}{}\label{classArray_aa67e154869a1f59b76906d7215b7caff}
+
+\begin{DoxyCode}
+24    \{
+25       \textcolor{keywordtype}{int} i;
+26 
+27       cout << endl;
+28 
+29       \textcolor{comment}{// output private ptr-based array                                                                    
+                                                                                                       }
+30       \textcolor{keywordflow}{for} ( i = 0; i < a.\hyperlink{classArray_a1e2031821065f3fb9bfada13e2d6ab43}{size}; i++ )
+31       \{
+32          output << right << setw(10) << a.\hyperlink{classArray_ae2ca81aaef91da786ef75936184a178a}{dArr}[i];
+33 
+34          \textcolor{keywordflow}{if} ( (i + 1) % 4 == 0 ) \textcolor{comment}{// 4 numbers per row of output                                            
+                                                                                                       }
+35             output << endl;
+36       \}
+37 
+38       \textcolor{keywordflow}{if} ( i % 4 != 0 ) \textcolor{comment}{// end last line of output                                                         
+                                                                                                       }
+39          output << endl;
+40 
+41       \textcolor{keywordflow}{return} output; \textcolor{comment}{// enables cout << x << y;                                                            
+                                                                                                       }
+42    \}
+\end{DoxyCode}
+\index{Array@{Array}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Array@{Array}}
+\subsubsection[{\texorpdfstring{operator$>$$>$}{operator>>}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{input, }
+\item[{{\bf Array}$<$ T $>$ \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classArray_a6c5c4f2e4fd6da79eec8a53adf3e3f5a}{}\label{classArray_a6c5c4f2e4fd6da79eec8a53adf3e3f5a}
+
+\begin{DoxyCode}
+45    \{
+46       vector<T> v;
+47       T t;
+48       input >> t;
+49 
+50       \textcolor{keywordflow}{while}(t != a.\hyperlink{classArray_ab425400868a291283a14fc228a344bf0}{DELIM})\textcolor{comment}{//takes in all the integers entered up until DELIM is entered                
+                                                                                                            }
+51       \{
+52          v.push\_back(t); \textcolor{comment}{//adds the element entered to the vector                                          
+                                                                                                       }
+53          input >> t;
+54       \}
+55 
+56       \hyperlink{classArray}{Array<T>} b(v.size()); \textcolor{comment}{//initializes the array with the size of vector v                      
+                                                                                                               }
+57       \textcolor{keywordflow}{if}(b.dArr == NULL) \textcolor{comment}{//if b's dynamic array has no memory allocated                                    
+                                                                                                       }
+58       \{
+59          cerr << \textcolor{stringliteral}{"Error! Dynamic memory not allocated! Abort program!"} << endl << endl;
+60          exit(1);
+61       \}
+62 
+63       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=0; k<b.size; k++)
+64          b.dArr[k] = v[k]; \textcolor{comment}{//assigning the values in the vector to the newly created dynamic array         
+                                                                                                       }
+65 
+66       a = b; \textcolor{comment}{//assign b to a                                                                               
+                                                                                                       }
+67       return (input); \textcolor{comment}{// enables cin >> x >> y;                                                            
+                                                                                                       }
+68    \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Array@{Array}!d\+Arr@{d\+Arr}}
+\index{d\+Arr@{d\+Arr}!Array@{Array}}
+\subsubsection[{\texorpdfstring{d\+Arr}{dArr}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T$\ast$ {\bf Array}$<$ T $>$\+::d\+Arr\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classArray_ae2ca81aaef91da786ef75936184a178a}{}\label{classArray_ae2ca81aaef91da786ef75936184a178a}
+\index{Array@{Array}!D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+I\+ZE@{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+I\+ZE}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+I\+ZE@{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+I\+ZE}!Array@{Array}}
+\subsubsection[{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+I\+ZE}{DEFAULT_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const int {\bf Array}$<$ T $>$\+::D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+I\+ZE = 10\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classArray_a2fd6afd4cbdf9f82047ec1592d655f9a}{}\label{classArray_a2fd6afd4cbdf9f82047ec1592d655f9a}
+\index{Array@{Array}!D\+E\+L\+IM@{D\+E\+L\+IM}}
+\index{D\+E\+L\+IM@{D\+E\+L\+IM}!Array@{Array}}
+\subsubsection[{\texorpdfstring{D\+E\+L\+IM}{DELIM}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf Array}$<$ T $>$\+::D\+E\+L\+IM\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classArray_ab425400868a291283a14fc228a344bf0}{}\label{classArray_ab425400868a291283a14fc228a344bf0}
+\index{Array@{Array}!i\+Val@{i\+Val}}
+\index{i\+Val@{i\+Val}!Array@{Array}}
+\subsubsection[{\texorpdfstring{i\+Val}{iVal}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf Array}$<$ T $>$\+::i\+Val\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classArray_a0aae993b8d3286cb4e8841cd71e1bb78}{}\label{classArray_a0aae993b8d3286cb4e8841cd71e1bb78}
+\index{Array@{Array}!size@{size}}
+\index{size@{size}!Array@{Array}}
+\subsubsection[{\texorpdfstring{size}{size}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ int {\bf Array}$<$ T $>$\+::size\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classArray_a1e2031821065f3fb9bfada13e2d6ab43}{}\label{classArray_a1e2031821065f3fb9bfada13e2d6ab43}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Array_8h}{Array.\+h}\item 
+\hyperlink{Array_8cpp}{Array.\+cpp}\end{DoxyCompactItemize}

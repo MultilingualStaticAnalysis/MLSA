@@ -1,0 +1,74 @@
+\hypertarget{classRecordFactory}{}\section{Record\+Factory Class Reference}
+\label{classRecordFactory}\index{Record\+Factory@{Record\+Factory}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRecordFactory_a2c744c160d1f25c5abee97372979201c}{Record\+Factory} ()
+\item 
+\hyperlink{classRecord}{Record} $\ast$ \hyperlink{classRecordFactory_a0606dd9c40bc58a23f995bf39b4e5444}{create\+Record} (\hyperlink{Prototype_8cpp_ad7dc06ed9ae2cf0a910eed652dca9a44}{Record\+Type} record\+Type)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unordered\+\_\+map$<$ \hyperlink{Prototype_8cpp_ad7dc06ed9ae2cf0a910eed652dca9a44}{Record\+Type}, \hyperlink{classRecord}{Record} $\ast$, hash$<$ int $>$ $>$ \hyperlink{classRecordFactory_a5a1de3c7661d204f37bfc7f077e873d0}{m\+\_\+records}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classRecordFactory}{Record\+Factory} is the client 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Record\+Factory@{Record\+Factory}!Record\+Factory@{Record\+Factory}}
+\index{Record\+Factory@{Record\+Factory}!Record\+Factory@{Record\+Factory}}
+\subsubsection[{\texorpdfstring{Record\+Factory()}{RecordFactory()}}]{\setlength{\rightskip}{0pt plus 5cm}Record\+Factory\+::\+Record\+Factory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classRecordFactory_a2c744c160d1f25c5abee97372979201c}{}\label{classRecordFactory_a2c744c160d1f25c5abee97372979201c}
+
+\begin{DoxyCode}
+108     \{
+109         \hyperlink{classRecordFactory_a5a1de3c7661d204f37bfc7f077e873d0}{m\_records}[\hyperlink{Prototype_8cpp_ad7dc06ed9ae2cf0a910eed652dca9a44a5fc54ebcb1dd4bf1e1b93cbc77b57b40}{CAR}]    = \textcolor{keyword}{new} \hyperlink{classCarRecord}{CarRecord}(\textcolor{stringliteral}{"Ferrari"}, 5050);
+110         \hyperlink{classRecordFactory_a5a1de3c7661d204f37bfc7f077e873d0}{m\_records}[\hyperlink{Prototype_8cpp_ad7dc06ed9ae2cf0a910eed652dca9a44a5728381009aee1446c2b7d19c35c9c15}{BIKE}]   = \textcolor{keyword}{new} \hyperlink{classBikeRecord}{BikeRecord}(\textcolor{stringliteral}{"Yamaha"}, 2525);
+111         \hyperlink{classRecordFactory_a5a1de3c7661d204f37bfc7f077e873d0}{m\_records}[\hyperlink{Prototype_8cpp_ad7dc06ed9ae2cf0a910eed652dca9a44ac9878c552c3ddcde707fff8aefa250ae}{PERSON}] = \textcolor{keyword}{new} \hyperlink{classPersonRecord}{PersonRecord}(\textcolor{stringliteral}{"Tom"}, 25);
+112     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Record\+Factory@{Record\+Factory}!create\+Record@{create\+Record}}
+\index{create\+Record@{create\+Record}!Record\+Factory@{Record\+Factory}}
+\subsubsection[{\texorpdfstring{create\+Record(\+Record\+Type record\+Type)}{createRecord(RecordType recordType)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Record}$\ast$ Record\+Factory\+::create\+Record (
+\begin{DoxyParamCaption}
+\item[{{\bf Record\+Type}}]{record\+Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classRecordFactory_a0606dd9c40bc58a23f995bf39b4e5444}{}\label{classRecordFactory_a0606dd9c40bc58a23f995bf39b4e5444}
+
+\begin{DoxyCode}
+115     \{
+116         \textcolor{keywordflow}{return} \hyperlink{classRecordFactory_a5a1de3c7661d204f37bfc7f077e873d0}{m\_records}[recordType]->clone();
+117     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classRecordFactory_a0606dd9c40bc58a23f995bf39b4e5444_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Record\+Factory@{Record\+Factory}!m\+\_\+records@{m\+\_\+records}}
+\index{m\+\_\+records@{m\+\_\+records}!Record\+Factory@{Record\+Factory}}
+\subsubsection[{\texorpdfstring{m\+\_\+records}{m_records}}]{\setlength{\rightskip}{0pt plus 5cm}unordered\+\_\+map$<${\bf Record\+Type}, {\bf Record}$\ast$, hash$<$int$>$ $>$ Record\+Factory\+::m\+\_\+records\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classRecordFactory_a5a1de3c7661d204f37bfc7f077e873d0}{}\label{classRecordFactory_a5a1de3c7661d204f37bfc7f077e873d0}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Prototype_8cpp}{Prototype.\+cpp}\end{DoxyCompactItemize}

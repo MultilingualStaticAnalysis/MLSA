@@ -1,0 +1,155 @@
+\hypertarget{Recurrsion_8cpp}{}\section{Recurrsion.\+cpp File Reference}
+\label{Recurrsion_8cpp}\index{Recurrsion.\+cpp@{Recurrsion.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for Recurrsion.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{Recurrsion_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{Recurrsion_8cpp_af5d44dbdfddbc984d7a65c6fccefe7ac}{write\+Line} (char c, int n)
+\item 
+void \hyperlink{Recurrsion_8cpp_a7cd55c1bc6e4c5fba33168b19f285a7a}{write\+Block} (char c, int m, int n)
+\item 
+int \hyperlink{Recurrsion_8cpp_afdfc604aec5ef288aceb05f598f8dd9c}{factorial\+\_\+01} (int n)
+\item 
+void \hyperlink{Recurrsion_8cpp_a5a81ff59cd01a2d0b76e26f835130f0e}{factorial\+\_\+02} (int n, int \&f)
+\item 
+int \hyperlink{Recurrsion_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Recurrsion.\+cpp@{Recurrsion.\+cpp}!factorial\+\_\+01@{factorial\+\_\+01}}
+\index{factorial\+\_\+01@{factorial\+\_\+01}!Recurrsion.\+cpp@{Recurrsion.\+cpp}}
+\subsubsection[{\texorpdfstring{factorial\+\_\+01(int n)}{factorial_01(int n)}}]{\setlength{\rightskip}{0pt plus 5cm}int factorial\+\_\+01 (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{Recurrsion_8cpp_afdfc604aec5ef288aceb05f598f8dd9c}{}\label{Recurrsion_8cpp_afdfc604aec5ef288aceb05f598f8dd9c}
+
+\begin{DoxyCode}
+57 \{
+58    \textcolor{keywordtype}{int} fact = 1; \textcolor{comment}{//fact must start at 1 for when n=1                                                       
+                                                                                                       }
+59    \textcolor{keywordflow}{if}(n>1) \textcolor{comment}{//stopping case}
+60       fact = (n*\hyperlink{Recurrsion_8cpp_afdfc604aec5ef288aceb05f598f8dd9c}{factorial\_01}(n-1));
+61    \textcolor{keywordflow}{return} fact;
+62 \}
+\end{DoxyCode}
+\index{Recurrsion.\+cpp@{Recurrsion.\+cpp}!factorial\+\_\+02@{factorial\+\_\+02}}
+\index{factorial\+\_\+02@{factorial\+\_\+02}!Recurrsion.\+cpp@{Recurrsion.\+cpp}}
+\subsubsection[{\texorpdfstring{factorial\+\_\+02(int n, int \&f)}{factorial_02(int n, int &f)}}]{\setlength{\rightskip}{0pt plus 5cm}void factorial\+\_\+02 (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{int \&}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{Recurrsion_8cpp_a5a81ff59cd01a2d0b76e26f835130f0e}{}\label{Recurrsion_8cpp_a5a81ff59cd01a2d0b76e26f835130f0e}
+
+\begin{DoxyCode}
+68 \{
+69    f=1; \textcolor{comment}{//f must start at 1 for when n=1                                                                   
+                                                                                                       }
+70    \textcolor{keywordflow}{if}(n>1) \textcolor{comment}{//stopping case                                                                                 
+                                                                                                       }
+71       \hyperlink{Recurrsion_8cpp_a5a81ff59cd01a2d0b76e26f835130f0e}{factorial\_02}(n-1, f); \textcolor{comment}{//f is called my reference so that its value is changed for each
+       function call                                                                                                 
+       }
+72    f*=n;
+73 \}
+\end{DoxyCode}
+\index{Recurrsion.\+cpp@{Recurrsion.\+cpp}!main@{main}}
+\index{main@{main}!Recurrsion.\+cpp@{Recurrsion.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Recurrsion_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Recurrsion_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+17 \{
+18    \textcolor{keywordtype}{int} f;
+19    \hyperlink{Recurrsion_8cpp_af5d44dbdfddbc984d7a65c6fccefe7ac}{writeLine}(\textcolor{charliteral}{'*'}, 5);
+20    cout << endl << endl;
+21 
+22    \hyperlink{Recurrsion_8cpp_a7cd55c1bc6e4c5fba33168b19f285a7a}{writeBlock}(\textcolor{charliteral}{'$'}, 3, 5);
+23 
+24    cout << \textcolor{stringliteral}{"8! = "} << \hyperlink{Recurrsion_8cpp_afdfc604aec5ef288aceb05f598f8dd9c}{factorial\_01}(8) << endl << endl;
+25    cout << \textcolor{stringliteral}{"5! = "} << \hyperlink{Recurrsion_8cpp_afdfc604aec5ef288aceb05f598f8dd9c}{factorial\_01}(5) << endl << endl;
+26    cout << \textcolor{stringliteral}{"12! = "} << \hyperlink{Recurrsion_8cpp_afdfc604aec5ef288aceb05f598f8dd9c}{factorial\_01}(12) << endl << endl;
+27 
+28    \hyperlink{Recurrsion_8cpp_a5a81ff59cd01a2d0b76e26f835130f0e}{factorial\_02}(8, f);
+29    cout << \textcolor{stringliteral}{"8! = "} << f << endl << endl;
+30    \hyperlink{Recurrsion_8cpp_a5a81ff59cd01a2d0b76e26f835130f0e}{factorial\_02}(5, f);
+31    cout << \textcolor{stringliteral}{"5! = "} << f << endl << endl;
+32    \hyperlink{Recurrsion_8cpp_a5a81ff59cd01a2d0b76e26f835130f0e}{factorial\_02}(12, f);
+33    cout << \textcolor{stringliteral}{"12! = "} << f << endl << endl;
+34 
+35    \textcolor{keywordflow}{return} 0;
+36 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{Recurrsion_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Recurrsion.\+cpp@{Recurrsion.\+cpp}!write\+Block@{write\+Block}}
+\index{write\+Block@{write\+Block}!Recurrsion.\+cpp@{Recurrsion.\+cpp}}
+\subsubsection[{\texorpdfstring{write\+Block(char c, int m, int n)}{writeBlock(char c, int m, int n)}}]{\setlength{\rightskip}{0pt plus 5cm}void write\+Block (
+\begin{DoxyParamCaption}
+\item[{char}]{c, }
+\item[{int}]{m, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{Recurrsion_8cpp_a7cd55c1bc6e4c5fba33168b19f285a7a}{}\label{Recurrsion_8cpp_a7cd55c1bc6e4c5fba33168b19f285a7a}
+
+\begin{DoxyCode}
+48 \{
+49    \textcolor{keywordflow}{if}(m>1) \textcolor{comment}{//stopping case                                                                                 
+                                                                                                       }
+50       \hyperlink{Recurrsion_8cpp_a7cd55c1bc6e4c5fba33168b19f285a7a}{writeBlock}(c, m-1, n);
+51    \hyperlink{Recurrsion_8cpp_af5d44dbdfddbc984d7a65c6fccefe7ac}{writeLine}(c, n);
+52    cout << endl << endl;
+53 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{Recurrsion_8cpp_a7cd55c1bc6e4c5fba33168b19f285a7a_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Recurrsion.\+cpp@{Recurrsion.\+cpp}!write\+Line@{write\+Line}}
+\index{write\+Line@{write\+Line}!Recurrsion.\+cpp@{Recurrsion.\+cpp}}
+\subsubsection[{\texorpdfstring{write\+Line(char c, int n)}{writeLine(char c, int n)}}]{\setlength{\rightskip}{0pt plus 5cm}void write\+Line (
+\begin{DoxyParamCaption}
+\item[{char}]{c, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{Recurrsion_8cpp_af5d44dbdfddbc984d7a65c6fccefe7ac}{}\label{Recurrsion_8cpp_af5d44dbdfddbc984d7a65c6fccefe7ac}
+
+\begin{DoxyCode}
+40 \{
+41    \textcolor{keywordflow}{if}(n>1) \textcolor{comment}{//stopping case                                                                                 
+                                                                                                       }
+42       \hyperlink{Recurrsion_8cpp_af5d44dbdfddbc984d7a65c6fccefe7ac}{writeLine}(c, n-1);
+43    cout << c;
+44 \}
+\end{DoxyCode}

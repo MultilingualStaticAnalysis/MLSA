@@ -1,0 +1,63 @@
+\hypertarget{classMemento}{}\section{Memento Class Reference}
+\label{classMemento}\index{Memento@{Memento}}
+
+
+Collaboration diagram for Memento\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{classMemento__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMemento_a7dc174ba544a54a0258aee0178f00619}{Memento} (const \hyperlink{classObject}{Object} \&obj)
+\item 
+\hyperlink{classObject}{Object} \hyperlink{classMemento_a13c0885085d6010835ebcfde5808f4af}{snapshot} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classObject}{Object} \hyperlink{classMemento_ae264f38394a414c42f9e4315f2c25916}{object}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Memento@{Memento}!Memento@{Memento}}
+\index{Memento@{Memento}!Memento@{Memento}}
+\subsubsection[{\texorpdfstring{Memento(const Object \&obj)}{Memento(const Object &obj)}}]{\setlength{\rightskip}{0pt plus 5cm}Memento\+::\+Memento (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object} \&}]{obj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMemento_a7dc174ba544a54a0258aee0178f00619}{}\label{classMemento_a7dc174ba544a54a0258aee0178f00619}
+
+\begin{DoxyCode}
+37 :  \hyperlink{classMemento_ae264f38394a414c42f9e4315f2c25916}{object} (obj) \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Memento@{Memento}!snapshot@{snapshot}}
+\index{snapshot@{snapshot}!Memento@{Memento}}
+\subsubsection[{\texorpdfstring{snapshot() const }{snapshot() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object} Memento\+::snapshot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMemento_a13c0885085d6010835ebcfde5808f4af}{}\label{classMemento_a13c0885085d6010835ebcfde5808f4af}
+
+\begin{DoxyCode}
+38 \{\textcolor{keywordflow}{return} \hyperlink{classMemento_ae264f38394a414c42f9e4315f2c25916}{object};\}  \textcolor{comment}{// want a snapshot of Object itself because of its many data members}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Memento@{Memento}!object@{object}}
+\index{object@{object}!Memento@{Memento}}
+\subsubsection[{\texorpdfstring{object}{object}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object} Memento\+::object\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classMemento_ae264f38394a414c42f9e4315f2c25916}{}\label{classMemento_ae264f38394a414c42f9e4315f2c25916}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Memento_8cpp}{Memento.\+cpp}\end{DoxyCompactItemize}

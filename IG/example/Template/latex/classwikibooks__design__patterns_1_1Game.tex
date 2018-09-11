@@ -1,0 +1,199 @@
+\hypertarget{classwikibooks__design__patterns_1_1Game}{}\section{wikibooks\+\_\+design\+\_\+patterns\+:\+:Game Class Reference}
+\label{classwikibooks__design__patterns_1_1Game}\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Game@{wikibooks\+\_\+design\+\_\+patterns\+::\+Game}}
+
+
+Inheritance diagram for wikibooks\+\_\+design\+\_\+patterns\+:\+:Game\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwikibooks__design__patterns_1_1Game__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwikibooks__design__patterns_1_1Game_acdfcc4d37f30a39ed438b81de8e00046}{Game} ()
+\item 
+void \hyperlink{classwikibooks__design__patterns_1_1Game_adaf21d3c4d07388f1cba12092ced5d38}{play\+One\+Game} (const int \hyperlink{classwikibooks__design__patterns_1_1Game_a8641adb02e0f068ff9ecb6c375562d7b}{players\+Count}=0)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classwikibooks__design__patterns_1_1Game_a77c50ee852af77bb15d46ba0a39683c4}{initialize\+Game} ()=0
+\item 
+virtual void \hyperlink{classwikibooks__design__patterns_1_1Game_ab1859f681536780d02da57634e963d4a}{make\+Play} (int player)=0
+\item 
+virtual bool \hyperlink{classwikibooks__design__patterns_1_1Game_a351f5fb200c6b26d5b6150f1f09bc87d}{end\+Of\+Game} ()=0
+\item 
+virtual void \hyperlink{classwikibooks__design__patterns_1_1Game_a98d860c143cb793b4c1cb630d9314cba}{print\+Winner} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classwikibooks__design__patterns_1_1Game_a8641adb02e0f068ff9ecb6c375562d7b}{players\+Count}
+\item 
+int \hyperlink{classwikibooks__design__patterns_1_1Game_ac7bac015fe2e5ead905f7fb8ae63d3aa}{moves\+Count}
+\item 
+int \hyperlink{classwikibooks__design__patterns_1_1Game_a6385d85f068769843e22f7741a4ae154}{player\+Won}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classwikibooks__design__patterns_1_1Game_a3de3408a468266ea25ba26b8e27544e3}{Initialize\+Game} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstract class that is common to several games in which players play against the others, but only one is playing at a given time. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Game@{wikibooks\+\_\+design\+\_\+patterns\+::\+Game}!Game@{Game}}
+\index{Game@{Game}!wikibooks\+\_\+design\+\_\+patterns\+::\+Game@{wikibooks\+\_\+design\+\_\+patterns\+::\+Game}}
+\subsubsection[{\texorpdfstring{Game()}{Game()}}]{\setlength{\rightskip}{0pt plus 5cm}wikibooks\+\_\+design\+\_\+patterns\+::\+Game\+::\+Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwikibooks__design__patterns_1_1Game_acdfcc4d37f30a39ed438b81de8e00046}{}\label{classwikibooks__design__patterns_1_1Game_acdfcc4d37f30a39ed438b81de8e00046}
+
+\begin{DoxyCode}
+16           : \hyperlink{classwikibooks__design__patterns_1_1Game_a8641adb02e0f068ff9ecb6c375562d7b}{playersCount}(0), \hyperlink{classwikibooks__design__patterns_1_1Game_ac7bac015fe2e5ead905f7fb8ae63d3aa}{movesCount}(0), \hyperlink{classwikibooks__design__patterns_1_1Game_a6385d85f068769843e22f7741a4ae154}{playerWon}(-1)
+17     \{
+18         srand( (\textcolor{keywordtype}{unsigned})time( NULL));
+19     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Game@{wikibooks\+\_\+design\+\_\+patterns\+::\+Game}!end\+Of\+Game@{end\+Of\+Game}}
+\index{end\+Of\+Game@{end\+Of\+Game}!wikibooks\+\_\+design\+\_\+patterns\+::\+Game@{wikibooks\+\_\+design\+\_\+patterns\+::\+Game}}
+\subsubsection[{\texorpdfstring{end\+Of\+Game()=0}{endOfGame()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool wikibooks\+\_\+design\+\_\+patterns\+::\+Game\+::end\+Of\+Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classwikibooks__design__patterns_1_1Game_a351f5fb200c6b26d5b6150f1f09bc87d}{}\label{classwikibooks__design__patterns_1_1Game_a351f5fb200c6b26d5b6150f1f09bc87d}
+
+
+Implemented in \hyperlink{classwikibooks__design__patterns_1_1Chess_a7722fa3719cef20836f15b9579dfb8db}{wikibooks\+\_\+design\+\_\+patterns\+::\+Chess}, and \hyperlink{classwikibooks__design__patterns_1_1Monopoly_ab533fb92f64065d8cae9a731e6fe789d}{wikibooks\+\_\+design\+\_\+patterns\+::\+Monopoly}.
+
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Game@{wikibooks\+\_\+design\+\_\+patterns\+::\+Game}!initialize\+Game@{initialize\+Game}}
+\index{initialize\+Game@{initialize\+Game}!wikibooks\+\_\+design\+\_\+patterns\+::\+Game@{wikibooks\+\_\+design\+\_\+patterns\+::\+Game}}
+\subsubsection[{\texorpdfstring{initialize\+Game()=0}{initializeGame()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void wikibooks\+\_\+design\+\_\+patterns\+::\+Game\+::initialize\+Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classwikibooks__design__patterns_1_1Game_a77c50ee852af77bb15d46ba0a39683c4}{}\label{classwikibooks__design__patterns_1_1Game_a77c50ee852af77bb15d46ba0a39683c4}
+
+
+Implemented in \hyperlink{classwikibooks__design__patterns_1_1Chess_ab90b8fa2a95ad530b286d0c991ee85b7}{wikibooks\+\_\+design\+\_\+patterns\+::\+Chess}, and \hyperlink{classwikibooks__design__patterns_1_1Monopoly_a9fa4e1a5c85d7b9f1e2b1fdf4d1911ab}{wikibooks\+\_\+design\+\_\+patterns\+::\+Monopoly}.
+
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Game@{wikibooks\+\_\+design\+\_\+patterns\+::\+Game}!Initialize\+Game@{Initialize\+Game}}
+\index{Initialize\+Game@{Initialize\+Game}!wikibooks\+\_\+design\+\_\+patterns\+::\+Game@{wikibooks\+\_\+design\+\_\+patterns\+::\+Game}}
+\subsubsection[{\texorpdfstring{Initialize\+Game()}{InitializeGame()}}]{\setlength{\rightskip}{0pt plus 5cm}void wikibooks\+\_\+design\+\_\+patterns\+::\+Game\+::\+Initialize\+Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classwikibooks__design__patterns_1_1Game_a3de3408a468266ea25ba26b8e27544e3}{}\label{classwikibooks__design__patterns_1_1Game_a3de3408a468266ea25ba26b8e27544e3}
+
+\begin{DoxyCode}
+53     \{
+54         \hyperlink{classwikibooks__design__patterns_1_1Game_ac7bac015fe2e5ead905f7fb8ae63d3aa}{movesCount} = 0;
+55         \hyperlink{classwikibooks__design__patterns_1_1Game_a6385d85f068769843e22f7741a4ae154}{playerWon} = -1;
+56 
+57         \hyperlink{classwikibooks__design__patterns_1_1Game_a77c50ee852af77bb15d46ba0a39683c4}{initializeGame}();
+58     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwikibooks__design__patterns_1_1Game_a3de3408a468266ea25ba26b8e27544e3_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Game@{wikibooks\+\_\+design\+\_\+patterns\+::\+Game}!make\+Play@{make\+Play}}
+\index{make\+Play@{make\+Play}!wikibooks\+\_\+design\+\_\+patterns\+::\+Game@{wikibooks\+\_\+design\+\_\+patterns\+::\+Game}}
+\subsubsection[{\texorpdfstring{make\+Play(int player)=0}{makePlay(int player)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void wikibooks\+\_\+design\+\_\+patterns\+::\+Game\+::make\+Play (
+\begin{DoxyParamCaption}
+\item[{int}]{player}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classwikibooks__design__patterns_1_1Game_ab1859f681536780d02da57634e963d4a}{}\label{classwikibooks__design__patterns_1_1Game_ab1859f681536780d02da57634e963d4a}
+
+
+Implemented in \hyperlink{classwikibooks__design__patterns_1_1Chess_ac0c6d94fab2c7f8ca8995591a3b688ed}{wikibooks\+\_\+design\+\_\+patterns\+::\+Chess}, and \hyperlink{classwikibooks__design__patterns_1_1Monopoly_ab885dd62ab49fba54bd2ce542702caaa}{wikibooks\+\_\+design\+\_\+patterns\+::\+Monopoly}.
+
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Game@{wikibooks\+\_\+design\+\_\+patterns\+::\+Game}!play\+One\+Game@{play\+One\+Game}}
+\index{play\+One\+Game@{play\+One\+Game}!wikibooks\+\_\+design\+\_\+patterns\+::\+Game@{wikibooks\+\_\+design\+\_\+patterns\+::\+Game}}
+\subsubsection[{\texorpdfstring{play\+One\+Game(const int players\+Count=0)}{playOneGame(const int playersCount=0)}}]{\setlength{\rightskip}{0pt plus 5cm}void wikibooks\+\_\+design\+\_\+patterns\+::\+Game\+::play\+One\+Game (
+\begin{DoxyParamCaption}
+\item[{const int}]{players\+Count = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwikibooks__design__patterns_1_1Game_adaf21d3c4d07388f1cba12092ced5d38}{}\label{classwikibooks__design__patterns_1_1Game_adaf21d3c4d07388f1cba12092ced5d38}
+
+\begin{DoxyCode}
+23     \{
+24         \textcolor{keywordflow}{if} (\hyperlink{classwikibooks__design__patterns_1_1Game_a8641adb02e0f068ff9ecb6c375562d7b}{playersCount})
+25         \{
+26             this->\hyperlink{classwikibooks__design__patterns_1_1Game_a8641adb02e0f068ff9ecb6c375562d7b}{playersCount} = \hyperlink{classwikibooks__design__patterns_1_1Game_a8641adb02e0f068ff9ecb6c375562d7b}{playersCount};
+27         \}
+28 
+29         \hyperlink{classwikibooks__design__patterns_1_1Game_a3de3408a468266ea25ba26b8e27544e3}{InitializeGame}();
+30         assert(this->\hyperlink{classwikibooks__design__patterns_1_1Game_a8641adb02e0f068ff9ecb6c375562d7b}{playersCount});
+31 
+32         \textcolor{keywordtype}{int} j = 0;
+33         \textcolor{keywordflow}{while} (!\hyperlink{classwikibooks__design__patterns_1_1Game_a351f5fb200c6b26d5b6150f1f09bc87d}{endOfGame}())
+34         \{
+35             \hyperlink{classwikibooks__design__patterns_1_1Game_ab1859f681536780d02da57634e963d4a}{makePlay}(j);
+36             j = (j + 1) % this->\hyperlink{classwikibooks__design__patterns_1_1Game_a8641adb02e0f068ff9ecb6c375562d7b}{playersCount};
+37             \textcolor{keywordflow}{if} (!j)
+38             \{
+39                 ++\hyperlink{classwikibooks__design__patterns_1_1Game_ac7bac015fe2e5ead905f7fb8ae63d3aa}{movesCount};
+40             \}
+41         \}
+42         \hyperlink{classwikibooks__design__patterns_1_1Game_a98d860c143cb793b4c1cb630d9314cba}{printWinner}();
+43     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwikibooks__design__patterns_1_1Game_adaf21d3c4d07388f1cba12092ced5d38_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Game@{wikibooks\+\_\+design\+\_\+patterns\+::\+Game}!print\+Winner@{print\+Winner}}
+\index{print\+Winner@{print\+Winner}!wikibooks\+\_\+design\+\_\+patterns\+::\+Game@{wikibooks\+\_\+design\+\_\+patterns\+::\+Game}}
+\subsubsection[{\texorpdfstring{print\+Winner()=0}{printWinner()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void wikibooks\+\_\+design\+\_\+patterns\+::\+Game\+::print\+Winner (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classwikibooks__design__patterns_1_1Game_a98d860c143cb793b4c1cb630d9314cba}{}\label{classwikibooks__design__patterns_1_1Game_a98d860c143cb793b4c1cb630d9314cba}
+
+
+Implemented in \hyperlink{classwikibooks__design__patterns_1_1Chess_a0a38a15831a76736781e8952eeca43d4}{wikibooks\+\_\+design\+\_\+patterns\+::\+Chess}, and \hyperlink{classwikibooks__design__patterns_1_1Monopoly_affb4f25920e5d5887a62b33606bec042}{wikibooks\+\_\+design\+\_\+patterns\+::\+Monopoly}.
+
+
+
+\subsection{Member Data Documentation}
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Game@{wikibooks\+\_\+design\+\_\+patterns\+::\+Game}!moves\+Count@{moves\+Count}}
+\index{moves\+Count@{moves\+Count}!wikibooks\+\_\+design\+\_\+patterns\+::\+Game@{wikibooks\+\_\+design\+\_\+patterns\+::\+Game}}
+\subsubsection[{\texorpdfstring{moves\+Count}{movesCount}}]{\setlength{\rightskip}{0pt plus 5cm}int wikibooks\+\_\+design\+\_\+patterns\+::\+Game\+::moves\+Count\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classwikibooks__design__patterns_1_1Game_ac7bac015fe2e5ead905f7fb8ae63d3aa}{}\label{classwikibooks__design__patterns_1_1Game_ac7bac015fe2e5ead905f7fb8ae63d3aa}
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Game@{wikibooks\+\_\+design\+\_\+patterns\+::\+Game}!players\+Count@{players\+Count}}
+\index{players\+Count@{players\+Count}!wikibooks\+\_\+design\+\_\+patterns\+::\+Game@{wikibooks\+\_\+design\+\_\+patterns\+::\+Game}}
+\subsubsection[{\texorpdfstring{players\+Count}{playersCount}}]{\setlength{\rightskip}{0pt plus 5cm}int wikibooks\+\_\+design\+\_\+patterns\+::\+Game\+::players\+Count\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classwikibooks__design__patterns_1_1Game_a8641adb02e0f068ff9ecb6c375562d7b}{}\label{classwikibooks__design__patterns_1_1Game_a8641adb02e0f068ff9ecb6c375562d7b}
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Game@{wikibooks\+\_\+design\+\_\+patterns\+::\+Game}!player\+Won@{player\+Won}}
+\index{player\+Won@{player\+Won}!wikibooks\+\_\+design\+\_\+patterns\+::\+Game@{wikibooks\+\_\+design\+\_\+patterns\+::\+Game}}
+\subsubsection[{\texorpdfstring{player\+Won}{playerWon}}]{\setlength{\rightskip}{0pt plus 5cm}int wikibooks\+\_\+design\+\_\+patterns\+::\+Game\+::player\+Won\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classwikibooks__design__patterns_1_1Game_a6385d85f068769843e22f7741a4ae154}{}\label{classwikibooks__design__patterns_1_1Game_a6385d85f068769843e22f7741a4ae154}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Template_8cpp}{Template.\+cpp}\end{DoxyCompactItemize}

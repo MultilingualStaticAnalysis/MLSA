@@ -17,3 +17,4 @@ chmod a+x `pwd`/metrics/*.py
 chmod a+x `pwd`/test/*.py
 export PATH=$PATH:`pwd`/bin
 export PATH=$PATH:`pwd`/metrics
+

@@ -1,0 +1,94 @@
+\hypertarget{Interpreter_8cpp}{}\section{Interpreter.\+cpp File Reference}
+\label{Interpreter_8cpp}\index{Interpreter.\+cpp@{Interpreter.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+Include dependency graph for Interpreter.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{Interpreter_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structwikibooks__design__patterns_1_1Expression}{wikibooks\+\_\+design\+\_\+patterns\+::\+Expression}
+\item 
+class \hyperlink{classwikibooks__design__patterns_1_1Number}{wikibooks\+\_\+design\+\_\+patterns\+::\+Number}
+\item 
+class \hyperlink{classwikibooks__design__patterns_1_1Plus}{wikibooks\+\_\+design\+\_\+patterns\+::\+Plus}
+\item 
+class \hyperlink{classwikibooks__design__patterns_1_1Minus}{wikibooks\+\_\+design\+\_\+patterns\+::\+Minus}
+\item 
+class \hyperlink{classwikibooks__design__patterns_1_1Variable}{wikibooks\+\_\+design\+\_\+patterns\+::\+Variable}
+\item 
+class \hyperlink{classwikibooks__design__patterns_1_1Evaluator}{wikibooks\+\_\+design\+\_\+patterns\+::\+Evaluator}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacewikibooks__design__patterns}{wikibooks\+\_\+design\+\_\+patterns}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::string \hyperlink{namespacewikibooks__design__patterns_a603d2591ea56686888d0e4389481a453}{wikibooks\+\_\+design\+\_\+patterns\+::\+String}
+\item 
+typedef std\+::map$<$ \hyperlink{namespacewikibooks__design__patterns_a603d2591ea56686888d0e4389481a453}{String}, \hyperlink{structwikibooks__design__patterns_1_1Expression}{Expression} $\ast$ $>$ \hyperlink{namespacewikibooks__design__patterns_adf1889a865861dea765d8a115cc66ae9}{wikibooks\+\_\+design\+\_\+patterns\+::\+Map}
+\item 
+typedef std\+::list$<$ \hyperlink{structwikibooks__design__patterns_1_1Expression}{Expression} $\ast$ $>$ \hyperlink{namespacewikibooks__design__patterns_a3247979de240b19de03793d4ec6ede0e}{wikibooks\+\_\+design\+\_\+patterns\+::\+Stack}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{Interpreter_8cpp_acdef7a1fd863a6d3770c1268cb06add3}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Interpreter.\+cpp@{Interpreter.\+cpp}!main@{main}}
+\index{main@{main}!Interpreter.\+cpp@{Interpreter.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}void main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Interpreter_8cpp_acdef7a1fd863a6d3770c1268cb06add3}{}\label{Interpreter_8cpp_acdef7a1fd863a6d3770c1268cb06add3}
+
+\begin{DoxyCode}
+124 \{
+125     \textcolor{keyword}{using namespace }\hyperlink{namespacewikibooks__design__patterns}{wikibooks\_design\_patterns};
+126 
+127     \hyperlink{classwikibooks__design__patterns_1_1Evaluator}{Evaluator} sentence(\textcolor{stringliteral}{"w x z - +"});
+128 
+129     \textcolor{keyword}{static}
+130     \textcolor{keyword}{const} \textcolor{keywordtype}{int} sequences[][3] = \{
+131         \{5, 10, 42\}, \{1, 3, 2\}, \{7, 9, -5\},
+132     \};
+133     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; \textcolor{keyword}{sizeof}(sequences)/\textcolor{keyword}{sizeof}(sequences[0]) > i; ++i) \{
+134         \hyperlink{namespacewikibooks__design__patterns_adf1889a865861dea765d8a115cc66ae9}{Map} variables;
+135         variables[\textcolor{stringliteral}{"w"}] = \textcolor{keyword}{new} \hyperlink{classwikibooks__design__patterns_1_1Number}{Number}(sequences[i][0]);
+136         variables[\textcolor{stringliteral}{"x"}] = \textcolor{keyword}{new} \hyperlink{classwikibooks__design__patterns_1_1Number}{Number}(sequences[i][1]);
+137         variables[\textcolor{stringliteral}{"z"}] = \textcolor{keyword}{new} \hyperlink{classwikibooks__design__patterns_1_1Number}{Number}(sequences[i][2]);
+138         \textcolor{keywordtype}{int} result = sentence.interpret(variables);
+139         \textcolor{keywordflow}{for} (Map::iterator it = variables.begin(); variables.end() != it; ++it)
+140         \{
+141             \textcolor{keyword}{delete} it->second;
+142         \}
+143         std::cout<<\textcolor{stringliteral}{"Interpreter result: "}<<result<<std::endl;
+144     \}
+145 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Interpreter_8cpp_acdef7a1fd863a6d3770c1268cb06add3_cgraph}
+\end{center}
+\end{figure}
+
+

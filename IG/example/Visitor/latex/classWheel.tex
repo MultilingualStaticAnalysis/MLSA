@@ -1,0 +1,109 @@
+\hypertarget{classWheel}{}\section{Wheel Class Reference}
+\label{classWheel}\index{Wheel@{Wheel}}
+
+
+Inheritance diagram for Wheel\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{classWheel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Wheel\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{classWheel__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classWheel_aa56122040fc03dbf3036fd649f749163}{Wheel} (const string \&name)
+\item 
+const string \& \hyperlink{classWheel_ad0ed291d1ec488ffcba12e28cb707c38}{get\+Name} () const 
+\item 
+void \hyperlink{classWheel_acd6f77dbc8cea2223f5fd7810f4b80a6}{accept} (const \hyperlink{structCarElementVisitor}{Car\+Element\+Visitor} \&visitor)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classWheel_a2aff80b65a1531a7289349af36f15f3f}{name\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Wheel@{Wheel}!Wheel@{Wheel}}
+\index{Wheel@{Wheel}!Wheel@{Wheel}}
+\subsubsection[{\texorpdfstring{Wheel(const string \&name)}{Wheel(const string &name)}}]{\setlength{\rightskip}{0pt plus 5cm}Wheel\+::\+Wheel (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classWheel_aa56122040fc03dbf3036fd649f749163}{}\label{classWheel_aa56122040fc03dbf3036fd649f749163}
+
+\begin{DoxyCode}
+34                                      :
+35     \hyperlink{classWheel_a2aff80b65a1531a7289349af36f15f3f}{name\_}(name)
+36   \{
+37   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Wheel@{Wheel}!accept@{accept}}
+\index{accept@{accept}!Wheel@{Wheel}}
+\subsubsection[{\texorpdfstring{accept(const Car\+Element\+Visitor \&visitor)}{accept(const CarElementVisitor &visitor)}}]{\setlength{\rightskip}{0pt plus 5cm}void Wheel\+::accept (
+\begin{DoxyParamCaption}
+\item[{const {\bf Car\+Element\+Visitor} \&}]{visitor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classWheel_acd6f77dbc8cea2223f5fd7810f4b80a6}{}\label{classWheel_acd6f77dbc8cea2223f5fd7810f4b80a6}
+
+
+Implements \hyperlink{structCarElement_a9cac92d2d59d9a0318600e608bbbdfd5}{Car\+Element}.
+
+
+\begin{DoxyCode}
+43   \{
+44     visitor.\hyperlink{structCarElementVisitor_aba7f494a9b736bcb002176ec922890e4}{visit}(*\textcolor{keyword}{this});
+45   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{classWheel_acd6f77dbc8cea2223f5fd7810f4b80a6_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Wheel@{Wheel}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Wheel@{Wheel}}
+\subsubsection[{\texorpdfstring{get\+Name() const }{getName() const }}]{\setlength{\rightskip}{0pt plus 5cm}const string\& Wheel\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classWheel_ad0ed291d1ec488ffcba12e28cb707c38}{}\label{classWheel_ad0ed291d1ec488ffcba12e28cb707c38}
+
+\begin{DoxyCode}
+39   \{
+40     \textcolor{keywordflow}{return} \hyperlink{classWheel_a2aff80b65a1531a7289349af36f15f3f}{name\_};
+41   \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Wheel@{Wheel}!name\+\_\+@{name\+\_\+}}
+\index{name\+\_\+@{name\+\_\+}!Wheel@{Wheel}}
+\subsubsection[{\texorpdfstring{name\+\_\+}{name_}}]{\setlength{\rightskip}{0pt plus 5cm}string Wheel\+::name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWheel_a2aff80b65a1531a7289349af36f15f3f}{}\label{classWheel_a2aff80b65a1531a7289349af36f15f3f}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Visitor_8cpp}{Visitor.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,78 @@
+\hypertarget{classstudent}{}\section{student Class Reference}
+\label{classstudent}\index{student@{student}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classstudent_a9516948671b936201a0daac50ad4ca6f}{get\+Details} (void)
+\item 
+void \hyperlink{classstudent_a2de761d21703bd2b530de4cbc5eed372}{put\+Details} (void)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{classstudent_a87db2e64ee10a8c37a9c2657c5da5228}{name} \mbox{[}30\mbox{]}
+\item 
+int \hyperlink{classstudent_aba65fad741cdd2d47b62592e0a02aa05}{roll\+No}
+\item 
+int \hyperlink{classstudent_a036cbac5ccbb235fdc3313cb7806e199}{total}
+\item 
+float \hyperlink{classstudent_a63ba5c58c9d2bfe2c7f3128eb0222637}{perc}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{student@{student}!get\+Details@{get\+Details}}
+\index{get\+Details@{get\+Details}!student@{student}}
+\subsubsection[{\texorpdfstring{get\+Details(void)}{getDetails(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void student\+::get\+Details (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classstudent_a9516948671b936201a0daac50ad4ca6f}{}\label{classstudent_a9516948671b936201a0daac50ad4ca6f}
+
+\begin{DoxyCode}
+24                             \{
+25     cout << \textcolor{stringliteral}{"Enter name: "} ;
+26     cin >> \hyperlink{classstudent_a87db2e64ee10a8c37a9c2657c5da5228}{name};
+27     cout << \textcolor{stringliteral}{"Enter roll number: "};
+28     cin >> \hyperlink{classstudent_aba65fad741cdd2d47b62592e0a02aa05}{rollNo};
+29     cout << \textcolor{stringliteral}{"Enter total marks outof 500: "};
+30     cin >> \hyperlink{classstudent_a036cbac5ccbb235fdc3313cb7806e199}{total};
+31      
+32     \hyperlink{classstudent_a63ba5c58c9d2bfe2c7f3128eb0222637}{perc}=(float)total/500*100;
+33 \}
+\end{DoxyCode}
+\index{student@{student}!put\+Details@{put\+Details}}
+\index{put\+Details@{put\+Details}!student@{student}}
+\subsubsection[{\texorpdfstring{put\+Details(void)}{putDetails(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void student\+::put\+Details (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classstudent_a2de761d21703bd2b530de4cbc5eed372}{}\label{classstudent_a2de761d21703bd2b530de4cbc5eed372}
+
+\begin{DoxyCode}
+36                             \{
+37     cout << \textcolor{stringliteral}{"Student details:\(\backslash\)n"};
+38     cout << \textcolor{stringliteral}{"Name:"}<< \hyperlink{classstudent_a87db2e64ee10a8c37a9c2657c5da5228}{name} << \textcolor{stringliteral}{",Roll Number:"} << \hyperlink{classstudent_aba65fad741cdd2d47b62592e0a02aa05}{rollNo} << \textcolor{stringliteral}{",Total:"} << 
+      \hyperlink{classstudent_a036cbac5ccbb235fdc3313cb7806e199}{total} << \textcolor{stringliteral}{",Percentage:"} << \hyperlink{classstudent_a63ba5c58c9d2bfe2c7f3128eb0222637}{perc};
+39 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{student@{student}!name@{name}}
+\index{name@{name}!student@{student}}
+\subsubsection[{\texorpdfstring{name}{name}}]{\setlength{\rightskip}{0pt plus 5cm}char student\+::name\mbox{[}30\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classstudent_a87db2e64ee10a8c37a9c2657c5da5228}{}\label{classstudent_a87db2e64ee10a8c37a9c2657c5da5228}
+\index{student@{student}!perc@{perc}}
+\index{perc@{perc}!student@{student}}
+\subsubsection[{\texorpdfstring{perc}{perc}}]{\setlength{\rightskip}{0pt plus 5cm}float student\+::perc\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classstudent_a63ba5c58c9d2bfe2c7f3128eb0222637}{}\label{classstudent_a63ba5c58c9d2bfe2c7f3128eb0222637}
+\index{student@{student}!roll\+No@{roll\+No}}
+\index{roll\+No@{roll\+No}!student@{student}}
+\subsubsection[{\texorpdfstring{roll\+No}{rollNo}}]{\setlength{\rightskip}{0pt plus 5cm}int student\+::roll\+No\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classstudent_aba65fad741cdd2d47b62592e0a02aa05}{}\label{classstudent_aba65fad741cdd2d47b62592e0a02aa05}
+\index{student@{student}!total@{total}}
+\index{total@{total}!student@{student}}
+\subsubsection[{\texorpdfstring{total}{total}}]{\setlength{\rightskip}{0pt plus 5cm}int student\+::total\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classstudent_a036cbac5ccbb235fdc3313cb7806e199}{}\label{classstudent_a036cbac5ccbb235fdc3313cb7806e199}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{StudentDetails_8cpp}{Student\+Details.\+cpp}\end{DoxyCompactItemize}

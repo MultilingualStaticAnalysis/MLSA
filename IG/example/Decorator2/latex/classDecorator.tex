@@ -1,0 +1,81 @@
+\hypertarget{classDecorator}{}\section{Decorator Class Reference}
+\label{classDecorator}\index{Decorator@{Decorator}}
+
+
+Inheritance diagram for Decorator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDecorator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Decorator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{classDecorator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDecorator_aee6cdf11333827f13ea5b5384ad5af88}{Decorator} (std\+::unique\+\_\+ptr$<$ \hyperlink{classInterface}{Interface} $>$ c)
+\item 
+virtual void \hyperlink{classDecorator_ae5cad6daee450fb5eaa2b1cad6a0dd45}{write} (std\+::string \&text) override
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classInterface}{Interface} $>$ \hyperlink{classDecorator_a97d246b8a8a01f52ff6cd8f53aac1727}{interface}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Decorator@{Decorator}!Decorator@{Decorator}}
+\index{Decorator@{Decorator}!Decorator@{Decorator}}
+\subsubsection[{\texorpdfstring{Decorator(std\+::unique\+\_\+ptr$<$ Interface $>$ c)}{Decorator(std::unique_ptr< Interface > c)}}]{\setlength{\rightskip}{0pt plus 5cm}Decorator\+::\+Decorator (
+\begin{DoxyParamCaption}
+\item[{std\+::unique\+\_\+ptr$<$ {\bf Interface} $>$}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classDecorator_aee6cdf11333827f13ea5b5384ad5af88}{}\label{classDecorator_aee6cdf11333827f13ea5b5384ad5af88}
+
+\begin{DoxyCode}
+21 \{\textcolor{keyword}{interface }= std::move(c);\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Decorator@{Decorator}!write@{write}}
+\index{write@{write}!Decorator@{Decorator}}
+\subsubsection[{\texorpdfstring{write(std\+::string \&text) override}{write(std::string &text) override}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Decorator\+::write (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{text}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classDecorator_ae5cad6daee450fb5eaa2b1cad6a0dd45}{}\label{classDecorator_ae5cad6daee450fb5eaa2b1cad6a0dd45}
+
+
+Implements \hyperlink{classInterface_a8a27e796f257a35b468c06579af48d85}{Interface}.
+
+
+
+Reimplemented in \hyperlink{classMessengerWithValediction_a93f7e5fc32a11b58b3c57b54544ec8a2}{Messenger\+With\+Valediction}, and \hyperlink{classMessengerWithSalutation_aed33b1b35b9c5c24f80a3e898aed2487}{Messenger\+With\+Salutation}.
+
+
+\begin{DoxyCode}
+22 \{\hyperlink{classDecorator_a97d246b8a8a01f52ff6cd8f53aac1727}{interface}->write(text);\}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Decorator@{Decorator}!interface@{interface}}
+\index{interface@{interface}!Decorator@{Decorator}}
+\subsubsection[{\texorpdfstring{interface}{interface}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::unique\+\_\+ptr$<${\bf Interface}$>$ Decorator\+::interface\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDecorator_a97d246b8a8a01f52ff6cd8f53aac1727}{}\label{classDecorator_a97d246b8a8a01f52ff6cd8f53aac1727}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Decorator2_8cpp}{Decorator2.\+cpp}\end{DoxyCompactItemize}

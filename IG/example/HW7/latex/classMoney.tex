@@ -1,0 +1,342 @@
+\hypertarget{classMoney}{}\section{Money Class Reference}
+\label{classMoney}\index{Money@{Money}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMoney_aa68a869972c3f4c70c76a09f6063e9ce}{Money} (long dallars, int cents)
+\item 
+\hyperlink{classMoney_a096f367d27585ed24a9251a10c524dc5}{Money} (long dollars)
+\item 
+\hyperlink{classMoney_a883c32ea0f71c9d1422141c384d225ba}{Money} ()
+\item 
+double \hyperlink{classMoney_acee1d7ddca28c78740229a57cda5874f}{get\+\_\+value} () const 
+\item 
+\hyperlink{classMoney}{Money} \hyperlink{classMoney_ac8a69a07c01ce78261155d8262c4d132}{percent} (int percent\+\_\+figure) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+long \hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\+\_\+cents}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMoney}{Money} \hyperlink{classMoney_a050c2304648c379e54d793631adc3595}{operator+} (const \hyperlink{classMoney}{Money} \&amount1, const \hyperlink{classMoney}{Money} \&amount2)
+\item 
+\hyperlink{classMoney}{Money} \hyperlink{classMoney_afcc9c5cd27cc1c1b770681205a45cda0}{operator-\/} (const \hyperlink{classMoney}{Money} \&amount1, const \hyperlink{classMoney}{Money} \&amount2)
+\item 
+\hyperlink{classMoney}{Money} \hyperlink{classMoney_adeefac843a57c83f4ddd1125c5e001a0}{operator-\/} (const \hyperlink{classMoney}{Money} \&amount)
+\item 
+bool \hyperlink{classMoney_adfbd10ed3dffab92c205b82c302357c6}{operator==} (const \hyperlink{classMoney}{Money} \&amount1, const \hyperlink{classMoney}{Money} \&amount2)
+\item 
+bool \hyperlink{classMoney_a31c79d588d6537e80efaa53e75747a61}{operator$<$} (const \hyperlink{classMoney}{Money} \&amount1, const \hyperlink{classMoney}{Money} \&amount2)
+\item 
+bool \hyperlink{classMoney_ad45da707c7bee0cb12440a1c6ca3dc4b}{operator$<$=} (const \hyperlink{classMoney}{Money} \&amount1, const \hyperlink{classMoney}{Money} \&amount2)
+\item 
+bool \hyperlink{classMoney_adb213c2f9318ccaadd43a702ab25d614}{operator$>$} (const \hyperlink{classMoney}{Money} \&amount1, const \hyperlink{classMoney}{Money} \&amount2)
+\item 
+bool \hyperlink{classMoney_af47b787881ddfdc6f98f3a86ba0a9d14}{operator$>$=} (const \hyperlink{classMoney}{Money} \&amount1, const \hyperlink{classMoney}{Money} \&amount2)
+\item 
+istream \& \hyperlink{classMoney_a4c8e628d575a860141c4fd4f2f38b186}{operator$>$$>$} (istream \&ins, \hyperlink{classMoney}{Money} \&amount)
+\item 
+ostream \& \hyperlink{classMoney_a8ee9f1db0adb144c0d313ae202d06b3c}{operator$<$$<$} (ostream \&outs, const \hyperlink{classMoney}{Money} \&amount)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Money@{Money}!Money@{Money}}
+\index{Money@{Money}!Money@{Money}}
+\subsubsection[{\texorpdfstring{Money(long dallars, int cents)}{Money(long dallars, int cents)}}]{\setlength{\rightskip}{0pt plus 5cm}Money\+::\+Money (
+\begin{DoxyParamCaption}
+\item[{long}]{dallars, }
+\item[{int}]{cents}
+\end{DoxyParamCaption}
+)}\hypertarget{classMoney_aa68a869972c3f4c70c76a09f6063e9ce}{}\label{classMoney_aa68a869972c3f4c70c76a09f6063e9ce}
+
+\begin{DoxyCode}
+177 \{
+178    \textcolor{keywordflow}{if} (dollars*cents < 0)
+179    \{
+180       cout << \textcolor{stringliteral}{"Illegal values for dollars and cents.\(\backslash\)n"};
+181       exit(1);
+182    \}
+183    \hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} = dollars *100 + cents;
+184 \}
+\end{DoxyCode}
+\index{Money@{Money}!Money@{Money}}
+\index{Money@{Money}!Money@{Money}}
+\subsubsection[{\texorpdfstring{Money(long dollars)}{Money(long dollars)}}]{\setlength{\rightskip}{0pt plus 5cm}Money\+::\+Money (
+\begin{DoxyParamCaption}
+\item[{long}]{dollars}
+\end{DoxyParamCaption}
+)}\hypertarget{classMoney_a096f367d27585ed24a9251a10c524dc5}{}\label{classMoney_a096f367d27585ed24a9251a10c524dc5}
+
+\begin{DoxyCode}
+186                          : \hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents}(dollars * 100)
+187 \{
+188 \}
+\end{DoxyCode}
+\index{Money@{Money}!Money@{Money}}
+\index{Money@{Money}!Money@{Money}}
+\subsubsection[{\texorpdfstring{Money()}{Money()}}]{\setlength{\rightskip}{0pt plus 5cm}Money\+::\+Money (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classMoney_a883c32ea0f71c9d1422141c384d225ba}{}\label{classMoney_a883c32ea0f71c9d1422141c384d225ba}
+
+\begin{DoxyCode}
+190              : \hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents}(0)
+191 \{
+192 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Money@{Money}!get\+\_\+value@{get\+\_\+value}}
+\index{get\+\_\+value@{get\+\_\+value}!Money@{Money}}
+\subsubsection[{\texorpdfstring{get\+\_\+value() const }{get_value() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Money\+::get\+\_\+value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classMoney_acee1d7ddca28c78740229a57cda5874f}{}\label{classMoney_acee1d7ddca28c78740229a57cda5874f}
+
+\begin{DoxyCode}
+195 \{
+196    \textcolor{keywordflow}{return}(\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} * 0.01);
+197 \}
+\end{DoxyCode}
+\index{Money@{Money}!percent@{percent}}
+\index{percent@{percent}!Money@{Money}}
+\subsubsection[{\texorpdfstring{percent(int percent\+\_\+figure) const }{percent(int percent_figure) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Money} Money\+::percent (
+\begin{DoxyParamCaption}
+\item[{int}]{percent\+\_\+figure}
+\end{DoxyParamCaption}
+) const}\hypertarget{classMoney_ac8a69a07c01ce78261155d8262c4d132}{}\label{classMoney_ac8a69a07c01ce78261155d8262c4d132}
+
+\begin{DoxyCode}
+200 \{
+201    \textcolor{keywordtype}{double} \hyperlink{classMoney_ac8a69a07c01ce78261155d8262c4d132}{percent} = percent\_figure * 0.01;
+202    \textcolor{keywordflow}{return} \hyperlink{classMoney_a883c32ea0f71c9d1422141c384d225ba}{Money} (0.0, \hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} * percent);
+203 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{classMoney_ac8a69a07c01ce78261155d8262c4d132_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Money@{Money}!operator+@{operator+}}
+\index{operator+@{operator+}!Money@{Money}}
+\subsubsection[{\texorpdfstring{operator+}{operator+}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Money} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Money} \&}]{amount1, }
+\item[{const {\bf Money} \&}]{amount2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classMoney_a050c2304648c379e54d793631adc3595}{}\label{classMoney_a050c2304648c379e54d793631adc3595}
+
+\begin{DoxyCode}
+206 \{
+207    \hyperlink{classMoney}{Money} temp;
+208    temp.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} = amount1.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} + amount2.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents};
+209    \textcolor{keywordflow}{return} temp;
+210 \}
+\end{DoxyCode}
+\index{Money@{Money}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Money@{Money}}
+\subsubsection[{\texorpdfstring{operator-\/}{operator-}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Money} operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Money} \&}]{amount1, }
+\item[{const {\bf Money} \&}]{amount2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classMoney_afcc9c5cd27cc1c1b770681205a45cda0}{}\label{classMoney_afcc9c5cd27cc1c1b770681205a45cda0}
+
+\begin{DoxyCode}
+213 \{
+214    \hyperlink{classMoney}{Money} temp;
+215    temp.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} = amount1.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} - amount2.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents};
+216    \textcolor{keywordflow}{return} temp;
+217 \}
+\end{DoxyCode}
+\index{Money@{Money}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Money@{Money}}
+\subsubsection[{\texorpdfstring{operator-\/}{operator-}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Money} operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Money} \&}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classMoney_adeefac843a57c83f4ddd1125c5e001a0}{}\label{classMoney_adeefac843a57c83f4ddd1125c5e001a0}
+
+\begin{DoxyCode}
+220 \{
+221    \hyperlink{classMoney}{Money} temp;
+222    temp.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} = -amount.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents};
+223    \textcolor{keywordflow}{return} temp;
+224 \}
+\end{DoxyCode}
+\index{Money@{Money}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Money@{Money}}
+\subsubsection[{\texorpdfstring{operator$<$}{operator<}}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Money} \&}]{amount1, }
+\item[{const {\bf Money} \&}]{amount2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classMoney_a31c79d588d6537e80efaa53e75747a61}{}\label{classMoney_a31c79d588d6537e80efaa53e75747a61}
+
+\begin{DoxyCode}
+232 \{
+233    \textcolor{keywordflow}{return} (amount1.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} < amount2.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents});
+234 \}
+\end{DoxyCode}
+\index{Money@{Money}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Money@{Money}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{outs, }
+\item[{const {\bf Money} \&}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classMoney_a8ee9f1db0adb144c0d313ae202d06b3c}{}\label{classMoney_a8ee9f1db0adb144c0d313ae202d06b3c}
+
+\begin{DoxyCode}
+158 \{
+159    \textcolor{keywordtype}{long} positive\_cents, dollars, cents;
+160    positive\_cents = labs(amount.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents});
+161    dollars = positive\_cents/100;
+162    cents = positive\_cents%100;
+163 
+164    \textcolor{keywordflow}{if} (amount.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} < 0)
+165       outs << \textcolor{stringliteral}{"-$"} << dollars << \textcolor{charliteral}{'.'};
+166    \textcolor{keywordflow}{else}
+167       outs << \textcolor{stringliteral}{"$"} << dollars << \textcolor{charliteral}{'.'};
+168 
+169    \textcolor{keywordflow}{if} (cents < 10)
+170       outs << \textcolor{charliteral}{'0'};
+171    outs << cents;
+172 
+173    \textcolor{keywordflow}{return} outs;
+174 \}
+\end{DoxyCode}
+\index{Money@{Money}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!Money@{Money}}
+\subsubsection[{\texorpdfstring{operator$<$=}{operator<=}}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$<$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Money} \&}]{amount1, }
+\item[{const {\bf Money} \&}]{amount2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classMoney_ad45da707c7bee0cb12440a1c6ca3dc4b}{}\label{classMoney_ad45da707c7bee0cb12440a1c6ca3dc4b}
+
+\begin{DoxyCode}
+237 \{
+238    \textcolor{keywordflow}{return} (amount1.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} <= amount2.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents});
+239 \}
+\end{DoxyCode}
+\index{Money@{Money}!operator==@{operator==}}
+\index{operator==@{operator==}!Money@{Money}}
+\subsubsection[{\texorpdfstring{operator==}{operator==}}]{\setlength{\rightskip}{0pt plus 5cm}bool operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Money} \&}]{amount1, }
+\item[{const {\bf Money} \&}]{amount2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classMoney_adfbd10ed3dffab92c205b82c302357c6}{}\label{classMoney_adfbd10ed3dffab92c205b82c302357c6}
+
+\begin{DoxyCode}
+227 \{
+228    \textcolor{keywordflow}{return} (amount1.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} == amount2.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents});
+229 \}
+\end{DoxyCode}
+\index{Money@{Money}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Money@{Money}}
+\subsubsection[{\texorpdfstring{operator$>$}{operator>}}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Money} \&}]{amount1, }
+\item[{const {\bf Money} \&}]{amount2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classMoney_adb213c2f9318ccaadd43a702ab25d614}{}\label{classMoney_adb213c2f9318ccaadd43a702ab25d614}
+
+\begin{DoxyCode}
+242 \{
+243    \textcolor{keywordflow}{return} (amount1.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} > amount2.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents});
+244 \}
+\end{DoxyCode}
+\index{Money@{Money}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!Money@{Money}}
+\subsubsection[{\texorpdfstring{operator$>$=}{operator>=}}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$>$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Money} \&}]{amount1, }
+\item[{const {\bf Money} \&}]{amount2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classMoney_af47b787881ddfdc6f98f3a86ba0a9d14}{}\label{classMoney_af47b787881ddfdc6f98f3a86ba0a9d14}
+
+\begin{DoxyCode}
+247 \{
+248    \textcolor{keywordflow}{return} (amount1.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} >= amount2.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents});
+249 \}
+\end{DoxyCode}
+\index{Money@{Money}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Money@{Money}}
+\subsubsection[{\texorpdfstring{operator$>$$>$}{operator>>}}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{ins, }
+\item[{{\bf Money} \&}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classMoney_a4c8e628d575a860141c4fd4f2f38b186}{}\label{classMoney_a4c8e628d575a860141c4fd4f2f38b186}
+
+\begin{DoxyCode}
+115 \{
+116    \textcolor{keywordtype}{char} one\_char, decimal\_point,
+117       digit1, digit2; \textcolor{comment}{//digits for the amount of cents                                                     
+                                                                                                       }
+118    \textcolor{keywordtype}{long} dollars;
+119    \textcolor{keywordtype}{int} cents;
+120    \textcolor{keywordtype}{bool} negative;\textcolor{comment}{//set to true if input is negative.                                                       
+                                                                                                       }
+121 
+122    ins >> one\_char;
+123    \textcolor{keywordflow}{if} (one\_char == \textcolor{charliteral}{'-'})
+124    \{
+125       negative = \textcolor{keyword}{true};
+126       ins >> one\_char; \textcolor{comment}{//read '$'                                                                          
+                                                                                                       }
+127    \}
+128    \textcolor{keywordflow}{else}
+129       negative = \textcolor{keyword}{false};
+130    \textcolor{comment}{//if input is legal, then one\_char == '$'                                                               
+                                                                                                       }
+131 
+132    ins >> dollars >> decimal\_point >> digit1 >> digit2;
+133 
+134    \textcolor{keywordflow}{if} ( one\_char != \textcolor{charliteral}{'$'} || decimal\_point != \textcolor{charliteral}{'.'}
+135         || !isdigit(digit1) || !isdigit(digit2) )
+136    \{
+137       cout << \textcolor{stringliteral}{"Error illegal form for money input\(\backslash\)n"};
+138       exit(1);
+139    \}
+140 
+141    cents = \hyperlink{HW7_8cpp_a4a62e282ba4d4926583e5d206c744870}{digit\_to\_int}(digit1)*10 + \hyperlink{HW7_8cpp_a4a62e282ba4d4926583e5d206c744870}{digit\_to\_int}(digit2);
+142 
+143    amount.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} = dollars*100 + cents;
+144    \textcolor{keywordflow}{if} (negative)
+145       amount.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} = -amount.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents};
+146 
+147 
+148    \textcolor{keywordflow}{return} ins;
+149 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Money@{Money}!all\+\_\+cents@{all\+\_\+cents}}
+\index{all\+\_\+cents@{all\+\_\+cents}!Money@{Money}}
+\subsubsection[{\texorpdfstring{all\+\_\+cents}{all_cents}}]{\setlength{\rightskip}{0pt plus 5cm}long Money\+::all\+\_\+cents\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classMoney_a499d11509460668b7c262d9a58f7f310}{}\label{classMoney_a499d11509460668b7c262d9a58f7f310}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{HW7_8cpp}{H\+W7.\+cpp}\end{DoxyCompactItemize}

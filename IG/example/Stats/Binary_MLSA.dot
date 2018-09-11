@@ -1,0 +1,31 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/Binary Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/Binary Call Graph"
+	];
+
+	Node0x884889461 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/Binary/Binary.c"];
+	Node0x975813734 [shape=oval, label="0x2793340. (/home/labaccount/11-2-17/mlsa/IG/example/Binary/Binary.c)\ngettimeofday(UNOP, <<0>>)"];
+	Node0x884889461 -> Node0x975813734;
+	Node0x989631587 [shape=oval, label="0x2793810. (/home/labaccount/11-2-17/mlsa/IG/example/Binary/Binary.c)\nbinary1(n, a, k)"];
+	Node0x884889461 -> Node0x989631587;
+	Node0x586649303 [shape=oval, label="0x2793a50. (/home/labaccount/11-2-17/mlsa/IG/example/Binary/Binary.c)\ngettimeofday(UNOP, <<0>>)"];
+	Node0x884889461 -> Node0x586649303;
+	Node0x341011828 [shape=oval, label="0x2794010. (/home/labaccount/11-2-17/mlsa/IG/example/Binary/Binary.c)\nprintf(<<The difference is %ld\n>>, 0x2793f90)"];
+	Node0x884889461 -> Node0x341011828;
+	Node0x610951896 [shape=oval, label="0x2793f90. (/home/labaccount/11-2-17/mlsa/IG/example/Binary/Binary.c)\ntimediff(before, after)"];
+	Node0x884889461 -> Node0x610951896;
+	Node0x633637564 [shape=oval, label="0x2794148. (/home/labaccount/11-2-17/mlsa/IG/example/Binary/Binary.c)\nprintf(<<---------------------------------------------\n>>)"];
+	Node0x884889461 -> Node0x633637564;
+	Node0x705486974 [shape=oval, label="0x27942a8. (/home/labaccount/11-2-17/mlsa/IG/example/Binary/Binary.c)\ngettimeofday(UNOP, <<0>>)"];
+	Node0x884889461 -> Node0x705486974;
+	Node0x489943923 [shape=oval, label="0x2794750. (/home/labaccount/11-2-17/mlsa/IG/example/Binary/Binary.c)\nbinary2(n, a, k)"];
+	Node0x884889461 -> Node0x489943923;
+	Node0x667843708 [shape=oval, label="0x2794990. (/home/labaccount/11-2-17/mlsa/IG/example/Binary/Binary.c)\ngettimeofday(UNOP, <<0>>)"];
+	Node0x884889461 -> Node0x667843708;
+	Node0x730229111 [shape=oval, label="0x2794e48. (/home/labaccount/11-2-17/mlsa/IG/example/Binary/Binary.c)\nprintf(<<The difference is %ld\n>>, 0x2794dc8)"];
+	Node0x884889461 -> Node0x730229111;
+	Node0x149127132 [shape=oval, label="0x2794dc8. (/home/labaccount/11-2-17/mlsa/IG/example/Binary/Binary.c)\ntimediff(before, after)"];
+	Node0x884889461 -> Node0x149127132;
+}

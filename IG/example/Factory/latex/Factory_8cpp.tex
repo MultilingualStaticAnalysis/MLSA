@@ -1,0 +1,88 @@
+\hypertarget{Factory_8cpp}{}\section{Factory.\+cpp File Reference}
+\label{Factory_8cpp}\index{Factory.\+cpp@{Factory.\+cpp}}
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+Include dependency graph for Factory.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{Factory_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classPizza}{Pizza}
+\item 
+class \hyperlink{classHamAndMushroomPizza}{Ham\+And\+Mushroom\+Pizza}
+\item 
+class \hyperlink{classDeluxePizza}{Deluxe\+Pizza}
+\item 
+class \hyperlink{classHawaiianPizza}{Hawaiian\+Pizza}
+\item 
+class \hyperlink{classPizzaFactory}{Pizza\+Factory}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{Factory_8cpp_a070ae1b514e4de298f4c34dc2b193ac7}{pizza\+\_\+information} (\hyperlink{classPizzaFactory_a247cf751b7af4fd338a14303c9e67fe4}{Pizza\+Factory\+::\+Pizza\+Type} pizzatype)
+\item 
+int \hyperlink{Factory_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Factory.\+cpp@{Factory.\+cpp}!main@{main}}
+\index{main@{main}!Factory.\+cpp@{Factory.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Factory_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Factory_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+58 \{
+59     \hyperlink{Factory_8cpp_a070ae1b514e4de298f4c34dc2b193ac7}{pizza\_information}(\hyperlink{classPizzaFactory_a247cf751b7af4fd338a14303c9e67fe4ab47db230a75b01a1a531d9374a57dc23}{PizzaFactory::HamMushroom});
+60     \hyperlink{Factory_8cpp_a070ae1b514e4de298f4c34dc2b193ac7}{pizza\_information}(\hyperlink{classPizzaFactory_a247cf751b7af4fd338a14303c9e67fe4ae05ccf2778af31944f7205f550c33e8b}{PizzaFactory::Deluxe});
+61     \hyperlink{Factory_8cpp_a070ae1b514e4de298f4c34dc2b193ac7}{pizza\_information}(\hyperlink{classPizzaFactory_a247cf751b7af4fd338a14303c9e67fe4a43552967e3be1afe8d7bf89feb21ba4e}{PizzaFactory::Hawaiian});
+62 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Factory_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Factory.\+cpp@{Factory.\+cpp}!pizza\+\_\+information@{pizza\+\_\+information}}
+\index{pizza\+\_\+information@{pizza\+\_\+information}!Factory.\+cpp@{Factory.\+cpp}}
+\subsubsection[{\texorpdfstring{pizza\+\_\+information(\+Pizza\+Factory\+::\+Pizza\+Type pizzatype)}{pizza_information(PizzaFactory::PizzaType pizzatype)}}]{\setlength{\rightskip}{0pt plus 5cm}void pizza\+\_\+information (
+\begin{DoxyParamCaption}
+\item[{{\bf Pizza\+Factory\+::\+Pizza\+Type}}]{pizzatype}
+\end{DoxyParamCaption}
+)}\hypertarget{Factory_8cpp_a070ae1b514e4de298f4c34dc2b193ac7}{}\label{Factory_8cpp_a070ae1b514e4de298f4c34dc2b193ac7}
+
+\begin{DoxyCode}
+52 \{
+53     unique\_ptr<Pizza> pizza = \hyperlink{classPizzaFactory_ae03b206abf337720e9f019eb735d6131}{PizzaFactory::createPizza}(pizzatype);
+54     cout << \textcolor{stringliteral}{"Price of "} << pizzatype << \textcolor{stringliteral}{" is "} << pizza->getPrice() << std::endl;
+55 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{Factory_8cpp_a070ae1b514e4de298f4c34dc2b193ac7_cgraph}
+\end{center}
+\end{figure}
+
+

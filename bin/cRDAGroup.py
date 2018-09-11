@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import CControlFlow
 import CAssignmentCollector
 import cRDA
@@ -10,9 +11,9 @@ def main(inputFile, fileName, outputFile):
 
 
 	#Generate controlFlow files (fcfg and rcfg)
-	CControlFlow.Main(inputFile, fileName, fcfgFile, rcfgFile)
+	CControlFlow.main(inputFile, fileName, fcfgFile, rcfgFile)
 	CAssignmentCollector.main(inputFile, varsFile)
 	cRDA.main(rcfgFile, varsFile, outputFile)
 	
 
-#main('test.c_ast.txt', 'test.c', 'test.c_rda.csv')
+#main('test.cpp_ast.txt', 'test.cpp', 'test.cpp_rda.csv')

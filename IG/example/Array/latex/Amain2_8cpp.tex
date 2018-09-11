@@ -1,0 +1,149 @@
+\hypertarget{Amain2_8cpp}{}\section{Amain2.\+cpp File Reference}
+\label{Amain2_8cpp}\index{Amain2.\+cpp@{Amain2.\+cpp}}
+{\ttfamily \#include \char`\"{}Array.\+h\char`\"{}}\\*
+Include dependency graph for Amain2.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Amain2_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{Amain2_8cpp_a3314cbbca00e99ccc8b9d46dce272b0d}{instantiate\+Array} (\hyperlink{classArray}{Array}$<$ T $>$ \&a)
+\item 
+int \hyperlink{Amain2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Amain2.\+cpp@{Amain2.\+cpp}!instantiate\+Array@{instantiate\+Array}}
+\index{instantiate\+Array@{instantiate\+Array}!Amain2.\+cpp@{Amain2.\+cpp}}
+\subsubsection[{\texorpdfstring{instantiate\+Array(\+Array$<$ T $>$ \&a)}{instantiateArray(Array< T > &a)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void instantiate\+Array (
+\begin{DoxyParamCaption}
+\item[{{\bf Array}$<$ T $>$ \&}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{Amain2_8cpp_a3314cbbca00e99ccc8b9d46dce272b0d}{}\label{Amain2_8cpp_a3314cbbca00e99ccc8b9d46dce272b0d}
+
+\begin{DoxyCode}
+44 \{
+45    \textcolor{keyword}{static} T dVal; \textcolor{comment}{//is initialized with a default T value                                                  
+                                                                                                       }
+46 
+47    cout << \textcolor{stringliteral}{"\(\backslash\)nEnter any amount of elements or "} << a.\hyperlink{classArray_aa9850f94775a80016a6ef59e76dac02d}{getDELIM}() << \textcolor{stringliteral}{" to end input: "};
+48    cin >> a;
+49    cout << a.\hyperlink{classArray_a88b824f494fefe7053adf4a5cf55e7cf}{getSize}() << \textcolor{stringliteral}{" elements were entered\(\backslash\)n"} << a << endl;
+50 
+51    cout << \textcolor{stringliteral}{"Initializing second array from the array originally created"} << endl;
+52    \hyperlink{classArray}{Array<T>} b(a); \textcolor{comment}{//initializing a new array as a copy of the original                             
+                                                                                                               }
+53    cout << \textcolor{stringliteral}{"the new array has "} << b.getSize() << \textcolor{stringliteral}{" elements\(\backslash\)n"} << b << endl;
+54 
+55    cout << \textcolor{stringliteral}{"The original array and second array are "};
+56    \textcolor{keywordflow}{if}(a==b) \textcolor{comment}{//checks to see if a and b are the same arrays                                                 
+                                                                                                       }
+57       cout << \textcolor{stringliteral}{"equal"} << endl;
+58    \textcolor{keywordflow}{else}
+59       cout << \textcolor{stringliteral}{"not equal"} << endl;
+60 
+61    cout << \textcolor{stringliteral}{"Creating a third array from user input..."};
+62    \hyperlink{classArray}{Array<T>} c; \textcolor{comment}{//creates default array c of the same type as array a                               
+                                                                                                               }
+63    c.\hyperlink{classArray_aebe3687021d31102a7d52e18bedbffbc}{setDELIM}(a.getDELIM()); \textcolor{comment}{//sets the DELIM of c to the same as a                                
+                                                                                                               }
+64    cout << \textcolor{stringliteral}{"\(\backslash\)nEnter any amount of elements or "} << c.\hyperlink{classArray_aa9850f94775a80016a6ef59e76dac02d}{getDELIM}() << \textcolor{stringliteral}{" to end input: "};
+65    cin >> c;
+66    cout << c.\hyperlink{classArray_a88b824f494fefe7053adf4a5cf55e7cf}{getSize}() << \textcolor{stringliteral}{" elements were entered\(\backslash\)n"} << c << endl;
+67 
+68    cout << \textcolor{stringliteral}{"The original array and third array are "};
+69    \textcolor{keywordflow}{if}(a==c) \textcolor{comment}{//checks if a and c are the same array                                                         
+                                                                                                       }
+70       cout << \textcolor{stringliteral}{"equal"} << endl;
+71    \textcolor{keywordflow}{else}
+72       cout << \textcolor{stringliteral}{"not equal"} << endl;
+73 
+74    cout << \textcolor{stringliteral}{"Copying the elements from the third array to the original one"} << endl;
+75    a = c; \textcolor{comment}{//copies the array of c to a                                                                     
+                                                                                                       }
+76    cout << \textcolor{stringliteral}{"The original array now has "} << a.getSize() << \textcolor{stringliteral}{" elements:\(\backslash\)n"} << a << endl;
+77 
+78    \textcolor{comment}{//uses overloaded subscript operator to print out value at a[5]                                         
+                                                                                                       }
+79    cout << \textcolor{stringliteral}{"In the original array, the element at subscript 5 is "} << a[5] << endl;
+80 
+81    \textcolor{comment}{// use overloaded subscript operator to create lvalue                                                   
+                                                                                                       }
+82    cout << \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)nAssigning "} << dVal << \textcolor{stringliteral}{" to the subscript [5] position"} << endl;
+83    a[ 5 ] = dVal; \textcolor{comment}{//a[5] is assigned dVal's value                                                          
+                                                                                                       }
+84    cout << \textcolor{stringliteral}{"After assignment, the original array:\(\backslash\)n"} << a << endl;
+85 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{Amain2_8cpp_a3314cbbca00e99ccc8b9d46dce272b0d_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Amain2.\+cpp@{Amain2.\+cpp}!main@{main}}
+\index{main@{main}!Amain2.\+cpp@{Amain2.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Amain2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Amain2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+14 \{
+15    \textcolor{comment}{// Instantiate an Array of doubles                                                                      
+                                                                                                       }
+16    cout << \textcolor{stringliteral}{"\(\backslash\)nTESTING DOUBLES:\(\backslash\)n"};
+17    \hyperlink{classArray}{Array<double>} dbl;
+18    dbl.\hyperlink{classArray_aebe3687021d31102a7d52e18bedbffbc}{setDELIM}(-999); \textcolor{comment}{//sets the DELIM based on Array type for input purposes                     
+                                                                                                               }
+19    \hyperlink{Amain2_8cpp_a3314cbbca00e99ccc8b9d46dce272b0d}{instantiateArray}(dbl);
+20 
+21    \textcolor{comment}{// Instantiate an Array of integers                                                                     
+                                                                                                       }
+22    cout << \textcolor{stringliteral}{"\(\backslash\)nTESTING INTEGERS:\(\backslash\)n"};
+23    \hyperlink{classArray}{Array<int>} i;
+24    i.\hyperlink{classArray_aebe3687021d31102a7d52e18bedbffbc}{setDELIM}(-999);
+25    \hyperlink{Amain2_8cpp_a3314cbbca00e99ccc8b9d46dce272b0d}{instantiateArray}(i);
+26 
+27    \textcolor{comment}{// Instantiate an Array of characters                                                                   
+                                                                                                       }
+28    cout << \textcolor{stringliteral}{"\(\backslash\)nTESTING CHARS:\(\backslash\)n"};
+29    \hyperlink{classArray}{Array<char>} c;
+30    c.\hyperlink{classArray_aebe3687021d31102a7d52e18bedbffbc}{setDELIM}(\textcolor{charliteral}{'*'});
+31    \hyperlink{Amain2_8cpp_a3314cbbca00e99ccc8b9d46dce272b0d}{instantiateArray}(c);
+32 
+33    \textcolor{comment}{// Instantiate an Array of strings                                                                      
+                                                                                                       }
+34    cout << \textcolor{stringliteral}{"\(\backslash\)nTESTING STRINGS:\(\backslash\)n"};
+35    \hyperlink{classArray}{Array<string>} s;
+36    s.\hyperlink{classArray_aebe3687021d31102a7d52e18bedbffbc}{setDELIM}(\textcolor{stringliteral}{"-999"});
+37    \hyperlink{Amain2_8cpp_a3314cbbca00e99ccc8b9d46dce272b0d}{instantiateArray}(s);
+38 
+39    \textcolor{keywordflow}{return} 0;
+40 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Amain2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

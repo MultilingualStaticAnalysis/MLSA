@@ -1,0 +1,184 @@
+\hypertarget{classPoint}{}\section{Point Class Reference}
+\label{classPoint}\index{Point@{Point}}
+
+
+{\ttfamily \#include $<$Point.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPoint_a1c8a6881ed0f11828299033c5959d147}{Point} (int \hyperlink{classPoint_a8c779e11e694b20e0946105a9f5de842}{x}=0, int \hyperlink{classPoint_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y}=0)
+\item 
+int \hyperlink{classPoint_abe622fffc8785b0c2e06cdac681b9837}{getX} () const 
+\item 
+void \hyperlink{classPoint_acdc86ab607b2ae8415152883e2629015}{setX} (int \hyperlink{classPoint_a8c779e11e694b20e0946105a9f5de842}{x})
+\item 
+int \hyperlink{classPoint_a10f31e48e2dbc22e3660ca769b8d5d65}{getY} () const 
+\item 
+void \hyperlink{classPoint_afccad787a359f062efc1af5e935a99ba}{setY} (int \hyperlink{classPoint_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y})
+\item 
+void \hyperlink{classPoint_afb6a0c9ad81c0864e4039069f0f33d80}{set\+XY} (int \hyperlink{classPoint_a8c779e11e694b20e0946105a9f5de842}{x}, int \hyperlink{classPoint_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y})
+\item 
+double \hyperlink{classPoint_a96a23567344de8c84468a96f97c2448f}{get\+Magnitude} () const 
+\item 
+double \hyperlink{classPoint_ae53cf4bc004996960585a70948a21cb6}{get\+Argument} () const 
+\item 
+void \hyperlink{classPoint_a20b27dff6a871012fa5e7c0d52fd6b98}{print} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classPoint_a8c779e11e694b20e0946105a9f5de842}{x}
+\item 
+int \hyperlink{classPoint_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\subsubsection[{\texorpdfstring{Point(int x=0, int y=0)}{Point(int x=0, int y=0)}}]{\setlength{\rightskip}{0pt plus 5cm}Point\+::\+Point (
+\begin{DoxyParamCaption}
+\item[{int}]{x = {\ttfamily 0}, }
+\item[{int}]{y = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classPoint_a1c8a6881ed0f11828299033c5959d147}{}\label{classPoint_a1c8a6881ed0f11828299033c5959d147}
+
+\begin{DoxyCode}
+8 : \hyperlink{classPoint_a8c779e11e694b20e0946105a9f5de842}{x}(\hyperlink{classPoint_a8c779e11e694b20e0946105a9f5de842}{x}), \hyperlink{classPoint_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y}(\hyperlink{classPoint_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y}) \{ \}  \textcolor{comment}{// Use member initializer list}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Point@{Point}!get\+Argument@{get\+Argument}}
+\index{get\+Argument@{get\+Argument}!Point@{Point}}
+\subsubsection[{\texorpdfstring{get\+Argument() const }{getArgument() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Point\+::get\+Argument (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classPoint_ae53cf4bc004996960585a70948a21cb6}{}\label{classPoint_ae53cf4bc004996960585a70948a21cb6}
+
+\begin{DoxyCode}
+42                                 \{
+43    \textcolor{keywordflow}{return} atan2(\hyperlink{classPoint_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y}, \hyperlink{classPoint_a8c779e11e694b20e0946105a9f5de842}{x});    \textcolor{comment}{// atan2 in <cmath>}
+44 \}
+\end{DoxyCode}
+\index{Point@{Point}!get\+Magnitude@{get\+Magnitude}}
+\index{get\+Magnitude@{get\+Magnitude}!Point@{Point}}
+\subsubsection[{\texorpdfstring{get\+Magnitude() const }{getMagnitude() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Point\+::get\+Magnitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classPoint_a96a23567344de8c84468a96f97c2448f}{}\label{classPoint_a96a23567344de8c84468a96f97c2448f}
+
+\begin{DoxyCode}
+37                                  \{
+38    \textcolor{keywordflow}{return} sqrt(\hyperlink{classPoint_a8c779e11e694b20e0946105a9f5de842}{x}*\hyperlink{classPoint_a8c779e11e694b20e0946105a9f5de842}{x} + \hyperlink{classPoint_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y}*\hyperlink{classPoint_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y});    \textcolor{comment}{// sqrt in <cmath>}
+39 \}
+\end{DoxyCode}
+\index{Point@{Point}!getX@{getX}}
+\index{getX@{getX}!Point@{Point}}
+\subsubsection[{\texorpdfstring{get\+X() const }{getX() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Point\+::getX (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classPoint_abe622fffc8785b0c2e06cdac681b9837}{}\label{classPoint_abe622fffc8785b0c2e06cdac681b9837}
+
+\begin{DoxyCode}
+11                       \{
+12    \textcolor{keywordflow}{return} \hyperlink{classPoint_a8c779e11e694b20e0946105a9f5de842}{x};
+13 \}
+\end{DoxyCode}
+\index{Point@{Point}!getY@{getY}}
+\index{getY@{getY}!Point@{Point}}
+\subsubsection[{\texorpdfstring{get\+Y() const }{getY() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Point\+::getY (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classPoint_a10f31e48e2dbc22e3660ca769b8d5d65}{}\label{classPoint_a10f31e48e2dbc22e3660ca769b8d5d65}
+
+\begin{DoxyCode}
+21                       \{
+22    \textcolor{keywordflow}{return} \hyperlink{classPoint_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y};
+23 \}
+\end{DoxyCode}
+\index{Point@{Point}!print@{print}}
+\index{print@{print}!Point@{Point}}
+\subsubsection[{\texorpdfstring{print() const }{print() const }}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classPoint_a20b27dff6a871012fa5e7c0d52fd6b98}{}\label{classPoint_a20b27dff6a871012fa5e7c0d52fd6b98}
+
+\begin{DoxyCode}
+47                         \{
+48    cout << \textcolor{stringliteral}{"("} << \hyperlink{classPoint_a8c779e11e694b20e0946105a9f5de842}{x} << \textcolor{stringliteral}{","} << \hyperlink{classPoint_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y} << \textcolor{stringliteral}{")"} << endl;
+49 \}\end{DoxyCode}
+\index{Point@{Point}!setX@{setX}}
+\index{setX@{setX}!Point@{Point}}
+\subsubsection[{\texorpdfstring{set\+X(int x)}{setX(int x)}}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::setX (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classPoint_acdc86ab607b2ae8415152883e2629015}{}\label{classPoint_acdc86ab607b2ae8415152883e2629015}
+
+\begin{DoxyCode}
+16                       \{
+17    this->\hyperlink{classPoint_a8c779e11e694b20e0946105a9f5de842}{x} = \hyperlink{classPoint_a8c779e11e694b20e0946105a9f5de842}{x};
+18 \}
+\end{DoxyCode}
+\index{Point@{Point}!set\+XY@{set\+XY}}
+\index{set\+XY@{set\+XY}!Point@{Point}}
+\subsubsection[{\texorpdfstring{set\+X\+Y(int x, int y)}{setXY(int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::set\+XY (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{classPoint_afb6a0c9ad81c0864e4039069f0f33d80}{}\label{classPoint_afb6a0c9ad81c0864e4039069f0f33d80}
+
+\begin{DoxyCode}
+31                               \{
+32    \hyperlink{classPoint_acdc86ab607b2ae8415152883e2629015}{setX}(\hyperlink{classPoint_a8c779e11e694b20e0946105a9f5de842}{x});
+33    \hyperlink{classPoint_afccad787a359f062efc1af5e935a99ba}{setY}(\hyperlink{classPoint_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y});
+34 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classPoint_afb6a0c9ad81c0864e4039069f0f33d80_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Point@{Point}!setY@{setY}}
+\index{setY@{setY}!Point@{Point}}
+\subsubsection[{\texorpdfstring{set\+Y(int y)}{setY(int y)}}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::setY (
+\begin{DoxyParamCaption}
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{classPoint_afccad787a359f062efc1af5e935a99ba}{}\label{classPoint_afccad787a359f062efc1af5e935a99ba}
+
+\begin{DoxyCode}
+26                       \{
+27    this->\hyperlink{classPoint_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y} = \hyperlink{classPoint_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y};
+28 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Point@{Point}!x@{x}}
+\index{x@{x}!Point@{Point}}
+\subsubsection[{\texorpdfstring{x}{x}}]{\setlength{\rightskip}{0pt plus 5cm}int Point\+::x\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPoint_a8c779e11e694b20e0946105a9f5de842}{}\label{classPoint_a8c779e11e694b20e0946105a9f5de842}
+\index{Point@{Point}!y@{y}}
+\index{y@{y}!Point@{Point}}
+\subsubsection[{\texorpdfstring{y}{y}}]{\setlength{\rightskip}{0pt plus 5cm}int Point\+::y\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPoint_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{}\label{classPoint_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Point_8h}{Point.\+h}\item 
+\hyperlink{Point_8cpp}{Point.\+cpp}\end{DoxyCompactItemize}

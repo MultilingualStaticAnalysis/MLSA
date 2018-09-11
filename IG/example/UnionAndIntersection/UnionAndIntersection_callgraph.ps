@@ -1,0 +1,1606 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.38.0 (20140413.2041)
+%%Title: /home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection Call Graph
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 150 150 2400 1769
+%%PageOrientation: Portrait
+<< /PageSize [2400 1769] >> setpagedevice
+0 0 1 beginpage
+gsave
+150 150 2250 1619 boxprim clip newpath
+0.917331 0.917331 set_scale 0 rotate 167.518 167.518 translate
+[ /CropBox [150 150 2400 1769] /PAGES pdfmark
+0 0 0 graphcolor
+14 /Times-Roman set_font
+1007.38 7.8 moveto 430 (/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection Call Graph) alignedtext
+% Node0x895504853
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+339.27 948.87 339.04 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+86.27 945.17 moveto 506 (/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c) alignedtext
+grestore
+% Node0x692989434
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1138.1 1719.87 422.29 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+847.6 1731.17 moveto 581 (0x2a93ec0. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1110.6 1716.17 moveto 55 (printf\(<< ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1035.1 1701.17 moveto 206 ( Enter the elements of Array 1: n >>\)) alignedtext
+grestore
+% Node0x895504853->Node0x692989434
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 343.27 967.05 moveto
+359.8 1060.72 448.82 1491.56 714.54 1673.87 curveto
+727.96 1683.08 742.2 1691.04 757.02 1697.9 curveto
+stroke
+0 0 0 edgecolor
+newpath 755.76 1701.17 moveto
+766.32 1702.03 lineto
+758.6 1694.77 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 755.76 1701.17 moveto
+766.32 1702.03 lineto
+758.6 1694.77 lineto
+closepath stroke
+grestore
+% Node0x656930220
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1138.1 1637.87 421.37 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+848.1 1641.67 moveto 580 (0x2a93fe0. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1089.6 1626.67 moveto 97 (get_value\(array1\)) alignedtext
+grestore
+% Node0x895504853->Node0x656930220
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 344.23 967.13 moveto
+364.49 1055.74 465.55 1443.09 714.54 1601.87 curveto
+726.34 1609.4 738.72 1616 751.53 1621.78 curveto
+stroke
+0 0 0 edgecolor
+newpath 750.36 1625.09 moveto
+760.92 1625.85 lineto
+753.14 1618.67 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 750.36 1625.09 moveto
+760.92 1625.85 lineto
+753.14 1618.67 lineto
+closepath stroke
+grestore
+% Node0x976940589
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1138.1 1543.87 422.7 48.58 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+847.1 1563.17 moveto 582 (0x2a940e0. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1110.6 1548.17 moveto 55 (printf\(<< ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1064.1 1517.17 moveto 148 ( Elements of Array 1:  >>\)) alignedtext
+grestore
+% Node0x895504853->Node0x976940589
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 346.64 967.01 moveto
+375.1 1044.98 498.64 1353.72 714.54 1485.87 curveto
+732.53 1496.88 751.75 1506.16 771.71 1513.96 curveto
+stroke
+0 0 0 edgecolor
+newpath 770.65 1517.3 moveto
+781.24 1517.55 lineto
+773.12 1510.75 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 770.65 1517.3 moveto
+781.24 1517.55 lineto
+773.12 1510.75 lineto
+closepath stroke
+grestore
+% Node0x757845253
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1138.1 1449.87 423.61 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+846.6 1453.67 moveto 583 (0x2a94220. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1078.1 1438.67 moveto 120 (print_value\(array1, 5\)) alignedtext
+grestore
+% Node0x895504853->Node0x757845253
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 348.23 967.02 moveto
+380.93 1039.12 512.82 1306.52 714.54 1413.87 curveto
+728.6 1421.35 743.3 1427.83 758.44 1433.41 curveto
+stroke
+0 0 0 edgecolor
+newpath 757.32 1436.73 moveto
+767.92 1436.78 lineto
+759.66 1430.13 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 757.32 1436.73 moveto
+767.92 1436.78 lineto
+759.66 1430.13 lineto
+closepath stroke
+grestore
+% Node0x257404303
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1138.1 1377.87 423.61 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+846.6 1381.67 moveto 583 (0x2a942d8. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1080.1 1366.67 moveto 116 (function_sort\(array1\)) alignedtext
+grestore
+% Node0x895504853->Node0x257404303
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 350.85 967.3 moveto
+389.46 1032.54 530.21 1253.42 714.54 1341.87 curveto
+730.01 1349.29 746.16 1355.66 762.75 1361.11 curveto
+stroke
+0 0 0 edgecolor
+newpath 761.97 1364.53 moveto
+772.56 1364.21 lineto
+764.08 1357.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 761.97 1364.53 moveto
+772.56 1364.21 lineto
+764.08 1357.86 lineto
+closepath stroke
+grestore
+% Node0x362308745
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1138.1 1305.87 422.7 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+847.1 1309.67 moveto 582 (0x2a943e8. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1013.1 1294.67 moveto 250 (printf\(<< nnSorted elements of Array 1:  >>\)) alignedtext
+grestore
+% Node0x895504853->Node0x362308745
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 354.17 967.03 moveto
+398.95 1023.97 546.38 1199.38 714.54 1269.87 curveto
+732.33 1277.33 750.9 1283.64 769.91 1288.95 curveto
+stroke
+0 0 0 edgecolor
+newpath 769.02 1292.34 moveto
+779.59 1291.56 lineto
+770.84 1285.58 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 769.02 1292.34 moveto
+779.59 1291.56 lineto
+770.84 1285.58 lineto
+closepath stroke
+grestore
+% Node0x936635483
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1138.1 1233.87 421.37 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+848.1 1237.67 moveto 580 (0x2a944f8. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1078.1 1222.67 moveto 120 (print_value\(array1, 5\)) alignedtext
+grestore
+% Node0x895504853->Node0x936635483
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 359.39 966.89 moveto
+411.45 1014.68 562.02 1144.6 714.54 1197.87 curveto
+735.66 1205.25 757.71 1211.38 780.19 1216.46 curveto
+stroke
+0 0 0 edgecolor
+newpath 779.67 1219.93 moveto
+790.19 1218.64 lineto
+781.17 1213.09 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 779.67 1219.93 moveto
+790.19 1218.64 lineto
+781.17 1213.09 lineto
+closepath stroke
+grestore
+% Node0x702541237
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1138.1 1161.87 423.61 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+846.6 1165.67 moveto 583 (0x2a945d8. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1002.6 1150.67 moveto 271 (printf\(<< nnEnter the elements of Array 2: n >>\)) alignedtext
+grestore
+% Node0x895504853->Node0x702541237
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 368.96 966.87 moveto
+429.89 1004.06 577.82 1089.01 714.54 1125.87 curveto
+740.93 1132.99 768.55 1138.79 796.49 1143.53 curveto
+stroke
+0 0 0 edgecolor
+newpath 795.95 1146.98 moveto
+806.39 1145.16 lineto
+797.09 1140.08 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 795.95 1146.98 moveto
+806.39 1145.16 lineto
+797.09 1140.08 lineto
+closepath stroke
+grestore
+% Node0x154772367
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1138.1 1089.87 422.7 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+847.1 1093.67 moveto 582 (0x2a946a0. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1089.6 1078.67 moveto 97 (get_value\(array2\)) alignedtext
+grestore
+% Node0x895504853->Node0x154772367
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 391.92 966.71 moveto
+463.46 990.65 597.17 1032.6 714.54 1053.87 curveto
+750.12 1060.32 787.6 1065.62 824.94 1069.97 curveto
+stroke
+0 0 0 edgecolor
+newpath 824.61 1073.45 moveto
+834.95 1071.11 lineto
+825.41 1066.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 824.61 1073.45 moveto
+834.95 1071.11 lineto
+825.41 1066.5 lineto
+closepath stroke
+grestore
+% Node0x791401128
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1138.1 995.87 423.61 48.58 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+846.6 1015.17 moveto 583 (0x2a94768. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1110.6 1000.17 moveto 55 (printf\(<< ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1064.1 969.17 moveto 148 ( Elements of Array 2:  >>\)) alignedtext
+grestore
+% Node0x895504853->Node0x791401128
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 566.74 962.23 moveto
+624.17 965.62 687.5 969.35 750.43 973.06 curveto
+stroke
+0 0 0 edgecolor
+newpath 750.34 976.56 moveto
+760.53 973.66 lineto
+750.75 969.58 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 750.34 976.56 moveto
+760.53 973.66 lineto
+750.75 969.58 lineto
+closepath stroke
+grestore
+% Node0x457367286
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1138.1 901.87 423.61 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+846.6 905.67 moveto 583 (0x2a94850. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1078.1 890.67 moveto 120 (print_value\(array2, 5\)) alignedtext
+grestore
+% Node0x895504853->Node0x457367286
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 566.74 935.51 moveto
+644.55 930.92 733.19 925.69 817.02 920.75 curveto
+stroke
+0 0 0 edgecolor
+newpath 817.44 924.23 moveto
+827.21 920.15 lineto
+817.02 917.24 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 817.44 924.23 moveto
+827.21 920.15 lineto
+817.02 917.24 lineto
+closepath stroke
+grestore
+% Node0x760695404
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1138.1 829.87 423.61 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+846.6 833.67 moveto 583 (0x2a94908. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1080.1 818.67 moveto 116 (function_sort\(array2\)) alignedtext
+grestore
+% Node0x895504853->Node0x760695404
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 407.37 931.15 moveto
+481.88 912.14 605.98 882.46 714.54 865.87 curveto
+754.04 859.83 795.79 854.74 837.05 850.46 curveto
+stroke
+0 0 0 edgecolor
+newpath 837.65 853.92 moveto
+847.25 849.42 lineto
+836.94 846.95 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 837.65 853.92 moveto
+847.25 849.42 lineto
+836.94 846.95 lineto
+closepath stroke
+grestore
+% Node0x971012511
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1138.1 735.87 423.61 48.58 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+846.6 755.17 moveto 583 (0x2a949d8. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1110.6 740.17 moveto 55 (printf\(<< ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1047.6 709.17 moveto 181 (Sorted elements of Array 2:  >>\)) alignedtext
+grestore
+% Node0x895504853->Node0x971012511
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 375.07 930.89 moveto
+439.98 898.17 584.71 829.04 714.54 793.87 curveto
+747.61 784.91 782.54 777.3 817.56 770.83 curveto
+stroke
+0 0 0 edgecolor
+newpath 818.23 774.27 moveto
+827.44 769.04 lineto
+816.98 767.38 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 818.23 774.27 moveto
+827.44 769.04 lineto
+816.98 767.38 lineto
+closepath stroke
+grestore
+% Node0x251705382
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1138.1 641.87 422.29 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+847.6 645.67 moveto 581 (0x2a94ac0. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1078.1 630.67 moveto 120 (print_value\(array2, 5\)) alignedtext
+grestore
+% Node0x895504853->Node0x251705382
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 357.59 930.73 moveto
+407.37 879.94 557.38 736.28 714.54 677.87 curveto
+734.51 670.45 755.37 664.24 776.66 659.07 curveto
+stroke
+0 0 0 edgecolor
+newpath 777.53 662.46 moveto
+786.47 656.77 lineto
+775.94 655.65 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 777.53 662.46 moveto
+786.47 656.77 lineto
+775.94 655.65 lineto
+closepath stroke
+grestore
+% Node0x423367321
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1138.1 569.87 422.7 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+847.1 573.67 moveto 582 (0x2a94c50. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+996.6 558.67 moveto 283 (find_intersection\(array1, array2, intersection_array\)) alignedtext
+grestore
+% Node0x895504853->Node0x423367321
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 352.94 930.74 moveto
+395.65 871.3 541.41 681.82 714.54 605.87 curveto
+731.54 598.41 749.3 592.07 767.49 586.71 curveto
+stroke
+0 0 0 edgecolor
+newpath 768.67 590.01 moveto
+777.34 583.91 lineto
+766.76 583.27 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 768.67 590.01 moveto
+777.34 583.91 lineto
+766.76 583.27 lineto
+closepath stroke
+grestore
+% Node0x122321020
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1138.1 475.87 422.7 48.58 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+847.1 495.17 moveto 582 (0x2a94dc0. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1110.6 480.17 moveto 55 (printf\(<< ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1081.6 449.17 moveto 113 ( Intersection is:  >>\)) alignedtext
+grestore
+% Node0x895504853->Node0x122321020
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 350.2 930.69 moveto
+387.63 864.18 527.59 632.79 714.54 533.87 curveto
+734.94 523.07 756.64 514.05 779.02 506.52 curveto
+stroke
+0 0 0 edgecolor
+newpath 780.22 509.81 moveto
+788.65 503.38 lineto
+778.06 503.15 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 780.22 509.81 moveto
+788.65 503.38 lineto
+778.06 503.15 lineto
+closepath stroke
+grestore
+% Node0x962708963
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1138.1 381.87 422.7 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+847.1 385.67 moveto 582 (0x2a94eb0. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1010.1 370.67 moveto 256 (print_value\(intersection_array, num_elements\)) alignedtext
+grestore
+% Node0x895504853->Node0x962708963
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 346.54 930.65 moveto
+374.57 852.37 496.63 542.9 714.54 417.87 curveto
+727.64 410.36 741.35 403.81 755.49 398.14 curveto
+stroke
+0 0 0 edgecolor
+newpath 756.77 401.39 moveto
+764.84 394.53 lineto
+754.25 394.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 756.77 401.39 moveto
+764.84 394.53 lineto
+754.25 394.86 lineto
+closepath stroke
+grestore
+% Node0x881579659
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1138.1 309.87 420.04 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+849.1 313.67 moveto 578 (0x2a94ff8. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1029.1 298.67 moveto 218 (find_union\(array1, array2, union_array\)) alignedtext
+grestore
+% Node0x895504853->Node0x881579659
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 345.01 930.86 moveto
+368.19 846.78 478.22 490.81 714.54 345.87 curveto
+726.91 338.29 739.87 331.66 753.27 325.88 curveto
+stroke
+0 0 0 edgecolor
+newpath 754.71 329.07 moveto
+762.62 322.01 lineto
+752.04 322.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 754.71 329.07 moveto
+762.62 322.01 lineto
+752.04 322.6 lineto
+closepath stroke
+grestore
+% Node0x905710664
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1138.1 215.87 423.61 48.58 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+846.6 235.17 moveto 583 (0x2a95158. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1110.6 220.17 moveto 55 (printf\(<< ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1096.6 189.17 moveto 83 ( Union is:  >>\)) alignedtext
+grestore
+% Node0x895504853->Node0x905710664
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 344.12 930.58 moveto
+364.07 840.91 464.41 445.17 714.54 273.87 curveto
+730.87 262.68 748.4 253.2 766.7 245.19 curveto
+stroke
+0 0 0 edgecolor
+newpath 768.18 248.36 moveto
+776.04 241.26 lineto
+765.46 241.91 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 768.18 248.36 moveto
+776.04 241.26 lineto
+765.46 241.91 lineto
+closepath stroke
+grestore
+% Node0x422619604
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1138.1 121.87 423.61 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+846.6 125.67 moveto 583 (0x2a95248. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1026.1 110.67 moveto 224 (print_value\(union_array, num_elements\)) alignedtext
+grestore
+% Node0x895504853->Node0x422619604
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 342.39 930.63 moveto
+354.94 831.63 429.08 356.08 714.54 157.87 curveto
+725.16 150.5 736.31 143.97 747.86 138.2 curveto
+stroke
+0 0 0 edgecolor
+newpath 749.7 141.2 moveto
+757.22 133.73 lineto
+746.69 134.88 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 749.7 141.2 moveto
+757.22 133.73 lineto
+746.69 134.88 lineto
+closepath stroke
+grestore
+% Node0x879129591
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2021.21 1702.87 423.61 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1729.71 1714.17 moveto 583 (0x2a95900. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1993.71 1699.17 moveto 55 (printf\(<< ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1947.71 1684.17 moveto 147 ( Enter element %d:  >>, j\)) alignedtext
+grestore
+% Node0x656930220->Node0x879129591
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1414.26 1658.17 moveto
+1500.16 1664.51 1595.88 1671.57 1685.4 1678.17 curveto
+stroke
+0 0 0 edgecolor
+newpath 1685.21 1681.67 moveto
+1695.44 1678.91 lineto
+1685.73 1674.69 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1685.21 1681.67 moveto
+1695.44 1678.91 lineto
+1685.73 1674.69 lineto
+closepath stroke
+grestore
+% Node0x466278339
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2021.21 1620.87 423.61 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1729.71 1624.67 moveto 583 (0x2a95b20. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1950.21 1609.67 moveto 142 (scanf\(<< %d >>, UNOP\)) alignedtext
+grestore
+% Node0x656930220->Node0x466278339
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1541.62 1630.1 moveto
+1562.86 1629.69 1584.22 1629.28 1605.49 1628.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1605.67 1632.37 moveto
+1615.6 1628.68 lineto
+1605.53 1625.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1605.67 1632.37 moveto
+1615.6 1628.68 lineto
+1605.53 1625.37 lineto
+closepath stroke
+grestore
+% Node0x361924454
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2021.21 1531.87 422.29 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1730.71 1535.67 moveto 581 (0x2a95ee8. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1975.71 1520.67 moveto 91 (printf\(<< {  >>\)) alignedtext
+grestore
+% Node0x757845253->Node0x361924454
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1440.95 1468.69 moveto
+1481.67 1473.24 1522.8 1478.88 1561.65 1485.87 curveto
+1578 1488.81 1581.31 1492.93 1597.65 1495.87 curveto
+1633.41 1502.3 1671.08 1507.59 1708.59 1511.94 curveto
+stroke
+0 0 0 edgecolor
+newpath 1708.32 1515.43 moveto
+1718.65 1513.08 lineto
+1709.11 1508.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1708.32 1515.43 moveto
+1718.65 1513.08 lineto
+1709.11 1508.48 lineto
+closepath stroke
+grestore
+% Node0x169546780
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2021.21 1459.87 422.7 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1730.21 1463.67 moveto 582 (0x2a961c0. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1954.21 1448.67 moveto 134 (printf\(<< %d  >>, arr[]\)) alignedtext
+grestore
+% Node0x757845253->Node0x169546780
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1555.14 1454.59 moveto
+1568.28 1454.74 1581.45 1454.89 1594.6 1455.04 curveto
+stroke
+0 0 0 edgecolor
+newpath 1594.61 1458.54 moveto
+1604.65 1455.15 lineto
+1594.69 1451.54 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1594.61 1458.54 moveto
+1604.65 1455.15 lineto
+1594.69 1451.54 lineto
+closepath stroke
+grestore
+% Node0x792903998
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2021.21 1387.87 423.61 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1729.71 1391.67 moveto 583 (0x2a96340. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1977.71 1376.67 moveto 87 (printf\(<< } >>\)) alignedtext
+grestore
+% Node0x757845253->Node0x792903998
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1422.43 1429.93 moveto
+1519.72 1423.09 1628.79 1415.41 1726.85 1408.51 curveto
+stroke
+0 0 0 edgecolor
+newpath 1727.19 1412 moveto
+1736.92 1407.8 lineto
+1726.7 1405.01 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1727.19 1412 moveto
+1736.92 1407.8 lineto
+1726.7 1405.01 lineto
+closepath stroke
+grestore
+% Node0x201838676
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2021.21 1315.87 422.29 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1730.71 1319.67 moveto 581 (0x2a95ee8. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1975.71 1304.67 moveto 91 (printf\(<< {  >>\)) alignedtext
+grestore
+% Node0x936635483->Node0x201838676
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1440.38 1252.63 moveto
+1481.29 1257.19 1522.61 1262.85 1561.65 1269.87 curveto
+1578 1272.81 1581.31 1276.93 1597.65 1279.87 curveto
+1633.41 1286.3 1671.08 1291.59 1708.59 1295.94 curveto
+stroke
+0 0 0 edgecolor
+newpath 1708.32 1299.43 moveto
+1718.65 1297.08 lineto
+1709.11 1292.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1708.32 1299.43 moveto
+1718.65 1297.08 lineto
+1709.11 1292.48 lineto
+closepath stroke
+grestore
+% Node0x927678146
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2021.21 1243.87 422.7 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1730.21 1247.67 moveto 582 (0x2a961c0. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1954.21 1232.67 moveto 134 (printf\(<< %d  >>, arr[]\)) alignedtext
+grestore
+% Node0x936635483->Node0x927678146
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1553.21 1238.57 moveto
+1567.05 1238.73 1580.92 1238.88 1594.78 1239.04 curveto
+stroke
+0 0 0 edgecolor
+newpath 1594.82 1242.54 moveto
+1604.86 1239.16 lineto
+1594.9 1235.54 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1594.82 1242.54 moveto
+1604.86 1239.16 lineto
+1594.9 1235.54 lineto
+closepath stroke
+grestore
+% Node0x246002057
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2021.21 1171.87 423.61 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1729.71 1175.67 moveto 583 (0x2a96340. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1977.71 1160.67 moveto 87 (printf\(<< } >>\)) alignedtext
+grestore
+% Node0x936635483->Node0x246002057
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1421.83 1213.98 moveto
+1519.26 1207.12 1628.57 1199.43 1726.84 1192.51 curveto
+stroke
+0 0 0 edgecolor
+newpath 1727.19 1196 moveto
+1736.92 1191.8 lineto
+1726.7 1189.01 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1727.19 1196 moveto
+1736.92 1191.8 lineto
+1726.7 1189.01 lineto
+closepath stroke
+grestore
+% Node0x487170007
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2021.21 1089.87 423.61 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1729.71 1101.17 moveto 583 (0x2a95900. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1993.71 1086.17 moveto 55 (printf\(<< ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1947.71 1071.17 moveto 147 ( Enter element %d:  >>, j\)) alignedtext
+grestore
+% Node0x154772367->Node0x487170007
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1561.27 1089.87 moveto
+1569.92 1089.87 1578.58 1089.87 1587.24 1089.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1587.41 1093.37 moveto
+1597.41 1089.87 lineto
+1587.41 1086.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1587.41 1093.37 moveto
+1597.41 1089.87 lineto
+1587.41 1086.37 lineto
+closepath stroke
+grestore
+% Node0x581333450
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2021.21 1007.87 423.61 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1729.71 1011.67 moveto 583 (0x2a95b20. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1950.21 996.67 moveto 142 (scanf\(<< %d >>, UNOP\)) alignedtext
+grestore
+% Node0x154772367->Node0x581333450
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1440.66 1071.08 moveto
+1481.48 1066.53 1522.7 1060.88 1561.65 1053.87 curveto
+1578 1050.93 1581.31 1046.81 1597.65 1043.87 curveto
+1633.32 1037.45 1670.9 1032.17 1708.33 1027.83 curveto
+stroke
+0 0 0 edgecolor
+newpath 1708.82 1031.3 moveto
+1718.36 1026.69 lineto
+1708.03 1024.34 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1708.82 1031.3 moveto
+1718.36 1026.69 lineto
+1708.03 1024.34 lineto
+closepath stroke
+grestore
+% Node0x303923041
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2021.21 935.87 422.29 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1730.71 939.67 moveto 581 (0x2a95ee8. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1975.71 924.67 moveto 91 (printf\(<< {  >>\)) alignedtext
+grestore
+% Node0x457367286->Node0x303923041
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1500.34 915.81 moveto
+1549.57 917.71 1600.16 919.66 1649.55 921.57 curveto
+stroke
+0 0 0 edgecolor
+newpath 1649.61 925.07 moveto
+1659.74 921.96 lineto
+1649.88 918.08 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1649.61 925.07 moveto
+1659.74 921.96 lineto
+1649.88 918.08 lineto
+closepath stroke
+grestore
+% Node0x949949546
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2021.21 863.87 422.7 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1730.21 867.67 moveto 582 (0x2a961c0. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1954.21 852.67 moveto 134 (printf\(<< %d  >>, arr[]\)) alignedtext
+grestore
+% Node0x457367286->Node0x949949546
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1488.92 886.78 moveto
+1545.45 884.35 1604.06 881.82 1660.81 879.37 curveto
+stroke
+0 0 0 edgecolor
+newpath 1661.17 882.86 moveto
+1671.01 878.93 lineto
+1660.87 875.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1661.17 882.86 moveto
+1671.01 878.93 lineto
+1660.87 875.86 lineto
+closepath stroke
+grestore
+% Node0x466155810
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2021.21 791.87 423.61 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1729.71 795.67 moveto 583 (0x2a96340. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1977.71 780.67 moveto 87 (printf\(<< } >>\)) alignedtext
+grestore
+% Node0x457367286->Node0x466155810
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1503.66 888.27 moveto
+1523.69 882.16 1543.16 874.77 1561.65 865.87 curveto
+1582.62 855.78 1576.69 837.96 1597.65 827.87 curveto
+1613.11 820.43 1629.26 814.04 1645.84 808.58 curveto
+stroke
+0 0 0 edgecolor
+newpath 1647.17 811.83 moveto
+1655.64 805.47 lineto
+1645.05 805.16 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1647.17 811.83 moveto
+1655.64 805.47 lineto
+1645.05 805.16 lineto
+closepath stroke
+grestore
+% Node0x957885881
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2021.21 713.87 422.29 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1730.71 717.67 moveto 581 (0x2a95ee8. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1975.71 702.67 moveto 91 (printf\(<< {  >>\)) alignedtext
+grestore
+% Node0x251705382->Node0x957885881
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1398.4 663.06 moveto
+1509.4 672.13 1639 682.72 1751.06 691.88 curveto
+stroke
+0 0 0 edgecolor
+newpath 1750.91 695.38 moveto
+1761.16 692.7 lineto
+1751.48 688.4 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1750.91 695.38 moveto
+1761.16 692.7 lineto
+1751.48 688.4 lineto
+closepath stroke
+grestore
+% Node0x522659296
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2021.21 641.87 422.7 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1730.21 645.67 moveto 582 (0x2a961c0. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1954.21 630.67 moveto 134 (printf\(<< %d  >>, arr[]\)) alignedtext
+grestore
+% Node0x251705382->Node0x522659296
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1560.3 641.87 moveto
+1569.56 641.87 1578.83 641.87 1588.1 641.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1588.15 645.37 moveto
+1598.15 641.87 lineto
+1588.15 638.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1588.15 645.37 moveto
+1598.15 641.87 lineto
+1588.15 638.37 lineto
+closepath stroke
+grestore
+% Node0x778408593
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2021.21 569.87 423.61 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1729.71 573.67 moveto 583 (0x2a96340. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1977.71 558.67 moveto 87 (printf\(<< } >>\)) alignedtext
+grestore
+% Node0x251705382->Node0x778408593
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1398.4 620.68 moveto
+1509.28 611.62 1638.71 601.04 1750.69 591.89 curveto
+stroke
+0 0 0 edgecolor
+newpath 1751.1 595.37 moveto
+1760.78 591.07 lineto
+1750.53 588.4 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1751.1 595.37 moveto
+1760.78 591.07 lineto
+1750.53 588.4 lineto
+closepath stroke
+grestore
+% Node0x230937245
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2021.21 453.87 422.29 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1730.71 457.67 moveto 581 (0x2a95ee8. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1975.71 442.67 moveto 91 (printf\(<< {  >>\)) alignedtext
+grestore
+% Node0x962708963->Node0x230937245
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1398.4 403.06 moveto
+1509.4 412.13 1639 422.72 1751.06 431.88 curveto
+stroke
+0 0 0 edgecolor
+newpath 1750.91 435.38 moveto
+1761.16 432.7 lineto
+1751.48 428.4 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1750.91 435.38 moveto
+1761.16 432.7 lineto
+1751.48 428.4 lineto
+closepath stroke
+grestore
+% Node0x705658692
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2021.21 381.87 422.7 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1730.21 385.67 moveto 582 (0x2a961c0. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1954.21 370.67 moveto 134 (printf\(<< %d  >>, arr[]\)) alignedtext
+grestore
+% Node0x962708963->Node0x705658692
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1561.27 381.87 moveto
+1570.17 381.87 1579.09 381.87 1588.01 381.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1588.07 385.37 moveto
+1598.07 381.87 lineto
+1588.07 378.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1588.07 385.37 moveto
+1598.07 381.87 lineto
+1588.07 378.37 lineto
+closepath stroke
+grestore
+% Node0x716183422
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2021.21 309.87 423.61 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1729.71 313.67 moveto 583 (0x2a96340. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1977.71 298.67 moveto 87 (printf\(<< } >>\)) alignedtext
+grestore
+% Node0x962708963->Node0x716183422
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1398.4 360.68 moveto
+1509.28 351.62 1638.71 341.04 1750.69 331.89 curveto
+stroke
+0 0 0 edgecolor
+newpath 1751.1 335.37 moveto
+1760.78 331.07 lineto
+1750.53 328.4 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1751.1 335.37 moveto
+1760.78 331.07 lineto
+1750.53 328.4 lineto
+closepath stroke
+grestore
+% Node0x224819618
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2021.21 193.87 422.29 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1730.71 197.67 moveto 581 (0x2a95ee8. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1975.71 182.67 moveto 91 (printf\(<< {  >>\)) alignedtext
+grestore
+% Node0x422619604->Node0x224819618
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1398.69 143.08 moveto
+1509.57 152.14 1638.94 162.71 1750.86 171.86 curveto
+stroke
+0 0 0 edgecolor
+newpath 1750.7 175.36 moveto
+1760.95 172.68 lineto
+1751.27 168.38 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1750.7 175.36 moveto
+1760.95 172.68 lineto
+1751.27 168.38 lineto
+closepath stroke
+grestore
+% Node0x718473264
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2021.21 121.87 422.7 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1730.21 125.67 moveto 582 (0x2a961c0. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1954.21 110.67 moveto 134 (printf\(<< %d  >>, arr[]\)) alignedtext
+grestore
+% Node0x422619604->Node0x718473264
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1561.91 121.87 moveto
+1570.64 121.87 1579.37 121.87 1588.1 121.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1588.35 125.37 moveto
+1598.35 121.87 lineto
+1588.35 118.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1588.35 125.37 moveto
+1598.35 121.87 lineto
+1588.35 118.37 lineto
+closepath stroke
+grestore
+% Node0x411170458
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2021.21 49.87 423.61 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1729.71 53.67 moveto 583 (0x2a96340. \(/home/labaccount/11-2-17/mlsa/IG/example/UnionAndIntersection/UnionAndInstersection.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1977.71 38.67 moveto 87 (printf\(<< } >>\)) alignedtext
+grestore
+% Node0x422619604->Node0x411170458
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1398.69 100.66 moveto
+1509.44 91.61 1638.65 81.05 1750.49 71.91 curveto
+stroke
+0 0 0 edgecolor
+newpath 1750.88 75.39 moveto
+1760.57 71.09 lineto
+1750.31 68.41 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1750.88 75.39 moveto
+1760.57 71.09 lineto
+1750.31 68.41 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 150 150 2400 1769
+end
+restore
+%%EOF

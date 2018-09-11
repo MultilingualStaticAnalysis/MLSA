@@ -1,0 +1,62 @@
+\hypertarget{Bridge_8cpp}{}\section{Bridge.\+cpp File Reference}
+\label{Bridge_8cpp}\index{Bridge.\+cpp@{Bridge.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for Bridge.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=143pt]{Bridge_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDrawingAPI}{Drawing\+A\+PI}
+\item 
+class \hyperlink{classDrawingAPI1}{Drawing\+A\+P\+I1}
+\item 
+class \hyperlink{classDrawingAPI2}{Drawing\+A\+P\+I2}
+\item 
+class \hyperlink{classShape}{Shape}
+\item 
+class \hyperlink{classCircleShape}{Circle\+Shape}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Bridge_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Bridge.\+cpp@{Bridge.\+cpp}!main@{main}}
+\index{main@{main}!Bridge.\+cpp@{Bridge.\+cpp}}
+\subsubsection[{\texorpdfstring{main(void)}{main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{Bridge_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{}\label{Bridge_8cpp_a840291bc02cba5474a4cb46a9b9566fe}
+
+\begin{DoxyCode}
+53                \{
+54    \hyperlink{classCircleShape}{CircleShape} circle1(1,2,3,\textcolor{keyword}{new} \hyperlink{classDrawingAPI1}{DrawingAPI1}());
+55    \hyperlink{classCircleShape}{CircleShape} circle2(5,7,11,\textcolor{keyword}{new} \hyperlink{classDrawingAPI2}{DrawingAPI2}());
+56    circle1.resizeByPercentage(2.5);
+57    circle2.resizeByPercentage(2.5);
+58    circle1.draw();
+59    circle2.draw();
+60    \textcolor{keywordflow}{return} 0;
+61 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{Bridge_8cpp_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}
+
+

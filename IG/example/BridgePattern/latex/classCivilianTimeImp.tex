@@ -1,0 +1,86 @@
+\hypertarget{classCivilianTimeImp}{}\section{Civilian\+Time\+Imp Class Reference}
+\label{classCivilianTimeImp}\index{Civilian\+Time\+Imp@{Civilian\+Time\+Imp}}
+
+
+Inheritance diagram for Civilian\+Time\+Imp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classCivilianTimeImp__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Civilian\+Time\+Imp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classCivilianTimeImp__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCivilianTimeImp_a81d01c53e19c0b8732b125c036c17ddb}{Civilian\+Time\+Imp} (int hr, int min, int pm)
+\item 
+void \hyperlink{classCivilianTimeImp_a244dd99398227e08c4e8075c85e035b3}{tell} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{classCivilianTimeImp_a5d972a467fe32c2742252d34bb75a684}{which\+M\+\_\+} \mbox{[}4\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Civilian\+Time\+Imp@{Civilian\+Time\+Imp}!Civilian\+Time\+Imp@{Civilian\+Time\+Imp}}
+\index{Civilian\+Time\+Imp@{Civilian\+Time\+Imp}!Civilian\+Time\+Imp@{Civilian\+Time\+Imp}}
+\subsubsection[{\texorpdfstring{Civilian\+Time\+Imp(int hr, int min, int pm)}{CivilianTimeImp(int hr, int min, int pm)}}]{\setlength{\rightskip}{0pt plus 5cm}Civilian\+Time\+Imp\+::\+Civilian\+Time\+Imp (
+\begin{DoxyParamCaption}
+\item[{int}]{hr, }
+\item[{int}]{min, }
+\item[{int}]{pm}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCivilianTimeImp_a81d01c53e19c0b8732b125c036c17ddb}{}\label{classCivilianTimeImp_a81d01c53e19c0b8732b125c036c17ddb}
+
+\begin{DoxyCode}
+20                                             : \hyperlink{classTimeImp_a816d73822130c581b048e223bc0d673f}{TimeImp}(hr, min) \{
+21         \textcolor{keywordflow}{if} (pm)
+22           strcpy(\hyperlink{classCivilianTimeImp_a5d972a467fe32c2742252d34bb75a684}{whichM\_}, \textcolor{stringliteral}{" PM"});
+23         \textcolor{keywordflow}{else}
+24           strcpy(\hyperlink{classCivilianTimeImp_a5d972a467fe32c2742252d34bb75a684}{whichM\_}, \textcolor{stringliteral}{" AM"});
+25     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Civilian\+Time\+Imp@{Civilian\+Time\+Imp}!tell@{tell}}
+\index{tell@{tell}!Civilian\+Time\+Imp@{Civilian\+Time\+Imp}}
+\subsubsection[{\texorpdfstring{tell()}{tell()}}]{\setlength{\rightskip}{0pt plus 5cm}void Civilian\+Time\+Imp\+::tell (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classCivilianTimeImp_a244dd99398227e08c4e8075c85e035b3}{}\label{classCivilianTimeImp_a244dd99398227e08c4e8075c85e035b3}
+
+
+Reimplemented from \hyperlink{classTimeImp_a266929eda5b78be282a9872b7785557b}{Time\+Imp}.
+
+
+\begin{DoxyCode}
+28                 \{
+29         cout << \textcolor{stringliteral}{"time is "} << \hyperlink{classTimeImp_aa4d75bb67cdab3e797171e78996ac551}{hr\_} << \textcolor{stringliteral}{":"} << \hyperlink{classTimeImp_a72b908ae45367b24517a769ec9bb613f}{min\_} << \hyperlink{classCivilianTimeImp_a5d972a467fe32c2742252d34bb75a684}{whichM\_} << endl;
+30     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Civilian\+Time\+Imp@{Civilian\+Time\+Imp}!which\+M\+\_\+@{which\+M\+\_\+}}
+\index{which\+M\+\_\+@{which\+M\+\_\+}!Civilian\+Time\+Imp@{Civilian\+Time\+Imp}}
+\subsubsection[{\texorpdfstring{which\+M\+\_\+}{whichM_}}]{\setlength{\rightskip}{0pt plus 5cm}char Civilian\+Time\+Imp\+::which\+M\+\_\+\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classCivilianTimeImp_a5d972a467fe32c2742252d34bb75a684}{}\label{classCivilianTimeImp_a5d972a467fe32c2742252d34bb75a684}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{BridgePattern_8cpp}{Bridge\+Pattern.\+cpp}\end{DoxyCompactItemize}

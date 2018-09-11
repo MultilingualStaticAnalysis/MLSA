@@ -1,0 +1,102 @@
+\hypertarget{classRBSTNode}{}\section{R\+B\+S\+T\+Node Class Reference}
+\label{classRBSTNode}\index{R\+B\+S\+T\+Node@{R\+B\+S\+T\+Node}}
+
+
+Collaboration diagram for R\+B\+S\+T\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classRBSTNode__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRBSTNode_a2710c115f70614de3040b2c698e3a9cf}{R\+B\+S\+T\+Node} ()
+\item 
+\hyperlink{classRBSTNode_a2c0665d4b814a686ba8046d79204b8b3}{R\+B\+S\+T\+Node} (int ele)
+\item 
+\hyperlink{classRBSTNode_a96186cec6fe0f148c6f33090a9052783}{R\+B\+S\+T\+Node} (int ele, \hyperlink{classRBSTNode}{R\+B\+S\+T\+Node} $\ast$\hyperlink{classRBSTNode_aaed05c0dc1229e3ac9bfd48ca1f34c84}{left}, \hyperlink{classRBSTNode}{R\+B\+S\+T\+Node} $\ast$\hyperlink{classRBSTNode_a086e0e15cf51b06199e205eaeee17086}{right})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRBSTNode}{R\+B\+S\+T\+Node} $\ast$ \hyperlink{classRBSTNode_aaed05c0dc1229e3ac9bfd48ca1f34c84}{left}
+\item 
+\hyperlink{classRBSTNode}{R\+B\+S\+T\+Node} $\ast$ \hyperlink{classRBSTNode_a086e0e15cf51b06199e205eaeee17086}{right}
+\item 
+int \hyperlink{classRBSTNode_a834716f43484069f09fb8fabf577b64e}{priority}
+\item 
+int \hyperlink{classRBSTNode_afe12defb7cc83803252973f1cd797464}{element}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{R\+B\+S\+T\+Node@{R\+B\+S\+T\+Node}!R\+B\+S\+T\+Node@{R\+B\+S\+T\+Node}}
+\index{R\+B\+S\+T\+Node@{R\+B\+S\+T\+Node}!R\+B\+S\+T\+Node@{R\+B\+S\+T\+Node}}
+\subsubsection[{\texorpdfstring{R\+B\+S\+T\+Node()}{RBSTNode()}}]{\setlength{\rightskip}{0pt plus 5cm}R\+B\+S\+T\+Node\+::\+R\+B\+S\+T\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classRBSTNode_a2710c115f70614de3040b2c698e3a9cf}{}\label{classRBSTNode_a2710c115f70614de3040b2c698e3a9cf}
+
+\begin{DoxyCode}
+23         \{
+24             this->\hyperlink{classRBSTNode_afe12defb7cc83803252973f1cd797464}{element} = 0;
+25             this->\hyperlink{classRBSTNode_aaed05c0dc1229e3ac9bfd48ca1f34c84}{left} = \textcolor{keyword}{this};
+26             this->\hyperlink{classRBSTNode_a086e0e15cf51b06199e205eaeee17086}{right} = \textcolor{keyword}{this};
+27             this->\hyperlink{classRBSTNode_a834716f43484069f09fb8fabf577b64e}{priority} = \hyperlink{RandomizedBinarySearch_8cpp_a4ce3e2af80a76d816ab7f8567ec4a65a}{MAX\_VALUE};         
+28         \}    
+\end{DoxyCode}
+\index{R\+B\+S\+T\+Node@{R\+B\+S\+T\+Node}!R\+B\+S\+T\+Node@{R\+B\+S\+T\+Node}}
+\index{R\+B\+S\+T\+Node@{R\+B\+S\+T\+Node}!R\+B\+S\+T\+Node@{R\+B\+S\+T\+Node}}
+\subsubsection[{\texorpdfstring{R\+B\+S\+T\+Node(int ele)}{RBSTNode(int ele)}}]{\setlength{\rightskip}{0pt plus 5cm}R\+B\+S\+T\+Node\+::\+R\+B\+S\+T\+Node (
+\begin{DoxyParamCaption}
+\item[{int}]{ele}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classRBSTNode_a2c0665d4b814a686ba8046d79204b8b3}{}\label{classRBSTNode_a2c0665d4b814a686ba8046d79204b8b3}
+
+\begin{DoxyCode}
+31         \{
+32             \hyperlink{classRBSTNode_a2710c115f70614de3040b2c698e3a9cf}{RBSTNode}(ele, NULL, NULL);         
+33         \} 
+\end{DoxyCode}
+\index{R\+B\+S\+T\+Node@{R\+B\+S\+T\+Node}!R\+B\+S\+T\+Node@{R\+B\+S\+T\+Node}}
+\index{R\+B\+S\+T\+Node@{R\+B\+S\+T\+Node}!R\+B\+S\+T\+Node@{R\+B\+S\+T\+Node}}
+\subsubsection[{\texorpdfstring{R\+B\+S\+T\+Node(int ele, R\+B\+S\+T\+Node $\ast$left, R\+B\+S\+T\+Node $\ast$right)}{RBSTNode(int ele, RBSTNode *left, RBSTNode *right)}}]{\setlength{\rightskip}{0pt plus 5cm}R\+B\+S\+T\+Node\+::\+R\+B\+S\+T\+Node (
+\begin{DoxyParamCaption}
+\item[{int}]{ele, }
+\item[{{\bf R\+B\+S\+T\+Node} $\ast$}]{left, }
+\item[{{\bf R\+B\+S\+T\+Node} $\ast$}]{right}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classRBSTNode_a96186cec6fe0f148c6f33090a9052783}{}\label{classRBSTNode_a96186cec6fe0f148c6f33090a9052783}
+
+\begin{DoxyCode}
+36         \{
+37             this->\hyperlink{classRBSTNode_afe12defb7cc83803252973f1cd797464}{element} = ele;
+38             this->left = \hyperlink{classRBSTNode_aaed05c0dc1229e3ac9bfd48ca1f34c84}{left};
+39             this->right = \hyperlink{classRBSTNode_a086e0e15cf51b06199e205eaeee17086}{right};
+40             this->\hyperlink{classRBSTNode_a834716f43484069f09fb8fabf577b64e}{priority} = rand() % 100 + 1;
+41         \}    
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{R\+B\+S\+T\+Node@{R\+B\+S\+T\+Node}!element@{element}}
+\index{element@{element}!R\+B\+S\+T\+Node@{R\+B\+S\+T\+Node}}
+\subsubsection[{\texorpdfstring{element}{element}}]{\setlength{\rightskip}{0pt plus 5cm}int R\+B\+S\+T\+Node\+::element}\hypertarget{classRBSTNode_afe12defb7cc83803252973f1cd797464}{}\label{classRBSTNode_afe12defb7cc83803252973f1cd797464}
+\index{R\+B\+S\+T\+Node@{R\+B\+S\+T\+Node}!left@{left}}
+\index{left@{left}!R\+B\+S\+T\+Node@{R\+B\+S\+T\+Node}}
+\subsubsection[{\texorpdfstring{left}{left}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+B\+S\+T\+Node}$\ast$ R\+B\+S\+T\+Node\+::left}\hypertarget{classRBSTNode_aaed05c0dc1229e3ac9bfd48ca1f34c84}{}\label{classRBSTNode_aaed05c0dc1229e3ac9bfd48ca1f34c84}
+\index{R\+B\+S\+T\+Node@{R\+B\+S\+T\+Node}!priority@{priority}}
+\index{priority@{priority}!R\+B\+S\+T\+Node@{R\+B\+S\+T\+Node}}
+\subsubsection[{\texorpdfstring{priority}{priority}}]{\setlength{\rightskip}{0pt plus 5cm}int R\+B\+S\+T\+Node\+::priority}\hypertarget{classRBSTNode_a834716f43484069f09fb8fabf577b64e}{}\label{classRBSTNode_a834716f43484069f09fb8fabf577b64e}
+\index{R\+B\+S\+T\+Node@{R\+B\+S\+T\+Node}!right@{right}}
+\index{right@{right}!R\+B\+S\+T\+Node@{R\+B\+S\+T\+Node}}
+\subsubsection[{\texorpdfstring{right}{right}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+B\+S\+T\+Node} $\ast$ R\+B\+S\+T\+Node\+::right}\hypertarget{classRBSTNode_a086e0e15cf51b06199e205eaeee17086}{}\label{classRBSTNode_a086e0e15cf51b06199e205eaeee17086}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{RandomizedBinarySearch_8cpp}{Randomized\+Binary\+Search.\+cpp}\end{DoxyCompactItemize}

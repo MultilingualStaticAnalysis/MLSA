@@ -1,0 +1,167 @@
+\hypertarget{classStack}{}\section{Stack$<$ T $>$ Class Template Reference}
+\label{classStack}\index{Stack$<$ T $>$@{Stack$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Stack.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classStack_aefee698059467258bbd79045aca62a63}{Stack} ()
+\item 
+\hyperlink{classStack_aa16507e9c77cb9be516b0980b346b7ec}{Stack} (vector$<$ T $>$ v)
+\item 
+void \hyperlink{classStack_a2723aec5c7e2611b97fcffeb7709de33}{pop} ()
+\item 
+T \hyperlink{classStack_ad461f6de40c8672dbf743068f4515061}{top} ()
+\item 
+void \hyperlink{classStack_a3553a0aa2c9640c5266e4d8790863e2e}{push} (T t)
+\item 
+bool \hyperlink{classStack_ad0db0d9b249e871bb7504ed89a99d3a7}{is\+Empty} ()
+\item 
+T \hyperlink{classStack_adcb4774ac8aa94cbc19b461da9bdee3a}{peek} ()
+\item 
+int \hyperlink{classStack_a3091d98f798b1b3e69b644d5b778c428}{size} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ T $>$ \hyperlink{classStack_aaf0fda0673d6b2d1670600ebe3b82f39}{stack}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Stack@{Stack}!Stack@{Stack}}
+\index{Stack@{Stack}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{Stack()}{Stack()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Stack}$<$ T $>$\+::{\bf Stack} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classStack_aefee698059467258bbd79045aca62a63}{}\label{classStack_aefee698059467258bbd79045aca62a63}
+
+\begin{DoxyCode}
+27 \{\} \textcolor{comment}{//default constructor                                                                                   
+                                                                                            }
+\end{DoxyCode}
+\index{Stack@{Stack}!Stack@{Stack}}
+\index{Stack@{Stack}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{Stack(vector$<$ T $>$ v)}{Stack(vector< T > v)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Stack}$<$ T $>$\+::{\bf Stack} (
+\begin{DoxyParamCaption}
+\item[{vector$<$ T $>$}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{classStack_aa16507e9c77cb9be516b0980b346b7ec}{}\label{classStack_aa16507e9c77cb9be516b0980b346b7ec}
+
+\begin{DoxyCode}
+39 \{
+40    \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=0; k<v.size(); k++)
+41       \hyperlink{classStack_aaf0fda0673d6b2d1670600ebe3b82f39}{stack}.push\_back(v[k]);
+42 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Stack@{Stack}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{is\+Empty()}{isEmpty()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool {\bf Stack}$<$ T $>$\+::is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classStack_ad0db0d9b249e871bb7504ed89a99d3a7}{}\label{classStack_ad0db0d9b249e871bb7504ed89a99d3a7}
+
+\begin{DoxyCode}
+70 \{
+71    \textcolor{keywordtype}{bool} empty = \textcolor{keyword}{true};
+72    \textcolor{keywordflow}{if}(\hyperlink{classStack_aaf0fda0673d6b2d1670600ebe3b82f39}{stack}.size() > 0)
+73       empty = \textcolor{keyword}{false};
+74    \textcolor{keywordflow}{return} empty;
+75 \}
+\end{DoxyCode}
+\index{Stack@{Stack}!peek@{peek}}
+\index{peek@{peek}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{peek()}{peek()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T {\bf Stack}$<$ T $>$\+::peek (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classStack_adcb4774ac8aa94cbc19b461da9bdee3a}{}\label{classStack_adcb4774ac8aa94cbc19b461da9bdee3a}
+
+\begin{DoxyCode}
+79 \{
+80    T t;
+81    \textcolor{keywordflow}{if}(!\hyperlink{classStack_ad0db0d9b249e871bb7504ed89a99d3a7}{isEmpty}())
+82       t = \hyperlink{classStack_aaf0fda0673d6b2d1670600ebe3b82f39}{stack}.back(); \textcolor{comment}{//access element                                                              
+                                                                                                            }
+83    \textcolor{keywordflow}{return} t;
+84 \}
+\end{DoxyCode}
+\index{Stack@{Stack}!pop@{pop}}
+\index{pop@{pop}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{pop()}{pop()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Stack}$<$ T $>$\+::pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classStack_a2723aec5c7e2611b97fcffeb7709de33}{}\label{classStack_a2723aec5c7e2611b97fcffeb7709de33}
+
+\begin{DoxyCode}
+46 \{
+47    \textcolor{keywordflow}{if}(!\hyperlink{classStack_ad0db0d9b249e871bb7504ed89a99d3a7}{isEmpty}())
+48       \hyperlink{classStack_aaf0fda0673d6b2d1670600ebe3b82f39}{stack}.pop\_back();
+49 \}
+\end{DoxyCode}
+\index{Stack@{Stack}!push@{push}}
+\index{push@{push}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{push(\+T t)}{push(T t)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf Stack}$<$ T $>$\+::push (
+\begin{DoxyParamCaption}
+\item[{T}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{classStack_a3553a0aa2c9640c5266e4d8790863e2e}{}\label{classStack_a3553a0aa2c9640c5266e4d8790863e2e}
+
+\begin{DoxyCode}
+64 \{
+65    \hyperlink{classStack_aaf0fda0673d6b2d1670600ebe3b82f39}{stack}.push\_back(t);
+66 \}
+\end{DoxyCode}
+\index{Stack@{Stack}!size@{size}}
+\index{size@{size}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{size()}{size()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ int {\bf Stack}$<$ T $>$\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classStack_a3091d98f798b1b3e69b644d5b778c428}{}\label{classStack_a3091d98f798b1b3e69b644d5b778c428}
+
+\begin{DoxyCode}
+88 \{
+89    \textcolor{keywordflow}{return} \hyperlink{classStack_aaf0fda0673d6b2d1670600ebe3b82f39}{stack}.size(); \textcolor{comment}{//size of vector                                                              
+                                                                                                            }
+90 \}
+\end{DoxyCode}
+\index{Stack@{Stack}!top@{top}}
+\index{top@{top}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{top()}{top()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T {\bf Stack}$<$ T $>$\+::top (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classStack_ad461f6de40c8672dbf743068f4515061}{}\label{classStack_ad461f6de40c8672dbf743068f4515061}
+
+\begin{DoxyCode}
+53 \{
+54    T t;
+55    \textcolor{keywordflow}{if}(!\hyperlink{classStack_ad0db0d9b249e871bb7504ed89a99d3a7}{isEmpty}())
+56    \{
+57       t = \hyperlink{classStack_aaf0fda0673d6b2d1670600ebe3b82f39}{stack}.back(); \textcolor{comment}{//access top element                                                          
+                                                                                                            }
+58       \hyperlink{classStack_aaf0fda0673d6b2d1670600ebe3b82f39}{stack}.pop\_back(); \textcolor{comment}{//descard top element                                                         
+                                                                                                            }
+59    \}
+60 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Stack@{Stack}!stack@{stack}}
+\index{stack@{stack}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{stack}{stack}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ vector$<$T$>$ {\bf Stack}$<$ T $>$\+::stack\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classStack_aaf0fda0673d6b2d1670600ebe3b82f39}{}\label{classStack_aaf0fda0673d6b2d1670600ebe3b82f39}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Stack_8h}{Stack.\+h}\end{DoxyCompactItemize}

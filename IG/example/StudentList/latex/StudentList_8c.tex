@@ -1,0 +1,296 @@
+\hypertarget{StudentList_8c}{}\section{Student\+List.\+c File Reference}
+\label{StudentList_8c}\index{Student\+List.\+c@{Student\+List.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+Include dependency graph for Student\+List.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{StudentList_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structstudent}{student}
+\item 
+struct \hyperlink{structnode}{node}
+\item 
+struct \hyperlink{structqueue}{queue}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{StudentList_8c_ad79aefee6a8990632311a15e98d9a65f}{N\+A\+M\+E\+S\+I\+ZE}~25
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{structstudent}{student} $\ast$ \hyperlink{StudentList_8c_a0b11d0a1e6f1f884c7ee456c297762db}{studentptr}
+\item 
+typedef struct \hyperlink{structnode}{node} \hyperlink{StudentList_8c_af4aeda155dbe167f1c1cf38cb65bf324}{node}
+\item 
+typedef \hyperlink{structnode}{node} $\ast$ \hyperlink{StudentList_8c_a0bfdc21bc19acf8a0ac274ebd1b6304a}{nodeptr}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structqueue}{queue} $\ast$ \hyperlink{StudentList_8c_a8996476759e6f48be17f008b26455ec8}{init} (void)
+\item 
+void \hyperlink{StudentList_8c_a14b9ca3a8fda3effd9ef8ad947119c3b}{final} (\hyperlink{structqueue}{queue} $\ast$q)
+\item 
+void \hyperlink{StudentList_8c_a6101248c9fd871a298acb034a6e16a52}{put} (\hyperlink{structqueue}{queue} $\ast$q, \hyperlink{StudentList_8c_a0b11d0a1e6f1f884c7ee456c297762db}{studentptr} s)
+\item 
+int \hyperlink{StudentList_8c_a6d3ac345eba2405cff0faa7a85bac468}{getX} (\hyperlink{structqueue}{queue} $\ast$q, \hyperlink{StudentList_8c_a0b11d0a1e6f1f884c7ee456c297762db}{studentptr} s)
+\item 
+void \hyperlink{StudentList_8c_a1b41f1bf22121a8616fa316bfa258262}{write\+Student\+List} (char filename\mbox{[}$\,$\mbox{]}, \hyperlink{structqueue}{queue} $\ast$q)
+\item 
+int \hyperlink{StudentList_8c_a06ff31ab1d0e694ba9c35eb08e583950}{read\+Student\+List} (char filename\mbox{[}$\,$\mbox{]}, \hyperlink{structqueue}{queue} $\ast$q)
+\item 
+int \hyperlink{StudentList_8c_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{Student\+List.\+c@{Student\+List.\+c}!N\+A\+M\+E\+S\+I\+ZE@{N\+A\+M\+E\+S\+I\+ZE}}
+\index{N\+A\+M\+E\+S\+I\+ZE@{N\+A\+M\+E\+S\+I\+ZE}!Student\+List.\+c@{Student\+List.\+c}}
+\subsubsection[{\texorpdfstring{N\+A\+M\+E\+S\+I\+ZE}{NAMESIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+A\+M\+E\+S\+I\+ZE~25}\hypertarget{StudentList_8c_ad79aefee6a8990632311a15e98d9a65f}{}\label{StudentList_8c_ad79aefee6a8990632311a15e98d9a65f}
+
+
+\subsection{Typedef Documentation}
+\index{Student\+List.\+c@{Student\+List.\+c}!node@{node}}
+\index{node@{node}!Student\+List.\+c@{Student\+List.\+c}}
+\subsubsection[{\texorpdfstring{node}{node}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf node} {\bf node}}\hypertarget{StudentList_8c_af4aeda155dbe167f1c1cf38cb65bf324}{}\label{StudentList_8c_af4aeda155dbe167f1c1cf38cb65bf324}
+\index{Student\+List.\+c@{Student\+List.\+c}!nodeptr@{nodeptr}}
+\index{nodeptr@{nodeptr}!Student\+List.\+c@{Student\+List.\+c}}
+\subsubsection[{\texorpdfstring{nodeptr}{nodeptr}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf node}$\ast$ {\bf nodeptr}}\hypertarget{StudentList_8c_a0bfdc21bc19acf8a0ac274ebd1b6304a}{}\label{StudentList_8c_a0bfdc21bc19acf8a0ac274ebd1b6304a}
+\index{Student\+List.\+c@{Student\+List.\+c}!studentptr@{studentptr}}
+\index{studentptr@{studentptr}!Student\+List.\+c@{Student\+List.\+c}}
+\subsubsection[{\texorpdfstring{studentptr}{studentptr}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf student}$\ast$ {\bf studentptr}}\hypertarget{StudentList_8c_a0b11d0a1e6f1f884c7ee456c297762db}{}\label{StudentList_8c_a0b11d0a1e6f1f884c7ee456c297762db}
+
+
+\subsection{Function Documentation}
+\index{Student\+List.\+c@{Student\+List.\+c}!final@{final}}
+\index{final@{final}!Student\+List.\+c@{Student\+List.\+c}}
+\subsubsection[{\texorpdfstring{final(queue $\ast$q)}{final(queue *q)}}]{\setlength{\rightskip}{0pt plus 5cm}void final (
+\begin{DoxyParamCaption}
+\item[{{\bf queue} $\ast$}]{q}
+\end{DoxyParamCaption}
+)}\hypertarget{StudentList_8c_a14b9ca3a8fda3effd9ef8ad947119c3b}{}\label{StudentList_8c_a14b9ca3a8fda3effd9ef8ad947119c3b}
+
+\begin{DoxyCode}
+50                     \{
+51   \textcolor{comment}{/* It frees the queue q */}
+52   \hyperlink{structstudent}{student} s;
+53 
+54   \textcolor{keywordflow}{while}(\hyperlink{StudentList_8c_a6d3ac345eba2405cff0faa7a85bac468}{getX}(q,&s));
+55   free(q);
+56 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{StudentList_8c_a14b9ca3a8fda3effd9ef8ad947119c3b_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Student\+List.\+c@{Student\+List.\+c}!getX@{getX}}
+\index{getX@{getX}!Student\+List.\+c@{Student\+List.\+c}}
+\subsubsection[{\texorpdfstring{get\+X(queue $\ast$q, studentptr s)}{getX(queue *q, studentptr s)}}]{\setlength{\rightskip}{0pt plus 5cm}int getX (
+\begin{DoxyParamCaption}
+\item[{{\bf queue} $\ast$}]{q, }
+\item[{{\bf studentptr}}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{StudentList_8c_a6d3ac345eba2405cff0faa7a85bac468}{}\label{StudentList_8c_a6d3ac345eba2405cff0faa7a85bac468}
+
+\begin{DoxyCode}
+75                                 \{
+76   \textcolor{comment}{/*It obtains in s a student record from queue and returns true}
+77 \textcolor{comment}{    if such a record existed */}
+78   \hyperlink{structnode}{nodeptr} p;
+79   
+80   \textcolor{keywordflow}{if}(p=(q->\hyperlink{structqueue_a23e9f810057d92adf24e3278dfe7865f}{head}))\{
+81     q->\hyperlink{structqueue_a23e9f810057d92adf24e3278dfe7865f}{head} = q->\hyperlink{structqueue_a23e9f810057d92adf24e3278dfe7865f}{head}->\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next};
+82     \textcolor{keywordflow}{if}((q->\hyperlink{structqueue_a23e9f810057d92adf24e3278dfe7865f}{head})==NULL)
+83       q->\hyperlink{structqueue_a827de955c3490873a13e63e5478b444b}{tail} = NULL;
+84     *s=p->\hyperlink{structnode_ad09f1b9b9f1b7a5a29fc2b9422dd85fe}{value};
+85     free(p);
+86     \textcolor{keywordflow}{return} 1;
+87   \}\textcolor{keywordflow}{else}
+88     \textcolor{keywordflow}{return} 0;
+89 \}
+\end{DoxyCode}
+\index{Student\+List.\+c@{Student\+List.\+c}!init@{init}}
+\index{init@{init}!Student\+List.\+c@{Student\+List.\+c}}
+\subsubsection[{\texorpdfstring{init(void)}{init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf queue}$\ast$ init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{StudentList_8c_a8996476759e6f48be17f008b26455ec8}{}\label{StudentList_8c_a8996476759e6f48be17f008b26455ec8}
+
+\begin{DoxyCode}
+37                  \{
+38   \textcolor{comment}{/* It creates, initializes, and returns a queue */}
+39   \hyperlink{structqueue}{queue} *q;
+40 
+41   \textcolor{keywordflow}{if}((q=(\hyperlink{structqueue}{queue} *)malloc(\textcolor{keyword}{sizeof}(\hyperlink{structqueue}{queue})))==NULL)\{
+42     perror(\textcolor{stringliteral}{"malloc"});
+43     exit(1);
+44   \}
+45   q->\hyperlink{structqueue_a23e9f810057d92adf24e3278dfe7865f}{head}=NULL;
+46   q->\hyperlink{structqueue_a827de955c3490873a13e63e5478b444b}{tail}=NULL;
+47   \textcolor{keywordflow}{return} q;
+48 \}
+\end{DoxyCode}
+\index{Student\+List.\+c@{Student\+List.\+c}!main@{main}}
+\index{main@{main}!Student\+List.\+c@{Student\+List.\+c}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$argv[])}{main(int argc, char *argv[])}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{StudentList_8c_a0ddf1224851353fc92bfbff6f499fa97}{}\label{StudentList_8c_a0ddf1224851353fc92bfbff6f499fa97}
+
+\begin{DoxyCode}
+141                                 \{
+142   \textcolor{keywordtype}{int} n;
+143   \hyperlink{structqueue}{queue} *q;
+144 
+145   q = \hyperlink{StudentList_8c_a8996476759e6f48be17f008b26455ec8}{init}();
+146   \textcolor{keywordflow}{if}(argc!=3)\{
+147     printf(\textcolor{stringliteral}{"Usage: %s infile outfile\(\backslash\)n"}, argv[0]);
+148     exit(0);
+149   \}
+150   n = \hyperlink{StudentList_8c_a06ff31ab1d0e694ba9c35eb08e583950}{readStudentList}(argv[1],q);
+151   \hyperlink{StudentList_8c_a1b41f1bf22121a8616fa316bfa258262}{writeStudentList}(argv[2],q);
+152   \textcolor{keyword}{final}(q);
+153 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{StudentList_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Student\+List.\+c@{Student\+List.\+c}!put@{put}}
+\index{put@{put}!Student\+List.\+c@{Student\+List.\+c}}
+\subsubsection[{\texorpdfstring{put(queue $\ast$q, studentptr s)}{put(queue *q, studentptr s)}}]{\setlength{\rightskip}{0pt plus 5cm}void put (
+\begin{DoxyParamCaption}
+\item[{{\bf queue} $\ast$}]{q, }
+\item[{{\bf studentptr}}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{StudentList_8c_a6101248c9fd871a298acb034a6e16a52}{}\label{StudentList_8c_a6101248c9fd871a298acb034a6e16a52}
+
+\begin{DoxyCode}
+58                                 \{
+59   \textcolor{comment}{/* It inserts a new value *s in the queue q */}
+60   \hyperlink{structnode}{nodeptr} p;
+61   
+62   \textcolor{keywordflow}{if} ((p=(\hyperlink{structnode}{nodeptr})malloc(\textcolor{keyword}{sizeof}(\hyperlink{structnode}{node})))==NULL)\{
+63     perror(\textcolor{stringliteral}{"malloc"});
+64     exit(1);
+65   \}
+66   p->\hyperlink{structnode_ad09f1b9b9f1b7a5a29fc2b9422dd85fe}{value}=*s;
+67   p->\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next} = NULL;
+68   \textcolor{keywordflow}{if} (q->\hyperlink{structqueue_a23e9f810057d92adf24e3278dfe7865f}{head} == NULL)
+69     q->\hyperlink{structqueue_a23e9f810057d92adf24e3278dfe7865f}{head} = p;
+70   \textcolor{keywordflow}{else}
+71     q->\hyperlink{structqueue_a827de955c3490873a13e63e5478b444b}{tail}->\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next} = p;
+72   q->\hyperlink{structqueue_a827de955c3490873a13e63e5478b444b}{tail} = p;
+73 \}
+\end{DoxyCode}
+\index{Student\+List.\+c@{Student\+List.\+c}!read\+Student\+List@{read\+Student\+List}}
+\index{read\+Student\+List@{read\+Student\+List}!Student\+List.\+c@{Student\+List.\+c}}
+\subsubsection[{\texorpdfstring{read\+Student\+List(char filename[], queue $\ast$q)}{readStudentList(char filename[], queue *q)}}]{\setlength{\rightskip}{0pt plus 5cm}int read\+Student\+List (
+\begin{DoxyParamCaption}
+\item[{char}]{filename\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf queue} $\ast$}]{q}
+\end{DoxyParamCaption}
+)}\hypertarget{StudentList_8c_a06ff31ab1d0e694ba9c35eb08e583950}{}\label{StudentList_8c_a06ff31ab1d0e694ba9c35eb08e583950}
+
+\begin{DoxyCode}
+120 \{
+121   FILE *fd;  \textcolor{comment}{/* File descriptor used for filename */}
+122   \textcolor{keywordtype}{int} i=0;
+123   \hyperlink{structstudent}{student} temp;
+124   
+125   \textcolor{keywordflow}{if}((fd=fopen(filename,\textcolor{stringliteral}{"r"}))==NULL)\{
+126     perror(\textcolor{stringliteral}{"fopen"});
+127     exit(1);
+128   \}
+129   \textcolor{keywordflow}{while}(fscanf(fd,\textcolor{stringliteral}{"%s %d %d %d"},
+130            temp.\hyperlink{structstudent_a4cc31cdf611c0cce37bba9239ea27ae3}{name}, 
+131            &temp.\hyperlink{structstudent_a0044e7dfdd90788897b708b0a64af0ee}{midterm},
+132            &temp.\hyperlink{structstudent_a4a15ad9d47eea21ab8b157561f01f2a4}{final}, 
+133            &temp.\hyperlink{structstudent_aa02b98056cfb79a6a5012667be2e717b}{homeworks})!=EOF)\{
+134     \hyperlink{StudentList_8c_a6101248c9fd871a298acb034a6e16a52}{put}(q,&temp);
+135     i++;
+136   \}
+137   fclose(fd);
+138   \textcolor{keywordflow}{return} i;
+139 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{StudentList_8c_a06ff31ab1d0e694ba9c35eb08e583950_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Student\+List.\+c@{Student\+List.\+c}!write\+Student\+List@{write\+Student\+List}}
+\index{write\+Student\+List@{write\+Student\+List}!Student\+List.\+c@{Student\+List.\+c}}
+\subsubsection[{\texorpdfstring{write\+Student\+List(char filename[], queue $\ast$q)}{writeStudentList(char filename[], queue *q)}}]{\setlength{\rightskip}{0pt plus 5cm}void write\+Student\+List (
+\begin{DoxyParamCaption}
+\item[{char}]{filename\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf queue} $\ast$}]{q}
+\end{DoxyParamCaption}
+)}\hypertarget{StudentList_8c_a1b41f1bf22121a8616fa316bfa258262}{}\label{StudentList_8c_a1b41f1bf22121a8616fa316bfa258262}
+
+\begin{DoxyCode}
+97 \{
+98   FILE *fd;  \textcolor{comment}{/* File descriptor used for filename */}
+99   \hyperlink{structstudent}{student} s;
+100 
+101   \textcolor{keywordflow}{if}((fd=fopen(filename,\textcolor{stringliteral}{"w"}))==NULL)\{
+102     perror(\textcolor{stringliteral}{"fopen"});
+103     exit(1);
+104   \}
+105   \textcolor{keywordflow}{while}(\hyperlink{StudentList_8c_a6d3ac345eba2405cff0faa7a85bac468}{getX}(q, &s))\{
+106     fprintf(fd,\textcolor{stringliteral}{"%s %d %d %d\(\backslash\)n"},
+107         s.\hyperlink{structstudent_a4cc31cdf611c0cce37bba9239ea27ae3}{name}, 
+108         s.\hyperlink{structstudent_a0044e7dfdd90788897b708b0a64af0ee}{midterm}, 
+109         s.\hyperlink{structstudent_a4a15ad9d47eea21ab8b157561f01f2a4}{final}, 
+110         s.\hyperlink{structstudent_aa02b98056cfb79a6a5012667be2e717b}{homeworks});
+111   \}
+112   fclose(fd);
+113 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{StudentList_8c_a1b41f1bf22121a8616fa316bfa258262_cgraph}
+\end{center}
+\end{figure}
+
+

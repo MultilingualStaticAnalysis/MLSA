@@ -1,0 +1,107 @@
+\hypertarget{BinomialHeap_8cpp}{}\section{Binomial\+Heap.\+cpp File Reference}
+\label{BinomialHeap_8cpp}\index{Binomial\+Heap.\+cpp@{Binomial\+Heap.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+Include dependency graph for Binomial\+Heap.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{BinomialHeap_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnode}{node}
+\item 
+class \hyperlink{classBinomialHeap}{Binomial\+Heap}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{BinomialHeap_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Binomial\+Heap.\+cpp@{Binomial\+Heap.\+cpp}!main@{main}}
+\index{main@{main}!Binomial\+Heap.\+cpp@{Binomial\+Heap.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{BinomialHeap_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{BinomialHeap_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+332 \{
+333     \textcolor{keywordtype}{int} n, m, l, i;
+334     \hyperlink{classBinomialHeap}{BinomialHeap} bh;
+335     \hyperlink{structnode}{node}* p;
+336     \hyperlink{structnode}{node} *H;
+337     H = bh.\hyperlink{classBinomialHeap_a3ffaab6756189d14dd76e4e7a48147b6}{Initializeheap}();
+338     \textcolor{keywordtype}{char} ch;
+339     \textcolor{keywordflow}{while} (1)
+340     \{
+341         cout<<\textcolor{stringliteral}{"----------------------------"}<<endl;
+342         cout<<\textcolor{stringliteral}{"Operations on Binomial heap"}<<endl;
+343         cout<<\textcolor{stringliteral}{"----------------------------"}<<endl;
+344         cout<<\textcolor{stringliteral}{"1)Insert Element in the heap"}<<endl;
+345         cout<<\textcolor{stringliteral}{"2)Extract Minimum key node"}<<endl;
+346         cout<<\textcolor{stringliteral}{"3)Decrease key of a node"}<<endl;
+347         cout<<\textcolor{stringliteral}{"4)Delete a node"}<<endl;
+348         cout<<\textcolor{stringliteral}{"5)Display Heap"}<<endl;
+349         cout<<\textcolor{stringliteral}{"6)Exit"}<<endl;
+350         cout<<\textcolor{stringliteral}{"Enter Your Choice: "};
+351         cin>>l;
+352         \textcolor{keywordflow}{switch}(l)
+353         \{
+354         \textcolor{keywordflow}{case} 1:
+355             cout<<\textcolor{stringliteral}{"Enter the element to be inserted: "};
+356             cin>>m;
+357             p = bh.\hyperlink{classBinomialHeap_a60a7f08bad4dd38fe2b3000d6e29724e}{Create\_node}(m);
+358             H = bh.\hyperlink{classBinomialHeap_a762a7e29d6bea85540f1a82cbca4a062}{Insert}(H, p);
+359             \textcolor{keywordflow}{break};
+360         \textcolor{keywordflow}{case} 2:
+361             p = bh.\hyperlink{classBinomialHeap_a71e1468e2782db3f2322d188bca1e48a}{Extract\_Min}(H);
+362             \textcolor{keywordflow}{if} (p != NULL)
+363                 cout<<\textcolor{stringliteral}{"The node with minimum key: "}<<p->\hyperlink{structnode_a027ad0e5186d6cfab02c74a3da2d28a9}{n}<<endl;
+364             \textcolor{keywordflow}{else}
+365                 cout<<\textcolor{stringliteral}{"Heap is empty"}<<endl;
+366             \textcolor{keywordflow}{break};
+367         \textcolor{keywordflow}{case} 3:
+368             cout<<\textcolor{stringliteral}{"Enter the key to be decreased: "};
+369             cin>>m;
+370             cout<<\textcolor{stringliteral}{"Enter new key value: "};
+371             cin>>l;
+372             bh.\hyperlink{classBinomialHeap_a3898a1fb87677fdb94a40f62ac416de9}{Decrease\_key}(H, m, l);
+373             \textcolor{keywordflow}{break};
+374         \textcolor{keywordflow}{case} 4:
+375             cout<<\textcolor{stringliteral}{"Enter the key to be deleted: "};
+376             cin>>m;
+377             bh.\hyperlink{classBinomialHeap_aab7ea7e42fe1b2aaf3298f73f4e68884}{Delete}(H, m);
+378             \textcolor{keywordflow}{break};
+379         \textcolor{keywordflow}{case} 5:
+380             cout<<\textcolor{stringliteral}{"The Heap is: "}<<endl;
+381             bh.\hyperlink{classBinomialHeap_a43b3339eb8cc6eea26f769ab616b720a}{Display}(H);
+382             \textcolor{keywordflow}{break};
+383         \textcolor{keywordflow}{case} 6:
+384             exit(1);
+385         \textcolor{keywordflow}{default}:
+386             cout<<\textcolor{stringliteral}{"Wrong Choice"};
+387       \}
+388     \}
+389     \textcolor{keywordflow}{return} 0;
+390 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{BinomialHeap_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

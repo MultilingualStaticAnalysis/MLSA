@@ -1,0 +1,68 @@
+\hypertarget{DirectedGraph_8cpp}{}\section{Directed\+Graph.\+cpp File Reference}
+\label{DirectedGraph_8cpp}\index{Directed\+Graph.\+cpp@{Directed\+Graph.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include $<$stack$>$}\\*
+Include dependency graph for Directed\+Graph.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{DirectedGraph_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classGraph}{Graph}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{DirectedGraph_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Directed\+Graph.\+cpp@{Directed\+Graph.\+cpp}!main@{main}}
+\index{main@{main}!Directed\+Graph.\+cpp@{Directed\+Graph.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{DirectedGraph_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{DirectedGraph_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+109 \{
+110     \textcolor{comment}{// Create graphs given in the above diagrams}
+111     \hyperlink{classGraph}{Graph} g1(5);
+112     g1.addEdge(0, 1);
+113     g1.addEdge(1, 2);
+114     g1.addEdge(2, 3);
+115     g1.addEdge(3, 0);
+116     g1.addEdge(2, 4);
+117     g1.addEdge(4, 2);
+118     cout << \textcolor{stringliteral}{"The graph is weakly connected? "};
+119     g1.isSC() ? cout << \textcolor{stringliteral}{"No\(\backslash\)n"} : cout << \textcolor{stringliteral}{"Yes\(\backslash\)n"};
+120  
+121     \hyperlink{classGraph}{Graph} g2(4);
+122     g2.addEdge(0, 1);
+123     g2.addEdge(1, 2);
+124     g2.addEdge(2, 3);
+125     cout << \textcolor{stringliteral}{"The graph is weakly connected? "};
+126     g2.isSC() ? cout << \textcolor{stringliteral}{"No\(\backslash\)n"} : cout << \textcolor{stringliteral}{"Yes\(\backslash\)n"};
+127  
+128     \textcolor{keywordflow}{return} 0;
+129 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{DirectedGraph_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

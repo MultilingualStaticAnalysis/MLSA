@@ -1,0 +1,58 @@
+\hypertarget{AccessModifiers_8cpp}{}\section{Access\+Modifiers.\+cpp File Reference}
+\label{AccessModifiers_8cpp}\index{Access\+Modifiers.\+cpp@{Access\+Modifiers.\+cpp}}
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\\*
+Include dependency graph for Access\+Modifiers.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{AccessModifiers_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classParent}{Parent}
+\item 
+class \hyperlink{classChild}{Child}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{AccessModifiers_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Access\+Modifiers.\+cpp@{Access\+Modifiers.\+cpp}!main@{main}}
+\index{main@{main}!Access\+Modifiers.\+cpp@{Access\+Modifiers.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{AccessModifiers_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{AccessModifiers_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+38            \{
+39     
+40     \hyperlink{classChild}{Child} obj1;
+41     
+42     \textcolor{comment}{// member function of derived class can}
+43     \textcolor{comment}{// access the protected data members of base class}
+44     
+45     obj1.\hyperlink{classChild_afc9f124e971edff65cab426f1bea69df}{setId}(81);
+46     obj1.\hyperlink{classChild_ae869a856a652ed224a1df31e066a7b92}{displayId}();
+47     \textcolor{keywordflow}{return} 0;
+48 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{AccessModifiers_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

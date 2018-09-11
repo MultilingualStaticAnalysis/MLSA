@@ -1,0 +1,54 @@
+\hypertarget{Bmain_8cpp}{}\section{Bmain.\+cpp File Reference}
+\label{Bmain_8cpp}\index{Bmain.\+cpp@{Bmain.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}Ball.\+h\char`\"{}}\\*
+Include dependency graph for Bmain.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{Bmain_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Bmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Bmain.\+cpp@{Bmain.\+cpp}!main@{main}}
+\index{main@{main}!Bmain.\+cpp@{Bmain.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Bmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Bmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+6            \{
+7    \hyperlink{classBall}{Ball} ball;
+8    ball.\hyperlink{classBall_afb29247bbe8aa061a1212a0bd3d7c4b8}{print}();    \textcolor{comment}{// Ball @ (0.00,0.00) with speed (0.00,0.00)}
+9    ball.\hyperlink{classBall_af38e5a6a3556b833cff90c2cd5292713}{setXY}(1.1, 2.2);
+10    ball.\hyperlink{classBall_a1063b6a3532786b7147fad5e07182a45}{setXYSpeed}(3.3, 4.4);
+11    ball.\hyperlink{classBall_afb29247bbe8aa061a1212a0bd3d7c4b8}{print}();    \textcolor{comment}{// Ball @ (1.10,2.20) with speed (3.30,4.40)}
+12    ball.\hyperlink{classBall_a5499dc9c66f5f79c535ca970b02a9cee}{setX}(5.5);
+13    ball.\hyperlink{classBall_a3216c6c42326d379f4a884993bea7e70}{setY}(6.6);
+14    cout << \textcolor{stringliteral}{"x is "} << ball.\hyperlink{classBall_a480a1d4547fea337598d6d5b7fb83d8f}{getX}() << endl;  \textcolor{comment}{// x is 5.50}
+15    cout << \textcolor{stringliteral}{"y is "} << ball.\hyperlink{classBall_a28a7fe3223d2c192e0eefaa75074e820}{getY}() << endl;  \textcolor{comment}{// y is 6.60}
+16    ball.\hyperlink{classBall_a05228e822d67b25baf715cf09c325494}{move}();
+17    ball.\hyperlink{classBall_afb29247bbe8aa061a1212a0bd3d7c4b8}{print}();    \textcolor{comment}{// Ball @ (8.80,11.00) with speed (3.30,4.40)}
+18 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Bmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

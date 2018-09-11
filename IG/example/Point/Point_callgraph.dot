@@ -1,0 +1,41 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/Point Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/Point Call Graph"
+	];
+
+	Node0x856432450 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/Point/Pmain.cpp"];
+	Node0x608149400 [shape=oval, label="0x2809020. (/home/labaccount/11-2-17/mlsa/IG/example/Point/Point.cpp)\nPoint::print()"];
+	Node0x856432450 -> Node0x608149400;
+	Node0x508138473 [shape=oval, label="0x280a708. (/home/labaccount/11-2-17/mlsa/IG/example/Point/Point.cpp)\nPoint::getX()"];
+	Node0x856432450 -> Node0x508138473;
+	Node0x880771575 [shape=oval, label="0x280c7f8. (/home/labaccount/11-2-17/mlsa/IG/example/Point/Point.cpp)\nPoint::getY()"];
+	Node0x856432450 -> Node0x880771575;
+	Node0x168903213 [shape=oval, label="0x2814d40. (/home/labaccount/11-2-17/mlsa/IG/example/Point/Pmain.cpp)\nsetprecision(2)"];
+	Node0x856432450 -> Node0x168903213;
+	Node0x430127007 [shape=oval, label="0x2815c30. (/home/labaccount/11-2-17/mlsa/IG/example/Point/Point.cpp)\nPoint::getMagnitude()"];
+	Node0x856432450 -> Node0x430127007;
+	Node0x145799280 [shape=oval, label="0x2817800. (/home/labaccount/11-2-17/mlsa/IG/example/Point/Point.cpp)\nPoint::getArgument()"];
+	Node0x856432450 -> Node0x145799280;
+	Node0x982859008 [shape=oval, label="0x2818db8. (/home/labaccount/11-2-17/mlsa/IG/example/Point/Point.cpp)\nPoint::setX(6)"];
+	Node0x856432450 -> Node0x982859008;
+	Node0x748027924 [shape=oval, label="0x2818e68. (/home/labaccount/11-2-17/mlsa/IG/example/Point/Point.cpp)\nPoint::setY(8)"];
+	Node0x856432450 -> Node0x748027924;
+	Node0x583258125 [shape=oval, label="0x2818ef8. (/home/labaccount/11-2-17/mlsa/IG/example/Point/Point.cpp)\nPoint::print()"];
+	Node0x856432450 -> Node0x583258125;
+	Node0x753199235 [shape=oval, label="0x2818fd8. (/home/labaccount/11-2-17/mlsa/IG/example/Point/Point.cpp)\nPoint::setXY(1, 2)"];
+	Node0x856432450 -> Node0x753199235;
+	Node0x640180586 [shape=oval, label="0x2819070. (/home/labaccount/11-2-17/mlsa/IG/example/Point/Point.cpp)\nPoint::print()"];
+	Node0x856432450 -> Node0x640180586;
+	Node0x773790324 [shape=oval, label="0x2819218. (/home/labaccount/11-2-17/mlsa/IG/example/Point/Point.cpp)\nPoint::print()"];
+	Node0x856432450 -> Node0x773790324;
+	Node0x707340306 [shape=oval, label="0x34b37d0. (/home/labaccount/11-2-17/mlsa/IG/example/Point/Point.cpp)\nsqrt(BINOP)"];
+	Node0x430127007 -> Node0x707340306;
+	Node0x206979589 [shape=oval, label="0x34b4b90. (/home/labaccount/11-2-17/mlsa/IG/example/Point/Point.cpp)\nPoint::atan2()"];
+	Node0x145799280 -> Node0x206979589;
+	Node0x861614522 [shape=oval, label="0x34b2a10. (/home/labaccount/11-2-17/mlsa/IG/example/Point/Point.cpp)\nPoint::setX(x)"];
+	Node0x753199235 -> Node0x861614522;
+	Node0x222152370 [shape=oval, label="0x34b2ad0. (/home/labaccount/11-2-17/mlsa/IG/example/Point/Point.cpp)\nPoint::setY(y)"];
+	Node0x753199235 -> Node0x222152370;
+}

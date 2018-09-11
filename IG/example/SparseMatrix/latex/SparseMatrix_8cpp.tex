@@ -1,0 +1,86 @@
+\hypertarget{SparseMatrix_8cpp}{}\section{Sparse\+Matrix.\+cpp File Reference}
+\label{SparseMatrix_8cpp}\index{Sparse\+Matrix.\+cpp@{Sparse\+Matrix.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+Include dependency graph for Sparse\+Matrix.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{SparseMatrix_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classList}{List}
+\item 
+class \hyperlink{classSparseArray}{Sparse\+Array}
+\item 
+class \hyperlink{classSparseMatrix}{Sparse\+Matrix}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{SparseMatrix_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Sparse\+Matrix.\+cpp@{Sparse\+Matrix.\+cpp}!main@{main}}
+\index{main@{main}!Sparse\+Matrix.\+cpp@{Sparse\+Matrix.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{SparseMatrix_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{SparseMatrix_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+191 \{
+192     \textcolor{keywordtype}{int} iarray[3][3];
+193     iarray[0][0] = 1;
+194     iarray[0][1] = NULL;
+195     iarray[0][2] = 2;
+196     iarray[1][0] = NULL;
+197     iarray[1][1] = 3;
+198     iarray[1][2] = NULL;
+199     iarray[2][0] = 4;
+200     iarray[2][1] = 6;
+201     iarray[2][2] = NULL;
+202     \hyperlink{classSparseMatrix}{SparseMatrix} sparseMatrix(3);
+203     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} rowindex = 0; rowindex < 3; rowindex++)
+204     \{
+205         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} colindex = 0; colindex < 3; colindex++)
+206         \{
+207             sparseMatrix.store(rowindex, colindex, iarray[rowindex][colindex]);
+208         \}
+209     \}
+210  
+211     cout<<\textcolor{stringliteral}{"the sparse Matrix is: "}<<endl;
+212     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} rowindex = 0; rowindex < 3; rowindex++)
+213     \{
+214         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} colindex = 0; colindex < 3; colindex++)
+215         \{
+216             \textcolor{keywordflow}{if} (sparseMatrix.get(rowindex, colindex) == NULL)
+217                 cout<<\textcolor{stringliteral}{"NULL"}<< \textcolor{stringliteral}{"\(\backslash\)t"};
+218             \textcolor{keywordflow}{else}
+219                 cout<<sparseMatrix.get(rowindex, colindex) << \textcolor{stringliteral}{"\(\backslash\)t"};
+220         \}
+221         cout<<endl;
+222     \}
+223     cout<<\textcolor{stringliteral}{"The Size of Sparse Matrix is "}<<sparseMatrix.elementCount()<<endl;
+224  
+225 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SparseMatrix_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

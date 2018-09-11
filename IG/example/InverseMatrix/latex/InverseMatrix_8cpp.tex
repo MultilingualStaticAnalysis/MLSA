@@ -1,0 +1,134 @@
+\hypertarget{InverseMatrix_8cpp}{}\section{Inverse\+Matrix.\+cpp File Reference}
+\label{InverseMatrix_8cpp}\index{Inverse\+Matrix.\+cpp@{Inverse\+Matrix.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$tchar.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+Include dependency graph for Inverse\+Matrix.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{InverseMatrix_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCMatrix}{C\+Matrix}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{InverseMatrix_8cpp_a5b62c41f0c74994ce6ad7e0bed98cc51}{M\+A\+T\+R\+I\+X\+\_\+H}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::istream \& \hyperlink{InverseMatrix_8cpp_a775d8b5122da5b9fdea41520953a4237}{operator$>$$>$} (std\+::istream \&is, \hyperlink{classCMatrix}{C\+Matrix} \&m)
+\item 
+std\+::ostream \& \hyperlink{InverseMatrix_8cpp_a62d7be0784c5982bf356f96493281902}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classCMatrix}{C\+Matrix} \&m)
+\item 
+int \hyperlink{InverseMatrix_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{Inverse\+Matrix.\+cpp@{Inverse\+Matrix.\+cpp}!M\+A\+T\+R\+I\+X\+\_\+H@{M\+A\+T\+R\+I\+X\+\_\+H}}
+\index{M\+A\+T\+R\+I\+X\+\_\+H@{M\+A\+T\+R\+I\+X\+\_\+H}!Inverse\+Matrix.\+cpp@{Inverse\+Matrix.\+cpp}}
+\subsubsection[{\texorpdfstring{M\+A\+T\+R\+I\+X\+\_\+H}{MATRIX_H}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+T\+R\+I\+X\+\_\+H}\hypertarget{InverseMatrix_8cpp_a5b62c41f0c74994ce6ad7e0bed98cc51}{}\label{InverseMatrix_8cpp_a5b62c41f0c74994ce6ad7e0bed98cc51}
+
+
+\subsection{Function Documentation}
+\index{Inverse\+Matrix.\+cpp@{Inverse\+Matrix.\+cpp}!main@{main}}
+\index{main@{main}!Inverse\+Matrix.\+cpp@{Inverse\+Matrix.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{InverseMatrix_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{InverseMatrix_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+497 \{
+498     \hyperlink{classCMatrix}{CMatrix} a(\textcolor{stringliteral}{"A"}, 5, 5);
+499     \textcolor{comment}{//std::cin >> a;}
+500     a.FillSimulatedInput();
+501     \hyperlink{classCMatrix}{CMatrix} aadj = a.\hyperlink{classCMatrix_abd58298df23c98b8675a81a70c6f140b}{Inverse}();
+502     std::cout << a;
+503     std::cout << aadj;
+504     \hyperlink{classCMatrix}{CMatrix} unit = (a * aadj);
+505     unit.\hyperlink{classCMatrix_a7878287aa7b5a1404980ff08d3cfeb16}{SetName}(\textcolor{stringliteral}{"A * A-Inv"});
+506     std::cout << unit;
+507 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{InverseMatrix_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Inverse\+Matrix.\+cpp@{Inverse\+Matrix.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Inverse\+Matrix.\+cpp@{Inverse\+Matrix.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(std\+::ostream \&os, const C\+Matrix \&m)}{operator<<(std::ostream &os, const CMatrix &m)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf C\+Matrix} \&}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{InverseMatrix_8cpp_a62d7be0784c5982bf356f96493281902}{}\label{InverseMatrix_8cpp_a62d7be0784c5982bf356f96493281902}
+
+\begin{DoxyCode}
+474 \{
+475  
+476     os << \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)nMatrix : "} << m.\hyperlink{classCMatrix_aecd316cc4360014e817f7dc763aaa957}{m\_name} << \textcolor{stringliteral}{" Rows: "} << m.\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows} << \textcolor{stringliteral}{" Cols: "}
+477             << m.\hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols} << \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n"};
+478     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < m.\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}; i++)
+479     \{
+480         os << \textcolor{stringliteral}{" | "};
+481         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < m.\hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols}; j++)
+482         \{
+483             \textcolor{keywordtype}{char} buf[32];
+484             \textcolor{keywordtype}{double} data = m.\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j];
+485             \textcolor{keywordflow}{if} (m.\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j] > -0.00001 && m.\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j] < 0.00001)
+486                 data = 0;
+487             sprintf(buf, \textcolor{stringliteral}{"%10.2lf "}, data);
+488             os << buf;
+489         \}
+490         os << \textcolor{stringliteral}{"|\(\backslash\)n"};
+491     \}
+492     os << \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n"};
+493     \textcolor{keywordflow}{return} os;
+494 \}
+\end{DoxyCode}
+\index{Inverse\+Matrix.\+cpp@{Inverse\+Matrix.\+cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Inverse\+Matrix.\+cpp@{Inverse\+Matrix.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$>$$>$(std\+::istream \&is, C\+Matrix \&m)}{operator>>(std::istream &is, CMatrix &m)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is, }
+\item[{{\bf C\+Matrix} \&}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{InverseMatrix_8cpp_a775d8b5122da5b9fdea41520953a4237}{}\label{InverseMatrix_8cpp_a775d8b5122da5b9fdea41520953a4237}
+
+\begin{DoxyCode}
+457 \{
+458     std::cout << \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)nEnter Input For Matrix : "} << m.\hyperlink{classCMatrix_aecd316cc4360014e817f7dc763aaa957}{m\_name} << \textcolor{stringliteral}{" Rows: "}
+459             << m.\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows} << \textcolor{stringliteral}{" Cols: "} << m.\hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols} << \textcolor{stringliteral}{"\(\backslash\)n"};
+460     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < m.\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}; i++)
+461     \{
+462         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < m.\hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols}; j++)
+463         \{
+464             std::cout << \textcolor{stringliteral}{"Input For Row: "} << i + 1 << \textcolor{stringliteral}{" Col: "} << j + 1
+465                     << \textcolor{stringliteral}{" = "};
+466             is >> m.\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j];
+467         \}
+468         std::cout << \textcolor{stringliteral}{"\(\backslash\)n"};
+469     \}
+470     std::cout << \textcolor{stringliteral}{"\(\backslash\)n"};
+471     \textcolor{keywordflow}{return} is;
+472 \}
+\end{DoxyCode}

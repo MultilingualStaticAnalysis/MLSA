@@ -1,0 +1,76 @@
+\hypertarget{Decorator2_8cpp}{}\section{Decorator2.\+cpp File Reference}
+\label{Decorator2_8cpp}\index{Decorator2.\+cpp@{Decorator2.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+Include dependency graph for Decorator2.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{Decorator2_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classInterface}{Interface}
+\item 
+class \hyperlink{classCore}{Core}
+\item 
+class \hyperlink{classDecorator}{Decorator}
+\item 
+class \hyperlink{classMessengerWithSalutation}{Messenger\+With\+Salutation}
+\item 
+class \hyperlink{classMessengerWithValediction}{Messenger\+With\+Valediction}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Decorator2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Decorator2.\+cpp@{Decorator2.\+cpp}!main@{main}}
+\index{main@{main}!Decorator2.\+cpp@{Decorator2.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Decorator2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Decorator2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+49            \{
+50     \textcolor{keyword}{const} std::string salutation = \textcolor{stringliteral}{"Greetings,"};
+51     \textcolor{keyword}{const} std::string valediction = \textcolor{stringliteral}{"Sincerly, Andy"};
+52     std::string message1 = \textcolor{stringliteral}{"This message is not decorated."};
+53     std::string message2 = \textcolor{stringliteral}{"This message is decorated with a salutation."};
+54     std::string message3 = \textcolor{stringliteral}{"This message is decorated with a valediction."};
+55     std::string message4 = \textcolor{stringliteral}{"This message is decorated with a salutation and a valediction."};
+56 
+57     std::unique\_ptr<Interface> messenger1 = std::make\_unique<Core>();
+58     std::unique\_ptr<Interface> messenger2 = std::make\_unique<MessengerWithSalutation> (
+      std::make\_unique<Core>(), salutation);
+59     std::unique\_ptr<Interface> messenger3 = std::make\_unique<MessengerWithValediction> (
+      std::make\_unique<Core>(), valediction);
+60     std::unique\_ptr<Interface> messenger4 = std::make\_unique<MessengerWithValediction> (
+      std::make\_unique<MessengerWithSalutation>
+61                                           (std::make\_unique<Core>(), salutation), valediction);
+62     
+63     messenger1->write(message1);
+64     std::cout << message1 << \textcolor{charliteral}{'\(\backslash\)n'};
+65     std::cout << \textcolor{stringliteral}{"\(\backslash\)n------------------------------\(\backslash\)n\(\backslash\)n"};
+66 
+67     messenger2->write(message2);
+68     std::cout << message2 << \textcolor{charliteral}{'\(\backslash\)n'};
+69     std::cout << \textcolor{stringliteral}{"\(\backslash\)n------------------------------\(\backslash\)n\(\backslash\)n"};
+70 
+71     messenger3->write(message3);
+72     std::cout << message3 << \textcolor{charliteral}{'\(\backslash\)n'};
+73     std::cout << \textcolor{stringliteral}{"\(\backslash\)n------------------------------\(\backslash\)n\(\backslash\)n"};
+74 
+75     messenger4->write(message4);
+76     std::cout << message4 << \textcolor{charliteral}{'\(\backslash\)n'};
+77     std::cout << \textcolor{stringliteral}{"\(\backslash\)n------------------------------\(\backslash\)n\(\backslash\)n"};
+78 \}\end{DoxyCode}

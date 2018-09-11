@@ -1,0 +1,117 @@
+\hypertarget{classwikibooks__design__patterns_1_1Plus}{}\section{wikibooks\+\_\+design\+\_\+patterns\+:\+:Plus Class Reference}
+\label{classwikibooks__design__patterns_1_1Plus}\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Plus@{wikibooks\+\_\+design\+\_\+patterns\+::\+Plus}}
+
+
+Inheritance diagram for wikibooks\+\_\+design\+\_\+patterns\+:\+:Plus\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classwikibooks__design__patterns_1_1Plus__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for wikibooks\+\_\+design\+\_\+patterns\+:\+:Plus\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classwikibooks__design__patterns_1_1Plus__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwikibooks__design__patterns_1_1Plus_a97354a3768fce729287bbfa7a89d407c}{Plus} (\hyperlink{structwikibooks__design__patterns_1_1Expression}{Expression} $\ast$left, \hyperlink{structwikibooks__design__patterns_1_1Expression}{Expression} $\ast$right)
+\item 
+\hyperlink{classwikibooks__design__patterns_1_1Plus_ac6474c579f8814505b3b6882cb3116db}{$\sim$\+Plus} ()
+\item 
+int \hyperlink{classwikibooks__design__patterns_1_1Plus_a014d62447a10ada652b67da3fd2d6e4a}{interpret} (\hyperlink{namespacewikibooks__design__patterns_adf1889a865861dea765d8a115cc66ae9}{Map} variables)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structwikibooks__design__patterns_1_1Expression}{Expression} $\ast$ \hyperlink{classwikibooks__design__patterns_1_1Plus_a25d07e0b68a4c574974de8656f43230e}{left\+Operand}
+\item 
+\hyperlink{structwikibooks__design__patterns_1_1Expression}{Expression} $\ast$ \hyperlink{classwikibooks__design__patterns_1_1Plus_a8b54c7b23f28495c095b0d3e146094ea}{right\+Operand}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Plus@{wikibooks\+\_\+design\+\_\+patterns\+::\+Plus}!Plus@{Plus}}
+\index{Plus@{Plus}!wikibooks\+\_\+design\+\_\+patterns\+::\+Plus@{wikibooks\+\_\+design\+\_\+patterns\+::\+Plus}}
+\subsubsection[{\texorpdfstring{Plus(\+Expression $\ast$left, Expression $\ast$right)}{Plus(Expression *left, Expression *right)}}]{\setlength{\rightskip}{0pt plus 5cm}wikibooks\+\_\+design\+\_\+patterns\+::\+Plus\+::\+Plus (
+\begin{DoxyParamCaption}
+\item[{{\bf Expression} $\ast$}]{left, }
+\item[{{\bf Expression} $\ast$}]{right}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwikibooks__design__patterns_1_1Plus_a97354a3768fce729287bbfa7a89d407c}{}\label{classwikibooks__design__patterns_1_1Plus_a97354a3768fce729287bbfa7a89d407c}
+
+\begin{DoxyCode}
+35                                               \{ 
+36         \hyperlink{classwikibooks__design__patterns_1_1Plus_a25d07e0b68a4c574974de8656f43230e}{leftOperand} = left; 
+37         \hyperlink{classwikibooks__design__patterns_1_1Plus_a8b54c7b23f28495c095b0d3e146094ea}{rightOperand} = right;
+38     \}
+\end{DoxyCode}
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Plus@{wikibooks\+\_\+design\+\_\+patterns\+::\+Plus}!````~Plus@{$\sim$\+Plus}}
+\index{````~Plus@{$\sim$\+Plus}!wikibooks\+\_\+design\+\_\+patterns\+::\+Plus@{wikibooks\+\_\+design\+\_\+patterns\+::\+Plus}}
+\subsubsection[{\texorpdfstring{$\sim$\+Plus()}{~Plus()}}]{\setlength{\rightskip}{0pt plus 5cm}wikibooks\+\_\+design\+\_\+patterns\+::\+Plus\+::$\sim$\+Plus (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwikibooks__design__patterns_1_1Plus_ac6474c579f8814505b3b6882cb3116db}{}\label{classwikibooks__design__patterns_1_1Plus_ac6474c579f8814505b3b6882cb3116db}
+
+\begin{DoxyCode}
+39            \{ 
+40     \textcolor{keyword}{delete} \hyperlink{classwikibooks__design__patterns_1_1Plus_a25d07e0b68a4c574974de8656f43230e}{leftOperand};
+41     \textcolor{keyword}{delete} \hyperlink{classwikibooks__design__patterns_1_1Plus_a8b54c7b23f28495c095b0d3e146094ea}{rightOperand};
+42     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Plus@{wikibooks\+\_\+design\+\_\+patterns\+::\+Plus}!interpret@{interpret}}
+\index{interpret@{interpret}!wikibooks\+\_\+design\+\_\+patterns\+::\+Plus@{wikibooks\+\_\+design\+\_\+patterns\+::\+Plus}}
+\subsubsection[{\texorpdfstring{interpret(\+Map variables)}{interpret(Map variables)}}]{\setlength{\rightskip}{0pt plus 5cm}int wikibooks\+\_\+design\+\_\+patterns\+::\+Plus\+::interpret (
+\begin{DoxyParamCaption}
+\item[{{\bf Map}}]{variables}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classwikibooks__design__patterns_1_1Plus_a014d62447a10ada652b67da3fd2d6e4a}{}\label{classwikibooks__design__patterns_1_1Plus_a014d62447a10ada652b67da3fd2d6e4a}
+
+
+Implements \hyperlink{structwikibooks__design__patterns_1_1Expression_a3723a35bb367b43edf806be72385c680}{wikibooks\+\_\+design\+\_\+patterns\+::\+Expression}.
+
+
+\begin{DoxyCode}
+44                                   \{ 
+45         \textcolor{keywordflow}{return} \hyperlink{classwikibooks__design__patterns_1_1Plus_a25d07e0b68a4c574974de8656f43230e}{leftOperand}->\hyperlink{structwikibooks__design__patterns_1_1Expression_a3723a35bb367b43edf806be72385c680}{interpret}(variables) + 
+      \hyperlink{classwikibooks__design__patterns_1_1Plus_a8b54c7b23f28495c095b0d3e146094ea}{rightOperand}->\hyperlink{structwikibooks__design__patterns_1_1Expression_a3723a35bb367b43edf806be72385c680}{interpret}(variables);
+46     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwikibooks__design__patterns_1_1Plus_a014d62447a10ada652b67da3fd2d6e4a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Plus@{wikibooks\+\_\+design\+\_\+patterns\+::\+Plus}!left\+Operand@{left\+Operand}}
+\index{left\+Operand@{left\+Operand}!wikibooks\+\_\+design\+\_\+patterns\+::\+Plus@{wikibooks\+\_\+design\+\_\+patterns\+::\+Plus}}
+\subsubsection[{\texorpdfstring{left\+Operand}{leftOperand}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression}$\ast$ wikibooks\+\_\+design\+\_\+patterns\+::\+Plus\+::left\+Operand\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classwikibooks__design__patterns_1_1Plus_a25d07e0b68a4c574974de8656f43230e}{}\label{classwikibooks__design__patterns_1_1Plus_a25d07e0b68a4c574974de8656f43230e}
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Plus@{wikibooks\+\_\+design\+\_\+patterns\+::\+Plus}!right\+Operand@{right\+Operand}}
+\index{right\+Operand@{right\+Operand}!wikibooks\+\_\+design\+\_\+patterns\+::\+Plus@{wikibooks\+\_\+design\+\_\+patterns\+::\+Plus}}
+\subsubsection[{\texorpdfstring{right\+Operand}{rightOperand}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression}$\ast$ wikibooks\+\_\+design\+\_\+patterns\+::\+Plus\+::right\+Operand\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classwikibooks__design__patterns_1_1Plus_a8b54c7b23f28495c095b0d3e146094ea}{}\label{classwikibooks__design__patterns_1_1Plus_a8b54c7b23f28495c095b0d3e146094ea}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Interpreter_8cpp}{Interpreter.\+cpp}\end{DoxyCompactItemize}

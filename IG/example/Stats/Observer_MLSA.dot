@@ -1,0 +1,73 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/Observer Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/Observer Call Graph"
+	];
+
+	Node0x160530707 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp"];
+	Node0x335621411 [shape=oval, label="0x28fa908. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nParaWeatherData::SensorDataChange(1001)"];
+	Node0x160530707 -> Node0x335621411;
+	Node0x199969573 [shape=oval, label="0x28faa68. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nParaWeatherData::SensorDataChange(12, 1003)"];
+	Node0x160530707 -> Node0x199969573;
+	Node0x713032474 [shape=oval, label="0x28fabc8. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nParaWeatherData::SensorDataChange(26, 806)"];
+	Node0x160530707 -> Node0x713032474;
+	Node0x946298497 [shape=oval, label="0x28fad28. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nParaWeatherData::SensorDataChange(900)"];
+	Node0x160530707 -> Node0x946298497;
+	Node0x580356938 [shape=oval, label="0x28fae50. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nParaWeatherData::removeOb(currentB)"];
+	Node0x160530707 -> Node0x580356938;
+	Node0x531055329 [shape=oval, label="0x28faf90. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nParaWeatherData::SensorDataChange(100, 40, 1900)"];
+	Node0x160530707 -> Node0x531055329;
+	Node0x109753543 [shape=oval, label="0x28dcbb0. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nParaWeatherData::notifyOb()"];
+	Node0x335621411 -> Node0x109753543;
+	Node0x123942753 [shape=oval, label="0x28dcbb0. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nParaWeatherData::notifyOb()"];
+	Node0x199969573 -> Node0x123942753;
+	Node0x689625308 [shape=oval, label="0x28dcbb0. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nParaWeatherData::notifyOb()"];
+	Node0x713032474 -> Node0x689625308;
+	Node0x586834558 [shape=oval, label="0x28dcbb0. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nParaWeatherData::notifyOb()"];
+	Node0x946298497 -> Node0x586834558;
+	Node0x869462414 [shape=oval, label="0x28dce00. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nOBJ.remove(ob)"];
+	Node0x580356938 -> Node0x869462414;
+	Node0x331828308 [shape=oval, label="0x28dcbb0. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nParaWeatherData::notifyOb()"];
+	Node0x531055329 -> Node0x331828308;
+	Node0x863246881 [shape=oval, label="0x28dd1b8. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nOBJ.begin()"];
+	Node0x109753543 -> Node0x863246881;
+	Node0x598451229 [shape=oval, label="0x28dec08. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nOBJ.end()"];
+	Node0x109753543 -> Node0x598451229;
+	Node0x785192353 [shape=oval, label="0x28df2c8. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nObserverBoardInterface::update()"];
+	Node0x109753543 -> Node0x785192353;
+	Node0x188844847 [shape=oval, label="0x28df4e8. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nObserverBoardInterface::show()"];
+	Node0x109753543 -> Node0x188844847;
+	Node0x304254036 [shape=oval, label="0x28dd1b8. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nOBJ.begin()"];
+	Node0x123942753 -> Node0x304254036;
+	Node0x483840421 [shape=oval, label="0x28dec08. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nOBJ.end()"];
+	Node0x123942753 -> Node0x483840421;
+	Node0x135059336 [shape=oval, label="0x28df2c8. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nObserverBoardInterface::update()"];
+	Node0x123942753 -> Node0x135059336;
+	Node0x216103961 [shape=oval, label="0x28df4e8. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nObserverBoardInterface::show()"];
+	Node0x123942753 -> Node0x216103961;
+	Node0x990166362 [shape=oval, label="0x28dd1b8. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nOBJ.begin()"];
+	Node0x689625308 -> Node0x990166362;
+	Node0x223949505 [shape=oval, label="0x28dec08. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nOBJ.end()"];
+	Node0x689625308 -> Node0x223949505;
+	Node0x907628416 [shape=oval, label="0x28df2c8. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nObserverBoardInterface::update()"];
+	Node0x689625308 -> Node0x907628416;
+	Node0x725058882 [shape=oval, label="0x28df4e8. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nObserverBoardInterface::show()"];
+	Node0x689625308 -> Node0x725058882;
+	Node0x922285625 [shape=oval, label="0x28dd1b8. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nOBJ.begin()"];
+	Node0x586834558 -> Node0x922285625;
+	Node0x456357590 [shape=oval, label="0x28dec08. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nOBJ.end()"];
+	Node0x586834558 -> Node0x456357590;
+	Node0x266183142 [shape=oval, label="0x28df2c8. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nObserverBoardInterface::update()"];
+	Node0x586834558 -> Node0x266183142;
+	Node0x319357741 [shape=oval, label="0x28df4e8. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nObserverBoardInterface::show()"];
+	Node0x586834558 -> Node0x319357741;
+	Node0x770592135 [shape=oval, label="0x28dd1b8. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nOBJ.begin()"];
+	Node0x331828308 -> Node0x770592135;
+	Node0x223589181 [shape=oval, label="0x28dec08. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nOBJ.end()"];
+	Node0x331828308 -> Node0x223589181;
+	Node0x570230219 [shape=oval, label="0x28df2c8. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nObserverBoardInterface::update()"];
+	Node0x331828308 -> Node0x570230219;
+	Node0x620479132 [shape=oval, label="0x28df4e8. (/home/labaccount/11-2-17/mlsa/IG/example/Observer/Observer.cpp)\nObserverBoardInterface::show()"];
+	Node0x331828308 -> Node0x620479132;
+}

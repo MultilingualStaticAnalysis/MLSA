@@ -1,0 +1,1614 @@
+TranslationUnitDecl 0x1e6c7d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x1e6cd08 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x1e6ca20 '__int128'
+|-TypedefDecl 0x1e6cd68 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x1e6ca40 'unsigned __int128'
+|-TypedefDecl 0x1e6cdf8 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x1e6cdc0 'char *'
+|   `-BuiltinType 0x1e6c860 'char'
+|-TypedefDecl 0x1e6d118 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x1e6d0c0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x1e6cee0 'struct __va_list_tag'
+|     `-CXXRecord 0x1e6ce48 '__va_list_tag'
+|-LinkageSpecDecl 0x1e6d218 </usr/include/x86_64-linux-gnu/sys/cdefs.h:98:24, line:99:22> line:98:31 C
+| |-TypedefDecl 0x1e6d278 </usr/include/x86_64-linux-gnu/bits/mathdef.h:28:1, col:15> col:15 float_t 'float'
+| | `-BuiltinType 0x1e6c9c0 'float'
+| |-TypedefDecl 0x1e6d2d8 <line:29:1, col:16> col:16 double_t 'double'
+| | `-BuiltinType 0x1e6c9e0 'double'
+| |-FunctionDecl 0x1e6d440 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:54:13 acos 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1e6d338 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:54:31> col:31 __x 'double'
+| | `-NoThrowAttr 0x1ee3de0 <col:13> Implicit
+| |-FunctionDecl 0x1ee3eb0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:2:1 __acos 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ee3e28 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:54:31> col:31 __x 'double'
+| |-FunctionDecl 0x1ee3ff8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:56:13 asin 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1ee3f70 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:56:31> col:31 __x 'double'
+| | `-NoThrowAttr 0x1ee40a8 <col:13> Implicit
+| |-FunctionDecl 0x1ee4178 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:3:1 __asin 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ee40f0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:56:31> col:31 __x 'double'
+| |-FunctionDecl 0x1ee42c0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:58:13 atan 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1ee4238 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:58:31> col:31 __x 'double'
+| | `-NoThrowAttr 0x1ee4370 <col:13> Implicit
+| |-FunctionDecl 0x1ee4440 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:4:1 __atan 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ee43b8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:58:31> col:31 __x 'double'
+| |-FunctionDecl 0x1ee4680 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:60:13 atan2 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1ee4500 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:60:32> col:32 __y 'double'
+| | |-ParmVarDecl 0x1ee4570 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:60:47> col:47 __x 'double'
+| | `-NoThrowAttr 0x1ee4738 <col:13> Implicit
+| |-FunctionDecl 0x1ee4880 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:5:1 __atan2 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1ee4780 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:60:32> col:32 __y 'double'
+| | `-ParmVarDecl 0x1ee47f0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:60:47> col:47 __x 'double'
+| |-FunctionDecl 0x1ee49d0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:63:17 cos 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1ee4948 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:63:34> col:34 __x 'double'
+| | `-NoThrowAttr 0x1ee4a80 <col:17> Implicit
+| |-FunctionDecl 0x1ee4b50 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:7:1 __cos 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ee4ac8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:63:34> col:34 __x 'double'
+| |-FunctionDecl 0x1ee4c98 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:65:17 sin 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1ee4c10 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:65:34> col:34 __x 'double'
+| | `-NoThrowAttr 0x1ee4d48 <col:17> Implicit
+| |-FunctionDecl 0x1ee9e88 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:9:1 __sin 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ee9e00 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:65:34> col:34 __x 'double'
+| |-FunctionDecl 0x1ee9fd0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:67:13 tan 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1ee9f48 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:67:30> col:30 __x 'double'
+| | `-NoThrowAttr 0x1eea080 <col:13> Implicit
+| |-FunctionDecl 0x1eea150 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:10:1 __tan 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1eea0c8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:67:30> col:30 __x 'double'
+| |-FunctionDecl 0x1eea298 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:72:13 cosh 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1eea210 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:72:31> col:31 __x 'double'
+| | `-NoThrowAttr 0x1eea348 <col:13> Implicit
+| |-FunctionDecl 0x1eea418 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:11:1 __cosh 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1eea390 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:72:31> col:31 __x 'double'
+| |-FunctionDecl 0x1eea560 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:74:13 sinh 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1eea4d8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:74:31> col:31 __x 'double'
+| | `-NoThrowAttr 0x1eea610 <col:13> Implicit
+| |-FunctionDecl 0x1eea6e0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:12:1 __sinh 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1eea658 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:74:31> col:31 __x 'double'
+| |-FunctionDecl 0x1eea828 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:76:13 tanh 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1eea7a0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:76:31> col:31 __x 'double'
+| | `-NoThrowAttr 0x1eea8d8 <col:13> Implicit
+| |-FunctionDecl 0x1eea9a8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:13:1 __tanh 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1eea920 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:76:31> col:31 __x 'double'
+| |-FunctionDecl 0x1eeacc0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:81:22 sincos 'void (double, double *, double *) throw()' extern
+| | |-ParmVarDecl 0x1eeaa68 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:82:14> col:14 __x 'double'
+| | |-ParmVarDecl 0x1eeab10 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:82:30> col:30 __sinx 'double *'
+| | `-ParmVarDecl 0x1eeab88 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:82:49> col:49 __cosx 'double *'
+| |-FunctionDecl 0x1ee6568 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:15:1 __sincos 'void (double, double *, double *) throw()' extern
+| | |-ParmVarDecl 0x1eead90 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:82:14> col:14 __x 'double'
+| | |-ParmVarDecl 0x1ee6458 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:82:30> col:30 __sinx 'double *'
+| | `-ParmVarDecl 0x1ee64d0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:82:49> col:49 __cosx 'double *'
+| |-FunctionDecl 0x1ee66c0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:88:13 acosh 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1ee6638 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:88:32> col:32 __x 'double'
+| | `-NoThrowAttr 0x1ee6770 <col:13> Implicit
+| |-FunctionDecl 0x1ee6840 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:16:1 __acosh 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ee67b8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:88:32> col:32 __x 'double'
+| |-FunctionDecl 0x1ee6988 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:90:13 asinh 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1ee6900 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:90:32> col:32 __x 'double'
+| | `-NoThrowAttr 0x1ee6a38 <col:13> Implicit
+| |-FunctionDecl 0x1ee6b08 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:17:1 __asinh 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ee6a80 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:90:32> col:32 __x 'double'
+| |-FunctionDecl 0x1ee6c50 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:92:13 atanh 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1ee6bc8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:92:32> col:32 __x 'double'
+| | `-NoThrowAttr 0x1ee6d00 <col:13> Implicit
+| |-FunctionDecl 0x1ee6dd0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:18:1 __atanh 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ee6d48 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:92:32> col:32 __x 'double'
+| |-FunctionDecl 0x1ee6f18 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:100:17 exp 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1ee6e90 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:100:34> col:34 __x 'double'
+| | `-NoThrowAttr 0x1ee6fc8 <col:17> Implicit
+| |-FunctionDecl 0x1ee7098 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:20:1 __exp 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ee7010 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:100:34> col:34 __x 'double'
+| |-FunctionDecl 0x1ee7310 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:103:13 frexp 'double (double, int *) throw()' extern
+| | |-ParmVarDecl 0x1ee7158 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:103:32> col:32 __x 'double'
+| | |-ParmVarDecl 0x1ee7200 <col:37, col:42> col:42 __exponent 'int *'
+| | `-NoThrowAttr 0x1ee73c8 <col:13> Implicit
+| |-FunctionDecl 0x1ee7af8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:21:1 __frexp 'double (double, int *) throw()' extern
+| | |-ParmVarDecl 0x1ee79f0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:103:32> col:32 __x 'double'
+| | `-ParmVarDecl 0x1ee7a68 <col:37, col:42> col:42 __exponent 'int *'
+| |-FunctionDecl 0x1ee7d40 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:106:13 ldexp 'double (double, int) throw()' extern
+| | |-ParmVarDecl 0x1ee7bc0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:106:32> col:32 __x 'double'
+| | |-ParmVarDecl 0x1ee7c30 <col:37, col:41> col:41 __exponent 'int'
+| | `-NoThrowAttr 0x1ee7df8 <col:13> Implicit
+| |-FunctionDecl 0x1ee7f40 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:22:1 __ldexp 'double (double, int) throw()' extern
+| | |-ParmVarDecl 0x1ee7e40 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:106:32> col:32 __x 'double'
+| | `-ParmVarDecl 0x1ee7eb0 <col:37, col:41> col:41 __exponent 'int'
+| |-FunctionDecl 0x1ee8090 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:109:17 log 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1ee8008 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:109:34> col:34 __x 'double'
+| | `-NoThrowAttr 0x1ee8140 <col:17> Implicit
+| |-FunctionDecl 0x1ee8210 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:24:1 __log 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ee8188 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:109:34> col:34 __x 'double'
+| |-FunctionDecl 0x1ee8358 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:112:13 log10 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1ee82d0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:112:32> col:32 __x 'double'
+| | `-NoThrowAttr 0x1ee8408 <col:13> Implicit
+| |-FunctionDecl 0x1ee84d8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:25:1 __log10 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ee8450 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:112:32> col:32 __x 'double'
+| |-FunctionDecl 0x1ee8720 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:115:13 modf 'double (double, double *) throw()' extern
+| | |-ParmVarDecl 0x1ee8598 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:115:31> col:31 __x 'double'
+| | |-ParmVarDecl 0x1ee8610 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:115:47> col:47 __iptr 'double *'
+| | `-NoThrowAttr 0x1ee87d8 <col:13> Implicit
+| |-FunctionDecl 0x1ee8948 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:285:63> <scratch space>:26:1 __modf 'double (double, double *) throw()' extern
+| | |-ParmVarDecl 0x1ee8820 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:115:31> col:31 __x 'double'
+| | |-ParmVarDecl 0x1ee8898 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:115:47> col:47 __iptr 'double *'
+| | `-NonNullAttr 0x1ef1e20 </usr/include/x86_64-linux-gnu/sys/cdefs.h:285:44, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:115:69> 1
+| |-FunctionDecl 0x1ef1f08 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:120:13 exp10 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ef1e80 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:120:32> col:32 __x 'double'
+| |-FunctionDecl 0x1ef2050 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:27:1 __exp10 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1ef1fc8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:120:32> col:32 __x 'double'
+| | `-NoThrowAttr 0x1ef2100 <<scratch space>:27:1> Implicit
+| |-FunctionDecl 0x1ef21d0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:122:13 pow10 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ef2148 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:122:32> col:32 __x 'double'
+| |-FunctionDecl 0x1ef2318 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:28:1 __pow10 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ef2290 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:122:32> col:32 __x 'double'
+| |-FunctionDecl 0x1ef2460 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:128:13 expm1 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1ef23d8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:128:32> col:32 __x 'double'
+| | `-NoThrowAttr 0x1ef2510 <col:13> Implicit
+| |-FunctionDecl 0x1ef25e0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:29:1 __expm1 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ef2558 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:128:32> col:32 __x 'double'
+| |-FunctionDecl 0x1ef2728 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:131:13 log1p 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1ef26a0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:131:32> col:32 __x 'double'
+| | `-NoThrowAttr 0x1ef27d8 <col:13> Implicit
+| |-FunctionDecl 0x1ef28a8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:30:1 __log1p 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ef2820 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:131:32> col:32 __x 'double'
+| |-FunctionDecl 0x1ef29f0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:134:13 logb 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1ef2968 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:134:31> col:31 __x 'double'
+| | `-NoThrowAttr 0x1ef2aa0 <col:13> Implicit
+| |-FunctionDecl 0x1ef2b70 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:31:1 __logb 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ef2ae8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:134:31> col:31 __x 'double'
+| |-FunctionDecl 0x1ef2cb8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:141:13 exp2 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1ef2c30 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:141:31> col:31 __x 'double'
+| | `-NoThrowAttr 0x1ef2d68 <col:13> Implicit
+| |-FunctionDecl 0x1eebe58 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:32:1 __exp2 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ef2db0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:141:31> col:31 __x 'double'
+| |-FunctionDecl 0x1eebfa0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:144:13 log2 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1eebf18 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:144:31> col:31 __x 'double'
+| | `-NoThrowAttr 0x1eec050 <col:13> Implicit
+| |-FunctionDecl 0x1eec120 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:33:1 __log2 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1eec098 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:144:31> col:31 __x 'double'
+| |-FunctionDecl 0x1eec2e0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:153:17 pow 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1eec1e0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:153:34> col:34 __x 'double'
+| | |-ParmVarDecl 0x1eec250 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:153:49> col:49 __y 'double'
+| | `-NoThrowAttr 0x1eec398 <col:17> Implicit
+| |-FunctionDecl 0x1eec4e0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:35:1 __pow 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1eec3e0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:153:34> col:34 __x 'double'
+| | `-ParmVarDecl 0x1eec450 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:153:49> col:49 __y 'double'
+| |-FunctionDecl 0x1eec630 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:156:13 used sqrt 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1eec5a8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:156:31> col:31 __x 'double'
+| | `-NoThrowAttr 0x1eec6e0 <col:13> Implicit
+| |-FunctionDecl 0x1eec7b0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:36:1 __sqrt 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1eec728 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:156:31> col:31 __x 'double'
+| |-FunctionDecl 0x1eec970 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:162:13 hypot 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1eec870 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:162:32> col:32 __x 'double'
+| | |-ParmVarDecl 0x1eec8e0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:162:47> col:47 __y 'double'
+| | `-NoThrowAttr 0x1eeca28 <col:13> Implicit
+| |-FunctionDecl 0x1eecb70 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:37:1 __hypot 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1eeca70 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:162:32> col:32 __x 'double'
+| | `-ParmVarDecl 0x1eecae0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:162:47> col:47 __y 'double'
+| |-FunctionDecl 0x1eeccc0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:169:13 cbrt 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1eecc38 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:169:31> col:31 __x 'double'
+| | `-NoThrowAttr 0x1eecd70 <col:13> Implicit
+| |-FunctionDecl 0x1eece68 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:38:1 __cbrt 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1eecdb8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:169:31> col:31 __x 'double'
+| |-FunctionDecl 0x1eecfb0 </usr/include/math.h:76:3, line:73:66> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:178:14 ceil 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1eecf28 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:178:32> col:32 __x 'double'
+| | |-ConstAttr 0x1eed060 <col:39>
+| | `-NoThrowAttr 0x1eed098 <col:14> Implicit
+| |-FunctionDecl 0x1eed140 </usr/include/math.h:76:3, line:74:79> <scratch space>:39:1 __ceil 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1eed0b8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:178:32> col:32 __x 'double'
+| | `-ConstAttr 0x1eed1f0 <col:39>
+| |-FunctionDecl 0x1eed2c0 </usr/include/math.h:76:3, line:73:66> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:181:14 fabs 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1eed238 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:181:32> col:32 __x 'double'
+| | |-ConstAttr 0x1eed370 <col:39>
+| | `-NoThrowAttr 0x1eed3a8 <col:14> Implicit
+| |-FunctionDecl 0x1eed450 </usr/include/math.h:76:3, line:74:79> <scratch space>:40:1 __fabs 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1eed3c8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:181:32> col:32 __x 'double'
+| | `-ConstAttr 0x1eed500 <col:39>
+| |-FunctionDecl 0x1eed5d0 </usr/include/math.h:76:3, line:73:66> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:184:14 floor 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1eed548 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:184:33> col:33 __x 'double'
+| | |-ConstAttr 0x1eed680 <col:40>
+| | `-NoThrowAttr 0x1eed6b8 <col:14> Implicit
+| |-FunctionDecl 0x1eed760 </usr/include/math.h:76:3, line:74:79> <scratch space>:41:1 __floor 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1eed6d8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:184:33> col:33 __x 'double'
+| | `-ConstAttr 0x1eed810 <col:40>
+| |-FunctionDecl 0x1eed958 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:187:13 fmod 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1eed858 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:187:31> col:31 __x 'double'
+| | |-ParmVarDecl 0x1eed8c8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:187:46> col:46 __y 'double'
+| | `-NoThrowAttr 0x1eeda10 <col:13> Implicit
+| |-FunctionDecl 0x1eedb58 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:42:1 __fmod 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1eeda58 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:187:31> col:31 __x 'double'
+| | `-ParmVarDecl 0x1eedac8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:187:46> col:46 __y 'double'
+| |-FunctionDecl 0x1eedd20 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:192:76> col:19 __isinf 'int (double) throw()' extern
+| | |-ParmVarDecl 0x1eedc20 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:192:40> col:40 __value 'double'
+| | `-ConstAttr 0x1eeddd0 <col:66>
+| |-FunctionDecl 0x1eeded8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:195:77> col:19 __finite 'int (double) throw()' extern
+| | |-ParmVarDecl 0x1eede50 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:195:41> col:41 __value 'double'
+| | `-ConstAttr 0x1eedf88 <col:67>
+| |-FunctionDecl 0x1eee058 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:204:74> col:19 isinf 'int (double) throw()' extern
+| | |-ParmVarDecl 0x1eedfd0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:204:38> col:38 __value 'double'
+| | `-ConstAttr 0x1eee108 <col:64>
+| |-FunctionDecl 0x1eee1d8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:208:75> col:19 finite 'int (double) throw()' extern
+| | |-ParmVarDecl 0x1eee150 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:208:39> col:39 __value 'double'
+| | `-ConstAttr 0x1eee288 <col:65>
+| |-FunctionDecl 0x1eee3d0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:211:13 drem 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1eee2d0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:211:31> col:31 __x 'double'
+| | `-ParmVarDecl 0x1eee340 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:211:46> col:46 __y 'double'
+| |-FunctionDecl 0x1eee598 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:43:1 __drem 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1eee498 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:211:31> col:31 __x 'double'
+| | `-ParmVarDecl 0x1eee508 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:211:46> col:46 __y 'double'
+| |-FunctionDecl 0x1eee6e8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:215:13 significand 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1eee660 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:215:38> col:38 __x 'double'
+| |-FunctionDecl 0x1eee830 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:44:1 __significand 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1eee7a8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:215:38> col:38 __x 'double'
+| |-FunctionDecl 0x1eee9f0 </usr/include/math.h:76:3, line:73:66> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:221:14 copysign 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1eee8f0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:221:36> col:36 __x 'double'
+| | |-ParmVarDecl 0x1eee960 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:221:51> col:51 __y 'double'
+| | |-ConstAttr 0x1eeeaa8 <col:58>
+| | `-NoThrowAttr 0x1eeeae0 <col:14> Implicit
+| |-FunctionDecl 0x1eeec00 </usr/include/math.h:76:3, line:74:79> <scratch space>:45:1 __copysign 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1eeeb00 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:221:36> col:36 __x 'double'
+| | |-ParmVarDecl 0x1eeeb70 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:221:51> col:51 __y 'double'
+| | `-ConstAttr 0x1eeecb8 <col:58>
+| |-FunctionDecl 0x1eef590 </usr/include/math.h:76:3, line:73:66> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:228:14 nan 'double (const char *) throw()' extern
+| | |-ParmVarDecl 0x1eeed28 <col:21, col:33> col:33 __tagb 'const char *'
+| | |-ConstAttr 0x1eef640 <col:43>
+| | `-NoThrowAttr 0x1eef678 <col:14> Implicit
+| |-FunctionDecl 0x1eef720 </usr/include/math.h:76:3, line:74:79> <scratch space>:46:1 __nan 'double (const char *) throw()' extern
+| | |-ParmVarDecl 0x1eef698 </usr/include/x86_64-linux-gnu/bits/mathcalls.h:228:21, col:33> col:33 __tagb 'const char *'
+| | `-ConstAttr 0x1eef7d0 <col:43>
+| |-FunctionDecl 0x1eef8a0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:234:76> col:19 __isnan 'int (double) throw()' extern
+| | |-ParmVarDecl 0x1eef818 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:234:40> col:40 __value 'double'
+| | `-ConstAttr 0x1eef950 <col:66>
+| |-FunctionDecl 0x1eefa20 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:241:74> col:19 isnan 'int (double) throw()' extern
+| | |-ParmVarDecl 0x1eef998 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:241:38> col:38 __value 'double'
+| | `-ConstAttr 0x1eefad0 <col:64>
+| |-FunctionDecl 0x1eefba0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:247:13 j0 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1eefb18 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:247:28 'double'
+| |-FunctionDecl 0x1eefce8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:47:1 __j0 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1eefc60 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:247:28 'double'
+| |-FunctionDecl 0x1eefe30 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:248:13 j1 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1eefda8 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:248:28 'double'
+| |-FunctionDecl 0x1eeff78 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:48:1 __j1 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1eefef0 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:248:28 'double'
+| |-FunctionDecl 0x1ef01c0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:249:13 jn 'double (int, double) throw()' extern
+| | |-ParmVarDecl 0x1ef0038 <col:19> col:22 'int'
+| | `-ParmVarDecl 0x1ef00a8 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:249:33 'double'
+| |-FunctionDecl 0x1ef0388 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:49:1 __jn 'double (int, double) throw()' extern
+| | |-ParmVarDecl 0x1ef0288 </usr/include/x86_64-linux-gnu/bits/mathcalls.h:249:19> col:22 'int'
+| | `-ParmVarDecl 0x1ef02f8 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:249:33 'double'
+| |-FunctionDecl 0x1ef04d8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:250:13 y0 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ef0450 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:250:28 'double'
+| |-FunctionDecl 0x1f00ec8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:50:1 __y0 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1f00e40 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:250:28 'double'
+| |-FunctionDecl 0x1f01010 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:251:13 y1 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1f00f88 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:251:28 'double'
+| |-FunctionDecl 0x1f01158 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:51:1 __y1 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1f010d0 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:251:28 'double'
+| |-FunctionDecl 0x1f01318 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:252:13 yn 'double (int, double) throw()' extern
+| | |-ParmVarDecl 0x1f01218 <col:19> col:22 'int'
+| | `-ParmVarDecl 0x1f01288 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:252:33 'double'
+| |-FunctionDecl 0x1f014e0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:52:1 __yn 'double (int, double) throw()' extern
+| | |-ParmVarDecl 0x1f013e0 </usr/include/x86_64-linux-gnu/bits/mathcalls.h:252:19> col:22 'int'
+| | `-ParmVarDecl 0x1f01450 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:252:33 'double'
+| |-FunctionDecl 0x1f01630 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:259:13 erf 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1f015a8 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:259:29 'double'
+| | `-NoThrowAttr 0x1f016e0 <col:13> Implicit
+| |-FunctionDecl 0x1f017b0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:53:1 __erf 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1f01728 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:259:29 'double'
+| |-FunctionDecl 0x1f018f8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:260:13 erfc 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1f01870 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:260:30 'double'
+| | `-NoThrowAttr 0x1f019a8 <col:13> Implicit
+| |-FunctionDecl 0x1f01a78 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:54:1 __erfc 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1f019f0 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:260:30 'double'
+| |-FunctionDecl 0x1f01bc0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:261:13 lgamma 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1f01b38 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:261:32 'double'
+| | `-NoThrowAttr 0x1f01c70 <col:13> Implicit
+| |-FunctionDecl 0x1f01d40 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:55:1 __lgamma 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1f01cb8 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:261:32 'double'
+| |-FunctionDecl 0x1ef2ea8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:268:13 tgamma 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1ef2e20 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:268:32 'double'
+| | `-NoThrowAttr 0x1ef2f58 <col:13> Implicit
+| |-FunctionDecl 0x1ef3028 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:56:1 __tgamma 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ef2fa0 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:268:32 'double'
+| |-FunctionDecl 0x1ef3170 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:274:13 gamma 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ef30e8 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:274:31 'double'
+| |-FunctionDecl 0x1ef32b8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:57:1 __gamma 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ef3230 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:274:31 'double'
+| |-FunctionDecl 0x1ef3480 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:58:1 lgamma_r 'double (double, int *) throw()' extern
+| | |-ParmVarDecl 0x1ef3378 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:281:34 'double'
+| | `-ParmVarDecl 0x1ef33f0 <col:36, col:41> col:41 __signgamp 'int *'
+| |-FunctionDecl 0x1ef3650 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:60:1 __lgamma_r 'double (double, int *) throw()' extern
+| | |-ParmVarDecl 0x1ef3548 </usr/include/math.h:78:20> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:281:34 'double'
+| | `-ParmVarDecl 0x1ef35c0 <col:36, col:41> col:41 __signgamp 'int *'
+| |-FunctionDecl 0x1ef37a0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:289:13 rint 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1ef3718 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:289:31> col:31 __x 'double'
+| | |-NoThrowAttr 0x1ef3850 <col:13> Implicit
+| | `-ConstAttr 0x1ef3888 <col:13> Implicit
+| |-FunctionDecl 0x1ef3930 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:61:1 __rint 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ef38a8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:289:31> col:31 __x 'double'
+| |-FunctionDecl 0x1ef3af0 </usr/include/math.h:76:3, line:73:66> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:292:14 nextafter 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1ef39f0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:292:37> col:37 __x 'double'
+| | |-ParmVarDecl 0x1ef3a60 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:292:52> col:52 __y 'double'
+| | |-ConstAttr 0x1ef3ba8 <col:59>
+| | `-NoThrowAttr 0x1ef3be0 <col:14> Implicit
+| |-FunctionDecl 0x1ef3d00 </usr/include/math.h:76:3, line:74:79> <scratch space>:62:1 __nextafter 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1ef3c00 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:292:37> col:37 __x 'double'
+| | |-ParmVarDecl 0x1ef3c70 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:292:52> col:52 __y 'double'
+| | `-ConstAttr 0x1ef3db8 <col:59>
+| |-FunctionDecl 0x1ef3fb0 </usr/include/math.h:76:3, line:73:66> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:294:14 nexttoward 'double (double, long double) throw()' extern
+| | |-ParmVarDecl 0x1ef3e30 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:294:38> col:38 __x 'double'
+| | |-ParmVarDecl 0x1ef3ea0 <col:43, col:55> col:55 __y 'long double'
+| | |-ConstAttr 0x1ef4068 <col:62>
+| | `-NoThrowAttr 0x1ef40a0 <col:14> Implicit
+| |-FunctionDecl 0x1ef41c0 </usr/include/math.h:76:3, line:74:79> <scratch space>:63:1 __nexttoward 'double (double, long double) throw()' extern
+| | |-ParmVarDecl 0x1ef40c0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:294:38> col:38 __x 'double'
+| | |-ParmVarDecl 0x1ef4130 <col:43, col:55> col:55 __y 'long double'
+| | `-ConstAttr 0x1ef4278 <col:62>
+| |-FunctionDecl 0x1ef43c0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:298:13 remainder 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1ef42c0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:298:36> col:36 __x 'double'
+| | |-ParmVarDecl 0x1ef4330 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:298:51> col:51 __y 'double'
+| | `-NoThrowAttr 0x1ef4478 <col:13> Implicit
+| |-FunctionDecl 0x1ef45c0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:64:1 __remainder 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1ef44c0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:298:36> col:36 __x 'double'
+| | `-ParmVarDecl 0x1ef4530 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:298:51> col:51 __y 'double'
+| |-FunctionDecl 0x1ef4788 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:302:13 scalbn 'double (double, int) throw()' extern
+| | |-ParmVarDecl 0x1ef4688 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:302:33> col:33 __x 'double'
+| | |-ParmVarDecl 0x1ef46f8 <col:38, col:42> col:42 __n 'int'
+| | `-NoThrowAttr 0x1ef4840 <col:13> Implicit
+| |-FunctionDecl 0x1ef4988 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:65:1 __scalbn 'double (double, int) throw()' extern
+| | |-ParmVarDecl 0x1ef4888 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:302:33> col:33 __x 'double'
+| | `-ParmVarDecl 0x1ef48f8 <col:38, col:42> col:42 __n 'int'
+| |-FunctionDecl 0x1ef4ad8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:306:17 ilogb 'int (double) throw()' extern
+| | |-ParmVarDecl 0x1ef4a50 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:306:36> col:36 __x 'double'
+| | `-NoThrowAttr 0x1ef4b88 <col:17> Implicit
+| |-FunctionDecl 0x1ef4c58 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:66:1 __ilogb 'int (double) throw()' extern
+| | `-ParmVarDecl 0x1ef4bd0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:306:36> col:36 __x 'double'
+| |-FunctionDecl 0x1ef5440 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:311:13 scalbln 'double (double, long) throw()' extern
+| | |-ParmVarDecl 0x1ef4d18 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:311:34> col:34 __x 'double'
+| | |-ParmVarDecl 0x1ef4d88 <col:39, col:48> col:48 __n 'long'
+| | `-NoThrowAttr 0x1ef54f8 <col:13> Implicit
+| |-FunctionDecl 0x1ef5640 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:67:1 __scalbln 'double (double, long) throw()' extern
+| | |-ParmVarDecl 0x1ef5540 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:311:34> col:34 __x 'double'
+| | `-ParmVarDecl 0x1ef55b0 <col:39, col:48> col:48 __n 'long'
+| |-FunctionDecl 0x1ef5790 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:315:13 nearbyint 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1ef5708 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:315:36> col:36 __x 'double'
+| | |-NoThrowAttr 0x1ef5840 <col:13> Implicit
+| | `-ConstAttr 0x1ef5878 <col:13> Implicit
+| |-FunctionDecl 0x1ef5920 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:68:1 __nearbyint 'double (double) throw()' extern
+| | `-ParmVarDecl 0x1ef5898 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:315:36> col:36 __x 'double'
+| |-FunctionDecl 0x1ef5a68 </usr/include/math.h:76:3, line:73:66> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:319:14 round 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1ef59e0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:319:33> col:33 __x 'double'
+| | |-ConstAttr 0x1ef5b18 <col:40>
+| | `-NoThrowAttr 0x1ef5b50 <col:14> Implicit
+| |-FunctionDecl 0x1ef5bf8 </usr/include/math.h:76:3, line:74:79> <scratch space>:69:1 __round 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1ef5b70 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:319:33> col:33 __x 'double'
+| | `-ConstAttr 0x1ef5ca8 <col:40>
+| |-FunctionDecl 0x1ef5d78 </usr/include/math.h:76:3, line:73:66> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:323:14 trunc 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1ef5cf0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:323:33> col:33 __x 'double'
+| | |-ConstAttr 0x1ef5e28 <col:40>
+| | `-NoThrowAttr 0x1ef5e60 <col:14> Implicit
+| |-FunctionDecl 0x1ef5f08 </usr/include/math.h:76:3, line:74:79> <scratch space>:70:1 __trunc 'double (double) throw()' extern
+| | |-ParmVarDecl 0x1ef5e80 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:323:33> col:33 __x 'double'
+| | `-ConstAttr 0x1ef5fb8 <col:40>
+| |-FunctionDecl 0x1ef6220 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:328:13 remquo 'double (double, double, int *) throw()' extern
+| | |-ParmVarDecl 0x1ef6000 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:328:33> col:33 __x 'double'
+| | |-ParmVarDecl 0x1ef6070 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:328:48> col:48 __y 'double'
+| | `-ParmVarDecl 0x1ef60e8 <col:53, col:58> col:58 __quo 'int *'
+| |-FunctionDecl 0x1ef6950 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:71:1 __remquo 'double (double, double, int *) throw()' extern
+| | |-ParmVarDecl 0x1ef62f0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:328:33> col:33 __x 'double'
+| | |-ParmVarDecl 0x1ef6360 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:328:48> col:48 __y 'double'
+| | `-ParmVarDecl 0x1ef68b8 <col:53, col:58> col:58 __quo 'int *'
+| |-FunctionDecl 0x1ef6b20 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:335:22 lrint 'long (double) throw()' extern
+| | |-ParmVarDecl 0x1ef6a20 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:335:41> col:41 __x 'double'
+| | `-NoThrowAttr 0x1ef6bd0 <col:22> Implicit
+| |-FunctionDecl 0x1ef6ca0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:72:1 __lrint 'long (double) throw()' extern
+| | `-ParmVarDecl 0x1ef6c18 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:335:41> col:41 __x 'double'
+| |-FunctionDecl 0x1ef6e60 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:337:27 llrint 'long long (double) throw()' extern
+| | |-ParmVarDecl 0x1ef6d60 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:337:47> col:47 __x 'double'
+| | `-NoThrowAttr 0x1ef6f10 <col:27> Implicit
+| |-FunctionDecl 0x1ef6fe0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:73:1 __llrint 'long long (double) throw()' extern
+| | `-ParmVarDecl 0x1ef6f58 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:337:47> col:47 __x 'double'
+| |-FunctionDecl 0x1ef7128 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:341:22 lround 'long (double) throw()' extern
+| | |-ParmVarDecl 0x1ef70a0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:341:42> col:42 __x 'double'
+| | `-NoThrowAttr 0x1ef71d8 <col:22> Implicit
+| |-FunctionDecl 0x1ef72a8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:74:1 __lround 'long (double) throw()' extern
+| | `-ParmVarDecl 0x1ef7220 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:341:42> col:42 __x 'double'
+| |-FunctionDecl 0x1ef73f0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:343:27 llround 'long long (double) throw()' extern
+| | |-ParmVarDecl 0x1ef7368 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:343:48> col:48 __x 'double'
+| | `-NoThrowAttr 0x1ef74a0 <col:27> Implicit
+| |-FunctionDecl 0x1ef7570 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:75:1 __llround 'long long (double) throw()' extern
+| | `-ParmVarDecl 0x1ef74e8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:343:48> col:48 __x 'double'
+| |-FunctionDecl 0x1ef7730 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:347:13 fdim 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1ef7630 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:347:31> col:31 __x 'double'
+| | |-ParmVarDecl 0x1ef76a0 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:347:46> col:46 __y 'double'
+| | `-NoThrowAttr 0x1ef77e8 <col:13> Implicit
+| |-FunctionDecl 0x1ef7a10 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:76:1 __fdim 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1ef7830 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:347:31> col:31 __x 'double'
+| | `-ParmVarDecl 0x1ef7980 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:347:46> col:46 __y 'double'
+| |-FunctionDecl 0x1ef7bd8 </usr/include/math.h:76:3, line:73:66> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:350:14 fmax 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1ef7ad8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:350:32> col:32 __x 'double'
+| | |-ParmVarDecl 0x1ef7b48 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:350:47> col:47 __y 'double'
+| | |-ConstAttr 0x1ef7c90 <col:54>
+| | `-NoThrowAttr 0x1ef7cc8 <col:14> Implicit
+| |-FunctionDecl 0x1ef7de8 </usr/include/math.h:76:3, line:74:79> <scratch space>:77:1 __fmax 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1ef7ce8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:350:32> col:32 __x 'double'
+| | |-ParmVarDecl 0x1ef7d58 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:350:47> col:47 __y 'double'
+| | `-ConstAttr 0x1ef7ea0 <col:54>
+| |-FunctionDecl 0x1ef7fe8 </usr/include/math.h:76:3, line:73:66> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:353:14 fmin 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1ef7ee8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:353:32> col:32 __x 'double'
+| | |-ParmVarDecl 0x1ef7f58 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:353:47> col:47 __y 'double'
+| | |-ConstAttr 0x1ef80a0 <col:54>
+| | `-NoThrowAttr 0x1ef80d8 <col:14> Implicit
+| |-FunctionDecl 0x1ef81f8 </usr/include/math.h:76:3, line:74:79> <scratch space>:78:1 __fmin 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1ef80f8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:353:32> col:32 __x 'double'
+| | |-ParmVarDecl 0x1ef8168 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:353:47> col:47 __y 'double'
+| | `-ConstAttr 0x1ef82b0 <col:54>
+| |-FunctionDecl 0x1ef8380 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:358:32> line:357:20 __fpclassify 'int (double) throw()' extern
+| | |-ParmVarDecl 0x1ef82f8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:357:46> col:46 __value 'double'
+| | `-ConstAttr 0x1ef8430 <line:358:22>
+| |-FunctionDecl 0x1ef8500 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:362:32> line:361:20 __signbit 'int (double) throw()' extern
+| | |-ParmVarDecl 0x1ef8478 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:361:43> col:43 __value 'double'
+| | `-ConstAttr 0x1ef85b0 <line:362:22>
+| |-FunctionDecl 0x1ef8810 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:366:13 fma 'double (double, double, double) throw()' extern
+| | |-ParmVarDecl 0x1ef85f8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:366:30> col:30 __x 'double'
+| | |-ParmVarDecl 0x1ef8668 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:366:45> col:45 __y 'double'
+| | |-ParmVarDecl 0x1ef86d8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:366:60> col:60 __z 'double'
+| | `-NoThrowAttr 0x1ef88d0 <col:13> Implicit
+| |-FunctionDecl 0x1ef8d08 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:79:1 __fma 'double (double, double, double) throw()' extern
+| | |-ParmVarDecl 0x1ef8918 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:366:30> col:30 __x 'double'
+| | |-ParmVarDecl 0x1ef8c00 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:366:45> col:45 __y 'double'
+| | `-ParmVarDecl 0x1ef8c70 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:366:60> col:60 __z 'double'
+| |-FunctionDecl 0x1ef8e60 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:376:32> line:375:20 __issignaling 'int (double) throw()' extern
+| | |-ParmVarDecl 0x1ef8dd8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:375:47> col:47 __value 'double'
+| | `-ConstAttr 0x1ef8f10 <line:376:22>
+| |-FunctionDecl 0x1ef9058 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:383:13 scalb 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1ef8f58 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:383:32> col:32 __x 'double'
+| | `-ParmVarDecl 0x1ef8fc8 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:383:47> col:47 __n 'double'
+| |-FunctionDecl 0x1ef9220 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:80:1 __scalb 'double (double, double) throw()' extern
+| | |-ParmVarDecl 0x1ef9120 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:383:32> col:32 __x 'double'
+| | `-ParmVarDecl 0x1ef9190 </usr/include/math.h:78:20, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:383:47> col:47 __n 'double'
+| |-FunctionDecl 0x1ef93f0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:81:1 acosf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1ef92e8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:54:31> col:31 __x 'float'
+| | `-NoThrowAttr 0x1ef94a0 <<scratch space>:81:1> Implicit
+| |-FunctionDecl 0x1ef9570 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:83:1 __acosf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1ef94e8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:54:31> col:31 __x 'float'
+| |-FunctionDecl 0x1ef96b8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:84:1 asinf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1ef9630 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:56:31> col:31 __x 'float'
+| | `-NoThrowAttr 0x1ef9768 <<scratch space>:84:1> Implicit
+| |-FunctionDecl 0x1ef9838 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:86:1 __asinf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1ef97b0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:56:31> col:31 __x 'float'
+| |-FunctionDecl 0x1ef9980 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:87:1 atanf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1ef98f8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:58:31> col:31 __x 'float'
+| | `-NoThrowAttr 0x1ef9a30 <<scratch space>:87:1> Implicit
+| |-FunctionDecl 0x1ef9b00 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:89:1 __atanf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1ef9a78 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:58:31> col:31 __x 'float'
+| |-FunctionDecl 0x1efad90 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:90:1 atan2f 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1efac10 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:60:32> col:32 __y 'float'
+| | |-ParmVarDecl 0x1efac80 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:60:47> col:47 __x 'float'
+| | `-NoThrowAttr 0x1efae48 <<scratch space>:90:1> Implicit
+| |-FunctionDecl 0x1efaf90 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:92:1 __atan2f 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1efae90 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:60:32> col:32 __y 'float'
+| | `-ParmVarDecl 0x1efaf00 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:60:47> col:47 __x 'float'
+| |-FunctionDecl 0x1efb0e0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:95:1 cosf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1efb058 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:63:34> col:34 __x 'float'
+| | `-NoThrowAttr 0x1efb190 <<scratch space>:95:1> Implicit
+| |-FunctionDecl 0x1efb260 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:97:1 __cosf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1efb1d8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:63:34> col:34 __x 'float'
+| |-FunctionDecl 0x1efb3a8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:100:1 sinf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1efb320 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:65:34> col:34 __x 'float'
+| | `-NoThrowAttr 0x1efb458 <<scratch space>:100:1> Implicit
+| |-FunctionDecl 0x1efb528 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:102:1 __sinf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1efb4a0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:65:34> col:34 __x 'float'
+| |-FunctionDecl 0x1efb670 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:103:1 tanf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1efb5e8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:67:30> col:30 __x 'float'
+| | `-NoThrowAttr 0x1efb720 <<scratch space>:103:1> Implicit
+| |-FunctionDecl 0x1efb7f0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:105:1 __tanf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1efb768 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:67:30> col:30 __x 'float'
+| |-FunctionDecl 0x1efb938 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:106:1 coshf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1efb8b0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:72:31> col:31 __x 'float'
+| | `-NoThrowAttr 0x1efb9e8 <<scratch space>:106:1> Implicit
+| |-FunctionDecl 0x1efbab8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:108:1 __coshf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1efba30 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:72:31> col:31 __x 'float'
+| |-FunctionDecl 0x1efbc20 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:109:1 sinhf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1efbb78 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:74:31> col:31 __x 'float'
+| | `-NoThrowAttr 0x1efbcd0 <<scratch space>:109:1> Implicit
+| |-FunctionDecl 0x1efbda0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:111:1 __sinhf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1efbd18 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:74:31> col:31 __x 'float'
+| |-FunctionDecl 0x1efbee8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:112:1 tanhf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1efbe60 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:76:31> col:31 __x 'float'
+| | `-NoThrowAttr 0x1efbf98 <<scratch space>:112:1> Implicit
+| |-FunctionDecl 0x1efc068 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:114:1 __tanhf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1efbfe0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:76:31> col:31 __x 'float'
+| |-FunctionDecl 0x1efc380 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:117:1 sincosf 'void (float, float *, float *) throw()' extern
+| | |-ParmVarDecl 0x1efc128 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:82:14> col:14 __x 'float'
+| | |-ParmVarDecl 0x1efc1d0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:82:30> col:30 __sinx 'float *'
+| | `-ParmVarDecl 0x1efc248 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:82:49> col:49 __cosx 'float *'
+| |-FunctionDecl 0x1efc5d8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:119:1 __sincosf 'void (float, float *, float *) throw()' extern
+| | |-ParmVarDecl 0x1efc450 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:82:14> col:14 __x 'float'
+| | |-ParmVarDecl 0x1efc4c8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:82:30> col:30 __sinx 'float *'
+| | `-ParmVarDecl 0x1efc540 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:82:49> col:49 __cosx 'float *'
+| |-FunctionDecl 0x1efc730 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:120:1 acoshf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1efc6a8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:88:32> col:32 __x 'float'
+| | `-NoThrowAttr 0x1efc7e0 <<scratch space>:120:1> Implicit
+| |-FunctionDecl 0x1efc8b0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:122:1 __acoshf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1efc828 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:88:32> col:32 __x 'float'
+| |-FunctionDecl 0x1efc9f8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:123:1 asinhf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1efc970 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:90:32> col:32 __x 'float'
+| | `-NoThrowAttr 0x1efcaa8 <<scratch space>:123:1> Implicit
+| |-FunctionDecl 0x1efcb78 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:125:1 __asinhf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1efcaf0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:90:32> col:32 __x 'float'
+| |-FunctionDecl 0x1efd0d0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:126:1 atanhf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1efd048 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:92:32> col:32 __x 'float'
+| | `-NoThrowAttr 0x1efd180 <<scratch space>:126:1> Implicit
+| |-FunctionDecl 0x1efd250 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:128:1 __atanhf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1efd1c8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:92:32> col:32 __x 'float'
+| |-FunctionDecl 0x1efd398 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:131:1 expf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1efd310 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:100:34> col:34 __x 'float'
+| | `-NoThrowAttr 0x1efd448 <<scratch space>:131:1> Implicit
+| |-FunctionDecl 0x1efd518 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:133:1 __expf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1efd490 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:100:34> col:34 __x 'float'
+| |-FunctionDecl 0x1efd760 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:134:1 frexpf 'float (float, int *) throw()' extern
+| | |-ParmVarDecl 0x1efd5d8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:103:32> col:32 __x 'float'
+| | |-ParmVarDecl 0x1efd650 <col:37, col:42> col:42 __exponent 'int *'
+| | `-NoThrowAttr 0x1efd818 <<scratch space>:134:1> Implicit
+| |-FunctionDecl 0x1efd968 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:136:1 __frexpf 'float (float, int *) throw()' extern
+| | |-ParmVarDecl 0x1efd860 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:103:32> col:32 __x 'float'
+| | `-ParmVarDecl 0x1efd8d8 <col:37, col:42> col:42 __exponent 'int *'
+| |-FunctionDecl 0x1efdbb0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:137:1 ldexpf 'float (float, int) throw()' extern
+| | |-ParmVarDecl 0x1efda30 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:106:32> col:32 __x 'float'
+| | |-ParmVarDecl 0x1efdaa0 <col:37, col:41> col:41 __exponent 'int'
+| | `-NoThrowAttr 0x1efdc68 <<scratch space>:137:1> Implicit
+| |-FunctionDecl 0x1efddb0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:139:1 __ldexpf 'float (float, int) throw()' extern
+| | |-ParmVarDecl 0x1efdcb0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:106:32> col:32 __x 'float'
+| | `-ParmVarDecl 0x1efdd20 <col:37, col:41> col:41 __exponent 'int'
+| |-FunctionDecl 0x1efdf00 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:142:1 logf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1efde78 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:109:34> col:34 __x 'float'
+| | `-NoThrowAttr 0x1efdfb0 <<scratch space>:142:1> Implicit
+| |-FunctionDecl 0x1effea8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:144:1 __logf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1effe20 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:109:34> col:34 __x 'float'
+| |-FunctionDecl 0x1effff0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:145:1 log10f 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1efff68 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:112:32> col:32 __x 'float'
+| | `-NoThrowAttr 0x1f000a0 <<scratch space>:145:1> Implicit
+| |-FunctionDecl 0x1f00170 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:147:1 __log10f 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f000e8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:112:32> col:32 __x 'float'
+| |-FunctionDecl 0x1f003c0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:148:1 modff 'float (float, float *) throw()' extern
+| | |-ParmVarDecl 0x1f00230 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:115:31> col:31 __x 'float'
+| | |-ParmVarDecl 0x1f002a8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:115:47> col:47 __iptr 'float *'
+| | `-NoThrowAttr 0x1f00478 <<scratch space>:148:1> Implicit
+| |-FunctionDecl 0x1f005e8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:285:63> <scratch space>:150:1 __modff 'float (float, float *) throw()' extern
+| | |-ParmVarDecl 0x1f004c0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:115:31> col:31 __x 'float'
+| | |-ParmVarDecl 0x1f00538 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:115:47> col:47 __iptr 'float *'
+| | `-NonNullAttr 0x1f006a0 </usr/include/x86_64-linux-gnu/sys/cdefs.h:285:44, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:115:69> 1
+| |-FunctionDecl 0x1f00788 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:151:1 exp10f 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f00700 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:120:32> col:32 __x 'float'
+| |-FunctionDecl 0x1f008d0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:153:1 __exp10f 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f00848 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:120:32> col:32 __x 'float'
+| | `-NoThrowAttr 0x1f00980 <<scratch space>:153:1> Implicit
+| |-FunctionDecl 0x1f00a50 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:154:1 pow10f 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f009c8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:122:32> col:32 __x 'float'
+| |-FunctionDecl 0x1f00b98 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:156:1 __pow10f 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f00b10 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:122:32> col:32 __x 'float'
+| |-FunctionDecl 0x1f00ce0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:157:1 expm1f 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f00c58 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:128:32> col:32 __x 'float'
+| | `-NoThrowAttr 0x1f00d90 <<scratch space>:157:1> Implicit
+| |-FunctionDecl 0x1f01ec8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:159:1 __expm1f 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f01e40 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:128:32> col:32 __x 'float'
+| |-FunctionDecl 0x1f02010 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:160:1 log1pf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f01f88 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:131:32> col:32 __x 'float'
+| | `-NoThrowAttr 0x1f020c0 <<scratch space>:160:1> Implicit
+| |-FunctionDecl 0x1f02190 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:162:1 __log1pf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f02108 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:131:32> col:32 __x 'float'
+| |-FunctionDecl 0x1f022d8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:163:1 logbf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f02250 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:134:31> col:31 __x 'float'
+| | `-NoThrowAttr 0x1f02388 <<scratch space>:163:1> Implicit
+| |-FunctionDecl 0x1f02458 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:165:1 __logbf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f023d0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:134:31> col:31 __x 'float'
+| |-FunctionDecl 0x1f025a0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:166:1 exp2f 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f02518 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:141:31> col:31 __x 'float'
+| | `-NoThrowAttr 0x1f02650 <<scratch space>:166:1> Implicit
+| |-FunctionDecl 0x1f02720 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:168:1 __exp2f 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f02698 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:141:31> col:31 __x 'float'
+| |-FunctionDecl 0x1f02868 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:169:1 log2f 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f027e0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:144:31> col:31 __x 'float'
+| | `-NoThrowAttr 0x1f02918 <<scratch space>:169:1> Implicit
+| |-FunctionDecl 0x1f029e8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:171:1 __log2f 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f02960 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:144:31> col:31 __x 'float'
+| |-FunctionDecl 0x1f02ba8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:174:1 powf 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1f02aa8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:153:34> col:34 __x 'float'
+| | |-ParmVarDecl 0x1f02b18 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:153:49> col:49 __y 'float'
+| | `-NoThrowAttr 0x1f02c60 <<scratch space>:174:1> Implicit
+| |-FunctionDecl 0x1f03e60 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:176:1 __powf 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1f02ca8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:153:34> col:34 __x 'float'
+| | `-ParmVarDecl 0x1f02d18 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:153:49> col:49 __y 'float'
+| |-FunctionDecl 0x1f03fb0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:177:1 sqrtf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f03f28 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:156:31> col:31 __x 'float'
+| | `-NoThrowAttr 0x1f04060 <<scratch space>:177:1> Implicit
+| |-FunctionDecl 0x1f04130 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:179:1 __sqrtf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f040a8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:156:31> col:31 __x 'float'
+| |-FunctionDecl 0x1f042f0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:180:1 hypotf 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1f041f0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:162:32> col:32 __x 'float'
+| | |-ParmVarDecl 0x1f04260 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:162:47> col:47 __y 'float'
+| | `-NoThrowAttr 0x1f043a8 <<scratch space>:180:1> Implicit
+| |-FunctionDecl 0x1f044f0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:182:1 __hypotf 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1f043f0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:162:32> col:32 __x 'float'
+| | `-ParmVarDecl 0x1f04460 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:162:47> col:47 __y 'float'
+| |-FunctionDecl 0x1f04640 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:183:1 cbrtf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f045b8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:169:31> col:31 __x 'float'
+| | `-NoThrowAttr 0x1f046f0 <<scratch space>:183:1> Implicit
+| |-FunctionDecl 0x1f047c0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:185:1 __cbrtf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f04738 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:169:31> col:31 __x 'float'
+| |-FunctionDecl 0x1f04908 </usr/include/math.h:76:3, line:73:66> <scratch space>:186:1 ceilf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f04880 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:178:32> col:32 __x 'float'
+| | |-ConstAttr 0x1f049b8 <col:39>
+| | `-NoThrowAttr 0x1f049f0 <<scratch space>:186:1> Implicit
+| |-FunctionDecl 0x1f04a98 </usr/include/math.h:76:3, line:74:79> <scratch space>:188:1 __ceilf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f04a10 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:178:32> col:32 __x 'float'
+| | `-ConstAttr 0x1f04b48 <col:39>
+| |-FunctionDecl 0x1f04c18 </usr/include/math.h:76:3, line:73:66> <scratch space>:189:1 fabsf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f04b90 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:181:32> col:32 __x 'float'
+| | |-ConstAttr 0x1f04cc8 <col:39>
+| | `-NoThrowAttr 0x1f04d00 <<scratch space>:189:1> Implicit
+| |-FunctionDecl 0x1f04da8 </usr/include/math.h:76:3, line:74:79> <scratch space>:191:1 __fabsf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f04d20 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:181:32> col:32 __x 'float'
+| | `-ConstAttr 0x1f04e70 <col:39>
+| |-FunctionDecl 0x1f04f40 </usr/include/math.h:76:3, line:73:66> <scratch space>:192:1 floorf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f04eb8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:184:33> col:33 __x 'float'
+| | |-ConstAttr 0x1f04ff0 <col:40>
+| | `-NoThrowAttr 0x1f05028 <<scratch space>:192:1> Implicit
+| |-FunctionDecl 0x1f050d0 </usr/include/math.h:76:3, line:74:79> <scratch space>:194:1 __floorf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f05048 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:184:33> col:33 __x 'float'
+| | `-ConstAttr 0x1f05180 <col:40>
+| |-FunctionDecl 0x1f052c8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:195:1 fmodf 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1f051c8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:187:31> col:31 __x 'float'
+| | |-ParmVarDecl 0x1f05238 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:187:46> col:46 __y 'float'
+| | `-NoThrowAttr 0x1f05380 <<scratch space>:195:1> Implicit
+| |-FunctionDecl 0x1f054c8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:197:1 __fmodf 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1f053c8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:187:31> col:31 __x 'float'
+| | `-ParmVarDecl 0x1f05438 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:187:46> col:46 __y 'float'
+| |-FunctionDecl 0x1f05690 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:192:76> <scratch space>:198:1 __isinff 'int (float) throw()' extern
+| | |-ParmVarDecl 0x1f05590 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:192:40> col:40 __value 'float'
+| | `-ConstAttr 0x1f05740 <col:66>
+| |-FunctionDecl 0x1f05810 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:195:77> <scratch space>:199:1 __finitef 'int (float) throw()' extern
+| | |-ParmVarDecl 0x1f05788 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:195:41> col:41 __value 'float'
+| | `-ConstAttr 0x1f058c0 <col:67>
+| |-FunctionDecl 0x1f05990 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:204:74> <scratch space>:200:1 isinff 'int (float) throw()' extern
+| | |-ParmVarDecl 0x1f05908 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:204:38> col:38 __value 'float'
+| | `-ConstAttr 0x1f05a40 <col:64>
+| |-FunctionDecl 0x1f05b10 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:208:75> <scratch space>:201:1 finitef 'int (float) throw()' extern
+| | |-ParmVarDecl 0x1f05a88 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:208:39> col:39 __value 'float'
+| | `-ConstAttr 0x1f05bc0 <col:65>
+| |-FunctionDecl 0x1f05d08 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:202:1 dremf 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1f05c08 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:211:31> col:31 __x 'float'
+| | `-ParmVarDecl 0x1f05c78 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:211:46> col:46 __y 'float'
+| |-FunctionDecl 0x1f05f10 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:204:1 __dremf 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1f05dd0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:211:31> col:31 __x 'float'
+| | `-ParmVarDecl 0x1f05e80 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:211:46> col:46 __y 'float'
+| |-FunctionDecl 0x1f06060 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:205:1 significandf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f05fd8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:215:38> col:38 __x 'float'
+| |-FunctionDecl 0x1f061a8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:207:1 __significandf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f06120 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:215:38> col:38 __x 'float'
+| |-FunctionDecl 0x1f06368 </usr/include/math.h:76:3, line:73:66> <scratch space>:208:1 copysignf 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1f06268 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:221:36> col:36 __x 'float'
+| | |-ParmVarDecl 0x1f062d8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:221:51> col:51 __y 'float'
+| | |-ConstAttr 0x1f06420 <col:58>
+| | `-NoThrowAttr 0x1f06458 <<scratch space>:208:1> Implicit
+| |-FunctionDecl 0x1f06578 </usr/include/math.h:76:3, line:74:79> <scratch space>:210:1 __copysignf 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1f06478 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:221:36> col:36 __x 'float'
+| | |-ParmVarDecl 0x1f064e8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:221:51> col:51 __y 'float'
+| | `-ConstAttr 0x1f06630 <col:58>
+| |-FunctionDecl 0x1f06780 </usr/include/math.h:76:3, line:73:66> <scratch space>:211:1 nanf 'float (const char *) throw()' extern
+| | |-ParmVarDecl 0x1f06678 </usr/include/x86_64-linux-gnu/bits/mathcalls.h:228:21, col:33> col:33 __tagb 'const char *'
+| | |-ConstAttr 0x1f06830 <col:43>
+| | `-NoThrowAttr 0x1f06868 <<scratch space>:211:1> Implicit
+| |-FunctionDecl 0x1f06910 </usr/include/math.h:76:3, line:74:79> <scratch space>:213:1 __nanf 'float (const char *) throw()' extern
+| | |-ParmVarDecl 0x1f06888 </usr/include/x86_64-linux-gnu/bits/mathcalls.h:228:21, col:33> col:33 __tagb 'const char *'
+| | `-ConstAttr 0x1f069c0 <col:43>
+| |-FunctionDecl 0x1f06a90 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:234:76> <scratch space>:214:1 __isnanf 'int (float) throw()' extern
+| | |-ParmVarDecl 0x1f06a08 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:234:40> col:40 __value 'float'
+| | `-ConstAttr 0x1f06b40 <col:66>
+| |-FunctionDecl 0x1f06c10 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:241:74> <scratch space>:215:1 isnanf 'int (float) throw()' extern
+| | |-ParmVarDecl 0x1f06b88 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:241:38> col:38 __value 'float'
+| | `-ConstAttr 0x1f06cc0 <col:64>
+| |-FunctionDecl 0x1f06d90 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:216:1 j0f 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f06d08 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:247:28 'float'
+| |-FunctionDecl 0x1f06f18 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:218:1 __j0f 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f06e90 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:247:28 'float'
+| |-FunctionDecl 0x1f07060 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:219:1 j1f 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f06fd8 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:248:28 'float'
+| |-FunctionDecl 0x1f071a8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:221:1 __j1f 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f07120 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:248:28 'float'
+| |-FunctionDecl 0x1f073f0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:222:1 jnf 'float (int, float) throw()' extern
+| | |-ParmVarDecl 0x1f07268 </usr/include/x86_64-linux-gnu/bits/mathcalls.h:249:19> col:22 'int'
+| | `-ParmVarDecl 0x1f072d8 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:249:33 'float'
+| |-FunctionDecl 0x1f075b8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:224:1 __jnf 'float (int, float) throw()' extern
+| | |-ParmVarDecl 0x1f074b8 </usr/include/x86_64-linux-gnu/bits/mathcalls.h:249:19> col:22 'int'
+| | `-ParmVarDecl 0x1f07528 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:249:33 'float'
+| |-FunctionDecl 0x1f07708 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:225:1 y0f 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f07680 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:250:28 'float'
+| |-FunctionDecl 0x1f07850 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:227:1 __y0f 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f077c8 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:250:28 'float'
+| |-FunctionDecl 0x1f07998 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:228:1 y1f 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f07910 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:251:28 'float'
+| |-FunctionDecl 0x1f07ae0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:230:1 __y1f 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f07a58 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:251:28 'float'
+| |-FunctionDecl 0x1f07ca0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:231:1 ynf 'float (int, float) throw()' extern
+| | |-ParmVarDecl 0x1f07ba0 </usr/include/x86_64-linux-gnu/bits/mathcalls.h:252:19> col:22 'int'
+| | `-ParmVarDecl 0x1f07c10 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:252:33 'float'
+| |-FunctionDecl 0x1f07ea0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:233:1 __ynf 'float (int, float) throw()' extern
+| | |-ParmVarDecl 0x1f07d68 </usr/include/x86_64-linux-gnu/bits/mathcalls.h:252:19> col:22 'int'
+| | `-ParmVarDecl 0x1f07dd8 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:252:33 'float'
+| |-FunctionDecl 0x1f07ff0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:234:1 erff 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f07f68 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:259:29 'float'
+| | `-NoThrowAttr 0x1f080a0 <<scratch space>:234:1> Implicit
+| |-FunctionDecl 0x1f08170 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:236:1 __erff 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f080e8 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:259:29 'float'
+| |-FunctionDecl 0x1f082b8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:237:1 erfcf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f08230 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:260:30 'float'
+| | `-NoThrowAttr 0x1f08368 <<scratch space>:237:1> Implicit
+| |-FunctionDecl 0x1f08438 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:239:1 __erfcf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f083b0 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:260:30 'float'
+| |-FunctionDecl 0x1f08580 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:240:1 lgammaf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f084f8 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:261:32 'float'
+| | `-NoThrowAttr 0x1f08630 <<scratch space>:240:1> Implicit
+| |-FunctionDecl 0x1f08700 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:242:1 __lgammaf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f08678 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:261:32 'float'
+| |-FunctionDecl 0x1f08848 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:243:1 tgammaf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f087c0 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:268:32 'float'
+| | `-NoThrowAttr 0x1f088f8 <<scratch space>:243:1> Implicit
+| |-FunctionDecl 0x1f089c8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:245:1 __tgammaf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f08940 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:268:32 'float'
+| |-FunctionDecl 0x1f08b10 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:246:1 gammaf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f08a88 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:274:31 'float'
+| |-FunctionDecl 0x1f08c58 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:248:1 __gammaf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f08bd0 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:274:31 'float'
+| |-FunctionDecl 0x1f08eb0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:250:1 lgammaf_r 'float (float, int *) throw()' extern
+| | |-ParmVarDecl 0x1f08d18 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:281:34 'float'
+| | `-ParmVarDecl 0x1f08d90 <col:36, col:41> col:41 __signgamp 'int *'
+| |-FunctionDecl 0x1f09080 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:253:1 __lgammaf_r 'float (float, int *) throw()' extern
+| | |-ParmVarDecl 0x1f08f78 </usr/include/math.h:97:21> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:281:34 'float'
+| | `-ParmVarDecl 0x1f08ff0 <col:36, col:41> col:41 __signgamp 'int *'
+| |-FunctionDecl 0x1f091d0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:254:1 rintf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f09148 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:289:31> col:31 __x 'float'
+| | |-NoThrowAttr 0x1f09280 <<scratch space>:254:1> Implicit
+| | `-ConstAttr 0x1f092b8 <col:1> Implicit
+| |-FunctionDecl 0x1f09360 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:256:1 __rintf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f092d8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:289:31> col:31 __x 'float'
+| |-FunctionDecl 0x1f09520 </usr/include/math.h:76:3, line:73:66> <scratch space>:257:1 nextafterf 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1f09420 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:292:37> col:37 __x 'float'
+| | |-ParmVarDecl 0x1f09490 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:292:52> col:52 __y 'float'
+| | |-ConstAttr 0x1f095d8 <col:59>
+| | `-NoThrowAttr 0x1f09610 <<scratch space>:257:1> Implicit
+| |-FunctionDecl 0x1f09730 </usr/include/math.h:76:3, line:74:79> <scratch space>:259:1 __nextafterf 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1f09630 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:292:37> col:37 __x 'float'
+| | |-ParmVarDecl 0x1f096a0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:292:52> col:52 __y 'float'
+| | `-ConstAttr 0x1f097e8 <col:59>
+| |-FunctionDecl 0x1f099b0 </usr/include/math.h:76:3, line:73:66> <scratch space>:260:1 nexttowardf 'float (float, long double) throw()' extern
+| | |-ParmVarDecl 0x1f09830 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:294:38> col:38 __x 'float'
+| | |-ParmVarDecl 0x1f098a0 <col:43, col:55> col:55 __y 'long double'
+| | |-ConstAttr 0x1f09a68 <col:62>
+| | `-NoThrowAttr 0x1f09aa0 <<scratch space>:260:1> Implicit
+| |-FunctionDecl 0x1f09bc0 </usr/include/math.h:76:3, line:74:79> <scratch space>:262:1 __nexttowardf 'float (float, long double) throw()' extern
+| | |-ParmVarDecl 0x1f09ac0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:294:38> col:38 __x 'float'
+| | |-ParmVarDecl 0x1f09b30 <col:43, col:55> col:55 __y 'long double'
+| | `-ConstAttr 0x1f09c78 <col:62>
+| |-FunctionDecl 0x1f09dc0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:263:1 remainderf 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1f09cc0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:298:36> col:36 __x 'float'
+| | |-ParmVarDecl 0x1f09d30 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:298:51> col:51 __y 'float'
+| | `-NoThrowAttr 0x1f09e78 <<scratch space>:263:1> Implicit
+| |-FunctionDecl 0x1f09fd0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:265:1 __remainderf 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1f09ed0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:298:36> col:36 __x 'float'
+| | `-ParmVarDecl 0x1f09f40 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:298:51> col:51 __y 'float'
+| |-FunctionDecl 0x1f0a198 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:266:1 scalbnf 'float (float, int) throw()' extern
+| | |-ParmVarDecl 0x1f0a098 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:302:33> col:33 __x 'float'
+| | |-ParmVarDecl 0x1f0a108 <col:38, col:42> col:42 __n 'int'
+| | `-NoThrowAttr 0x1f0a250 <<scratch space>:266:1> Implicit
+| |-FunctionDecl 0x1f0a398 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:268:1 __scalbnf 'float (float, int) throw()' extern
+| | |-ParmVarDecl 0x1f0a298 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:302:33> col:33 __x 'float'
+| | `-ParmVarDecl 0x1f0a308 <col:38, col:42> col:42 __n 'int'
+| |-FunctionDecl 0x1f0a4e8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:269:1 ilogbf 'int (float) throw()' extern
+| | |-ParmVarDecl 0x1f0a460 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:306:36> col:36 __x 'float'
+| | `-NoThrowAttr 0x1f0a598 <<scratch space>:269:1> Implicit
+| |-FunctionDecl 0x1f0a668 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:271:1 __ilogbf 'int (float) throw()' extern
+| | `-ParmVarDecl 0x1f0a5e0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:306:36> col:36 __x 'float'
+| |-FunctionDecl 0x1f0a8b0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:272:1 scalblnf 'float (float, long) throw()' extern
+| | |-ParmVarDecl 0x1f0a728 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:311:34> col:34 __x 'float'
+| | |-ParmVarDecl 0x1f0a798 <col:39, col:48> col:48 __n 'long'
+| | `-NoThrowAttr 0x1f0a968 <<scratch space>:272:1> Implicit
+| |-FunctionDecl 0x1f0aab0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:274:1 __scalblnf 'float (float, long) throw()' extern
+| | |-ParmVarDecl 0x1f0a9b0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:311:34> col:34 __x 'float'
+| | `-ParmVarDecl 0x1f0aa20 <col:39, col:48> col:48 __n 'long'
+| |-FunctionDecl 0x1f0ac00 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:275:1 nearbyintf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f0ab78 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:315:36> col:36 __x 'float'
+| | |-NoThrowAttr 0x1f0acb0 <<scratch space>:275:1> Implicit
+| | `-ConstAttr 0x1f0ace8 <col:1> Implicit
+| |-FunctionDecl 0x1f0ad90 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:277:1 __nearbyintf 'float (float) throw()' extern
+| | `-ParmVarDecl 0x1f0ad08 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:315:36> col:36 __x 'float'
+| |-FunctionDecl 0x1f0aef8 </usr/include/math.h:76:3, line:73:66> <scratch space>:278:1 roundf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f0ae50 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:319:33> col:33 __x 'float'
+| | |-ConstAttr 0x1f0afa8 <col:40>
+| | `-NoThrowAttr 0x1f0afe0 <<scratch space>:278:1> Implicit
+| |-FunctionDecl 0x1f0b088 </usr/include/math.h:76:3, line:74:79> <scratch space>:280:1 __roundf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f0b000 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:319:33> col:33 __x 'float'
+| | `-ConstAttr 0x1f0b138 <col:40>
+| |-FunctionDecl 0x1f0b208 </usr/include/math.h:76:3, line:73:66> <scratch space>:281:1 truncf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f0b180 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:323:33> col:33 __x 'float'
+| | |-ConstAttr 0x1f0b2b8 <col:40>
+| | `-NoThrowAttr 0x1f0b2f0 <<scratch space>:281:1> Implicit
+| |-FunctionDecl 0x1f0b398 </usr/include/math.h:76:3, line:74:79> <scratch space>:283:1 __truncf 'float (float) throw()' extern
+| | |-ParmVarDecl 0x1f0b310 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:323:33> col:33 __x 'float'
+| | `-ConstAttr 0x1f0b448 <col:40>
+| |-FunctionDecl 0x1f0b6b0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:284:1 remquof 'float (float, float, int *) throw()' extern
+| | |-ParmVarDecl 0x1f0b490 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:328:33> col:33 __x 'float'
+| | |-ParmVarDecl 0x1f0b500 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:328:48> col:48 __y 'float'
+| | `-ParmVarDecl 0x1f0b578 <col:53, col:58> col:58 __quo 'int *'
+| |-FunctionDecl 0x1f0b900 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:286:1 __remquof 'float (float, float, int *) throw()' extern
+| | |-ParmVarDecl 0x1f0b780 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:328:33> col:33 __x 'float'
+| | |-ParmVarDecl 0x1f0b7f0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:328:48> col:48 __y 'float'
+| | `-ParmVarDecl 0x1f0b868 <col:53, col:58> col:58 __quo 'int *'
+| |-FunctionDecl 0x1f0bad0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:287:1 lrintf 'long (float) throw()' extern
+| | |-ParmVarDecl 0x1f0b9d0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:335:41> col:41 __x 'float'
+| | `-NoThrowAttr 0x1f0bb80 <<scratch space>:287:1> Implicit
+| |-FunctionDecl 0x1f0bc50 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:289:1 __lrintf 'long (float) throw()' extern
+| | `-ParmVarDecl 0x1f0bbc8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:335:41> col:41 __x 'float'
+| |-FunctionDecl 0x1f0be10 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:290:1 llrintf 'long long (float) throw()' extern
+| | |-ParmVarDecl 0x1f0bd10 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:337:47> col:47 __x 'float'
+| | `-NoThrowAttr 0x1f0bec0 <<scratch space>:290:1> Implicit
+| |-FunctionDecl 0x1f0bfa0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:292:1 __llrintf 'long long (float) throw()' extern
+| | `-ParmVarDecl 0x1f0bf18 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:337:47> col:47 __x 'float'
+| |-FunctionDecl 0x1f0c0e8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:293:1 lroundf 'long (float) throw()' extern
+| | |-ParmVarDecl 0x1f0c060 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:341:42> col:42 __x 'float'
+| | `-NoThrowAttr 0x1f0c198 <<scratch space>:293:1> Implicit
+| |-FunctionDecl 0x1f0c268 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:295:1 __lroundf 'long (float) throw()' extern
+| | `-ParmVarDecl 0x1f0c1e0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:341:42> col:42 __x 'float'
+| |-FunctionDecl 0x1f0c3b0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:296:1 llroundf 'long long (float) throw()' extern
+| | |-ParmVarDecl 0x1f0c328 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:343:48> col:48 __x 'float'
+| | `-NoThrowAttr 0x1f0c460 <<scratch space>:296:1> Implicit
+| |-FunctionDecl 0x1f0c530 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:298:1 __llroundf 'long long (float) throw()' extern
+| | `-ParmVarDecl 0x1f0c4a8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:343:48> col:48 __x 'float'
+| |-FunctionDecl 0x1f0c6f0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:299:1 fdimf 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1f0c5f0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:347:31> col:31 __x 'float'
+| | |-ParmVarDecl 0x1f0c660 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:347:46> col:46 __y 'float'
+| | `-NoThrowAttr 0x1f0c7a8 <<scratch space>:299:1> Implicit
+| |-FunctionDecl 0x1f0c8f0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:301:1 __fdimf 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1f0c7f0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:347:31> col:31 __x 'float'
+| | `-ParmVarDecl 0x1f0c860 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:347:46> col:46 __y 'float'
+| |-FunctionDecl 0x1f0cab8 </usr/include/math.h:76:3, line:73:66> <scratch space>:302:1 fmaxf 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1f0c9b8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:350:32> col:32 __x 'float'
+| | |-ParmVarDecl 0x1f0ca28 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:350:47> col:47 __y 'float'
+| | |-ConstAttr 0x1f0cb70 <col:54>
+| | `-NoThrowAttr 0x1f0cba8 <<scratch space>:302:1> Implicit
+| |-FunctionDecl 0x1f0ccc8 </usr/include/math.h:76:3, line:74:79> <scratch space>:304:1 __fmaxf 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1f0cbc8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:350:32> col:32 __x 'float'
+| | |-ParmVarDecl 0x1f0cc38 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:350:47> col:47 __y 'float'
+| | `-ConstAttr 0x1f0cd80 <col:54>
+| |-FunctionDecl 0x1f0cef0 </usr/include/math.h:76:3, line:73:66> <scratch space>:305:1 fminf 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1f0cdc8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:353:32> col:32 __x 'float'
+| | |-ParmVarDecl 0x1f0ce38 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:353:47> col:47 __y 'float'
+| | |-ConstAttr 0x1f0cfa8 <col:54>
+| | `-NoThrowAttr 0x1f0cfe0 <<scratch space>:305:1> Implicit
+| |-FunctionDecl 0x1f0d100 </usr/include/math.h:76:3, line:74:79> <scratch space>:307:1 __fminf 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1f0d000 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:353:32> col:32 __x 'float'
+| | |-ParmVarDecl 0x1f0d070 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:353:47> col:47 __y 'float'
+| | `-ConstAttr 0x1f0d1b8 <col:54>
+| |-FunctionDecl 0x1f0d288 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:358:32> <scratch space>:308:1 __fpclassifyf 'int (float) throw()' extern
+| | |-ParmVarDecl 0x1f0d200 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:357:46> col:46 __value 'float'
+| | `-ConstAttr 0x1f0d338 <line:358:22>
+| |-FunctionDecl 0x1f0d408 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:362:32> <scratch space>:309:1 __signbitf 'int (float) throw()' extern
+| | |-ParmVarDecl 0x1f0d380 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:361:43> col:43 __value 'float'
+| | `-ConstAttr 0x1f0d4b8 <line:362:22>
+| |-FunctionDecl 0x1f0d710 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:310:1 fmaf 'float (float, float, float) throw()' extern
+| | |-ParmVarDecl 0x1f0d500 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:366:30> col:30 __x 'float'
+| | |-ParmVarDecl 0x1f0d570 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:366:45> col:45 __y 'float'
+| | |-ParmVarDecl 0x1f0d5e0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:366:60> col:60 __z 'float'
+| | `-NoThrowAttr 0x1f0d7d0 <<scratch space>:310:1> Implicit
+| |-FunctionDecl 0x1f0d990 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:312:1 __fmaf 'float (float, float, float) throw()' extern
+| | |-ParmVarDecl 0x1f0d818 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:366:30> col:30 __x 'float'
+| | |-ParmVarDecl 0x1f0d888 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:366:45> col:45 __y 'float'
+| | `-ParmVarDecl 0x1f0d8f8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:366:60> col:60 __z 'float'
+| |-FunctionDecl 0x1f0dae8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:376:32> <scratch space>:313:1 __issignalingf 'int (float) throw()' extern
+| | |-ParmVarDecl 0x1f0da60 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:375:47> col:47 __value 'float'
+| | `-ConstAttr 0x1f0db98 <line:376:22>
+| |-FunctionDecl 0x1f0dce0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:314:1 scalbf 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1f0dbe0 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:383:32> col:32 __x 'float'
+| | `-ParmVarDecl 0x1f0dc50 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:383:47> col:47 __n 'float'
+| |-FunctionDecl 0x1f0df00 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:316:1 __scalbf 'float (float, float) throw()' extern
+| | |-ParmVarDecl 0x1f0dda8 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:383:32> col:32 __x 'float'
+| | `-ParmVarDecl 0x1f0de18 </usr/include/math.h:97:21, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:383:47> col:47 __n 'float'
+| |-FunctionDecl 0x1f0e0d0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:317:1 acosl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f0dfc8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:54:31> col:31 __x 'long double'
+| | `-NoThrowAttr 0x1f0e180 <<scratch space>:317:1> Implicit
+| |-FunctionDecl 0x1f0e250 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:319:1 __acosl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f0e1c8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:54:31> col:31 __x 'long double'
+| |-FunctionDecl 0x1f0e398 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:320:1 asinl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f0e310 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:56:31> col:31 __x 'long double'
+| | `-NoThrowAttr 0x1f0e448 <<scratch space>:320:1> Implicit
+| |-FunctionDecl 0x1f0e518 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:322:1 __asinl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f0e490 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:56:31> col:31 __x 'long double'
+| |-FunctionDecl 0x1f0e660 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:323:1 atanl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f0e5d8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:58:31> col:31 __x 'long double'
+| | `-NoThrowAttr 0x1f0e710 <<scratch space>:323:1> Implicit
+| |-FunctionDecl 0x1f0e7e0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:325:1 __atanl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f0e758 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:58:31> col:31 __x 'long double'
+| |-FunctionDecl 0x1f0ea20 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:326:1 atan2l 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f0e8a0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:60:32> col:32 __y 'long double'
+| | |-ParmVarDecl 0x1f0e910 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:60:47> col:47 __x 'long double'
+| | `-NoThrowAttr 0x1f0ead8 <<scratch space>:326:1> Implicit
+| |-FunctionDecl 0x1f0ec20 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:328:1 __atan2l 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f0eb20 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:60:32> col:32 __y 'long double'
+| | `-ParmVarDecl 0x1f0eb90 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:60:47> col:47 __x 'long double'
+| |-FunctionDecl 0x1f0ed70 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:331:1 cosl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f0ece8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:63:34> col:34 __x 'long double'
+| | `-NoThrowAttr 0x1f0ee20 <<scratch space>:331:1> Implicit
+| |-FunctionDecl 0x1f0ef10 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:333:1 __cosl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f0ee68 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:63:34> col:34 __x 'long double'
+| |-FunctionDecl 0x1f0f058 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:336:1 sinl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f0efd0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:65:34> col:34 __x 'long double'
+| | `-NoThrowAttr 0x1f0f108 <<scratch space>:336:1> Implicit
+| |-FunctionDecl 0x1f0f1d8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:338:1 __sinl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f0f150 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:65:34> col:34 __x 'long double'
+| |-FunctionDecl 0x1f0f320 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:339:1 tanl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f0f298 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:67:30> col:30 __x 'long double'
+| | `-NoThrowAttr 0x1f0f3d0 <<scratch space>:339:1> Implicit
+| |-FunctionDecl 0x1f0f4a0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:341:1 __tanl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f0f418 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:67:30> col:30 __x 'long double'
+| |-FunctionDecl 0x1f0f5e8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:342:1 coshl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f0f560 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:72:31> col:31 __x 'long double'
+| | `-NoThrowAttr 0x1f0f698 <<scratch space>:342:1> Implicit
+| |-FunctionDecl 0x1f0f768 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:344:1 __coshl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f0f6e0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:72:31> col:31 __x 'long double'
+| |-FunctionDecl 0x1f0f8b0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:345:1 sinhl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f0f828 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:74:31> col:31 __x 'long double'
+| | `-NoThrowAttr 0x1f0f960 <<scratch space>:345:1> Implicit
+| |-FunctionDecl 0x1f0fa30 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:347:1 __sinhl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f0f9a8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:74:31> col:31 __x 'long double'
+| |-FunctionDecl 0x1f0fb78 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:348:1 tanhl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f0faf0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:76:31> col:31 __x 'long double'
+| | `-NoThrowAttr 0x1f0fc28 <<scratch space>:348:1> Implicit
+| |-FunctionDecl 0x1f0fcf8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:350:1 __tanhl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f0fc70 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:76:31> col:31 __x 'long double'
+| |-FunctionDecl 0x1f11060 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:353:1 sincosl 'void (long double, long double *, long double *) throw()' extern
+| | |-ParmVarDecl 0x1f0fdb8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:82:14> col:14 __x 'long double'
+| | |-ParmVarDecl 0x1f0fe60 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:82:30> col:30 __sinx 'long double *'
+| | `-ParmVarDecl 0x1f10f30 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:82:49> col:49 __cosx 'long double *'
+| |-FunctionDecl 0x1f112b8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:355:1 __sincosl 'void (long double, long double *, long double *) throw()' extern
+| | |-ParmVarDecl 0x1f11130 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:82:14> col:14 __x 'long double'
+| | |-ParmVarDecl 0x1f111a8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:82:30> col:30 __sinx 'long double *'
+| | `-ParmVarDecl 0x1f11220 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:82:49> col:49 __cosx 'long double *'
+| |-FunctionDecl 0x1f11410 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:356:1 acoshl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f11388 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:88:32> col:32 __x 'long double'
+| | `-NoThrowAttr 0x1f114c0 <<scratch space>:356:1> Implicit
+| |-FunctionDecl 0x1f11590 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:358:1 __acoshl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f11508 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:88:32> col:32 __x 'long double'
+| |-FunctionDecl 0x1f116d8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:359:1 asinhl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f11650 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:90:32> col:32 __x 'long double'
+| | `-NoThrowAttr 0x1f11788 <<scratch space>:359:1> Implicit
+| |-FunctionDecl 0x1f11858 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:361:1 __asinhl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f117d0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:90:32> col:32 __x 'long double'
+| |-FunctionDecl 0x1f119a0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:362:1 atanhl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f11918 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:92:32> col:32 __x 'long double'
+| | `-NoThrowAttr 0x1f11a50 <<scratch space>:362:1> Implicit
+| |-FunctionDecl 0x1f11b20 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:364:1 __atanhl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f11a98 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:92:32> col:32 __x 'long double'
+| |-FunctionDecl 0x1f11c68 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:367:1 expl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f11be0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:100:34> col:34 __x 'long double'
+| | `-NoThrowAttr 0x1f11d18 <<scratch space>:367:1> Implicit
+| |-FunctionDecl 0x1f11de8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:369:1 __expl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f11d60 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:100:34> col:34 __x 'long double'
+| |-FunctionDecl 0x1f12050 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:370:1 frexpl 'long double (long double, int *) throw()' extern
+| | |-ParmVarDecl 0x1f11ea8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:103:32> col:32 __x 'long double'
+| | |-ParmVarDecl 0x1f11f40 <col:37, col:42> col:42 __exponent 'int *'
+| | `-NoThrowAttr 0x1f12108 <<scratch space>:370:1> Implicit
+| |-FunctionDecl 0x1f12258 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:372:1 __frexpl 'long double (long double, int *) throw()' extern
+| | |-ParmVarDecl 0x1f12150 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:103:32> col:32 __x 'long double'
+| | `-ParmVarDecl 0x1f121c8 <col:37, col:42> col:42 __exponent 'int *'
+| |-FunctionDecl 0x1f124a0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:373:1 ldexpl 'long double (long double, int) throw()' extern
+| | |-ParmVarDecl 0x1f12320 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:106:32> col:32 __x 'long double'
+| | |-ParmVarDecl 0x1f12390 <col:37, col:41> col:41 __exponent 'int'
+| | `-NoThrowAttr 0x1f12558 <<scratch space>:373:1> Implicit
+| |-FunctionDecl 0x1f126a0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:375:1 __ldexpl 'long double (long double, int) throw()' extern
+| | |-ParmVarDecl 0x1f125a0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:106:32> col:32 __x 'long double'
+| | `-ParmVarDecl 0x1f12610 <col:37, col:41> col:41 __exponent 'int'
+| |-FunctionDecl 0x1f127f0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:378:1 logl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f12768 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:109:34> col:34 __x 'long double'
+| | `-NoThrowAttr 0x1f128a0 <<scratch space>:378:1> Implicit
+| |-FunctionDecl 0x1f12970 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:380:1 __logl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f128e8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:109:34> col:34 __x 'long double'
+| |-FunctionDecl 0x1f12ab8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:381:1 log10l 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f12a30 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:112:32> col:32 __x 'long double'
+| | `-NoThrowAttr 0x1f12b68 <<scratch space>:381:1> Implicit
+| |-FunctionDecl 0x1f12c38 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:383:1 __log10l 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f12bb0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:112:32> col:32 __x 'long double'
+| |-FunctionDecl 0x1f12e80 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:384:1 modfl 'long double (long double, long double *) throw()' extern
+| | |-ParmVarDecl 0x1f12cf8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:115:31> col:31 __x 'long double'
+| | |-ParmVarDecl 0x1f12d70 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:115:47> col:47 __iptr 'long double *'
+| | `-NoThrowAttr 0x1f12f50 <<scratch space>:384:1> Implicit
+| |-FunctionDecl 0x1f130c0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:285:63> <scratch space>:386:1 __modfl 'long double (long double, long double *) throw()' extern
+| | |-ParmVarDecl 0x1f12f98 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:115:31> col:31 __x 'long double'
+| | |-ParmVarDecl 0x1f13010 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:115:47> col:47 __iptr 'long double *'
+| | `-NonNullAttr 0x1f13178 </usr/include/x86_64-linux-gnu/sys/cdefs.h:285:44, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:115:69> 1
+| |-FunctionDecl 0x1f13258 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:387:1 exp10l 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f131d0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:120:32> col:32 __x 'long double'
+| |-FunctionDecl 0x1f133a0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:389:1 __exp10l 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f13318 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:120:32> col:32 __x 'long double'
+| |-FunctionDecl 0x1f134e8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:390:1 pow10l 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f13460 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:122:32> col:32 __x 'long double'
+| |-FunctionDecl 0x1f13630 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:392:1 __pow10l 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f135a8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:122:32> col:32 __x 'long double'
+| |-FunctionDecl 0x1f13778 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:393:1 expm1l 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f136f0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:128:32> col:32 __x 'long double'
+| | `-NoThrowAttr 0x1f13828 <<scratch space>:393:1> Implicit
+| |-FunctionDecl 0x1f138f8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:395:1 __expm1l 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f13870 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:128:32> col:32 __x 'long double'
+| |-FunctionDecl 0x1f13a40 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:396:1 log1pl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f139b8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:131:32> col:32 __x 'long double'
+| | `-NoThrowAttr 0x1f13af0 <<scratch space>:396:1> Implicit
+| |-FunctionDecl 0x1f13bc0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:398:1 __log1pl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f13b38 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:131:32> col:32 __x 'long double'
+| |-FunctionDecl 0x1f13d08 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:399:1 logbl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f13c80 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:134:31> col:31 __x 'long double'
+| | `-NoThrowAttr 0x1f13db8 <<scratch space>:399:1> Implicit
+| |-FunctionDecl 0x1f13e88 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:401:1 __logbl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f13e00 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:134:31> col:31 __x 'long double'
+| |-FunctionDecl 0x1f13fe8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:402:1 exp2l 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f13f60 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:141:31> col:31 __x 'long double'
+| | `-NoThrowAttr 0x1f14098 <<scratch space>:402:1> Implicit
+| |-FunctionDecl 0x1f14168 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:404:1 __exp2l 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f140e0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:141:31> col:31 __x 'long double'
+| |-FunctionDecl 0x1f142b0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:405:1 log2l 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f14228 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:144:31> col:31 __x 'long double'
+| | `-NoThrowAttr 0x1f14360 <<scratch space>:405:1> Implicit
+| |-FunctionDecl 0x1f14430 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:407:1 __log2l 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f143a8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:144:31> col:31 __x 'long double'
+| |-FunctionDecl 0x1f145f0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:410:1 powl 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f144f0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:153:34> col:34 __x 'long double'
+| | |-ParmVarDecl 0x1f14560 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:153:49> col:49 __y 'long double'
+| | `-NoThrowAttr 0x1f146a8 <<scratch space>:410:1> Implicit
+| |-FunctionDecl 0x1f147f0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:412:1 __powl 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f146f0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:153:34> col:34 __x 'long double'
+| | `-ParmVarDecl 0x1f14760 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:153:49> col:49 __y 'long double'
+| |-FunctionDecl 0x1f14940 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:413:1 sqrtl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f148b8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:156:31> col:31 __x 'long double'
+| | `-NoThrowAttr 0x1f149f0 <<scratch space>:413:1> Implicit
+| |-FunctionDecl 0x1f14ac0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:415:1 __sqrtl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f14a38 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:156:31> col:31 __x 'long double'
+| |-FunctionDecl 0x1f14c80 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:416:1 hypotl 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f14b80 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:162:32> col:32 __x 'long double'
+| | |-ParmVarDecl 0x1f14bf0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:162:47> col:47 __y 'long double'
+| | `-NoThrowAttr 0x1f14d38 <<scratch space>:416:1> Implicit
+| |-FunctionDecl 0x1f14e80 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:418:1 __hypotl 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f14d80 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:162:32> col:32 __x 'long double'
+| | `-ParmVarDecl 0x1f14df0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:162:47> col:47 __y 'long double'
+| |-FunctionDecl 0x1f14ff8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:419:1 cbrtl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f14f70 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:169:31> col:31 __x 'long double'
+| | `-NoThrowAttr 0x1f150a8 <<scratch space>:419:1> Implicit
+| |-FunctionDecl 0x1f15178 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:421:1 __cbrtl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f150f0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:169:31> col:31 __x 'long double'
+| |-FunctionDecl 0x1f152c0 </usr/include/math.h:76:3, line:73:66> <scratch space>:422:1 ceill 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f15238 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:178:32> col:32 __x 'long double'
+| | |-ConstAttr 0x1f15370 <col:39>
+| | `-NoThrowAttr 0x1f153a8 <<scratch space>:422:1> Implicit
+| |-FunctionDecl 0x1f15450 </usr/include/math.h:76:3, line:74:79> <scratch space>:424:1 __ceill 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f153c8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:178:32> col:32 __x 'long double'
+| | `-ConstAttr 0x1f15500 <col:39>
+| |-FunctionDecl 0x1f155d0 </usr/include/math.h:76:3, line:73:66> <scratch space>:425:1 fabsl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f15548 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:181:32> col:32 __x 'long double'
+| | |-ConstAttr 0x1f15680 <col:39>
+| | `-NoThrowAttr 0x1f156b8 <<scratch space>:425:1> Implicit
+| |-FunctionDecl 0x1f15760 </usr/include/math.h:76:3, line:74:79> <scratch space>:427:1 __fabsl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f156d8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:181:32> col:32 __x 'long double'
+| | `-ConstAttr 0x1f15810 <col:39>
+| |-FunctionDecl 0x1f158e0 </usr/include/math.h:76:3, line:73:66> <scratch space>:428:1 floorl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f15858 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:184:33> col:33 __x 'long double'
+| | |-ConstAttr 0x1f15990 <col:40>
+| | `-NoThrowAttr 0x1f159c8 <<scratch space>:428:1> Implicit
+| |-FunctionDecl 0x1f15a70 </usr/include/math.h:76:3, line:74:79> <scratch space>:430:1 __floorl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f159e8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:184:33> col:33 __x 'long double'
+| | `-ConstAttr 0x1f15b20 <col:40>
+| |-FunctionDecl 0x1f15c68 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:431:1 fmodl 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f15b68 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:187:31> col:31 __x 'long double'
+| | |-ParmVarDecl 0x1f15bd8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:187:46> col:46 __y 'long double'
+| | `-NoThrowAttr 0x1f15d20 <<scratch space>:431:1> Implicit
+| |-FunctionDecl 0x1f15e68 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:433:1 __fmodl 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f15d68 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:187:31> col:31 __x 'long double'
+| | `-ParmVarDecl 0x1f15dd8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:187:46> col:46 __y 'long double'
+| |-FunctionDecl 0x1f18090 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:192:76> <scratch space>:434:1 __isinfl 'int (long double) throw()' extern
+| | |-ParmVarDecl 0x1f17f90 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:192:40> col:40 __value 'long double'
+| | `-ConstAttr 0x1f18140 <col:66>
+| |-FunctionDecl 0x1f18210 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:195:77> <scratch space>:435:1 __finitel 'int (long double) throw()' extern
+| | |-ParmVarDecl 0x1f18188 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:195:41> col:41 __value 'long double'
+| | `-ConstAttr 0x1f182c0 <col:67>
+| |-FunctionDecl 0x1f18390 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:204:74> <scratch space>:436:1 isinfl 'int (long double) throw()' extern
+| | |-ParmVarDecl 0x1f18308 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:204:38> col:38 __value 'long double'
+| | `-ConstAttr 0x1f18440 <col:64>
+| |-FunctionDecl 0x1f18510 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:208:75> <scratch space>:437:1 finitel 'int (long double) throw()' extern
+| | |-ParmVarDecl 0x1f18488 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:208:39> col:39 __value 'long double'
+| | `-ConstAttr 0x1f185c0 <col:65>
+| |-FunctionDecl 0x1f18708 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:438:1 dreml 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f18608 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:211:31> col:31 __x 'long double'
+| | `-ParmVarDecl 0x1f18678 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:211:46> col:46 __y 'long double'
+| |-FunctionDecl 0x1f188d0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:440:1 __dreml 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f187d0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:211:31> col:31 __x 'long double'
+| | `-ParmVarDecl 0x1f18840 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:211:46> col:46 __y 'long double'
+| |-FunctionDecl 0x1f18a20 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:441:1 significandl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f18998 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:215:38> col:38 __x 'long double'
+| |-FunctionDecl 0x1f18b68 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:443:1 __significandl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f18ae0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:215:38> col:38 __x 'long double'
+| |-FunctionDecl 0x1f18d28 </usr/include/math.h:76:3, line:73:66> <scratch space>:444:1 copysignl 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f18c28 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:221:36> col:36 __x 'long double'
+| | |-ParmVarDecl 0x1f18c98 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:221:51> col:51 __y 'long double'
+| | |-ConstAttr 0x1f18de0 <col:58>
+| | `-NoThrowAttr 0x1f18e18 <<scratch space>:444:1> Implicit
+| |-FunctionDecl 0x1f1afb0 </usr/include/math.h:76:3, line:74:79> <scratch space>:446:1 __copysignl 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f18e38 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:221:36> col:36 __x 'long double'
+| | |-ParmVarDecl 0x1f18ea8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:221:51> col:51 __y 'long double'
+| | `-ConstAttr 0x1f1b068 <col:58>
+| |-FunctionDecl 0x1f1b1b0 </usr/include/math.h:76:3, line:73:66> <scratch space>:447:1 nanl 'long double (const char *) throw()' extern
+| | |-ParmVarDecl 0x1f1b0b0 </usr/include/x86_64-linux-gnu/bits/mathcalls.h:228:21, col:33> col:33 __tagb 'const char *'
+| | |-ConstAttr 0x1f1b260 <col:43>
+| | `-NoThrowAttr 0x1f1b298 <<scratch space>:447:1> Implicit
+| |-FunctionDecl 0x1f1b340 </usr/include/math.h:76:3, line:74:79> <scratch space>:2:1 __nanl 'long double (const char *) throw()' extern
+| | |-ParmVarDecl 0x1f1b2b8 </usr/include/x86_64-linux-gnu/bits/mathcalls.h:228:21, col:33> col:33 __tagb 'const char *'
+| | `-ConstAttr 0x1f1b3f0 <col:43>
+| |-FunctionDecl 0x1f1b4c0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:234:76> <scratch space>:3:1 __isnanl 'int (long double) throw()' extern
+| | |-ParmVarDecl 0x1f1b438 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:234:40> col:40 __value 'long double'
+| | `-ConstAttr 0x1f1b570 <col:66>
+| |-FunctionDecl 0x1f1b640 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:241:74> <scratch space>:4:1 isnanl 'int (long double) throw()' extern
+| | |-ParmVarDecl 0x1f1b5b8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:241:38> col:38 __value 'long double'
+| | `-ConstAttr 0x1f1b6f0 <col:64>
+| |-FunctionDecl 0x1f1b7c0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:5:1 j0l 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f1b738 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:247:28 'long double'
+| |-FunctionDecl 0x1f1b908 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:7:1 __j0l 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f1b880 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:247:28 'long double'
+| |-FunctionDecl 0x1f1ba50 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:8:1 j1l 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f1b9c8 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:248:28 'long double'
+| |-FunctionDecl 0x1f1bb98 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:10:1 __j1l 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f1bb10 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:248:28 'long double'
+| |-FunctionDecl 0x1f1bde0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:11:1 jnl 'long double (int, long double) throw()' extern
+| | |-ParmVarDecl 0x1f1bc58 </usr/include/x86_64-linux-gnu/bits/mathcalls.h:249:19> col:22 'int'
+| | `-ParmVarDecl 0x1f1bcc8 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:249:33 'long double'
+| |-FunctionDecl 0x1f1d0b0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:13:1 __jnl 'long double (int, long double) throw()' extern
+| | |-ParmVarDecl 0x1f1bea8 </usr/include/x86_64-linux-gnu/bits/mathcalls.h:249:19> col:22 'int'
+| | `-ParmVarDecl 0x1f1bf18 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:249:33 'long double'
+| |-FunctionDecl 0x1f1d200 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:14:1 y0l 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f1d178 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:250:28 'long double'
+| |-FunctionDecl 0x1f1d348 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:16:1 __y0l 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f1d2c0 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:250:28 'long double'
+| |-FunctionDecl 0x1f1d490 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:17:1 y1l 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f1d408 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:251:28 'long double'
+| |-FunctionDecl 0x1f1d5d8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:19:1 __y1l 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f1d550 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:251:28 'long double'
+| |-FunctionDecl 0x1f1d798 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:20:1 ynl 'long double (int, long double) throw()' extern
+| | |-ParmVarDecl 0x1f1d698 </usr/include/x86_64-linux-gnu/bits/mathcalls.h:252:19> col:22 'int'
+| | `-ParmVarDecl 0x1f1d708 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:252:33 'long double'
+| |-FunctionDecl 0x1f1d960 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:22:1 __ynl 'long double (int, long double) throw()' extern
+| | |-ParmVarDecl 0x1f1d860 </usr/include/x86_64-linux-gnu/bits/mathcalls.h:252:19> col:22 'int'
+| | `-ParmVarDecl 0x1f1d8d0 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:252:33 'long double'
+| |-FunctionDecl 0x1f1dab0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:23:1 erfl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f1da28 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:259:29 'long double'
+| | `-NoThrowAttr 0x1f1db60 <<scratch space>:23:1> Implicit
+| |-FunctionDecl 0x1f1dc30 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:25:1 __erfl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f1dba8 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:259:29 'long double'
+| |-FunctionDecl 0x1f1dd78 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:26:1 erfcl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f1dcf0 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:260:30 'long double'
+| | `-NoThrowAttr 0x1f1de28 <<scratch space>:26:1> Implicit
+| |-FunctionDecl 0x1f1def8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:28:1 __erfcl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f1de70 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:260:30 'long double'
+| |-FunctionDecl 0x1f1e0c0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:29:1 lgammal 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f1dfb8 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:261:32 'long double'
+| | `-NoThrowAttr 0x1f1e170 <<scratch space>:29:1> Implicit
+| |-FunctionDecl 0x1f1e240 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:31:1 __lgammal 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f1e1b8 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:261:32 'long double'
+| |-FunctionDecl 0x1f1e388 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:32:1 tgammal 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f1e300 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:268:32 'long double'
+| | `-NoThrowAttr 0x1f1e438 <<scratch space>:32:1> Implicit
+| |-FunctionDecl 0x1f1e508 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:34:1 __tgammal 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f1e480 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:268:32 'long double'
+| |-FunctionDecl 0x1f1e650 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:35:1 gammal 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f1e5c8 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:274:31 'long double'
+| |-FunctionDecl 0x1f1e798 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:37:1 __gammal 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f1e710 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:274:31 'long double'
+| |-FunctionDecl 0x1f1e960 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:39:1 lgammal_r 'long double (long double, int *) throw()' extern
+| | |-ParmVarDecl 0x1f1e858 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:281:34 'long double'
+| | `-ParmVarDecl 0x1f1e8d0 <col:36, col:41> col:41 __signgamp 'int *'
+| |-FunctionDecl 0x1f1eb30 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:42:1 __lgammal_r 'long double (long double, int *) throw()' extern
+| | |-ParmVarDecl 0x1f1ea28 </usr/include/math.h:143:27> /usr/include/x86_64-linux-gnu/bits/mathcalls.h:281:34 'long double'
+| | `-ParmVarDecl 0x1f1eaa0 <col:36, col:41> col:41 __signgamp 'int *'
+| |-FunctionDecl 0x1f1ec80 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:43:1 rintl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f1ebf8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:289:31> col:31 __x 'long double'
+| | |-NoThrowAttr 0x1f1ed30 <<scratch space>:43:1> Implicit
+| | `-ConstAttr 0x1f1ed68 <col:1> Implicit
+| |-FunctionDecl 0x1f1ee10 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:45:1 __rintl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f1ed88 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:289:31> col:31 __x 'long double'
+| |-FunctionDecl 0x1f1efd0 </usr/include/math.h:76:3, line:73:66> <scratch space>:46:1 nextafterl 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f1eed0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:292:37> col:37 __x 'long double'
+| | |-ParmVarDecl 0x1f1ef40 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:292:52> col:52 __y 'long double'
+| | |-ConstAttr 0x1f1f088 <col:59>
+| | `-NoThrowAttr 0x1f1f0d0 <<scratch space>:46:1> Implicit
+| |-FunctionDecl 0x1f1f1f0 </usr/include/math.h:76:3, line:74:79> <scratch space>:48:1 __nextafterl 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f1f0f0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:292:37> col:37 __x 'long double'
+| | |-ParmVarDecl 0x1f1f160 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:292:52> col:52 __y 'long double'
+| | `-ConstAttr 0x1f1f2a8 <col:59>
+| |-FunctionDecl 0x1f1f3f0 </usr/include/math.h:76:3, line:73:66> <scratch space>:49:1 nexttowardl 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f1f2f0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:294:38> col:38 __x 'long double'
+| | |-ParmVarDecl 0x1f1f360 <col:43, col:55> col:55 __y 'long double'
+| | |-ConstAttr 0x1f1f4a8 <col:62>
+| | `-NoThrowAttr 0x1f1f4e0 <<scratch space>:49:1> Implicit
+| |-FunctionDecl 0x1f1f600 </usr/include/math.h:76:3, line:74:79> <scratch space>:51:1 __nexttowardl 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f1f500 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:294:38> col:38 __x 'long double'
+| | |-ParmVarDecl 0x1f1f570 <col:43, col:55> col:55 __y 'long double'
+| | `-ConstAttr 0x1f1f6b8 <col:62>
+| |-FunctionDecl 0x1f1f800 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:52:1 remainderl 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f1f700 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:298:36> col:36 __x 'long double'
+| | |-ParmVarDecl 0x1f1f770 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:298:51> col:51 __y 'long double'
+| | `-NoThrowAttr 0x1f1f8b8 <<scratch space>:52:1> Implicit
+| |-FunctionDecl 0x1f1fa00 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:54:1 __remainderl 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f1f900 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:298:36> col:36 __x 'long double'
+| | `-ParmVarDecl 0x1f1f970 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:298:51> col:51 __y 'long double'
+| |-FunctionDecl 0x1f1fbc8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:55:1 scalbnl 'long double (long double, int) throw()' extern
+| | |-ParmVarDecl 0x1f1fac8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:302:33> col:33 __x 'long double'
+| | |-ParmVarDecl 0x1f1fb38 <col:38, col:42> col:42 __n 'int'
+| | `-NoThrowAttr 0x1f1fc80 <<scratch space>:55:1> Implicit
+| |-FunctionDecl 0x1f1fdc8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:57:1 __scalbnl 'long double (long double, int) throw()' extern
+| | |-ParmVarDecl 0x1f1fcc8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:302:33> col:33 __x 'long double'
+| | `-ParmVarDecl 0x1f1fd38 <col:38, col:42> col:42 __n 'int'
+| |-FunctionDecl 0x1f1ff18 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:58:1 ilogbl 'int (long double) throw()' extern
+| | |-ParmVarDecl 0x1f1fe90 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:306:36> col:36 __x 'long double'
+| | `-NoThrowAttr 0x1f1ffc8 <<scratch space>:58:1> Implicit
+| |-FunctionDecl 0x1f28ea0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:60:1 __ilogbl 'int (long double) throw()' extern
+| | `-ParmVarDecl 0x1f20010 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:306:36> col:36 __x 'long double'
+| |-FunctionDecl 0x1f290e0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:61:1 scalblnl 'long double (long double, long) throw()' extern
+| | |-ParmVarDecl 0x1f28f60 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:311:34> col:34 __x 'long double'
+| | |-ParmVarDecl 0x1f28fd0 <col:39, col:48> col:48 __n 'long'
+| | `-NoThrowAttr 0x1f29198 <<scratch space>:61:1> Implicit
+| |-FunctionDecl 0x1f292e0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:63:1 __scalblnl 'long double (long double, long) throw()' extern
+| | |-ParmVarDecl 0x1f291e0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:311:34> col:34 __x 'long double'
+| | `-ParmVarDecl 0x1f29250 <col:39, col:48> col:48 __n 'long'
+| |-FunctionDecl 0x1f29430 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:64:1 nearbyintl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f293a8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:315:36> col:36 __x 'long double'
+| | |-NoThrowAttr 0x1f294e0 <<scratch space>:64:1> Implicit
+| | `-ConstAttr 0x1f29518 <col:1> Implicit
+| |-FunctionDecl 0x1f295c0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:66:1 __nearbyintl 'long double (long double) throw()' extern
+| | `-ParmVarDecl 0x1f29538 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:315:36> col:36 __x 'long double'
+| |-FunctionDecl 0x1f29708 </usr/include/math.h:76:3, line:73:66> <scratch space>:67:1 roundl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f29680 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:319:33> col:33 __x 'long double'
+| | |-ConstAttr 0x1f297b8 <col:40>
+| | `-NoThrowAttr 0x1f297f0 <<scratch space>:67:1> Implicit
+| |-FunctionDecl 0x1f29898 </usr/include/math.h:76:3, line:74:79> <scratch space>:69:1 __roundl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f29810 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:319:33> col:33 __x 'long double'
+| | `-ConstAttr 0x1f29948 <col:40>
+| |-FunctionDecl 0x1f29a18 </usr/include/math.h:76:3, line:73:66> <scratch space>:70:1 truncl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f29990 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:323:33> col:33 __x 'long double'
+| | |-ConstAttr 0x1f29ac8 <col:40>
+| | `-NoThrowAttr 0x1f29b00 <<scratch space>:70:1> Implicit
+| |-FunctionDecl 0x1f29ba8 </usr/include/math.h:76:3, line:74:79> <scratch space>:72:1 __truncl 'long double (long double) throw()' extern
+| | |-ParmVarDecl 0x1f29b20 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:323:33> col:33 __x 'long double'
+| | `-ConstAttr 0x1f29c58 <col:40>
+| |-FunctionDecl 0x1f29ee8 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:73:1 remquol 'long double (long double, long double, int *) throw()' extern
+| | |-ParmVarDecl 0x1f29ca0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:328:33> col:33 __x 'long double'
+| | |-ParmVarDecl 0x1f29d10 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:328:48> col:48 __y 'long double'
+| | `-ParmVarDecl 0x1f29d88 <col:53, col:58> col:58 __quo 'int *'
+| |-FunctionDecl 0x1f2a138 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:75:1 __remquol 'long double (long double, long double, int *) throw()' extern
+| | |-ParmVarDecl 0x1f29fb8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:328:33> col:33 __x 'long double'
+| | |-ParmVarDecl 0x1f2a028 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:328:48> col:48 __y 'long double'
+| | `-ParmVarDecl 0x1f2a0a0 <col:53, col:58> col:58 __quo 'int *'
+| |-FunctionDecl 0x1f2a310 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:76:1 lrintl 'long (long double) throw()' extern
+| | |-ParmVarDecl 0x1f2a208 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:335:41> col:41 __x 'long double'
+| | `-NoThrowAttr 0x1f2a3c0 <<scratch space>:76:1> Implicit
+| |-FunctionDecl 0x1f2a490 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:78:1 __lrintl 'long (long double) throw()' extern
+| | `-ParmVarDecl 0x1f2a408 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:335:41> col:41 __x 'long double'
+| |-FunctionDecl 0x1f2a650 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:79:1 llrintl 'long long (long double) throw()' extern
+| | |-ParmVarDecl 0x1f2a550 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:337:47> col:47 __x 'long double'
+| | `-NoThrowAttr 0x1f2a700 <<scratch space>:79:1> Implicit
+| |-FunctionDecl 0x1f2a7d0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:81:1 __llrintl 'long long (long double) throw()' extern
+| | `-ParmVarDecl 0x1f2a748 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:337:47> col:47 __x 'long double'
+| |-FunctionDecl 0x1f2a918 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:82:1 lroundl 'long (long double) throw()' extern
+| | |-ParmVarDecl 0x1f2a890 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:341:42> col:42 __x 'long double'
+| | `-NoThrowAttr 0x1f2a9c8 <<scratch space>:82:1> Implicit
+| |-FunctionDecl 0x1f2aa98 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:84:1 __lroundl 'long (long double) throw()' extern
+| | `-ParmVarDecl 0x1f2aa10 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:341:42> col:42 __x 'long double'
+| |-FunctionDecl 0x1f2abe0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:85:1 llroundl 'long long (long double) throw()' extern
+| | |-ParmVarDecl 0x1f2ab58 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:343:48> col:48 __x 'long double'
+| | `-NoThrowAttr 0x1f2ac90 <<scratch space>:85:1> Implicit
+| |-FunctionDecl 0x1f2ad60 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:87:1 __llroundl 'long long (long double) throw()' extern
+| | `-ParmVarDecl 0x1f2acd8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:343:48> col:48 __x 'long double'
+| |-FunctionDecl 0x1f2af50 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:88:1 fdiml 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f2ae20 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:347:31> col:31 __x 'long double'
+| | |-ParmVarDecl 0x1f2aec0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:347:46> col:46 __y 'long double'
+| | `-NoThrowAttr 0x1f2b008 <<scratch space>:88:1> Implicit
+| |-FunctionDecl 0x1f2b150 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:90:1 __fdiml 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f2b050 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:347:31> col:31 __x 'long double'
+| | `-ParmVarDecl 0x1f2b0c0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:347:46> col:46 __y 'long double'
+| |-FunctionDecl 0x1f2b318 </usr/include/math.h:76:3, line:73:66> <scratch space>:91:1 fmaxl 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f2b218 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:350:32> col:32 __x 'long double'
+| | |-ParmVarDecl 0x1f2b288 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:350:47> col:47 __y 'long double'
+| | |-ConstAttr 0x1f2b3d0 <col:54>
+| | `-NoThrowAttr 0x1f2b408 <<scratch space>:91:1> Implicit
+| |-FunctionDecl 0x1f2b528 </usr/include/math.h:76:3, line:74:79> <scratch space>:93:1 __fmaxl 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f2b428 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:350:32> col:32 __x 'long double'
+| | |-ParmVarDecl 0x1f2b498 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:350:47> col:47 __y 'long double'
+| | `-ConstAttr 0x1f2b5e0 <col:54>
+| |-FunctionDecl 0x1f2b728 </usr/include/math.h:76:3, line:73:66> <scratch space>:94:1 fminl 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f2b628 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:353:32> col:32 __x 'long double'
+| | |-ParmVarDecl 0x1f2b698 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:353:47> col:47 __y 'long double'
+| | |-ConstAttr 0x1f2b7e0 <col:54>
+| | `-NoThrowAttr 0x1f2b818 <<scratch space>:94:1> Implicit
+| |-FunctionDecl 0x1f2b938 </usr/include/math.h:76:3, line:74:79> <scratch space>:96:1 __fminl 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f2b838 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:353:32> col:32 __x 'long double'
+| | |-ParmVarDecl 0x1f2b8a8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:353:47> col:47 __y 'long double'
+| | `-ConstAttr 0x1f2b9f0 <col:54>
+| |-FunctionDecl 0x1f2bac0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:358:32> <scratch space>:97:1 __fpclassifyl 'int (long double) throw()' extern
+| | |-ParmVarDecl 0x1f2ba38 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:357:46> col:46 __value 'long double'
+| | `-ConstAttr 0x1f2bb70 <line:358:22>
+| |-FunctionDecl 0x1f2bc40 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:362:32> <scratch space>:98:1 __signbitl 'int (long double) throw()' extern
+| | |-ParmVarDecl 0x1f2bbb8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:361:43> col:43 __value 'long double'
+| | `-ConstAttr 0x1f2bcf0 <line:362:22>
+| |-FunctionDecl 0x1f2cfb0 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:99:1 fmal 'long double (long double, long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f2bd38 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:366:30> col:30 __x 'long double'
+| | |-ParmVarDecl 0x1f2bda8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:366:45> col:45 __y 'long double'
+| | |-ParmVarDecl 0x1f2be18 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:366:60> col:60 __z 'long double'
+| | `-NoThrowAttr 0x1f2d070 <<scratch space>:99:1> Implicit
+| |-FunctionDecl 0x1f2d230 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:101:1 __fmal 'long double (long double, long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f2d0b8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:366:30> col:30 __x 'long double'
+| | |-ParmVarDecl 0x1f2d128 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:366:45> col:45 __y 'long double'
+| | `-ParmVarDecl 0x1f2d198 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:366:60> col:60 __z 'long double'
+| |-FunctionDecl 0x1f2d388 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:376:32> <scratch space>:102:1 __issignalingl 'int (long double) throw()' extern
+| | |-ParmVarDecl 0x1f2d300 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:375:47> col:47 __value 'long double'
+| | `-ConstAttr 0x1f2d438 <line:376:22>
+| |-FunctionDecl 0x1f2d580 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:103:1 scalbl 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f2d480 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:383:32> col:32 __x 'long double'
+| | `-ParmVarDecl 0x1f2d4f0 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:383:47> col:47 __n 'long double'
+| |-FunctionDecl 0x1f2d748 </usr/include/math.h:76:3, /usr/include/x86_64-linux-gnu/sys/cdefs.h:60:27> <scratch space>:105:1 __scalbl 'long double (long double, long double) throw()' extern
+| | |-ParmVarDecl 0x1f2d648 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:383:32> col:32 __x 'long double'
+| | `-ParmVarDecl 0x1f2d6b8 </usr/include/math.h:143:27, /usr/include/x86_64-linux-gnu/bits/mathcalls.h:383:47> col:47 __n 'long double'
+| |-VarDecl 0x1f2d810 </usr/include/math.h:168:1, col:12> col:12 signgam 'int' extern
+| |-EnumDecl 0x1f2d870 <line:209:1, line:226:3> line:209:1
+| | |-EnumConstantDecl 0x1f2d940 <line:211:5, line:212:17> line:211:5 FP_NAN 'enum (anonymous at /usr/include/math.h:209:1)'
+| | | `-ImplicitCastExpr 0x1f2db50 <line:212:17> 'unsigned int' <IntegralCast>
+| | |   `-IntegerLiteral 0x1f2d920 <col:17> 'int' 0
+| | |-EnumConstantDecl 0x1f2d9b0 <line:214:5, line:215:22> line:214:5 FP_INFINITE 'enum (anonymous at /usr/include/math.h:209:1)'
+| | | `-ImplicitCastExpr 0x1f2db68 <line:215:22> 'unsigned int' <IntegralCast>
+| | |   `-IntegerLiteral 0x1f2d990 <col:22> 'int' 1
+| | |-EnumConstantDecl 0x1f2da20 <line:217:5, line:218:18> line:217:5 FP_ZERO 'enum (anonymous at /usr/include/math.h:209:1)'
+| | | `-ImplicitCastExpr 0x1f2db80 <line:218:18> 'unsigned int' <IntegralCast>
+| | |   `-IntegerLiteral 0x1f2da00 <col:18> 'int' 2
+| | |-EnumConstantDecl 0x1f2da90 <line:220:5, line:221:23> line:220:5 FP_SUBNORMAL 'enum (anonymous at /usr/include/math.h:209:1)'
+| | | `-ImplicitCastExpr 0x1f2db98 <line:221:23> 'unsigned int' <IntegralCast>
+| | |   `-IntegerLiteral 0x1f2da70 <col:23> 'int' 3
+| | `-EnumConstantDecl 0x1f2db00 <line:223:5, line:224:20> line:223:5 FP_NORMAL 'enum (anonymous at /usr/include/math.h:209:1)'
+| |   `-ImplicitCastExpr 0x1f2dbb0 <line:224:20> 'unsigned int' <IntegralCast>
+| |     `-IntegerLiteral 0x1f2dae0 <col:20> 'int' 4
+| |-EnumDecl 0x1f2dbc8 <line:347:9, line:354:1> line:347:9
+| | |-EnumConstantDecl 0x1f2dcc0 <line:349:3, col:13> col:3 _IEEE_ '_LIB_VERSION_TYPE'
+| | | `-UnaryOperator 0x1f2dca0 <col:12, col:13> 'int' prefix '-'
+| | |   `-IntegerLiteral 0x1f2dc80 <col:13> 'int' 1
+| | |-EnumConstantDecl 0x1f2dd10 <line:350:3> col:3 _SVID_ '_LIB_VERSION_TYPE'
+| | |-EnumConstantDecl 0x1f2dd60 <line:351:3> col:3 _XOPEN_ '_LIB_VERSION_TYPE'
+| | |-EnumConstantDecl 0x1f2ddb0 <line:352:3> col:3 _POSIX_ '_LIB_VERSION_TYPE'
+| | `-EnumConstantDecl 0x1f2de00 <line:353:3> col:3 _ISOC_ '_LIB_VERSION_TYPE'
+| |-TypedefDecl 0x1f31720 <line:347:1, line:354:3> col:3 referenced _LIB_VERSION_TYPE 'enum _LIB_VERSION_TYPE':'_LIB_VERSION_TYPE'
+| | `-ElaboratedType 0x1f2de50 'enum _LIB_VERSION_TYPE' sugar
+| |   `-EnumType 0x1f2dc60 '_LIB_VERSION_TYPE'
+| |     `-Enum 0x1f2dbc8 ''
+| |-VarDecl 0x1f317c0 <line:359:1, col:26> col:26 _LIB_VERSION '_LIB_VERSION_TYPE':'_LIB_VERSION_TYPE' extern
+| |-CXXRecordDecl 0x1f31820 <line:370:1, line:380:3> line:370:8 struct __exception definition
+| | |-CXXRecordDecl 0x1f31930 <col:1, col:8> col:8 implicit struct __exception
+| | |-FieldDecl 0x1f319d0 <line:375:5, col:9> col:9 type 'int'
+| | |-FieldDecl 0x1f31a28 <line:376:5, col:11> col:11 name 'char *'
+| | |-FieldDecl 0x1f31a80 <line:377:5, col:12> col:12 arg1 'double'
+| | |-FieldDecl 0x1f31ad8 <line:378:5, col:12> col:12 arg2 'double'
+| | `-FieldDecl 0x1f31b30 <line:379:5, col:12> col:12 retval 'double'
+| `-FunctionDecl 0x1f31d30 <line:383:1, col:55> col:12 matherr 'int (struct __exception *) throw()' extern
+|   `-ParmVarDecl 0x1f31c30 <col:21, col:41> col:41 __exc 'struct __exception *'
+|-CXXRecordDecl 0x1f31de0 </home/labaccount/11-2-17/mlsa/IG/example/CalculoTempo/CalculoTempo_node.h:7:1, line:38:1> line:7:7 referenced class Node definition
+| |-CXXRecordDecl 0x1f31ef0 <col:1, col:7> col:7 implicit referenced class Node
+| |-AccessSpecDecl 0x1f31f80 <line:9:2, col:9> col:2 private
+| |-FieldDecl 0x1f31fb8 <line:10:3, col:7> col:7 referenced xPos 'int'
+| |-FieldDecl 0x1f32010 <col:3, col:13> col:13 referenced yPos 'int'
+| |-FieldDecl 0x1f32080 <line:11:3, col:9> col:9 referenced G 'float'
+| |-FieldDecl 0x1f320d8 <line:12:3, col:9> col:9 referenced H 'float'
+| |-FieldDecl 0x1f32130 <line:13:3, col:9> col:9 referenced F 'float'
+| |-AccessSpecDecl 0x1f32178 <line:14:2, col:8> col:2 public
+| |-FieldDecl 0x1f321b0 <line:15:3, col:7> col:7 referenced tamanho 'int'
+| |-FieldDecl 0x1f32208 <line:16:3, col:7> col:7 id 'int'
+| |-FieldDecl 0x1f32288 <line:17:3, col:9> col:9 referenced parent 'class Node *'
+| |-CXXConstructorDecl 0x1f32340 <line:19:3, col:23> col:3 Node 'void (void)'
+| | |-CXXCtorInitializer Field 0x1f32288 'parent' 'class Node *'
+| | | `-ImplicitCastExpr 0x1f3d470 <col:19> 'class Node *' <NullToPointer>
+| | |   `-IntegerLiteral 0x1f3d420 <col:19> 'int' 0
+| | `-CompoundStmt 0x1f3d4b8 <col:22, col:23>
+| |-CXXConstructorDecl 0x1f32650 <line:22:3, col:118> col:3 Node 'void (int, int, class Node *, int)'
+| | |-ParmVarDecl 0x1f32410 <col:8, col:12> col:12 used x 'int'
+| | |-ParmVarDecl 0x1f32480 <col:14, col:18> col:18 used y 'int'
+| | |-ParmVarDecl 0x1f324f0 <col:20, col:36> col:26 used _parent 'class Node *' cinit
+| | | `-ImplicitCastExpr 0x1f3d3e8 <col:36> 'class Node *' <NullToPointer>
+| | |   `-IntegerLiteral 0x1f3d3c8 <col:36> 'int' 0
+| | |-ParmVarDecl 0x1f32560 <col:38, col:45> col:42 used t 'int' cinit
+| | | `-IntegerLiteral 0x1f3d400 <col:45> 'int' 0
+| | |-CXXCtorInitializer Field 0x1f31fb8 'xPos' 'int'
+| | | `-ImplicitCastExpr 0x1f3dcb0 <col:54> 'int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x1f3d4d0 <col:54> 'int' lvalue ParmVar 0x1f32410 'x' 'int'
+| | |-CXXCtorInitializer Field 0x1f32010 'yPos' 'int'
+| | | `-ImplicitCastExpr 0x1f3dd48 <col:62> 'int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x1f3dcf0 <col:62> 'int' lvalue ParmVar 0x1f32480 'y' 'int'
+| | |-CXXCtorInitializer Field 0x1f32080 'G' 'float'
+| | | `-ImplicitCastExpr 0x1f3ddd8 <col:67> 'float' <IntegralToFloating>
+| | |   `-IntegerLiteral 0x1f3dd88 <col:67> 'int' 0
+| | |-CXXCtorInitializer Field 0x1f320d8 'H' 'float'
+| | | `-ImplicitCastExpr 0x1f3de68 <col:72> 'float' <IntegralToFloating>
+| | |   `-IntegerLiteral 0x1f3de18 <col:72> 'int' 0
+| | |-CXXCtorInitializer Field 0x1f321b0 'tamanho' 'int'
+| | | `-ImplicitCastExpr 0x1f3df00 <col:83> 'int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x1f3dea8 <col:83> 'int' lvalue ParmVar 0x1f32560 't' 'int'
+| | |-CXXCtorInitializer Field 0x1f32208 'id' 'int'
+| | | `-BinaryOperator 0x1f3e050 <col:89, col:99> 'int' '+'
+| | |   |-BinaryOperator 0x1f3dfe8 <col:89, col:91> 'int' '*'
+| | |   | |-ImplicitCastExpr 0x1f3dfb8 <col:89> 'int' <LValueToRValue>
+| | |   | | `-DeclRefExpr 0x1f3df40 <col:89> 'int' lvalue ParmVar 0x1f32480 'y' 'int'
+| | |   | `-ImplicitCastExpr 0x1f3dfd0 <col:91> 'int' <LValueToRValue>
+| | |   |   `-MemberExpr 0x1f3df80 <col:91> 'int' lvalue ->tamanho 0x1f321b0
+| | |   |     `-CXXThisExpr 0x1f3df68 <col:91> 'class Node *' this
+| | |   `-ImplicitCastExpr 0x1f3e038 <col:99> 'int' <LValueToRValue>
+| | |     `-DeclRefExpr 0x1f3e010 <col:99> 'int' lvalue ParmVar 0x1f32410 'x' 'int'
+| | |-CXXCtorInitializer Field 0x1f32288 'parent' 'class Node *'
+| | | `-ImplicitCastExpr 0x1f3e128 <col:109> 'class Node *' <LValueToRValue>
+| | |   `-DeclRefExpr 0x1f3e0d0 <col:109> 'class Node *' lvalue ParmVar 0x1f324f0 '_parent' 'class Node *'
+| | `-CompoundStmt 0x1f3e1a0 <col:117, col:118>
+| |-CXXMethodDecl 0x1f3c5a0 <line:24:3, col:17> col:7 getxPos 'int (void) const'
+| |-CXXMethodDecl 0x1f3c668 <line:25:3, col:17> col:7 getyPos 'int (void) const'
+| |-CXXMethodDecl 0x1f3c760 <line:26:3, col:16> col:9 getG 'float (void) const'
+| |-CXXMethodDecl 0x1f3c828 <line:27:3, col:16> col:9 getH 'float (void) const'
+| |-CXXMethodDecl 0x1f3c8f0 <line:28:3, col:16> col:9 getF 'float (void) const'
+| |-CXXMethodDecl 0x1f3c9f0 <line:29:3, col:21> col:9 getParent 'class Node *(void) const'
+| |-CXXMethodDecl 0x1f3cb70 <line:31:3, col:19> col:8 setxPos 'void (int)'
+| | `-ParmVarDecl 0x1f3caa8 <col:16> col:19 'int'
+| |-CXXMethodDecl 0x1f3ccb8 <line:32:3, col:19> col:8 setyPos 'void (int)'
+| | `-ParmVarDecl 0x1f3cc30 <col:16> col:19 'int'
+| |-CXXMethodDecl 0x1f3ce40 <line:33:3, col:18> col:8 setG 'void (float)'
+| | `-ParmVarDecl 0x1f3cd78 <col:13> col:18 'float'
+| |-CXXMethodDecl 0x1f3cfc0 <line:34:3, col:23> col:8 setH 'void (class Node *)'
+| | `-ParmVarDecl 0x1f3cf00 <col:13, col:19> col:19 meta 'class Node *'
+| |-CXXMethodDecl 0x1f3d108 <line:35:3, col:18> col:8 setF 'void (float)'
+| | `-ParmVarDecl 0x1f3d080 <col:13> col:18 'float'
+| |-CXXMethodDecl 0x1f3d250 <line:36:3, col:23> col:8 setParent 'void (class Node *)'
+| | `-ParmVarDecl 0x1f3d1c8 <col:18, col:22> col:23 'class Node *'
+| `-CXXMethodDecl 0x1f3d320 <line:37:3, col:17> col:8 calculaF 'void (void)'
+|-CXXMethodDecl 0x1f3e1f8 parent 0x1f31de0 prev 0x1f3c5a0 </home/labaccount/11-2-17/mlsa/IG/example/CalculoTempo/CalculoTempo_node.cpp:59:1, line:62:1> line:59:11 used getxPos 'int (void) const'
+| `-CompoundStmt 0x1f3e398 <line:60:1, line:62:1>
+|   `-ReturnStmt 0x1f3e380 <line:61:2, col:15>
+|     `-ImplicitCastExpr 0x1f3e368 <col:9, col:15> 'int' <LValueToRValue>
+|       `-MemberExpr 0x1f3e330 <col:9, col:15> 'const int' lvalue ->xPos 0x1f31fb8
+|         `-CXXThisExpr 0x1f3e318 <col:9> 'const class Node *' this
+|-CXXMethodDecl 0x1f3e3e0 parent 0x1f31de0 prev 0x1f3c668 <line:63:1, line:66:1> line:63:11 used getyPos 'int (void) const'
+| `-CompoundStmt 0x1f3e550 <line:64:1, line:66:1>
+|   `-ReturnStmt 0x1f3e538 <line:65:2, col:15>
+|     `-ImplicitCastExpr 0x1f3e520 <col:9, col:15> 'int' <LValueToRValue>
+|       `-MemberExpr 0x1f3e4e8 <col:9, col:15> 'const int' lvalue ->yPos 0x1f32010
+|         `-CXXThisExpr 0x1f3e4d0 <col:9> 'const class Node *' this
+|-CXXMethodDecl 0x1f3e598 parent 0x1f31de0 prev 0x1f3c760 <line:67:1, line:70:1> line:67:13 getG 'float (void) const'
+| `-CompoundStmt 0x1f3e708 <line:68:1, line:70:1>
+|   `-ReturnStmt 0x1f3e6f0 <line:69:2, col:15>
+|     `-ImplicitCastExpr 0x1f3e6d8 <col:9, col:15> 'float' <LValueToRValue>
+|       `-MemberExpr 0x1f3e6a0 <col:9, col:15> 'const float' lvalue ->G 0x1f32080
+|         `-CXXThisExpr 0x1f3e688 <col:9> 'const class Node *' this
+|-CXXMethodDecl 0x1f3e750 parent 0x1f31de0 prev 0x1f3c828 <line:71:1, line:74:1> line:71:13 getH 'float (void) const'
+| `-CompoundStmt 0x1f3e8c0 <line:72:1, line:74:1>
+|   `-ReturnStmt 0x1f3e8a8 <line:73:2, col:15>
+|     `-ImplicitCastExpr 0x1f3e890 <col:9, col:15> 'float' <LValueToRValue>
+|       `-MemberExpr 0x1f3e858 <col:9, col:15> 'const float' lvalue ->H 0x1f320d8
+|         `-CXXThisExpr 0x1f3e840 <col:9> 'const class Node *' this
+|-CXXMethodDecl 0x1f3e908 parent 0x1f31de0 prev 0x1f3c8f0 <line:75:1, line:78:1> line:75:13 getF 'float (void) const'
+| `-CompoundStmt 0x1f3ea78 <line:76:1, line:78:1>
+|   `-ReturnStmt 0x1f3ea60 <line:77:2, col:15>
+|     `-ImplicitCastExpr 0x1f3ea48 <col:9, col:15> 'float' <LValueToRValue>
+|       `-MemberExpr 0x1f3ea10 <col:9, col:15> 'const float' lvalue ->F 0x1f32130
+|         `-CXXThisExpr 0x1f3e9f8 <col:9> 'const class Node *' this
+|-CXXMethodDecl 0x1f3eac0 parent 0x1f31de0 prev 0x1f3c9f0 <line:79:1, line:82:1> line:79:13 getParent 'class Node *(void) const'
+| `-CompoundStmt 0x1f3ec30 <line:80:1, line:82:1>
+|   `-ReturnStmt 0x1f3ec18 <line:81:2, col:15>
+|     `-ImplicitCastExpr 0x1f3ec00 <col:9, col:15> 'class Node *' <LValueToRValue>
+|       `-MemberExpr 0x1f3ebc8 <col:9, col:15> 'class Node *const' lvalue ->parent 0x1f32288
+|         `-CXXThisExpr 0x1f3ebb0 <col:9> 'const class Node *' this
+|-CXXMethodDecl 0x1f3ed48 parent 0x1f31de0 prev 0x1f3cb70 <line:84:1, line:87:1> line:84:12 setxPos 'void (int)'
+| |-ParmVarDecl 0x1f3ecc0 <col:20, col:24> col:24 used x 'int'
+| `-CompoundStmt 0x1f3eef8 <line:85:1, line:87:1>
+|   `-BinaryOperator 0x1f3eed0 <line:86:2, col:15> 'int' lvalue '='
+|     |-MemberExpr 0x1f3ee58 <col:2, col:8> 'int' lvalue ->xPos 0x1f31fb8
+|     | `-CXXThisExpr 0x1f3ee40 <col:2> 'class Node *' this
+|     `-ImplicitCastExpr 0x1f3eeb8 <col:15> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x1f3ee90 <col:15> 'int' lvalue ParmVar 0x1f3ecc0 'x' 'int'
+|-CXXMethodDecl 0x1f3efb8 parent 0x1f31de0 prev 0x1f3ccb8 <line:88:1, line:91:1> line:88:12 setyPos 'void (int)'
+| |-ParmVarDecl 0x1f3ef30 <col:20, col:24> col:24 used y 'int'
+| `-CompoundStmt 0x1f3f168 <line:89:1, line:91:1>
+|   `-BinaryOperator 0x1f3f140 <line:90:2, col:15> 'int' lvalue '='
+|     |-MemberExpr 0x1f3f0c8 <col:2, col:8> 'int' lvalue ->yPos 0x1f32010
+|     | `-CXXThisExpr 0x1f3f0b0 <col:2> 'class Node *' this
+|     `-ImplicitCastExpr 0x1f3f128 <col:15> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x1f3f100 <col:15> 'int' lvalue ParmVar 0x1f3ef30 'y' 'int'
+|-CXXMethodDecl 0x1f3f228 parent 0x1f31de0 prev 0x1f3ce40 <line:92:1, line:95:1> line:92:12 setG 'void (float)'
+| |-ParmVarDecl 0x1f3f1a0 <col:17, col:23> col:23 used G 'float'
+| `-CompoundStmt 0x1f3f3d8 <line:93:1, line:95:1>
+|   `-BinaryOperator 0x1f3f3b0 <line:94:2, col:12> 'float' lvalue '='
+|     |-MemberExpr 0x1f3f338 <col:2, col:8> 'float' lvalue ->G 0x1f32080
+|     | `-CXXThisExpr 0x1f3f320 <col:2> 'class Node *' this
+|     `-ImplicitCastExpr 0x1f3f398 <col:12> 'float' <LValueToRValue>
+|       `-DeclRefExpr 0x1f3f370 <col:12> 'float' lvalue ParmVar 0x1f3f1a0 'G' 'float'
+|-CXXMethodDecl 0x1f3f498 parent 0x1f31de0 prev 0x1f3cfc0 <line:96:1, line:99:1> line:96:12 setH 'void (class Node *)'
+| |-ParmVarDecl 0x1f3f410 <col:17, col:23> col:23 used meta 'class Node *'
+| `-CompoundStmt 0x1f3fde8 <line:97:1, line:99:1>
+|   `-BinaryOperator 0x1f3fdc0 <line:98:2, col:138> 'float' lvalue '='
+|     |-MemberExpr 0x1f3f5a8 <col:2, col:8> 'float' lvalue ->H 0x1f320d8
+|     | `-CXXThisExpr 0x1f3f590 <col:2> 'class Node *' this
+|     `-ImplicitCastExpr 0x1f3fda8 <col:12, col:138> 'float' <FloatingCast>
+|       `-ParenExpr 0x1f3fd88 <col:12, col:138> 'double'
+|         `-CallExpr 0x1f3fd40 <col:13, col:137> 'double'
+|           |-ImplicitCastExpr 0x1f3fd28 <col:13> 'double (*)(double) throw()' <FunctionToPointerDecay>
+|           | `-DeclRefExpr 0x1f3fc90 <col:13> 'double (double) throw()' lvalue Function 0x1eec630 'sqrt' 'double (double) throw()'
+|           `-ImplicitCastExpr 0x1f3fd70 <col:18, col:136> 'double' <IntegralToFloating>
+|             `-BinaryOperator 0x1f3fc68 <col:18, col:136> 'int' '+'
+|               |-ParenExpr 0x1f3f930 <col:18, col:76> 'int'
+|               | `-BinaryOperator 0x1f3f908 <col:19, col:75> 'int' '*'
+|               |   |-ParenExpr 0x1f3f780 <col:19, col:46> 'int'
+|               |   | `-BinaryOperator 0x1f3f758 <col:20, col:42> 'int' '-'
+|               |   |   |-CXXMemberCallExpr 0x1f3f6b0 <col:20, col:34> 'int'
+|               |   |   | `-MemberExpr 0x1f3f678 <col:20, col:26> '<bound member function type>' ->getxPos 0x1f3e1f8
+|               |   |   |   `-ImplicitCastExpr 0x1f3f6d8 <col:20> 'const class Node *' <NoOp>
+|               |   |   |     `-ImplicitCastExpr 0x1f3f660 <col:20> 'class Node *' <LValueToRValue>
+|               |   |   |       `-DeclRefExpr 0x1f3f638 <col:20> 'class Node *' lvalue ParmVar 0x1f3f410 'meta' 'class Node *'
+|               |   |   `-ImplicitCastExpr 0x1f3f740 <col:36, col:42> 'int' <LValueToRValue>
+|               |   |     `-MemberExpr 0x1f3f708 <col:36, col:42> 'int' lvalue ->xPos 0x1f31fb8
+|               |   |       `-CXXThisExpr 0x1f3f6f0 <col:36> 'class Node *' this
+|               |   `-ParenExpr 0x1f3f8e8 <col:48, col:75> 'int'
+|               |     `-BinaryOperator 0x1f3f8c0 <col:49, col:71> 'int' '-'
+|               |       |-CXXMemberCallExpr 0x1f3f818 <col:49, col:63> 'int'
+|               |       | `-MemberExpr 0x1f3f7e0 <col:49, col:55> '<bound member function type>' ->getxPos 0x1f3e1f8
+|               |       |   `-ImplicitCastExpr 0x1f3f840 <col:49> 'const class Node *' <NoOp>
+|               |       |     `-ImplicitCastExpr 0x1f3f7c8 <col:49> 'class Node *' <LValueToRValue>
+|               |       |       `-DeclRefExpr 0x1f3f7a0 <col:49> 'class Node *' lvalue ParmVar 0x1f3f410 'meta' 'class Node *'
+|               |       `-ImplicitCastExpr 0x1f3f8a8 <col:65, col:71> 'int' <LValueToRValue>
+|               |         `-MemberExpr 0x1f3f870 <col:65, col:71> 'int' lvalue ->xPos 0x1f31fb8
+|               |           `-CXXThisExpr 0x1f3f858 <col:65> 'class Node *' this
+|               `-ParenExpr 0x1f3fc48 <col:78, col:136> 'int'
+|                 `-BinaryOperator 0x1f3fc20 <col:79, col:135> 'int' '*'
+|                   |-ParenExpr 0x1f3fa98 <col:79, col:106> 'int'
+|                   | `-BinaryOperator 0x1f3fa70 <col:80, col:102> 'int' '-'
+|                   |   |-CXXMemberCallExpr 0x1f3f9c8 <col:80, col:94> 'int'
+|                   |   | `-MemberExpr 0x1f3f990 <col:80, col:86> '<bound member function type>' ->getyPos 0x1f3e3e0
+|                   |   |   `-ImplicitCastExpr 0x1f3f9f0 <col:80> 'const class Node *' <NoOp>
+|                   |   |     `-ImplicitCastExpr 0x1f3f978 <col:80> 'class Node *' <LValueToRValue>
+|                   |   |       `-DeclRefExpr 0x1f3f950 <col:80> 'class Node *' lvalue ParmVar 0x1f3f410 'meta' 'class Node *'
+|                   |   `-ImplicitCastExpr 0x1f3fa58 <col:96, col:102> 'int' <LValueToRValue>
+|                   |     `-MemberExpr 0x1f3fa20 <col:96, col:102> 'int' lvalue ->yPos 0x1f32010
+|                   |       `-CXXThisExpr 0x1f3fa08 <col:96> 'class Node *' this
+|                   `-ParenExpr 0x1f3fc00 <col:108, col:135> 'int'
+|                     `-BinaryOperator 0x1f3fbd8 <col:109, col:131> 'int' '-'
+|                       |-CXXMemberCallExpr 0x1f3fb30 <col:109, col:123> 'int'
+|                       | `-MemberExpr 0x1f3faf8 <col:109, col:115> '<bound member function type>' ->getyPos 0x1f3e3e0
+|                       |   `-ImplicitCastExpr 0x1f3fb58 <col:109> 'const class Node *' <NoOp>
+|                       |     `-ImplicitCastExpr 0x1f3fae0 <col:109> 'class Node *' <LValueToRValue>
+|                       |       `-DeclRefExpr 0x1f3fab8 <col:109> 'class Node *' lvalue ParmVar 0x1f3f410 'meta' 'class Node *'
+|                       `-ImplicitCastExpr 0x1f3fbc0 <col:125, col:131> 'int' <LValueToRValue>
+|                         `-MemberExpr 0x1f3fb88 <col:125, col:131> 'int' lvalue ->yPos 0x1f32010
+|                           `-CXXThisExpr 0x1f3fb70 <col:125> 'class Node *' this
+|-CXXMethodDecl 0x1f3fea8 parent 0x1f31de0 prev 0x1f3d108 <line:100:1, line:103:1> line:100:12 setF 'void (float)'
+| |-ParmVarDecl 0x1f3fe20 <col:17, col:23> col:23 used F 'float'
+| `-CompoundStmt 0x1f40058 <line:101:1, line:103:1>
+|   `-BinaryOperator 0x1f40030 <line:102:2, col:12> 'float' lvalue '='
+|     |-MemberExpr 0x1f3ffb8 <col:2, col:8> 'float' lvalue ->F 0x1f32130
+|     | `-CXXThisExpr 0x1f3ffa0 <col:2> 'class Node *' this
+|     `-ImplicitCastExpr 0x1f40018 <col:12> 'float' <LValueToRValue>
+|       `-DeclRefExpr 0x1f3fff0 <col:12> 'float' lvalue ParmVar 0x1f3fe20 'F' 'float'
+|-CXXMethodDecl 0x1f40118 parent 0x1f31de0 prev 0x1f3d250 <line:104:1, line:107:1> line:104:12 setParent 'void (class Node *)'
+| |-ParmVarDecl 0x1f40090 <col:22, col:28> col:28 used parent 'class Node *'
+| `-CompoundStmt 0x1f402c8 <line:105:1, line:107:1>
+|   `-BinaryOperator 0x1f402a0 <line:106:2, col:17> 'class Node *' lvalue '='
+|     |-MemberExpr 0x1f40228 <col:2, col:8> 'class Node *' lvalue ->parent 0x1f32288
+|     | `-CXXThisExpr 0x1f40210 <col:2> 'class Node *' this
+|     `-ImplicitCastExpr 0x1f40288 <col:17> 'class Node *' <LValueToRValue>
+|       `-DeclRefExpr 0x1f40260 <col:17> 'class Node *' lvalue ParmVar 0x1f40090 'parent' 'class Node *'
+`-CXXMethodDecl 0x1f40310 parent 0x1f31de0 prev 0x1f3d320 <line:108:1, line:111:1> line:108:12 calculaF 'void (void)'
+  `-CompoundStmt 0x1f40570 <line:109:1, line:111:1>
+    `-BinaryOperator 0x1f40548 <line:110:2, col:28> 'float' lvalue '='
+      |-MemberExpr 0x1f40418 <col:2, col:8> 'float' lvalue ->F 0x1f32130
+      | `-CXXThisExpr 0x1f40400 <col:2> 'class Node *' this
+      `-BinaryOperator 0x1f40520 <col:12, col:28> 'float' '+'
+        |-ImplicitCastExpr 0x1f404f0 <col:12, col:18> 'float' <LValueToRValue>
+        | `-MemberExpr 0x1f40468 <col:12, col:18> 'float' lvalue ->G 0x1f32080
+        |   `-CXXThisExpr 0x1f40450 <col:12> 'class Node *' this
+        `-ImplicitCastExpr 0x1f40508 <col:22, col:28> 'float' <LValueToRValue>
+          `-MemberExpr 0x1f404b8 <col:22, col:28> 'float' lvalue ->H 0x1f320d8
+            `-CXXThisExpr 0x1f404a0 <col:22> 'class Node *' this

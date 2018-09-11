@@ -1,0 +1,83 @@
+\hypertarget{Tmain_8cpp}{}\section{Tmain.\+cpp File Reference}
+\label{Tmain_8cpp}\index{Tmain.\+cpp@{Tmain.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}Time.\+h\char`\"{}}\\*
+Include dependency graph for Tmain.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{Tmain_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Tmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Tmain.\+cpp@{Tmain.\+cpp}!main@{main}}
+\index{main@{main}!Tmain.\+cpp@{Tmain.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Tmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Tmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+6            \{
+7    \textcolor{comment}{// Ordinary object}
+8    \hyperlink{classTime}{Time} t1(1, 2, 3);
+9    t1.print();  \textcolor{comment}{// 01:02:03}
+10  
+11    \textcolor{comment}{// Object pointer}
+12    \hyperlink{classTime}{Time}* ptrT1 = &t1;
+13    (*ptrT1).\hyperlink{classTime_acd9b7522e50fc667d81468219c5756e8}{print}(); \textcolor{comment}{// 01:02:03}
+14    ptrT1->\hyperlink{classTime_acd9b7522e50fc667d81468219c5756e8}{print}();   \textcolor{comment}{// 01:02:03}
+15       \textcolor{comment}{// anObjectPtr->member is the same as (*anObjectPtr).member}
+16  
+17    \textcolor{comment}{// Object reference}
+18    \hyperlink{classTime}{Time}& refT1 = t1; \textcolor{comment}{// refT1 is an alias to t1}
+19    refT1.\hyperlink{classTime_acd9b7522e50fc667d81468219c5756e8}{print}();    \textcolor{comment}{// 01:02:03}
+20  
+21    \textcolor{comment}{// Dynamic allocation}
+22    \hyperlink{classTime}{Time}* ptrT2 = \textcolor{keyword}{new} \hyperlink{classTime}{Time}(4, 5, 6); \textcolor{comment}{// allocate dynamically}
+23    ptrT2->\hyperlink{classTime_acd9b7522e50fc667d81468219c5756e8}{print}(); \textcolor{comment}{// 04:05:06}
+24    \textcolor{keyword}{delete} ptrT2;   \textcolor{comment}{// deallocate}
+25  
+26    \textcolor{comment}{// Object Array}
+27    \hyperlink{classTime}{Time} tArray1[2];    \textcolor{comment}{// tArray1 is an array of Time with 2 elements}
+28                        \textcolor{comment}{// Use default constructor for all elements}
+29    tArray1[0].\hyperlink{classTime_acd9b7522e50fc667d81468219c5756e8}{print}();  \textcolor{comment}{// 00:00:00}
+30    tArray1[1].\hyperlink{classTime_acd9b7522e50fc667d81468219c5756e8}{print}();  \textcolor{comment}{// 00:00:00}
+31  
+32    \hyperlink{classTime}{Time} tArray2[2] = \{\hyperlink{classTime}{Time}(7, 8, 9), \hyperlink{classTime}{Time}(10)\}; \textcolor{comment}{// Invoke constructor}
+33    tArray2[0].\hyperlink{classTime_acd9b7522e50fc667d81468219c5756e8}{print}();  \textcolor{comment}{// 07:08:09}
+34    tArray2[1].\hyperlink{classTime_acd9b7522e50fc667d81468219c5756e8}{print}();  \textcolor{comment}{// 10:00:00}
+35  
+36    \hyperlink{classTime}{Time}* ptrTArray3 = \textcolor{keyword}{new} \hyperlink{classTime}{Time}[2]; \textcolor{comment}{// ptrTArray3 is a pointer to Time}
+37             \textcolor{comment}{// Dynamically allocate an array of Time with 2 elements via new[]}
+38    ptrTArray3[0].\hyperlink{classTime_acd9b7522e50fc667d81468219c5756e8}{print}();  \textcolor{comment}{// 00:00:00}
+39    ptrTArray3[1].\hyperlink{classTime_acd9b7522e50fc667d81468219c5756e8}{print}();  \textcolor{comment}{// 00:00:00}
+40    \textcolor{keyword}{delete}[] ptrTArray3;    \textcolor{comment}{// Deallocate dynamic array via delete[]}
+41  
+42    \textcolor{comment}{// C++11 syntax, compile with -std=c++0x}
+43    \hyperlink{classTime}{Time}* ptrTArray4 = \textcolor{keyword}{new} \hyperlink{classTime}{Time}[2] \{\hyperlink{classTime}{Time}(11, 12, 13), \hyperlink{classTime}{Time}(14)\}; \textcolor{comment}{// Invoke constructor}
+44    ptrTArray4->\hyperlink{classTime_acd9b7522e50fc667d81468219c5756e8}{print}();        \textcolor{comment}{// 11:12:13}
+45    (ptrTArray4 + 1)->print();  \textcolor{comment}{// 14:00:00}
+46    \textcolor{keyword}{delete}[] ptrTArray4;
+47 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{Tmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

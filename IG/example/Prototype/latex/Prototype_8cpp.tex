@@ -1,0 +1,101 @@
+\hypertarget{Prototype_8cpp}{}\section{Prototype.\+cpp File Reference}
+\label{Prototype_8cpp}\index{Prototype.\+cpp@{Prototype.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+Include dependency graph for Prototype.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Prototype_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classRecord}{Record}
+\item 
+class \hyperlink{classCarRecord}{Car\+Record}
+\item 
+class \hyperlink{classBikeRecord}{Bike\+Record}
+\item 
+class \hyperlink{classPersonRecord}{Person\+Record}
+\item 
+class \hyperlink{classRecordFactory}{Record\+Factory}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{Prototype_8cpp_ad7dc06ed9ae2cf0a910eed652dca9a44}{Record\+Type} \{ \hyperlink{Prototype_8cpp_ad7dc06ed9ae2cf0a910eed652dca9a44a5fc54ebcb1dd4bf1e1b93cbc77b57b40}{C\+AR}, 
+\hyperlink{Prototype_8cpp_ad7dc06ed9ae2cf0a910eed652dca9a44a5728381009aee1446c2b7d19c35c9c15}{B\+I\+KE}, 
+\hyperlink{Prototype_8cpp_ad7dc06ed9ae2cf0a910eed652dca9a44ac9878c552c3ddcde707fff8aefa250ae}{P\+E\+R\+S\+ON}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Prototype_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\index{Prototype.\+cpp@{Prototype.\+cpp}!Record\+Type@{Record\+Type}}
+\index{Record\+Type@{Record\+Type}!Prototype.\+cpp@{Prototype.\+cpp}}
+\subsubsection[{\texorpdfstring{Record\+Type}{RecordType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Record\+Type}}\hypertarget{Prototype_8cpp_ad7dc06ed9ae2cf0a910eed652dca9a44}{}\label{Prototype_8cpp_ad7dc06ed9ae2cf0a910eed652dca9a44}
+Opaque record type, avoids exposing concrete implementations \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{C\+AR@{C\+AR}!Prototype.\+cpp@{Prototype.\+cpp}}\index{Prototype.\+cpp@{Prototype.\+cpp}!C\+AR@{C\+AR}}\item[{\em 
+C\+AR\hypertarget{Prototype_8cpp_ad7dc06ed9ae2cf0a910eed652dca9a44a5fc54ebcb1dd4bf1e1b93cbc77b57b40}{}\label{Prototype_8cpp_ad7dc06ed9ae2cf0a910eed652dca9a44a5fc54ebcb1dd4bf1e1b93cbc77b57b40}
+}]\index{B\+I\+KE@{B\+I\+KE}!Prototype.\+cpp@{Prototype.\+cpp}}\index{Prototype.\+cpp@{Prototype.\+cpp}!B\+I\+KE@{B\+I\+KE}}\item[{\em 
+B\+I\+KE\hypertarget{Prototype_8cpp_ad7dc06ed9ae2cf0a910eed652dca9a44a5728381009aee1446c2b7d19c35c9c15}{}\label{Prototype_8cpp_ad7dc06ed9ae2cf0a910eed652dca9a44a5728381009aee1446c2b7d19c35c9c15}
+}]\index{P\+E\+R\+S\+ON@{P\+E\+R\+S\+ON}!Prototype.\+cpp@{Prototype.\+cpp}}\index{Prototype.\+cpp@{Prototype.\+cpp}!P\+E\+R\+S\+ON@{P\+E\+R\+S\+ON}}\item[{\em 
+P\+E\+R\+S\+ON\hypertarget{Prototype_8cpp_ad7dc06ed9ae2cf0a910eed652dca9a44ac9878c552c3ddcde707fff8aefa250ae}{}\label{Prototype_8cpp_ad7dc06ed9ae2cf0a910eed652dca9a44ac9878c552c3ddcde707fff8aefa250ae}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+94 \{
+95     \hyperlink{Prototype_8cpp_ad7dc06ed9ae2cf0a910eed652dca9a44a5fc54ebcb1dd4bf1e1b93cbc77b57b40}{CAR},
+96     \hyperlink{Prototype_8cpp_ad7dc06ed9ae2cf0a910eed652dca9a44a5728381009aee1446c2b7d19c35c9c15}{BIKE},
+97     \hyperlink{Prototype_8cpp_ad7dc06ed9ae2cf0a910eed652dca9a44ac9878c552c3ddcde707fff8aefa250ae}{PERSON}
+98 \};
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\index{Prototype.\+cpp@{Prototype.\+cpp}!main@{main}}
+\index{main@{main}!Prototype.\+cpp@{Prototype.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Prototype_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Prototype_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+121 \{
+122     \hyperlink{classRecordFactory}{RecordFactory} recordFactory;
+123 
+124     \textcolor{keyword}{auto} record = recordFactory.\hyperlink{classRecordFactory_a0606dd9c40bc58a23f995bf39b4e5444}{createRecord}(\hyperlink{Prototype_8cpp_ad7dc06ed9ae2cf0a910eed652dca9a44a5fc54ebcb1dd4bf1e1b93cbc77b57b40}{CAR});
+125     record->\hyperlink{classRecord_ad218b1bea934fb19a23a35b0b987e033}{print}();
+126 
+127     record = recordFactory.\hyperlink{classRecordFactory_a0606dd9c40bc58a23f995bf39b4e5444}{createRecord}(\hyperlink{Prototype_8cpp_ad7dc06ed9ae2cf0a910eed652dca9a44a5728381009aee1446c2b7d19c35c9c15}{BIKE});
+128     record->\hyperlink{classRecord_ad218b1bea934fb19a23a35b0b987e033}{print}();
+129 
+130     record = recordFactory.\hyperlink{classRecordFactory_a0606dd9c40bc58a23f995bf39b4e5444}{createRecord}(\hyperlink{Prototype_8cpp_ad7dc06ed9ae2cf0a910eed652dca9a44ac9878c552c3ddcde707fff8aefa250ae}{PERSON});
+131     record->\hyperlink{classRecord_ad218b1bea934fb19a23a35b0b987e033}{print}();
+132 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Prototype_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

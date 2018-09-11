@@ -1,0 +1,71 @@
+\hypertarget{Visitor_8cpp}{}\section{Visitor.\+cpp File Reference}
+\label{Visitor_8cpp}\index{Visitor.\+cpp@{Visitor.\+cpp}}
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+Include dependency graph for Visitor.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{Visitor_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structCarElementVisitor}{Car\+Element\+Visitor}
+\item 
+struct \hyperlink{structCarElement}{Car\+Element}
+\item 
+class \hyperlink{classWheel}{Wheel}
+\item 
+class \hyperlink{classEngine}{Engine}
+\item 
+class \hyperlink{classBody}{Body}
+\item 
+class \hyperlink{classCar}{Car}
+\item 
+class \hyperlink{classCarElementPrintVisitor}{Car\+Element\+Print\+Visitor}
+\item 
+class \hyperlink{classCarElementDoVisitor}{Car\+Element\+Do\+Visitor}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Visitor_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Visitor.\+cpp@{Visitor.\+cpp}!main@{main}}
+\index{main@{main}!Visitor.\+cpp@{Visitor.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Visitor_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Visitor_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+160 \{
+161   \hyperlink{classCar}{Car} car;
+162   \hyperlink{classCarElementPrintVisitor}{CarElementPrintVisitor} printVisitor;
+163   \hyperlink{classCarElementDoVisitor}{CarElementDoVisitor} doVisitor;
+164   
+165   printVisitor.\hyperlink{classCarElementPrintVisitor_a99cb1306db917e1980d3f8c414acbc93}{visitCar}(car);
+166   doVisitor.\hyperlink{classCarElementDoVisitor_a067a72ca642eb15ebd11f975f9be2891}{visitCar}(car);
+167 
+168   \textcolor{keywordflow}{return} 0;
+169 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Visitor_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

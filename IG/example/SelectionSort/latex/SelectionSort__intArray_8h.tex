@@ -1,0 +1,107 @@
+\hypertarget{SelectionSort__intArray_8h}{}\section{Selection\+Sort\+\_\+int\+Array.\+h File Reference}
+\label{SelectionSort__intArray_8h}\index{Selection\+Sort\+\_\+int\+Array.\+h@{Selection\+Sort\+\_\+int\+Array.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+Include dependency graph for Selection\+Sort\+\_\+int\+Array.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{SelectionSort__intArray_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{SelectionSort__intArray_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{SelectionSort__intArray_8h_a3ecb30d4a656177910184bb2489afe90}{get\+Int\+Array} (int a\mbox{[}$\,$\mbox{]}, int nmax, int sentinel)
+\item 
+void \hyperlink{SelectionSort__intArray_8h_a84fa1f32b691605131bea795bba242bd}{print\+Int\+Array} (int a\mbox{[}$\,$\mbox{]}, int n)
+\item 
+void \hyperlink{SelectionSort__intArray_8h_a15ddf346bc3418b47965de88cf65d9f4}{selection\+Sort} (int a\mbox{[}$\,$\mbox{]}, int n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Selection\+Sort\+\_\+int\+Array.\+h@{Selection\+Sort\+\_\+int\+Array.\+h}!get\+Int\+Array@{get\+Int\+Array}}
+\index{get\+Int\+Array@{get\+Int\+Array}!Selection\+Sort\+\_\+int\+Array.\+h@{Selection\+Sort\+\_\+int\+Array.\+h}}
+\subsubsection[{\texorpdfstring{get\+Int\+Array(int a[], int nmax, int sentinel)}{getIntArray(int a[], int nmax, int sentinel)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Int\+Array (
+\begin{DoxyParamCaption}
+\item[{int}]{a\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{nmax, }
+\item[{int}]{sentinel}
+\end{DoxyParamCaption}
+)}\hypertarget{SelectionSort__intArray_8h_a3ecb30d4a656177910184bb2489afe90}{}\label{SelectionSort__intArray_8h_a3ecb30d4a656177910184bb2489afe90}
+
+\begin{DoxyCode}
+22 \{
+23   \textcolor{keywordtype}{int} n = 0;
+24   \textcolor{keywordtype}{int} temp;
+25 
+26   \textcolor{keywordflow}{do} \{
+27     printf(\textcolor{stringliteral}{"Enter integer [%d to terminate] : "}, sentinel);
+28     scanf(\textcolor{stringliteral}{"%d"}, &temp);
+29     \textcolor{keywordflow}{if} (temp==sentinel) \textcolor{keywordflow}{break};
+30     \textcolor{keywordflow}{if} (n==nmax)
+31       printf(\textcolor{stringliteral}{"array is full\(\backslash\)n"});
+32     \textcolor{keywordflow}{else} 
+33       a[n++] = temp;
+34   \}\textcolor{keywordflow}{while} (1);
+35   \textcolor{keywordflow}{return} n;
+36 \}
+\end{DoxyCode}
+\index{Selection\+Sort\+\_\+int\+Array.\+h@{Selection\+Sort\+\_\+int\+Array.\+h}!print\+Int\+Array@{print\+Int\+Array}}
+\index{print\+Int\+Array@{print\+Int\+Array}!Selection\+Sort\+\_\+int\+Array.\+h@{Selection\+Sort\+\_\+int\+Array.\+h}}
+\subsubsection[{\texorpdfstring{print\+Int\+Array(int a[], int n)}{printIntArray(int a[], int n)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+Int\+Array (
+\begin{DoxyParamCaption}
+\item[{int}]{a\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{SelectionSort__intArray_8h_a84fa1f32b691605131bea795bba242bd}{}\label{SelectionSort__intArray_8h_a84fa1f32b691605131bea795bba242bd}
+
+\begin{DoxyCode}
+8 \{
+9   \textcolor{keywordtype}{int} i;
+10 
+11   \textcolor{keywordflow}{for} (i=0; i<n; )\{
+12     printf(\textcolor{stringliteral}{"\(\backslash\)t%d "}, a[i++]);
+13     \textcolor{keywordflow}{if} (i%5==0)
+14       printf(\textcolor{stringliteral}{"\(\backslash\)n"});
+15   \}
+16   printf(\textcolor{stringliteral}{"\(\backslash\)n"});
+17 \}
+\end{DoxyCode}
+\index{Selection\+Sort\+\_\+int\+Array.\+h@{Selection\+Sort\+\_\+int\+Array.\+h}!selection\+Sort@{selection\+Sort}}
+\index{selection\+Sort@{selection\+Sort}!Selection\+Sort\+\_\+int\+Array.\+h@{Selection\+Sort\+\_\+int\+Array.\+h}}
+\subsubsection[{\texorpdfstring{selection\+Sort(int a[], int n)}{selectionSort(int a[], int n)}}]{\setlength{\rightskip}{0pt plus 5cm}void selection\+Sort (
+\begin{DoxyParamCaption}
+\item[{int}]{a\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{SelectionSort__intArray_8h_a15ddf346bc3418b47965de88cf65d9f4}{}\label{SelectionSort__intArray_8h_a15ddf346bc3418b47965de88cf65d9f4}
+
+\begin{DoxyCode}
+43 \{
+44   \textcolor{keywordtype}{int} lcv;
+45   \textcolor{keywordtype}{int} rh;      \textcolor{comment}{/*Elements in interval rh..n-1 are in their final position*/}
+46   \textcolor{keywordtype}{int} where;   \textcolor{comment}{/*Position where we have current maximum*/}
+47   \textcolor{keywordtype}{int} temp;    \textcolor{comment}{/*Used for swapping*/}
+48   
+49   \textcolor{keywordflow}{for}(rh=n-1;rh>0;rh--)\{
+50     \textcolor{comment}{/*Find position of largest element in range 0..rh*/}
+51     where = 0;
+52     \textcolor{keywordflow}{for} (lcv=1;lcv<=rh;lcv++)
+53       \textcolor{keywordflow}{if} (a[lcv]>a[where])
+54     where = lcv;
+55     temp = a[where];
+56     a[where] = a[rh];
+57     a[rh] = temp;
+58   \}
+59 \}
+\end{DoxyCode}

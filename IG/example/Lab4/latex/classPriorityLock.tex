@@ -1,0 +1,94 @@
+\hypertarget{classPriorityLock}{}\section{Priority\+Lock Class Reference}
+\label{classPriorityLock}\index{Priority\+Lock@{Priority\+Lock}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classPriorityLock_a8891b1ac7ee3de2ff39a0dd1791349fb}{enter} (int priority\+\_\+level)
+\item 
+void \hyperlink{classPriorityLock_a572356166105b668acfebe6549da71d2}{exit} ()
+\item 
+\hyperlink{classPriorityLock_a88083d767c98de77f22cd9243304652d}{Priority\+Lock} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+priority\+\_\+queue$<$ int $>$ \hyperlink{classPriorityLock_ae1c22f9c1af23bfdc5db44bf52888c32}{wait\+\_\+list}
+\item 
+pthread\+\_\+mutex\+\_\+t \hyperlink{classPriorityLock_ae9ab1ff618b71f318e9cd7b8407f44c0}{lock}
+\item 
+pthread\+\_\+cond\+\_\+t \hyperlink{classPriorityLock_ab79a742b197e6d569299a77234590ebd}{pop\+Top}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Priority\+Lock@{Priority\+Lock}!Priority\+Lock@{Priority\+Lock}}
+\index{Priority\+Lock@{Priority\+Lock}!Priority\+Lock@{Priority\+Lock}}
+\subsubsection[{\texorpdfstring{Priority\+Lock()}{PriorityLock()}}]{\setlength{\rightskip}{0pt plus 5cm}Priority\+Lock\+::\+Priority\+Lock (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classPriorityLock_a88083d767c98de77f22cd9243304652d}{}\label{classPriorityLock_a88083d767c98de77f22cd9243304652d}
+
+\begin{DoxyCode}
+42 \{
+43    \textcolor{comment}{//initialize variables                                                                                  
+                                                                                                       }
+44    \hyperlink{classPriorityLock_ae9ab1ff618b71f318e9cd7b8407f44c0}{lock} = PTHREAD\_MUTEX\_INITIALIZER;
+45    \hyperlink{classPriorityLock_ab79a742b197e6d569299a77234590ebd}{popTop} = PTHREAD\_COND\_INITIALIZER;
+46 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Priority\+Lock@{Priority\+Lock}!enter@{enter}}
+\index{enter@{enter}!Priority\+Lock@{Priority\+Lock}}
+\subsubsection[{\texorpdfstring{enter(int priority\+\_\+level)}{enter(int priority_level)}}]{\setlength{\rightskip}{0pt plus 5cm}void Priority\+Lock\+::enter (
+\begin{DoxyParamCaption}
+\item[{int}]{priority\+\_\+level}
+\end{DoxyParamCaption}
+)}\hypertarget{classPriorityLock_a8891b1ac7ee3de2ff39a0dd1791349fb}{}\label{classPriorityLock_a8891b1ac7ee3de2ff39a0dd1791349fb}
+
+\begin{DoxyCode}
+49 \{
+50    pthread\_mutex\_lock(&\hyperlink{classPriorityLock_ae9ab1ff618b71f318e9cd7b8407f44c0}{lock});
+51    \hyperlink{classPriorityLock_ae1c22f9c1af23bfdc5db44bf52888c32}{wait\_list}.push(priority\_level);
+52    \textcolor{keywordflow}{while}(\hyperlink{classPriorityLock_ae1c22f9c1af23bfdc5db44bf52888c32}{wait\_list}.top() != priority\_level)\{
+53       pthread\_cond\_wait(&\hyperlink{classPriorityLock_ab79a742b197e6d569299a77234590ebd}{popTop}, &\hyperlink{classPriorityLock_ae9ab1ff618b71f318e9cd7b8407f44c0}{lock});
+54    \}
+55    cout << \textcolor{stringliteral}{"Length of priority queue: "} << \hyperlink{classPriorityLock_ae1c22f9c1af23bfdc5db44bf52888c32}{wait\_list}.size() << endl;
+56    pthread\_mutex\_unlock(&\hyperlink{classPriorityLock_ae9ab1ff618b71f318e9cd7b8407f44c0}{lock});
+57 \}
+\end{DoxyCode}
+\index{Priority\+Lock@{Priority\+Lock}!exit@{exit}}
+\index{exit@{exit}!Priority\+Lock@{Priority\+Lock}}
+\subsubsection[{\texorpdfstring{exit()}{exit()}}]{\setlength{\rightskip}{0pt plus 5cm}void Priority\+Lock\+::exit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classPriorityLock_a572356166105b668acfebe6549da71d2}{}\label{classPriorityLock_a572356166105b668acfebe6549da71d2}
+
+\begin{DoxyCode}
+60 \{
+61    pthread\_mutex\_lock(&\hyperlink{classPriorityLock_ae9ab1ff618b71f318e9cd7b8407f44c0}{lock});
+62    \hyperlink{classPriorityLock_ae1c22f9c1af23bfdc5db44bf52888c32}{wait\_list}.pop();
+63    pthread\_cond\_broadcast(&\hyperlink{classPriorityLock_ab79a742b197e6d569299a77234590ebd}{popTop});
+64    pthread\_mutex\_unlock(&\hyperlink{classPriorityLock_ae9ab1ff618b71f318e9cd7b8407f44c0}{lock});
+65 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Priority\+Lock@{Priority\+Lock}!lock@{lock}}
+\index{lock@{lock}!Priority\+Lock@{Priority\+Lock}}
+\subsubsection[{\texorpdfstring{lock}{lock}}]{\setlength{\rightskip}{0pt plus 5cm}pthread\+\_\+mutex\+\_\+t Priority\+Lock\+::lock\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPriorityLock_ae9ab1ff618b71f318e9cd7b8407f44c0}{}\label{classPriorityLock_ae9ab1ff618b71f318e9cd7b8407f44c0}
+\index{Priority\+Lock@{Priority\+Lock}!pop\+Top@{pop\+Top}}
+\index{pop\+Top@{pop\+Top}!Priority\+Lock@{Priority\+Lock}}
+\subsubsection[{\texorpdfstring{pop\+Top}{popTop}}]{\setlength{\rightskip}{0pt plus 5cm}pthread\+\_\+cond\+\_\+t Priority\+Lock\+::pop\+Top\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPriorityLock_ab79a742b197e6d569299a77234590ebd}{}\label{classPriorityLock_ab79a742b197e6d569299a77234590ebd}
+\index{Priority\+Lock@{Priority\+Lock}!wait\+\_\+list@{wait\+\_\+list}}
+\index{wait\+\_\+list@{wait\+\_\+list}!Priority\+Lock@{Priority\+Lock}}
+\subsubsection[{\texorpdfstring{wait\+\_\+list}{wait_list}}]{\setlength{\rightskip}{0pt plus 5cm}priority\+\_\+queue$<$int$>$ Priority\+Lock\+::wait\+\_\+list\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPriorityLock_ae1c22f9c1af23bfdc5db44bf52888c32}{}\label{classPriorityLock_ae1c22f9c1af23bfdc5db44bf52888c32}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Lab4_8cpp}{Lab4.\+cpp}\end{DoxyCompactItemize}

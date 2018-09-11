@@ -1,0 +1,82 @@
+\hypertarget{Polymorphism_8cpp}{}\section{Polymorphism.\+cpp File Reference}
+\label{Polymorphism_8cpp}\index{Polymorphism.\+cpp@{Polymorphism.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cstring$>$}\\*
+Include dependency graph for Polymorphism.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{Polymorphism_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classB__class}{B\+\_\+class}
+\item 
+class \hyperlink{classD__class}{D\+\_\+class}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Polymorphism_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Polymorphism.\+cpp@{Polymorphism.\+cpp}!main@{main}}
+\index{main@{main}!Polymorphism.\+cpp@{Polymorphism.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Polymorphism_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Polymorphism_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+25 \{
+26   \hyperlink{classB__class}{B\_class} *p;
+27   \hyperlink{classB__class}{B\_class} B\_ob;
+28 
+29   \hyperlink{classD__class}{D\_class} *dp;
+30   \hyperlink{classD__class}{D\_class} D\_ob;
+31 
+32   p = &B\_ob;  \textcolor{comment}{// address of base}
+33 
+34   \textcolor{comment}{// Access B\_class via pointer.}
+35   p->\hyperlink{classB__class_affa3773b8077feb5b2f5127c60b2079c}{put\_author}(\textcolor{stringliteral}{"Tom Clancy"});
+36 
+37   \textcolor{comment}{// Access D\_class via base pointer.}
+38   p = &D\_ob;
+39   p->\hyperlink{classB__class_affa3773b8077feb5b2f5127c60b2079c}{put\_author}(\textcolor{stringliteral}{"William Shakespeare"});
+40 
+41   \textcolor{comment}{// Show that each author went into proper object.}
+42   B\_ob.\hyperlink{classB__class_a9529aa9d79a76ad2e0e4c8b4d368cb80}{show\_author}();
+43   D\_ob.\hyperlink{classB__class_a9529aa9d79a76ad2e0e4c8b4d368cb80}{show\_author}();
+44   cout << \textcolor{stringliteral}{"\(\backslash\)n"};
+45 
+46   \textcolor{comment}{/* Since put\_title() and show\_title() are not part}
+47 \textcolor{comment}{     of the base class, they are not accessible via}
+48 \textcolor{comment}{     the base pointer p and must be accessed either}
+49 \textcolor{comment}{     directly, or, as shown here, through a pointer to the}
+50 \textcolor{comment}{     derived type.}
+51 \textcolor{comment}{  */}
+52   dp = &D\_ob;
+53   dp->\hyperlink{classD__class_aa7f2a7577198caa052f7022e26f2c06b}{put\_title}(\textcolor{stringliteral}{"The Tempest"});
+54   p->\hyperlink{classB__class_a9529aa9d79a76ad2e0e4c8b4d368cb80}{show\_author}(); \textcolor{comment}{// either p or dp can be used here.}
+55   dp->\hyperlink{classD__class_af2d261ea960afdefaabf2af43c63e257}{show\_title}( );
+56 
+57   \textcolor{keywordflow}{return} 0;
+58 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{Polymorphism_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

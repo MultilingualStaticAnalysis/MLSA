@@ -1,0 +1,60 @@
+\hypertarget{Bmain_8cpp}{}\section{Bmain.\+cpp File Reference}
+\label{Bmain_8cpp}\index{Bmain.\+cpp@{Bmain.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}Book.\+h\char`\"{}}\\*
+Include dependency graph for Bmain.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{Bmain_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Bmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Bmain.\+cpp@{Bmain.\+cpp}!main@{main}}
+\index{main@{main}!Bmain.\+cpp@{Bmain.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Bmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Bmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+6            \{
+7    \textcolor{comment}{// Declare and construct an instance of Author}
+8    \hyperlink{classAuthor}{Author} peter(\textcolor{stringliteral}{"Peter Jones"}, \textcolor{stringliteral}{"peter@somewhere.com"}, \textcolor{charliteral}{'m'});
+9    peter.print();  \textcolor{comment}{// Peter Jones (m) at peter@somewhere.com}
+10  
+11    \textcolor{comment}{// Declare and construct an instance of Book}
+12    \hyperlink{classBook}{Book} cppDummy(\textcolor{stringliteral}{"C++ for Dummies"}, peter, 19.99);
+13    cppDummy.print();
+14       \textcolor{comment}{// 'C++ for Dummies' by Peter Jones (m) at peter@somewhere.com}
+15  
+16    peter.setEmail(\textcolor{stringliteral}{"peter@xyz.com"});
+17    peter.print();   \textcolor{comment}{// Peter Jones (m) at peter@xyz.com}
+18    cppDummy.print();
+19       \textcolor{comment}{// 'C++ for Dummies' by Peter Jones (m) at peter@somewhere.com}
+20  
+21    cppDummy.getAuthor().setEmail(\textcolor{stringliteral}{"peter@abc.com"});
+22    cppDummy.print();
+23       \textcolor{comment}{// 'C++ for Dummies' by Peter Jones (m) at peter@somewhere.com}
+24 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{Bmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

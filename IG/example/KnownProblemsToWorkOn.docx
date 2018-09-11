@@ -1,0 +1,48 @@
+Things to check :
+- Complex (mem.fun().memfun())
+`-CXXMemberCallExpr 0x25457a0 <col:4, col:31> 'class Complex' lvalue
+    |       |-MemberExpr 0x2545768 <col:4, col:19> '<bound member function type>' .addInto 0x2535ee0
+    |       | `-CXXMemberCallExpr 0x2545670 <col:4, col:17> 'class Complex' lvalue
+    |       |   |-MemberExpr 0x2545638 <col:4, col:7> '<bound member function type>' .addInto 0x2535ce0
+    |       |   | `-DeclRefExpr 0x2545578 <col:4> 'class Complex' lvalue Var 0x25364c0 'c1' 'class Complex'
+    |       |   `-ImplicitCastExpr 0x25456a0 <col:15> 'const class Complex' lvalue <NoOp>
+    |       |     `-DeclRefExpr 0x2545610 <col:15> 'class Complex' lvalue Var 0x2536758 'c2' 'class Complex'
+    |       |-ImplicitCastExpr 0x25457d8 <col:27> 'double' <IntegralToFloating>
+    |       | `-IntegerLiteral 0x2545728 <col:27> 'int' 1
+    |       `-ImplicitCastExpr 0x25457f0 <col:30> 'double' <IntegralToFloating>
+    |         `-IntegerLiteral 0x2545748 <col:30> 'int' 1\
+
+- CountMinSketch (two function with same name)
+	- String (getline in program and stdio)
+	- hmc10 (getline in program and stdio)
+
+- Point
+`-CallExpr 0x235fb90 <col:11, col:21> 'typename __gnu_cxx::__promote_2<int, int>::__type':'double'
+|       |-ImplicitCastExpr 0x235fb78 <col:11> 'typename __gnu_cxx::__promote_2<int, int>::__type (*)(int, int)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x235fae8 <col:11> 'typename __gnu_cxx::__promote_2<int, int>::__type (int, int)' lvalue Function 0x235f9c0 'atan2' 'typename __gnu_cxx::__promote_2<int, int>::__type (int, int)' (FunctionTemplate 0x233ce58 'atan2')
+|       |-ImplicitCastExpr 0x235fbc8 <col:17> 'int' <LValueToRValue>
+|       | `-MemberExpr 0x235e9d8 <col:17> 'const int' lvalue ->y 0x235bd70
+|       |   `-CXXThisExpr 0x235e9c0 <col:17> 'const class Point *' this
+|       `-ImplicitCastExpr 0x235fbe0 <col:20> 'int' <LValueToRValue>
+|         `-MemberExpr 0x235ea28 <col:20> 'const int' lvalue ->x 0x235bd18
+|           `-CXXThisExpr 0x235ea10 <col:20> 'const class Point *' this
+
+-SparseMatrix (wrong filename caught)
+| |     |   | `-GNUNullExpr 0x2cd4a78 </usr/lib/llvm-3.8/bin/../lib/clang/3.8.0/include/stddef.h:100:18> 'long'
+| |     |   |-CXXMemberCallExpr 0x2cd4bd8 </home/labaccount/11-2-17/mlsa/IG/example/SparseMatrix/SparseMatrix.cpp:108:21, col:46> 'void'
+| |     |   | |-MemberExpr 0x2cd4b50 <col:21, col:28> '<bound member function type>' ->store 0x2cc8640
+| |     |   | | `-ImplicitCastExpr 0x2cd4b38 <col:21> 'class List *' <LValueToRValue>
+
+funcPointer – can’t catch function pointer name
+Lambda didn’t catch all library calls
+Composite → sees pointers as object rather than Class objects
+Decorator2
+
+can’t use :
+SegmentedSieve → cannot get #defined function calls
+AlgExp
+
+uses templates: AlgExpr, Array, DoubleLinkedList, LinkedList
+wrong include: CalculoTempo
+:: → Priority Queue, Interpreter
+Clang problem → Strassen, SnakeAndLadder, String, hmc10, PriorityQueue, DiamondProblem

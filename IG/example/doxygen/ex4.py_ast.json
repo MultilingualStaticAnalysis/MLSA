@@ -1,0 +1,102 @@
+{
+    "body": [
+        {
+            "_type": "Import", 
+            "lineno": 3, 
+            "col_offset": 0, 
+            "names": [
+                {
+                    "_type": "alias", 
+                    "name": "wingdbstub", 
+                    "asname": null
+                }
+            ]
+        }, 
+        {
+            "body": [
+                {
+                    "_type": "Print", 
+                    "nl": true, 
+                    "col_offset": 1, 
+                    "dest": null, 
+                    "values": [
+                        {
+                            "s": "hello", 
+                            "_type": "Str", 
+                            "lineno": 6, 
+                            "col_offset": 7
+                        }
+                    ], 
+                    "lineno": 6
+                }, 
+                {
+                    "body": [
+                        {
+                            "_type": "Pass", 
+                            "lineno": 8, 
+                            "col_offset": 2
+                        }
+                    ], 
+                    "_type": "For", 
+                    "target": {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Store"
+                        }, 
+                        "id": "i", 
+                        "col_offset": 5, 
+                        "lineno": 7
+                    }, 
+                    "col_offset": 1, 
+                    "iter": {
+                        "_type": "Call", 
+                        "col_offset": 10, 
+                        "starargs": null, 
+                        "args": [
+                            {
+                                "_type": "Num", 
+                                "lineno": 7, 
+                                "col_offset": 16, 
+                                "n": 0
+                            }, 
+                            {
+                                "_type": "Num", 
+                                "lineno": 7, 
+                                "col_offset": 19, 
+                                "n": 100000
+                            }
+                        ], 
+                        "lineno": 7, 
+                        "func": {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "id": "range", 
+                            "col_offset": 10, 
+                            "lineno": 7
+                        }, 
+                        "kwargs": null, 
+                        "keywords": []
+                    }, 
+                    "lineno": 7, 
+                    "orelse": []
+                }
+            ], 
+            "_type": "While", 
+            "col_offset": 0, 
+            "lineno": 5, 
+            "test": {
+                "_type": "Name", 
+                "ctx": {
+                    "_type": "Load"
+                }, 
+                "id": "True", 
+                "col_offset": 6, 
+                "lineno": 5
+            }, 
+            "orelse": []
+        }
+    ], 
+    "_type": "Module"
+}

@@ -1,0 +1,99 @@
+\hypertarget{classDivingState}{}\section{Diving\+State Class Reference}
+\label{classDivingState}\index{Diving\+State@{Diving\+State}}
+
+
+Inheritance diagram for Diving\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{classDivingState__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Diving\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{classDivingState__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classDivingState_a22ddb04b1b75366cc8f9f5b017338498}{handle\+Input} (\hyperlink{classFighter}{Fighter} \&, \hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090}{Input}) override
+\item 
+virtual void \hyperlink{classDivingState_a98ec5b0c6a09c934c0ab11694e8a6b4a}{update} (\hyperlink{classFighter}{Fighter} \&) override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{Diving\+State@{Diving\+State}!handle\+Input@{handle\+Input}}
+\index{handle\+Input@{handle\+Input}!Diving\+State@{Diving\+State}}
+\subsubsection[{\texorpdfstring{handle\+Input(\+Fighter \&, Input) override}{handleInput(Fighter &, Input) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Diving\+State\+::handle\+Input (
+\begin{DoxyParamCaption}
+\item[{{\bf Fighter} \&}]{fighter, }
+\item[{{\bf Input}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classDivingState_a22ddb04b1b75366cc8f9f5b017338498}{}\label{classDivingState_a22ddb04b1b75366cc8f9f5b017338498}
+
+
+Implements \hyperlink{classFighterState_a84fcd7da4d232e79e1be9b32c0767861}{Fighter\+State}.
+
+
+\begin{DoxyCode}
+128                                                        \{
+129     std::cout << \textcolor{stringliteral}{"Regardless of what the user input is, "} << fighter.\hyperlink{classFighter_aea4a9cf98a672b2305d1147885b91c34}{getName}() << \textcolor{stringliteral}{" lands from his
+       dive and is now standing again."} << std::endl;
+130     fighter.\hyperlink{classFighter_add08055f60abd6e9235291b653f65be5}{changeState} (\hyperlink{classFighterState_a050e9b5aff81843be5feea296a586889}{FighterState::standing});
+131 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{classDivingState_a22ddb04b1b75366cc8f9f5b017338498_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Diving\+State@{Diving\+State}!update@{update}}
+\index{update@{update}!Diving\+State@{Diving\+State}}
+\subsubsection[{\texorpdfstring{update(\+Fighter \&) override}{update(Fighter &) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Diving\+State\+::update (
+\begin{DoxyParamCaption}
+\item[{{\bf Fighter} \&}]{fighter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classDivingState_a98ec5b0c6a09c934c0ab11694e8a6b4a}{}\label{classDivingState_a98ec5b0c6a09c934c0ab11694e8a6b4a}
+
+
+Implements \hyperlink{classFighterState_af022f76c6b1fe080047ded2280ec6f8f}{Fighter\+State}.
+
+
+\begin{DoxyCode}
+133                                           \{
+134     fighter.\hyperlink{classFighter_aa9c08ec29097e326eab0ffd69db18b9c}{changeFatigueLevelBy}(2);
+135 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDivingState_a98ec5b0c6a09c934c0ab11694e8a6b4a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{State_8cpp}{State.\+cpp}\end{DoxyCompactItemize}

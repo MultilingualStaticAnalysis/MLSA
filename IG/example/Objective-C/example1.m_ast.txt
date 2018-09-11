@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x18c7120 <<invalid sloc>>
+|-TypedefDecl 0x18c7620 <<invalid sloc>> __int128_t '__int128'
+|-TypedefDecl 0x18c7680 <<invalid sloc>> __uint128_t 'unsigned __int128'
+|-TypedefDecl 0x18c7710 <<invalid sloc>> SEL 'SEL *'
+|-TypedefDecl 0x18c77e0 <<invalid sloc>> id 'id'
+|-TypedefDecl 0x18c78b0 <<invalid sloc>> Class 'Class *'
+|-ObjCInterfaceDecl 0x18c7900 <<invalid sloc>> Protocol
+|-TypedefDecl 0x18c7ca0 <<invalid sloc>> __builtin_va_list '__va_list_tag [1]'
+|-FunctionDecl 0x18c7d40 </home/frcv-lab/mlsa/mlsa/test/example1.m:3:1, line:7:1> foo 'int ()'
+| `-CompoundStmt 0x1910538 <line:3:11, line:7:1>
+|   |-DeclStmt 0x1910460 <line:4:3, col:12>
+|   | `-VarDecl 0x18c7df0 <col:3, col:11> a 'int'
+|   |   `-IntegerLiteral 0x1910440 <col:11> 'int' 3
+|   `-DeclStmt 0x1910508 <line:5:3, col:13>
+|     `-VarDecl 0x1910490 <col:3, col:11> b 'int'
+|       `-IntegerLiteral 0x19104e8 <col:11> 'int' 2
+|-FunctionDecl 0x19107c0 <line:9:1, line:18:1> main 'int (int, const char **)'
+| |-ParmVarDecl 0x1910570 <line:9:11, col:15> argc 'int'
+| |-ParmVarDecl 0x19106b0 <col:21, col:39> argv 'const char **':'const char **'
+| `-CompoundStmt 0x1910d78 <col:42, line:18:1>
+|   `-ReturnStmt 0x1910d58 <line:17:2, col:9>
+|     `-IntegerLiteral 0x1910d38 <col:9> 'int' 0
+`-FunctionDecl 0x1910a60 <line:13:2> NSLog 'void (id, ...)' extern
+  |-ParmVarDecl 0x1910b00 <<invalid sloc>> 'id':'id'
+  `-FormatAttr 0x1910b60 <col:2> NSString 1 2

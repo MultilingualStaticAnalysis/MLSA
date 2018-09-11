@@ -1,0 +1,25 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/Facade Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/Facade Call Graph"
+	];
+
+	Node0x649923165 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/Facade/Facade.cpp"];
+	Node0x109384636 [shape=oval, label="0x362eaa0. (/home/labaccount/11-2-17/mlsa/IG/example/Facade/Facade.cpp)\nHouseFacade::goToWork()"];
+	Node0x649923165 -> Node0x109384636;
+	Node0x976200234 [shape=oval, label="0x362eb28. (/home/labaccount/11-2-17/mlsa/IG/example/Facade/Facade.cpp)\nHouseFacade::comeHome()"];
+	Node0x649923165 -> Node0x976200234;
+	Node0x437060433 [shape=oval, label="0x362e2f0. (/home/labaccount/11-2-17/mlsa/IG/example/Facade/Facade.cpp)\nAc::acOff()"];
+	Node0x109384636 -> Node0x437060433;
+	Node0x871270061 [shape=oval, label="0x362e3a0. (/home/labaccount/11-2-17/mlsa/IG/example/Facade/Facade.cpp)\nTv::tvOff()"];
+	Node0x109384636 -> Node0x871270061;
+	Node0x133079757 [shape=oval, label="0x362e450. (/home/labaccount/11-2-17/mlsa/IG/example/Facade/Facade.cpp)\nAlarm::alarmOn()"];
+	Node0x109384636 -> Node0x133079757;
+	Node0x476800345 [shape=oval, label="0x362e530. (/home/labaccount/11-2-17/mlsa/IG/example/Facade/Facade.cpp)\nAlarm::alarmOff()"];
+	Node0x976200234 -> Node0x476800345;
+	Node0x635350344 [shape=oval, label="0x362e5e0. (/home/labaccount/11-2-17/mlsa/IG/example/Facade/Facade.cpp)\nAc::acOn()"];
+	Node0x976200234 -> Node0x635350344;
+	Node0x201179647 [shape=oval, label="0x362e690. (/home/labaccount/11-2-17/mlsa/IG/example/Facade/Facade.cpp)\nTv::tvOn()"];
+	Node0x976200234 -> Node0x201179647;
+}

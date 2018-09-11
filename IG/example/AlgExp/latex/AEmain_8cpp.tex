@@ -1,0 +1,66 @@
+\hypertarget{AEmain_8cpp}{}\section{A\+Emain.\+cpp File Reference}
+\label{AEmain_8cpp}\index{A\+Emain.\+cpp@{A\+Emain.\+cpp}}
+{\ttfamily \#include \char`\"{}Algebraic\+Expression.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Stack.\+h\char`\"{}}\\*
+Include dependency graph for A\+Emain.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AEmain_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{AEmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+Emain.\+cpp@{A\+Emain.\+cpp}!main@{main}}
+\index{main@{main}!A\+Emain.\+cpp@{A\+Emain.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{AEmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{AEmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+17 \{
+18    \hyperlink{classAlgebraicExpression}{AlgebraicExpression}* aPtr;
+19    \textcolor{keywordtype}{string} s;
+20    cout << \textcolor{stringliteral}{"\(\backslash\)nEnter an equation or - to quit: "};
+21    cin >> s;
+22    \textcolor{keywordflow}{while}(s != \textcolor{stringliteral}{"-"})
+23    \{
+24       aPtr = \textcolor{keyword}{new} \hyperlink{classAlgebraicExpression}{AlgebraicExpression}(s);
+25       \textcolor{keywordflow}{while}(!aPtr->\hyperlink{classAlgebraicExpression_aa3c08af8a2b4d67c356f3cf69b2f6bc6}{valid}())
+26       \{
+27          cout << \textcolor{stringliteral}{"\(\backslash\)nExpression is invalid! Please enter a new expression: "};
+28          cin >> s;
+29          aPtr = \textcolor{keyword}{new} \hyperlink{classAlgebraicExpression}{AlgebraicExpression}(s);
+30       \}
+31       aPtr->\hyperlink{classAlgebraicExpression_a0aeff15e3d0d529bd20a59f8d312a38d}{evaluateInfix}();
+32       aPtr->\hyperlink{classAlgebraicExpression_ac0428ac1f1072f14e1391527baebd330}{evaluatePostfix}();
+33       cout << aPtr->\hyperlink{classAlgebraicExpression_afcf555b573e6083a8395677bf056aef1}{getResult}() << endl;
+34       cout << \textcolor{stringliteral}{"\(\backslash\)nEnter an equation or - to quit: "};
+35       cin >> s;
+36    \}
+37    cout << endl;
+38 
+39    \textcolor{keywordflow}{return} 0;
+40 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AEmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

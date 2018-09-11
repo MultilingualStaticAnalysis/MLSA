@@ -1,0 +1,228 @@
+\hypertarget{BinarySearchTree_8c}{}\section{Binary\+Search\+Tree.\+c File Reference}
+\label{BinarySearchTree_8c}\index{Binary\+Search\+Tree.\+c@{Binary\+Search\+Tree.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+Include dependency graph for Binary\+Search\+Tree.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BinarySearchTree_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnoArv}{no\+Arv}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structnoArv}{no\+Arv} \hyperlink{BinarySearchTree_8c_ab8c46ef838d5fb3bf8ca99827815ecb8}{No\+Arv}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnoArv}{no\+Arv} $\ast$ \hyperlink{BinarySearchTree_8c_a43158fceb90d4d7fe2f1b6d2ab88bca8}{cria} (void)
+\item 
+void \hyperlink{BinarySearchTree_8c_a7c7067862fb94194b532586fdfa194b4}{infixa} (\hyperlink{BinarySearchTree_8c_ab8c46ef838d5fb3bf8ca99827815ecb8}{No\+Arv} $\ast$a)
+\item 
+void \hyperlink{BinarySearchTree_8c_ab01995ec05f0ca44ac8d519820428013}{prefixa} (\hyperlink{BinarySearchTree_8c_ab8c46ef838d5fb3bf8ca99827815ecb8}{No\+Arv} $\ast$a)
+\item 
+void \hyperlink{BinarySearchTree_8c_a0c01c8e05f3069616126b9d55438335f}{posfixa} (\hyperlink{BinarySearchTree_8c_ab8c46ef838d5fb3bf8ca99827815ecb8}{No\+Arv} $\ast$a)
+\item 
+struct \hyperlink{structnoArv}{no\+Arv} $\ast$ \hyperlink{BinarySearchTree_8c_a23fc182a29f633a612c4322c44d181fd}{procura} (struct \hyperlink{structnoArv}{no\+Arv} $\ast$r, int v)
+\item 
+struct \hyperlink{structnoArv}{no\+Arv} $\ast$ \hyperlink{BinarySearchTree_8c_a6036604c4d3d8262033b6a92fd53b81d}{insere} (struct \hyperlink{structnoArv}{no\+Arv} $\ast$a, int v)
+\item 
+int \hyperlink{BinarySearchTree_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{BinarySearchTree_8c_a13307a0c81bbf19030ea4732534efbec}{aux} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{Binary\+Search\+Tree.\+c@{Binary\+Search\+Tree.\+c}!No\+Arv@{No\+Arv}}
+\index{No\+Arv@{No\+Arv}!Binary\+Search\+Tree.\+c@{Binary\+Search\+Tree.\+c}}
+\subsubsection[{\texorpdfstring{No\+Arv}{NoArv}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf no\+Arv} {\bf No\+Arv}}\hypertarget{BinarySearchTree_8c_ab8c46ef838d5fb3bf8ca99827815ecb8}{}\label{BinarySearchTree_8c_ab8c46ef838d5fb3bf8ca99827815ecb8}
+
+
+\subsection{Function Documentation}
+\index{Binary\+Search\+Tree.\+c@{Binary\+Search\+Tree.\+c}!cria@{cria}}
+\index{cria@{cria}!Binary\+Search\+Tree.\+c@{Binary\+Search\+Tree.\+c}}
+\subsubsection[{\texorpdfstring{cria(void)}{cria(void)}}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf no\+Arv}$\ast$ cria (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{BinarySearchTree_8c_a43158fceb90d4d7fe2f1b6d2ab88bca8}{}\label{BinarySearchTree_8c_a43158fceb90d4d7fe2f1b6d2ab88bca8}
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{keywordflow}{return} NULL;
+21 \}
+\end{DoxyCode}
+\index{Binary\+Search\+Tree.\+c@{Binary\+Search\+Tree.\+c}!infixa@{infixa}}
+\index{infixa@{infixa}!Binary\+Search\+Tree.\+c@{Binary\+Search\+Tree.\+c}}
+\subsubsection[{\texorpdfstring{infixa(\+No\+Arv $\ast$a)}{infixa(NoArv *a)}}]{\setlength{\rightskip}{0pt plus 5cm}void infixa (
+\begin{DoxyParamCaption}
+\item[{{\bf No\+Arv} $\ast$}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{BinarySearchTree_8c_a7c7067862fb94194b532586fdfa194b4}{}\label{BinarySearchTree_8c_a7c7067862fb94194b532586fdfa194b4}
+
+\begin{DoxyCode}
+24 \{
+25     \textcolor{keywordflow}{if}(a!=NULL)
+26     \{
+27         \hyperlink{BinarySearchTree_8c_a7c7067862fb94194b532586fdfa194b4}{infixa}(a->\hyperlink{structnoArv_a0c0b5ff0d841e3d90215a04185f0899d}{esq});
+28         \textcolor{keywordflow}{if}(\hyperlink{BinarySearchTree_8c_a13307a0c81bbf19030ea4732534efbec}{aux}==1)printf(\textcolor{stringliteral}{" "});
+29         printf(\textcolor{stringliteral}{"%c"},a->\hyperlink{structnoArv_a024fbe9c9e750cab832562b09d49200e}{info});
+30         \hyperlink{BinarySearchTree_8c_a13307a0c81bbf19030ea4732534efbec}{aux} = 1;
+31         \hyperlink{BinarySearchTree_8c_a7c7067862fb94194b532586fdfa194b4}{infixa}(a->\hyperlink{structnoArv_abe103e6775ec6bb1d39b61f54c4cf32c}{dir});
+32     \}
+33 \}
+\end{DoxyCode}
+\index{Binary\+Search\+Tree.\+c@{Binary\+Search\+Tree.\+c}!insere@{insere}}
+\index{insere@{insere}!Binary\+Search\+Tree.\+c@{Binary\+Search\+Tree.\+c}}
+\subsubsection[{\texorpdfstring{insere(struct no\+Arv $\ast$a, int v)}{insere(struct noArv *a, int v)}}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf no\+Arv}$\ast$ insere (
+\begin{DoxyParamCaption}
+\item[{struct {\bf no\+Arv} $\ast$}]{a, }
+\item[{int}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{BinarySearchTree_8c_a6036604c4d3d8262033b6a92fd53b81d}{}\label{BinarySearchTree_8c_a6036604c4d3d8262033b6a92fd53b81d}
+
+\begin{DoxyCode}
+68 \{
+69     \textcolor{keywordflow}{if}(a==NULL)
+70     \{
+71         a = (\hyperlink{structnoArv}{NoArv}*)malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \hyperlink{structnoArv}{noArv}));
+72         a->\hyperlink{structnoArv_a024fbe9c9e750cab832562b09d49200e}{info} = v;
+73         a->\hyperlink{structnoArv_a0c0b5ff0d841e3d90215a04185f0899d}{esq} = a->\hyperlink{structnoArv_abe103e6775ec6bb1d39b61f54c4cf32c}{dir} = NULL;
+74     \}
+75     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(v<a->\hyperlink{structnoArv_a024fbe9c9e750cab832562b09d49200e}{info})a->\hyperlink{structnoArv_a0c0b5ff0d841e3d90215a04185f0899d}{esq} = \hyperlink{BinarySearchTree_8c_a6036604c4d3d8262033b6a92fd53b81d}{insere}(a->\hyperlink{structnoArv_a0c0b5ff0d841e3d90215a04185f0899d}{esq},v);
+76     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(v>a->\hyperlink{structnoArv_a024fbe9c9e750cab832562b09d49200e}{info})a->\hyperlink{structnoArv_abe103e6775ec6bb1d39b61f54c4cf32c}{dir} = \hyperlink{BinarySearchTree_8c_a6036604c4d3d8262033b6a92fd53b81d}{insere}(a->\hyperlink{structnoArv_abe103e6775ec6bb1d39b61f54c4cf32c}{dir},v);
+77     \textcolor{keywordflow}{return} a;
+78 \}
+\end{DoxyCode}
+\index{Binary\+Search\+Tree.\+c@{Binary\+Search\+Tree.\+c}!main@{main}}
+\index{main@{main}!Binary\+Search\+Tree.\+c@{Binary\+Search\+Tree.\+c}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{BinarySearchTree_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{BinarySearchTree_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+81 \{
+82     \textcolor{keyword}{struct }\hyperlink{structnoArv}{noArv} *g = \hyperlink{BinarySearchTree_8c_a43158fceb90d4d7fe2f1b6d2ab88bca8}{cria}();
+83     \textcolor{keywordtype}{char} str[10];
+84     \textcolor{keywordflow}{while}(scanf(\textcolor{stringliteral}{"%[^\(\backslash\)n]s"},str)!=EOF)
+85     \{
+86         \textcolor{keywordflow}{if}(str[0]==\textcolor{charliteral}{'I'} && str[1]==\textcolor{charliteral}{' '})\{
+87             g = \hyperlink{BinarySearchTree_8c_a6036604c4d3d8262033b6a92fd53b81d}{insere}(g,str[2]);
+88         \}
+89         \textcolor{keywordflow}{if}(str[0]==\textcolor{charliteral}{'P'} && str[1]==\textcolor{charliteral}{' '})\{
+90             \textcolor{keywordflow}{if}(\hyperlink{BinarySearchTree_8c_a23fc182a29f633a612c4322c44d181fd}{procura}(g,str[2]))printf(\textcolor{stringliteral}{"%c existe\(\backslash\)n"},str[2]);
+91             \textcolor{keywordflow}{else} printf(\textcolor{stringliteral}{"%c nao existe\(\backslash\)n"},str[2]);
+92         \}
+93         \textcolor{keywordflow}{if}(str[0]==\textcolor{charliteral}{'I'} && str[1]==\textcolor{charliteral}{'N'})\{
+94             \hyperlink{BinarySearchTree_8c_a13307a0c81bbf19030ea4732534efbec}{aux} = 0;
+95             \hyperlink{BinarySearchTree_8c_a7c7067862fb94194b532586fdfa194b4}{infixa}(g);
+96             printf(\textcolor{stringliteral}{"\(\backslash\)n"});
+97         \}
+98         \textcolor{keywordflow}{if}(str[0]==\textcolor{charliteral}{'P'} && str[1]==\textcolor{charliteral}{'O'})\{
+99             \hyperlink{BinarySearchTree_8c_a13307a0c81bbf19030ea4732534efbec}{aux} = 0;
+100             \hyperlink{BinarySearchTree_8c_a0c01c8e05f3069616126b9d55438335f}{posfixa}(g);
+101             printf(\textcolor{stringliteral}{"\(\backslash\)n"});
+102         \}
+103         \textcolor{keywordflow}{if}(str[0]==\textcolor{charliteral}{'P'} && str[1]==\textcolor{charliteral}{'R'})\{
+104             \hyperlink{BinarySearchTree_8c_a13307a0c81bbf19030ea4732534efbec}{aux} = 0;
+105             \hyperlink{BinarySearchTree_8c_ab01995ec05f0ca44ac8d519820428013}{prefixa}(g);
+106             printf(\textcolor{stringliteral}{"\(\backslash\)n"});
+107         \}
+108         getchar();
+109     \}
+110     \textcolor{keywordflow}{return} 0;
+111 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{BinarySearchTree_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Binary\+Search\+Tree.\+c@{Binary\+Search\+Tree.\+c}!posfixa@{posfixa}}
+\index{posfixa@{posfixa}!Binary\+Search\+Tree.\+c@{Binary\+Search\+Tree.\+c}}
+\subsubsection[{\texorpdfstring{posfixa(\+No\+Arv $\ast$a)}{posfixa(NoArv *a)}}]{\setlength{\rightskip}{0pt plus 5cm}void posfixa (
+\begin{DoxyParamCaption}
+\item[{{\bf No\+Arv} $\ast$}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{BinarySearchTree_8c_a0c01c8e05f3069616126b9d55438335f}{}\label{BinarySearchTree_8c_a0c01c8e05f3069616126b9d55438335f}
+
+\begin{DoxyCode}
+47 \{
+48     \textcolor{keywordflow}{if}(a!=NULL)
+49     \{
+50 
+51         \hyperlink{BinarySearchTree_8c_a0c01c8e05f3069616126b9d55438335f}{posfixa}(a->\hyperlink{structnoArv_a0c0b5ff0d841e3d90215a04185f0899d}{esq});
+52         \hyperlink{BinarySearchTree_8c_a0c01c8e05f3069616126b9d55438335f}{posfixa}(a->\hyperlink{structnoArv_abe103e6775ec6bb1d39b61f54c4cf32c}{dir});
+53         \textcolor{keywordflow}{if}(\hyperlink{BinarySearchTree_8c_a13307a0c81bbf19030ea4732534efbec}{aux}==1)printf(\textcolor{stringliteral}{" "});
+54         printf(\textcolor{stringliteral}{"%c"},a->\hyperlink{structnoArv_a024fbe9c9e750cab832562b09d49200e}{info});
+55         \hyperlink{BinarySearchTree_8c_a13307a0c81bbf19030ea4732534efbec}{aux} = 1;
+56     \}
+57 \}
+\end{DoxyCode}
+\index{Binary\+Search\+Tree.\+c@{Binary\+Search\+Tree.\+c}!prefixa@{prefixa}}
+\index{prefixa@{prefixa}!Binary\+Search\+Tree.\+c@{Binary\+Search\+Tree.\+c}}
+\subsubsection[{\texorpdfstring{prefixa(\+No\+Arv $\ast$a)}{prefixa(NoArv *a)}}]{\setlength{\rightskip}{0pt plus 5cm}void prefixa (
+\begin{DoxyParamCaption}
+\item[{{\bf No\+Arv} $\ast$}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{BinarySearchTree_8c_ab01995ec05f0ca44ac8d519820428013}{}\label{BinarySearchTree_8c_ab01995ec05f0ca44ac8d519820428013}
+
+\begin{DoxyCode}
+36 \{
+37     \textcolor{keywordflow}{if}(a!=NULL)
+38     \{
+39         \textcolor{keywordflow}{if}(\hyperlink{BinarySearchTree_8c_a13307a0c81bbf19030ea4732534efbec}{aux}==1)printf(\textcolor{stringliteral}{" "});
+40         printf(\textcolor{stringliteral}{"%c"},a->\hyperlink{structnoArv_a024fbe9c9e750cab832562b09d49200e}{info});
+41         \hyperlink{BinarySearchTree_8c_a13307a0c81bbf19030ea4732534efbec}{aux} = 1;
+42         \hyperlink{BinarySearchTree_8c_ab01995ec05f0ca44ac8d519820428013}{prefixa}(a->\hyperlink{structnoArv_a0c0b5ff0d841e3d90215a04185f0899d}{esq});
+43         \hyperlink{BinarySearchTree_8c_ab01995ec05f0ca44ac8d519820428013}{prefixa}(a->\hyperlink{structnoArv_abe103e6775ec6bb1d39b61f54c4cf32c}{dir});
+44     \}
+45 \}
+\end{DoxyCode}
+\index{Binary\+Search\+Tree.\+c@{Binary\+Search\+Tree.\+c}!procura@{procura}}
+\index{procura@{procura}!Binary\+Search\+Tree.\+c@{Binary\+Search\+Tree.\+c}}
+\subsubsection[{\texorpdfstring{procura(struct no\+Arv $\ast$r, int v)}{procura(struct noArv *r, int v)}}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf no\+Arv}$\ast$ procura (
+\begin{DoxyParamCaption}
+\item[{struct {\bf no\+Arv} $\ast$}]{r, }
+\item[{int}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{BinarySearchTree_8c_a23fc182a29f633a612c4322c44d181fd}{}\label{BinarySearchTree_8c_a23fc182a29f633a612c4322c44d181fd}
+
+\begin{DoxyCode}
+59 \{
+60     \textcolor{keywordflow}{if}(r==NULL)
+61         \textcolor{keywordflow}{return} NULL;
+62     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(r->\hyperlink{structnoArv_a024fbe9c9e750cab832562b09d49200e}{info}>v)\textcolor{keywordflow}{return} \hyperlink{BinarySearchTree_8c_a23fc182a29f633a612c4322c44d181fd}{procura}(r->\hyperlink{structnoArv_a0c0b5ff0d841e3d90215a04185f0899d}{esq},v);
+63     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(r->\hyperlink{structnoArv_a024fbe9c9e750cab832562b09d49200e}{info}<v)\textcolor{keywordflow}{return} \hyperlink{BinarySearchTree_8c_a23fc182a29f633a612c4322c44d181fd}{procura}(r->\hyperlink{structnoArv_abe103e6775ec6bb1d39b61f54c4cf32c}{dir},v);
+64     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} r;
+65 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{Binary\+Search\+Tree.\+c@{Binary\+Search\+Tree.\+c}!aux@{aux}}
+\index{aux@{aux}!Binary\+Search\+Tree.\+c@{Binary\+Search\+Tree.\+c}}
+\subsubsection[{\texorpdfstring{aux}{aux}}]{\setlength{\rightskip}{0pt plus 5cm}int aux = 0}\hypertarget{BinarySearchTree_8c_a13307a0c81bbf19030ea4732534efbec}{}\label{BinarySearchTree_8c_a13307a0c81bbf19030ea4732534efbec}

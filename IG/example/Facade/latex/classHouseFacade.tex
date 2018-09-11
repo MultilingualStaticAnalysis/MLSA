@@ -1,0 +1,118 @@
+\hypertarget{classHouseFacade}{}\section{House\+Facade Class Reference}
+\label{classHouseFacade}\index{House\+Facade@{House\+Facade}}
+
+
+Collaboration diagram for House\+Facade\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classHouseFacade__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classHouseFacade_abab7c9304c5123ad2894a86d071a4e51}{House\+Facade} ()
+\item 
+void \hyperlink{classHouseFacade_af62723fc617325d0ea4918349cb66dbb}{go\+To\+Work} ()
+\item 
+void \hyperlink{classHouseFacade_a806337202c3a039456a180777d034684}{come\+Home} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAlarm}{Alarm} \hyperlink{classHouseFacade_a9635b0a634d8fc7be556c9dd33782cb9}{alarm}
+\item 
+\hyperlink{classAc}{Ac} \hyperlink{classHouseFacade_a6d30f8878c9f220d37f5866084466d35}{ac}
+\item 
+\hyperlink{classTv}{Tv} \hyperlink{classHouseFacade_a58d2375afc4bed9ae74bd18cf4dd79ef}{tv}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{House\+Facade@{House\+Facade}!House\+Facade@{House\+Facade}}
+\index{House\+Facade@{House\+Facade}!House\+Facade@{House\+Facade}}
+\subsubsection[{\texorpdfstring{House\+Facade()}{HouseFacade()}}]{\setlength{\rightskip}{0pt plus 5cm}House\+Facade\+::\+House\+Facade (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classHouseFacade_abab7c9304c5123ad2894a86d071a4e51}{}\label{classHouseFacade_abab7c9304c5123ad2894a86d071a4e51}
+
+\begin{DoxyCode}
+66 \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{House\+Facade@{House\+Facade}!come\+Home@{come\+Home}}
+\index{come\+Home@{come\+Home}!House\+Facade@{House\+Facade}}
+\subsubsection[{\texorpdfstring{come\+Home()}{comeHome()}}]{\setlength{\rightskip}{0pt plus 5cm}void House\+Facade\+::come\+Home (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classHouseFacade_a806337202c3a039456a180777d034684}{}\label{classHouseFacade_a806337202c3a039456a180777d034684}
+
+\begin{DoxyCode}
+76     \{
+77         \hyperlink{classHouseFacade_a9635b0a634d8fc7be556c9dd33782cb9}{alarm}.\hyperlink{classAlarm_a53104c545f8e12865c049854379e32d7}{alarmOff}();
+78         \hyperlink{classHouseFacade_a6d30f8878c9f220d37f5866084466d35}{ac}.\hyperlink{classAc_a0962ee2f69390f3ed8f44dd97c9f859a}{acOn}();
+79         \hyperlink{classHouseFacade_a58d2375afc4bed9ae74bd18cf4dd79ef}{tv}.\hyperlink{classTv_ad966c38bf07398f9b2a70ded516c2479}{tvOn}();
+80     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classHouseFacade_a806337202c3a039456a180777d034684_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{House\+Facade@{House\+Facade}!go\+To\+Work@{go\+To\+Work}}
+\index{go\+To\+Work@{go\+To\+Work}!House\+Facade@{House\+Facade}}
+\subsubsection[{\texorpdfstring{go\+To\+Work()}{goToWork()}}]{\setlength{\rightskip}{0pt plus 5cm}void House\+Facade\+::go\+To\+Work (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classHouseFacade_af62723fc617325d0ea4918349cb66dbb}{}\label{classHouseFacade_af62723fc617325d0ea4918349cb66dbb}
+
+\begin{DoxyCode}
+69     \{
+70         \hyperlink{classHouseFacade_a6d30f8878c9f220d37f5866084466d35}{ac}.\hyperlink{classAc_ac6c08e83b03e986786f9de290c55bcf0}{acOff}();
+71         \hyperlink{classHouseFacade_a58d2375afc4bed9ae74bd18cf4dd79ef}{tv}.\hyperlink{classTv_a407913fbb5490cb137cf89b9932497d0}{tvOff}();
+72         \hyperlink{classHouseFacade_a9635b0a634d8fc7be556c9dd33782cb9}{alarm}.\hyperlink{classAlarm_a1887c06d8efdf5b4805314a6eac48098}{alarmOn}();
+73     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{classHouseFacade_af62723fc617325d0ea4918349cb66dbb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{House\+Facade@{House\+Facade}!ac@{ac}}
+\index{ac@{ac}!House\+Facade@{House\+Facade}}
+\subsubsection[{\texorpdfstring{ac}{ac}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ac} House\+Facade\+::ac\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classHouseFacade_a6d30f8878c9f220d37f5866084466d35}{}\label{classHouseFacade_a6d30f8878c9f220d37f5866084466d35}
+\index{House\+Facade@{House\+Facade}!alarm@{alarm}}
+\index{alarm@{alarm}!House\+Facade@{House\+Facade}}
+\subsubsection[{\texorpdfstring{alarm}{alarm}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alarm} House\+Facade\+::alarm\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classHouseFacade_a9635b0a634d8fc7be556c9dd33782cb9}{}\label{classHouseFacade_a9635b0a634d8fc7be556c9dd33782cb9}
+\index{House\+Facade@{House\+Facade}!tv@{tv}}
+\index{tv@{tv}!House\+Facade@{House\+Facade}}
+\subsubsection[{\texorpdfstring{tv}{tv}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tv} House\+Facade\+::tv\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classHouseFacade_a58d2375afc4bed9ae74bd18cf4dd79ef}{}\label{classHouseFacade_a58d2375afc4bed9ae74bd18cf4dd79ef}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Facade_8cpp}{Facade.\+cpp}\end{DoxyCompactItemize}

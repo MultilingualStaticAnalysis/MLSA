@@ -1,0 +1,23 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/String Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/String Call Graph"
+	];
+
+	Node0x899301401 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/String/String.c"];
+	Node0x159101093 [shape=oval, label="0x3115d40. (/home/labaccount/11-2-17/mlsa/IG/example/String/String.c)\nprintf(<< You entered : %s\n >>, buffer1)"];
+	Node0x899301401 -> Node0x159101093;
+	Node0x851895312 [shape=oval, label="0x3115eb0. (/home/labaccount/11-2-17/mlsa/IG/example/String/String.c)\nstrcpy(buffer2, buffer1)"];
+	Node0x899301401 -> Node0x851895312;
+	Node0x954057341 [shape=oval, label="0x3115fd0. (/home/labaccount/11-2-17/mlsa/IG/example/String/String.c)\nprintf(<< Which is : %s\n >>, buffer2)"];
+	Node0x899301401 -> Node0x954057341;
+	Node0x414608692 [shape=oval, label="0x3116140. (/home/labaccount/11-2-17/mlsa/IG/example/String/String.c)\ncompact1(buffer1)"];
+	Node0x899301401 -> Node0x414608692;
+	Node0x715289627 [shape=oval, label="0x31162c0. (/home/labaccount/11-2-17/mlsa/IG/example/String/String.c)\nprintf(<< compact1: len=%d  %s\n >>, len, buffer1)"];
+	Node0x899301401 -> Node0x715289627;
+	Node0x944835719 [shape=oval, label="0x3116410. (/home/labaccount/11-2-17/mlsa/IG/example/String/String.c)\ncompact2(buffer2)"];
+	Node0x899301401 -> Node0x944835719;
+	Node0x620849467 [shape=oval, label="0x3116550. (/home/labaccount/11-2-17/mlsa/IG/example/String/String.c)\nprintf(<< compact2: len=%d  %s\n >>, len, buffer2)"];
+	Node0x899301401 -> Node0x620849467;
+}

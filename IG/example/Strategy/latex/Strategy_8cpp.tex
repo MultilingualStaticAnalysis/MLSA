@@ -1,0 +1,74 @@
+\hypertarget{Strategy_8cpp}{}\section{Strategy.\+cpp File Reference}
+\label{Strategy_8cpp}\index{Strategy.\+cpp@{Strategy.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for Strategy.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{Strategy_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classStrategyInterface}{Strategy\+Interface}
+\item 
+class \hyperlink{classConcreteStrategyA}{Concrete\+StrategyA}
+\item 
+class \hyperlink{classConcreteStrategyB}{Concrete\+StrategyB}
+\item 
+class \hyperlink{classConcreteStrategyC}{Concrete\+StrategyC}
+\item 
+class \hyperlink{classContext}{Context}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Strategy_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Strategy.\+cpp@{Strategy.\+cpp}!main@{main}}
+\index{main@{main}!Strategy.\+cpp@{Strategy.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$argv[])}{main(int argc, char *argv[])}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{Strategy_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{}\label{Strategy_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+\begin{DoxyCode}
+59 \{
+60     \hyperlink{classConcreteStrategyA}{ConcreteStrategyA} concreteStrategyA;
+61     \hyperlink{classConcreteStrategyB}{ConcreteStrategyB} concreteStrategyB;
+62     \hyperlink{classConcreteStrategyC}{ConcreteStrategyC} concreteStrategyC;
+63 
+64     \hyperlink{classContext}{Context} contextA(&concreteStrategyA);
+65     \hyperlink{classContext}{Context} contextB(&concreteStrategyB);
+66     \hyperlink{classContext}{Context} contextC(&concreteStrategyC);
+67 
+68     contextA.execute(); \textcolor{comment}{// output: "Called ConcreteStrategyA execute method"}
+69     contextB.execute(); \textcolor{comment}{// output: "Called ConcreteStrategyB execute method"}
+70     contextC.execute(); \textcolor{comment}{// output: "Called ConcreteStrategyC execute method"}
+71     
+72     contextA.set\_strategy(&concreteStrategyB);
+73     contextA.execute(); \textcolor{comment}{// output: "Called ConcreteStrategyB execute method"}
+74     contextA.set\_strategy(&concreteStrategyC);
+75     contextA.execute(); \textcolor{comment}{// output: "Called ConcreteStrategyC execute method"}
+76 
+77     \textcolor{keywordflow}{return} 0;
+78 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Strategy_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+
+

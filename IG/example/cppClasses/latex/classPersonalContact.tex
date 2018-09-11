@@ -1,0 +1,262 @@
+\hypertarget{classPersonalContact}{}\section{Personal\+Contact Class Reference}
+\label{classPersonalContact}\index{Personal\+Contact@{Personal\+Contact}}
+
+
+{\ttfamily \#include $<$Personal\+Contact.\+h$>$}
+
+
+
+Inheritance diagram for Personal\+Contact\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classPersonalContact__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Personal\+Contact\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classPersonalContact__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classPersonalContact_a10eedd89e14f19b8ad1f7fa938f15747}{read} (istream \&in)
+\item 
+void \hyperlink{classPersonalContact_a512ff86fb41425bf0c025e9a57715f82}{print} (ostream \&out)
+\item 
+\hyperlink{classPersonalContact_a381d22b647468294bac27d665ae4ac6c}{Personal\+Contact} (string name1, string name2, string date, string number, string e\+\_\+address, int years)
+\item 
+\hyperlink{classPersonalContact_aa28ff343ff5e36ce84733bcb6ebf482f}{Personal\+Contact} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classPersonalContact_aed504b2ba815b8a9dfc860ec89434647}{display} ()
+\item 
+void \hyperlink{classPersonalContact_a39b007f46cfac8093982676cc5ff2508}{edit} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classPersonalContact_a5608489f547f4d3fbe57069463862e42}{age}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classPersonalContact_a196c2536dfbd98b40c60736c4ca095d2}{Address\+Book}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Personal\+Contact@{Personal\+Contact}!Personal\+Contact@{Personal\+Contact}}
+\index{Personal\+Contact@{Personal\+Contact}!Personal\+Contact@{Personal\+Contact}}
+\subsubsection[{\texorpdfstring{Personal\+Contact(string name1, string name2, string date, string number, string e\+\_\+address, int years)}{PersonalContact(string name1, string name2, string date, string number, string e_address, int years)}}]{\setlength{\rightskip}{0pt plus 5cm}Personal\+Contact\+::\+Personal\+Contact (
+\begin{DoxyParamCaption}
+\item[{string}]{name1, }
+\item[{string}]{name2, }
+\item[{string}]{date, }
+\item[{string}]{number, }
+\item[{string}]{e\+\_\+address, }
+\item[{int}]{years}
+\end{DoxyParamCaption}
+)}\hypertarget{classPersonalContact_a381d22b647468294bac27d665ae4ac6c}{}\label{classPersonalContact_a381d22b647468294bac27d665ae4ac6c}
+
+\begin{DoxyCode}
+12                                                                                                            
+               : \hyperlink{classContact_ae39444f378e6de7fd6c3e60981949af5}{Contact}(name1, name2, date, number, e\_address)
+13 \{
+14    \textcolor{comment}{//Contact(name1, name2, date, number, e\_address);                                                       
+                                                                                                       }
+15    \hyperlink{classPersonalContact_a5608489f547f4d3fbe57069463862e42}{age} = years;
+16    \hyperlink{classContact_ad76971e3edec9fdbc665d149cfbd9e1a}{type} = \textcolor{charliteral}{'p'};
+17 \}
+\end{DoxyCode}
+\index{Personal\+Contact@{Personal\+Contact}!Personal\+Contact@{Personal\+Contact}}
+\index{Personal\+Contact@{Personal\+Contact}!Personal\+Contact@{Personal\+Contact}}
+\subsubsection[{\texorpdfstring{Personal\+Contact()}{PersonalContact()}}]{\setlength{\rightskip}{0pt plus 5cm}Personal\+Contact\+::\+Personal\+Contact (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPersonalContact_aa28ff343ff5e36ce84733bcb6ebf482f}{}\label{classPersonalContact_aa28ff343ff5e36ce84733bcb6ebf482f}
+
+\begin{DoxyCode}
+34 \{\hyperlink{classContact_ad76971e3edec9fdbc665d149cfbd9e1a}{type} = \textcolor{charliteral}{'p'};\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Personal\+Contact@{Personal\+Contact}!display@{display}}
+\index{display@{display}!Personal\+Contact@{Personal\+Contact}}
+\subsubsection[{\texorpdfstring{display()}{display()}}]{\setlength{\rightskip}{0pt plus 5cm}void Personal\+Contact\+::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classPersonalContact_aed504b2ba815b8a9dfc860ec89434647}{}\label{classPersonalContact_aed504b2ba815b8a9dfc860ec89434647}
+
+
+Reimplemented from \hyperlink{classContact_a1a7b491fba3111a679bfae344d75d19d}{Contact}.
+
+
+\begin{DoxyCode}
+20 \{
+21    \hyperlink{classContact_a1a7b491fba3111a679bfae344d75d19d}{Contact::display}();
+22    cout << \textcolor{stringliteral}{"Age:              "} << \hyperlink{classPersonalContact_a5608489f547f4d3fbe57069463862e42}{age} << endl;
+23    cout << \textcolor{stringliteral}{"-----------------------------------------"} << endl;
+24 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classPersonalContact_aed504b2ba815b8a9dfc860ec89434647_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personal\+Contact@{Personal\+Contact}!edit@{edit}}
+\index{edit@{edit}!Personal\+Contact@{Personal\+Contact}}
+\subsubsection[{\texorpdfstring{edit()}{edit()}}]{\setlength{\rightskip}{0pt plus 5cm}void Personal\+Contact\+::edit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classPersonalContact_a39b007f46cfac8093982676cc5ff2508}{}\label{classPersonalContact_a39b007f46cfac8093982676cc5ff2508}
+
+
+Reimplemented from \hyperlink{classContact_a1e8e2536913df381990b8ed35d562dd6}{Contact}.
+
+
+\begin{DoxyCode}
+27 \{
+28    \textcolor{keywordtype}{int} choice;
+29    \textcolor{keywordflow}{do}
+30    \{
+31       cout << \textcolor{stringliteral}{"Choose the number of what you would like to edit:\(\backslash\)n"};
+32       cout << \textcolor{stringliteral}{"(1) First name\(\backslash\)n"} << \textcolor{stringliteral}{"(2) Last name\(\backslash\)n"} << \textcolor{stringliteral}{"(3) Phone number\(\backslash\)n"} << \textcolor{stringliteral}{"(4) Date of birth\(\backslash\)n"} << \textcolor{stringliteral}{"
+      (5) Email address\(\backslash\)n"} << \textcolor{stringliteral}{"(6) Age\(\backslash\)n"} << \textcolor{stringliteral}{"(7) Save and finish\(\backslash\)n"};
+33       cin >> choice;
+34       cout << endl << \textcolor{stringliteral}{"Enter the new "};
+35       \textcolor{keywordflow}{switch}(choice) \textcolor{comment}{// checks which choice the user entered                                               
+                                                                                                       }
+36       \{
+37          \textcolor{keywordflow}{case} 1:
+38             cout << \textcolor{stringliteral}{"first name: "};
+39             cin >> \hyperlink{classContact_ac074ba210aa0e4a52921af8353384a59}{first\_name};
+40             \textcolor{keywordflow}{break};
+41          \textcolor{keywordflow}{case} 2:
+42             cout << \textcolor{stringliteral}{"last name: "};
+43             cin >> \hyperlink{classContact_a87032ae00ab0e8cc81d660f191bcf0fa}{last\_name};
+44             \textcolor{keywordflow}{break};
+45          \textcolor{keywordflow}{case} 3:
+46             cout << \textcolor{stringliteral}{"phone number: "};
+47             cin >> \hyperlink{classContact_ad23a96ecf0527e8878da50da682ba794}{telephone};
+48             \textcolor{keywordflow}{break};
+49          \textcolor{keywordflow}{case} 4:
+50             cout << \textcolor{stringliteral}{"date of birth: "};
+51             cin >> \hyperlink{classContact_a50397132da5dc66f2cb289fc650c3df6}{dob};
+52             \textcolor{keywordflow}{break};
+53          \textcolor{keywordflow}{case} 5:
+54             cout << \textcolor{stringliteral}{"email address: "};
+55             cin >> \hyperlink{classContact_a7cb8a0ab45d0ddc7a83df39590fcb6c1}{email};
+56             \textcolor{keywordflow}{break};
+57          \textcolor{keywordflow}{case} 6:
+58             cout << \textcolor{stringliteral}{"age: "};
+59             cin >> \hyperlink{classPersonalContact_a5608489f547f4d3fbe57069463862e42}{age};
+60             \textcolor{keywordflow}{break};
+61          \textcolor{keywordflow}{case} 7:
+62             \textcolor{keywordflow}{break};
+63          \textcolor{keywordflow}{default}:
+64             cout << \textcolor{stringliteral}{"Not a possible choice."};
+65       \}
+66       cout << endl;
+67    \}\textcolor{keywordflow}{while} (choice != 7);
+68 \}
+\end{DoxyCode}
+\index{Personal\+Contact@{Personal\+Contact}!print@{print}}
+\index{print@{print}!Personal\+Contact@{Personal\+Contact}}
+\subsubsection[{\texorpdfstring{print(ostream \&out)}{print(ostream &out)}}]{\setlength{\rightskip}{0pt plus 5cm}void Personal\+Contact\+::print (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPersonalContact_a512ff86fb41425bf0c025e9a57715f82}{}\label{classPersonalContact_a512ff86fb41425bf0c025e9a57715f82}
+
+
+Reimplemented from \hyperlink{classContact_a0167449fa2e8039fbc8fff705329c6d1}{Contact}.
+
+
+\begin{DoxyCode}
+77 \{
+78    out << \textcolor{charliteral}{'p'} << endl;
+79    \hyperlink{classContact_a0167449fa2e8039fbc8fff705329c6d1}{Contact::print}(out);
+80    out << \hyperlink{classPersonalContact_a5608489f547f4d3fbe57069463862e42}{age} << endl;
+81 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classPersonalContact_a512ff86fb41425bf0c025e9a57715f82_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personal\+Contact@{Personal\+Contact}!read@{read}}
+\index{read@{read}!Personal\+Contact@{Personal\+Contact}}
+\subsubsection[{\texorpdfstring{read(istream \&in)}{read(istream &in)}}]{\setlength{\rightskip}{0pt plus 5cm}void Personal\+Contact\+::read (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{in}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPersonalContact_a10eedd89e14f19b8ad1f7fa938f15747}{}\label{classPersonalContact_a10eedd89e14f19b8ad1f7fa938f15747}
+
+
+Reimplemented from \hyperlink{classContact_a129d7132ff55adf52737ca7e364d6420}{Contact}.
+
+
+\begin{DoxyCode}
+71 \{
+72    \hyperlink{classContact_a129d7132ff55adf52737ca7e364d6420}{Contact::read}(in);
+73    in >> \hyperlink{classPersonalContact_a5608489f547f4d3fbe57069463862e42}{age};
+74 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classPersonalContact_a10eedd89e14f19b8ad1f7fa938f15747_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Personal\+Contact@{Personal\+Contact}!Address\+Book@{Address\+Book}}
+\index{Address\+Book@{Address\+Book}!Personal\+Contact@{Personal\+Contact}}
+\subsubsection[{\texorpdfstring{Address\+Book}{AddressBook}}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Address\+Book}\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classPersonalContact_a196c2536dfbd98b40c60736c4ca095d2}{}\label{classPersonalContact_a196c2536dfbd98b40c60736c4ca095d2}
+
+
+\subsection{Member Data Documentation}
+\index{Personal\+Contact@{Personal\+Contact}!age@{age}}
+\index{age@{age}!Personal\+Contact@{Personal\+Contact}}
+\subsubsection[{\texorpdfstring{age}{age}}]{\setlength{\rightskip}{0pt plus 5cm}int Personal\+Contact\+::age\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classPersonalContact_a5608489f547f4d3fbe57069463862e42}{}\label{classPersonalContact_a5608489f547f4d3fbe57069463862e42}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{PersonalContact_8h}{Personal\+Contact.\+h}\item 
+\hyperlink{PersonalContact_8cpp}{Personal\+Contact.\+cpp}\end{DoxyCompactItemize}

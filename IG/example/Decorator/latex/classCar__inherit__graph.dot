@@ -1,0 +1,16 @@
+digraph "Car"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Car",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="CarModel1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCarModel1.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="OptionsDecorator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOptionsDecorator.html"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="ManualTransmission",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classManualTransmission.html"];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Navigation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classNavigation.html"];
+  Node3 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="PremiumSoundSystem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPremiumSoundSystem.html"];
+}

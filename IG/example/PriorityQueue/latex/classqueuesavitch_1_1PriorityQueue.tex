@@ -1,0 +1,164 @@
+\hypertarget{classqueuesavitch_1_1PriorityQueue}{}\section{queuesavitch\+:\+:Priority\+Queue Class Reference}
+\label{classqueuesavitch_1_1PriorityQueue}\index{queuesavitch\+::\+Priority\+Queue@{queuesavitch\+::\+Priority\+Queue}}
+
+
+{\ttfamily \#include $<$Priority\+Queue.\+h$>$}
+
+
+
+Inheritance diagram for queuesavitch\+:\+:Priority\+Queue\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classqueuesavitch_1_1PriorityQueue__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for queuesavitch\+:\+:Priority\+Queue\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classqueuesavitch_1_1PriorityQueue__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classqueuesavitch_1_1PriorityQueue_a3c599b47f8d383b0be9f74f741331e5e}{Priority\+Queue} ()
+\item 
+\hyperlink{classqueuesavitch_1_1PriorityQueue_a4ada9c3a90e3a05d9be0b93a486b3fd6}{Priority\+Queue} (const \hyperlink{classqueuesavitch_1_1PriorityQueue}{Priority\+Queue} \&a\+P\+Queue)
+\item 
+\hyperlink{classqueuesavitch_1_1PriorityQueue_adcefa02407d1df4f9e111bc0ecca81cc}{$\sim$\+Priority\+Queue} ()
+\item 
+int \hyperlink{classqueuesavitch_1_1PriorityQueue_aabec9a46c41b0601f05f55a7894d20e1}{remove} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{queuesavitch\+::\+Priority\+Queue@{queuesavitch\+::\+Priority\+Queue}!Priority\+Queue@{Priority\+Queue}}
+\index{Priority\+Queue@{Priority\+Queue}!queuesavitch\+::\+Priority\+Queue@{queuesavitch\+::\+Priority\+Queue}}
+\subsubsection[{\texorpdfstring{Priority\+Queue()}{PriorityQueue()}}]{\setlength{\rightskip}{0pt plus 5cm}queuesavitch\+::\+Priority\+Queue\+::\+Priority\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classqueuesavitch_1_1PriorityQueue_a3c599b47f8d383b0be9f74f741331e5e}{}\label{classqueuesavitch_1_1PriorityQueue_a3c599b47f8d383b0be9f74f741331e5e}
+
+\begin{DoxyCode}
+16                                 : \hyperlink{classqueuesavitch_1_1Queue_a76c2a8339bb4ab4f22f0f425be154c6a}{Queue}()
+17    \{
+18       \textcolor{comment}{//Intentionally empty.                                                                               
+                                                                                                       }
+19    \}
+\end{DoxyCode}
+\index{queuesavitch\+::\+Priority\+Queue@{queuesavitch\+::\+Priority\+Queue}!Priority\+Queue@{Priority\+Queue}}
+\index{Priority\+Queue@{Priority\+Queue}!queuesavitch\+::\+Priority\+Queue@{queuesavitch\+::\+Priority\+Queue}}
+\subsubsection[{\texorpdfstring{Priority\+Queue(const Priority\+Queue \&a\+P\+Queue)}{PriorityQueue(const PriorityQueue &aPQueue)}}]{\setlength{\rightskip}{0pt plus 5cm}queuesavitch\+::\+Priority\+Queue\+::\+Priority\+Queue (
+\begin{DoxyParamCaption}
+\item[{const {\bf Priority\+Queue} \&}]{a\+P\+Queue}
+\end{DoxyParamCaption}
+)}\hypertarget{classqueuesavitch_1_1PriorityQueue_a4ada9c3a90e3a05d9be0b93a486b3fd6}{}\label{classqueuesavitch_1_1PriorityQueue_a4ada9c3a90e3a05d9be0b93a486b3fd6}
+
+\begin{DoxyCode}
+22    \{
+23       \hyperlink{classqueuesavitch_1_1Queue_ac30555d398c28ad9b72f9d9b05c1ddf6}{front} = aPQueue.front;
+24       \hyperlink{classqueuesavitch_1_1Queue_a2759a808c5c9abe7d1c53cc8ade3f5a9}{back} = aPQueue.back;
+25       \textcolor{comment}{// Self-test exercise 12                                                                             
+                                                                                                       }
+26    \}
+\end{DoxyCode}
+\index{queuesavitch\+::\+Priority\+Queue@{queuesavitch\+::\+Priority\+Queue}!````~Priority\+Queue@{$\sim$\+Priority\+Queue}}
+\index{````~Priority\+Queue@{$\sim$\+Priority\+Queue}!queuesavitch\+::\+Priority\+Queue@{queuesavitch\+::\+Priority\+Queue}}
+\subsubsection[{\texorpdfstring{$\sim$\+Priority\+Queue()}{~PriorityQueue()}}]{\setlength{\rightskip}{0pt plus 5cm}queuesavitch\+::\+Priority\+Queue\+::$\sim$\+Priority\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classqueuesavitch_1_1PriorityQueue_adcefa02407d1df4f9e111bc0ecca81cc}{}\label{classqueuesavitch_1_1PriorityQueue_adcefa02407d1df4f9e111bc0ecca81cc}
+
+\begin{DoxyCode}
+29    \{
+30       \textcolor{comment}{//The definition of the destructor is Self-Test Exercise 13.                                         
+                                                                                                       }
+31    \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{queuesavitch\+::\+Priority\+Queue@{queuesavitch\+::\+Priority\+Queue}!remove@{remove}}
+\index{remove@{remove}!queuesavitch\+::\+Priority\+Queue@{queuesavitch\+::\+Priority\+Queue}}
+\subsubsection[{\texorpdfstring{remove()}{remove()}}]{\setlength{\rightskip}{0pt plus 5cm}int queuesavitch\+::\+Priority\+Queue\+::remove (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classqueuesavitch_1_1PriorityQueue_aabec9a46c41b0601f05f55a7894d20e1}{}\label{classqueuesavitch_1_1PriorityQueue_aabec9a46c41b0601f05f55a7894d20e1}
+
+
+Reimplemented from \hyperlink{classqueuesavitch_1_1Queue_a607e9543f593526aee0d6a403a4ce775}{queuesavitch\+::\+Queue}.
+
+
+\begin{DoxyCode}
+35    \{
+36       \textcolor{keywordflow}{if} (\hyperlink{classqueuesavitch_1_1Queue_a557c2aefa6d1c51d42a1563dab0e2cc0}{empty}())
+37       \{
+38          cout << \textcolor{stringliteral}{"Error: Removing an item from an empty queue.\(\backslash\)n"};
+39          exit(1);
+40       \}
+41       \hyperlink{namespacequeuesavitch_a3a9d48cafb7ea2049936da3b05a10209}{QueueNodePtr} p = \hyperlink{classqueuesavitch_1_1Queue_ac30555d398c28ad9b72f9d9b05c1ddf6}{front};
+42       \hyperlink{namespacequeuesavitch_a3a9d48cafb7ea2049936da3b05a10209}{QueueNodePtr} discard, previous, here;
+43       \hyperlink{namespacequeuesavitch_a3a9d48cafb7ea2049936da3b05a10209}{QueueNodePtr} next;
+44       \textcolor{keywordtype}{int} target = \hyperlink{classqueuesavitch_1_1Queue_ac30555d398c28ad9b72f9d9b05c1ddf6}{front}->\hyperlink{structqueuesavitch_1_1QueueNode_a4fd17a591c8510ed1118d3c4cb67b320}{data};
+45       \textcolor{keywordflow}{while}(p->link != NULL)
+46       \{
+47          here = p->link;
+48          \textcolor{keywordflow}{if}(here->data < target) \textcolor{comment}{// if a node has a value smaller than the first node's                    
+                                                                                                       }
+49          \{
+50             target = here->data;
+51             discard = here;
+52             previous = p;
+53          \}
+54          p = p->link;
+55       \}
+56 
+57       \textcolor{keywordflow}{if}(target == \hyperlink{classqueuesavitch_1_1Queue_ac30555d398c28ad9b72f9d9b05c1ddf6}{front}->\hyperlink{structqueuesavitch_1_1QueueNode_a4fd17a591c8510ed1118d3c4cb67b320}{data}) \textcolor{comment}{// if the first node holds the smallest value                     
+                                                                                                                }
+58       \{
+59          discard = \hyperlink{classqueuesavitch_1_1Queue_ac30555d398c28ad9b72f9d9b05c1ddf6}{front};
+60         \hyperlink{classqueuesavitch_1_1Queue_ac30555d398c28ad9b72f9d9b05c1ddf6}{front} = \hyperlink{classqueuesavitch_1_1Queue_ac30555d398c28ad9b72f9d9b05c1ddf6}{front}->\hyperlink{structqueuesavitch_1_1QueueNode_add6ebeca47fc7ab55c99a33827cb68c4}{link};
+61       \}
+62       \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(discard->link == NULL) \textcolor{comment}{// if the last node holds the smallest value                          
+                                                                                                       }
+63          \hyperlink{classqueuesavitch_1_1Queue_a2759a808c5c9abe7d1c53cc8ade3f5a9}{back} = previous;
+64       \textcolor{keywordflow}{else} \textcolor{comment}{// if a middle node holds the smallest value                                                    
+                                                                                                       }
+65          previous->\hyperlink{structqueuesavitch_1_1QueueNode_add6ebeca47fc7ab55c99a33827cb68c4}{link} = discard->\hyperlink{structqueuesavitch_1_1QueueNode_add6ebeca47fc7ab55c99a33827cb68c4}{link};
+66       \textcolor{keywordflow}{if} (\hyperlink{classqueuesavitch_1_1Queue_ac30555d398c28ad9b72f9d9b05c1ddf6}{front} == NULL) \textcolor{comment}{//if you removed the last node                                               
+                                                                                                            }
+67          \hyperlink{classqueuesavitch_1_1Queue_a2759a808c5c9abe7d1c53cc8ade3f5a9}{back} = NULL;
+68 
+69       \textcolor{keyword}{delete} discard;
+70 
+71       \textcolor{keywordflow}{return} target;
+72    \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classqueuesavitch_1_1PriorityQueue_aabec9a46c41b0601f05f55a7894d20e1_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{PriorityQueue_8h}{Priority\+Queue.\+h}\item 
+\hyperlink{PriorityQueue_8cpp}{Priority\+Queue.\+cpp}\end{DoxyCompactItemize}

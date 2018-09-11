@@ -1,0 +1,109 @@
+\hypertarget{classBikeRecord}{}\section{Bike\+Record Class Reference}
+\label{classBikeRecord}\index{Bike\+Record@{Bike\+Record}}
+
+
+Inheritance diagram for Bike\+Record\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{classBikeRecord__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bike\+Record\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{classBikeRecord__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBikeRecord_aeb895d757c28796857eac6f246098e45}{Bike\+Record} (string bike\+Name, int ID)
+\item 
+void \hyperlink{classBikeRecord_a84eee4b442a8a82a131f595915a3f4ce}{print} () override
+\item 
+\hyperlink{classRecord}{Record} $\ast$ \hyperlink{classBikeRecord_a306fa32f6acb1c27a2e2d2f353cff9c8}{clone} () override
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classBikeRecord_a5d1749281f51f57f778d11873beb8fdd}{m\+\_\+bike\+Name}
+\item 
+int \hyperlink{classBikeRecord_a1539b267352308b9ac0a97c54291aafd}{m\+\_\+\+ID}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classBikeRecord}{Bike\+Record} is the Concrete Prototype 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Bike\+Record@{Bike\+Record}!Bike\+Record@{Bike\+Record}}
+\index{Bike\+Record@{Bike\+Record}!Bike\+Record@{Bike\+Record}}
+\subsubsection[{\texorpdfstring{Bike\+Record(string bike\+Name, int I\+D)}{BikeRecord(string bikeName, int ID)}}]{\setlength{\rightskip}{0pt plus 5cm}Bike\+Record\+::\+Bike\+Record (
+\begin{DoxyParamCaption}
+\item[{string}]{bike\+Name, }
+\item[{int}]{ID}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classBikeRecord_aeb895d757c28796857eac6f246098e45}{}\label{classBikeRecord_aeb895d757c28796857eac6f246098e45}
+
+\begin{DoxyCode}
+50                                         : \hyperlink{classBikeRecord_a5d1749281f51f57f778d11873beb8fdd}{m\_bikeName}(bikeName), \hyperlink{classBikeRecord_a1539b267352308b9ac0a97c54291aafd}{m\_ID}(ID)
+51     \{
+52     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Bike\+Record@{Bike\+Record}!clone@{clone}}
+\index{clone@{clone}!Bike\+Record@{Bike\+Record}}
+\subsubsection[{\texorpdfstring{clone() override}{clone() override}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Record}$\ast$ Bike\+Record\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classBikeRecord_a306fa32f6acb1c27a2e2d2f353cff9c8}{}\label{classBikeRecord_a306fa32f6acb1c27a2e2d2f353cff9c8}
+
+
+Implements \hyperlink{classRecord_a78dec14d71a48508de135ee06fe48373}{Record}.
+
+
+\begin{DoxyCode}
+62     \{
+63         \textcolor{keywordflow}{return} \textcolor{keyword}{new} \hyperlink{classBikeRecord_aeb895d757c28796857eac6f246098e45}{BikeRecord}(*\textcolor{keyword}{this});
+64     \}
+\end{DoxyCode}
+\index{Bike\+Record@{Bike\+Record}!print@{print}}
+\index{print@{print}!Bike\+Record@{Bike\+Record}}
+\subsubsection[{\texorpdfstring{print() override}{print() override}}]{\setlength{\rightskip}{0pt plus 5cm}void Bike\+Record\+::print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classBikeRecord_a84eee4b442a8a82a131f595915a3f4ce}{}\label{classBikeRecord_a84eee4b442a8a82a131f595915a3f4ce}
+
+
+Implements \hyperlink{classRecord_ad218b1bea934fb19a23a35b0b987e033}{Record}.
+
+
+\begin{DoxyCode}
+55     \{
+56         cout << \textcolor{stringliteral}{"Bike Record"} << endl
+57              << \textcolor{stringliteral}{"Name  : "} << \hyperlink{classBikeRecord_a5d1749281f51f57f778d11873beb8fdd}{m\_bikeName} << endl
+58              << \textcolor{stringliteral}{"Number: "} << \hyperlink{classBikeRecord_a1539b267352308b9ac0a97c54291aafd}{m\_ID} << endl << endl;
+59     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Bike\+Record@{Bike\+Record}!m\+\_\+bike\+Name@{m\+\_\+bike\+Name}}
+\index{m\+\_\+bike\+Name@{m\+\_\+bike\+Name}!Bike\+Record@{Bike\+Record}}
+\subsubsection[{\texorpdfstring{m\+\_\+bike\+Name}{m_bikeName}}]{\setlength{\rightskip}{0pt plus 5cm}string Bike\+Record\+::m\+\_\+bike\+Name\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classBikeRecord_a5d1749281f51f57f778d11873beb8fdd}{}\label{classBikeRecord_a5d1749281f51f57f778d11873beb8fdd}
+\index{Bike\+Record@{Bike\+Record}!m\+\_\+\+ID@{m\+\_\+\+ID}}
+\index{m\+\_\+\+ID@{m\+\_\+\+ID}!Bike\+Record@{Bike\+Record}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+ID}{m_ID}}]{\setlength{\rightskip}{0pt plus 5cm}int Bike\+Record\+::m\+\_\+\+ID\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classBikeRecord_a1539b267352308b9ac0a97c54291aafd}{}\label{classBikeRecord_a1539b267352308b9ac0a97c54291aafd}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Prototype_8cpp}{Prototype.\+cpp}\end{DoxyCompactItemize}

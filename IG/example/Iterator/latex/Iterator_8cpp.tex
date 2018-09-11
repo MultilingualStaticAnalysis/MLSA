@@ -1,0 +1,117 @@
+\hypertarget{Iterator_8cpp}{}\section{Iterator.\+cpp File Reference}
+\label{Iterator_8cpp}\index{Iterator.\+cpp@{Iterator.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$iterator$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+Include dependency graph for Iterator.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{Iterator_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structPlayer}{Player}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Iterator_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Iterator.\+cpp@{Iterator.\+cpp}!main@{main}}
+\index{main@{main}!Iterator.\+cpp@{Iterator.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Iterator_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Iterator_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+23 \{
+24     std::list<Player> listofPlayers =
+25     \{ \hyperlink{structPlayer}{Player}(22, \textcolor{stringliteral}{"Sid"}), \hyperlink{structPlayer}{Player}(3, \textcolor{stringliteral}{"Laura"}), \hyperlink{structPlayer}{Player}(43, \textcolor{stringliteral}{"Riti"}), 
+      \hyperlink{structPlayer}{Player}(30,
+26             \textcolor{stringliteral}{"Angel"}), \hyperlink{structPlayer}{Player}(2, \textcolor{stringliteral}{"Laura"}) \};
+27  
+28     std::cout << \textcolor{stringliteral}{"*******Iterate std::list using Iterators*******"} << std::endl;
+29  
+30 \textcolor{comment}{//Create an iterator of std::list}
+31     std::list<Player>::iterator it;
+32  
+33 \textcolor{comment}{// Make iterate point to begining and incerement it one by one till it reaches the end of list.}
+34     \textcolor{keywordflow}{for} (it = listofPlayers.begin(); it != listofPlayers.end(); it++)
+35     \{
+36         \textcolor{comment}{// Access the object through iterator}
+37         \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = it->\hyperlink{structPlayer_a05e05f3a23de78da7ec032ec2bcf8c6c}{id};
+38         std::string name = it->name;
+39         it->addPoints(2);
+40  
+41         \textcolor{comment}{//Print the contents}
+42         std::cout << \textcolor{keywordtype}{id} << \textcolor{stringliteral}{" :: "} << name << std::endl;
+43  
+44     \}
+45  
+46     std::cout
+47             << \textcolor{stringliteral}{"*******Iterate std::list using for\_each and c++11's Lambda function *********"}
+48             << std::endl;
+49  
+50     std::for\_each(listofPlayers.begin(), listofPlayers.end(),
+51             [](\textcolor{keyword}{const} \hyperlink{structPlayer}{Player} & player)
+52             \{
+53                 \textcolor{comment}{//Print the contents}
+54                 std::cout<<player.id<< \textcolor{stringliteral}{" :: "}<<player.name<<std::endl;
+55                 player.addPoints(5);
+56             \});
+57  
+58     std::cout
+59             << \textcolor{stringliteral}{"*******Iterate std::list using c++11 Range Based For Loop *********"}
+60             << std::endl;
+61  
+62     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \hyperlink{structPlayer}{Player} & player : listofPlayers)
+63     \{
+64         std::cout << player.id << \textcolor{stringliteral}{" :: "} << player.name << std::endl;
+65         player.addPoints(3);
+66     \}
+67  
+68     std::cout
+69             << \textcolor{stringliteral}{"*******Iterate std::list in backwords using Iterators *********"}
+70             << std::endl;
+71  
+72     \textcolor{comment}{//Create a reverse iterator of std::list}
+73     std::list<Player>::reverse\_iterator revIt;
+74  
+75     \textcolor{comment}{// Make iterate point to begining and incerement it one by one till it reaches the end of list.}
+76     \textcolor{keywordflow}{for} (revIt = listofPlayers.rbegin(); revIt != listofPlayers.rend(); revIt++)
+77     \{
+78         \textcolor{comment}{// Access the object through iterator}
+79         \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = revIt->id;
+80         std::string name = revIt->name;
+81         rivIt->addPoints(9);
+82  
+83         \textcolor{comment}{//Print the contents}
+84         std::cout << \textcolor{keywordtype}{id} << \textcolor{stringliteral}{" :: "} << name << std::endl;
+85  
+86     \}
+87  
+88     \textcolor{keywordflow}{return} 0;
+89  
+90 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{Iterator_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

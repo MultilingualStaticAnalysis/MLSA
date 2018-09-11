@@ -1,0 +1,21 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/Prototype Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/Prototype Call Graph"
+	];
+
+	Node0x795878210 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/Prototype/Prototype.cpp"];
+	Node0x217510574 [shape=oval, label="0x28726a8. (/home/labaccount/11-2-17/mlsa/IG/example/Prototype/Prototype.cpp)\nRecordFactory::createRecord(CAR)"];
+	Node0x795878210 -> Node0x217510574;
+	Node0x889517079 [shape=oval, label="0x2872800. (/home/labaccount/11-2-17/mlsa/IG/example/Prototype/Prototype.cpp)\nRecord::print()"];
+	Node0x795878210 -> Node0x889517079;
+	Node0x989235520 [shape=oval, label="0x28728d8. (/home/labaccount/11-2-17/mlsa/IG/example/Prototype/Prototype.cpp)\nRecordFactory::createRecord(BIKE)"];
+	Node0x795878210 -> Node0x989235520;
+	Node0x464139145 [shape=oval, label="0x28729a8. (/home/labaccount/11-2-17/mlsa/IG/example/Prototype/Prototype.cpp)\nRecord::print()"];
+	Node0x795878210 -> Node0x464139145;
+	Node0x201522514 [shape=oval, label="0x2872a80. (/home/labaccount/11-2-17/mlsa/IG/example/Prototype/Prototype.cpp)\nRecordFactory::createRecord(PERSON)"];
+	Node0x795878210 -> Node0x201522514;
+	Node0x663988867 [shape=oval, label="0x2872b50. (/home/labaccount/11-2-17/mlsa/IG/example/Prototype/Prototype.cpp)\nRecord::print()"];
+	Node0x795878210 -> Node0x663988867;
+}

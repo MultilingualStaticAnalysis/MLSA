@@ -1,0 +1,234 @@
+\hypertarget{Nmain_8cpp}{}\section{Nmain.\+cpp File Reference}
+\label{Nmain_8cpp}\index{Nmain.\+cpp@{Nmain.\+cpp}}
+{\ttfamily \#include \char`\"{}Node.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Student.\+h\char`\"{}}\\*
+Include dependency graph for Nmain.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Nmain_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{Nmain_8cpp_af8bf7d7d3b262c434aa5a55ed4bd7410}{append} (\hyperlink{classNode}{Node} $\ast$\&n, \hyperlink{classNode}{Node} $\ast$\&head)
+\item 
+void \hyperlink{Nmain_8cpp_a7a5e5d32951bef6994e209b048ed6acc}{display} (\hyperlink{classNode}{Node} $\ast$\&head)
+\item 
+bool \hyperlink{Nmain_8cpp_a50b1f8ace0b1cc448d7acc0387ca0ca6}{delete\+Node} (\hyperlink{classNode}{Node} $\ast$\&head, string target)
+\item 
+void \hyperlink{Nmain_8cpp_ac20747b60ed410e225f6d88ffe2edb91}{end} (\hyperlink{classNode}{Node} $\ast$\&head)
+\item 
+void \hyperlink{Nmain_8cpp_a70ec1382d8ba4ede7bc41284e71ba46f}{create\+Student} (string \&f, string \&l, char \&m, int \&ssn, int \&a)
+\item 
+int \hyperlink{Nmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Nmain.\+cpp@{Nmain.\+cpp}!append@{append}}
+\index{append@{append}!Nmain.\+cpp@{Nmain.\+cpp}}
+\subsubsection[{\texorpdfstring{append(\+Node $\ast$\&n, Node $\ast$\&head)}{append(Node *&n, Node *&head)}}]{\setlength{\rightskip}{0pt plus 5cm}void append (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$\&}]{n, }
+\item[{{\bf Node} $\ast$\&}]{head}
+\end{DoxyParamCaption}
+)}\hypertarget{Nmain_8cpp_af8bf7d7d3b262c434aa5a55ed4bd7410}{}\label{Nmain_8cpp_af8bf7d7d3b262c434aa5a55ed4bd7410}
+
+\begin{DoxyCode}
+70 \{
+71    \hyperlink{classNode}{Node}* curr;
+72    \textcolor{keywordflow}{if}(head == NULL)
+73       head = n; \textcolor{comment}{//first Node added to the list                                                             
+                                                                                                       }
+74    \textcolor{keywordflow}{else}
+75    \{
+76       curr = head;
+77       \textcolor{keywordflow}{while}(curr -> \hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}() != NULL) \textcolor{comment}{//finds the last Node in the list                            
+                                                                                                              }
+78          curr = curr -> \hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}();
+79       curr -> \hyperlink{classNode_a0f69ba4f73cd616755f4ec0ae9fa7f96}{setNext}(n); \textcolor{comment}{//appends Node onto the end of the list                                   
+                                                                                                              }
+80    \}
+81 \}
+\end{DoxyCode}
+\index{Nmain.\+cpp@{Nmain.\+cpp}!create\+Student@{create\+Student}}
+\index{create\+Student@{create\+Student}!Nmain.\+cpp@{Nmain.\+cpp}}
+\subsubsection[{\texorpdfstring{create\+Student(string \&f, string \&l, char \&m, int \&ssn, int \&a)}{createStudent(string &f, string &l, char &m, int &ssn, int &a)}}]{\setlength{\rightskip}{0pt plus 5cm}void create\+Student (
+\begin{DoxyParamCaption}
+\item[{string \&}]{f, }
+\item[{string \&}]{l, }
+\item[{char \&}]{m, }
+\item[{int \&}]{ssn, }
+\item[{int \&}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{Nmain_8cpp_a70ec1382d8ba4ede7bc41284e71ba46f}{}\label{Nmain_8cpp_a70ec1382d8ba4ede7bc41284e71ba46f}
+
+\begin{DoxyCode}
+56 \{
+57    cout << \textcolor{stringliteral}{"Enter first name: "};
+58    cin >> f;
+59    cout << \textcolor{stringliteral}{"Enter last name: "};
+60    cin >> l;
+61    cout << \textcolor{stringliteral}{"Enter middle initial: "};
+62    cin >> m;
+63    cout << \textcolor{stringliteral}{"Enter social security number: "};
+64    cin >> ssn;
+65    cout << \textcolor{stringliteral}{"Enter age: "};
+66    cin >> a;
+67 \}
+\end{DoxyCode}
+\index{Nmain.\+cpp@{Nmain.\+cpp}!delete\+Node@{delete\+Node}}
+\index{delete\+Node@{delete\+Node}!Nmain.\+cpp@{Nmain.\+cpp}}
+\subsubsection[{\texorpdfstring{delete\+Node(\+Node $\ast$\&head, string target)}{deleteNode(Node *&head, string target)}}]{\setlength{\rightskip}{0pt plus 5cm}bool delete\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$\&}]{head, }
+\item[{string}]{target}
+\end{DoxyParamCaption}
+)}\hypertarget{Nmain_8cpp_a50b1f8ace0b1cc448d7acc0387ca0ca6}{}\label{Nmain_8cpp_a50b1f8ace0b1cc448d7acc0387ca0ca6}
+
+\begin{DoxyCode}
+108 \{
+109    \textcolor{keywordtype}{bool} del = \textcolor{keyword}{false};
+110    \hyperlink{classNode}{Node}* temp = NULL;
+111    \hyperlink{classNode}{Node}* curr = head;
+112    \hyperlink{classNode}{Node}* \hyperlink{classNode_ac953360c5f7ffae6ad13762189d34d9c}{prev} = NULL; \textcolor{comment}{//prev starts at NULL because curr starts at head                            
+                                                                                                               }
+113    \textcolor{keywordflow}{while}(curr)
+114    \{
+115       \textcolor{keywordflow}{if}(curr->getStudent().getFirstName() != target) \textcolor{comment}{//target not found, moves to next Node               
+                                                                                                       }
+116       \{
+117          prev = curr;
+118          curr = curr -> \hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}();
+119       \}
+120       \textcolor{keywordflow}{else}
+121       \{
+122          \textcolor{keywordflow}{if}(prev == NULL) \textcolor{comment}{//Node to be deleted is the first one in the list                                
+                                                                                                       }
+123          \{
+124             head = curr -> \hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}(); \textcolor{comment}{//head points to next Node                                    
+                                                                                                              }
+125          \}
+126          \textcolor{keywordflow}{else} \textcolor{comment}{//Node is in middle of list or at the end                                                    
+                                                                                                       }
+127             prev -> \hyperlink{classNode_a0f69ba4f73cd616755f4ec0ae9fa7f96}{setNext}(curr -> \hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}()); \textcolor{comment}{//                                           
+                                                                                                                  
+         }
+128          curr -> deleteStudent(); \textcolor{comment}{//releases dynamically allocated memory of Student                       
+                                                                                                       }
+129          \textcolor{keyword}{delete} curr; \textcolor{comment}{//releases dynamically allocated memory of Node                                      
+                                                                                                       }
+130          curr = NULL;
+131          del = \textcolor{keyword}{true}; \textcolor{comment}{//Because a Node is deleted, function sends back TRUE                                 
+                                                                                                       }
+132       \}
+133    \}
+134    \textcolor{keywordflow}{return} del;
+135 \}
+\end{DoxyCode}
+\index{Nmain.\+cpp@{Nmain.\+cpp}!display@{display}}
+\index{display@{display}!Nmain.\+cpp@{Nmain.\+cpp}}
+\subsubsection[{\texorpdfstring{display(\+Node $\ast$\&head)}{display(Node *&head)}}]{\setlength{\rightskip}{0pt plus 5cm}void display (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$\&}]{head}
+\end{DoxyParamCaption}
+)}\hypertarget{Nmain_8cpp_a7a5e5d32951bef6994e209b048ed6acc}{}\label{Nmain_8cpp_a7a5e5d32951bef6994e209b048ed6acc}
+
+\begin{DoxyCode}
+84 \{
+85    \hyperlink{classNode}{Node}* curr = head;
+86    cout << endl;
+87    \textcolor{keywordflow}{while}(curr != NULL) \textcolor{comment}{//goes through all Nodes                                                            
+                                                                                                       }
+88    \{
+89       cout << curr -> getStudent() << endl; \textcolor{comment}{//displays Student information}
+90      curr = curr -> \hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}(); \textcolor{comment}{//goes to the next Node in the list                                  
+                                                                                                             }
+91    \}
+92 \}
+\end{DoxyCode}
+\index{Nmain.\+cpp@{Nmain.\+cpp}!end@{end}}
+\index{end@{end}!Nmain.\+cpp@{Nmain.\+cpp}}
+\subsubsection[{\texorpdfstring{end(\+Node $\ast$\&head)}{end(Node *&head)}}]{\setlength{\rightskip}{0pt plus 5cm}void end (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$\&}]{head}
+\end{DoxyParamCaption}
+)}\hypertarget{Nmain_8cpp_ac20747b60ed410e225f6d88ffe2edb91}{}\label{Nmain_8cpp_ac20747b60ed410e225f6d88ffe2edb91}
+
+\begin{DoxyCode}
+95 \{
+96    \hyperlink{classNode}{Node}* curr = head;
+97    \hyperlink{classNode}{Node}* del;
+98    \textcolor{keywordflow}{while}(curr != NULL)
+99    \{
+100       del = curr;
+101       curr -> deleteStudent(); \textcolor{comment}{//releases the Student memory of the Node                                   
+                                                                                                       }
+102       curr = curr -> \hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}();
+103       \textcolor{keyword}{delete} del; \textcolor{comment}{//releases the Node memory                                                               
+                                                                                                       }
+104    \}
+105 \}
+\end{DoxyCode}
+\index{Nmain.\+cpp@{Nmain.\+cpp}!main@{main}}
+\index{main@{main}!Nmain.\+cpp@{Nmain.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Nmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Nmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+21 \{
+22    \hyperlink{classNode}{Node}* head = NULL;
+23    \hyperlink{classNode}{Node}* nPtr;
+24    \textcolor{keywordtype}{string} f, l;
+25    \textcolor{keywordtype}{int} n, ssn, a;
+26    \textcolor{keywordtype}{char} ans, m;
+27    \textcolor{keywordtype}{bool} del;
+28 
+29    \textcolor{keywordflow}{do}
+30    \{
+31       \hyperlink{Nmain_8cpp_a70ec1382d8ba4ede7bc41284e71ba46f}{createStudent}(f, l, m, ssn, a);
+32       nPtr = \textcolor{keyword}{new} \hyperlink{classNode_a0ac1d44cfe588be564acf25485029bd8}{Node}(f, l, m, ssn, a); \textcolor{comment}{//creates new Node (which nPtr points to) with the Student
+       object just created                                                                                      }
+33       \hyperlink{Nmain_8cpp_af8bf7d7d3b262c434aa5a55ed4bd7410}{append}(nPtr, head); \textcolor{comment}{//appends the newly created Node to the list                               
+                                                                                                             }
+34       cout << \textcolor{stringliteral}{"\(\backslash\)nAdd a new student to the list? y/n: "};
+35       cin >> ans;
+36       cout << endl;
+37    \}\textcolor{keywordflow}{while}(ans == \textcolor{charliteral}{'y'} || ans == \textcolor{charliteral}{'Y'}); \textcolor{comment}{//Nodes will be created until user does not enter y or Y              
+                                                                                                       }
+38 
+39    cout << \textcolor{stringliteral}{"Student list:"} << endl;
+40    \hyperlink{Nmain_8cpp_a7a5e5d32951bef6994e209b048ed6acc}{display}(head); \textcolor{comment}{//displays list                                                                   
+                                                                                                              }
+41 
+42    \textcolor{keywordflow}{do}
+43    \{
+44       del = \hyperlink{Nmain_8cpp_a50b1f8ace0b1cc448d7acc0387ca0ca6}{deleteNode}(head, \textcolor{stringliteral}{"Christine"}); \textcolor{comment}{//deletes all Nodes with the name Christine           
+                                                                                                                 }
+45    \}\textcolor{keywordflow}{while}(del); \textcolor{comment}{//continue to delete Nodes until there are no more Christines in the list                  
+                                                                                                       }
+46 
+47    cout << \textcolor{stringliteral}{"After Christine has been deleted from list:"} << endl;
+48    \hyperlink{Nmain_8cpp_a7a5e5d32951bef6994e209b048ed6acc}{display}(head);
+49    \hyperlink{Nmain_8cpp_ac20747b60ed410e225f6d88ffe2edb91}{end}(head);
+50    \textcolor{keywordflow}{return} 0;
+51 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{Nmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

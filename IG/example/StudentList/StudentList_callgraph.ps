@@ -1,0 +1,1094 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.38.0 (20140413.2041)
+%%Title: /home/labaccount/11-2-17/mlsa/IG/example/StudentList Call Graph
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 150 150 2400 1153
+%%PageOrientation: Portrait
+<< /PageSize [2400 1153] >> setpagedevice
+0 0 1 beginpage
+gsave
+150 150 2250 1003 boxprim clip newpath
+0.846412 0.846412 set_scale 0 rotate 181.219 181.219 translate
+[ /CropBox [150 150 2400 1153] /PAGES pdfmark
+0 0 0 graphcolor
+14 /Times-Roman set_font
+1139.14 7.8 moveto 372 (/home/labaccount/11-2-17/mlsa/IG/example/StudentList Call Graph) alignedtext
+% Node0x436639795
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+259.98 789.87 259.95 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+67.98 786.17 moveto 384 (/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c) alignedtext
+grestore
+% Node0x381690994
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+892.54 1041.87 335.75 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+663.04 1045.67 moveto 459 (0x276f850. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+878.54 1030.67 moveto 28 (init\(\)) alignedtext
+grestore
+% Node0x436639795->Node0x381690994
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 287.89 807.89 moveto
+338.42 841.03 451.83 912.05 555.95 953.87 curveto
+620.15 979.65 694.29 1000.02 756.53 1014.63 curveto
+stroke
+0 0 0 edgecolor
+newpath 755.88 1018.07 moveto
+766.42 1016.93 lineto
+757.47 1011.25 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 755.88 1018.07 moveto
+766.42 1016.93 lineto
+757.47 1011.25 lineto
+closepath stroke
+grestore
+% Node0x465525865
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+892.54 907.87 334.42 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+664.04 919.17 moveto 457 (0x276faa0. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+800.04 904.17 moveto 185 (printf\(<< Usage: %s infile outfile) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+859.54 889.17 moveto 66 ( >>, argv[]\)) alignedtext
+grestore
+% Node0x436639795->Node0x465525865
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 324.43 807.37 moveto
+383.89 823.29 475.42 846.56 555.95 861.87 curveto
+588.29 868.02 622.53 873.67 656.3 878.76 curveto
+stroke
+0 0 0 edgecolor
+newpath 655.87 882.24 moveto
+666.28 880.25 lineto
+656.9 875.31 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 655.87 882.24 moveto
+666.28 880.25 lineto
+656.9 875.31 lineto
+closepath stroke
+grestore
+% Node0x323515374
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+892.54 825.87 335.75 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+663.04 829.67 moveto 459 (0x276fb80. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+874.04 814.67 moveto 37 (exit\(0\)) alignedtext
+grestore
+% Node0x436639795->Node0x323515374
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 461.36 801.31 moveto
+508.17 803.98 558.89 806.88 608.54 809.71 curveto
+stroke
+0 0 0 edgecolor
+newpath 608.6 813.22 moveto
+618.78 810.3 lineto
+609 806.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 608.6 813.22 moveto
+618.78 810.3 lineto
+609 806.23 lineto
+closepath stroke
+grestore
+% Node0x233322610
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+892.54 753.87 335.75 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+663.04 757.67 moveto 459 (0x276fd80. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+821.54 742.67 moveto 142 (readStudentList\(argv[], q\)) alignedtext
+grestore
+% Node0x436639795->Node0x233322610
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 461.36 778.43 moveto
+508.17 775.76 558.89 772.86 608.54 770.03 curveto
+stroke
+0 0 0 edgecolor
+newpath 609 773.51 moveto
+618.78 769.44 lineto
+608.6 766.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 609 773.51 moveto
+618.78 769.44 lineto
+608.6 766.52 lineto
+closepath stroke
+grestore
+% Node0x177143286
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+892.54 429.87 334.42 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+664.04 433.67 moveto 457 (0x276ff60. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+819.04 418.67 moveto 147 (writeStudentList\(argv[], q\)) alignedtext
+grestore
+% Node0x436639795->Node0x177143286
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 292.68 771.77 moveto
+393.4 714.26 707.05 535.2 835.66 461.77 curveto
+stroke
+0 0 0 edgecolor
+newpath 837.65 464.67 moveto
+844.59 456.67 lineto
+834.17 458.59 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 837.65 464.67 moveto
+844.59 456.67 lineto
+834.17 458.59 lineto
+closepath stroke
+grestore
+% Node0x329261412
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+892.54 121.87 336.67 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+662.54 125.67 moveto 460 (0x27700a0. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+872.04 110.67 moveto 41 (final\(q\)) alignedtext
+grestore
+% Node0x436639795->Node0x329261412
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 272.19 771.67 moveto
+308.7 713.14 429.21 525.91 555.95 393.87 curveto
+648.96 296.98 776.07 202.53 844.05 154.53 curveto
+stroke
+0 0 0 edgecolor
+newpath 846.28 157.25 moveto
+852.44 148.63 lineto
+842.25 151.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 846.28 157.25 moveto
+852.44 148.63 lineto
+842.25 151.52 lineto
+closepath stroke
+grestore
+% Node0x613139391
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1602.41 1149.87 335.75 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1372.91 1153.67 moveto 459 (0x2767f50. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1578.91 1138.67 moveto 47 (malloc\(\)) alignedtext
+grestore
+% Node0x381690994->Node0x613139391
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1010.25 1067.12 moveto
+1083.23 1082.25 1179.34 1100.99 1265.12 1113.87 curveto
+1300.28 1119.15 1337.63 1123.95 1374.15 1128.19 curveto
+stroke
+0 0 0 edgecolor
+newpath 1374.1 1131.71 moveto
+1384.43 1129.37 lineto
+1374.9 1124.75 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1374.1 1131.71 moveto
+1384.43 1129.37 lineto
+1374.9 1124.75 lineto
+closepath stroke
+grestore
+% Node0x501019459
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1602.41 1077.87 337.08 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1371.91 1081.67 moveto 461 (0x27691b0. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1541.91 1066.67 moveto 121 (perror\(<< malloc >>\)) alignedtext
+grestore
+% Node0x381690994->Node0x501019459
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1176.36 1056.25 moveto
+1219.5 1058.45 1264.11 1060.72 1307.48 1062.92 curveto
+stroke
+0 0 0 edgecolor
+newpath 1307.43 1066.42 moveto
+1317.59 1063.44 lineto
+1307.78 1059.43 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1307.43 1066.42 moveto
+1317.59 1063.44 lineto
+1307.78 1059.43 lineto
+closepath stroke
+grestore
+% Node0x413023679
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1602.41 1005.87 336.67 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1372.41 1009.67 moveto 460 (0x27692a0. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1583.91 994.67 moveto 37 (exit\(1\)) alignedtext
+grestore
+% Node0x381690994->Node0x413023679
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1176.36 1027.49 moveto
+1219.68 1025.28 1264.48 1023.01 1308.02 1020.79 curveto
+stroke
+0 0 0 edgecolor
+newpath 1308.36 1024.28 moveto
+1318.17 1020.27 lineto
+1308.01 1017.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1308.36 1024.28 moveto
+1318.17 1020.27 lineto
+1308.01 1017.29 lineto
+closepath stroke
+grestore
+% Node0x410007674
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1602.41 933.87 335.34 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1373.41 937.67 moveto 458 (0x276e8f0. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1531.91 922.67 moveto 141 (fopen\(filename, << r >>\)) alignedtext
+grestore
+% Node0x233322610->Node0x410007674
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1191.88 766.27 moveto
+1205.08 772.79 1217.6 780.59 1229.12 789.87 curveto
+1268.53 821.6 1225.71 866.14 1265.12 897.87 curveto
+1274.14 905.13 1283.77 911.49 1293.85 917.04 curveto
+stroke
+0 0 0 edgecolor
+newpath 1292.34 920.2 moveto
+1302.83 921.71 lineto
+1295.57 913.99 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1292.34 920.2 moveto
+1302.83 921.71 lineto
+1295.57 913.99 lineto
+closepath stroke
+grestore
+% Node0x308867310
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1602.41 861.87 334.42 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1373.91 865.67 moveto 457 (0x276eaf8. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1545.41 850.67 moveto 114 (perror\(<< fopen >>\)) alignedtext
+grestore
+% Node0x233322610->Node0x308867310
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1172.39 768.74 moveto
+1192.03 774.33 1211.15 781.27 1229.12 789.87 curveto
+1249.53 799.63 1244.71 816.11 1265.12 825.87 curveto
+1280.29 833.12 1296.27 839.2 1312.69 844.28 curveto
+stroke
+0 0 0 edgecolor
+newpath 1311.82 847.68 moveto
+1322.41 847.16 lineto
+1313.81 840.96 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1311.82 847.68 moveto
+1322.41 847.16 lineto
+1313.81 840.96 lineto
+closepath stroke
+grestore
+% Node0x509619166
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1602.41 789.87 336.67 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1372.41 793.67 moveto 460 (0x276ebb8. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1583.91 778.67 moveto 37 (exit\(1\)) alignedtext
+grestore
+% Node0x233322610->Node0x509619166
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1176.36 768.25 moveto
+1219.68 770.46 1264.48 772.73 1308.02 774.95 curveto
+stroke
+0 0 0 edgecolor
+newpath 1308.01 778.45 moveto
+1318.17 775.47 lineto
+1308.36 771.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1308.01 778.45 moveto
+1318.17 775.47 lineto
+1308.36 771.46 lineto
+closepath stroke
+grestore
+% Node0x957787874
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1602.41 717.87 335.75 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1372.91 721.67 moveto 459 (0x276f180. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1563.41 706.67 moveto 78 (put\(q, UNOP\)) alignedtext
+grestore
+% Node0x233322610->Node0x957787874
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1176.36 739.49 moveto
+1219.77 737.28 1264.66 735 1308.29 732.78 curveto
+stroke
+0 0 0 edgecolor
+newpath 1308.65 736.26 moveto
+1318.46 732.26 lineto
+1308.29 729.27 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1308.65 736.26 moveto
+1318.46 732.26 lineto
+1308.29 729.27 lineto
+closepath stroke
+grestore
+% Node0x518761049
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1602.41 645.87 335.34 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1373.41 649.67 moveto 458 (0x276f2c8. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1575.91 634.67 moveto 53 (fclose\(fd\)) alignedtext
+grestore
+% Node0x233322610->Node0x518761049
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1010.25 728.62 moveto
+1083.23 713.49 1179.34 694.75 1265.12 681.87 curveto
+1300.42 676.57 1337.91 671.76 1374.57 667.5 curveto
+stroke
+0 0 0 edgecolor
+newpath 1375.35 670.93 moveto
+1384.88 666.31 lineto
+1374.55 663.98 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1375.35 670.93 moveto
+1384.88 666.31 lineto
+1374.55 663.98 lineto
+closepath stroke
+grestore
+% Node0x523467512
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1602.41 573.87 336.67 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1372.41 577.67 moveto 460 (0x276b9e0. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1529.41 562.67 moveto 146 (fopen\(filename, << w >>\)) alignedtext
+grestore
+% Node0x177143286->Node0x523467512
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 969.07 456.08 moveto
+1043.47 480.89 1160.82 517.3 1265.12 537.87 curveto
+1295.4 543.84 1327.42 548.88 1359.19 553.12 curveto
+stroke
+0 0 0 edgecolor
+newpath 1359.13 556.64 moveto
+1369.5 554.46 lineto
+1360.04 549.7 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1359.13 556.64 moveto
+1369.5 554.46 lineto
+1360.04 549.7 lineto
+closepath stroke
+grestore
+% Node0x131626779
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1602.41 501.87 336.67 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1372.41 505.67 moveto 460 (0x276bc20. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1545.41 490.67 moveto 114 (perror\(<< fopen >>\)) alignedtext
+grestore
+% Node0x177143286->Node0x131626779
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1100.66 450.94 moveto
+1189.64 459.99 1293.67 470.57 1383.78 479.73 curveto
+stroke
+0 0 0 edgecolor
+newpath 1383.55 483.23 moveto
+1393.85 480.76 lineto
+1384.26 476.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1383.55 483.23 moveto
+1393.85 480.76 lineto
+1384.26 476.26 lineto
+closepath stroke
+grestore
+% Node0x974545298
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1602.41 429.87 336.67 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1372.41 433.67 moveto 460 (0x276bce0. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1583.91 418.67 moveto 37 (exit\(1\)) alignedtext
+grestore
+% Node0x177143286->Node0x974545298
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1227 429.87 moveto
+1236.48 429.87 1245.98 429.87 1255.46 429.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1255.76 433.37 moveto
+1265.76 429.87 lineto
+1255.76 426.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1255.76 433.37 moveto
+1265.76 429.87 lineto
+1255.76 426.37 lineto
+closepath stroke
+grestore
+% Node0x262566338
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1602.41 357.87 336.67 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1372.41 361.67 moveto 460 (0x276be70. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1558.91 346.67 moveto 87 (getX\(q, UNOP\)) alignedtext
+grestore
+% Node0x177143286->Node0x262566338
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1100.66 408.8 moveto
+1189.64 399.75 1293.67 389.17 1383.78 380.01 curveto
+stroke
+0 0 0 edgecolor
+newpath 1384.26 383.48 moveto
+1393.85 378.98 lineto
+1383.55 376.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1384.26 383.48 moveto
+1393.85 378.98 lineto
+1383.55 376.51 lineto
+closepath stroke
+grestore
+% Node0x112519452
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1602.41 275.87 336.67 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1372.41 287.17 moveto 460 (0x276e190. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1520.91 272.17 moveto 163 (fprintf\(fd, << %s %d %d %d) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1473.91 257.17 moveto 257 ( >>, s.name, s.midterm, s.final, s.homeworks\)) alignedtext
+grestore
+% Node0x177143286->Node0x112519452
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 970.98 403.74 moveto
+1045.57 379.45 1161.95 343.8 1265.12 321.87 curveto
+1295.55 315.4 1327.73 309.65 1359.64 304.59 curveto
+stroke
+0 0 0 edgecolor
+newpath 1360.19 308.04 moveto
+1369.53 303.04 lineto
+1359.11 301.13 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1360.19 308.04 moveto
+1369.53 303.04 lineto
+1359.11 301.13 lineto
+closepath stroke
+grestore
+% Node0x960576870
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1602.41 193.87 336.67 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1372.41 197.67 moveto 460 (0x276e390. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1575.91 182.67 moveto 53 (fclose\(fd\)) alignedtext
+grestore
+% Node0x177143286->Node0x960576870
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 931.19 403.12 moveto
+995.93 358.66 1134.07 270.44 1265.12 229.87 curveto
+1287.08 223.07 1310.19 217.51 1333.59 212.97 curveto
+stroke
+0 0 0 edgecolor
+newpath 1334.45 216.37 moveto
+1343.63 211.08 lineto
+1333.16 209.49 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1334.45 216.37 moveto
+1343.63 211.08 lineto
+1333.16 209.49 lineto
+closepath stroke
+grestore
+% Node0x874263282
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1602.41 121.87 336.67 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1372.41 125.67 moveto 460 (0x2769a10. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1558.91 110.67 moveto 87 (getX\(q, UNOP\)) alignedtext
+grestore
+% Node0x329261412->Node0x874263282
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1229.33 121.87 moveto
+1238.06 121.87 1246.8 121.87 1255.53 121.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1255.78 125.37 moveto
+1265.78 121.87 lineto
+1255.78 118.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1255.78 125.37 moveto
+1265.78 121.87 lineto
+1255.78 118.37 lineto
+closepath stroke
+grestore
+% Node0x182004122
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1602.41 49.87 337.08 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1371.91 53.67 moveto 461 (0x2769b20. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1583.91 38.67 moveto 37 (free\(q\)) alignedtext
+grestore
+% Node0x329261412->Node0x182004122
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1101.14 100.75 moveto
+1190.01 91.72 1293.81 81.16 1383.76 72.01 curveto
+stroke
+0 0 0 edgecolor
+newpath 1384.22 75.48 moveto
+1393.81 70.99 lineto
+1383.51 68.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1384.22 75.48 moveto
+1393.81 70.99 lineto
+1383.51 68.52 lineto
+closepath stroke
+grestore
+% Node0x552392886
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2312.99 789.87 335.75 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2083.49 793.67 moveto 459 (0x2769f38. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2289.49 778.67 moveto 47 (malloc\(\)) alignedtext
+grestore
+% Node0x957787874->Node0x552392886
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1811.22 738.99 moveto
+1900.27 748.03 2004.31 758.61 2094.42 767.76 curveto
+stroke
+0 0 0 edgecolor
+newpath 2094.19 771.26 moveto
+2104.49 768.79 lineto
+2094.89 764.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2094.19 771.26 moveto
+2104.49 768.79 lineto
+2094.89 764.29 lineto
+closepath stroke
+grestore
+% Node0x401361973
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2312.99 717.87 336.67 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2082.99 721.67 moveto 460 (0x276a138. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2252.49 706.67 moveto 121 (perror\(<< malloc >>\)) alignedtext
+grestore
+% Node0x957787874->Node0x401361973
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1938.51 717.87 moveto
+1947.77 717.87 1957.06 717.87 1966.34 717.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1966.4 721.37 moveto
+1976.4 717.87 lineto
+1966.4 714.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1966.4 721.37 moveto
+1976.4 717.87 lineto
+1966.4 714.37 lineto
+closepath stroke
+grestore
+% Node0x635489677
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2312.99 645.87 335.34 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2083.99 649.67 moveto 458 (0x276a1f8. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2294.49 634.67 moveto 37 (exit\(1\)) alignedtext
+grestore
+% Node0x957787874->Node0x635489677
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1811.22 696.75 moveto
+1900.27 687.71 2004.31 677.13 2094.42 667.98 curveto
+stroke
+0 0 0 edgecolor
+newpath 2094.89 671.45 moveto
+2104.49 666.95 lineto
+2094.19 664.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2094.89 671.45 moveto
+2104.49 666.95 lineto
+2094.19 664.48 lineto
+closepath stroke
+grestore
+% Node0x946699418
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2312.99 357.87 337.08 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2082.49 361.67 moveto 461 (0x276b330. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2294.49 346.67 moveto 37 (free\(p\)) alignedtext
+grestore
+% Node0x262566338->Node0x946699418
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1939.02 357.87 moveto
+1947.77 357.87 1956.52 357.87 1965.27 357.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1965.54 361.37 moveto
+1975.54 357.87 lineto
+1965.54 354.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1965.54 361.37 moveto
+1975.54 357.87 lineto
+1965.54 354.37 lineto
+closepath stroke
+grestore
+% Node0x987583727
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2312.99 121.87 337.08 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2082.49 125.67 moveto 461 (0x276b330. \(/home/labaccount/11-2-17/mlsa/IG/example/StudentList/StudentList.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2294.49 110.67 moveto 37 (free\(p\)) alignedtext
+grestore
+% Node0x874263282->Node0x987583727
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1939.02 121.87 moveto
+1947.77 121.87 1956.52 121.87 1965.27 121.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1965.54 125.37 moveto
+1975.54 121.87 lineto
+1965.54 118.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1965.54 125.37 moveto
+1975.54 121.87 lineto
+1965.54 118.37 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 150 150 2400 1153
+end
+restore
+%%EOF

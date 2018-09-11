@@ -1,0 +1,66 @@
+\hypertarget{Cmain_8cpp}{}\section{Cmain.\+cpp File Reference}
+\label{Cmain_8cpp}\index{Cmain.\+cpp@{Cmain.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include \char`\"{}Complex.\+h\char`\"{}}\\*
+Include dependency graph for Cmain.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{Cmain_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Cmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Cmain.\+cpp@{Cmain.\+cpp}!main@{main}}
+\index{main@{main}!Cmain.\+cpp@{Cmain.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Cmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Cmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+7            \{
+8    \hyperlink{classComplex}{Complex} c1, c2(4, 5);
+9    c1.\hyperlink{classComplex_a7c2092a00caf353537f698316be20b19}{print}();  \textcolor{comment}{// (0,0)}
+10    c2.print();  \textcolor{comment}{// (4,5)}
+11  
+12    c1.\hyperlink{classComplex_a753e3d6a1b2df1950ba4caebe70382fe}{setValue}(6, 7);
+13    c1.\hyperlink{classComplex_a7c2092a00caf353537f698316be20b19}{print}();  \textcolor{comment}{// (6,7)}
+14  
+15    c1.\hyperlink{classComplex_ac767331bf173de715f47589d6f614a6d}{setReal}(0);
+16    c1.\hyperlink{classComplex_ab94d5256ccb9a936df00e4bdd6f8f259}{setImag}(8);
+17    c1.\hyperlink{classComplex_a7c2092a00caf353537f698316be20b19}{print}();  \textcolor{comment}{// (0,8)}
+18  
+19    cout << boolalpha;  \textcolor{comment}{// print true/false instead of 0/1}
+20    cout << \textcolor{stringliteral}{"Is real? "} << c1.\hyperlink{classComplex_a5775caffefa608486555f2bdac89a1ec}{isReal}() << endl;           \textcolor{comment}{// false}
+21    cout << \textcolor{stringliteral}{"Is Imaginary? "} << c1.\hyperlink{classComplex_ace89217819bbbd46a9a9f2e51ea7beed}{isImaginary}() << endl; \textcolor{comment}{// true}
+22  
+23    c1.\hyperlink{classComplex_aa6e77da8ab7b7177b12a7fb0c4fb9e75}{addInto}(c2).\hyperlink{classComplex_aa6e77da8ab7b7177b12a7fb0c4fb9e75}{addInto}(1, 1).\hyperlink{classComplex_a7c2092a00caf353537f698316be20b19}{print}();  \textcolor{comment}{// (5,14)}
+24    c1.\hyperlink{classComplex_a7c2092a00caf353537f698316be20b19}{print}();  \textcolor{comment}{// (5,14)}
+25  
+26    c1.\hyperlink{classComplex_a9461ded91a8b436b6c01a0549a7982e3}{addReturnNew}(c2).\hyperlink{classComplex_a7c2092a00caf353537f698316be20b19}{print}();   \textcolor{comment}{// (9,19)}
+27    c1.\hyperlink{classComplex_a7c2092a00caf353537f698316be20b19}{print}();  \textcolor{comment}{// (5,14) - no change in c1}
+28    c1.\hyperlink{classComplex_a9461ded91a8b436b6c01a0549a7982e3}{addReturnNew}(1, 1).\hyperlink{classComplex_a7c2092a00caf353537f698316be20b19}{print}(); \textcolor{comment}{// (6,15)}
+29    c1.\hyperlink{classComplex_a7c2092a00caf353537f698316be20b19}{print}();  \textcolor{comment}{// (5,14) - no change in c1}
+30 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Cmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

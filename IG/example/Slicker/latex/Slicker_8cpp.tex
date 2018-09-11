@@ -1,0 +1,105 @@
+\hypertarget{Slicker_8cpp}{}\section{Slicker.\+cpp File Reference}
+\label{Slicker_8cpp}\index{Slicker.\+cpp@{Slicker.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for Slicker.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{Slicker_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classPoint}{Point}
+\item 
+class \hyperlink{classPolygon}{Polygon}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{Slicker_8cpp_a81592f7bc6730396f21d9685d9879b28}{area} (\hyperlink{classPolygon}{Polygon} p)
+\item 
+int \hyperlink{Slicker_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{Slicker_8cpp_ae936b8f2104cec7519d956be29b10e2b}{M\+A\+X\+P\+O\+LY} = 200
+\item 
+double \hyperlink{Slicker_8cpp_a3644fc584736c1c2e36037a085c416b9}{E\+P\+S\+I\+L\+ON} = 0.\+000001
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Slicker.\+cpp@{Slicker.\+cpp}!area@{area}}
+\index{area@{area}!Slicker.\+cpp@{Slicker.\+cpp}}
+\subsubsection[{\texorpdfstring{area(\+Polygon p)}{area(Polygon p)}}]{\setlength{\rightskip}{0pt plus 5cm}double area (
+\begin{DoxyParamCaption}
+\item[{{\bf Polygon}}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{Slicker_8cpp_a81592f7bc6730396f21d9685d9879b28}{}\label{Slicker_8cpp_a81592f7bc6730396f21d9685d9879b28}
+
+\begin{DoxyCode}
+30 \{
+31     \textcolor{keywordtype}{double} total = 0;
+32     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < p.\hyperlink{classPolygon_a96568fe72cac8ee98d09cf62fd24a8ed}{n}; i++)
+33     \{
+34         \textcolor{keywordtype}{int} j = (i + 1) % p.\hyperlink{classPolygon_a96568fe72cac8ee98d09cf62fd24a8ed}{n};
+35         total += (p.\hyperlink{classPolygon_ab9eed6eb2dc3e7e51e8b88e144bf68d0}{p}[i].\hyperlink{classPoint_ab99c56589bc8ad5fa5071387110a5bc7}{x} * p.\hyperlink{classPolygon_ab9eed6eb2dc3e7e51e8b88e144bf68d0}{p}[j].\hyperlink{classPoint_afa38be143ae800e6ad69ce8ed4df62d8}{y}) - (p.\hyperlink{classPolygon_ab9eed6eb2dc3e7e51e8b88e144bf68d0}{p}[j].\hyperlink{classPoint_ab99c56589bc8ad5fa5071387110a5bc7}{x} * p.\hyperlink{classPolygon_ab9eed6eb2dc3e7e51e8b88e144bf68d0}{p}[i].\hyperlink{classPoint_afa38be143ae800e6ad69ce8ed4df62d8}{y});
+36     \}
+37     \textcolor{keywordflow}{return} total / 2;
+38 \}
+\end{DoxyCode}
+\index{Slicker.\+cpp@{Slicker.\+cpp}!main@{main}}
+\index{main@{main}!Slicker.\+cpp@{Slicker.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{Slicker_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{Slicker_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCode}
+41 \{
+42     \hyperlink{classPolygon}{Polygon} p;
+43  
+44     cout << \textcolor{stringliteral}{"Enter the number of points in Polygon: "};
+45     cin >> p.\hyperlink{classPolygon_a96568fe72cac8ee98d09cf62fd24a8ed}{n};
+46     cout << \textcolor{stringliteral}{"Enter the coordinates of each point: <x> <y>"};
+47     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < p.\hyperlink{classPolygon_a96568fe72cac8ee98d09cf62fd24a8ed}{n}; i++)
+48     \{
+49         cin >> p.\hyperlink{classPolygon_ab9eed6eb2dc3e7e51e8b88e144bf68d0}{p}[i].\hyperlink{classPoint_ab99c56589bc8ad5fa5071387110a5bc7}{x};
+50         cin >> p.\hyperlink{classPolygon_ab9eed6eb2dc3e7e51e8b88e144bf68d0}{p}[i].\hyperlink{classPoint_afa38be143ae800e6ad69ce8ed4df62d8}{y};
+51     \}
+52  
+53     \textcolor{keywordtype}{double} a = \hyperlink{Slicker_8cpp_a81592f7bc6730396f21d9685d9879b28}{area}(p);
+54     \textcolor{keywordflow}{if} (a > 0)
+55         cout << \textcolor{stringliteral}{"The Area of Polygon with "} << (p.\hyperlink{classPolygon_a96568fe72cac8ee98d09cf62fd24a8ed}{n})
+56                 << \textcolor{stringliteral}{" points using Slicker Algorithm is : "} << a;
+57     \textcolor{keywordflow}{else}
+58         cout << \textcolor{stringliteral}{"The Area of Polygon with "} << p.\hyperlink{classPolygon_a96568fe72cac8ee98d09cf62fd24a8ed}{n}
+59                 << \textcolor{stringliteral}{" points using Slicker Algorithm is : "} << (a * -1);
+60 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{Slicker_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{Slicker.\+cpp@{Slicker.\+cpp}!E\+P\+S\+I\+L\+ON@{E\+P\+S\+I\+L\+ON}}
+\index{E\+P\+S\+I\+L\+ON@{E\+P\+S\+I\+L\+ON}!Slicker.\+cpp@{Slicker.\+cpp}}
+\subsubsection[{\texorpdfstring{E\+P\+S\+I\+L\+ON}{EPSILON}}]{\setlength{\rightskip}{0pt plus 5cm}double E\+P\+S\+I\+L\+ON = 0.\+000001}\hypertarget{Slicker_8cpp_a3644fc584736c1c2e36037a085c416b9}{}\label{Slicker_8cpp_a3644fc584736c1c2e36037a085c416b9}
+\index{Slicker.\+cpp@{Slicker.\+cpp}!M\+A\+X\+P\+O\+LY@{M\+A\+X\+P\+O\+LY}}
+\index{M\+A\+X\+P\+O\+LY@{M\+A\+X\+P\+O\+LY}!Slicker.\+cpp@{Slicker.\+cpp}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+P\+O\+LY}{MAXPOLY}}]{\setlength{\rightskip}{0pt plus 5cm}const int M\+A\+X\+P\+O\+LY = 200}\hypertarget{Slicker_8cpp_ae936b8f2104cec7519d956be29b10e2b}{}\label{Slicker_8cpp_ae936b8f2104cec7519d956be29b10e2b}

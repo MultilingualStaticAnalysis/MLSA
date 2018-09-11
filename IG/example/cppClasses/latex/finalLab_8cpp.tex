@@ -1,0 +1,120 @@
+\hypertarget{finalLab_8cpp}{}\section{final\+Lab.\+cpp File Reference}
+\label{finalLab_8cpp}\index{final\+Lab.\+cpp@{final\+Lab.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}Contact.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Address\+Book.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Personal\+Contact.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Business\+Contact.\+h\char`\"{}}\\*
+Include dependency graph for final\+Lab.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{finalLab_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{finalLab_8cpp_ab967d8be99d9607ae6df7f5aba396a24}{get\+\_\+choice} (int k)
+\item 
+int \hyperlink{finalLab_8cpp_a292781868f4c4b971b71dbf1122c507d}{get\+\_\+int} ()
+\item 
+int \hyperlink{finalLab_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\item 
+int \hyperlink{finalLab_8cpp_a05384db5c538ff4331381261c758f897}{get\+\_\+choice} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{final\+Lab.\+cpp@{final\+Lab.\+cpp}!get\+\_\+choice@{get\+\_\+choice}}
+\index{get\+\_\+choice@{get\+\_\+choice}!final\+Lab.\+cpp@{final\+Lab.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+\_\+choice(int k)}{get_choice(int k)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+choice (
+\begin{DoxyParamCaption}
+\item[{int}]{k}
+\end{DoxyParamCaption}
+)}\hypertarget{finalLab_8cpp_ab967d8be99d9607ae6df7f5aba396a24}{}\label{finalLab_8cpp_ab967d8be99d9607ae6df7f5aba396a24}
+\index{final\+Lab.\+cpp@{final\+Lab.\+cpp}!get\+\_\+choice@{get\+\_\+choice}}
+\index{get\+\_\+choice@{get\+\_\+choice}!final\+Lab.\+cpp@{final\+Lab.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+\_\+choice()}{get_choice()}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+choice (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{finalLab_8cpp_a05384db5c538ff4331381261c758f897}{}\label{finalLab_8cpp_a05384db5c538ff4331381261c758f897}
+
+\begin{DoxyCode}
+53 \{
+54    \textcolor{keywordtype}{int} choice;
+55    cout << endl;
+56    cout << \textcolor{stringliteral}{"Please choose an option:"} << endl;
+57    cout << \textcolor{stringliteral}{"(1) Add a new contact"} << endl;
+58    cout << \textcolor{stringliteral}{"(2) Search by last name"} << endl;
+59    cout << \textcolor{stringliteral}{"(3) Show the complete list"} << endl;
+60    cout << \textcolor{stringliteral}{"(4) Edit a contact"} << endl;
+61    cout << \textcolor{stringliteral}{"(6) Exit"} << endl;
+62    cin >> choice;
+63    cout << endl;
+64    \textcolor{keywordflow}{return} choice;
+65 \}
+\end{DoxyCode}
+\index{final\+Lab.\+cpp@{final\+Lab.\+cpp}!get\+\_\+int@{get\+\_\+int}}
+\index{get\+\_\+int@{get\+\_\+int}!final\+Lab.\+cpp@{final\+Lab.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+\_\+int()}{get_int()}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+int (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{finalLab_8cpp_a292781868f4c4b971b71dbf1122c507d}{}\label{finalLab_8cpp_a292781868f4c4b971b71dbf1122c507d}
+\index{final\+Lab.\+cpp@{final\+Lab.\+cpp}!main@{main}}
+\index{main@{main}!final\+Lab.\+cpp@{final\+Lab.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{finalLab_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{finalLab_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+19 \{
+20    \textcolor{keywordtype}{int} choice;
+21    \hyperlink{classAddressBook}{AddressBook} address\_book;
+22 
+23    cout << endl << \textcolor{stringliteral}{"Welcome to your Address Book!"} << endl;
+24    choice = \hyperlink{finalLab_8cpp_ab967d8be99d9607ae6df7f5aba396a24}{get\_choice}();
+25    \textcolor{keywordflow}{while}(choice != 6)
+26    \{
+27       \textcolor{keywordflow}{switch}(choice)
+28       \{
+29          \textcolor{keywordflow}{case} 1:
+30             address\_book.\hyperlink{classAddressBook_a55d96137f232d3a52ffb51917d31b32b}{add}();
+31             address\_book.\hyperlink{classAddressBook_a7021de85815ec3aed9d2173fc15faa9b}{sort}();
+32             \textcolor{keywordflow}{break};
+33          \textcolor{keywordflow}{case} 2:
+34             address\_book.\hyperlink{classAddressBook_ae4483418575343aa8d53244365a7e475}{search}();
+35             \textcolor{keywordflow}{break};
+36          \textcolor{keywordflow}{case} 3:
+37             address\_book.\hyperlink{classAddressBook_ade80a4ffa27ed8a4f9c5c62372d34ea3}{display\_book}();
+38             \textcolor{keywordflow}{break};
+39          \textcolor{keywordflow}{case} 4:
+40             address\_book.\hyperlink{classAddressBook_a524c975a4983e6a0b50f1e89acafa6bb}{edit\_contact}();
+41             \textcolor{keywordflow}{break};
+42          \textcolor{keywordflow}{case} 5:
+43             address\_book.\hyperlink{classAddressBook_a96636dca787ba1a6e3d6ab7b8eb55e45}{delete\_contact}();
+44             \textcolor{keywordflow}{break};
+45          \textcolor{keywordflow}{default}:
+46             cout << \textcolor{stringliteral}{"Not a possible choice."} << endl;
+47       \}
+48       choice = \hyperlink{finalLab_8cpp_ab967d8be99d9607ae6df7f5aba396a24}{get\_choice}();
+49    \}
+50 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{finalLab_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

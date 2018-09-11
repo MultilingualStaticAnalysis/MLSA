@@ -1,0 +1,80 @@
+\hypertarget{classCompositeGraphic}{}\section{Composite\+Graphic Class Reference}
+\label{classCompositeGraphic}\index{Composite\+Graphic@{Composite\+Graphic}}
+
+
+Inheritance diagram for Composite\+Graphic\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classCompositeGraphic__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Composite\+Graphic\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classCompositeGraphic__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCompositeGraphic_a0aa29ff6471a74e221c7acf2b2a4cdd4}{print} () const 
+\item 
+void \hyperlink{classCompositeGraphic_afd74074a4c4429f63585aea1363dd1aa}{add} (\hyperlink{classGraphic}{Graphic} $\ast$a\+Graphic)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \hyperlink{classGraphic}{Graphic} $\ast$ $>$ \hyperlink{classCompositeGraphic_a3ba19dd348b3579bd2624c964a43422c}{graphic\+List\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Composite\+Graphic@{Composite\+Graphic}!add@{add}}
+\index{add@{add}!Composite\+Graphic@{Composite\+Graphic}}
+\subsubsection[{\texorpdfstring{add(\+Graphic $\ast$a\+Graphic)}{add(Graphic *aGraphic)}}]{\setlength{\rightskip}{0pt plus 5cm}void Composite\+Graphic\+::add (
+\begin{DoxyParamCaption}
+\item[{{\bf Graphic} $\ast$}]{a\+Graphic}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCompositeGraphic_afd74074a4c4429f63585aea1363dd1aa}{}\label{classCompositeGraphic_afd74074a4c4429f63585aea1363dd1aa}
+
+\begin{DoxyCode}
+31                               \{
+32     \hyperlink{classCompositeGraphic_a3ba19dd348b3579bd2624c964a43422c}{graphicList\_}.push\_back(aGraphic);
+33   \}
+\end{DoxyCode}
+\index{Composite\+Graphic@{Composite\+Graphic}!print@{print}}
+\index{print@{print}!Composite\+Graphic@{Composite\+Graphic}}
+\subsubsection[{\texorpdfstring{print() const }{print() const }}]{\setlength{\rightskip}{0pt plus 5cm}void Composite\+Graphic\+::print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classCompositeGraphic_a0aa29ff6471a74e221c7acf2b2a4cdd4}{}\label{classCompositeGraphic_a0aa29ff6471a74e221c7acf2b2a4cdd4}
+
+
+Implements \hyperlink{classGraphic_ab9307ecd30324ec5018ca7d1e88781b9}{Graphic}.
+
+
+\begin{DoxyCode}
+25                      \{
+26     \textcolor{keywordflow}{for}(\hyperlink{classGraphic}{Graphic} * a: \hyperlink{classCompositeGraphic_a3ba19dd348b3579bd2624c964a43422c}{graphicList\_}) \{
+27       a->print();
+28     \}
+29   \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Composite\+Graphic@{Composite\+Graphic}!graphic\+List\+\_\+@{graphic\+List\+\_\+}}
+\index{graphic\+List\+\_\+@{graphic\+List\+\_\+}!Composite\+Graphic@{Composite\+Graphic}}
+\subsubsection[{\texorpdfstring{graphic\+List\+\_\+}{graphicList_}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Graphic}$\ast$$>$ Composite\+Graphic\+::graphic\+List\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCompositeGraphic_a3ba19dd348b3579bd2624c964a43422c}{}\label{classCompositeGraphic_a3ba19dd348b3579bd2624c964a43422c}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Composite_8cpp}{Composite.\+cpp}\end{DoxyCompactItemize}

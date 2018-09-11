@@ -1,0 +1,197 @@
+\hypertarget{classFighter}{}\section{Fighter Class Reference}
+\label{classFighter}\index{Fighter@{Fighter}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFighter_a2c8f42ee30394dc361c659c26666b0a5}{Fighter} (const std\+::string \&new\+Name)
+\item 
+std\+::string \hyperlink{classFighter_aea4a9cf98a672b2305d1147885b91c34}{get\+Name} () const 
+\item 
+int \hyperlink{classFighter_a1bc4025d988b66dfceaf0005e74f34ff}{get\+Fatigue\+Level} () const 
+\item 
+virtual void \hyperlink{classFighter_a178751f22e18d2e5cb02a05a766f6b24}{handle\+Input} (\hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090}{Input} input)
+\item 
+void \hyperlink{classFighter_add08055f60abd6e9235291b653f65be5}{change\+State} (std\+::shared\+\_\+ptr$<$ \hyperlink{classFighterState}{Fighter\+State} $>$ new\+State)
+\item 
+void \hyperlink{classFighter_a6f54ee51d7ca6b3baa60dd19bb4546c5}{stands\+Up} ()
+\item 
+void \hyperlink{classFighter_afff11a1b3dacee662cb3fbe35f54df17}{ducks\+Down} ()
+\item 
+void \hyperlink{classFighter_a32a4250077afba9b3629a8f553dd8776}{jumps} ()
+\item 
+void \hyperlink{classFighter_a56cef6bffcdf9775f9d924cd213ed704}{dives} ()
+\item 
+void \hyperlink{classFighter_ae54fd861131ec55b366a9163a35d9606}{feels\+Strong} ()
+\item 
+void \hyperlink{classFighter_aa9c08ec29097e326eab0ffd69db18b9c}{change\+Fatigue\+Level\+By} (int change)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classFighter_a0bd51ab4d6d20942b9f2fca23e1e7e4b}{update\+With\+New\+State} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classFighter_a1b57178f9d5293da5f9d3d28cab097dc}{name}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classFighterState}{Fighter\+State} $>$ \hyperlink{classFighter_a3221c5b17cd0e0ffcb4333bbd3fca734}{state}
+\item 
+int \hyperlink{classFighter_aa54661200c35e46a969c4efd97e84784}{fatigue\+Level} = std\+::rand() \% 10
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Fighter@{Fighter}!Fighter@{Fighter}}
+\index{Fighter@{Fighter}!Fighter@{Fighter}}
+\subsubsection[{\texorpdfstring{Fighter(const std\+::string \&new\+Name)}{Fighter(const std::string &newName)}}]{\setlength{\rightskip}{0pt plus 5cm}Fighter\+::\+Fighter (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{new\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classFighter_a2c8f42ee30394dc361c659c26666b0a5}{}\label{classFighter_a2c8f42ee30394dc361c659c26666b0a5}
+
+\begin{DoxyCode}
+61 : \hyperlink{classFighter_a1b57178f9d5293da5f9d3d28cab097dc}{name} (newName), \hyperlink{classFighter_a3221c5b17cd0e0ffcb4333bbd3fca734}{state} (\hyperlink{classFighterState_a050e9b5aff81843be5feea296a586889}{FighterState::standing}) \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Fighter@{Fighter}!change\+Fatigue\+Level\+By@{change\+Fatigue\+Level\+By}}
+\index{change\+Fatigue\+Level\+By@{change\+Fatigue\+Level\+By}!Fighter@{Fighter}}
+\subsubsection[{\texorpdfstring{change\+Fatigue\+Level\+By(int change)}{changeFatigueLevelBy(int change)}}]{\setlength{\rightskip}{0pt plus 5cm}void Fighter\+::change\+Fatigue\+Level\+By (
+\begin{DoxyParamCaption}
+\item[{int}]{change}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classFighter_aa9c08ec29097e326eab0ffd69db18b9c}{}\label{classFighter_aa9c08ec29097e326eab0ffd69db18b9c}
+
+\begin{DoxyCode}
+71 \{\hyperlink{classFighter_aa54661200c35e46a969c4efd97e84784}{fatigueLevel} += change;  std::cout << \textcolor{stringliteral}{"fatigueLevel = "} << 
+      \hyperlink{classFighter_aa54661200c35e46a969c4efd97e84784}{fatigueLevel} << std::endl;\}
+\end{DoxyCode}
+\index{Fighter@{Fighter}!change\+State@{change\+State}}
+\index{change\+State@{change\+State}!Fighter@{Fighter}}
+\subsubsection[{\texorpdfstring{change\+State(std\+::shared\+\_\+ptr$<$ Fighter\+State $>$ new\+State)}{changeState(std::shared_ptr< FighterState > newState)}}]{\setlength{\rightskip}{0pt plus 5cm}void Fighter\+::change\+State (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Fighter\+State} $>$}]{new\+State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classFighter_add08055f60abd6e9235291b653f65be5}{}\label{classFighter_add08055f60abd6e9235291b653f65be5}
+
+\begin{DoxyCode}
+65 \{\hyperlink{classFighter_a3221c5b17cd0e0ffcb4333bbd3fca734}{state} = newState;  \hyperlink{classFighter_a0bd51ab4d6d20942b9f2fca23e1e7e4b}{updateWithNewState}();\}
+\end{DoxyCode}
+\index{Fighter@{Fighter}!dives@{dives}}
+\index{dives@{dives}!Fighter@{Fighter}}
+\subsubsection[{\texorpdfstring{dives()}{dives()}}]{\setlength{\rightskip}{0pt plus 5cm}void Fighter\+::dives (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classFighter_a56cef6bffcdf9775f9d924cd213ed704}{}\label{classFighter_a56cef6bffcdf9775f9d924cd213ed704}
+
+\begin{DoxyCode}
+69 \{std::cout << \hyperlink{classFighter_aea4a9cf98a672b2305d1147885b91c34}{getName}() << \textcolor{stringliteral}{" makes a dive attack in the middle of the jump!"} << std::endl;\}
+\end{DoxyCode}
+\index{Fighter@{Fighter}!ducks\+Down@{ducks\+Down}}
+\index{ducks\+Down@{ducks\+Down}!Fighter@{Fighter}}
+\subsubsection[{\texorpdfstring{ducks\+Down()}{ducksDown()}}]{\setlength{\rightskip}{0pt plus 5cm}void Fighter\+::ducks\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classFighter_afff11a1b3dacee662cb3fbe35f54df17}{}\label{classFighter_afff11a1b3dacee662cb3fbe35f54df17}
+
+\begin{DoxyCode}
+67 \{std::cout << \hyperlink{classFighter_aea4a9cf98a672b2305d1147885b91c34}{getName}() << \textcolor{stringliteral}{" ducks down."} << std::endl;\}
+\end{DoxyCode}
+\index{Fighter@{Fighter}!feels\+Strong@{feels\+Strong}}
+\index{feels\+Strong@{feels\+Strong}!Fighter@{Fighter}}
+\subsubsection[{\texorpdfstring{feels\+Strong()}{feelsStrong()}}]{\setlength{\rightskip}{0pt plus 5cm}void Fighter\+::feels\+Strong (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classFighter_ae54fd861131ec55b366a9163a35d9606}{}\label{classFighter_ae54fd861131ec55b366a9163a35d9606}
+
+\begin{DoxyCode}
+70 \{std::cout << \hyperlink{classFighter_aea4a9cf98a672b2305d1147885b91c34}{getName}() << \textcolor{stringliteral}{" feels strong!"} << std::endl;\}
+\end{DoxyCode}
+\index{Fighter@{Fighter}!get\+Fatigue\+Level@{get\+Fatigue\+Level}}
+\index{get\+Fatigue\+Level@{get\+Fatigue\+Level}!Fighter@{Fighter}}
+\subsubsection[{\texorpdfstring{get\+Fatigue\+Level() const }{getFatigueLevel() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Fighter\+::get\+Fatigue\+Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classFighter_a1bc4025d988b66dfceaf0005e74f34ff}{}\label{classFighter_a1bc4025d988b66dfceaf0005e74f34ff}
+
+\begin{DoxyCode}
+63 \{\textcolor{keywordflow}{return} \hyperlink{classFighter_aa54661200c35e46a969c4efd97e84784}{fatigueLevel};\}
+\end{DoxyCode}
+\index{Fighter@{Fighter}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Fighter@{Fighter}}
+\subsubsection[{\texorpdfstring{get\+Name() const }{getName() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Fighter\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classFighter_aea4a9cf98a672b2305d1147885b91c34}{}\label{classFighter_aea4a9cf98a672b2305d1147885b91c34}
+
+\begin{DoxyCode}
+62 \{\textcolor{keywordflow}{return} \hyperlink{classFighter_a1b57178f9d5293da5f9d3d28cab097dc}{name};\}
+\end{DoxyCode}
+\index{Fighter@{Fighter}!handle\+Input@{handle\+Input}}
+\index{handle\+Input@{handle\+Input}!Fighter@{Fighter}}
+\subsubsection[{\texorpdfstring{handle\+Input(\+Input input)}{handleInput(Input input)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Fighter\+::handle\+Input (
+\begin{DoxyParamCaption}
+\item[{{\bf Input}}]{input}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classFighter_a178751f22e18d2e5cb02a05a766f6b24}{}\label{classFighter_a178751f22e18d2e5cb02a05a766f6b24}
+
+\begin{DoxyCode}
+64 \{\hyperlink{classFighter_a3221c5b17cd0e0ffcb4333bbd3fca734}{state}->handleInput (*\textcolor{keyword}{this}, input);\}  \textcolor{comment}{// delegate input handling to 'state'.}
+\end{DoxyCode}
+\index{Fighter@{Fighter}!jumps@{jumps}}
+\index{jumps@{jumps}!Fighter@{Fighter}}
+\subsubsection[{\texorpdfstring{jumps()}{jumps()}}]{\setlength{\rightskip}{0pt plus 5cm}void Fighter\+::jumps (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classFighter_a32a4250077afba9b3629a8f553dd8776}{}\label{classFighter_a32a4250077afba9b3629a8f553dd8776}
+
+\begin{DoxyCode}
+68 \{std::cout << \hyperlink{classFighter_aea4a9cf98a672b2305d1147885b91c34}{getName}() << \textcolor{stringliteral}{" jumps into the air."} << std::endl;\}
+\end{DoxyCode}
+\index{Fighter@{Fighter}!stands\+Up@{stands\+Up}}
+\index{stands\+Up@{stands\+Up}!Fighter@{Fighter}}
+\subsubsection[{\texorpdfstring{stands\+Up()}{standsUp()}}]{\setlength{\rightskip}{0pt plus 5cm}void Fighter\+::stands\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classFighter_a6f54ee51d7ca6b3baa60dd19bb4546c5}{}\label{classFighter_a6f54ee51d7ca6b3baa60dd19bb4546c5}
+
+\begin{DoxyCode}
+66 \{std::cout << \hyperlink{classFighter_aea4a9cf98a672b2305d1147885b91c34}{getName}() << \textcolor{stringliteral}{" stands up."} << std::endl;\}
+\end{DoxyCode}
+\index{Fighter@{Fighter}!update\+With\+New\+State@{update\+With\+New\+State}}
+\index{update\+With\+New\+State@{update\+With\+New\+State}!Fighter@{Fighter}}
+\subsubsection[{\texorpdfstring{update\+With\+New\+State()}{updateWithNewState()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Fighter\+::update\+With\+New\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}\hypertarget{classFighter_a0bd51ab4d6d20942b9f2fca23e1e7e4b}{}\label{classFighter_a0bd51ab4d6d20942b9f2fca23e1e7e4b}
+
+\begin{DoxyCode}
+73 \{\hyperlink{classFighter_a3221c5b17cd0e0ffcb4333bbd3fca734}{state}->update(*\textcolor{keyword}{this});\}  \textcolor{comment}{// delegate updating to 'state'}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Fighter@{Fighter}!fatigue\+Level@{fatigue\+Level}}
+\index{fatigue\+Level@{fatigue\+Level}!Fighter@{Fighter}}
+\subsubsection[{\texorpdfstring{fatigue\+Level}{fatigueLevel}}]{\setlength{\rightskip}{0pt plus 5cm}int Fighter\+::fatigue\+Level = std\+::rand() \% 10\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classFighter_aa54661200c35e46a969c4efd97e84784}{}\label{classFighter_aa54661200c35e46a969c4efd97e84784}
+\index{Fighter@{Fighter}!name@{name}}
+\index{name@{name}!Fighter@{Fighter}}
+\subsubsection[{\texorpdfstring{name}{name}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Fighter\+::name\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classFighter_a1b57178f9d5293da5f9d3d28cab097dc}{}\label{classFighter_a1b57178f9d5293da5f9d3d28cab097dc}
+\index{Fighter@{Fighter}!state@{state}}
+\index{state@{state}!Fighter@{Fighter}}
+\subsubsection[{\texorpdfstring{state}{state}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Fighter\+State}$>$ Fighter\+::state\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classFighter_a3221c5b17cd0e0ffcb4333bbd3fca734}{}\label{classFighter_a3221c5b17cd0e0ffcb4333bbd3fca734}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{State_8cpp}{State.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,118 @@
+\hypertarget{classCircleShape}{}\section{Circle\+Shape Class Reference}
+\label{classCircleShape}\index{Circle\+Shape@{Circle\+Shape}}
+
+
+Inheritance diagram for Circle\+Shape\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{classCircleShape__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Circle\+Shape\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classCircleShape__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCircleShape_ad9d9792af7f2be56f6b15ffbd6629871}{Circle\+Shape} (double x, double y, double radius, \hyperlink{classDrawingAPI}{Drawing\+A\+PI} $\ast$drawing\+A\+PI)
+\item 
+void \hyperlink{classCircleShape_ad9f83c69677b1091ea4b2bfdb5f27c07}{draw} ()
+\item 
+void \hyperlink{classCircleShape_adadfd28583f61407130eee10bb33adb1}{resize\+By\+Percentage} (double pct)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classCircleShape_a75a53e0b319fcdc17afdca4aa1e43269}{m\+\_\+x}
+\item 
+double \hyperlink{classCircleShape_a0889d40af7e693db62c2bb8c67182e75}{m\+\_\+y}
+\item 
+double \hyperlink{classCircleShape_a86f17472715fcc9dc0801876e563fbd0}{m\+\_\+radius}
+\item 
+\hyperlink{classDrawingAPI}{Drawing\+A\+PI} $\ast$ \hyperlink{classCircleShape_a9216b90cab92f99f48866e8af921aa5e}{m\+\_\+drawing\+A\+PI}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Circle\+Shape@{Circle\+Shape}!Circle\+Shape@{Circle\+Shape}}
+\index{Circle\+Shape@{Circle\+Shape}!Circle\+Shape@{Circle\+Shape}}
+\subsubsection[{\texorpdfstring{Circle\+Shape(double x, double y, double radius, Drawing\+A\+P\+I $\ast$drawing\+A\+P\+I)}{CircleShape(double x, double y, double radius, DrawingAPI *drawingAPI)}}]{\setlength{\rightskip}{0pt plus 5cm}Circle\+Shape\+::\+Circle\+Shape (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{radius, }
+\item[{{\bf Drawing\+A\+PI} $\ast$}]{drawing\+A\+PI}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCircleShape_ad9d9792af7f2be56f6b15ffbd6629871}{}\label{classCircleShape_ad9d9792af7f2be56f6b15ffbd6629871}
+
+\begin{DoxyCode}
+39                                                                          :
+40        \hyperlink{classCircleShape_a75a53e0b319fcdc17afdca4aa1e43269}{m\_x}(x), \hyperlink{classCircleShape_a0889d40af7e693db62c2bb8c67182e75}{m\_y}(y), \hyperlink{classCircleShape_a86f17472715fcc9dc0801876e563fbd0}{m\_radius}(radius), \hyperlink{classCircleShape_a9216b90cab92f99f48866e8af921aa5e}{m\_drawingAPI}(drawingAPI)
+41    \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Circle\+Shape@{Circle\+Shape}!draw@{draw}}
+\index{draw@{draw}!Circle\+Shape@{Circle\+Shape}}
+\subsubsection[{\texorpdfstring{draw()}{draw()}}]{\setlength{\rightskip}{0pt plus 5cm}void Circle\+Shape\+::draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classCircleShape_ad9f83c69677b1091ea4b2bfdb5f27c07}{}\label{classCircleShape_ad9f83c69677b1091ea4b2bfdb5f27c07}
+
+
+Implements \hyperlink{classShape_afacc5aad8e37308c3ce8fef768199b05}{Shape}.
+
+
+\begin{DoxyCode}
+42                \{
+43       \hyperlink{classCircleShape_a9216b90cab92f99f48866e8af921aa5e}{m\_drawingAPI}->\hyperlink{classDrawingAPI_a7a5b900cc78619bfe10b6555608f871d}{drawCircle}(\hyperlink{classCircleShape_a75a53e0b319fcdc17afdca4aa1e43269}{m\_x}, \hyperlink{classCircleShape_a0889d40af7e693db62c2bb8c67182e75}{m\_y}, \hyperlink{classCircleShape_a86f17472715fcc9dc0801876e563fbd0}{m\_radius});
+44    \}
+\end{DoxyCode}
+\index{Circle\+Shape@{Circle\+Shape}!resize\+By\+Percentage@{resize\+By\+Percentage}}
+\index{resize\+By\+Percentage@{resize\+By\+Percentage}!Circle\+Shape@{Circle\+Shape}}
+\subsubsection[{\texorpdfstring{resize\+By\+Percentage(double pct)}{resizeByPercentage(double pct)}}]{\setlength{\rightskip}{0pt plus 5cm}void Circle\+Shape\+::resize\+By\+Percentage (
+\begin{DoxyParamCaption}
+\item[{double}]{pct}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classCircleShape_adadfd28583f61407130eee10bb33adb1}{}\label{classCircleShape_adadfd28583f61407130eee10bb33adb1}
+
+
+Implements \hyperlink{classShape_a892f1d0e57b41828f717662d3628c650}{Shape}.
+
+
+\begin{DoxyCode}
+45                                        \{
+46       \hyperlink{classCircleShape_a86f17472715fcc9dc0801876e563fbd0}{m\_radius} *= pct;
+47    \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Circle\+Shape@{Circle\+Shape}!m\+\_\+drawing\+A\+PI@{m\+\_\+drawing\+A\+PI}}
+\index{m\+\_\+drawing\+A\+PI@{m\+\_\+drawing\+A\+PI}!Circle\+Shape@{Circle\+Shape}}
+\subsubsection[{\texorpdfstring{m\+\_\+drawing\+A\+PI}{m_drawingAPI}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Drawing\+A\+PI}$\ast$ Circle\+Shape\+::m\+\_\+drawing\+A\+PI\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCircleShape_a9216b90cab92f99f48866e8af921aa5e}{}\label{classCircleShape_a9216b90cab92f99f48866e8af921aa5e}
+\index{Circle\+Shape@{Circle\+Shape}!m\+\_\+radius@{m\+\_\+radius}}
+\index{m\+\_\+radius@{m\+\_\+radius}!Circle\+Shape@{Circle\+Shape}}
+\subsubsection[{\texorpdfstring{m\+\_\+radius}{m_radius}}]{\setlength{\rightskip}{0pt plus 5cm}double Circle\+Shape\+::m\+\_\+radius\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCircleShape_a86f17472715fcc9dc0801876e563fbd0}{}\label{classCircleShape_a86f17472715fcc9dc0801876e563fbd0}
+\index{Circle\+Shape@{Circle\+Shape}!m\+\_\+x@{m\+\_\+x}}
+\index{m\+\_\+x@{m\+\_\+x}!Circle\+Shape@{Circle\+Shape}}
+\subsubsection[{\texorpdfstring{m\+\_\+x}{m_x}}]{\setlength{\rightskip}{0pt plus 5cm}double Circle\+Shape\+::m\+\_\+x\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCircleShape_a75a53e0b319fcdc17afdca4aa1e43269}{}\label{classCircleShape_a75a53e0b319fcdc17afdca4aa1e43269}
+\index{Circle\+Shape@{Circle\+Shape}!m\+\_\+y@{m\+\_\+y}}
+\index{m\+\_\+y@{m\+\_\+y}!Circle\+Shape@{Circle\+Shape}}
+\subsubsection[{\texorpdfstring{m\+\_\+y}{m_y}}]{\setlength{\rightskip}{0pt plus 5cm}double Circle\+Shape\+::m\+\_\+y\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCircleShape_a0889d40af7e693db62c2bb8c67182e75}{}\label{classCircleShape_a0889d40af7e693db62c2bb8c67182e75}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Bridge_8cpp}{Bridge.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,1165 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.38.0 (20140413.2041)
+%%Title: /home/labaccount/11-2-17/mlsa/IG/example/Calendar Call Graph
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 150 150 2400 2679
+%%PageOrientation: Portrait
+<< /PageSize [2400 2679] >> setpagedevice
+0 0 1 beginpage
+gsave
+150 150 2250 2529 boxprim clip newpath
+1.22439 1.22439 set_scale 0 rotate 126.51 126.51 translate
+[ /CropBox [150 150 2400 2679] /PAGES pdfmark
+0 0 0 graphcolor
+14 /Times-Roman set_font
+735.82 7.8 moveto 358 (/home/labaccount/11-2-17/mlsa/IG/example/Calendar Call Graph) alignedtext
+% Node0x845214274
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+242.43 1110.48 242.36 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+63.93 1106.78 moveto 357 (/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c) alignedtext
+grestore
+% Node0x946558781
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+839.06 1649.48 316.57 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+623.06 1653.28 moveto 432 (0x1d2f230. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+738.06 1638.28 moveto 202 (fopen\(<< calendar.txt >>, << w >>\)) alignedtext
+grestore
+% Node0x845214274->Node0x946558781
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 247.18 1128.73 moveto
+263.69 1203.8 337.29 1490.6 520.86 1613.48 curveto
+531.49 1620.59 542.78 1626.72 554.53 1631.97 curveto
+stroke
+0 0 0 edgecolor
+newpath 553.47 1635.33 moveto
+564.04 1636 lineto
+556.2 1628.88 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 553.47 1635.33 moveto
+564.04 1636 lineto
+556.2 1628.88 lineto
+closepath stroke
+grestore
+% Node0x921501843
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+839.06 1577.48 316.57 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+623.06 1581.28 moveto 432 (0x1d2f380. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+811.06 1566.28 moveto 56 (get_year\(\)) alignedtext
+grestore
+% Node0x845214274->Node0x921501843
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 266.37 1128.5 moveto
+355.48 1198.48 679.36 1452.85 795.91 1544.38 curveto
+stroke
+0 0 0 edgecolor
+newpath 793.91 1547.26 moveto
+803.94 1550.68 lineto
+798.23 1541.75 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 793.91 1547.26 moveto
+803.94 1550.68 lineto
+798.23 1541.75 lineto
+closepath stroke
+grestore
+% Node0x718997152
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+839.06 1182.48 318.4 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+622.06 1186.28 moveto 434 (0x1d304b0. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+785.06 1171.28 moveto 108 (get_day_code\(year\)) alignedtext
+grestore
+% Node0x845214274->Node0x718997152
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 361.16 1126.18 moveto
+410.48 1132.64 468.43 1140.1 520.86 1146.48 curveto
+557.85 1150.98 597.3 1155.6 635.35 1159.96 curveto
+stroke
+0 0 0 edgecolor
+newpath 635.18 1163.46 moveto
+645.52 1161.13 lineto
+635.98 1156.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 635.18 1163.46 moveto
+645.52 1161.13 lineto
+635.98 1156.51 lineto
+closepath stroke
+grestore
+% Node0x262805922
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+839.06 1110.48 318.4 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+622.06 1114.28 moveto 434 (0x1d305b0. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+784.56 1099.28 moveto 109 (get_leap_year\(year\)) alignedtext
+grestore
+% Node0x845214274->Node0x262805922
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 484.86 1110.48 moveto
+493.3 1110.48 501.8 1110.48 510.34 1110.48 curveto
+stroke
+0 0 0 edgecolor
+newpath 510.37 1113.98 moveto
+520.37 1110.48 lineto
+510.37 1106.98 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 510.37 1113.98 moveto
+520.37 1110.48 lineto
+510.37 1106.98 lineto
+closepath stroke
+grestore
+% Node0x742549917
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+839.06 1038.48 318.4 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+622.06 1042.28 moveto 434 (0x1d30760. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+709.56 1027.28 moveto 259 (print_calendar\(fout, year, day_code, leap_year\)) alignedtext
+grestore
+% Node0x845214274->Node0x742549917
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 361.16 1094.78 moveto
+410.48 1088.31 468.43 1080.85 520.86 1074.48 curveto
+557.85 1069.98 597.3 1065.36 635.35 1060.99 curveto
+stroke
+0 0 0 edgecolor
+newpath 635.98 1064.44 moveto
+645.52 1059.83 lineto
+635.18 1057.49 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 635.98 1064.44 moveto
+645.52 1059.83 lineto
+635.18 1057.49 lineto
+closepath stroke
+grestore
+% Node0x888459876
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+839.06 956.48 318.4 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+622.06 967.78 moveto 434 (0x1d308d0. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+690.06 952.78 moveto 298 (printf\(<< Open up 'calendar.txt' to see your calendar...) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+826.56 937.78 moveto 25 ( >>\)) alignedtext
+grestore
+% Node0x845214274->Node0x888459876
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 281.11 1092.63 moveto
+333.64 1068.49 432.39 1025.79 520.86 1002.48 curveto
+546.86 995.63 574.34 989.72 601.82 984.65 curveto
+stroke
+0 0 0 edgecolor
+newpath 602.73 988.05 moveto
+611.94 982.82 lineto
+601.48 981.16 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 602.73 988.05 moveto
+611.94 982.82 lineto
+601.48 981.16 lineto
+closepath stroke
+grestore
+% Node0x216312216
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+839.06 874.48 317.48 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+622.56 878.28 moveto 433 (0x1d30a10. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+779.56 863.28 moveto 119 (system\(<< pause >>\)) alignedtext
+grestore
+% Node0x845214274->Node0x216312216
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 261.24 1092.4 moveto
+302.53 1051.77 409.81 953.39 520.86 910.48 curveto
+538.77 903.55 557.64 897.85 576.89 893.15 curveto
+stroke
+0 0 0 edgecolor
+newpath 577.73 896.55 moveto
+586.67 890.86 lineto
+576.14 889.73 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 577.73 896.55 moveto
+586.67 890.86 lineto
+576.14 889.73 lineto
+closepath stroke
+grestore
+% Node0x978122668
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1511.45 2030.48 318.4 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1294.45 2034.28 moveto 434 (0x1d30d08. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1434.45 2019.28 moveto 154 (printf\(<< Enter a year:  >>\)) alignedtext
+grestore
+% Node0x921501843->Node0x978122668
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1126.11 1588.99 moveto
+1137.36 1595.79 1147.84 1603.88 1157.25 1613.48 curveto
+1216.82 1674.17 1133.69 1933.78 1193.25 1994.48 curveto
+1200.17 2001.52 1207.66 2007.76 1215.6 2013.27 curveto
+stroke
+0 0 0 edgecolor
+newpath 1213.76 2016.25 moveto
+1224.05 2018.76 lineto
+1217.57 2010.38 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1213.76 2016.25 moveto
+1224.05 2018.76 lineto
+1217.57 2010.38 lineto
+closepath stroke
+grestore
+% Node0x797609280
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1511.45 1958.48 317.48 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1294.95 1962.28 moveto 433 (0x1d30e80. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1440.45 1947.28 moveto 142 (scanf\(<< %d >>, UNOP\)) alignedtext
+grestore
+% Node0x921501843->Node0x797609280
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1125.5 1589.03 moveto
+1136.96 1595.81 1147.64 1603.89 1157.25 1613.48 curveto
+1255.16 1711.1 1095.34 1824.86 1193.25 1922.48 curveto
+1200.32 1929.52 1207.96 1935.75 1216.05 1941.25 curveto
+stroke
+0 0 0 edgecolor
+newpath 1214.34 1944.3 moveto
+1224.65 1946.71 lineto
+1218.09 1938.4 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1214.34 1944.3 moveto
+1224.65 1946.71 lineto
+1218.09 1938.4 lineto
+closepath stroke
+grestore
+% Node0x369422883
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1511.45 1886.48 317.48 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1294.95 1890.28 moveto 433 (0x1d324c0. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1393.95 1875.28 moveto 235 (fprintf\(fout, <<                    %d >>, year\)) alignedtext
+grestore
+% Node0x742549917->Node0x369422883
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1127.37 1049.87 moveto
+1138.21 1056.73 1148.26 1064.86 1157.25 1074.48 curveto
+1216.22 1137.51 1134.29 1787.44 1193.25 1850.48 curveto
+1199.86 1857.54 1207.03 1863.8 1214.67 1869.35 curveto
+stroke
+0 0 0 edgecolor
+newpath 1212.9 1872.37 moveto
+1223.14 1875.08 lineto
+1216.83 1866.58 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1212.9 1872.37 moveto
+1223.14 1875.08 lineto
+1216.83 1866.58 lineto
+closepath stroke
+grestore
+% Node0x632985490
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1511.45 1792.48 318.4 48.58 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1294.45 1811.78 moveto 434 (0x1d32838. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1466.95 1796.78 moveto 89 (fprintf\(fout, << ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1477.95 1765.78 moveto 67 (January >>\)) alignedtext
+grestore
+% Node0x742549917->Node0x632985490
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1127.27 1049.96 moveto
+1138.14 1056.79 1148.22 1064.9 1157.25 1074.48 curveto
+1258.03 1181.33 1096.15 1624.26 1193.25 1734.48 curveto
+1203.03 1745.57 1214.16 1754.99 1226.26 1762.97 curveto
+stroke
+0 0 0 edgecolor
+newpath 1224.45 1765.96 moveto
+1234.79 1768.26 lineto
+1228.14 1760.01 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1224.45 1765.96 moveto
+1234.79 1768.26 lineto
+1228.14 1760.01 lineto
+closepath stroke
+grestore
+% Node0x210156734
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1511.45 1676.48 317.48 48.58 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1294.95 1695.78 moveto 433 (0x1d32a68. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1466.95 1680.78 moveto 89 (fprintf\(fout, << ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1474.45 1649.78 moveto 74 (February >>\)) alignedtext
+grestore
+% Node0x742549917->Node0x210156734
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1127.13 1050.09 moveto
+1138.04 1056.89 1148.17 1064.95 1157.25 1074.48 curveto
+1240.89 1162.13 1112.64 1528.04 1193.25 1618.48 curveto
+1203.17 1629.6 1214.44 1639.03 1226.7 1647.01 curveto
+stroke
+0 0 0 edgecolor
+newpath 1224.98 1650.06 moveto
+1235.33 1652.31 lineto
+1228.64 1644.1 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1224.98 1650.06 moveto
+1235.33 1652.31 lineto
+1228.64 1644.1 lineto
+closepath stroke
+grestore
+% Node0x109909731
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1511.45 1560.48 317.48 48.58 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1294.95 1579.78 moveto 433 (0x1d32ce0. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1466.95 1564.78 moveto 89 (fprintf\(fout, << ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1480.95 1533.78 moveto 61 (March >>\)) alignedtext
+grestore
+% Node0x742549917->Node0x109909731
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1126.58 1050.08 moveto
+1137.67 1056.87 1147.99 1064.94 1157.25 1074.48 curveto
+1223.76 1142.94 1129.11 1431.79 1193.25 1502.48 curveto
+1203.26 1513.51 1214.62 1522.87 1226.94 1530.8 curveto
+stroke
+0 0 0 edgecolor
+newpath 1225.24 1533.87 moveto
+1235.61 1536.06 lineto
+1228.87 1527.88 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1225.24 1533.87 moveto
+1235.61 1536.06 lineto
+1228.87 1527.88 lineto
+closepath stroke
+grestore
+% Node0x988316415
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1511.45 1444.48 317.48 48.58 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1294.95 1463.78 moveto 433 (0x1d32ec8. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1466.95 1448.78 moveto 89 (fprintf\(fout, << ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1484.45 1417.78 moveto 54 (April >>\)) alignedtext
+grestore
+% Node0x742549917->Node0x988316415
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1125.87 1050.23 moveto
+1137.18 1056.96 1147.74 1064.98 1157.25 1074.48 curveto
+1256.05 1173.09 1097.86 1284.57 1193.25 1386.48 curveto
+1203.51 1397.43 1215.1 1406.73 1227.63 1414.6 curveto
+stroke
+0 0 0 edgecolor
+newpath 1226.06 1417.74 moveto
+1236.45 1419.82 lineto
+1229.62 1411.72 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1226.06 1417.74 moveto
+1236.45 1419.82 lineto
+1229.62 1411.72 lineto
+closepath stroke
+grestore
+% Node0x964731725
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1511.45 1328.48 318.4 48.58 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1294.45 1347.78 moveto 434 (0x1d330b0. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1466.95 1332.78 moveto 89 (fprintf\(fout, << ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1485.95 1301.78 moveto 51 (May >>\)) alignedtext
+grestore
+% Node0x742549917->Node0x964731725
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1124.39 1050.62 moveto
+1136.17 1057.23 1147.23 1065.12 1157.25 1074.48 curveto
+1221.99 1134.92 1130.6 1207.87 1193.25 1270.48 curveto
+1204.14 1281.35 1216.34 1290.56 1229.45 1298.33 curveto
+stroke
+0 0 0 edgecolor
+newpath 1227.76 1301.4 moveto
+1238.19 1303.24 lineto
+1231.18 1295.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1227.76 1301.4 moveto
+1238.19 1303.24 lineto
+1231.18 1295.29 lineto
+closepath stroke
+grestore
+% Node0x992047101
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1511.45 1212.48 318.4 48.58 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1294.45 1231.78 moveto 434 (0x1d332d0. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1466.95 1216.78 moveto 89 (fprintf\(fout, << ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1486.45 1185.78 moveto 50 (June >>\)) alignedtext
+grestore
+% Node0x742549917->Node0x992047101
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1117.25 1051.68 moveto
+1131.37 1057.89 1144.83 1065.41 1157.25 1074.48 curveto
+1188.75 1097.46 1162.56 1130.44 1193.25 1154.48 curveto
+1206.7 1165.01 1221.45 1173.85 1237 1181.27 curveto
+stroke
+0 0 0 edgecolor
+newpath 1235.69 1184.51 moveto
+1246.24 1185.46 lineto
+1238.58 1178.14 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1235.69 1184.51 moveto
+1246.24 1185.46 lineto
+1238.58 1178.14 lineto
+closepath stroke
+grestore
+% Node0x193256400
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1511.45 1096.48 317.48 48.58 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1294.95 1115.78 moveto 433 (0x1d334e0. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1466.95 1100.78 moveto 89 (fprintf\(fout, << ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1487.45 1069.78 moveto 48 (July >>\)) alignedtext
+grestore
+% Node0x742549917->Node0x193256400
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1061.89 1057.67 moveto
+1113.85 1062.16 1169.92 1067.02 1224.24 1071.71 curveto
+stroke
+0 0 0 edgecolor
+newpath 1224.09 1075.22 moveto
+1234.36 1072.59 lineto
+1224.7 1068.24 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1224.09 1075.22 moveto
+1234.36 1072.59 lineto
+1224.7 1068.24 lineto
+closepath stroke
+grestore
+% Node0x671110629
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1511.45 980.48 318.4 48.58 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1294.45 999.78 moveto 434 (0x1d33700. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1466.95 984.78 moveto 89 (fprintf\(fout, << ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1479.45 953.78 moveto 64 (August >>\)) alignedtext
+grestore
+% Node0x742549917->Node0x671110629
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1061.89 1019.28 moveto
+1113.76 1014.8 1169.73 1009.95 1223.96 1005.26 curveto
+stroke
+0 0 0 edgecolor
+newpath 1224.4 1008.74 moveto
+1234.06 1004.39 lineto
+1223.8 1001.76 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1224.4 1008.74 moveto
+1234.06 1004.39 lineto
+1223.8 1001.76 lineto
+closepath stroke
+grestore
+% Node0x678406462
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1511.45 864.48 318.4 48.58 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1294.45 883.78 moveto 434 (0x1d33928. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1466.95 868.78 moveto 89 (fprintf\(fout, << ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1469.45 837.78 moveto 84 (September >>\)) alignedtext
+grestore
+% Node0x742549917->Node0x678406462
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1117.25 1025.28 moveto
+1131.37 1019.07 1144.83 1011.54 1157.25 1002.48 curveto
+1188.75 979.49 1162.56 946.52 1193.25 922.48 curveto
+1206.7 911.94 1221.45 903.1 1237 895.69 curveto
+stroke
+0 0 0 edgecolor
+newpath 1238.58 898.81 moveto
+1246.24 891.49 lineto
+1235.69 892.44 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1238.58 898.81 moveto
+1246.24 891.49 lineto
+1235.69 892.44 lineto
+closepath stroke
+grestore
+% Node0x593383463
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1511.45 748.48 318.4 48.58 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1294.45 767.78 moveto 434 (0x1d33b18. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1466.95 752.78 moveto 89 (fprintf\(fout, << ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1476.95 721.78 moveto 69 (October >>\)) alignedtext
+grestore
+% Node0x742549917->Node0x593383463
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1124.39 1026.34 moveto
+1136.17 1019.72 1147.23 1011.84 1157.25 1002.48 curveto
+1221.99 942.04 1130.6 869.08 1193.25 806.48 curveto
+1204.14 795.6 1216.34 786.4 1229.45 778.62 curveto
+stroke
+0 0 0 edgecolor
+newpath 1231.18 781.66 moveto
+1238.19 773.72 lineto
+1227.76 775.56 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1231.18 781.66 moveto
+1238.19 773.72 lineto
+1227.76 775.56 lineto
+closepath stroke
+grestore
+% Node0x192741529
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1511.45 632.48 318.4 48.58 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1294.45 651.78 moveto 434 (0x1d33d08. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1466.95 636.78 moveto 89 (fprintf\(fout, << ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1469.95 605.78 moveto 83 (November >>\)) alignedtext
+grestore
+% Node0x742549917->Node0x192741529
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1125.87 1026.73 moveto
+1137.18 1019.99 1147.74 1011.97 1157.25 1002.48 curveto
+1256.05 903.87 1097.86 792.38 1193.25 690.48 curveto
+1203.51 679.52 1215.1 670.22 1227.63 662.35 curveto
+stroke
+0 0 0 edgecolor
+newpath 1229.62 665.24 moveto
+1236.45 657.13 lineto
+1226.06 659.21 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1229.62 665.24 moveto
+1236.45 657.13 lineto
+1226.06 659.21 lineto
+closepath stroke
+grestore
+% Node0x555031226
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1511.45 516.48 316.15 48.58 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1295.95 535.78 moveto 431 (0x1d33ef8. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1466.95 520.78 moveto 89 (fprintf\(fout, << ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1470.45 489.78 moveto 82 (December >>\)) alignedtext
+grestore
+% Node0x742549917->Node0x555031226
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1126.58 1026.88 moveto
+1137.67 1020.09 1147.99 1012.02 1157.25 1002.48 curveto
+1223.76 934.01 1129.11 645.16 1193.25 574.48 curveto
+1203.34 563.36 1214.79 553.94 1227.22 545.97 curveto
+stroke
+0 0 0 edgecolor
+newpath 1229.22 548.86 moveto
+1235.97 540.69 lineto
+1225.6 542.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1229.22 548.86 moveto
+1235.97 540.69 lineto
+1225.6 542.86 lineto
+closepath stroke
+grestore
+% Node0x233445217
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1511.45 390.48 318.4 59.29 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1294.45 417.28 moveto 434 (0x1d34220. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1466.95 402.28 moveto 89 (fprintf\(fout, << ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1413.95 371.28 moveto 195 (Sun  Mon  Tue  Wed  Thu  Fri  Sat) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1498.95 356.28 moveto 25 ( >>\)) alignedtext
+grestore
+% Node0x742549917->Node0x233445217
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1127.13 1026.86 moveto
+1138.04 1020.07 1148.17 1012 1157.25 1002.48 curveto
+1240.89 914.82 1114.02 550.13 1193.25 458.48 curveto
+1204.08 445.95 1216.61 435.41 1230.29 426.55 curveto
+stroke
+0 0 0 edgecolor
+newpath 1232.25 429.45 moveto
+1238.96 421.25 lineto
+1228.6 423.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1232.25 429.45 moveto
+1238.96 421.25 lineto
+1228.6 423.48 lineto
+closepath stroke
+grestore
+% Node0x843464486
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1511.45 286.48 318.4 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1294.45 290.28 moveto 434 (0x1d34548. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1452.45 275.28 moveto 118 (fprintf\(fout, <<   >>\)) alignedtext
+grestore
+% Node0x742549917->Node0x843464486
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1127.29 1027.01 moveto
+1138.15 1020.17 1148.23 1012.06 1157.25 1002.48 curveto
+1260.99 892.31 1089.52 432.65 1193.25 322.48 curveto
+1199.88 315.44 1207.08 309.19 1214.73 303.66 curveto
+stroke
+0 0 0 edgecolor
+newpath 1216.88 306.44 moveto
+1223.22 297.94 lineto
+1212.97 300.63 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1216.88 306.44 moveto
+1223.22 297.94 lineto
+1212.97 300.63 lineto
+closepath stroke
+grestore
+% Node0x727834631
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1511.45 214.48 318.4 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1294.45 218.28 moveto 434 (0x1d34820. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1428.45 203.28 moveto 166 (fprintf\(fout, << %2d >>, day\)) alignedtext
+grestore
+% Node0x742549917->Node0x727834631
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1127.35 1027.07 moveto
+1138.19 1020.22 1148.25 1012.08 1157.25 1002.48 curveto
+1214.44 941.43 1136.06 311.52 1193.25 250.48 curveto
+1199.86 243.42 1207.04 237.16 1214.69 231.62 curveto
+stroke
+0 0 0 edgecolor
+newpath 1216.84 234.39 moveto
+1223.16 225.89 lineto
+1212.91 228.59 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1216.84 234.39 moveto
+1223.16 225.89 lineto
+1212.91 228.59 lineto
+closepath stroke
+grestore
+% Node0x273653069
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1511.45 142.48 317.48 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1294.95 146.28 moveto 433 (0x1d34ab0. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1448.95 131.28 moveto 125 (fprintf\(fout, <<     >>\)) alignedtext
+grestore
+% Node0x742549917->Node0x273653069
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1127.74 1026.9 moveto
+1138.44 1020.08 1148.37 1012 1157.25 1002.48 curveto
+1219.77 935.47 1130.74 245.49 1193.25 178.48 curveto
+1199.85 171.41 1207.02 165.14 1214.65 159.58 curveto
+stroke
+0 0 0 edgecolor
+newpath 1216.8 162.35 moveto
+1223.11 153.84 lineto
+1212.87 156.56 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1216.8 162.35 moveto
+1223.11 153.84 lineto
+1212.87 156.56 lineto
+closepath stroke
+grestore
+% Node0x883130201
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1511.45 60.48 317.48 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1294.95 71.78 moveto 433 (0x1d34bc8. \(/home/labaccount/11-2-17/mlsa/IG/example/Calendar/Calendar.c\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1466.95 56.78 moveto 89 (fprintf\(fout, << ) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1496.95 41.78 moveto 29 (  >>\)) alignedtext
+grestore
+% Node0x742549917->Node0x883130201
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1127.78 1026.93 moveto
+1138.47 1020.11 1148.39 1012.02 1157.25 1002.48 curveto
+1225.09 929.5 1126.55 180.49 1193.25 106.48 curveto
+1201.25 97.6 1210.13 89.9 1219.7 83.22 curveto
+stroke
+0 0 0 edgecolor
+newpath 1221.82 86.02 moveto
+1228.28 77.62 lineto
+1217.99 80.16 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1221.82 86.02 moveto
+1228.28 77.62 lineto
+1217.99 80.16 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 150 150 2400 2679
+end
+restore
+%%EOF

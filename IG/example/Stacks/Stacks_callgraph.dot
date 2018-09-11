@@ -1,0 +1,53 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/Stacks Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/Stacks Call Graph"
+	];
+
+	Node0x760301817 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/Stacks/Stacks.c"];
+	Node0x357607748 [shape=oval, label="0x32a9e00. (/home/labaccount/11-2-17/mlsa/IG/example/Stacks/Stacks.c)\nprintf(<< We can push a total of 10 values\n >>)"];
+	Node0x760301817 -> Node0x357607748;
+	Node0x875607256 [shape=oval, label="0x32aa050. (/home/labaccount/11-2-17/mlsa/IG/example/Stacks/Stacks.c)\npush_stack1(i)"];
+	Node0x760301817 -> Node0x875607256;
+	Node0x418173083 [shape=oval, label="0x32aa180. (/home/labaccount/11-2-17/mlsa/IG/example/Stacks/Stacks.c)\nprintf(<< Value Pushed in Stack 1 is %d\n >>, i)"];
+	Node0x760301817 -> Node0x418173083;
+	Node0x447434910 [shape=oval, label="0x32aa408. (/home/labaccount/11-2-17/mlsa/IG/example/Stacks/Stacks.c)\npush_stack2(i)"];
+	Node0x760301817 -> Node0x447434910;
+	Node0x188620574 [shape=oval, label="0x32aa500. (/home/labaccount/11-2-17/mlsa/IG/example/Stacks/Stacks.c)\nprintf(<< Value Pushed in Stack 2 is %d\n >>, i)"];
+	Node0x760301817 -> Node0x188620574;
+	Node0x295253434 [shape=oval, label="0x32aa650. (/home/labaccount/11-2-17/mlsa/IG/example/Stacks/Stacks.c)\nprint_stack1()"];
+	Node0x760301817 -> Node0x295253434;
+	Node0x457634111 [shape=oval, label="0x32aa6b8. (/home/labaccount/11-2-17/mlsa/IG/example/Stacks/Stacks.c)\nprint_stack2()"];
+	Node0x760301817 -> Node0x457634111;
+	Node0x212284229 [shape=oval, label="0x32aa7c8. (/home/labaccount/11-2-17/mlsa/IG/example/Stacks/Stacks.c)\nprintf(<< Pushing Value in Stack 1 is %d\n >>, 11)"];
+	Node0x760301817 -> Node0x212284229;
+	Node0x294495173 [shape=oval, label="0x32aa890. (/home/labaccount/11-2-17/mlsa/IG/example/Stacks/Stacks.c)\npush_stack1(11)"];
+	Node0x760301817 -> Node0x294495173;
+	Node0x598875044 [shape=oval, label="0x32aaa18. (/home/labaccount/11-2-17/mlsa/IG/example/Stacks/Stacks.c)\npop_stack1()"];
+	Node0x760301817 -> Node0x598875044;
+	Node0x334633373 [shape=oval, label="0x32aab10. (/home/labaccount/11-2-17/mlsa/IG/example/Stacks/Stacks.c)\npop_stack1()"];
+	Node0x760301817 -> Node0x334633373;
+	Node0x177878669 [shape=oval, label="0x32a5e50. (/home/labaccount/11-2-17/mlsa/IG/example/Stacks/Stacks.c)\nprintf(<< Stack Full! Cannot Push\n >>)"];
+	Node0x875607256 -> Node0x177878669;
+	Node0x908692313 [shape=oval, label="0x32a8350. (/home/labaccount/11-2-17/mlsa/IG/example/Stacks/Stacks.c)\nprintf(<< Stack Full! Cannot Push\n >>)"];
+	Node0x447434910 -> Node0x908692313;
+	Node0x601418317 [shape=oval, label="0x32a92e8. (/home/labaccount/11-2-17/mlsa/IG/example/Stacks/Stacks.c)\nprintf(<< %d  >>, ar[])"];
+	Node0x295253434 -> Node0x601418317;
+	Node0x165329928 [shape=oval, label="0x32a9470. (/home/labaccount/11-2-17/mlsa/IG/example/Stacks/Stacks.c)\nprintf(<< \n >>)"];
+	Node0x295253434 -> Node0x165329928;
+	Node0x327857875 [shape=oval, label="0x32a98c8. (/home/labaccount/11-2-17/mlsa/IG/example/Stacks/Stacks.c)\nprintf(<< %d  >>, ar[])"];
+	Node0x457634111 -> Node0x327857875;
+	Node0x609747012 [shape=oval, label="0x32a9a10. (/home/labaccount/11-2-17/mlsa/IG/example/Stacks/Stacks.c)\nprintf(<< \n >>)"];
+	Node0x457634111 -> Node0x609747012;
+	Node0x612196947 [shape=oval, label="0x32a5e50. (/home/labaccount/11-2-17/mlsa/IG/example/Stacks/Stacks.c)\nprintf(<< Stack Full! Cannot Push\n >>)"];
+	Node0x294495173 -> Node0x612196947;
+	Node0x309678902 [shape=oval, label="0x32a87d0. (/home/labaccount/11-2-17/mlsa/IG/example/Stacks/Stacks.c)\nprintf(<< %d is being popped from Stack 1\n >>, popped_value)"];
+	Node0x598875044 -> Node0x309678902;
+	Node0x224854535 [shape=oval, label="0x32a88f8. (/home/labaccount/11-2-17/mlsa/IG/example/Stacks/Stacks.c)\nprintf(<< Stack Empty! Cannot Pop\n >>)"];
+	Node0x598875044 -> Node0x224854535;
+	Node0x917471499 [shape=oval, label="0x32a87d0. (/home/labaccount/11-2-17/mlsa/IG/example/Stacks/Stacks.c)\nprintf(<< %d is being popped from Stack 1\n >>, popped_value)"];
+	Node0x334633373 -> Node0x917471499;
+	Node0x514016851 [shape=oval, label="0x32a88f8. (/home/labaccount/11-2-17/mlsa/IG/example/Stacks/Stacks.c)\nprintf(<< Stack Empty! Cannot Pop\n >>)"];
+	Node0x334633373 -> Node0x514016851;
+}

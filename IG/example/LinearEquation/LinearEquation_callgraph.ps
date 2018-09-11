@@ -1,0 +1,2608 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.38.0 (20140413.2041)
+%%Title: /home/labaccount/11-2-17/mlsa/IG/example/LinearEquation Call Graph
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 150 150 2400 2222
+%%PageOrientation: Portrait
+<< /PageSize [2400 2222] >> setpagedevice
+0 0 1 beginpage
+gsave
+150 150 2250 2072 boxprim clip newpath
+0.597323 0.597323 set_scale 0 rotate 255.12 255.12 translate
+[ /CropBox [150 150 2400 2222] /PAGES pdfmark
+0 0 0 graphcolor
+14 /Times-Roman set_font
+1682.4 7.8 moveto 394 (/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation Call Graph) alignedtext
+% Node0x567482344
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+297.02 1993.87 297.05 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+76.52 1990.17 moveto 441 (/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp) alignedtext
+grestore
+% Node0x463898060
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1007.64 3361.87 376.78 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+749.14 3365.67 moveto 517 (0x23ae928. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+924.64 3350.67 moveto 166 (CMatrix::FillSimulatedInput\(\)) alignedtext
+grestore
+% Node0x567482344->Node0x463898060
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 300.37 2012.25 moveto
+318.7 2153.24 443.35 3063.09 630.05 3253.87 curveto
+670.63 3295.34 725.99 3321.17 781.77 3337.17 curveto
+stroke
+0 0 0 edgecolor
+newpath 780.88 3340.55 moveto
+791.45 3339.85 lineto
+782.75 3333.81 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 780.88 3340.55 moveto
+791.45 3339.85 lineto
+782.75 3333.81 lineto
+closepath stroke
+grestore
+% Node0x203953632
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1007.64 3217.87 376.78 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+749.14 3221.67 moveto 517 (0x23ae9b0. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+924.64 3206.67 moveto 166 (CMatrix::FillSimulatedInput\(\)) alignedtext
+grestore
+% Node0x567482344->Node0x203953632
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 303.21 2011.87 moveto
+329.26 2100.7 451.73 2499.53 630.05 2785.87 curveto
+732.43 2950.28 896.85 3114.43 969.77 3183.66 curveto
+stroke
+0 0 0 edgecolor
+newpath 967.7 3186.52 moveto
+977.37 3190.85 lineto
+972.51 3181.43 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 967.7 3186.52 moveto
+977.37 3190.85 lineto
+972.51 3181.43 lineto
+closepath stroke
+grestore
+% Node0x809326447
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1007.64 2749.87 374.53 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+750.64 2753.67 moveto 514 (0x23aedf8. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+941.64 2738.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x567482344->Node0x809326447
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 315.19 2012.18 moveto
+408.03 2111.23 850.49 2583.28 974.35 2715.42 curveto
+stroke
+0 0 0 edgecolor
+newpath 971.98 2718.01 moveto
+981.37 2722.91 lineto
+977.08 2713.22 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 971.98 2718.01 moveto
+981.37 2722.91 lineto
+977.08 2713.22 lineto
+closepath stroke
+grestore
+% Node0x474119418
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1007.64 2029.87 375.45 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+750.14 2033.67 moveto 515 (0x23af658. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+941.64 2018.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x567482344->Node0x474119418
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 525.16 2005.41 moveto
+577.96 2008.09 635.1 2010.99 690.94 2013.83 curveto
+stroke
+0 0 0 edgecolor
+newpath 690.82 2017.33 moveto
+700.99 2014.34 lineto
+691.18 2010.34 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 690.82 2017.33 moveto
+700.99 2014.34 lineto
+691.18 2010.34 lineto
+closepath stroke
+grestore
+% Node0x978496483
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1007.64 1957.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+748.64 1961.67 moveto 518 (0x2377180. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+956.14 1946.67 moveto 103 (CMatrix::Inverse\(\)) alignedtext
+grestore
+% Node0x567482344->Node0x978496483
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 525.16 1982.33 moveto
+577.47 1979.67 634.03 1976.8 689.38 1973.99 curveto
+stroke
+0 0 0 edgecolor
+newpath 689.89 1977.47 moveto
+699.7 1973.46 lineto
+689.54 1970.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 689.89 1977.47 moveto
+699.7 1973.46 lineto
+689.54 1970.48 lineto
+closepath stroke
+grestore
+% Node0x442595309
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1007.64 1885.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+748.64 1889.67 moveto 518 (0x2377548. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+912.64 1874.67 moveto 190 (CMatrix::SetName\(<< A * A' >>\)) alignedtext
+grestore
+% Node0x567482344->Node0x442595309
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 367.21 1976.36 moveto
+434.07 1960.04 538.4 1936.14 630.05 1921.87 curveto
+666.83 1916.14 705.79 1911.19 744.16 1906.94 curveto
+stroke
+0 0 0 edgecolor
+newpath 744.87 1910.39 moveto
+754.43 1905.82 lineto
+744.11 1903.43 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 744.87 1910.39 moveto
+754.43 1905.82 lineto
+744.11 1903.43 lineto
+closepath stroke
+grestore
+% Node0x329879848
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1007.64 1813.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+748.64 1817.67 moveto 518 (0x2377b48. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+925.64 1802.67 moveto 164 (CMatrix::SetName\(<< X >>\)) alignedtext
+grestore
+% Node0x567482344->Node0x329879848
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 330.26 1975.78 moveto
+388.22 1944.21 514.75 1879.59 630.05 1849.87 curveto
+656.43 1843.07 684.15 1837.53 712.09 1833.02 curveto
+stroke
+0 0 0 edgecolor
+newpath 712.64 1836.47 moveto
+721.97 1831.46 lineto
+711.55 1829.56 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 712.64 1836.47 moveto
+721.97 1831.46 lineto
+711.55 1829.56 lineto
+closepath stroke
+grestore
+% Node0x478678315
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1007.64 1741.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+748.64 1745.67 moveto 518 (0x2378148. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+925.64 1730.67 moveto 164 (CMatrix::SetName\(<< Y >>\)) alignedtext
+grestore
+% Node0x567482344->Node0x478678315
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 317.88 1975.85 moveto
+366.7 1932.75 498.26 1823.9 630.05 1777.87 curveto
+650.48 1770.73 671.89 1764.84 693.69 1759.98 curveto
+stroke
+0 0 0 edgecolor
+newpath 694.7 1763.35 moveto
+703.74 1757.82 lineto
+693.22 1756.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 694.7 1763.35 moveto
+703.74 1757.82 lineto
+693.22 1756.5 lineto
+closepath stroke
+grestore
+% Node0x145602169
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1798.83 3433.87 376.36 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1540.83 3437.67 moveto 516 (0x238f3b0. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1781.83 3422.67 moveto 34 (rand\(\)) alignedtext
+grestore
+% Node0x463898060->Node0x145602169
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1240.36 3383.01 moveto
+1339.72 3392.07 1455.79 3402.66 1556.21 3411.83 curveto
+stroke
+0 0 0 edgecolor
+newpath 1555.92 3415.31 moveto
+1566.19 3412.74 lineto
+1556.55 3408.34 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1555.92 3415.31 moveto
+1566.19 3412.74 lineto
+1556.55 3408.34 lineto
+closepath stroke
+grestore
+% Node0x239571426
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1798.83 3361.87 376.36 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1540.83 3365.67 moveto 516 (0x238f538. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1781.83 3350.67 moveto 34 (rand\(\)) alignedtext
+grestore
+% Node0x463898060->Node0x239571426
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1384.75 3361.87 moveto
+1394 3361.87 1403.27 3361.87 1412.54 3361.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1412.59 3365.37 moveto
+1422.59 3361.87 lineto
+1412.59 3358.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1412.59 3365.37 moveto
+1422.59 3361.87 lineto
+1412.59 3358.37 lineto
+closepath stroke
+grestore
+% Node0x651748652
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1798.83 3289.87 376.36 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1540.83 3293.67 moveto 516 (0x238f3b0. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1781.83 3278.67 moveto 34 (rand\(\)) alignedtext
+grestore
+% Node0x203953632->Node0x651748652
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1240.36 3239.01 moveto
+1339.72 3248.07 1455.79 3258.66 1556.21 3267.83 curveto
+stroke
+0 0 0 edgecolor
+newpath 1555.92 3271.31 moveto
+1566.19 3268.74 lineto
+1556.55 3264.34 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1555.92 3271.31 moveto
+1566.19 3268.74 lineto
+1556.55 3264.34 lineto
+closepath stroke
+grestore
+% Node0x651351820
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1798.83 3217.87 376.36 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1540.83 3221.67 moveto 516 (0x238f538. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1781.83 3206.67 moveto 34 (rand\(\)) alignedtext
+grestore
+% Node0x203953632->Node0x651351820
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1384.75 3217.87 moveto
+1394 3217.87 1403.27 3217.87 1412.54 3217.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1412.59 3221.37 moveto
+1422.59 3217.87 lineto
+1412.59 3214.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1412.59 3221.37 moveto
+1422.59 3217.87 lineto
+1412.59 3214.37 lineto
+closepath stroke
+grestore
+% Node0x488671205
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1798.83 3145.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1539.83 3149.67 moveto 518 (0x2395240. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1732.83 3134.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x809326447->Node0x488671205
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1029.13 2776.85 moveto
+1083.81 2846.52 1241.35 3032.46 1421.24 3109.87 curveto
+1438.11 3117.13 1455.8 3123.24 1473.91 3128.35 curveto
+stroke
+0 0 0 edgecolor
+newpath 1473.15 3131.77 moveto
+1483.72 3131.01 lineto
+1474.98 3125.02 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1473.15 3131.77 moveto
+1483.72 3131.01 lineto
+1474.98 3125.02 lineto
+closepath stroke
+grestore
+% Node0x228390466
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1798.83 3073.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1539.83 3077.67 moveto 518 (0x2395490. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1732.83 3062.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x809326447->Node0x228390466
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1036.16 2776.97 moveto
+1098.47 2836.42 1257.67 2977.73 1421.24 3037.87 curveto
+1440.66 3045.01 1461.01 3050.94 1481.76 3055.85 curveto
+stroke
+0 0 0 edgecolor
+newpath 1481.12 3059.29 moveto
+1491.65 3058.1 lineto
+1482.67 3052.47 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1481.12 3059.29 moveto
+1491.65 3058.1 lineto
+1482.67 3052.47 lineto
+closepath stroke
+grestore
+% Node0x588404072
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1798.83 3001.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1539.83 3005.67 moveto 518 (0x2395708. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1732.83 2990.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x809326447->Node0x588404072
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1047.13 2776.63 moveto
+1117.62 2824.07 1273.78 2922.06 1421.24 2965.87 curveto
+1444.72 2972.85 1469.35 2978.55 1494.31 2983.22 curveto
+stroke
+0 0 0 edgecolor
+newpath 1493.79 2986.68 moveto
+1504.26 2985.02 lineto
+1495.04 2979.79 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1493.79 2986.68 moveto
+1504.26 2985.02 lineto
+1495.04 2979.79 lineto
+closepath stroke
+grestore
+% Node0x727085267
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1798.83 2929.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1539.83 2933.67 moveto 518 (0x2395980. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1732.83 2918.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x809326447->Node0x727085267
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1069.85 2776.47 moveto
+1149.26 2809.74 1292.84 2865.76 1421.24 2893.87 curveto
+1450.91 2900.37 1482.15 2905.69 1513.42 2910.05 curveto
+stroke
+0 0 0 edgecolor
+newpath 1513.19 2913.56 moveto
+1523.58 2911.44 lineto
+1514.14 2906.62 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1513.19 2913.56 moveto
+1523.58 2911.44 lineto
+1514.14 2906.62 lineto
+closepath stroke
+grestore
+% Node0x154146478
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1798.83 2857.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1539.83 2861.67 moveto 518 (0x2396d38. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1732.83 2846.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x809326447->Node0x154146478
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1137.86 2775.07 moveto
+1218.99 2790.23 1325.94 2809.02 1421.24 2821.87 curveto
+1460.92 2827.22 1503.07 2832.07 1544.25 2836.34 curveto
+stroke
+0 0 0 edgecolor
+newpath 1544.11 2839.85 moveto
+1554.42 2837.39 lineto
+1544.83 2832.88 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1544.11 2839.85 moveto
+1554.42 2837.39 lineto
+1544.83 2832.88 lineto
+closepath stroke
+grestore
+% Node0x938734947
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1798.83 2785.87 376.36 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1540.83 2789.67 moveto 516 (0x2396f88. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1732.83 2774.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x809326447->Node0x938734947
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1324.24 2764.27 moveto
+1372.62 2766.47 1422.66 2768.76 1471.28 2770.97 curveto
+stroke
+0 0 0 edgecolor
+newpath 1471.16 2774.47 moveto
+1481.31 2771.43 lineto
+1471.48 2767.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1471.16 2774.47 moveto
+1481.31 2771.43 lineto
+1471.48 2767.48 lineto
+closepath stroke
+grestore
+% Node0x135815163
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1798.83 2713.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1539.83 2717.67 moveto 518 (0x2397200. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1732.83 2702.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x809326447->Node0x135815163
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1324.24 2735.47 moveto
+1372.22 2733.28 1421.83 2731.02 1470.07 2728.82 curveto
+stroke
+0 0 0 edgecolor
+newpath 1470.51 2732.31 moveto
+1480.34 2728.35 lineto
+1470.19 2725.31 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1470.51 2732.31 moveto
+1480.34 2728.35 lineto
+1470.19 2725.31 lineto
+closepath stroke
+grestore
+% Node0x242549866
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1798.83 2641.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1539.83 2645.67 moveto 518 (0x2397478. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1732.83 2630.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x809326447->Node0x242549866
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1137.86 2724.67 moveto
+1218.99 2709.51 1325.94 2690.72 1421.24 2677.87 curveto
+1460.92 2672.52 1503.07 2667.67 1544.25 2663.4 curveto
+stroke
+0 0 0 edgecolor
+newpath 1544.83 2666.86 moveto
+1554.42 2662.35 lineto
+1544.11 2659.89 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1544.83 2666.86 moveto
+1554.42 2662.35 lineto
+1544.11 2659.89 lineto
+closepath stroke
+grestore
+% Node0x762776050
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1798.83 2569.87 376.36 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1540.83 2573.67 moveto 516 (0x23976f0. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1732.83 2558.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x809326447->Node0x762776050
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1069.85 2723.27 moveto
+1149.26 2690 1292.84 2633.98 1421.24 2605.87 curveto
+1451.05 2599.34 1482.45 2594 1513.88 2589.62 curveto
+stroke
+0 0 0 edgecolor
+newpath 1514.65 2593.05 moveto
+1524.08 2588.24 lineto
+1513.7 2586.11 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1514.65 2593.05 moveto
+1524.08 2588.24 lineto
+1513.7 2586.11 lineto
+closepath stroke
+grestore
+% Node0x365379339
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1798.83 2497.87 376.78 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1540.33 2501.67 moveto 517 (0x23992a0. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1732.83 2486.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x809326447->Node0x365379339
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1047.13 2723.11 moveto
+1117.62 2675.67 1273.78 2577.68 1421.24 2533.87 curveto
+1444.79 2526.87 1469.5 2521.15 1494.53 2516.48 curveto
+stroke
+0 0 0 edgecolor
+newpath 1495.29 2519.9 moveto
+1504.51 2514.68 lineto
+1494.05 2513.01 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1495.29 2519.9 moveto
+1504.51 2514.68 lineto
+1494.05 2513.01 lineto
+closepath stroke
+grestore
+% Node0x977367233
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1798.83 2425.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1539.83 2429.67 moveto 518 (0x2399608. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1732.83 2414.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x809326447->Node0x977367233
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1036.16 2722.77 moveto
+1098.47 2663.32 1257.67 2522.01 1421.24 2461.87 curveto
+1440.66 2454.73 1461.01 2448.8 1481.76 2443.89 curveto
+stroke
+0 0 0 edgecolor
+newpath 1482.67 2447.27 moveto
+1491.65 2441.64 lineto
+1481.12 2440.45 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1482.67 2447.27 moveto
+1491.65 2441.64 lineto
+1481.12 2440.45 lineto
+closepath stroke
+grestore
+% Node0x494112279
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1798.83 2353.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1539.83 2357.67 moveto 518 (0x2395240. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1732.83 2342.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x474119418->Node0x494112279
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1036.16 2056.97 moveto
+1098.47 2116.42 1257.67 2257.73 1421.24 2317.87 curveto
+1440.66 2325.01 1461.01 2330.94 1481.76 2335.85 curveto
+stroke
+0 0 0 edgecolor
+newpath 1481.12 2339.29 moveto
+1491.65 2338.1 lineto
+1482.67 2332.47 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1481.12 2339.29 moveto
+1491.65 2338.1 lineto
+1482.67 2332.47 lineto
+closepath stroke
+grestore
+% Node0x481640439
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1798.83 2281.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1539.83 2285.67 moveto 518 (0x2395490. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1732.83 2270.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x474119418->Node0x481640439
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1047.13 2056.63 moveto
+1117.62 2104.07 1273.78 2202.06 1421.24 2245.87 curveto
+1444.72 2252.85 1469.35 2258.55 1494.31 2263.22 curveto
+stroke
+0 0 0 edgecolor
+newpath 1493.79 2266.68 moveto
+1504.26 2265.02 lineto
+1495.04 2259.79 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1493.79 2266.68 moveto
+1504.26 2265.02 lineto
+1495.04 2259.79 lineto
+closepath stroke
+grestore
+% Node0x429140739
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1798.83 2209.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1539.83 2213.67 moveto 518 (0x2395708. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1732.83 2198.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x474119418->Node0x429140739
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1069.85 2056.47 moveto
+1149.26 2089.74 1292.84 2145.76 1421.24 2173.87 curveto
+1450.91 2180.37 1482.15 2185.69 1513.42 2190.05 curveto
+stroke
+0 0 0 edgecolor
+newpath 1513.19 2193.56 moveto
+1523.58 2191.44 lineto
+1514.14 2186.62 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1513.19 2193.56 moveto
+1523.58 2191.44 lineto
+1514.14 2186.62 lineto
+closepath stroke
+grestore
+% Node0x792649384
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1798.83 2137.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1539.83 2141.67 moveto 518 (0x2395980. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1732.83 2126.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x474119418->Node0x792649384
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1138.32 2055.16 moveto
+1219.39 2070.3 1326.12 2089.04 1421.24 2101.87 curveto
+1460.92 2107.22 1503.07 2112.07 1544.25 2116.34 curveto
+stroke
+0 0 0 edgecolor
+newpath 1544.11 2119.85 moveto
+1554.42 2117.39 lineto
+1544.83 2112.88 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1544.11 2119.85 moveto
+1554.42 2117.39 lineto
+1544.83 2112.88 lineto
+closepath stroke
+grestore
+% Node0x536765633
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1798.83 2065.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1539.83 2069.67 moveto 518 (0x2396d38. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1732.83 2054.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x474119418->Node0x536765633
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1324.8 2044.29 moveto
+1372.66 2046.48 1422.12 2048.73 1470.21 2050.93 curveto
+stroke
+0 0 0 edgecolor
+newpath 1470.3 2054.43 moveto
+1480.45 2051.39 lineto
+1470.62 2047.44 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1470.3 2054.43 moveto
+1480.45 2051.39 lineto
+1470.62 2047.44 lineto
+closepath stroke
+grestore
+% Node0x785169870
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1798.83 1993.87 376.36 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1540.83 1997.67 moveto 516 (0x2396f88. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1732.83 1982.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x474119418->Node0x785169870
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1324.8 2015.45 moveto
+1373.06 2013.25 1422.95 2010.97 1471.42 2008.76 curveto
+stroke
+0 0 0 edgecolor
+newpath 1471.59 2012.26 moveto
+1481.42 2008.3 lineto
+1471.27 2005.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1471.59 2012.26 moveto
+1481.42 2008.3 lineto
+1471.27 2005.26 lineto
+closepath stroke
+grestore
+% Node0x551845671
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1798.83 1921.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1539.83 1925.67 moveto 518 (0x2397200. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1732.83 1910.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x474119418->Node0x551845671
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1326.84 2015.58 moveto
+1347.03 2009.77 1366.67 2002.62 1385.24 1993.87 curveto
+1405.71 1984.22 1400.77 1967.52 1421.24 1957.87 curveto
+1436.63 1950.62 1452.77 1944.46 1469.34 1939.26 curveto
+stroke
+0 0 0 edgecolor
+newpath 1470.58 1942.54 moveto
+1479.15 1936.3 lineto
+1468.56 1935.84 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1470.58 1942.54 moveto
+1479.15 1936.3 lineto
+1468.56 1935.84 lineto
+closepath stroke
+grestore
+% Node0x904851834
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1798.83 1849.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1539.83 1853.67 moveto 518 (0x2397478. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1732.83 1838.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x474119418->Node0x904851834
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1346.85 2018.29 moveto
+1360.4 2011.46 1373.29 2003.38 1385.24 1993.87 curveto
+1424.83 1962.36 1381.65 1917.38 1421.24 1885.87 curveto
+1430.38 1878.59 1440.07 1872.16 1450.19 1866.47 curveto
+stroke
+0 0 0 edgecolor
+newpath 1452.01 1869.47 moveto
+1459.19 1861.67 lineto
+1448.72 1863.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1452.01 1869.47 moveto
+1459.19 1861.67 lineto
+1448.72 1863.29 lineto
+closepath stroke
+grestore
+% Node0x970631306
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1798.83 1777.87 376.36 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1540.83 1781.67 moveto 516 (0x23976f0. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1732.83 1766.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x474119418->Node0x970631306
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1350.49 2018.89 moveto
+1362.85 2011.84 1374.51 2003.55 1385.24 1993.87 curveto
+1445.79 1939.2 1360.68 1868.54 1421.24 1813.87 curveto
+1429.27 1806.62 1437.83 1800.15 1446.82 1794.39 curveto
+stroke
+0 0 0 edgecolor
+newpath 1448.83 1797.27 moveto
+1455.57 1789.09 lineto
+1445.2 1791.28 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1448.83 1797.27 moveto
+1455.57 1789.09 lineto
+1445.2 1791.28 lineto
+closepath stroke
+grestore
+% Node0x908031898
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1798.83 1705.87 376.78 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1540.33 1709.67 moveto 517 (0x23992a0. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1732.83 1694.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x474119418->Node0x908031898
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1144.89 2054.92 moveto
+1225.1 2061.37 1322.76 2053.5 1385.24 1993.87 curveto
+1467.08 1915.76 1339.4 1819.98 1421.24 1741.87 curveto
+1481.03 1684.8 1573.05 1675.14 1651.15 1680.07 curveto
+stroke
+0 0 0 edgecolor
+newpath 1651.36 1683.59 moveto
+1661.59 1680.82 lineto
+1651.86 1676.61 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1651.36 1683.59 moveto
+1661.59 1680.82 lineto
+1651.86 1676.61 lineto
+closepath stroke
+grestore
+% Node0x217075694
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1798.83 1633.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1539.83 1637.67 moveto 518 (0x2399608. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1732.83 1622.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x474119418->Node0x217075694
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1139.17 2055.04 moveto
+1220.79 2062.69 1322.06 2056.08 1385.24 1993.87 curveto
+1488.47 1892.21 1318 1771.53 1421.24 1669.87 curveto
+1481.71 1610.32 1577.09 1601.71 1656.73 1607.8 curveto
+stroke
+0 0 0 edgecolor
+newpath 1656.59 1611.3 moveto
+1666.85 1608.66 lineto
+1657.18 1604.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1656.59 1611.3 moveto
+1666.85 1608.66 lineto
+1657.18 1604.32 lineto
+closepath stroke
+grestore
+% Node0x304471329
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1798.83 1561.87 376.78 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1540.33 1565.67 moveto 517 (0x23a1d48. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1732.83 1550.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x978496483->Node0x304471329
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1139.62 1983.08 moveto
+1221.16 1990.67 1322.18 1983.97 1385.24 1921.87 curveto
+1488.47 1820.21 1318 1699.53 1421.24 1597.87 curveto
+1481.71 1538.32 1577.09 1529.71 1656.73 1535.8 curveto
+stroke
+0 0 0 edgecolor
+newpath 1656.59 1539.3 moveto
+1666.85 1536.66 lineto
+1657.18 1532.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1656.59 1539.3 moveto
+1666.85 1536.66 lineto
+1657.18 1532.32 lineto
+closepath stroke
+grestore
+% Node0x821715545
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1798.83 1165.87 376.78 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1540.33 1169.67 moveto 517 (0x23a1e00. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1741.83 1154.67 moveto 114 (CMatrix::CoFactor\(\)) alignedtext
+grestore
+% Node0x978496483->Node0x821715545
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1136.42 1983.15 moveto
+1218.75 1991.45 1321.88 1985.53 1385.24 1921.87 curveto
+1447.57 1859.24 1382.86 1605.46 1421.24 1525.87 curveto
+1494.25 1374.44 1659.76 1253.13 1744.97 1198.03 curveto
+stroke
+0 0 0 edgecolor
+newpath 1746.92 1200.93 moveto
+1753.45 1192.59 lineto
+1743.15 1195.04 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1746.92 1200.93 moveto
+1753.45 1192.59 lineto
+1743.15 1195.04 lineto
+closepath stroke
+grestore
+% Node0x266365815
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+2590.02 1957.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2331.02 1961.67 moveto 518 (0x2395240. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2524.02 1946.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x304471329->Node0x266365815
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1930.81 1536.66 moveto
+2012.35 1529.07 2113.37 1535.77 2176.43 1597.87 curveto
+2279.66 1699.53 2109.19 1820.21 2212.43 1921.87 curveto
+2272.9 1981.42 2368.28 1990.03 2447.92 1983.94 curveto
+stroke
+0 0 0 edgecolor
+newpath 2448.37 1987.42 moveto
+2458.04 1983.08 lineto
+2447.78 1980.44 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2448.37 1987.42 moveto
+2458.04 1983.08 lineto
+2447.78 1980.44 lineto
+closepath stroke
+grestore
+% Node0x815445627
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+2590.02 1885.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2331.02 1889.67 moveto 518 (0x2395490. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2524.02 1874.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x304471329->Node0x815445627
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1936.08 1536.82 moveto
+2016.29 1530.37 2113.95 1538.24 2176.43 1597.87 curveto
+2258.27 1675.98 2130.59 1771.76 2212.43 1849.87 curveto
+2272.22 1906.94 2364.24 1916.6 2442.34 1911.67 curveto
+stroke
+0 0 0 edgecolor
+newpath 2443.05 1915.13 moveto
+2452.78 1910.92 lineto
+2442.55 1908.15 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2443.05 1915.13 moveto
+2452.78 1910.92 lineto
+2442.55 1908.15 lineto
+closepath stroke
+grestore
+% Node0x407875791
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+2590.02 1813.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2331.02 1817.67 moveto 518 (0x2395708. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2524.02 1802.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x304471329->Node0x407875791
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2142.1 1573.09 moveto
+2154.3 1580.09 2165.82 1588.3 2176.43 1597.87 curveto
+2236.98 1652.54 2151.87 1723.2 2212.43 1777.87 curveto
+2220.46 1785.12 2229.02 1791.59 2238.01 1797.35 curveto
+stroke
+0 0 0 edgecolor
+newpath 2236.39 1800.46 moveto
+2246.76 1802.65 lineto
+2240.02 1794.47 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2236.39 1800.46 moveto
+2246.76 1802.65 lineto
+2240.02 1794.47 lineto
+closepath stroke
+grestore
+% Node0x195599997
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+2590.02 1741.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2331.02 1745.67 moveto 518 (0x2395980. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2524.02 1730.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x304471329->Node0x195599997
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2138.48 1573.67 moveto
+2151.87 1580.46 2164.61 1588.46 2176.43 1597.87 curveto
+2216.02 1629.38 2172.84 1674.36 2212.43 1705.87 curveto
+2221.57 1713.15 2231.26 1719.58 2241.38 1725.27 curveto
+stroke
+0 0 0 edgecolor
+newpath 2239.91 1728.45 moveto
+2250.38 1730.07 lineto
+2243.2 1722.27 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2239.91 1728.45 moveto
+2250.38 1730.07 lineto
+2243.2 1722.27 lineto
+closepath stroke
+grestore
+% Node0x946496173
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+2590.02 1669.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2331.02 1673.67 moveto 518 (0x2396d38. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2524.02 1658.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x304471329->Node0x946496173
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2118.03 1576.16 moveto
+2138.22 1581.97 2157.86 1589.12 2176.43 1597.87 curveto
+2196.9 1607.52 2191.96 1624.22 2212.43 1633.87 curveto
+2227.82 1641.13 2243.96 1647.28 2260.53 1652.48 curveto
+stroke
+0 0 0 edgecolor
+newpath 2259.75 1655.9 moveto
+2270.34 1655.44 lineto
+2261.77 1649.2 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2259.75 1655.9 moveto
+2270.34 1655.44 lineto
+2261.77 1649.2 lineto
+closepath stroke
+grestore
+% Node0x788348586
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+2590.02 1597.87 376.36 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2332.02 1601.67 moveto 516 (0x2396f88. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2524.02 1586.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x304471329->Node0x788348586
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2116.85 1576.33 moveto
+2164.76 1578.52 2214.26 1580.77 2262.37 1582.97 curveto
+stroke
+0 0 0 edgecolor
+newpath 2262.47 1586.48 moveto
+2272.62 1583.44 lineto
+2262.79 1579.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2262.47 1586.48 moveto
+2272.62 1583.44 lineto
+2262.79 1579.48 lineto
+closepath stroke
+grestore
+% Node0x624557839
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+2590.02 1525.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2331.02 1529.67 moveto 518 (0x2397200. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2524.02 1514.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x304471329->Node0x624557839
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2116.85 1547.41 moveto
+2164.46 1545.24 2213.64 1542.99 2261.47 1540.81 curveto
+stroke
+0 0 0 edgecolor
+newpath 2261.82 1544.3 moveto
+2271.65 1540.35 lineto
+2261.5 1537.31 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2261.82 1544.3 moveto
+2271.65 1540.35 lineto
+2261.5 1537.31 lineto
+closepath stroke
+grestore
+% Node0x862995388
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+2590.02 1453.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2331.02 1457.67 moveto 518 (0x2397478. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2524.02 1442.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x304471329->Node0x862995388
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1929.51 1536.58 moveto
+2010.58 1521.44 2117.31 1502.7 2212.43 1489.87 curveto
+2252.11 1484.52 2294.26 1479.67 2335.44 1475.4 curveto
+stroke
+0 0 0 edgecolor
+newpath 2336.02 1478.86 moveto
+2345.61 1474.35 lineto
+2335.3 1471.89 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2336.02 1478.86 moveto
+2345.61 1474.35 lineto
+2335.3 1471.89 lineto
+closepath stroke
+grestore
+% Node0x645255338
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+2590.02 1381.87 376.36 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2332.02 1385.67 moveto 516 (0x23976f0. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2524.02 1370.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x304471329->Node0x645255338
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1861.04 1535.27 moveto
+1940.45 1502 2084.03 1445.98 2212.43 1417.87 curveto
+2242.24 1411.34 2273.64 1406 2305.07 1401.62 curveto
+stroke
+0 0 0 edgecolor
+newpath 2305.84 1405.05 moveto
+2315.27 1400.24 lineto
+2304.89 1398.11 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2305.84 1405.05 moveto
+2315.27 1400.24 lineto
+2304.89 1398.11 lineto
+closepath stroke
+grestore
+% Node0x161376025
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+2590.02 1309.87 376.78 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2331.52 1313.67 moveto 517 (0x23992a0. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2524.02 1298.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x304471329->Node0x161376025
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1838.32 1535.11 moveto
+1908.81 1487.67 2064.97 1389.68 2212.43 1345.87 curveto
+2235.98 1338.87 2260.69 1333.15 2285.72 1328.48 curveto
+stroke
+0 0 0 edgecolor
+newpath 2286.48 1331.9 moveto
+2295.7 1326.68 lineto
+2285.24 1325.01 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2286.48 1331.9 moveto
+2295.7 1326.68 lineto
+2285.24 1325.01 lineto
+closepath stroke
+grestore
+% Node0x437828130
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+2590.02 1237.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2331.02 1241.67 moveto 518 (0x2399608. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2524.02 1226.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x304471329->Node0x437828130
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1827.35 1534.77 moveto
+1889.66 1475.32 2048.86 1334.01 2212.43 1273.87 curveto
+2231.85 1266.73 2252.2 1260.8 2272.95 1255.89 curveto
+stroke
+0 0 0 edgecolor
+newpath 2273.86 1259.27 moveto
+2282.84 1253.64 lineto
+2272.31 1252.45 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2273.86 1259.27 moveto
+2282.84 1253.64 lineto
+2272.31 1252.45 lineto
+closepath stroke
+grestore
+% Node0x680847788
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2590.02 1165.87 376.36 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2332.02 1169.67 moveto 516 (0x239eca0. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2524.02 1154.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x821715545->Node0x680847788
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2175.94 1165.87 moveto
+2185.19 1165.87 2194.46 1165.87 2203.73 1165.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 2203.78 1169.37 moveto
+2213.78 1165.87 lineto
+2203.78 1162.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2203.78 1169.37 moveto
+2213.78 1165.87 lineto
+2203.78 1162.37 lineto
+closepath stroke
+grestore
+% Node0x197715032
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2590.02 445.87 376.36 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2332.02 449.67 moveto 516 (0x239f058. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2524.02 434.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x821715545->Node0x197715032
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1829.33 1138.96 moveto
+1951.28 1027.7 2416.06 603.67 2551.67 479.95 curveto
+stroke
+0 0 0 edgecolor
+newpath 2554.35 482.24 moveto
+2559.38 472.92 lineto
+2549.63 477.07 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2554.35 482.24 moveto
+2559.38 472.92 lineto
+2549.63 477.07 lineto
+closepath stroke
+grestore
+% Node0x748402193
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3381.21 1561.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3122.21 1565.67 moveto 518 (0x2395240. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3315.21 1550.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x680847788->Node0x748402193
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2722 1140.66 moveto
+2803.54 1133.07 2904.56 1139.77 2967.62 1201.87 curveto
+3070.85 1303.53 2900.38 1424.21 3003.62 1525.87 curveto
+3064.09 1585.42 3159.47 1594.03 3239.11 1587.94 curveto
+stroke
+0 0 0 edgecolor
+newpath 3239.57 1591.42 moveto
+3249.23 1587.08 lineto
+3238.97 1584.44 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3239.57 1591.42 moveto
+3249.23 1587.08 lineto
+3238.97 1584.44 lineto
+closepath stroke
+grestore
+% Node0x401536620
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3381.21 1489.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3122.21 1493.67 moveto 518 (0x2395490. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3315.21 1478.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x680847788->Node0x401536620
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2727.27 1140.82 moveto
+2807.48 1134.37 2905.14 1142.24 2967.62 1201.87 curveto
+3049.46 1279.98 2921.78 1375.76 3003.62 1453.87 curveto
+3063.41 1510.94 3155.43 1520.6 3233.53 1515.67 curveto
+stroke
+0 0 0 edgecolor
+newpath 3234.24 1519.13 moveto
+3243.97 1514.92 lineto
+3233.74 1512.15 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3234.24 1519.13 moveto
+3243.97 1514.92 lineto
+3233.74 1512.15 lineto
+closepath stroke
+grestore
+% Node0x680414756
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3381.21 1417.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3122.21 1421.67 moveto 518 (0x2395708. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3315.21 1406.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x680847788->Node0x680414756
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2933.29 1177.09 moveto
+2945.49 1184.09 2957.01 1192.3 2967.62 1201.87 curveto
+3028.17 1256.54 2943.06 1327.2 3003.62 1381.87 curveto
+3011.65 1389.12 3020.21 1395.59 3029.2 1401.35 curveto
+stroke
+0 0 0 edgecolor
+newpath 3027.58 1404.46 moveto
+3037.95 1406.65 lineto
+3031.21 1398.47 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3027.58 1404.46 moveto
+3037.95 1406.65 lineto
+3031.21 1398.47 lineto
+closepath stroke
+grestore
+% Node0x201979092
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3381.21 1345.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3122.21 1349.67 moveto 518 (0x2395980. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3315.21 1334.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x680847788->Node0x201979092
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2929.67 1177.67 moveto
+2943.06 1184.46 2955.8 1192.46 2967.62 1201.87 curveto
+3007.21 1233.38 2964.03 1278.36 3003.62 1309.87 curveto
+3012.76 1317.15 3022.45 1323.58 3032.57 1329.27 curveto
+stroke
+0 0 0 edgecolor
+newpath 3031.1 1332.45 moveto
+3041.57 1334.07 lineto
+3034.39 1326.27 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3031.1 1332.45 moveto
+3041.57 1334.07 lineto
+3034.39 1326.27 lineto
+closepath stroke
+grestore
+% Node0x446748461
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3381.21 1273.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3122.21 1277.67 moveto 518 (0x2396d38. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3315.21 1262.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x680847788->Node0x446748461
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2909.22 1180.16 moveto
+2929.41 1185.97 2949.05 1193.12 2967.62 1201.87 curveto
+2988.09 1211.52 2983.15 1228.22 3003.62 1237.87 curveto
+3019.01 1245.13 3035.15 1251.28 3051.72 1256.48 curveto
+stroke
+0 0 0 edgecolor
+newpath 3050.95 1259.9 moveto
+3061.53 1259.44 lineto
+3052.96 1253.2 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3050.95 1259.9 moveto
+3061.53 1259.44 lineto
+3052.96 1253.2 lineto
+closepath stroke
+grestore
+% Node0x877544841
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3381.21 1201.87 376.36 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3123.21 1205.67 moveto 516 (0x2396f88. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3315.21 1190.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x680847788->Node0x877544841
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2907.47 1180.31 moveto
+2955.51 1182.5 3005.16 1184.76 3053.42 1186.96 curveto
+stroke
+0 0 0 edgecolor
+newpath 3053.55 1190.47 moveto
+3063.69 1187.43 lineto
+3053.86 1183.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3053.55 1190.47 moveto
+3063.69 1187.43 lineto
+3053.86 1183.48 lineto
+closepath stroke
+grestore
+% Node0x279924510
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3381.21 1129.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3122.21 1133.67 moveto 518 (0x2397200. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3315.21 1118.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x680847788->Node0x279924510
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2907.47 1151.43 moveto
+2955.21 1149.26 3004.54 1147.01 3052.51 1144.82 curveto
+stroke
+0 0 0 edgecolor
+newpath 3052.9 1148.3 moveto
+3062.73 1144.35 lineto
+3052.58 1141.31 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3052.9 1148.3 moveto
+3062.73 1144.35 lineto
+3052.58 1141.31 lineto
+closepath stroke
+grestore
+% Node0x689566866
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3381.21 1057.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3122.21 1061.67 moveto 518 (0x2397478. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3315.21 1046.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x680847788->Node0x689566866
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2720.7 1140.58 moveto
+2801.77 1125.44 2908.5 1106.7 3003.62 1093.87 curveto
+3043.3 1088.52 3085.45 1083.67 3126.63 1079.4 curveto
+stroke
+0 0 0 edgecolor
+newpath 3127.21 1082.86 moveto
+3136.8 1078.35 lineto
+3126.49 1075.89 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3127.21 1082.86 moveto
+3136.8 1078.35 lineto
+3126.49 1075.89 lineto
+closepath stroke
+grestore
+% Node0x628927990
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3381.21 985.87 376.36 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3123.21 989.67 moveto 516 (0x23976f0. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3315.21 974.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x680847788->Node0x628927990
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2652.24 1139.27 moveto
+2731.64 1106 2875.22 1049.98 3003.62 1021.87 curveto
+3033.43 1015.34 3064.83 1010 3096.26 1005.62 curveto
+stroke
+0 0 0 edgecolor
+newpath 3097.03 1009.05 moveto
+3106.46 1004.24 lineto
+3096.08 1002.11 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3097.03 1009.05 moveto
+3106.46 1004.24 lineto
+3096.08 1002.11 lineto
+closepath stroke
+grestore
+% Node0x922872106
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3381.21 913.87 376.78 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3122.71 917.67 moveto 517 (0x23992a0. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3315.21 902.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x680847788->Node0x922872106
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2629.51 1139.11 moveto
+2700 1091.67 2856.16 993.68 3003.62 949.87 curveto
+3027.17 942.87 3051.88 937.15 3076.91 932.48 curveto
+stroke
+0 0 0 edgecolor
+newpath 3077.67 935.9 moveto
+3086.89 930.68 lineto
+3076.43 929.01 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3077.67 935.9 moveto
+3086.89 930.68 lineto
+3076.43 929.01 lineto
+closepath stroke
+grestore
+% Node0x587060264
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3381.21 841.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3122.21 845.67 moveto 518 (0x2399608. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3315.21 830.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x680847788->Node0x587060264
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2618.54 1138.77 moveto
+2680.85 1079.32 2840.05 938.01 3003.62 877.87 curveto
+3023.04 870.73 3043.39 864.8 3064.14 859.89 curveto
+stroke
+0 0 0 edgecolor
+newpath 3065.05 863.27 moveto
+3074.03 857.64 lineto
+3063.5 856.45 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3065.05 863.27 moveto
+3074.03 857.64 lineto
+3063.5 856.45 lineto
+closepath stroke
+grestore
+% Node0x372785037
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3381.21 769.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3122.21 773.67 moveto 518 (0x2395240. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3315.21 758.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x197715032->Node0x372785037
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2618.54 472.97 moveto
+2680.85 532.42 2840.05 673.73 3003.62 733.87 curveto
+3023.04 741.01 3043.39 746.94 3064.14 751.85 curveto
+stroke
+0 0 0 edgecolor
+newpath 3063.5 755.29 moveto
+3074.03 754.1 lineto
+3065.05 748.47 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3063.5 755.29 moveto
+3074.03 754.1 lineto
+3065.05 748.47 lineto
+closepath stroke
+grestore
+% Node0x972440081
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3381.21 697.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3122.21 701.67 moveto 518 (0x2395490. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3315.21 686.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x197715032->Node0x972440081
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2629.51 472.63 moveto
+2700 520.07 2856.16 618.06 3003.62 661.87 curveto
+3027.1 668.85 3051.74 674.55 3076.69 679.22 curveto
+stroke
+0 0 0 edgecolor
+newpath 3076.17 682.68 moveto
+3086.64 681.02 lineto
+3077.42 675.79 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3076.17 682.68 moveto
+3086.64 681.02 lineto
+3077.42 675.79 lineto
+closepath stroke
+grestore
+% Node0x426090350
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3381.21 625.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3122.21 629.67 moveto 518 (0x2395708. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3315.21 614.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x197715032->Node0x426090350
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2652.24 472.47 moveto
+2731.64 505.74 2875.22 561.76 3003.62 589.87 curveto
+3033.29 596.37 3064.53 601.69 3095.8 606.05 curveto
+stroke
+0 0 0 edgecolor
+newpath 3095.57 609.56 moveto
+3105.96 607.44 lineto
+3096.52 602.62 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3095.57 609.56 moveto
+3105.96 607.44 lineto
+3096.52 602.62 lineto
+closepath stroke
+grestore
+% Node0x181568628
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3381.21 553.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3122.21 557.67 moveto 518 (0x2395980. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3315.21 542.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x197715032->Node0x181568628
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2720.7 471.16 moveto
+2801.77 486.3 2908.5 505.04 3003.62 517.87 curveto
+3043.3 523.22 3085.45 528.07 3126.63 532.34 curveto
+stroke
+0 0 0 edgecolor
+newpath 3126.49 535.85 moveto
+3136.8 533.39 lineto
+3127.21 528.88 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3126.49 535.85 moveto
+3136.8 533.39 lineto
+3127.21 528.88 lineto
+closepath stroke
+grestore
+% Node0x964544255
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3381.21 481.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3122.21 485.67 moveto 518 (0x2396d38. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3315.21 470.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x197715032->Node0x964544255
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2907.47 460.31 moveto
+2955.21 462.48 3004.54 464.73 3052.51 466.92 curveto
+stroke
+0 0 0 edgecolor
+newpath 3052.58 470.43 moveto
+3062.73 467.39 lineto
+3052.9 463.44 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3052.58 470.43 moveto
+3062.73 467.39 lineto
+3052.9 463.44 lineto
+closepath stroke
+grestore
+% Node0x606411076
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3381.21 409.87 376.36 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3123.21 413.67 moveto 516 (0x2396f88. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3315.21 398.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x197715032->Node0x606411076
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2907.47 431.43 moveto
+2955.51 429.24 3005.16 426.98 3053.42 424.78 curveto
+stroke
+0 0 0 edgecolor
+newpath 3053.86 428.26 moveto
+3063.69 424.31 lineto
+3053.55 421.27 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3053.86 428.26 moveto
+3063.69 424.31 lineto
+3053.55 421.27 lineto
+closepath stroke
+grestore
+% Node0x247356799
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3381.21 337.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3122.21 341.67 moveto 518 (0x2397200. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3315.21 326.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x197715032->Node0x247356799
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2720.7 420.58 moveto
+2801.77 405.44 2908.5 386.7 3003.62 373.87 curveto
+3043.3 368.52 3085.45 363.67 3126.63 359.4 curveto
+stroke
+0 0 0 edgecolor
+newpath 3127.21 362.86 moveto
+3136.8 358.35 lineto
+3126.49 355.89 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3127.21 362.86 moveto
+3136.8 358.35 lineto
+3126.49 355.89 lineto
+closepath stroke
+grestore
+% Node0x110370190
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3381.21 265.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3122.21 269.67 moveto 518 (0x2397478. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3315.21 254.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x197715032->Node0x110370190
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2652.24 419.27 moveto
+2731.64 386 2875.22 329.98 3003.62 301.87 curveto
+3033.29 295.37 3064.53 290.05 3095.8 285.69 curveto
+stroke
+0 0 0 edgecolor
+newpath 3096.52 289.12 moveto
+3105.96 284.3 lineto
+3095.57 282.19 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3096.52 289.12 moveto
+3105.96 284.3 lineto
+3095.57 282.19 lineto
+closepath stroke
+grestore
+% Node0x925644394
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3381.21 193.87 376.36 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3123.21 197.67 moveto 516 (0x23976f0. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3315.21 182.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x197715032->Node0x925644394
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2629.51 419.11 moveto
+2700 371.67 2856.16 273.68 3003.62 229.87 curveto
+3027.24 222.85 3052.03 217.12 3077.13 212.44 curveto
+stroke
+0 0 0 edgecolor
+newpath 3077.92 215.86 moveto
+3087.14 210.64 lineto
+3076.68 208.97 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3077.92 215.86 moveto
+3087.14 210.64 lineto
+3076.68 208.97 lineto
+closepath stroke
+grestore
+% Node0x490104082
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3381.21 121.87 376.78 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3122.71 125.67 moveto 517 (0x23992a0. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3315.21 110.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x197715032->Node0x490104082
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2618.54 418.77 moveto
+2680.85 359.32 2840.05 218.01 3003.62 157.87 curveto
+3023.17 150.68 3043.67 144.72 3064.57 139.79 curveto
+stroke
+0 0 0 edgecolor
+newpath 3065.55 143.16 moveto
+3074.52 137.53 lineto
+3064 136.33 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3065.55 143.16 moveto
+3074.52 137.53 lineto
+3064 136.33 lineto
+closepath stroke
+grestore
+% Node0x198080259
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3381.21 49.87 377.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3122.21 53.67 moveto 518 (0x2399608. \(/home/labaccount/11-2-17/mlsa/IG/example/LinearEquation/LinearEquation.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3315.21 38.67 moveto 132 (CMatrix::Determinant\(\)) alignedtext
+grestore
+% Node0x197715032->Node0x198080259
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2611.51 418.89 moveto
+2666.19 349.22 2823.73 163.28 3003.62 85.87 curveto
+3020.49 78.61 3038.18 72.5 3056.29 67.39 curveto
+stroke
+0 0 0 edgecolor
+newpath 3057.37 70.72 moveto
+3066.1 64.73 lineto
+3055.53 63.97 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3057.37 70.72 moveto
+3066.1 64.73 lineto
+3055.53 63.97 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 150 150 2400 2222
+end
+restore
+%%EOF

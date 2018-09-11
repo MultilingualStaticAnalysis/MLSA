@@ -1,0 +1,811 @@
+\hypertarget{classCMatrix}{}\section{C\+Matrix Class Reference}
+\label{classCMatrix}\index{C\+Matrix@{C\+Matrix}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCMatrix_a768f915421b966dfe28fe346ba262ce7}{C\+Matrix} (const char $\ast$name, int rows, int cols)
+\item 
+\hyperlink{classCMatrix_a81e958550021cc7a00fda22a46c774f3}{C\+Matrix} (const \hyperlink{classCMatrix}{C\+Matrix} \&other)
+\item 
+\hyperlink{classCMatrix_aff1a3524e09b0329286c5e231c3f1afb}{$\sim$\+C\+Matrix} ()
+\item 
+void \hyperlink{classCMatrix_a7878287aa7b5a1404980ff08d3cfeb16}{Set\+Name} (const char $\ast$name)
+\item 
+const char $\ast$ \hyperlink{classCMatrix_ae6df44c34368fbad7a5bfbda879af3ee}{Get\+Name} () const 
+\item 
+void \hyperlink{classCMatrix_af90c46bd02b2a57c58ffcff64d8dd3c6}{Get\+Input} ()
+\item 
+void \hyperlink{classCMatrix_afd8bcbf3b820b37223886632251e4d55}{Fill\+Simulated\+Input} ()
+\item 
+double \hyperlink{classCMatrix_a865ff8f610be372e666fbf24d5b73a3a}{Determinant} ()
+\item 
+\hyperlink{classCMatrix}{C\+Matrix} \& \hyperlink{classCMatrix_a939d852e81803eddaac29d96d0a1ef84}{operator=} (const \hyperlink{classCMatrix}{C\+Matrix} \&other)
+\item 
+\hyperlink{classCMatrix}{C\+Matrix} \hyperlink{classCMatrix_acc5e18f7dac42418762e92ebd8d10840}{Co\+Factor} ()
+\item 
+\hyperlink{classCMatrix}{C\+Matrix} \hyperlink{classCMatrix_a029eef7850029d78359ba09607cd8457}{Adjoint} ()
+\item 
+\hyperlink{classCMatrix}{C\+Matrix} \hyperlink{classCMatrix_ab8e853a7df8e23889ab233523324ff29}{Transpose} ()
+\item 
+\hyperlink{classCMatrix}{C\+Matrix} \hyperlink{classCMatrix_abd58298df23c98b8675a81a70c6f140b}{Inverse} ()
+\item 
+\hyperlink{classCMatrix}{C\+Matrix} \hyperlink{classCMatrix_a0fac0198450dcbcd402e1802dd6b8008}{operator+} (const \hyperlink{classCMatrix}{C\+Matrix} \&other)
+\item 
+\hyperlink{classCMatrix}{C\+Matrix} \hyperlink{classCMatrix_a26d893cfb384a7c23f5c2c959fe74293}{operator-\/} (const \hyperlink{classCMatrix}{C\+Matrix} \&other)
+\item 
+\hyperlink{classCMatrix}{C\+Matrix} \hyperlink{classCMatrix_a665fdcc1fda1a9a23e6128f1ec31cc69}{operator$\ast$} (const \hyperlink{classCMatrix}{C\+Matrix} \&other)
+\item 
+bool \hyperlink{classCMatrix_a2f26b64fa654512fe2a4e954f18e1f1c}{operator==} (const \hyperlink{classCMatrix}{C\+Matrix} \&other)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double $\ast$$\ast$ \hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\+\_\+p\+Data}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCMatrix_a720aa6a48296f4414ac7f9021bc420c4}{C\+Matrix} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\+\_\+rows}
+\item 
+int \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\+\_\+cols}
+\item 
+char \hyperlink{classCMatrix_aecd316cc4360014e817f7dc763aaa957}{m\+\_\+name} \mbox{[}128\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::istream \& \hyperlink{classCMatrix_a775d8b5122da5b9fdea41520953a4237}{operator$>$$>$} (std\+::istream \&is, \hyperlink{classCMatrix}{C\+Matrix} \&m)
+\item 
+std\+::ostream \& \hyperlink{classCMatrix_a62d7be0784c5982bf356f96493281902}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classCMatrix}{C\+Matrix} \&m)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{C\+Matrix@{C\+Matrix}!C\+Matrix@{C\+Matrix}}
+\index{C\+Matrix@{C\+Matrix}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{C\+Matrix()}{CMatrix()}}]{\setlength{\rightskip}{0pt plus 5cm}C\+Matrix\+::\+C\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCMatrix_a720aa6a48296f4414ac7f9021bc420c4}{}\label{classCMatrix_a720aa6a48296f4414ac7f9021bc420c4}
+\index{C\+Matrix@{C\+Matrix}!C\+Matrix@{C\+Matrix}}
+\index{C\+Matrix@{C\+Matrix}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{C\+Matrix(const char $\ast$name, int rows, int cols)}{CMatrix(const char *name, int rows, int cols)}}]{\setlength{\rightskip}{0pt plus 5cm}C\+Matrix\+::\+C\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{int}]{rows, }
+\item[{int}]{cols}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCMatrix_a768f915421b966dfe28fe346ba262ce7}{}\label{classCMatrix_a768f915421b966dfe28fe346ba262ce7}
+
+\begin{DoxyCode}
+17                                                       :
+18             \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}(rows), \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols}(cols)
+19         \{
+20             strcpy(\hyperlink{classCMatrix_aecd316cc4360014e817f7dc763aaa957}{m\_name}, name);
+21             \hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData} = \textcolor{keyword}{new} \textcolor{keywordtype}{double}*[\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}];
+22             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}; i++)
+23                 \hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[\hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols}];
+24             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}; i++)
+25             \{
+26                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols}; j++)
+27                 \{
+28                     \hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j] = 0.0;
+29                 \}
+30             \}
+31         \}
+\end{DoxyCode}
+\index{C\+Matrix@{C\+Matrix}!C\+Matrix@{C\+Matrix}}
+\index{C\+Matrix@{C\+Matrix}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{C\+Matrix(const C\+Matrix \&other)}{CMatrix(const CMatrix &other)}}]{\setlength{\rightskip}{0pt plus 5cm}C\+Matrix\+::\+C\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Matrix} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCMatrix_a81e958550021cc7a00fda22a46c774f3}{}\label{classCMatrix_a81e958550021cc7a00fda22a46c774f3}
+
+\begin{DoxyCode}
+33         \{
+34             strcpy(\hyperlink{classCMatrix_aecd316cc4360014e817f7dc763aaa957}{m\_name}, other.\hyperlink{classCMatrix_aecd316cc4360014e817f7dc763aaa957}{m\_name});
+35             \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows} = other.\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows};
+36             \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols} = other.\hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols};
+37             \hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData} = \textcolor{keyword}{new} \textcolor{keywordtype}{double}*[\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}];
+38             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}; i++)
+39                 \hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[\hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols}];
+40             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}; i++)
+41             \{
+42                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols}; j++)
+43                 \{
+44                     \hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j] = other.\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j];
+45                 \}
+46             \}
+47         \}
+\end{DoxyCode}
+\index{C\+Matrix@{C\+Matrix}!````~C\+Matrix@{$\sim$\+C\+Matrix}}
+\index{````~C\+Matrix@{$\sim$\+C\+Matrix}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{$\sim$\+C\+Matrix()}{~CMatrix()}}]{\setlength{\rightskip}{0pt plus 5cm}C\+Matrix\+::$\sim$\+C\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCMatrix_aff1a3524e09b0329286c5e231c3f1afb}{}\label{classCMatrix_aff1a3524e09b0329286c5e231c3f1afb}
+
+\begin{DoxyCode}
+49         \{
+50             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}; i++)
+51                 \textcolor{keyword}{delete}[] \hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i];
+52             \textcolor{keyword}{delete}[] \hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData};
+53             m\_rows = \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols} = 0;
+54         \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{C\+Matrix@{C\+Matrix}!Adjoint@{Adjoint}}
+\index{Adjoint@{Adjoint}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{Adjoint()}{Adjoint()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Matrix} C\+Matrix\+::\+Adjoint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCMatrix_a029eef7850029d78359ba09607cd8457}{}\label{classCMatrix_a029eef7850029d78359ba09607cd8457}
+
+\begin{DoxyCode}
+326         \{
+327             \hyperlink{classCMatrix}{CMatrix} cofactor(\textcolor{stringliteral}{"COF"}, \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}, \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols});
+328             \hyperlink{classCMatrix}{CMatrix} adj(\textcolor{stringliteral}{"ADJ"}, \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}, \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols});
+329             \textcolor{keywordflow}{if} (\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows} != \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols})
+330                 \textcolor{keywordflow}{return} adj;
+331             cofactor = this->\hyperlink{classCMatrix_acc5e18f7dac42418762e92ebd8d10840}{CoFactor}();
+332             \textcolor{comment}{// adjoint is transpose of a cofactor of a matrix}
+333             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}; i++)
+334             \{
+335                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols}; j++)
+336                 \{
+337                     adj.m\_pData[j][i] = cofactor.m\_pData[i][j];
+338                 \}
+339             \}
+340             \textcolor{keywordflow}{return} adj;
+341         \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCMatrix_a029eef7850029d78359ba09607cd8457_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{C\+Matrix@{C\+Matrix}!Co\+Factor@{Co\+Factor}}
+\index{Co\+Factor@{Co\+Factor}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{Co\+Factor()}{CoFactor()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Matrix} C\+Matrix\+::\+Co\+Factor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCMatrix_acc5e18f7dac42418762e92ebd8d10840}{}\label{classCMatrix_acc5e18f7dac42418762e92ebd8d10840}
+
+\begin{DoxyCode}
+253         \{
+254             \hyperlink{classCMatrix}{CMatrix} cofactor(\textcolor{stringliteral}{"COF"}, \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}, \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols});
+255             \textcolor{keywordflow}{if} (\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows} != \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols})
+256                 \textcolor{keywordflow}{return} cofactor;
+257             \textcolor{keywordflow}{if} (\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows} < 2)
+258                 \textcolor{keywordflow}{return} cofactor;
+259             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows} == 2)
+260             \{
+261                 cofactor.m\_pData[0][0] = \hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[1][1];
+262                 cofactor.m\_pData[0][1] = -\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[1][0];
+263                 cofactor.m\_pData[1][0] = -\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[0][1];
+264                 cofactor.m\_pData[1][1] = \hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[0][0];
+265                 \textcolor{keywordflow}{return} cofactor;
+266             \}
+267             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows} >= 3)
+268             \{
+269                 \textcolor{keywordtype}{int} DIM = \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows};
+270                 \hyperlink{classCMatrix}{CMatrix} ***temp = \textcolor{keyword}{new} \hyperlink{classCMatrix}{CMatrix}**[DIM];
+271                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < DIM; i++)
+272                     temp[i] = \textcolor{keyword}{new} \hyperlink{classCMatrix}{CMatrix}*[DIM];
+273                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < DIM; i++)
+274                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < DIM; j++)
+275                         temp[i][j] = \textcolor{keyword}{new} \hyperlink{classCMatrix_a720aa6a48296f4414ac7f9021bc420c4}{CMatrix}(\textcolor{stringliteral}{""}, DIM - 1, DIM - 1);
+276                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k1 = 0; k1 < DIM; k1++)
+277                 \{
+278                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k2 = 0; k2 < DIM; k2++)
+279                     \{
+280                         \textcolor{keywordtype}{int} i1 = 0;
+281                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < DIM; i++)
+282                         \{
+283                             \textcolor{keywordtype}{int} j1 = 0;
+284                             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < DIM; j++)
+285                             \{
+286                                 \textcolor{keywordflow}{if} (k1 == i || k2 == j)
+287                                     \textcolor{keywordflow}{continue};
+288                                 temp[k1][k2]->\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i1][j1++]
+289                                         = this->\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j];
+290                             \}
+291                             \textcolor{keywordflow}{if} (k1 != i)
+292                                 i1++;
+293                         \}
+294                     \}
+295                 \}
+296                 \textcolor{keywordtype}{bool} flagPositive = \textcolor{keyword}{true};
+297                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k1 = 0; k1 < DIM; k1++)
+298                 \{
+299                     flagPositive = ((k1 % 2) == 0);
+300                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k2 = 0; k2 < DIM; k2++)
+301                     \{
+302                         \textcolor{keywordflow}{if} (flagPositive == \textcolor{keyword}{true})
+303                         \{
+304                             cofactor.m\_pData[k1][k2]
+305                                     = temp[k1][k2]->\hyperlink{classCMatrix_a865ff8f610be372e666fbf24d5b73a3a}{Determinant}();
+306                             flagPositive = \textcolor{keyword}{false};
+307                         \}
+308                         \textcolor{keywordflow}{else}
+309                         \{
+310                             cofactor.m\_pData[k1][k2]
+311                                     = -temp[k1][k2]->\hyperlink{classCMatrix_a865ff8f610be372e666fbf24d5b73a3a}{Determinant}();
+312                             flagPositive = \textcolor{keyword}{true};
+313                         \}
+314                     \}
+315                 \}
+316                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < DIM; i++)
+317                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < DIM; j++)
+318                         \textcolor{keyword}{delete} temp[i][j];
+319                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < DIM; i++)
+320                     \textcolor{keyword}{delete}[] temp[i];
+321                 \textcolor{keyword}{delete}[] temp;
+322             \}
+323             \textcolor{keywordflow}{return} cofactor;
+324         \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCMatrix_acc5e18f7dac42418762e92ebd8d10840_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{C\+Matrix@{C\+Matrix}!Determinant@{Determinant}}
+\index{Determinant@{Determinant}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{Determinant()}{Determinant()}}]{\setlength{\rightskip}{0pt plus 5cm}double C\+Matrix\+::\+Determinant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCMatrix_a865ff8f610be372e666fbf24d5b73a3a}{}\label{classCMatrix_a865ff8f610be372e666fbf24d5b73a3a}
+
+\begin{DoxyCode}
+89         \{
+90             \textcolor{keywordtype}{double} det = 0;
+91             \textcolor{keywordtype}{double} **pd = \hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData};
+92             \textcolor{keywordflow}{switch} (\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows})
+93             \{
+94                 \textcolor{keywordflow}{case} 2:
+95                 \{
+96                     det = pd[0][0] * pd[1][1] - pd[0][1] * pd[1][0];
+97                     \textcolor{keywordflow}{return} det;
+98                 \}
+99                     \textcolor{keywordflow}{break};
+100                 \textcolor{keywordflow}{case} 3:
+101                 \{
+102                     \textcolor{comment}{/***}
+103 \textcolor{comment}{                     a b c}
+104 \textcolor{comment}{                     d e f}
+105 \textcolor{comment}{                     g h i}
+106 \textcolor{comment}{ }
+107 \textcolor{comment}{                     a b c a b c}
+108 \textcolor{comment}{                     d e f d e f}
+109 \textcolor{comment}{                     g h i g h i}
+110 \textcolor{comment}{ }
+111 \textcolor{comment}{                     // det (A) = aei + bfg + cdh - afh - bdi - ceg.}
+112 \textcolor{comment}{                     ***/}
+113                     \textcolor{keywordtype}{double} a = pd[0][0];
+114                     \textcolor{keywordtype}{double} b = pd[0][1];
+115                     \textcolor{keywordtype}{double} c = pd[0][2];
+116                     \textcolor{keywordtype}{double} d = pd[1][0];
+117                     \textcolor{keywordtype}{double} e = pd[1][1];
+118                     \textcolor{keywordtype}{double} f = pd[1][2];
+119                     \textcolor{keywordtype}{double} g = pd[2][0];
+120                     \textcolor{keywordtype}{double} h = pd[2][1];
+121                     \textcolor{keywordtype}{double} i = pd[2][2];
+122                     \textcolor{keywordtype}{double} det = (a * e * i + b * f * g + c * d * h);
+123                     det = det - a * f * h;
+124                     det = det - b * d * i;
+125                     det = det - c * e * g;
+126                     \textcolor{keywordflow}{return} det;
+127                 \}
+128                     \textcolor{keywordflow}{break};
+129                 \textcolor{keywordflow}{case} 4:
+130                 \{
+131                     \hyperlink{classCMatrix}{CMatrix} *temp[4];
+132                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 4; i++)
+133                         temp[i] = \textcolor{keyword}{new} \hyperlink{classCMatrix_a720aa6a48296f4414ac7f9021bc420c4}{CMatrix}(\textcolor{stringliteral}{""}, 3, 3);
+134                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = 0; k < 4; k++)
+135                     \{
+136                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i < 4; i++)
+137                         \{
+138                             \textcolor{keywordtype}{int} j1 = 0;
+139                             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < 4; j++)
+140                             \{
+141                                 \textcolor{keywordflow}{if} (k == j)
+142                                     \textcolor{keywordflow}{continue};
+143                                 temp[k]->\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i - 1][j1++]
+144                                         = this->\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j];
+145                             \}
+146                         \}
+147                     \}
+148                     \textcolor{keywordtype}{double} det = this->\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[0][0] * temp[0]->
+      \hyperlink{classCMatrix_a865ff8f610be372e666fbf24d5b73a3a}{Determinant}()
+149                             - this->\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[0][1] * temp[1]->\hyperlink{classCMatrix_a865ff8f610be372e666fbf24d5b73a3a}{Determinant}()
+150                             + this->\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[0][2] * temp[2]->\hyperlink{classCMatrix_a865ff8f610be372e666fbf24d5b73a3a}{Determinant}()
+151                             - this->\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[0][3] * temp[3]->\hyperlink{classCMatrix_a865ff8f610be372e666fbf24d5b73a3a}{Determinant}();
+152                     \textcolor{keywordflow}{return} det;
+153                 \}
+154                     \textcolor{keywordflow}{break};
+155                 \textcolor{keywordflow}{case} 5:
+156                 \{
+157                     \hyperlink{classCMatrix}{CMatrix} *temp[5];
+158                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 5; i++)
+159                         temp[i] = \textcolor{keyword}{new} \hyperlink{classCMatrix_a720aa6a48296f4414ac7f9021bc420c4}{CMatrix}(\textcolor{stringliteral}{""}, 4, 4);
+160                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = 0; k < 5; k++)
+161                     \{
+162                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i < 5; i++)
+163                         \{
+164                             \textcolor{keywordtype}{int} j1 = 0;
+165                             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < 5; j++)
+166                             \{
+167                                 \textcolor{keywordflow}{if} (k == j)
+168                                     \textcolor{keywordflow}{continue};
+169                                 temp[k]->\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i - 1][j1++]
+170                                         = this->\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j];
+171                             \}
+172                         \}
+173                     \}
+174                     \textcolor{keywordtype}{double} det = this->\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[0][0] * temp[0]->
+      \hyperlink{classCMatrix_a865ff8f610be372e666fbf24d5b73a3a}{Determinant}()
+175                             - this->\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[0][1] * temp[1]->\hyperlink{classCMatrix_a865ff8f610be372e666fbf24d5b73a3a}{Determinant}()
+176                             + this->\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[0][2] * temp[2]->\hyperlink{classCMatrix_a865ff8f610be372e666fbf24d5b73a3a}{Determinant}()
+177                             - this->\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[0][3] * temp[3]->\hyperlink{classCMatrix_a865ff8f610be372e666fbf24d5b73a3a}{Determinant}()
+178                             + this->\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[0][4] * temp[4]->\hyperlink{classCMatrix_a865ff8f610be372e666fbf24d5b73a3a}{Determinant}();
+179                     \textcolor{keywordflow}{return} det;
+180                 \}
+181                 \textcolor{keywordflow}{case} 6:
+182                 \textcolor{keywordflow}{case} 7:
+183                 \textcolor{keywordflow}{case} 8:
+184                 \textcolor{keywordflow}{case} 9:
+185                 \textcolor{keywordflow}{case} 10:
+186                 \textcolor{keywordflow}{case} 11:
+187                 \textcolor{keywordflow}{case} 12:
+188                 \textcolor{keywordflow}{default}:
+189                 \{
+190                     \textcolor{keywordtype}{int} DIM = \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows};
+191                     \hyperlink{classCMatrix}{CMatrix} **temp = \textcolor{keyword}{new} \hyperlink{classCMatrix}{CMatrix}*[DIM];
+192                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < DIM; i++)
+193                         temp[i] = \textcolor{keyword}{new} \hyperlink{classCMatrix_a720aa6a48296f4414ac7f9021bc420c4}{CMatrix}(\textcolor{stringliteral}{""}, DIM - 1, DIM - 1);
+194                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = 0; k < DIM; k++)
+195                     \{
+196                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i < DIM; i++)
+197                         \{
+198                             \textcolor{keywordtype}{int} j1 = 0;
+199                             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < DIM; j++)
+200                             \{
+201                                 \textcolor{keywordflow}{if} (k == j)
+202                                     \textcolor{keywordflow}{continue};
+203                                 temp[k]->\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i - 1][j1++]
+204                                         = this->\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j];
+205                             \}
+206                         \}
+207                     \}
+208                     \textcolor{keywordtype}{double} det = 0;
+209                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = 0; k < DIM; k++)
+210                     \{
+211                         \textcolor{keywordflow}{if} ((k % 2) == 0)
+212                             det = det + (this->\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[0][k]
+213                                     * temp[k]->\hyperlink{classCMatrix_a865ff8f610be372e666fbf24d5b73a3a}{Determinant}());
+214                         \textcolor{keywordflow}{else}
+215                             det = det - (this->\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[0][k]
+216                                     * temp[k]->\hyperlink{classCMatrix_a865ff8f610be372e666fbf24d5b73a3a}{Determinant}());
+217                     \}
+218                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < DIM; i++)
+219                         \textcolor{keyword}{delete} temp[i];
+220                     \textcolor{keyword}{delete}[] temp;
+221                     \textcolor{keywordflow}{return} det;
+222                 \}
+223                     \textcolor{keywordflow}{break};
+224             \}
+225         \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classCMatrix_a865ff8f610be372e666fbf24d5b73a3a_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{C\+Matrix@{C\+Matrix}!Fill\+Simulated\+Input@{Fill\+Simulated\+Input}}
+\index{Fill\+Simulated\+Input@{Fill\+Simulated\+Input}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{Fill\+Simulated\+Input()}{FillSimulatedInput()}}]{\setlength{\rightskip}{0pt plus 5cm}void C\+Matrix\+::\+Fill\+Simulated\+Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCMatrix_afd8bcbf3b820b37223886632251e4d55}{}\label{classCMatrix_afd8bcbf3b820b37223886632251e4d55}
+
+\begin{DoxyCode}
+68         \{
+69             \textcolor{keyword}{static} \textcolor{keywordtype}{int} factor1 = 1, factor2 = 2;
+70             std::cout << \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)nEnter Input For Matrix : "} << \hyperlink{classCMatrix_aecd316cc4360014e817f7dc763aaa957}{m\_name} << \textcolor{stringliteral}{" Rows: "}
+71                     << \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows} << \textcolor{stringliteral}{" Cols: "} << \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols} << \textcolor{stringliteral}{"\(\backslash\)n"};
+72             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}; i++)
+73             \{
+74                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols}; j++)
+75                 \{
+76                     std::cout << \textcolor{stringliteral}{"Input For Row: "} << i + 1 << \textcolor{stringliteral}{" Col: "} << j
+77                             + 1 << \textcolor{stringliteral}{" = "};
+78                     \textcolor{keywordtype}{int} data = ((i + 1) * factor1) + (j + 1) * factor2;
+79                     \hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j] = data / 10.2;
+80                     std::cout << \hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j] << \textcolor{stringliteral}{"\(\backslash\)n"};
+81                     factor1 += (rand() % 4);
+82                     factor2 += (rand() % 3);
+83                 \}
+84                 std::cout << \textcolor{stringliteral}{"\(\backslash\)n"};
+85             \}
+86             std::cout << \textcolor{stringliteral}{"\(\backslash\)n"};
+87         \}
+\end{DoxyCode}
+\index{C\+Matrix@{C\+Matrix}!Get\+Input@{Get\+Input}}
+\index{Get\+Input@{Get\+Input}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{Get\+Input()}{GetInput()}}]{\setlength{\rightskip}{0pt plus 5cm}void C\+Matrix\+::\+Get\+Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCMatrix_af90c46bd02b2a57c58ffcff64d8dd3c6}{}\label{classCMatrix_af90c46bd02b2a57c58ffcff64d8dd3c6}
+
+\begin{DoxyCode}
+64         \{
+65             std::cin >> *\textcolor{keyword}{this};
+66         \}
+\end{DoxyCode}
+\index{C\+Matrix@{C\+Matrix}!Get\+Name@{Get\+Name}}
+\index{Get\+Name@{Get\+Name}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{Get\+Name() const }{GetName() const }}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ C\+Matrix\+::\+Get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCMatrix_ae6df44c34368fbad7a5bfbda879af3ee}{}\label{classCMatrix_ae6df44c34368fbad7a5bfbda879af3ee}
+
+\begin{DoxyCode}
+60         \{
+61             \textcolor{keywordflow}{return} \hyperlink{classCMatrix_aecd316cc4360014e817f7dc763aaa957}{m\_name};
+62         \}
+\end{DoxyCode}
+\index{C\+Matrix@{C\+Matrix}!Inverse@{Inverse}}
+\index{Inverse@{Inverse}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{Inverse()}{Inverse()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Matrix} C\+Matrix\+::\+Inverse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCMatrix_abd58298df23c98b8675a81a70c6f140b}{}\label{classCMatrix_abd58298df23c98b8675a81a70c6f140b}
+
+\begin{DoxyCode}
+355         \{
+356             \hyperlink{classCMatrix}{CMatrix} cofactor(\textcolor{stringliteral}{"COF"}, \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}, \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols});
+357             \hyperlink{classCMatrix}{CMatrix} inv(\textcolor{stringliteral}{"INV"}, \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}, \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols});
+358             \textcolor{keywordflow}{if} (\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows} != \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols})
+359                 \textcolor{keywordflow}{return} inv;
+360             \textcolor{comment}{// to find out Determinant}
+361             \textcolor{keywordtype}{double} det = \hyperlink{classCMatrix_a865ff8f610be372e666fbf24d5b73a3a}{Determinant}();
+362             cofactor = this->\hyperlink{classCMatrix_acc5e18f7dac42418762e92ebd8d10840}{CoFactor}();
+363             \textcolor{comment}{// inv = transpose of cofactor / Determinant}
+364             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}; i++)
+365             \{
+366                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols}; j++)
+367                 \{
+368                     inv.m\_pData[j][i] = cofactor.m\_pData[i][j] / det;
+369                 \}
+370             \}
+371             \textcolor{keywordflow}{return} inv;
+372         \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCMatrix_abd58298df23c98b8675a81a70c6f140b_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{C\+Matrix@{C\+Matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const C\+Matrix \&other)}{operator*(const CMatrix &other)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Matrix} C\+Matrix\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Matrix} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCMatrix_a665fdcc1fda1a9a23e6128f1ec31cc69}{}\label{classCMatrix_a665fdcc1fda1a9a23e6128f1ec31cc69}
+
+\begin{DoxyCode}
+412         \{
+413             \textcolor{keywordflow}{if} (this->\hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols} != other.\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows})
+414             \{
+415                 std::cout
+416                         << \textcolor{stringliteral}{"Multiplication could not take place because number of columns of 1st Matrix and
+       number of rows in 2nd Matrix are different"};
+417                 \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+418             \}
+419             \hyperlink{classCMatrix}{CMatrix} result(\textcolor{stringliteral}{""}, this->\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}, other.\hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols});
+420             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < this->\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}; i++)
+421             \{
+422                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < other.\hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols}; j++)
+423                 \{
+424                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = 0; k < this->\hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols}; k++)
+425                     \{
+426                         result.m\_pData[i][j] += this->\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][k]
+427                                 * other.\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[k][j];
+428                     \}
+429                 \}
+430             \}
+431             \textcolor{keywordflow}{return} result;
+432         \}
+\end{DoxyCode}
+\index{C\+Matrix@{C\+Matrix}!operator+@{operator+}}
+\index{operator+@{operator+}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{operator+(const C\+Matrix \&other)}{operator+(const CMatrix &other)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Matrix} C\+Matrix\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Matrix} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCMatrix_a0fac0198450dcbcd402e1802dd6b8008}{}\label{classCMatrix_a0fac0198450dcbcd402e1802dd6b8008}
+
+\begin{DoxyCode}
+374         \{
+375             \textcolor{keywordflow}{if} (this->\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows} != other.\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows} || this->m\_cols != other.
+      \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols})
+376             \{
+377                 std::cout
+378                         << \textcolor{stringliteral}{"Addition could not take place because number of rows and columns are different
+       between the two matrices"};
+379                 \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+380             \}
+381             \hyperlink{classCMatrix}{CMatrix} result(\textcolor{stringliteral}{""}, \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}, \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols});
+382             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}; i++)
+383             \{
+384                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols}; j++)
+385                 \{
+386                     result.m\_pData[i][j] = this->\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j]
+387                             + other.\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j];
+388                 \}
+389             \}
+390             \textcolor{keywordflow}{return} result;
+391         \}
+\end{DoxyCode}
+\index{C\+Matrix@{C\+Matrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{operator-\/(const C\+Matrix \&other)}{operator-(const CMatrix &other)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Matrix} C\+Matrix\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Matrix} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCMatrix_a26d893cfb384a7c23f5c2c959fe74293}{}\label{classCMatrix_a26d893cfb384a7c23f5c2c959fe74293}
+
+\begin{DoxyCode}
+393         \{
+394             \textcolor{keywordflow}{if} (this->\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows} != other.\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows} || this->m\_cols != other.
+      \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols})
+395             \{
+396                 std::cout
+397                         << \textcolor{stringliteral}{"Subtraction could not take place because number of rows and columns are
+       different between the two matrices"};
+398                 \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+399             \}
+400             \hyperlink{classCMatrix}{CMatrix} result(\textcolor{stringliteral}{""}, \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}, \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols});
+401             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}; i++)
+402             \{
+403                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols}; j++)
+404                 \{
+405                     result.m\_pData[i][j] = this->\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j]
+406                             - other.\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j];
+407                 \}
+408             \}
+409             \textcolor{keywordflow}{return} result;
+410         \}
+\end{DoxyCode}
+\index{C\+Matrix@{C\+Matrix}!operator=@{operator=}}
+\index{operator=@{operator=}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{operator=(const C\+Matrix \&other)}{operator=(const CMatrix &other)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Matrix}\& C\+Matrix\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Matrix} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCMatrix_a939d852e81803eddaac29d96d0a1ef84}{}\label{classCMatrix_a939d852e81803eddaac29d96d0a1ef84}
+
+\begin{DoxyCode}
+227         \{
+228             \textcolor{keywordflow}{if} (this->\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows} != other.\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows} || this->m\_cols != other.
+      \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols})
+229             \{
+230                 std::cout
+231                         << \textcolor{stringliteral}{"WARNING: Assignment is taking place with by changing the number of rows and
+       columns of the matrix"};
+232             \}
+233             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}; i++)
+234                 \textcolor{keyword}{delete}[] \hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i];
+235             \textcolor{keyword}{delete}[] \hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData};
+236             m\_rows = \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols} = 0;
+237             strcpy(\hyperlink{classCMatrix_aecd316cc4360014e817f7dc763aaa957}{m\_name}, other.\hyperlink{classCMatrix_aecd316cc4360014e817f7dc763aaa957}{m\_name});
+238             m\_rows = other.\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows};
+239             \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols} = other.\hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols};
+240             \hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData} = \textcolor{keyword}{new} \textcolor{keywordtype}{double}*[\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}];
+241             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}; i++)
+242                 \hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[\hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols}];
+243             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}; i++)
+244             \{
+245                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols}; j++)
+246                 \{
+247                     \hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j] = other.\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j];
+248                 \}
+249             \}
+250             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+251         \}
+\end{DoxyCode}
+\index{C\+Matrix@{C\+Matrix}!operator==@{operator==}}
+\index{operator==@{operator==}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{operator==(const C\+Matrix \&other)}{operator==(const CMatrix &other)}}]{\setlength{\rightskip}{0pt plus 5cm}bool C\+Matrix\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Matrix} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCMatrix_a2f26b64fa654512fe2a4e954f18e1f1c}{}\label{classCMatrix_a2f26b64fa654512fe2a4e954f18e1f1c}
+
+\begin{DoxyCode}
+434         \{
+435             \textcolor{keywordflow}{if} (this->\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows} != other.\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows} || this->m\_cols != other.
+      \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols})
+436             \{
+437                 std::cout
+438                         << \textcolor{stringliteral}{"Comparision could not take place because number of rows and columns are
+       different between the two matrices"};
+439                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+440             \}
+441             \hyperlink{classCMatrix}{CMatrix} result(\textcolor{stringliteral}{""}, \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}, \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols});
+442             \textcolor{keywordtype}{bool} bEqual = \textcolor{keyword}{true};
+443             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}; i++)
+444             \{
+445                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols}; j++)
+446                 \{
+447                     \textcolor{keywordflow}{if} (this->\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j] != other.\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j])
+448                         bEqual = \textcolor{keyword}{false};
+449                 \}
+450             \}
+451             \textcolor{keywordflow}{return} bEqual;
+452         \}
+\end{DoxyCode}
+\index{C\+Matrix@{C\+Matrix}!Set\+Name@{Set\+Name}}
+\index{Set\+Name@{Set\+Name}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{Set\+Name(const char $\ast$name)}{SetName(const char *name)}}]{\setlength{\rightskip}{0pt plus 5cm}void C\+Matrix\+::\+Set\+Name (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCMatrix_a7878287aa7b5a1404980ff08d3cfeb16}{}\label{classCMatrix_a7878287aa7b5a1404980ff08d3cfeb16}
+
+\begin{DoxyCode}
+56         \{
+57             strcpy(\hyperlink{classCMatrix_aecd316cc4360014e817f7dc763aaa957}{m\_name}, name);
+58         \}
+\end{DoxyCode}
+\index{C\+Matrix@{C\+Matrix}!Transpose@{Transpose}}
+\index{Transpose@{Transpose}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{Transpose()}{Transpose()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Matrix} C\+Matrix\+::\+Transpose (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCMatrix_ab8e853a7df8e23889ab233523324ff29}{}\label{classCMatrix_ab8e853a7df8e23889ab233523324ff29}
+
+\begin{DoxyCode}
+343         \{
+344             \hyperlink{classCMatrix}{CMatrix} trans(\textcolor{stringliteral}{"TR"}, \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols}, \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows});
+345             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}; i++)
+346             \{
+347                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols}; j++)
+348                 \{
+349                     trans.m\_pData[j][i] = \hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j];
+350                 \}
+351             \}
+352             \textcolor{keywordflow}{return} trans;
+353         \}
+\end{DoxyCode}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{C\+Matrix@{C\+Matrix}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf C\+Matrix} \&}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classCMatrix_a62d7be0784c5982bf356f96493281902}{}\label{classCMatrix_a62d7be0784c5982bf356f96493281902}
+
+\begin{DoxyCode}
+474 \{
+475  
+476     os << \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)nMatrix : "} << m.\hyperlink{classCMatrix_aecd316cc4360014e817f7dc763aaa957}{m\_name} << \textcolor{stringliteral}{" Rows: "} << m.\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows} << \textcolor{stringliteral}{" Cols: "}
+477             << m.\hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols} << \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n"};
+478     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < m.\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}; i++)
+479     \{
+480         os << \textcolor{stringliteral}{" | "};
+481         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < m.\hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols}; j++)
+482         \{
+483             \textcolor{keywordtype}{char} buf[32];
+484             \textcolor{keywordtype}{double} data = m.\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j];
+485             \textcolor{keywordflow}{if} (m.\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j] > -0.00001 && m.\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j] < 0.00001)
+486                 data = 0;
+487             sprintf(buf, \textcolor{stringliteral}{"%10.2lf "}, data);
+488             os << buf;
+489         \}
+490         os << \textcolor{stringliteral}{"|\(\backslash\)n"};
+491     \}
+492     os << \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n"};
+493     \textcolor{keywordflow}{return} os;
+494 \}
+\end{DoxyCode}
+\index{C\+Matrix@{C\+Matrix}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{operator$>$$>$}{operator>>}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is, }
+\item[{{\bf C\+Matrix} \&}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classCMatrix_a775d8b5122da5b9fdea41520953a4237}{}\label{classCMatrix_a775d8b5122da5b9fdea41520953a4237}
+
+\begin{DoxyCode}
+457 \{
+458     std::cout << \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)nEnter Input For Matrix : "} << m.\hyperlink{classCMatrix_aecd316cc4360014e817f7dc763aaa957}{m\_name} << \textcolor{stringliteral}{" Rows: "}
+459             << m.\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows} << \textcolor{stringliteral}{" Cols: "} << m.\hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols} << \textcolor{stringliteral}{"\(\backslash\)n"};
+460     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < m.\hyperlink{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{m\_rows}; i++)
+461     \{
+462         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < m.\hyperlink{classCMatrix_a723f752208c055093012984eaddb62d3}{m\_cols}; j++)
+463         \{
+464             std::cout << \textcolor{stringliteral}{"Input For Row: "} << i + 1 << \textcolor{stringliteral}{" Col: "} << j + 1
+465                     << \textcolor{stringliteral}{" = "};
+466             is >> m.\hyperlink{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{m\_pData}[i][j];
+467         \}
+468         std::cout << \textcolor{stringliteral}{"\(\backslash\)n"};
+469     \}
+470     std::cout << \textcolor{stringliteral}{"\(\backslash\)n"};
+471     \textcolor{keywordflow}{return} is;
+472 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{C\+Matrix@{C\+Matrix}!m\+\_\+cols@{m\+\_\+cols}}
+\index{m\+\_\+cols@{m\+\_\+cols}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{m\+\_\+cols}{m_cols}}]{\setlength{\rightskip}{0pt plus 5cm}int C\+Matrix\+::m\+\_\+cols\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCMatrix_a723f752208c055093012984eaddb62d3}{}\label{classCMatrix_a723f752208c055093012984eaddb62d3}
+\index{C\+Matrix@{C\+Matrix}!m\+\_\+name@{m\+\_\+name}}
+\index{m\+\_\+name@{m\+\_\+name}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{m\+\_\+name}{m_name}}]{\setlength{\rightskip}{0pt plus 5cm}char C\+Matrix\+::m\+\_\+name\mbox{[}128\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCMatrix_aecd316cc4360014e817f7dc763aaa957}{}\label{classCMatrix_aecd316cc4360014e817f7dc763aaa957}
+\index{C\+Matrix@{C\+Matrix}!m\+\_\+p\+Data@{m\+\_\+p\+Data}}
+\index{m\+\_\+p\+Data@{m\+\_\+p\+Data}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{m\+\_\+p\+Data}{m_pData}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$$\ast$ C\+Matrix\+::m\+\_\+p\+Data}\hypertarget{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}{}\label{classCMatrix_ab0f18d68cad9b6d750d05a96b60a759d}
+\index{C\+Matrix@{C\+Matrix}!m\+\_\+rows@{m\+\_\+rows}}
+\index{m\+\_\+rows@{m\+\_\+rows}!C\+Matrix@{C\+Matrix}}
+\subsubsection[{\texorpdfstring{m\+\_\+rows}{m_rows}}]{\setlength{\rightskip}{0pt plus 5cm}int C\+Matrix\+::m\+\_\+rows\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}{}\label{classCMatrix_ae23e5f8016ba06cfd1cce364a99f5037}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{InverseMatrix_8cpp}{Inverse\+Matrix.\+cpp}\end{DoxyCompactItemize}

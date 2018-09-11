@@ -1,0 +1,75 @@
+\hypertarget{PathBetweenNodes_8cpp}{}\section{Path\+Between\+Nodes.\+cpp File Reference}
+\label{PathBetweenNodes_8cpp}\index{Path\+Between\+Nodes.\+cpp@{Path\+Between\+Nodes.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+Include dependency graph for Path\+Between\+Nodes.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{PathBetweenNodes_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classGraph}{Graph}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{PathBetweenNodes_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Path\+Between\+Nodes.\+cpp@{Path\+Between\+Nodes.\+cpp}!main@{main}}
+\index{main@{main}!Path\+Between\+Nodes.\+cpp@{Path\+Between\+Nodes.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{PathBetweenNodes_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{PathBetweenNodes_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+79 \{
+80     \textcolor{comment}{// Create a graph given in the above diagram}
+81     \hyperlink{classGraph}{Graph} g(4);
+82     g.addEdge(0, 1);
+83     g.addEdge(0, 2);
+84     g.addEdge(1, 2);
+85     g.addEdge(2, 0);
+86     g.addEdge(2, 3);
+87     g.addEdge(3, 3);
+88  
+89     cout << \textcolor{stringliteral}{"Enter the source and destination vertices: (0-3)"};
+90     \textcolor{keywordtype}{int} u, v;
+91     cin >> u >> v;
+92     \textcolor{keywordflow}{if} (g.isReachable(u, v))
+93         cout << \textcolor{stringliteral}{"\(\backslash\)nThere is a path from "} << u << \textcolor{stringliteral}{" to "} << v;
+94     \textcolor{keywordflow}{else}
+95         cout << \textcolor{stringliteral}{"\(\backslash\)nThere is no path from "} << u << \textcolor{stringliteral}{" to "} << v;
+96  
+97     \textcolor{keywordtype}{int} temp;
+98     temp = u;
+99     u = v;
+100     v = temp;
+101     \textcolor{keywordflow}{if} (g.isReachable(u, v))
+102         cout << \textcolor{stringliteral}{"\(\backslash\)nThere is a path from "} << u << \textcolor{stringliteral}{" to "} << v;
+103     \textcolor{keywordflow}{else}
+104         cout << \textcolor{stringliteral}{"\(\backslash\)nThere is no path from "} << u << \textcolor{stringliteral}{" to "} << v;
+105  
+106     \textcolor{keywordflow}{return} 0;
+107 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{PathBetweenNodes_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

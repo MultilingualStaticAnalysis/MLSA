@@ -1,0 +1,133 @@
+\hypertarget{ListStudents__queue_8c}{}\section{List\+Students\+\_\+queue.\+c File Reference}
+\label{ListStudents__queue_8c}\index{List\+Students\+\_\+queue.\+c@{List\+Students\+\_\+queue.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}List\+Students\+\_\+queue.\+h\char`\"{}}\\*
+Include dependency graph for List\+Students\+\_\+queue.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{ListStudents__queue_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structqueue}{queue} $\ast$ \hyperlink{ListStudents__queue_8c_a224704b6af1ea85c374ee7bed6a80b41}{init} (int n)
+\item 
+void \hyperlink{ListStudents__queue_8c_a14b9ca3a8fda3effd9ef8ad947119c3b}{final} (\hyperlink{structqueue}{queue} $\ast$q)
+\item 
+void \hyperlink{ListStudents__queue_8c_ab88e40b482be2c89256c133fad50ec89}{put} (\hyperlink{structqueue}{queue} $\ast$q, void $\ast$s)
+\item 
+int \hyperlink{ListStudents__queue_8c_ae086d7328a275c2ee8b01943a82172dc}{get} (\hyperlink{structqueue}{queue} $\ast$q, void $\ast$s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{List\+Students\+\_\+queue.\+c@{List\+Students\+\_\+queue.\+c}!final@{final}}
+\index{final@{final}!List\+Students\+\_\+queue.\+c@{List\+Students\+\_\+queue.\+c}}
+\subsubsection[{\texorpdfstring{final(queue $\ast$q)}{final(queue *q)}}]{\setlength{\rightskip}{0pt plus 5cm}void final (
+\begin{DoxyParamCaption}
+\item[{{\bf queue} $\ast$}]{q}
+\end{DoxyParamCaption}
+)}\hypertarget{ListStudents__queue_8c_a14b9ca3a8fda3effd9ef8ad947119c3b}{}\label{ListStudents__queue_8c_a14b9ca3a8fda3effd9ef8ad947119c3b}
+
+\begin{DoxyCode}
+23                     \{
+24   \textcolor{comment}{/* It frees all storage associated with the queue q */}
+25   \textcolor{keywordtype}{char} *s;
+26 
+27   \textcolor{keywordflow}{if}((s=(\textcolor{keywordtype}{char} *)malloc(q->\hyperlink{structqueue_a652887eeb98c5e87bed0662c2da0e723}{nodesize}))==NULL)\{
+28     perror(\textcolor{stringliteral}{"malloc"});
+29     exit(1);
+30   \}
+31   \textcolor{keywordflow}{while}(\textcolor{keyword}{get}(q,s));
+32   free(q);
+33   free(s);
+34 \}
+\end{DoxyCode}
+\index{List\+Students\+\_\+queue.\+c@{List\+Students\+\_\+queue.\+c}!get@{get}}
+\index{get@{get}!List\+Students\+\_\+queue.\+c@{List\+Students\+\_\+queue.\+c}}
+\subsubsection[{\texorpdfstring{get(queue $\ast$q, void $\ast$s)}{get(queue *q, void *s)}}]{\setlength{\rightskip}{0pt plus 5cm}int get (
+\begin{DoxyParamCaption}
+\item[{{\bf queue} $\ast$}]{q, }
+\item[{void $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{ListStudents__queue_8c_ae086d7328a275c2ee8b01943a82172dc}{}\label{ListStudents__queue_8c_ae086d7328a275c2ee8b01943a82172dc}
+
+\begin{DoxyCode}
+59                           \{
+60   \textcolor{comment}{/*It obtains in *s a copy of a value from queue q. It returns true}
+61 \textcolor{comment}{    iff such a record existed */}
+62   \hyperlink{structnode}{nodeptr} p;
+63 
+64   \textcolor{keywordflow}{if}(p=q->\hyperlink{structqueue_a23e9f810057d92adf24e3278dfe7865f}{head})\{
+65     q->\hyperlink{structqueue_a23e9f810057d92adf24e3278dfe7865f}{head} = q->\hyperlink{structqueue_a23e9f810057d92adf24e3278dfe7865f}{head}->\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next};
+66     \textcolor{keywordflow}{if}((q->\hyperlink{structqueue_a23e9f810057d92adf24e3278dfe7865f}{head})==NULL)
+67       q->\hyperlink{structqueue_a827de955c3490873a13e63e5478b444b}{tail} = NULL;
+68     bcopy(p->\hyperlink{structnode_a288a44aecd04d7839824d50a0b65982e}{value},s,q->\hyperlink{structqueue_a652887eeb98c5e87bed0662c2da0e723}{nodesize});
+69     free(p->\hyperlink{structnode_a288a44aecd04d7839824d50a0b65982e}{value});
+70     free(p);
+71     \textcolor{keywordflow}{return} 1;
+72   \}\textcolor{keywordflow}{else}
+73     \textcolor{keywordflow}{return} 0;
+74 \}
+\end{DoxyCode}
+\index{List\+Students\+\_\+queue.\+c@{List\+Students\+\_\+queue.\+c}!init@{init}}
+\index{init@{init}!List\+Students\+\_\+queue.\+c@{List\+Students\+\_\+queue.\+c}}
+\subsubsection[{\texorpdfstring{init(int n)}{init(int n)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf queue}$\ast$ init (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{ListStudents__queue_8c_a224704b6af1ea85c374ee7bed6a80b41}{}\label{ListStudents__queue_8c_a224704b6af1ea85c374ee7bed6a80b41}
+
+\begin{DoxyCode}
+8                   \{
+9   \textcolor{comment}{/* It creates, initializes, and returns a queue that stores values}
+10 \textcolor{comment}{     of size n */}
+11   \hyperlink{structqueue}{queue} *q;
+12 
+13   \textcolor{keywordflow}{if}((q=(\hyperlink{structqueue}{queue} *)malloc(\textcolor{keyword}{sizeof}(\hyperlink{structqueue}{queue})))==NULL)\{
+14     perror(\textcolor{stringliteral}{"malloc"});
+15     exit(1);
+16   \}
+17   q->\hyperlink{structqueue_a652887eeb98c5e87bed0662c2da0e723}{nodesize}=n;
+18   q->\hyperlink{structqueue_a23e9f810057d92adf24e3278dfe7865f}{head}=NULL;
+19   q->\hyperlink{structqueue_a827de955c3490873a13e63e5478b444b}{tail}=NULL;
+20   \textcolor{keywordflow}{return} q;
+21 \}
+\end{DoxyCode}
+\index{List\+Students\+\_\+queue.\+c@{List\+Students\+\_\+queue.\+c}!put@{put}}
+\index{put@{put}!List\+Students\+\_\+queue.\+c@{List\+Students\+\_\+queue.\+c}}
+\subsubsection[{\texorpdfstring{put(queue $\ast$q, void $\ast$s)}{put(queue *q, void *s)}}]{\setlength{\rightskip}{0pt plus 5cm}void put (
+\begin{DoxyParamCaption}
+\item[{{\bf queue} $\ast$}]{q, }
+\item[{void $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{ListStudents__queue_8c_ab88e40b482be2c89256c133fad50ec89}{}\label{ListStudents__queue_8c_ab88e40b482be2c89256c133fad50ec89}
+
+\begin{DoxyCode}
+36                             \{
+37   \textcolor{comment}{/* It inserts a copy of the value *s in the queue q */}
+38   \hyperlink{structnode}{nodeptr} p;
+39   \textcolor{keywordtype}{void} *r;
+40   
+41   \textcolor{keywordflow}{if} ((p=(\hyperlink{structnode}{nodeptr})malloc(\textcolor{keyword}{sizeof}(\hyperlink{structnode}{node})))==NULL)\{
+42     perror(\textcolor{stringliteral}{"malloc"});
+43     exit(1);
+44   \}
+45   \textcolor{keywordflow}{if} ((r=(\textcolor{keywordtype}{void} *)malloc(q->\hyperlink{structqueue_a652887eeb98c5e87bed0662c2da0e723}{nodesize}))==NULL)\{
+46     perror(\textcolor{stringliteral}{"malloc"});
+47     exit(1);
+48   \}
+49   bcopy(s,r,q->\hyperlink{structqueue_a652887eeb98c5e87bed0662c2da0e723}{nodesize});
+50   p->\hyperlink{structnode_a288a44aecd04d7839824d50a0b65982e}{value} = r;
+51   p->\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next} = NULL;
+52   \textcolor{keywordflow}{if} (q->\hyperlink{structqueue_a23e9f810057d92adf24e3278dfe7865f}{head} == NULL)
+53     q->\hyperlink{structqueue_a23e9f810057d92adf24e3278dfe7865f}{head} = p;
+54   \textcolor{keywordflow}{else}
+55     q->\hyperlink{structqueue_a827de955c3490873a13e63e5478b444b}{tail}->\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next} = p;
+56   q->\hyperlink{structqueue_a827de955c3490873a13e63e5478b444b}{tail} = p;
+57 \}
+\end{DoxyCode}

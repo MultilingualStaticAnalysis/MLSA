@@ -1,0 +1,162 @@
+\hypertarget{classGraph}{}\section{Graph Class Reference}
+\label{classGraph}\index{Graph@{Graph}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGraph_af3ff6b295df8bf3bee0bafd7c7d56915}{Graph} (int \hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V})
+\item 
+void \hyperlink{classGraph_a8a3b5afce00f9d260b01c188fbe73f53}{add\+Edge} (int v, int w)
+\item 
+void \hyperlink{classGraph_ace37a14bfa5c1c748fd233629f6c1ca3}{B\+FS} (int s, bool visited\mbox{[}$\,$\mbox{]})
+\item 
+\hyperlink{classGraph}{Graph} \hyperlink{classGraph_abdaf0cb08811d4b30f4c85f632e0e181}{get\+Transpose} ()
+\item 
+bool \hyperlink{classGraph_add6f4a13a70d1b15f370db0bd4669b90}{is\+Connected} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V}
+\item 
+list$<$ int $>$ $\ast$ \hyperlink{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{adj}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{Graph(int V)}{Graph(int V)}}]{\setlength{\rightskip}{0pt plus 5cm}Graph\+::\+Graph (
+\begin{DoxyParamCaption}
+\item[{int}]{V}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classGraph_af3ff6b295df8bf3bee0bafd7c7d56915}{}\label{classGraph_af3ff6b295df8bf3bee0bafd7c7d56915}
+
+\begin{DoxyCode}
+18         \{
+19             this->\hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V} = \hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V};
+20             \hyperlink{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{adj} = \textcolor{keyword}{new} list<int>[\hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V}];
+21         \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Graph@{Graph}!add\+Edge@{add\+Edge}}
+\index{add\+Edge@{add\+Edge}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{add\+Edge(int v, int w)}{addEdge(int v, int w)}}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+::add\+Edge (
+\begin{DoxyParamCaption}
+\item[{int}]{v, }
+\item[{int}]{w}
+\end{DoxyParamCaption}
+)}\hypertarget{classGraph_a8a3b5afce00f9d260b01c188fbe73f53}{}\label{classGraph_a8a3b5afce00f9d260b01c188fbe73f53}
+
+\begin{DoxyCode}
+32 \{
+33     \hyperlink{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{adj}[v].push\_back(w);
+34     \hyperlink{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{adj}[w].push\_back(v);
+35 \}
+\end{DoxyCode}
+\index{Graph@{Graph}!B\+FS@{B\+FS}}
+\index{B\+FS@{B\+FS}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{B\+F\+S(int s, bool visited[])}{BFS(int s, bool visited[])}}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+::\+B\+FS (
+\begin{DoxyParamCaption}
+\item[{int}]{s, }
+\item[{bool}]{visited\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{classGraph_ace37a14bfa5c1c748fd233629f6c1ca3}{}\label{classGraph_ace37a14bfa5c1c748fd233629f6c1ca3}
+
+\begin{DoxyCode}
+41 \{
+42     list<int> q;
+43     list<int>::iterator i;
+44     visited[s] = \textcolor{keyword}{true};
+45     q.push\_back(s);
+46     \textcolor{keywordflow}{while} (!q.empty())
+47     \{
+48         s = q.front();
+49         q.pop\_front();
+50         \textcolor{keywordflow}{for}(i = \hyperlink{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{adj}[s].begin(); i != \hyperlink{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{adj}[s].end(); ++i)
+51         \{
+52             \textcolor{keywordflow}{if}(!visited[*i])
+53             \{
+54                 visited[*i] = \textcolor{keyword}{true};
+55                 q.push\_back(*i);
+56             \}
+57         \}
+58     \}
+59 \}
+\end{DoxyCode}
+\index{Graph@{Graph}!get\+Transpose@{get\+Transpose}}
+\index{get\+Transpose@{get\+Transpose}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{get\+Transpose()}{getTranspose()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graph} Graph\+::get\+Transpose (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classGraph_abdaf0cb08811d4b30f4c85f632e0e181}{}\label{classGraph_abdaf0cb08811d4b30f4c85f632e0e181}
+
+\begin{DoxyCode}
+64 \{
+65     \hyperlink{classGraph}{Graph} g(\hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V});
+66     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} v = 0; v < \hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V}; v++)
+67     \{
+68         list<int>::iterator i;
+69         \textcolor{keywordflow}{for}(i = \hyperlink{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{adj}[v].begin(); i != \hyperlink{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{adj}[v].end(); ++i)
+70         \{
+71             g.adj[*i].push\_back(v);
+72         \}
+73     \}
+74     \textcolor{keywordflow}{return} g;
+75 \}
+\end{DoxyCode}
+\index{Graph@{Graph}!is\+Connected@{is\+Connected}}
+\index{is\+Connected@{is\+Connected}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{is\+Connected()}{isConnected()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Graph\+::is\+Connected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classGraph_add6f4a13a70d1b15f370db0bd4669b90}{}\label{classGraph_add6f4a13a70d1b15f370db0bd4669b90}
+
+\begin{DoxyCode}
+80 \{
+81     \textcolor{keywordtype}{bool} visited[\hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V}];
+82     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V}; i++)
+83         visited[i] = \textcolor{keyword}{false};
+84     \hyperlink{classGraph_ace37a14bfa5c1c748fd233629f6c1ca3}{BFS}(0, visited);
+85     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V}; i++)
+86         \textcolor{keywordflow}{if} (visited[i] == \textcolor{keyword}{false})
+87             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+88     \hyperlink{classGraph}{Graph} gr = \hyperlink{classGraph_abdaf0cb08811d4b30f4c85f632e0e181}{getTranspose}();
+89     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V}; i++)
+90         visited[i] = \textcolor{keyword}{false};
+91     gr.\hyperlink{classGraph_ace37a14bfa5c1c748fd233629f6c1ca3}{BFS}(0, visited);
+92     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{V}; i++)
+93         \textcolor{keywordflow}{if} (visited[i] == \textcolor{keyword}{false})
+94             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+95     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+96 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{classGraph_add6f4a13a70d1b15f370db0bd4669b90_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Graph@{Graph}!adj@{adj}}
+\index{adj@{adj}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{adj}{adj}}]{\setlength{\rightskip}{0pt plus 5cm}list$<$int$>$$\ast$ Graph\+::adj\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classGraph_a04ab9c17ad31aa036def8db0f88b035b}{}\label{classGraph_a04ab9c17ad31aa036def8db0f88b035b}
+\index{Graph@{Graph}!V@{V}}
+\index{V@{V}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{V}{V}}]{\setlength{\rightskip}{0pt plus 5cm}int Graph\+::V\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}{}\label{classGraph_a2b722f7cfa7a21e4cb5fae488b3d4dcc}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{UndirectedGraph_8cpp}{Undirected\+Graph.\+cpp}\end{DoxyCompactItemize}

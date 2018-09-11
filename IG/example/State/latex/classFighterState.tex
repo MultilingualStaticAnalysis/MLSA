@@ -1,0 +1,78 @@
+\hypertarget{classFighterState}{}\section{Fighter\+State Class Reference}
+\label{classFighterState}\index{Fighter\+State@{Fighter\+State}}
+
+
+Inheritance diagram for Fighter\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFighterState__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classFighterState_a5ee5999d79f6a7e8cdf386cbf05fb941}{$\sim$\+Fighter\+State} ()=default
+\item 
+virtual void \hyperlink{classFighterState_a84fcd7da4d232e79e1be9b32c0767861}{handle\+Input} (\hyperlink{classFighter}{Fighter} \&, \hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090}{Input})=0
+\item 
+virtual void \hyperlink{classFighterState_af022f76c6b1fe080047ded2280ec6f8f}{update} (\hyperlink{classFighter}{Fighter} \&)=0
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \hyperlink{classStandingState}{Standing\+State} $>$ \hyperlink{classFighterState_a050e9b5aff81843be5feea296a586889}{standing}
+\item 
+static std\+::shared\+\_\+ptr$<$ \hyperlink{classDivingState}{Diving\+State} $>$ \hyperlink{classFighterState_ad4f8371e5a2d9e5b165d5c41072eb6d9}{diving}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Fighter\+State@{Fighter\+State}!````~Fighter\+State@{$\sim$\+Fighter\+State}}
+\index{````~Fighter\+State@{$\sim$\+Fighter\+State}!Fighter\+State@{Fighter\+State}}
+\subsubsection[{\texorpdfstring{$\sim$\+Fighter\+State()=default}{~FighterState()=default}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Fighter\+State\+::$\sim$\+Fighter\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}\hypertarget{classFighterState_a5ee5999d79f6a7e8cdf386cbf05fb941}{}\label{classFighterState_a5ee5999d79f6a7e8cdf386cbf05fb941}
+
+
+\subsection{Member Function Documentation}
+\index{Fighter\+State@{Fighter\+State}!handle\+Input@{handle\+Input}}
+\index{handle\+Input@{handle\+Input}!Fighter\+State@{Fighter\+State}}
+\subsubsection[{\texorpdfstring{handle\+Input(\+Fighter \&, Input)=0}{handleInput(Fighter &, Input)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Fighter\+State\+::handle\+Input (
+\begin{DoxyParamCaption}
+\item[{{\bf Fighter} \&}]{, }
+\item[{{\bf Input}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classFighterState_a84fcd7da4d232e79e1be9b32c0767861}{}\label{classFighterState_a84fcd7da4d232e79e1be9b32c0767861}
+
+
+Implemented in \hyperlink{classDivingState_a22ddb04b1b75366cc8f9f5b017338498}{Diving\+State}, \hyperlink{classJumpingState_a40be6d03f207fc425dfe2b1395fd4edb}{Jumping\+State}, \hyperlink{classStandingState_a63e99bb4fb71ef88ba573ad902337e7c}{Standing\+State}, and \hyperlink{classDuckingState_a233ad7f72fa53e13a28a090d097a845b}{Ducking\+State}.
+
+\index{Fighter\+State@{Fighter\+State}!update@{update}}
+\index{update@{update}!Fighter\+State@{Fighter\+State}}
+\subsubsection[{\texorpdfstring{update(\+Fighter \&)=0}{update(Fighter &)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Fighter\+State\+::update (
+\begin{DoxyParamCaption}
+\item[{{\bf Fighter} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classFighterState_af022f76c6b1fe080047ded2280ec6f8f}{}\label{classFighterState_af022f76c6b1fe080047ded2280ec6f8f}
+
+
+Implemented in \hyperlink{classDivingState_a98ec5b0c6a09c934c0ab11694e8a6b4a}{Diving\+State}, \hyperlink{classJumpingState_aef36270d1d3aec51bdf4770e9ad571c8}{Jumping\+State}, \hyperlink{classStandingState_a3a99901a53764049b39df5b8f016fb66}{Standing\+State}, and \hyperlink{classDuckingState_a634612b9f2d152c8805366541a775504}{Ducking\+State}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Fighter\+State@{Fighter\+State}!diving@{diving}}
+\index{diving@{diving}!Fighter\+State@{Fighter\+State}}
+\subsubsection[{\texorpdfstring{diving}{diving}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf Diving\+State} $>$ Fighter\+State\+::diving\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classFighterState_ad4f8371e5a2d9e5b165d5c41072eb6d9}{}\label{classFighterState_ad4f8371e5a2d9e5b165d5c41072eb6d9}
+\index{Fighter\+State@{Fighter\+State}!standing@{standing}}
+\index{standing@{standing}!Fighter\+State@{Fighter\+State}}
+\subsubsection[{\texorpdfstring{standing}{standing}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf Standing\+State} $>$ Fighter\+State\+::standing\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classFighterState_a050e9b5aff81843be5feea296a586889}{}\label{classFighterState_a050e9b5aff81843be5feea296a586889}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{State_8cpp}{State.\+cpp}\end{DoxyCompactItemize}

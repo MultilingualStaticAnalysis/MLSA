@@ -1,0 +1,232 @@
+\hypertarget{classqueuesavitch_1_1Queue}{}\section{queuesavitch\+:\+:Queue Class Reference}
+\label{classqueuesavitch_1_1Queue}\index{queuesavitch\+::\+Queue@{queuesavitch\+::\+Queue}}
+
+
+{\ttfamily \#include $<$Queue.\+h$>$}
+
+
+
+Inheritance diagram for queuesavitch\+:\+:Queue\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classqueuesavitch_1_1Queue__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for queuesavitch\+:\+:Queue\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{classqueuesavitch_1_1Queue__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classqueuesavitch_1_1Queue_a76c2a8339bb4ab4f22f0f425be154c6a}{Queue} ()
+\item 
+\hyperlink{classqueuesavitch_1_1Queue_a1ed5fcbcbdbae93132f03c698dd24e8d}{Queue} (const \hyperlink{classqueuesavitch_1_1Queue}{Queue} \&a\+Queue)
+\item 
+\hyperlink{classqueuesavitch_1_1Queue_a4207b8d35aec9740a04da0953568296f}{$\sim$\+Queue} ()
+\item 
+void \hyperlink{classqueuesavitch_1_1Queue_a5f208f5455b566a5ddf3bb4a7869cb31}{add} (int item)
+\item 
+virtual int \hyperlink{classqueuesavitch_1_1Queue_a607e9543f593526aee0d6a403a4ce775}{remove} ()
+\item 
+bool \hyperlink{classqueuesavitch_1_1Queue_a557c2aefa6d1c51d42a1563dab0e2cc0}{empty} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacequeuesavitch_a3a9d48cafb7ea2049936da3b05a10209}{Queue\+Node\+Ptr} \hyperlink{classqueuesavitch_1_1Queue_ac30555d398c28ad9b72f9d9b05c1ddf6}{front}
+\item 
+\hyperlink{namespacequeuesavitch_a3a9d48cafb7ea2049936da3b05a10209}{Queue\+Node\+Ptr} \hyperlink{classqueuesavitch_1_1Queue_a2759a808c5c9abe7d1c53cc8ade3f5a9}{back}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{queuesavitch\+::\+Queue@{queuesavitch\+::\+Queue}!Queue@{Queue}}
+\index{Queue@{Queue}!queuesavitch\+::\+Queue@{queuesavitch\+::\+Queue}}
+\subsubsection[{\texorpdfstring{Queue()}{Queue()}}]{\setlength{\rightskip}{0pt plus 5cm}queuesavitch\+::\+Queue\+::\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classqueuesavitch_1_1Queue_a76c2a8339bb4ab4f22f0f425be154c6a}{}\label{classqueuesavitch_1_1Queue_a76c2a8339bb4ab4f22f0f425be154c6a}
+
+\begin{DoxyCode}
+19                  : \hyperlink{classqueuesavitch_1_1Queue_ac30555d398c28ad9b72f9d9b05c1ddf6}{front}(NULL), \hyperlink{classqueuesavitch_1_1Queue_a2759a808c5c9abe7d1c53cc8ade3f5a9}{back}(NULL)
+20    \{
+21       \textcolor{comment}{//Intentionally empty.                                                                               
+                                                                                                       }
+22    \}
+\end{DoxyCode}
+\index{queuesavitch\+::\+Queue@{queuesavitch\+::\+Queue}!Queue@{Queue}}
+\index{Queue@{Queue}!queuesavitch\+::\+Queue@{queuesavitch\+::\+Queue}}
+\subsubsection[{\texorpdfstring{Queue(const Queue \&a\+Queue)}{Queue(const Queue &aQueue)}}]{\setlength{\rightskip}{0pt plus 5cm}queuesavitch\+::\+Queue\+::\+Queue (
+\begin{DoxyParamCaption}
+\item[{const {\bf Queue} \&}]{a\+Queue}
+\end{DoxyParamCaption}
+)}\hypertarget{classqueuesavitch_1_1Queue_a1ed5fcbcbdbae93132f03c698dd24e8d}{}\label{classqueuesavitch_1_1Queue_a1ed5fcbcbdbae93132f03c698dd24e8d}
+
+\begin{DoxyCode}
+25    \{
+26       \hyperlink{classqueuesavitch_1_1Queue_ac30555d398c28ad9b72f9d9b05c1ddf6}{front} = aQueue.front;
+27       \hyperlink{classqueuesavitch_1_1Queue_a2759a808c5c9abe7d1c53cc8ade3f5a9}{back} = aQueue.back;
+28    \}
+\end{DoxyCode}
+\index{queuesavitch\+::\+Queue@{queuesavitch\+::\+Queue}!````~Queue@{$\sim$\+Queue}}
+\index{````~Queue@{$\sim$\+Queue}!queuesavitch\+::\+Queue@{queuesavitch\+::\+Queue}}
+\subsubsection[{\texorpdfstring{$\sim$\+Queue()}{~Queue()}}]{\setlength{\rightskip}{0pt plus 5cm}queuesavitch\+::\+Queue\+::$\sim$\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classqueuesavitch_1_1Queue_a4207b8d35aec9740a04da0953568296f}{}\label{classqueuesavitch_1_1Queue_a4207b8d35aec9740a04da0953568296f}
+
+\begin{DoxyCode}
+32    \{
+33       \textcolor{comment}{/*if(front != NULL)                                                                                  
+                                                                                                       }
+34 \textcolor{comment}{      \{                                                                                                    
+                                                                                                       }
+35 \textcolor{comment}{         QueueNodePtr here = front;                                                                        
+                                                                                                       }
+36 \textcolor{comment}{         QueueNodePtr discard;                                                                             
+                                                                                                       }
+37 \textcolor{comment}{         while(here->link != NULL)                                                                         
+                                                                                                       }
+38 \textcolor{comment}{         \{                                                                                                 
+                                                                                                       }
+39 \textcolor{comment}{            discard = here;                                                                                
+                                                                                                       }
+40 \textcolor{comment}{            here = here->link;                                                                             
+                                                                                                       }
+41 \textcolor{comment}{            delete discard;                                                                                
+                                                                                                       }
+42 \textcolor{comment}{         \}                                                                                                 
+                                                                                                       }
+43 \textcolor{comment}{         \}*/}
+44    \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{queuesavitch\+::\+Queue@{queuesavitch\+::\+Queue}!add@{add}}
+\index{add@{add}!queuesavitch\+::\+Queue@{queuesavitch\+::\+Queue}}
+\subsubsection[{\texorpdfstring{add(int item)}{add(int item)}}]{\setlength{\rightskip}{0pt plus 5cm}void queuesavitch\+::\+Queue\+::add (
+\begin{DoxyParamCaption}
+\item[{int}]{item}
+\end{DoxyParamCaption}
+)}\hypertarget{classqueuesavitch_1_1Queue_a5f208f5455b566a5ddf3bb4a7869cb31}{}\label{classqueuesavitch_1_1Queue_a5f208f5455b566a5ddf3bb4a7869cb31}
+
+\begin{DoxyCode}
+55    \{
+56       \textcolor{keywordflow}{if} (\hyperlink{classqueuesavitch_1_1Queue_a557c2aefa6d1c51d42a1563dab0e2cc0}{empty}( ))
+57       \{
+58          \hyperlink{classqueuesavitch_1_1Queue_ac30555d398c28ad9b72f9d9b05c1ddf6}{front} = \textcolor{keyword}{new} QueueNode;
+59          \hyperlink{classqueuesavitch_1_1Queue_ac30555d398c28ad9b72f9d9b05c1ddf6}{front}->\hyperlink{structqueuesavitch_1_1QueueNode_a4fd17a591c8510ed1118d3c4cb67b320}{data} = item;
+60        \hyperlink{classqueuesavitch_1_1Queue_a2759a808c5c9abe7d1c53cc8ade3f5a9}{back} = \hyperlink{classqueuesavitch_1_1Queue_ac30555d398c28ad9b72f9d9b05c1ddf6}{front};
+61       \}
+62 
+63       \textcolor{keywordflow}{else}
+64       \{
+65          \hyperlink{namespacequeuesavitch_a3a9d48cafb7ea2049936da3b05a10209}{QueueNodePtr} temp\_ptr;
+66          temp\_ptr = \textcolor{keyword}{new} QueueNode;
+67 
+68          temp\_ptr->\hyperlink{structqueuesavitch_1_1QueueNode_a4fd17a591c8510ed1118d3c4cb67b320}{data} = item;
+69          temp\_ptr->link = NULL;
+70          \hyperlink{classqueuesavitch_1_1Queue_a2759a808c5c9abe7d1c53cc8ade3f5a9}{back}->\hyperlink{structqueuesavitch_1_1QueueNode_add6ebeca47fc7ab55c99a33827cb68c4}{link} = temp\_ptr;
+71          \hyperlink{classqueuesavitch_1_1Queue_a2759a808c5c9abe7d1c53cc8ade3f5a9}{back} = temp\_ptr;
+72       \}
+73    \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classqueuesavitch_1_1Queue_a5f208f5455b566a5ddf3bb4a7869cb31_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{queuesavitch\+::\+Queue@{queuesavitch\+::\+Queue}!empty@{empty}}
+\index{empty@{empty}!queuesavitch\+::\+Queue@{queuesavitch\+::\+Queue}}
+\subsubsection[{\texorpdfstring{empty() const }{empty() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool queuesavitch\+::\+Queue\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classqueuesavitch_1_1Queue_a557c2aefa6d1c51d42a1563dab0e2cc0}{}\label{classqueuesavitch_1_1Queue_a557c2aefa6d1c51d42a1563dab0e2cc0}
+
+\begin{DoxyCode}
+49    \{
+50       \textcolor{keywordflow}{return} (\hyperlink{classqueuesavitch_1_1Queue_a2759a808c5c9abe7d1c53cc8ade3f5a9}{back} == NULL);\textcolor{comment}{//front == NULL would also work                                            
+                                                                                                           }
+51    \}
+\end{DoxyCode}
+\index{queuesavitch\+::\+Queue@{queuesavitch\+::\+Queue}!remove@{remove}}
+\index{remove@{remove}!queuesavitch\+::\+Queue@{queuesavitch\+::\+Queue}}
+\subsubsection[{\texorpdfstring{remove()}{remove()}}]{\setlength{\rightskip}{0pt plus 5cm}int queuesavitch\+::\+Queue\+::remove (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classqueuesavitch_1_1Queue_a607e9543f593526aee0d6a403a4ce775}{}\label{classqueuesavitch_1_1Queue_a607e9543f593526aee0d6a403a4ce775}
+
+
+Reimplemented in \hyperlink{classqueuesavitch_1_1PriorityQueue_aabec9a46c41b0601f05f55a7894d20e1}{queuesavitch\+::\+Priority\+Queue}.
+
+
+\begin{DoxyCode}
+77    \{
+78       \textcolor{keywordflow}{if} (\hyperlink{classqueuesavitch_1_1Queue_a557c2aefa6d1c51d42a1563dab0e2cc0}{empty}( ))
+79       \{
+80          cout << \textcolor{stringliteral}{"Error: Removing an item from an empty queue.\(\backslash\)n"};
+81          exit(1);
+82       \}
+83 
+84       \textcolor{keywordtype}{int} result = \hyperlink{classqueuesavitch_1_1Queue_ac30555d398c28ad9b72f9d9b05c1ddf6}{front}->\hyperlink{structqueuesavitch_1_1QueueNode_a4fd17a591c8510ed1118d3c4cb67b320}{data};
+85 
+86       \hyperlink{namespacequeuesavitch_a3a9d48cafb7ea2049936da3b05a10209}{QueueNodePtr} discard;
+87       discard = \hyperlink{classqueuesavitch_1_1Queue_ac30555d398c28ad9b72f9d9b05c1ddf6}{front};
+88       \hyperlink{classqueuesavitch_1_1Queue_ac30555d398c28ad9b72f9d9b05c1ddf6}{front} = \hyperlink{classqueuesavitch_1_1Queue_ac30555d398c28ad9b72f9d9b05c1ddf6}{front}->\hyperlink{structqueuesavitch_1_1QueueNode_add6ebeca47fc7ab55c99a33827cb68c4}{link};
+89       \textcolor{keywordflow}{if} (\hyperlink{classqueuesavitch_1_1Queue_ac30555d398c28ad9b72f9d9b05c1ddf6}{front} == NULL) \textcolor{comment}{//if you removed the last node                                               
+                                                                                                            }
+90          \hyperlink{classqueuesavitch_1_1Queue_a2759a808c5c9abe7d1c53cc8ade3f5a9}{back} = NULL;
+91 
+92       \textcolor{keyword}{delete} discard;
+93 
+94       \textcolor{keywordflow}{return} result;
+95    \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classqueuesavitch_1_1Queue_a607e9543f593526aee0d6a403a4ce775_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{queuesavitch\+::\+Queue@{queuesavitch\+::\+Queue}!back@{back}}
+\index{back@{back}!queuesavitch\+::\+Queue@{queuesavitch\+::\+Queue}}
+\subsubsection[{\texorpdfstring{back}{back}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Queue\+Node\+Ptr} queuesavitch\+::\+Queue\+::back\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classqueuesavitch_1_1Queue_a2759a808c5c9abe7d1c53cc8ade3f5a9}{}\label{classqueuesavitch_1_1Queue_a2759a808c5c9abe7d1c53cc8ade3f5a9}
+\index{queuesavitch\+::\+Queue@{queuesavitch\+::\+Queue}!front@{front}}
+\index{front@{front}!queuesavitch\+::\+Queue@{queuesavitch\+::\+Queue}}
+\subsubsection[{\texorpdfstring{front}{front}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Queue\+Node\+Ptr} queuesavitch\+::\+Queue\+::front\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classqueuesavitch_1_1Queue_ac30555d398c28ad9b72f9d9b05c1ddf6}{}\label{classqueuesavitch_1_1Queue_ac30555d398c28ad9b72f9d9b05c1ddf6}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Queue_8h}{Queue.\+h}\item 
+\hyperlink{Queue_8cpp}{Queue.\+cpp}\end{DoxyCompactItemize}

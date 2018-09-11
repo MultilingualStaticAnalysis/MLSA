@@ -1,0 +1,313 @@
+\hypertarget{CalculoTempo__maincalculo_8h}{}\section{Calculo\+Tempo\+\_\+maincalculo.\+h File Reference}
+\label{CalculoTempo__maincalculo_8h}\index{Calculo\+Tempo\+\_\+maincalculo.\+h@{Calculo\+Tempo\+\_\+maincalculo.\+h}}
+{\ttfamily \#include \char`\"{}Calculo\+Tempo\+\_\+map\+\_\+op\+\_\+prott.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Calculo\+Tempo\+\_\+busca\+\_\+a.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$omp.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+Include dependency graph for Calculo\+Tempo\+\_\+maincalculo.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CalculoTempo__maincalculo_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{CalculoTempo__maincalculo_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{CalculoTempo__maincalculo_8h_a31f99d9c502b52b5f36dc7e2028c2e80}{B\+I\+L\+L\+I\+ON}~1000000000L
+\item 
+\#define \hyperlink{CalculoTempo__maincalculo_8h_ac92ca5ab87034a348decad7ee8d4bd1b}{F\+PS}~((double)45.\+0)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CalculoTempo__maincalculo_8h_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\item 
+void \hyperlink{CalculoTempo__maincalculo_8h_ad086ba595a2f94a129bf13858ef65781}{encontra\+\_\+caminhodungeon} (\hyperlink{classBusca__a}{Busca\+\_\+a} $\ast$busca, \hyperlink{structVector2}{Vector2} ini, \hyperlink{structVector2}{Vector2} fim, int $\ast$$\ast$\hyperlink{structtile}{tile}, int tam, double $\ast$global\+\_\+time)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{Calculo\+Tempo\+\_\+maincalculo.\+h@{Calculo\+Tempo\+\_\+maincalculo.\+h}!B\+I\+L\+L\+I\+ON@{B\+I\+L\+L\+I\+ON}}
+\index{B\+I\+L\+L\+I\+ON@{B\+I\+L\+L\+I\+ON}!Calculo\+Tempo\+\_\+maincalculo.\+h@{Calculo\+Tempo\+\_\+maincalculo.\+h}}
+\subsubsection[{\texorpdfstring{B\+I\+L\+L\+I\+ON}{BILLION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+I\+L\+L\+I\+ON~1000000000L}\hypertarget{CalculoTempo__maincalculo_8h_a31f99d9c502b52b5f36dc7e2028c2e80}{}\label{CalculoTempo__maincalculo_8h_a31f99d9c502b52b5f36dc7e2028c2e80}
+\index{Calculo\+Tempo\+\_\+maincalculo.\+h@{Calculo\+Tempo\+\_\+maincalculo.\+h}!F\+PS@{F\+PS}}
+\index{F\+PS@{F\+PS}!Calculo\+Tempo\+\_\+maincalculo.\+h@{Calculo\+Tempo\+\_\+maincalculo.\+h}}
+\subsubsection[{\texorpdfstring{F\+PS}{FPS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+PS~((double)45.\+0)}\hypertarget{CalculoTempo__maincalculo_8h_ac92ca5ab87034a348decad7ee8d4bd1b}{}\label{CalculoTempo__maincalculo_8h_ac92ca5ab87034a348decad7ee8d4bd1b}
+
+
+\subsection{Function Documentation}
+\index{Calculo\+Tempo\+\_\+maincalculo.\+h@{Calculo\+Tempo\+\_\+maincalculo.\+h}!encontra\+\_\+caminhodungeon@{encontra\+\_\+caminhodungeon}}
+\index{encontra\+\_\+caminhodungeon@{encontra\+\_\+caminhodungeon}!Calculo\+Tempo\+\_\+maincalculo.\+h@{Calculo\+Tempo\+\_\+maincalculo.\+h}}
+\subsubsection[{\texorpdfstring{encontra\+\_\+caminhodungeon(\+Busca\+\_\+a $\ast$busca, Vector2 ini, Vector2 fim, int $\ast$$\ast$tile, int tam, double $\ast$global\+\_\+time)}{encontra_caminhodungeon(Busca_a *busca, Vector2 ini, Vector2 fim, int **tile, int tam, double *global_time)}}]{\setlength{\rightskip}{0pt plus 5cm}void encontra\+\_\+caminhodungeon (
+\begin{DoxyParamCaption}
+\item[{{\bf Busca\+\_\+a} $\ast$}]{busca, }
+\item[{{\bf Vector2}}]{ini, }
+\item[{{\bf Vector2}}]{fim, }
+\item[{int $\ast$$\ast$}]{tile, }
+\item[{int}]{tam, }
+\item[{double $\ast$}]{global\+\_\+time}
+\end{DoxyParamCaption}
+)}\hypertarget{CalculoTempo__maincalculo_8h_ad086ba595a2f94a129bf13858ef65781}{}\label{CalculoTempo__maincalculo_8h_ad086ba595a2f94a129bf13858ef65781}
+
+\begin{DoxyCode}
+197 \{
+198     \textcolor{keywordtype}{double} time\_init = omp\_get\_wtime();
+199     \textcolor{keywordflow}{while}(!busca->\hyperlink{classBusca__a_a52388dc808f1ea2343e739a3e0025dfd}{foundMeta})\{
+200         busca->\hyperlink{classBusca__a_a44a28d3e129d1514224274c305a9ffe5}{findCaminho}(ini,fim,\hyperlink{structtile}{tile},tam);
+201     \}
+202     \textcolor{keywordtype}{double} time\_final = omp\_get\_wtime();
+203     \textcolor{keywordtype}{double} time\_exec = time\_final - time\_init;
+204 \textcolor{preprocessor}{#   pragma omp critical}
+205         *global\_time = time\_exec > *global\_time ? time\_exec : *global\_time;
+206 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CalculoTempo__maincalculo_8h_ad086ba595a2f94a129bf13858ef65781_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Calculo\+Tempo\+\_\+maincalculo.\+h@{Calculo\+Tempo\+\_\+maincalculo.\+h}!main@{main}}
+\index{main@{main}!Calculo\+Tempo\+\_\+maincalculo.\+h@{Calculo\+Tempo\+\_\+maincalculo.\+h}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{CalculoTempo__maincalculo_8h_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{CalculoTempo__maincalculo_8h_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCode}
+8 \{
+9     \textcolor{comment}{//Estruturas para calculo do tempo  }
+10     \textcolor{keywordtype}{double} global\_time = 0.0;
+11     \textcolor{keywordtype}{double} global\_time2 = 0.0;
+12     \textcolor{keywordtype}{double} global\_time3 = 0.0;
+13     \textcolor{keywordtype}{double} global\_timeaux = 0.0;
+14     \hyperlink{structtile}{Tile} **mapa\_dungeon1; \textcolor{comment}{//Matriz tile para desenhar Dungeon1}
+15     \hyperlink{structtile}{Tile} **mapa\_dungeon2; \textcolor{comment}{//Matriz tile para desenhar Dungeon2}
+16     \hyperlink{structtile}{Tile} **mapa\_dungeon3; \textcolor{comment}{//Matriz tile para desenhar Dungeon3}
+17     \hyperlink{structtile}{Tile} **mapa\_fora; \textcolor{comment}{//Matriz tile para desenhar mapa de fora}
+18 
+19     \textcolor{keywordtype}{int} controleFora = 0;
+20     \textcolor{keywordtype}{int} dun[3];
+21 
+22     \textcolor{comment}{//Gerar as matrizes de tiles para os mapas}
+23     \textcolor{comment}{//Dungeon1}
+24     \textcolor{keywordtype}{char} file[100] = \textcolor{stringliteral}{"dungeon1.txt"};
+25     mapa\_dungeon1 = \hyperlink{CalculoTempo__map__op__prott_8h_a2b024e0a4300733215f46f54d2995352}{gera\_mapa}(file,1);
+26     \textcolor{comment}{//desenha\_mapa(mapa\_dungeon1,1);}
+27     \textcolor{comment}{//Dungeon2}
+28     \textcolor{keywordtype}{char} file2[100] = \textcolor{stringliteral}{"dungeon2.txt"};
+29     mapa\_dungeon2 = \hyperlink{CalculoTempo__map__op__prott_8h_a2b024e0a4300733215f46f54d2995352}{gera\_mapa}(file2,1);
+30     \textcolor{comment}{//desenha\_mapa(mapa\_dungeon2,1);}
+31     \textcolor{comment}{//Dungeon3}
+32     \textcolor{keywordtype}{char} file3[100] = \textcolor{stringliteral}{"dungeon3.txt"};
+33     mapa\_dungeon3 = \hyperlink{CalculoTempo__map__op__prott_8h_a2b024e0a4300733215f46f54d2995352}{gera\_mapa}(file3,1);
+34     \textcolor{comment}{//desenha\_mapa(mapa\_dungeon2,1);}
+35     \textcolor{comment}{//Mapafora}
+36     \textcolor{keywordtype}{char} file4[100] = \textcolor{stringliteral}{"mapa\_fora.txt"};
+37     mapa\_fora = \hyperlink{CalculoTempo__map__op__prott_8h_a2b024e0a4300733215f46f54d2995352}{gera\_mapa}(file4,0);
+38     \textcolor{comment}{//Buscando no mapa de fora qual a primeira porta que vai ser entrada}
+39     \hyperlink{classBusca__a}{Busca\_a}* fora\_1a = \textcolor{keyword}{new} \hyperlink{classBusca__a}{Busca\_a}(); 
+40     \hyperlink{classBusca__a}{Busca\_a}* fora\_1b = \textcolor{keyword}{new} \hyperlink{classBusca__a}{Busca\_a}();
+41     \hyperlink{classBusca__a}{Busca\_a}* fora\_1c = \textcolor{keyword}{new} \hyperlink{classBusca__a}{Busca\_a}();
+42     \hyperlink{structVector2}{Vector2} posInicial(24,27);
+43     \hyperlink{structVector2}{Vector2} porta1(5,32);
+44     \hyperlink{structVector2}{Vector2} porta2(39,17);
+45     \hyperlink{structVector2}{Vector2} porta3(24,1);
+46     \textcolor{comment}{//Buscando dentro das dungeons}
+47     \hyperlink{classBusca__a}{Busca\_a}* busca\_d1 = \textcolor{keyword}{new} \hyperlink{classBusca__a}{Busca\_a}();
+48     \hyperlink{structVector2}{Vector2} iniciod1(14,26);
+49     \hyperlink{structVector2}{Vector2} fimd1(13,3);
+50     \hyperlink{classBusca__a}{Busca\_a}* busca\_d2 = \textcolor{keyword}{new} \hyperlink{classBusca__a}{Busca\_a}();
+51     \hyperlink{structVector2}{Vector2} iniciod2(13,25);
+52     \hyperlink{structVector2}{Vector2} fimd2(13,2);
+53     \hyperlink{classBusca__a}{Busca\_a}* busca\_d3 = \textcolor{keyword}{new} \hyperlink{classBusca__a}{Busca\_a}();
+54     \hyperlink{structVector2}{Vector2} iniciod3(14,25);
+55     \hyperlink{structVector2}{Vector2} fimd3(15,19);
+56 \textcolor{preprocessor}{    #pragma omp parallel num\_threads(6)}
+57     \{
+58         \textcolor{keywordflow}{if}(omp\_get\_thread\_num() == 0)\{
+59             \hyperlink{CalculoTempo__maincalculo_8cpp_ad086ba595a2f94a129bf13858ef65781}{encontra\_caminhodungeon}(fora\_1a,posInicial,porta1,
+      \hyperlink{CalculoTempo__map__op__prott_8h_ab0fd05609824f8e988617cf6539a1cc5}{getPesoTile}(mapa\_fora,0),42,&global\_time);
+60         \}
+61         \textcolor{keywordflow}{if}(omp\_get\_thread\_num() == 1)\{
+62             \hyperlink{CalculoTempo__maincalculo_8cpp_ad086ba595a2f94a129bf13858ef65781}{encontra\_caminhodungeon}(fora\_1b,posInicial,porta2,
+      \hyperlink{CalculoTempo__map__op__prott_8h_ab0fd05609824f8e988617cf6539a1cc5}{getPesoTile}(mapa\_fora,0),42,&global\_time);           
+63         \}
+64         \textcolor{keywordflow}{if}(omp\_get\_thread\_num() == 2)\{
+65             \hyperlink{CalculoTempo__maincalculo_8cpp_ad086ba595a2f94a129bf13858ef65781}{encontra\_caminhodungeon}(fora\_1c,posInicial,porta3,
+      \hyperlink{CalculoTempo__map__op__prott_8h_ab0fd05609824f8e988617cf6539a1cc5}{getPesoTile}(mapa\_fora,0),42,&global\_time);           
+66         \}
+67         \textcolor{keywordflow}{if}(omp\_get\_thread\_num() == 3)\{
+68             \hyperlink{CalculoTempo__maincalculo_8cpp_ad086ba595a2f94a129bf13858ef65781}{encontra\_caminhodungeon}(busca\_d1,iniciod1,fimd1,
+      \hyperlink{CalculoTempo__map__op__prott_8h_ab0fd05609824f8e988617cf6539a1cc5}{getPesoTile}(mapa\_dungeon1,1),28,&global\_time);
+69         \}
+70         \textcolor{keywordflow}{if}(omp\_get\_thread\_num() == 4)\{
+71             \hyperlink{CalculoTempo__maincalculo_8cpp_ad086ba595a2f94a129bf13858ef65781}{encontra\_caminhodungeon}(busca\_d2,iniciod2,fimd2,
+      \hyperlink{CalculoTempo__map__op__prott_8h_ab0fd05609824f8e988617cf6539a1cc5}{getPesoTile}(mapa\_dungeon2,1),28,&global\_time);
+72         \}
+73         \textcolor{keywordflow}{if}(omp\_get\_thread\_num() == 5)\{
+74             \hyperlink{CalculoTempo__maincalculo_8cpp_ad086ba595a2f94a129bf13858ef65781}{encontra\_caminhodungeon}(busca\_d3,iniciod3,fimd3,
+      \hyperlink{CalculoTempo__map__op__prott_8h_ab0fd05609824f8e988617cf6539a1cc5}{getPesoTile}(mapa\_dungeon3,1),28,&global\_time);
+75         \}
+76     \}
+77     \hyperlink{classBusca__a}{Busca\_a}* fora\_1real;
+78     \textcolor{keywordflow}{if}(fora\_1a->\hyperlink{classBusca__a_abfc5d1b31430b3aa91439ee44468e0e6}{peso} < fora\_1b->\hyperlink{classBusca__a_abfc5d1b31430b3aa91439ee44468e0e6}{peso} && fora\_1a->\hyperlink{classBusca__a_abfc5d1b31430b3aa91439ee44468e0e6}{peso} < fora\_1c->
+      \hyperlink{classBusca__a_abfc5d1b31430b3aa91439ee44468e0e6}{peso})\{
+79         fora\_1real = fora\_1a;
+80         dun[0] = 1;
+81         controleFora = 1; \textcolor{comment}{//se Inicial = porta1}
+82     \}
+83     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(fora\_1b->\hyperlink{classBusca__a_abfc5d1b31430b3aa91439ee44468e0e6}{peso} < fora\_1c->\hyperlink{classBusca__a_abfc5d1b31430b3aa91439ee44468e0e6}{peso})\{
+84         fora\_1real = fora\_1b;
+85         controleFora = 2; \textcolor{comment}{// se Inicial = porta2}
+86         dun[0] = 2;
+87     \}
+88     \textcolor{keywordflow}{else}\{
+89         fora\_1real = fora\_1c; 
+90         controleFora = 3; \textcolor{comment}{//se Inicial = porta3}
+91         dun[0] = 3;
+92     \}
+93     
+94     \hyperlink{classBusca__a}{Busca\_a}* fora\_2a = \textcolor{keyword}{new} \hyperlink{classBusca__a}{Busca\_a}();
+95     \hyperlink{classBusca__a}{Busca\_a}* fora\_2b = \textcolor{keyword}{new} \hyperlink{classBusca__a}{Busca\_a}();
+96     \hyperlink{structVector2}{Vector2} posInicio2(0,0);
+97     \hyperlink{structVector2}{Vector2} portaA(0,0);
+98     \hyperlink{structVector2}{Vector2} portaB(0,0);
+99 
+100     \textcolor{keywordflow}{if}(controleFora ==1)\{\textcolor{comment}{//Dungeon 1}
+101         posInicio2.setX(5);
+102         posInicio2.setY(32);
+103         portaA.setX(39);
+104         portaA.setY(17);
+105         portaB.setX(24);
+106         portaB.setY(1);
+107     \}
+108     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(controleFora == 2)\{\textcolor{comment}{//Dungeon 2}
+109         posInicio2.setX(39);
+110         posInicio2.setY(17);
+111         portaA.setX(5);
+112         portaA.setY(32);
+113         portaB.setX(24);
+114         portaB.setY(1);
+115     \}
+116     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(controleFora == 3)\{ \textcolor{comment}{//Dungeon 3}
+117         posInicio2.setX(24);
+118         posInicio2.setY(1);
+119         portaA.setX(5);
+120         portaA.setY(32);
+121         portaB.setX(39);
+122         portaB.setY(17);
+123     \}
+124 
+125 \textcolor{preprocessor}{    #pragma omp parallel num\_threads(2)}
+126     \{
+127         \textcolor{keywordflow}{if}(omp\_get\_thread\_num() == 0)\{
+128             \hyperlink{CalculoTempo__maincalculo_8cpp_ad086ba595a2f94a129bf13858ef65781}{encontra\_caminhodungeon}(fora\_2a,posInicio2,portaA,
+      \hyperlink{CalculoTempo__map__op__prott_8h_ab0fd05609824f8e988617cf6539a1cc5}{getPesoTile}(mapa\_fora,0),42,&global\_time2);
+129         \}
+130         \textcolor{keywordflow}{if}(omp\_get\_thread\_num() == 1)\{
+131             \hyperlink{CalculoTempo__maincalculo_8cpp_ad086ba595a2f94a129bf13858ef65781}{encontra\_caminhodungeon}(fora\_2b,posInicio2,portaB,
+      \hyperlink{CalculoTempo__map__op__prott_8h_ab0fd05609824f8e988617cf6539a1cc5}{getPesoTile}(mapa\_fora,0),42,&global\_time2);          
+132         \}
+133     
+134     \}
+135     \hyperlink{classBusca__a}{Busca\_a}* fora\_2real;
+136     \textcolor{keywordflow}{if}(fora\_2a->\hyperlink{classBusca__a_abfc5d1b31430b3aa91439ee44468e0e6}{peso} < fora\_2b->\hyperlink{classBusca__a_abfc5d1b31430b3aa91439ee44468e0e6}{peso})\{
+137         fora\_2real = fora\_2a;
+138         controleFora = 4;
+139         \textcolor{keywordflow}{if}(dun[0] == 1)\{
+140             dun[1] = 2;
+141             dun[2] = 3;
+142         \}
+143         \textcolor{keywordflow}{if}(dun[0] == 2)\{
+144             dun[1] = 1;
+145             dun[2] = 3;
+146         \}
+147         \textcolor{keywordflow}{if}(dun[0] == 3)\{
+148             dun[1] = 1;
+149             dun[2] = 2;
+150         \}
+151     \}
+152     \textcolor{keywordflow}{else}\{
+153         fora\_2real = fora\_2b;
+154         controleFora = 5;
+155         \textcolor{keywordflow}{if}(dun[0] == 1)\{
+156             dun[1] = 3;
+157             dun[2] = 2;
+158         \}
+159         \textcolor{keywordflow}{if}(dun[0] == 2)\{
+160             dun[1] = 3;
+161             dun[2] = 1;
+162         \}
+163         \textcolor{keywordflow}{if}(dun[0] == 3)\{
+164             dun[1] = 2;
+165             dun[2] = 1;
+166         \}
+167     \}
+168     \hyperlink{classBusca__a}{Busca\_a}* fora\_3real = \textcolor{keyword}{new} \hyperlink{classBusca__a}{Busca\_a}();
+169     \hyperlink{classBusca__a}{Busca\_a}* lost\_wood = \textcolor{keyword}{new} \hyperlink{classBusca__a}{Busca\_a}();
+170     \hyperlink{classBusca__a}{Busca\_a}* espada = \textcolor{keyword}{new} \hyperlink{classBusca__a}{Busca\_a}();
+171     \hyperlink{structVector2}{Vector2}  posLostWood(6,5);
+172     \hyperlink{structVector2}{Vector2} posEspada(2,1);
+173     \textcolor{keywordtype}{double} tempoSerial1 = omp\_get\_wtime();
+174     \textcolor{keywordflow}{if}(controleFora == 4)\{
+175         \hyperlink{CalculoTempo__maincalculo_8cpp_ad086ba595a2f94a129bf13858ef65781}{encontra\_caminhodungeon}(fora\_3real,portaA,portaB,
+      \hyperlink{CalculoTempo__map__op__prott_8h_ab0fd05609824f8e988617cf6539a1cc5}{getPesoTile}(mapa\_fora,0),42,&global\_timeaux);
+176     \}
+177     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(controleFora == 5)\{
+178         \hyperlink{CalculoTempo__maincalculo_8cpp_ad086ba595a2f94a129bf13858ef65781}{encontra\_caminhodungeon}(fora\_3real,portaB,portaA,
+      \hyperlink{CalculoTempo__map__op__prott_8h_ab0fd05609824f8e988617cf6539a1cc5}{getPesoTile}(mapa\_fora,0),42,&global\_timeaux);
+179     \}
+180     \textcolor{keywordtype}{double} tempoSerial2 = omp\_get\_wtime();
+181     \textcolor{keywordtype}{double} tempoSerial = tempoSerial2-tempoSerial1;
+182 \textcolor{preprocessor}{    #pragma omp parallel num\_threads(2)}
+183     \{   
+184         \textcolor{keywordflow}{if}(omp\_get\_thread\_num() == 0)\{          
+185             \hyperlink{CalculoTempo__maincalculo_8cpp_ad086ba595a2f94a129bf13858ef65781}{encontra\_caminhodungeon}(lost\_wood,fora\_3real->
+      \hyperlink{classBusca__a_a6f9dc9136b0e34329b19ac6cce7956e8}{getVnoMeta}(),posLostWood,\hyperlink{CalculoTempo__map__op__prott_8h_ab0fd05609824f8e988617cf6539a1cc5}{getPesoTile}(mapa\_fora,0),42,&global\_time3);
+186         \}
+187         \textcolor{keywordflow}{if}(omp\_get\_thread\_num() == 1)\{  
+188             \hyperlink{CalculoTempo__maincalculo_8cpp_ad086ba595a2f94a129bf13858ef65781}{encontra\_caminhodungeon}(espada,posLostWood,posEspada,
+      \hyperlink{CalculoTempo__map__op__prott_8h_ab0fd05609824f8e988617cf6539a1cc5}{getPesoTile}(mapa\_fora,0),42,&global\_time3);
+189         \}
+190     \}   
+191     printf(\textcolor{stringliteral}{"Tempo gasto: %lf/s\(\backslash\)n"}, global\_time+global\_time2+global\_time3+tempoSerial); \textcolor{comment}{//Soma de todas as
+       buscas feitas em todas as threads}
+192     exit(0);
+193 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CalculoTempo__maincalculo_8h_a3c04138a5bfe5d72780bb7e82a18e627_cgraph}
+\end{center}
+\end{figure}
+
+

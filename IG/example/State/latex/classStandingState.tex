@@ -1,0 +1,107 @@
+\hypertarget{classStandingState}{}\section{Standing\+State Class Reference}
+\label{classStandingState}\index{Standing\+State@{Standing\+State}}
+
+
+Inheritance diagram for Standing\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{classStandingState__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Standing\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{classStandingState__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classStandingState_a63e99bb4fb71ef88ba573ad902337e7c}{handle\+Input} (\hyperlink{classFighter}{Fighter} \&, \hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090}{Input}) override
+\item 
+virtual void \hyperlink{classStandingState_a3a99901a53764049b39df5b8f016fb66}{update} (\hyperlink{classFighter}{Fighter} \&) override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{Standing\+State@{Standing\+State}!handle\+Input@{handle\+Input}}
+\index{handle\+Input@{handle\+Input}!Standing\+State@{Standing\+State}}
+\subsubsection[{\texorpdfstring{handle\+Input(\+Fighter \&, Input) override}{handleInput(Fighter &, Input) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Standing\+State\+::handle\+Input (
+\begin{DoxyParamCaption}
+\item[{{\bf Fighter} \&}]{fighter, }
+\item[{{\bf Input}}]{input}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classStandingState_a63e99bb4fb71ef88ba573ad902337e7c}{}\label{classStandingState_a63e99bb4fb71ef88ba573ad902337e7c}
+
+
+Implements \hyperlink{classFighterState_a84fcd7da4d232e79e1be9b32c0767861}{Fighter\+State}.
+
+
+\begin{DoxyCode}
+76                                                                \{
+77     \textcolor{keywordflow}{switch} (input) \{
+78         \textcolor{keywordflow}{case} \hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090a4e0f05b608ae82cd3d38087399f6962a}{STAND\_UP}:  std::cout << fighter.\hyperlink{classFighter_aea4a9cf98a672b2305d1147885b91c34}{getName}() << \textcolor{stringliteral}{" remains standing."} << std::endl;
+        \textcolor{keywordflow}{return};
+79         \textcolor{keywordflow}{case} \hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090af82233b8404f602e50c8fb3fff20db8d}{DUCK\_DOWN}:  fighter.\hyperlink{classFighter_add08055f60abd6e9235291b653f65be5}{changeState} (std::shared\_ptr<DuckingState> (\textcolor{keyword}{new} 
+      \hyperlink{classDuckingState}{DuckingState}));  \textcolor{keywordflow}{return} fighter.\hyperlink{classFighter_afff11a1b3dacee662cb3fbe35f54df17}{ducksDown}();
+80         \textcolor{keywordflow}{case} \hyperlink{State_8cpp_a080a822f0093973313bd644e517a5090a1f28d4392b1c1e7da2af2283632d81e1}{JUMP}:  fighter.\hyperlink{classFighter_a32a4250077afba9b3629a8f553dd8776}{jumps}();  \textcolor{keywordflow}{return} fighter.\hyperlink{classFighter_add08055f60abd6e9235291b653f65be5}{changeState} (
+      std::shared\_ptr<JumpingState> (\textcolor{keyword}{new} \hyperlink{classJumpingState}{JumpingState}));
+81         \textcolor{keywordflow}{default}:  std::cout << \textcolor{stringliteral}{"One cannot do that while standing.  "} << fighter.
+      \hyperlink{classFighter_aea4a9cf98a672b2305d1147885b91c34}{getName}() << \textcolor{stringliteral}{" remains standing by default."} << std::endl;
+82     \}
+83 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStandingState_a63e99bb4fb71ef88ba573ad902337e7c_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Standing\+State@{Standing\+State}!update@{update}}
+\index{update@{update}!Standing\+State@{Standing\+State}}
+\subsubsection[{\texorpdfstring{update(\+Fighter \&) override}{update(Fighter &) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Standing\+State\+::update (
+\begin{DoxyParamCaption}
+\item[{{\bf Fighter} \&}]{fighter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classStandingState_a3a99901a53764049b39df5b8f016fb66}{}\label{classStandingState_a3a99901a53764049b39df5b8f016fb66}
+
+
+Implements \hyperlink{classFighterState_af022f76c6b1fe080047ded2280ec6f8f}{Fighter\+State}.
+
+
+\begin{DoxyCode}
+85                                             \{
+86     \textcolor{keywordflow}{if} (fighter.\hyperlink{classFighter_a1bc4025d988b66dfceaf0005e74f34ff}{getFatigueLevel}() > 0)
+87         fighter.\hyperlink{classFighter_aa9c08ec29097e326eab0ffd69db18b9c}{changeFatigueLevelBy}(-1);
+88 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStandingState_a3a99901a53764049b39df5b8f016fb66_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{State_8cpp}{State.\+cpp}\end{DoxyCompactItemize}

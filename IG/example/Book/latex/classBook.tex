@@ -1,0 +1,243 @@
+\hypertarget{classBook}{}\section{Book Class Reference}
+\label{classBook}\index{Book@{Book}}
+
+
+{\ttfamily \#include $<$Book.\+h$>$}
+
+
+
+Collaboration diagram for Book\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{classBook__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBook_aeaaa3bc96a448032baf5aef373a81d4c}{Book} (const string \&\hyperlink{classBook_a9afedb80b692466dc2d91f109970a32c}{name}, const \hyperlink{classAuthor}{Author} \&\hyperlink{classBook_a1c84f2a0d3db51a0c65f061c91096053}{author}, double \hyperlink{classBook_afa8e149d0bfb4372166d0ccfe8aa30b7}{price}, int \hyperlink{classBook_ae828efa39fa83ff5a8dc3c66e78454e2}{qty\+In\+Stock}=0)
+\item 
+string \hyperlink{classBook_a1805804b65b05f85adaf94955989e5d0}{get\+Name} () const 
+\item 
+\hyperlink{classAuthor}{Author} \hyperlink{classBook_a81bfb916599a88e566ebb23162a8c557}{get\+Author} () const 
+\item 
+double \hyperlink{classBook_a3a3c43b4ab227b3eecba9e414d36c236}{get\+Price} () const 
+\item 
+void \hyperlink{classBook_a087155b5ee84047d6775b564b92b1778}{set\+Price} (double \hyperlink{classBook_afa8e149d0bfb4372166d0ccfe8aa30b7}{price})
+\item 
+int \hyperlink{classBook_a123d03e3061f580fefba69b16004954c}{get\+Qty\+In\+Stock} () const 
+\item 
+void \hyperlink{classBook_ae719f6e8595788d4a6d4126ad073a465}{set\+Qty\+In\+Stock} (int \hyperlink{classBook_ae828efa39fa83ff5a8dc3c66e78454e2}{qty\+In\+Stock})
+\item 
+void \hyperlink{classBook_a1560f1015348a6d404d1ac069bead1a2}{print} () const 
+\item 
+string \hyperlink{classBook_ae152ba70b32871377378adf8e87a91ea}{get\+Author\+Name} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classBook_a9afedb80b692466dc2d91f109970a32c}{name}
+\item 
+\hyperlink{classAuthor}{Author} \hyperlink{classBook_a1c84f2a0d3db51a0c65f061c91096053}{author}
+\item 
+double \hyperlink{classBook_afa8e149d0bfb4372166d0ccfe8aa30b7}{price}
+\item 
+int \hyperlink{classBook_ae828efa39fa83ff5a8dc3c66e78454e2}{qty\+In\+Stock}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Book@{Book}!Book@{Book}}
+\index{Book@{Book}!Book@{Book}}
+\subsubsection[{\texorpdfstring{Book(const string \&name, const Author \&author, double price, int qty\+In\+Stock=0)}{Book(const string &name, const Author &author, double price, int qtyInStock=0)}}]{\setlength{\rightskip}{0pt plus 5cm}Book\+::\+Book (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{name, }
+\item[{const {\bf Author} \&}]{author, }
+\item[{double}]{price, }
+\item[{int}]{qty\+In\+Stock = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classBook_aeaaa3bc96a448032baf5aef373a81d4c}{}\label{classBook_aeaaa3bc96a448032baf5aef373a81d4c}
+
+\begin{DoxyCode}
+9       : \hyperlink{classBook_a9afedb80b692466dc2d91f109970a32c}{name}(\hyperlink{classBook_a9afedb80b692466dc2d91f109970a32c}{name}), \hyperlink{classBook_a1c84f2a0d3db51a0c65f061c91096053}{author}(author) \{ \textcolor{comment}{// Init object reference in member initializer list}
+10    \textcolor{comment}{// Call setters to validate price and qtyInStock}
+11    \hyperlink{classBook_a087155b5ee84047d6775b564b92b1778}{setPrice}(\hyperlink{classBook_afa8e149d0bfb4372166d0ccfe8aa30b7}{price});
+12    \hyperlink{classBook_ae719f6e8595788d4a6d4126ad073a465}{setQtyInStock}(\hyperlink{classBook_ae828efa39fa83ff5a8dc3c66e78454e2}{qtyInStock});
+13 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{classBook_aeaaa3bc96a448032baf5aef373a81d4c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Book@{Book}!get\+Author@{get\+Author}}
+\index{get\+Author@{get\+Author}!Book@{Book}}
+\subsubsection[{\texorpdfstring{get\+Author() const }{getAuthor() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Author} Book\+::get\+Author (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classBook_a81bfb916599a88e566ebb23162a8c557}{}\label{classBook_a81bfb916599a88e566ebb23162a8c557}
+
+\begin{DoxyCode}
+19                        \{
+20    \textcolor{keywordflow}{return} \hyperlink{classBook_a1c84f2a0d3db51a0c65f061c91096053}{author};
+21 \}
+\end{DoxyCode}
+\index{Book@{Book}!get\+Author\+Name@{get\+Author\+Name}}
+\index{get\+Author\+Name@{get\+Author\+Name}!Book@{Book}}
+\subsubsection[{\texorpdfstring{get\+Author\+Name() const }{getAuthorName() const }}]{\setlength{\rightskip}{0pt plus 5cm}string Book\+::get\+Author\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classBook_ae152ba70b32871377378adf8e87a91ea}{}\label{classBook_ae152ba70b32871377378adf8e87a91ea}
+
+\begin{DoxyCode}
+58                                  \{
+59    \textcolor{keywordflow}{return} \hyperlink{classBook_a1c84f2a0d3db51a0c65f061c91096053}{author}.\hyperlink{classAuthor_a2d27943db18f822be1a301bca65fb6ef}{getName}();   \textcolor{comment}{// invoke the getName() on instance author}
+60 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{classBook_ae152ba70b32871377378adf8e87a91ea_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Book@{Book}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Book@{Book}}
+\subsubsection[{\texorpdfstring{get\+Name() const }{getName() const }}]{\setlength{\rightskip}{0pt plus 5cm}string Book\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classBook_a1805804b65b05f85adaf94955989e5d0}{}\label{classBook_a1805804b65b05f85adaf94955989e5d0}
+
+\begin{DoxyCode}
+15                            \{
+16    \textcolor{keywordflow}{return} \hyperlink{classBook_a9afedb80b692466dc2d91f109970a32c}{name};
+17 \}
+\end{DoxyCode}
+\index{Book@{Book}!get\+Price@{get\+Price}}
+\index{get\+Price@{get\+Price}!Book@{Book}}
+\subsubsection[{\texorpdfstring{get\+Price() const }{getPrice() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Book\+::get\+Price (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classBook_a3a3c43b4ab227b3eecba9e414d36c236}{}\label{classBook_a3a3c43b4ab227b3eecba9e414d36c236}
+
+\begin{DoxyCode}
+23                             \{
+24    \textcolor{keywordflow}{return} \hyperlink{classBook_afa8e149d0bfb4372166d0ccfe8aa30b7}{price};
+25 \}
+\end{DoxyCode}
+\index{Book@{Book}!get\+Qty\+In\+Stock@{get\+Qty\+In\+Stock}}
+\index{get\+Qty\+In\+Stock@{get\+Qty\+In\+Stock}!Book@{Book}}
+\subsubsection[{\texorpdfstring{get\+Qty\+In\+Stock() const }{getQtyInStock() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Book\+::get\+Qty\+In\+Stock (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classBook_a123d03e3061f580fefba69b16004954c}{}\label{classBook_a123d03e3061f580fefba69b16004954c}
+
+\begin{DoxyCode}
+37                               \{
+38    \textcolor{keywordflow}{return} \hyperlink{classBook_ae828efa39fa83ff5a8dc3c66e78454e2}{qtyInStock};
+39 \}
+\end{DoxyCode}
+\index{Book@{Book}!print@{print}}
+\index{print@{print}!Book@{Book}}
+\subsubsection[{\texorpdfstring{print() const }{print() const }}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classBook_a1560f1015348a6d404d1ac069bead1a2}{}\label{classBook_a1560f1015348a6d404d1ac069bead1a2}
+
+\begin{DoxyCode}
+52                        \{
+53    cout << \textcolor{stringliteral}{"'"} << \hyperlink{classBook_a9afedb80b692466dc2d91f109970a32c}{name} << \textcolor{stringliteral}{"' by "};
+54    \hyperlink{classBook_a1c84f2a0d3db51a0c65f061c91096053}{author}.\hyperlink{classAuthor_a5d5d6296cd6cf5c5017fc2f27a8f6925}{print}();
+55 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classBook_a1560f1015348a6d404d1ac069bead1a2_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Book@{Book}!set\+Price@{set\+Price}}
+\index{set\+Price@{set\+Price}!Book@{Book}}
+\subsubsection[{\texorpdfstring{set\+Price(double price)}{setPrice(double price)}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::set\+Price (
+\begin{DoxyParamCaption}
+\item[{double}]{price}
+\end{DoxyParamCaption}
+)}\hypertarget{classBook_a087155b5ee84047d6775b564b92b1778}{}\label{classBook_a087155b5ee84047d6775b564b92b1778}
+
+\begin{DoxyCode}
+28                                 \{
+29    \textcolor{keywordflow}{if} (\hyperlink{classBook_afa8e149d0bfb4372166d0ccfe8aa30b7}{price} > 0) \{
+30       this->\hyperlink{classBook_afa8e149d0bfb4372166d0ccfe8aa30b7}{price} = \hyperlink{classBook_afa8e149d0bfb4372166d0ccfe8aa30b7}{price};
+31    \} \textcolor{keywordflow}{else} \{
+32       cout << \textcolor{stringliteral}{"price should be positive! Set to 0"} << endl;
+33       this->\hyperlink{classBook_afa8e149d0bfb4372166d0ccfe8aa30b7}{price} = 0;
+34    \}
+35 \}
+\end{DoxyCode}
+\index{Book@{Book}!set\+Qty\+In\+Stock@{set\+Qty\+In\+Stock}}
+\index{set\+Qty\+In\+Stock@{set\+Qty\+In\+Stock}!Book@{Book}}
+\subsubsection[{\texorpdfstring{set\+Qty\+In\+Stock(int qty\+In\+Stock)}{setQtyInStock(int qtyInStock)}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::set\+Qty\+In\+Stock (
+\begin{DoxyParamCaption}
+\item[{int}]{qty\+In\+Stock}
+\end{DoxyParamCaption}
+)}\hypertarget{classBook_ae719f6e8595788d4a6d4126ad073a465}{}\label{classBook_ae719f6e8595788d4a6d4126ad073a465}
+
+\begin{DoxyCode}
+42                                        \{
+43    \textcolor{keywordflow}{if} (\hyperlink{classBook_ae828efa39fa83ff5a8dc3c66e78454e2}{qtyInStock} >= 0) \{
+44       this->\hyperlink{classBook_ae828efa39fa83ff5a8dc3c66e78454e2}{qtyInStock} = \hyperlink{classBook_ae828efa39fa83ff5a8dc3c66e78454e2}{qtyInStock};
+45    \} \textcolor{keywordflow}{else} \{
+46       cout << \textcolor{stringliteral}{"qtyInStock cannnot be negative! Set to 0"} << endl;
+47       this->\hyperlink{classBook_ae828efa39fa83ff5a8dc3c66e78454e2}{qtyInStock} = 0;
+48    \}
+49 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Book@{Book}!author@{author}}
+\index{author@{author}!Book@{Book}}
+\subsubsection[{\texorpdfstring{author}{author}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Author} Book\+::author\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classBook_a1c84f2a0d3db51a0c65f061c91096053}{}\label{classBook_a1c84f2a0d3db51a0c65f061c91096053}
+\index{Book@{Book}!name@{name}}
+\index{name@{name}!Book@{Book}}
+\subsubsection[{\texorpdfstring{name}{name}}]{\setlength{\rightskip}{0pt plus 5cm}string Book\+::name\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classBook_a9afedb80b692466dc2d91f109970a32c}{}\label{classBook_a9afedb80b692466dc2d91f109970a32c}
+\index{Book@{Book}!price@{price}}
+\index{price@{price}!Book@{Book}}
+\subsubsection[{\texorpdfstring{price}{price}}]{\setlength{\rightskip}{0pt plus 5cm}double Book\+::price\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classBook_afa8e149d0bfb4372166d0ccfe8aa30b7}{}\label{classBook_afa8e149d0bfb4372166d0ccfe8aa30b7}
+\index{Book@{Book}!qty\+In\+Stock@{qty\+In\+Stock}}
+\index{qty\+In\+Stock@{qty\+In\+Stock}!Book@{Book}}
+\subsubsection[{\texorpdfstring{qty\+In\+Stock}{qtyInStock}}]{\setlength{\rightskip}{0pt plus 5cm}int Book\+::qty\+In\+Stock\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classBook_ae828efa39fa83ff5a8dc3c66e78454e2}{}\label{classBook_ae828efa39fa83ff5a8dc3c66e78454e2}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Book_8h}{Book.\+h}\item 
+\hyperlink{Book_8cpp}{Book.\+cpp}\end{DoxyCompactItemize}

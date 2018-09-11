@@ -1,0 +1,599 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.38.0 (20140413.2041)
+%%Title: /home/labaccount/11-2-17/mlsa/IG/example/HugeInteger Call Graph
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 150 150 2400 513
+%%PageOrientation: Portrait
+<< /PageSize [2400 513] >> setpagedevice
+0 0 1 beginpage
+gsave
+150 150 2250 363 boxprim clip newpath
+0.815956 0.815956 set_scale 0 rotate 187.834 187.834 translate
+[ /CropBox [150 150 2400 513] /PAGES pdfmark
+0 0 0 graphcolor
+14 /Times-Roman set_font
+1186.25 7.8 moveto 377 (/home/labaccount/11-2-17/mlsa/IG/example/HugeInteger Call Graph) alignedtext
+% Node0x580142337
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+258.68 301.87 258.85 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+67.68 298.17 moveto 382 (/home/labaccount/11-2-17/mlsa/IG/example/HugeInteger/HImain.cpp) alignedtext
+grestore
+% Node0x513841009
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+906.91 409.87 335.75 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+677.41 413.67 moveto 459 (0x3317dc0. \(/home/labaccount/11-2-17/mlsa/IG/example/HugeInteger/HImain.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+842.41 398.67 moveto 129 (initialize\(hi1, hi2, sign\)) alignedtext
+grestore
+% Node0x580142337->Node0x513841009
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 320.47 319.39 moveto
+379.5 335.78 471.88 359.79 553.35 373.87 curveto
+588.27 379.9 625.31 385.04 661.76 389.39 curveto
+stroke
+0 0 0 edgecolor
+newpath 661.69 392.9 moveto
+672.03 390.59 lineto
+662.5 385.95 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 661.69 392.9 moveto
+672.03 390.59 lineto
+662.5 385.95 lineto
+closepath stroke
+grestore
+% Node0x431012685
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+906.91 337.87 353.61 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+664.91 341.67 moveto 484 (0x3317e60. \(/home/labaccount/11-2-17/mlsa/IG/example/HugeInteger/HugeInteger.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+849.41 326.67 moveto 115 (HugeInteger::isBad\(\)) alignedtext
+grestore
+% Node0x580142337->Node0x431012685
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 461.05 313.09 moveto
+508.62 315.74 560.33 318.62 611.09 321.45 curveto
+stroke
+0 0 0 edgecolor
+newpath 611.05 324.95 moveto
+621.23 322.01 lineto
+611.44 317.96 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 611.05 324.95 moveto
+621.23 322.01 lineto
+611.44 317.96 lineto
+closepath stroke
+grestore
+% Node0x947561118
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+906.91 265.87 352.69 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+665.41 269.67 moveto 483 (0x3317f30. \(/home/labaccount/11-2-17/mlsa/IG/example/HugeInteger/HugeInteger.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+849.41 254.67 moveto 115 (HugeInteger::isBad\(\)) alignedtext
+grestore
+% Node0x580142337->Node0x947561118
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 461.05 290.65 moveto
+508.71 288 560.51 285.11 611.37 282.28 curveto
+stroke
+0 0 0 edgecolor
+newpath 611.73 285.76 moveto
+621.52 281.71 lineto
+611.34 278.77 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 611.73 285.76 moveto
+621.52 281.71 lineto
+611.34 278.77 lineto
+closepath stroke
+grestore
+% Node0x511222697
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+906.91 157.87 336.67 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+676.91 161.67 moveto 460 (0x3318160. \(/home/labaccount/11-2-17/mlsa/IG/example/HugeInteger/HImain.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+835.91 146.67 moveto 142 (equate\(hi1, hi2, hi3, sign\)) alignedtext
+grestore
+% Node0x580142337->Node0x511222697
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 327.45 284.46 moveto
+386.86 269.39 475.63 247.33 553.35 229.87 curveto
+623.94 214.02 702.81 197.77 768.02 184.74 curveto
+stroke
+0 0 0 edgecolor
+newpath 768.83 188.14 moveto
+777.95 182.75 lineto
+767.46 181.28 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 768.83 188.14 moveto
+777.95 182.75 lineto
+767.46 181.28 lineto
+closepath stroke
+grestore
+% Node0x128422757
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1650.72 337.87 354.02 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1408.22 341.67 moveto 485 (0x3984608. \(/home/labaccount/11-2-17/mlsa/IG/example/HugeInteger/HugeInteger.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1621.72 326.67 moveto 58 (OBJ.size\(\)) alignedtext
+grestore
+% Node0x431012685->Node0x128422757
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1260.62 337.87 moveto
+1269.15 337.87 1277.69 337.87 1286.22 337.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1286.24 341.37 moveto
+1296.24 337.87 lineto
+1286.24 334.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1286.24 341.37 moveto
+1296.24 337.87 lineto
+1286.24 334.37 lineto
+closepath stroke
+grestore
+% Node0x198556412
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1650.72 265.87 354.02 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1408.22 269.67 moveto 485 (0x3984608. \(/home/labaccount/11-2-17/mlsa/IG/example/HugeInteger/HugeInteger.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1621.72 254.67 moveto 58 (OBJ.size\(\)) alignedtext
+grestore
+% Node0x947561118->Node0x198556412
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1259.81 265.87 moveto
+1268.55 265.87 1277.3 265.87 1286.05 265.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1286.32 269.37 moveto
+1296.32 265.87 lineto
+1286.32 262.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1286.32 269.37 moveto
+1296.32 265.87 lineto
+1286.32 262.37 lineto
+closepath stroke
+grestore
+% Node0x839968599
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1650.72 193.87 353.61 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1408.72 197.67 moveto 484 (0x3a01350. \(/home/labaccount/11-2-17/mlsa/IG/example/HugeInteger/HugeInteger.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1593.22 182.67 moveto 115 (HugeInteger::isBad\(\)) alignedtext
+grestore
+% Node0x511222697->Node0x839968599
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1194.98 171.8 moveto
+1243.22 174.14 1293.45 176.58 1342.18 178.95 curveto
+stroke
+0 0 0 edgecolor
+newpath 1342.07 182.44 moveto
+1352.23 179.43 lineto
+1342.41 175.45 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1342.07 182.44 moveto
+1352.23 179.43 lineto
+1342.41 175.45 lineto
+closepath stroke
+grestore
+% Node0x908851510
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1650.72 121.87 353.61 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1408.72 125.67 moveto 484 (0x3a06038. \(/home/labaccount/11-2-17/mlsa/IG/example/HugeInteger/HugeInteger.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1593.22 110.67 moveto 115 (HugeInteger::isBad\(\)) alignedtext
+grestore
+% Node0x511222697->Node0x908851510
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1194.98 143.94 moveto
+1243.22 141.6 1293.45 139.16 1342.18 136.79 curveto
+stroke
+0 0 0 edgecolor
+newpath 1342.41 140.29 moveto
+1352.23 136.31 lineto
+1342.07 133.3 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1342.41 140.29 moveto
+1352.23 136.31 lineto
+1342.07 133.3 lineto
+closepath stroke
+grestore
+% Node0x563656524
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1650.72 49.87 352.28 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1409.72 53.67 moveto 482 (0x3a0ace8. \(/home/labaccount/11-2-17/mlsa/IG/example/HugeInteger/HugeInteger.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1593.22 38.67 moveto 115 (HugeInteger::isBad\(\)) alignedtext
+grestore
+% Node0x511222697->Node0x563656524
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1029.12 132.77 moveto
+1105.55 117.6 1206.48 98.77 1296.46 85.87 curveto
+1333.57 80.55 1372.99 75.73 1411.52 71.46 curveto
+stroke
+0 0 0 edgecolor
+newpath 1412.27 74.9 moveto
+1421.82 70.33 lineto
+1411.5 67.94 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1412.27 74.9 moveto
+1421.82 70.33 lineto
+1411.5 67.94 lineto
+closepath stroke
+grestore
+% Node0x898664297
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2395.24 193.87 354.02 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2152.74 197.67 moveto 485 (0x3984608. \(/home/labaccount/11-2-17/mlsa/IG/example/HugeInteger/HugeInteger.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2366.24 182.67 moveto 58 (OBJ.size\(\)) alignedtext
+grestore
+% Node0x839968599->Node0x898664297
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2004.5 193.87 moveto
+2013.17 193.87 2021.86 193.87 2030.54 193.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 2030.73 197.37 moveto
+2040.73 193.87 lineto
+2030.73 190.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2030.73 197.37 moveto
+2040.73 193.87 lineto
+2030.73 190.37 lineto
+closepath stroke
+grestore
+% Node0x482500415
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2395.24 121.87 354.02 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2152.74 125.67 moveto 485 (0x3984608. \(/home/labaccount/11-2-17/mlsa/IG/example/HugeInteger/HugeInteger.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2366.24 110.67 moveto 58 (OBJ.size\(\)) alignedtext
+grestore
+% Node0x908851510->Node0x482500415
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2004.5 121.87 moveto
+2013.17 121.87 2021.86 121.87 2030.54 121.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 2030.73 125.37 moveto
+2040.73 121.87 lineto
+2030.73 118.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2030.73 125.37 moveto
+2040.73 121.87 lineto
+2030.73 118.37 lineto
+closepath stroke
+grestore
+% Node0x808406789
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2395.24 49.87 354.02 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2152.74 53.67 moveto 485 (0x3984608. \(/home/labaccount/11-2-17/mlsa/IG/example/HugeInteger/HugeInteger.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2366.24 38.67 moveto 58 (OBJ.size\(\)) alignedtext
+grestore
+% Node0x563656524->Node0x808406789
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2002.87 49.87 moveto
+2012.17 49.87 2021.48 49.87 2030.79 49.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 2030.89 53.37 moveto
+2040.89 49.87 lineto
+2030.89 46.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2030.89 53.37 moveto
+2040.89 49.87 lineto
+2030.89 46.37 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 150 150 2400 513
+end
+restore
+%%EOF

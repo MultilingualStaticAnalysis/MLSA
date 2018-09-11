@@ -1,0 +1,118 @@
+\hypertarget{classPizzaBuilder}{}\section{Pizza\+Builder Class Reference}
+\label{classPizzaBuilder}\index{Pizza\+Builder@{Pizza\+Builder}}
+
+
+Inheritance diagram for Pizza\+Builder\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classPizzaBuilder__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classPizzaBuilder_a424dc27395e06a4c38beca703c91c258}{$\sim$\+Pizza\+Builder} ()
+\item 
+\hyperlink{classPizza}{Pizza} $\ast$ \hyperlink{classPizzaBuilder_a95ce87757351da71ab03f400802a0d1a}{get\+Pizza} ()
+\item 
+void \hyperlink{classPizzaBuilder_ad321d7aede0131b349c6853768ea1735}{create\+New\+Pizza\+Product} ()
+\item 
+virtual void \hyperlink{classPizzaBuilder_ab779fb4306ae03b3d82690f5939aaf22}{build\+Dough} ()=0
+\item 
+virtual void \hyperlink{classPizzaBuilder_a87b3cc72715e7775c8b36e610e8bb389}{build\+Sauce} ()=0
+\item 
+virtual void \hyperlink{classPizzaBuilder_a46ff797a62789eca327a9ffab95b1b23}{build\+Topping} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unique\+\_\+ptr$<$ \hyperlink{classPizza}{Pizza} $>$ \hyperlink{classPizzaBuilder_a76a40bb3d715332acfaeea121e03d9b1}{m\+\_\+pizza}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Pizza\+Builder@{Pizza\+Builder}!````~Pizza\+Builder@{$\sim$\+Pizza\+Builder}}
+\index{````~Pizza\+Builder@{$\sim$\+Pizza\+Builder}!Pizza\+Builder@{Pizza\+Builder}}
+\subsubsection[{\texorpdfstring{$\sim$\+Pizza\+Builder()}{~PizzaBuilder()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Pizza\+Builder\+::$\sim$\+Pizza\+Builder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classPizzaBuilder_a424dc27395e06a4c38beca703c91c258}{}\label{classPizzaBuilder_a424dc27395e06a4c38beca703c91c258}
+
+\begin{DoxyCode}
+37 \{\};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Pizza\+Builder@{Pizza\+Builder}!build\+Dough@{build\+Dough}}
+\index{build\+Dough@{build\+Dough}!Pizza\+Builder@{Pizza\+Builder}}
+\subsubsection[{\texorpdfstring{build\+Dough()=0}{buildDough()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Pizza\+Builder\+::build\+Dough (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classPizzaBuilder_ab779fb4306ae03b3d82690f5939aaf22}{}\label{classPizzaBuilder_ab779fb4306ae03b3d82690f5939aaf22}
+
+
+Implemented in \hyperlink{classSpicyPizzaBuilder_a31a9b83aff106bf255cdd7b07428cc8f}{Spicy\+Pizza\+Builder}, and \hyperlink{classHawaiianPizzaBuilder_a0eddc6f115d76c24a9adfb86dc31a7cc}{Hawaiian\+Pizza\+Builder}.
+
+\index{Pizza\+Builder@{Pizza\+Builder}!build\+Sauce@{build\+Sauce}}
+\index{build\+Sauce@{build\+Sauce}!Pizza\+Builder@{Pizza\+Builder}}
+\subsubsection[{\texorpdfstring{build\+Sauce()=0}{buildSauce()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Pizza\+Builder\+::build\+Sauce (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classPizzaBuilder_a87b3cc72715e7775c8b36e610e8bb389}{}\label{classPizzaBuilder_a87b3cc72715e7775c8b36e610e8bb389}
+
+
+Implemented in \hyperlink{classSpicyPizzaBuilder_a74a4d62a67d118b8bbe94721847f38b4}{Spicy\+Pizza\+Builder}, and \hyperlink{classHawaiianPizzaBuilder_abcfc366ad0ffcec8e93e19807b8eef18}{Hawaiian\+Pizza\+Builder}.
+
+\index{Pizza\+Builder@{Pizza\+Builder}!build\+Topping@{build\+Topping}}
+\index{build\+Topping@{build\+Topping}!Pizza\+Builder@{Pizza\+Builder}}
+\subsubsection[{\texorpdfstring{build\+Topping()=0}{buildTopping()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Pizza\+Builder\+::build\+Topping (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classPizzaBuilder_a46ff797a62789eca327a9ffab95b1b23}{}\label{classPizzaBuilder_a46ff797a62789eca327a9ffab95b1b23}
+
+
+Implemented in \hyperlink{classSpicyPizzaBuilder_a18fccc77e058f373deb851d61074df5b}{Spicy\+Pizza\+Builder}, and \hyperlink{classHawaiianPizzaBuilder_af069af5d54a18d099a6ea6a4382fb42b}{Hawaiian\+Pizza\+Builder}.
+
+\index{Pizza\+Builder@{Pizza\+Builder}!create\+New\+Pizza\+Product@{create\+New\+Pizza\+Product}}
+\index{create\+New\+Pizza\+Product@{create\+New\+Pizza\+Product}!Pizza\+Builder@{Pizza\+Builder}}
+\subsubsection[{\texorpdfstring{create\+New\+Pizza\+Product()}{createNewPizzaProduct()}}]{\setlength{\rightskip}{0pt plus 5cm}void Pizza\+Builder\+::create\+New\+Pizza\+Product (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPizzaBuilder_ad321d7aede0131b349c6853768ea1735}{}\label{classPizzaBuilder_ad321d7aede0131b349c6853768ea1735}
+
+\begin{DoxyCode}
+44     \{
+45         \hyperlink{classPizzaBuilder_a76a40bb3d715332acfaeea121e03d9b1}{m\_pizza} = make\_unique<Pizza>();
+46     \}
+\end{DoxyCode}
+\index{Pizza\+Builder@{Pizza\+Builder}!get\+Pizza@{get\+Pizza}}
+\index{get\+Pizza@{get\+Pizza}!Pizza\+Builder@{Pizza\+Builder}}
+\subsubsection[{\texorpdfstring{get\+Pizza()}{getPizza()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pizza}$\ast$ Pizza\+Builder\+::get\+Pizza (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPizzaBuilder_a95ce87757351da71ab03f400802a0d1a}{}\label{classPizzaBuilder_a95ce87757351da71ab03f400802a0d1a}
+
+\begin{DoxyCode}
+40     \{
+41         \textcolor{keywordflow}{return} \hyperlink{classPizzaBuilder_a76a40bb3d715332acfaeea121e03d9b1}{m\_pizza}.release();
+42     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Pizza\+Builder@{Pizza\+Builder}!m\+\_\+pizza@{m\+\_\+pizza}}
+\index{m\+\_\+pizza@{m\+\_\+pizza}!Pizza\+Builder@{Pizza\+Builder}}
+\subsubsection[{\texorpdfstring{m\+\_\+pizza}{m_pizza}}]{\setlength{\rightskip}{0pt plus 5cm}unique\+\_\+ptr$<${\bf Pizza}$>$ Pizza\+Builder\+::m\+\_\+pizza\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classPizzaBuilder_a76a40bb3d715332acfaeea121e03d9b1}{}\label{classPizzaBuilder_a76a40bb3d715332acfaeea121e03d9b1}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Builder_8cpp}{Builder.\+cpp}\end{DoxyCompactItemize}

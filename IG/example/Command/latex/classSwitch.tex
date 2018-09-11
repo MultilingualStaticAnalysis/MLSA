@@ -1,0 +1,89 @@
+\hypertarget{classSwitch}{}\section{Switch Class Reference}
+\label{classSwitch}\index{Switch@{Switch}}
+
+
+Collaboration diagram for Switch\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classSwitch__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSwitch_a66ba6728853f391a84ac8f9c51e25141}{Switch} (\hyperlink{classCommand}{Command} \&flip\+Up\+Cmd, \hyperlink{classCommand}{Command} \&flip\+Down\+Cmd)
+\item 
+void \hyperlink{classSwitch_a897907b3d656b36a8bad9a830b294504}{flip\+Up} ()
+\item 
+void \hyperlink{classSwitch_aa280f6f53ea293f8142f8fa2cd45c3ed}{flip\+Down} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCommand}{Command} \& \hyperlink{classSwitch_aa6e2a2d4568aa542ab2e28e5a4da1d3c}{flip\+Up\+Command}
+\item 
+\hyperlink{classCommand}{Command} \& \hyperlink{classSwitch_af069b11fc4dab647c39da8d09edcf6c5}{flip\+Down\+Command}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Switch@{Switch}!Switch@{Switch}}
+\index{Switch@{Switch}!Switch@{Switch}}
+\subsubsection[{\texorpdfstring{Switch(\+Command \&flip\+Up\+Cmd, Command \&flip\+Down\+Cmd)}{Switch(Command &flipUpCmd, Command &flipDownCmd)}}]{\setlength{\rightskip}{0pt plus 5cm}Switch\+::\+Switch (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} \&}]{flip\+Up\+Cmd, }
+\item[{{\bf Command} \&}]{flip\+Down\+Cmd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSwitch_a66ba6728853f391a84ac8f9c51e25141}{}\label{classSwitch_a66ba6728853f391a84ac8f9c51e25141}
+
+\begin{DoxyCode}
+67     :\hyperlink{classSwitch_aa6e2a2d4568aa542ab2e28e5a4da1d3c}{flipUpCommand}(flipUpCmd),\hyperlink{classSwitch_af069b11fc4dab647c39da8d09edcf6c5}{flipDownCommand}(flipDownCmd)
+68     \{
+69 
+70     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Switch@{Switch}!flip\+Down@{flip\+Down}}
+\index{flip\+Down@{flip\+Down}!Switch@{Switch}}
+\subsubsection[{\texorpdfstring{flip\+Down()}{flipDown()}}]{\setlength{\rightskip}{0pt plus 5cm}void Switch\+::flip\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSwitch_aa280f6f53ea293f8142f8fa2cd45c3ed}{}\label{classSwitch_aa280f6f53ea293f8142f8fa2cd45c3ed}
+
+\begin{DoxyCode}
+78     \{
+79         \hyperlink{classSwitch_af069b11fc4dab647c39da8d09edcf6c5}{flipDownCommand}.\hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{execute}();
+80     \}
+\end{DoxyCode}
+\index{Switch@{Switch}!flip\+Up@{flip\+Up}}
+\index{flip\+Up@{flip\+Up}!Switch@{Switch}}
+\subsubsection[{\texorpdfstring{flip\+Up()}{flipUp()}}]{\setlength{\rightskip}{0pt plus 5cm}void Switch\+::flip\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSwitch_a897907b3d656b36a8bad9a830b294504}{}\label{classSwitch_a897907b3d656b36a8bad9a830b294504}
+
+\begin{DoxyCode}
+73     \{
+74         \hyperlink{classSwitch_aa6e2a2d4568aa542ab2e28e5a4da1d3c}{flipUpCommand}.\hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{execute}();
+75     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Switch@{Switch}!flip\+Down\+Command@{flip\+Down\+Command}}
+\index{flip\+Down\+Command@{flip\+Down\+Command}!Switch@{Switch}}
+\subsubsection[{\texorpdfstring{flip\+Down\+Command}{flipDownCommand}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Command}\& Switch\+::flip\+Down\+Command\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSwitch_af069b11fc4dab647c39da8d09edcf6c5}{}\label{classSwitch_af069b11fc4dab647c39da8d09edcf6c5}
+\index{Switch@{Switch}!flip\+Up\+Command@{flip\+Up\+Command}}
+\index{flip\+Up\+Command@{flip\+Up\+Command}!Switch@{Switch}}
+\subsubsection[{\texorpdfstring{flip\+Up\+Command}{flipUpCommand}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Command}\& Switch\+::flip\+Up\+Command\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSwitch_aa6e2a2d4568aa542ab2e28e5a4da1d3c}{}\label{classSwitch_aa6e2a2d4568aa542ab2e28e5a4da1d3c}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Command_8cpp}{Command.\+cpp}\end{DoxyCompactItemize}

@@ -1,13 +1,13 @@
 0,GLOBAL,main,sys.exit,BinOp
 1,GLOBAL,main,open,funcfile-42,<w>
 2,GLOBAL,main,sys.exit,BinOp
-3,GLOBAL,main,OBJ.isfile,funcfile-40
+3,MEMBER,main,OBJ.isfile,funcfile-40
 4,GLOBAL,main,open,pyfile-50
-5,GLOBAL,main,OBJ.read
+5,MEMBER,main,OBJ.read
 6,GLOBAL,main,ast.parse,OBJ.read()5
 7,GLOBAL,main,ast2json.ast2json,ast.parse(OBJ.read()5)6
 8,GLOBAL,main,json.dumps,pyAst-51,<4>
-9,GLOBAL,main,OBJ.write,json.dumps(pyAst-51|<4>)8
+9,MEMBER,main,OBJ.write,json.dumps(pyAst-51|<4>)8
 10,GLOBAL,main,open,astfile-49,<w>
 11,GLOBAL,main,sys.exit,BinOp
 12,GLOBAL,main,testing5.main,astfile-56,pyfile-56,csvfile-56,funcfile-56

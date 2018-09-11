@@ -1,0 +1,221 @@
+\hypertarget{AddressBook2_8cpp}{}\section{Address\+Book2.\+cpp File Reference}
+\label{AddressBook2_8cpp}\index{Address\+Book2.\+cpp@{Address\+Book2.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$cctype$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+Include dependency graph for Address\+Book2.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AddressBook2_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classContact}{Contact}
+\item 
+class \hyperlink{classAddressBook}{Address\+Book}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{AddressBook2_8cpp_a05384db5c538ff4331381261c758f897}{get\+\_\+choice} ()
+\item 
+int \hyperlink{AddressBook2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\item 
+bool \hyperlink{AddressBook2_8cpp_a2f605d15a9e66dc7d58a8370d7a0e6c5}{operator$>$} (\hyperlink{classContact}{Contact} \&a, \hyperlink{classContact}{Contact} \&b)
+\item 
+bool \hyperlink{AddressBook2_8cpp_a27b54514036a945e7b1e5d70eff7958d}{operator==} (\hyperlink{classContact}{Contact} \&a, \hyperlink{classContact}{Contact} \&b)
+\item 
+istream \& \hyperlink{AddressBook2_8cpp_a83e899a0c8ec90886f1634d7a14e03e2}{operator$>$$>$} (istream \&ins, \hyperlink{classContact}{Contact} \&c)
+\item 
+ostream \& \hyperlink{AddressBook2_8cpp_a94e33108c74c0d3b5a4bfd1e1b0ccefa}{operator$<$$<$} (ostream \&outs, const \hyperlink{classContact}{Contact} \&c)
+\item 
+void \hyperlink{AddressBook2_8cpp_a5cd138fa046f34ab9825f38080786c77}{swap} (int a, int b, vector$<$ \hyperlink{classContact}{Contact} $>$ \&v)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+ifstream \hyperlink{AddressBook2_8cpp_addb74eb46f4ea2191b74ab5c2a3adb30}{in\+\_\+stream}
+\item 
+ofstream \hyperlink{AddressBook2_8cpp_a8fb389eff4054f4aa3513963fdaf14a9}{out\+\_\+stream}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Address\+Book2.\+cpp@{Address\+Book2.\+cpp}!get\+\_\+choice@{get\+\_\+choice}}
+\index{get\+\_\+choice@{get\+\_\+choice}!Address\+Book2.\+cpp@{Address\+Book2.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+\_\+choice()}{get_choice()}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+choice (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{AddressBook2_8cpp_a05384db5c538ff4331381261c758f897}{}\label{AddressBook2_8cpp_a05384db5c538ff4331381261c758f897}
+
+\begin{DoxyCode}
+128 \{
+129    \textcolor{keywordtype}{int} choice;
+130    cout << endl;
+131    cout << \textcolor{stringliteral}{"Please choose an option:"} << endl;
+132    cout << \textcolor{stringliteral}{"(1) Add a new contact"} << endl;
+133    cout << \textcolor{stringliteral}{"(2) Search by last name"} << endl;
+134    cout << \textcolor{stringliteral}{"(3) Show the complete list"} << endl;
+135    cout << \textcolor{stringliteral}{"(4) Edit a contact"} << endl;
+136    cout << \textcolor{stringliteral}{"(5) Delete a contact"} << endl;
+137    cout << \textcolor{stringliteral}{"(6) Exit"} << endl;
+138    cin >> choice;
+139    cout << endl;
+140    \textcolor{keywordflow}{return} choice;
+141 
+142 \}
+\end{DoxyCode}
+\index{Address\+Book2.\+cpp@{Address\+Book2.\+cpp}!main@{main}}
+\index{main@{main}!Address\+Book2.\+cpp@{Address\+Book2.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{AddressBook2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{AddressBook2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+94 \{
+95    \textcolor{keywordtype}{int} choice;
+96    \hyperlink{classAddressBook}{AddressBook} address\_book;
+97 
+98    cout << endl << \textcolor{stringliteral}{"Welcome to your Address Book!"} << endl;
+99    choice = \hyperlink{AddressBook2_8cpp_a05384db5c538ff4331381261c758f897}{get\_choice}();
+100    \textcolor{keywordflow}{while}(choice != 6)
+101    \{
+102       \textcolor{keywordflow}{switch}(choice)
+103       \{
+104          \textcolor{keywordflow}{case} 1:
+105             address\_book.\hyperlink{classAddressBook_a55d96137f232d3a52ffb51917d31b32b}{add}();
+106             address\_book.\hyperlink{classAddressBook_a7021de85815ec3aed9d2173fc15faa9b}{sort}();
+107             \textcolor{keywordflow}{break};
+108          \textcolor{keywordflow}{case} 2:
+109             address\_book.\hyperlink{classAddressBook_ae4483418575343aa8d53244365a7e475}{search}();
+110             \textcolor{keywordflow}{break};
+111          \textcolor{keywordflow}{case} 3:
+112             address\_book.\hyperlink{classAddressBook_ade80a4ffa27ed8a4f9c5c62372d34ea3}{display\_book}();
+113             \textcolor{keywordflow}{break};
+114          \textcolor{keywordflow}{case} 4:
+115             address\_book.\hyperlink{classAddressBook_a524c975a4983e6a0b50f1e89acafa6bb}{edit\_contact}();
+116             \textcolor{keywordflow}{break};
+117          \textcolor{keywordflow}{case} 5:
+118             address\_book.\hyperlink{classAddressBook_a96636dca787ba1a6e3d6ab7b8eb55e45}{delete\_contact}();
+119             \textcolor{keywordflow}{break};
+120         \textcolor{keywordflow}{default}:
+121             cout << \textcolor{stringliteral}{"Not a possible choice."} << endl;
+122       \}
+123       choice = \hyperlink{AddressBook2_8cpp_a05384db5c538ff4331381261c758f897}{get\_choice}();
+124    \}
+125 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AddressBook2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Address\+Book2.\+cpp@{Address\+Book2.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Address\+Book2.\+cpp@{Address\+Book2.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(ostream \&outs, const Contact \&c)}{operator<<(ostream &outs, const Contact &c)}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{outs, }
+\item[{const {\bf Contact} \&}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{AddressBook2_8cpp_a94e33108c74c0d3b5a4bfd1e1b0ccefa}{}\label{AddressBook2_8cpp_a94e33108c74c0d3b5a4bfd1e1b0ccefa}
+
+\begin{DoxyCode}
+265 \{
+266    outs << c.\hyperlink{classContact_ac074ba210aa0e4a52921af8353384a59}{first\_name} << endl;
+267    outs << c.\hyperlink{classContact_a87032ae00ab0e8cc81d660f191bcf0fa}{last\_name} << endl;
+268    outs << c.\hyperlink{classContact_a50397132da5dc66f2cb289fc650c3df6}{dob} << endl;
+269    outs << c.\hyperlink{classContact_ad23a96ecf0527e8878da50da682ba794}{telephone} << endl;
+270    outs << c.\hyperlink{classContact_a7cb8a0ab45d0ddc7a83df39590fcb6c1}{email} << endl;
+271    outs << c.\hyperlink{classContact_a2ff4fdc6afc1afdec2dbfe5cf85f1b92}{fax} << endl;
+272    outs << c.\hyperlink{classContact_a68735c7a42c6b9b80ff1b084111e6069}{age} << endl;
+273    outs << c.\hyperlink{classContact_ad76971e3edec9fdbc665d149cfbd9e1a}{type} << endl;
+274    \textcolor{keywordflow}{return} outs;
+275 \}
+\end{DoxyCode}
+\index{Address\+Book2.\+cpp@{Address\+Book2.\+cpp}!operator==@{operator==}}
+\index{operator==@{operator==}!Address\+Book2.\+cpp@{Address\+Book2.\+cpp}}
+\subsubsection[{\texorpdfstring{operator==(\+Contact \&a, Contact \&b)}{operator==(Contact &a, Contact &b)}}]{\setlength{\rightskip}{0pt plus 5cm}bool operator== (
+\begin{DoxyParamCaption}
+\item[{{\bf Contact} \&}]{a, }
+\item[{{\bf Contact} \&}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{AddressBook2_8cpp_a27b54514036a945e7b1e5d70eff7958d}{}\label{AddressBook2_8cpp_a27b54514036a945e7b1e5d70eff7958d}
+
+\begin{DoxyCode}
+254 \{
+255    \textcolor{keywordflow}{return} a.\hyperlink{classContact_a87032ae00ab0e8cc81d660f191bcf0fa}{last\_name} == b.\hyperlink{classContact_a87032ae00ab0e8cc81d660f191bcf0fa}{last\_name};
+256 \}
+\end{DoxyCode}
+\index{Address\+Book2.\+cpp@{Address\+Book2.\+cpp}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Address\+Book2.\+cpp@{Address\+Book2.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$>$(\+Contact \&a, Contact \&b)}{operator>(Contact &a, Contact &b)}}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Contact} \&}]{a, }
+\item[{{\bf Contact} \&}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{AddressBook2_8cpp_a2f605d15a9e66dc7d58a8370d7a0e6c5}{}\label{AddressBook2_8cpp_a2f605d15a9e66dc7d58a8370d7a0e6c5}
+
+\begin{DoxyCode}
+249 \{
+250    \textcolor{keywordflow}{return} a.\hyperlink{classContact_a87032ae00ab0e8cc81d660f191bcf0fa}{last\_name} > b.\hyperlink{classContact_a87032ae00ab0e8cc81d660f191bcf0fa}{last\_name};
+251 \}
+\end{DoxyCode}
+\index{Address\+Book2.\+cpp@{Address\+Book2.\+cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Address\+Book2.\+cpp@{Address\+Book2.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$>$$>$(istream \&ins, Contact \&c)}{operator>>(istream &ins, Contact &c)}}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{ins, }
+\item[{{\bf Contact} \&}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{AddressBook2_8cpp_a83e899a0c8ec90886f1634d7a14e03e2}{}\label{AddressBook2_8cpp_a83e899a0c8ec90886f1634d7a14e03e2}
+
+\begin{DoxyCode}
+259 \{
+260    ins >> c.\hyperlink{classContact_ac074ba210aa0e4a52921af8353384a59}{first\_name} >> c.\hyperlink{classContact_a87032ae00ab0e8cc81d660f191bcf0fa}{last\_name} >> c.\hyperlink{classContact_a50397132da5dc66f2cb289fc650c3df6}{dob} >> c.
+      \hyperlink{classContact_ad23a96ecf0527e8878da50da682ba794}{telephone} >> c.\hyperlink{classContact_a7cb8a0ab45d0ddc7a83df39590fcb6c1}{email} >> c.\hyperlink{classContact_a2ff4fdc6afc1afdec2dbfe5cf85f1b92}{fax} >> c.\hyperlink{classContact_a68735c7a42c6b9b80ff1b084111e6069}{age} >> c.\hyperlink{classContact_ad76971e3edec9fdbc665d149cfbd9e1a}{type};;
+261    \textcolor{keywordflow}{return} ins;
+262 \}
+\end{DoxyCode}
+\index{Address\+Book2.\+cpp@{Address\+Book2.\+cpp}!swap@{swap}}
+\index{swap@{swap}!Address\+Book2.\+cpp@{Address\+Book2.\+cpp}}
+\subsubsection[{\texorpdfstring{swap(int a, int b, vector$<$ Contact $>$ \&v)}{swap(int a, int b, vector< Contact > &v)}}]{\setlength{\rightskip}{0pt plus 5cm}void swap (
+\begin{DoxyParamCaption}
+\item[{int}]{a, }
+\item[{int}]{b, }
+\item[{vector$<$ {\bf Contact} $>$ \&}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{AddressBook2_8cpp_a5cd138fa046f34ab9825f38080786c77}{}\label{AddressBook2_8cpp_a5cd138fa046f34ab9825f38080786c77}
+
+\begin{DoxyCode}
+399 \{
+400    \hyperlink{classContact}{Contact} temp = v[a];
+401    v[a] = v[b];
+402    v[b] = temp;
+403 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{Address\+Book2.\+cpp@{Address\+Book2.\+cpp}!in\+\_\+stream@{in\+\_\+stream}}
+\index{in\+\_\+stream@{in\+\_\+stream}!Address\+Book2.\+cpp@{Address\+Book2.\+cpp}}
+\subsubsection[{\texorpdfstring{in\+\_\+stream}{in_stream}}]{\setlength{\rightskip}{0pt plus 5cm}ifstream in\+\_\+stream}\hypertarget{AddressBook2_8cpp_addb74eb46f4ea2191b74ab5c2a3adb30}{}\label{AddressBook2_8cpp_addb74eb46f4ea2191b74ab5c2a3adb30}
+\index{Address\+Book2.\+cpp@{Address\+Book2.\+cpp}!out\+\_\+stream@{out\+\_\+stream}}
+\index{out\+\_\+stream@{out\+\_\+stream}!Address\+Book2.\+cpp@{Address\+Book2.\+cpp}}
+\subsubsection[{\texorpdfstring{out\+\_\+stream}{out_stream}}]{\setlength{\rightskip}{0pt plus 5cm}ofstream out\+\_\+stream}\hypertarget{AddressBook2_8cpp_a8fb389eff4054f4aa3513963fdaf14a9}{}\label{AddressBook2_8cpp_a8fb389eff4054f4aa3513963fdaf14a9}

@@ -1,0 +1,85 @@
+\hypertarget{Equation_8cpp}{}\section{Equation.\+cpp File Reference}
+\label{Equation_8cpp}\index{Equation.\+cpp@{Equation.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}Equation.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Huge\+Integer.\+h\char`\"{}}\\*
+Include dependency graph for Equation.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{Equation_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{Equation_8cpp_a6d50068fecbcab1522c61543256b4ae8}{operator$<$$<$} (ostream \&outs, const \hyperlink{classEquation}{Equation} \&e)
+\item 
+istream \& \hyperlink{Equation_8cpp_a6ba26a194f6be34f5f14611146f49312}{operator$>$$>$} (istream \&ins, \hyperlink{classEquation}{Equation} \&e)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Equation.\+cpp@{Equation.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Equation.\+cpp@{Equation.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(ostream \&outs, const Equation \&e)}{operator<<(ostream &outs, const Equation &e)}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{outs, }
+\item[{const {\bf Equation} \&}]{e}
+\end{DoxyParamCaption}
+)}\hypertarget{Equation_8cpp_a6d50068fecbcab1522c61543256b4ae8}{}\label{Equation_8cpp_a6d50068fecbcab1522c61543256b4ae8}
+
+\begin{DoxyCode}
+98 \{
+99    \textcolor{keywordflow}{if}(e.\hyperlink{classEquation_a4d9ef234f54586c639efa69d7e958760}{sign} == \textcolor{charliteral}{'+'} || e.\hyperlink{classEquation_a4d9ef234f54586c639efa69d7e958760}{sign} == \textcolor{charliteral}{'*'} || e.\hyperlink{classEquation_a4d9ef234f54586c639efa69d7e958760}{sign} == \textcolor{charliteral}{'-'}) \textcolor{comment}{//if the operation was +,*, or -, the
+       anser will have a result                                                                                      
+       }
+100       outs << endl << e.\hyperlink{classEquation_af03ee24dda87646ad14a87363fe6a459}{op1} << \textcolor{stringliteral}{" "} << e.\hyperlink{classEquation_a4d9ef234f54586c639efa69d7e958760}{sign} << \textcolor{stringliteral}{" "} << e.\hyperlink{classEquation_ab437f2357b6156b3e70c195cbb9304a5}{op2} << \textcolor{stringliteral}{" = "} << e.
+      \hyperlink{classEquation_a7696f7ad262ed21259b3fd3d2d628549}{result} << endl << endl;
+101    \textcolor{keywordflow}{else} \textcolor{comment}{//for the comparison operators                                                                     
+                                                                                                       }
+102       outs << endl << e.\hyperlink{classEquation_af03ee24dda87646ad14a87363fe6a459}{op1} << \textcolor{stringliteral}{" "} << e.\hyperlink{classEquation_a4d9ef234f54586c639efa69d7e958760}{sign} << \textcolor{stringliteral}{"= "} << e.\hyperlink{classEquation_ab437f2357b6156b3e70c195cbb9304a5}{op2} << \textcolor{stringliteral}{" "};
+103    \textcolor{keywordflow}{return} outs;
+104 \}
+\end{DoxyCode}
+\index{Equation.\+cpp@{Equation.\+cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Equation.\+cpp@{Equation.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$>$$>$(istream \&ins, Equation \&e)}{operator>>(istream &ins, Equation &e)}}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{ins, }
+\item[{{\bf Equation} \&}]{e}
+\end{DoxyParamCaption}
+)}\hypertarget{Equation_8cpp_a6ba26a194f6be34f5f14611146f49312}{}\label{Equation_8cpp_a6ba26a194f6be34f5f14611146f49312}
+
+\begin{DoxyCode}
+107 \{
+108    \textcolor{keywordtype}{bool} c;
+109    \textcolor{keywordtype}{char} s;
+110    \hyperlink{classHugeInteger}{HugeInteger} h1, h2;
+111 
+112    ins >> h1 >> s >> h2;
+113    \textcolor{keywordflow}{if}(h1.\hyperlink{classHugeInteger_a49c11f16dad4dbb56d277ddb0eb71342}{isBad}() || h2.isBad()) \textcolor{comment}{//registers that the equation is bad                                  
+                                                                                                            }
+114       c = \textcolor{keyword}{false};
+115    \textcolor{keywordflow}{else}
+116       c = \textcolor{keyword}{true};
+117 
+118    \hyperlink{classEquation}{Equation} temp(h1, h2, s, c);
+119    e = temp;
+120 
+121    \textcolor{keywordflow}{return} ins;
+122 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{Equation_8cpp_a6ba26a194f6be34f5f14611146f49312_cgraph}
+\end{center}
+\end{figure}
+
+

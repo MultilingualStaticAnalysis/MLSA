@@ -1,0 +1,21 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/Bridge Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/Bridge Call Graph"
+	];
+
+	Node0x692082571 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/Bridge/Bridge.cpp"];
+	Node0x790367304 [shape=oval, label="0x2035800. (/home/labaccount/11-2-17/mlsa/IG/example/Bridge/Bridge.cpp)\nCircleShape::resizeByPercentage()"];
+	Node0x692082571 -> Node0x790367304;
+	Node0x995618178 [shape=oval, label="0x20358b0. (/home/labaccount/11-2-17/mlsa/IG/example/Bridge/Bridge.cpp)\nCircleShape::resizeByPercentage()"];
+	Node0x692082571 -> Node0x995618178;
+	Node0x716084374 [shape=oval, label="0x2035940. (/home/labaccount/11-2-17/mlsa/IG/example/Bridge/Bridge.cpp)\nCircleShape::draw()"];
+	Node0x692082571 -> Node0x716084374;
+	Node0x231645261 [shape=oval, label="0x20359c8. (/home/labaccount/11-2-17/mlsa/IG/example/Bridge/Bridge.cpp)\nCircleShape::draw()"];
+	Node0x692082571 -> Node0x231645261;
+	Node0x645675350 [shape=oval, label="0x2034228. (/home/labaccount/11-2-17/mlsa/IG/example/Bridge/Bridge.cpp)\nDrawingAPI::drawCircle()"];
+	Node0x716084374 -> Node0x645675350;
+	Node0x999362750 [shape=oval, label="0x2034228. (/home/labaccount/11-2-17/mlsa/IG/example/Bridge/Bridge.cpp)\nDrawingAPI::drawCircle()"];
+	Node0x231645261 -> Node0x999362750;
+}

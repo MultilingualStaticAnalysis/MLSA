@@ -1,0 +1,126 @@
+{
+    "body": [
+        {
+            "body": [
+                {
+                    "_type": "Print", 
+                    "nl": true, 
+                    "col_offset": 4, 
+                    "dest": null, 
+                    "values": [
+                        {
+                            "s": "Hello World", 
+                            "_type": "Str", 
+                            "lineno": 2, 
+                            "col_offset": 10
+                        }
+                    ], 
+                    "lineno": 2
+                }, 
+                {
+                    "value": {
+                        "_type": "BinOp", 
+                        "right": {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "id": "b", 
+                            "col_offset": 13, 
+                            "lineno": 3
+                        }, 
+                        "col_offset": 11, 
+                        "lineno": 3, 
+                        "left": {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "id": "a", 
+                            "col_offset": 11, 
+                            "lineno": 3
+                        }, 
+                        "op": {
+                            "_type": "Add"
+                        }
+                    }, 
+                    "_type": "Return", 
+                    "lineno": 3, 
+                    "col_offset": 4
+                }
+            ], 
+            "decorator_list": [], 
+            "_type": "FunctionDef", 
+            "name": "func1", 
+            "col_offset": 0, 
+            "args": {
+                "_type": "arguments", 
+                "args": [
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Param"
+                        }, 
+                        "id": "a", 
+                        "col_offset": 10, 
+                        "lineno": 1
+                    }, 
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Param"
+                        }, 
+                        "id": "b", 
+                        "col_offset": 13, 
+                        "lineno": 1
+                    }
+                ], 
+                "kwarg": null, 
+                "defaults": [], 
+                "vararg": null
+            }, 
+            "lineno": 1
+        }, 
+        {
+            "_type": "Print", 
+            "nl": true, 
+            "col_offset": 0, 
+            "dest": null, 
+            "values": [
+                {
+                    "_type": "Call", 
+                    "col_offset": 6, 
+                    "starargs": null, 
+                    "args": [
+                        {
+                            "_type": "Num", 
+                            "lineno": 5, 
+                            "col_offset": 12, 
+                            "n": 7
+                        }, 
+                        {
+                            "_type": "Num", 
+                            "lineno": 5, 
+                            "col_offset": 15, 
+                            "n": 12
+                        }
+                    ], 
+                    "lineno": 5, 
+                    "func": {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Load"
+                        }, 
+                        "id": "func1", 
+                        "col_offset": 6, 
+                        "lineno": 5
+                    }, 
+                    "kwargs": null, 
+                    "keywords": []
+                }
+            ], 
+            "lineno": 5
+        }
+    ], 
+    "_type": "Module"
+}

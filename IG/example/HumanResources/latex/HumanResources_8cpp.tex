@@ -1,0 +1,171 @@
+\hypertarget{HumanResources_8cpp}{}\section{Human\+Resources.\+cpp File Reference}
+\label{HumanResources_8cpp}\index{Human\+Resources.\+cpp@{Human\+Resources.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+Include dependency graph for Human\+Resources.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{HumanResources_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classPerson}{Person}
+\item 
+class \hyperlink{classHRM}{H\+RM}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{HumanResources_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{HumanResources_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n} =0
+\item 
+int \hyperlink{HumanResources_8cpp_acb559820d9ca11295b4500f179ef6392}{i} =0
+\item 
+int \hyperlink{HumanResources_8cpp_a6150e0515f7202e2fb518f7206ed97dc}{x} =8248001
+\item 
+int \hyperlink{HumanResources_8cpp_a76e44bc53d2efde76380be19dc9ebbc3}{y} \mbox{[}100\mbox{]}
+\item 
+bool \hyperlink{HumanResources_8cpp_a8b3ab54ed3e81c69863d65e4e6c424a0}{flag} =0
+\item 
+int \hyperlink{HumanResources_8cpp_a2097171b622749a4748e4da254c3af72}{z} \mbox{[}100\mbox{]}
+\item 
+string \hyperlink{HumanResources_8cpp_aa903d317fb89b7486b45495ea763e880}{h} \mbox{[}100\mbox{]}
+\item 
+double \hyperlink{HumanResources_8cpp_ab48abf59b03ad563091fcecb765e42ab}{sal} \mbox{[}100\mbox{]}
+\item 
+int \hyperlink{HumanResources_8cpp_a5aa1731610537e057191db627c19f1ca}{check} =0
+\item 
+int \hyperlink{HumanResources_8cpp_ab66ed8e0098c0a86b458672a55a9cca9}{k} =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Human\+Resources.\+cpp@{Human\+Resources.\+cpp}!main@{main}}
+\index{main@{main}!Human\+Resources.\+cpp@{Human\+Resources.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{HumanResources_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{HumanResources_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+539 \{
+540   \textcolor{comment}{//-------defining variables and initializing them-------------}
+541  
+542  
+543   \hyperlink{classHRM}{HRM} info ;
+544  
+545   \textcolor{keywordtype}{int} c;
+546   \textcolor{keywordtype}{char} operation,ch;
+547   \textcolor{comment}{//--------Printing my name on screen----------------}
+548   cout<<        \textcolor{stringliteral}{"Welcome to the  program 2.1 written by Your Name"}<<endl;
+549   cout<<\textcolor{stringliteral}{"**************************************************************************"}<<endl;
+550   cout<<endl<<endl<<endl;
+551   \textcolor{keywordflow}{do}
+552   \{
+553  
+554     cout<<\textcolor{stringliteral}{"Welcome to Human Resource Management (HRM) Software of Company XYZ."};
+555     cout<<\textcolor{stringliteral}{"To do specific task please choose one of the following commands."}<<endl<<endl<<endl;
+556     cout<<\textcolor{stringliteral}{"    1. Add new employee"}<<endl;
+557     cout<<\textcolor{stringliteral}{"    2. Delete employee information"}<<endl;
+558     cout<<\textcolor{stringliteral}{"    3. Update employee information"}<<endl;
+559     cout<<\textcolor{stringliteral}{"    4. Make reports based on specific field"}<<endl;
+560     cout<<\textcolor{stringliteral}{"    5. Search employee"}<<endl;
+561     cout<<\textcolor{stringliteral}{"    6. Quit"}<<endl<<endl;
+562  
+563  
+564     \textcolor{keywordflow}{while}(!(cin>>c))  \textcolor{comment}{//Reciving vaiables from input : is it no/character ?}
+565     \{
+566       cout << \textcolor{stringliteral}{"Please  enter a number!  Try again: "};
+567       cin.clear ();
+568       cin.ignore (1000, \textcolor{charliteral}{'\(\backslash\)n'});  \textcolor{comment}{// Skip to next newline or 1000 chars,}
+569       \textcolor{comment}{// whichever comes first.}
+570     \}
+571     \textcolor{keywordflow}{switch}(c)
+572     \{
+573     \textcolor{keywordflow}{case} 1:
+574       cout<<\textcolor{stringliteral}{"\(\backslash\)nEnter the information of the new employee"}<<endl;
+575       info.\hyperlink{classHRM_ae6e340e84b8bece41f50eb138f10b6ef}{AddPerson}();
+576       \textcolor{keywordflow}{break};
+577     \textcolor{keywordflow}{case} 2:
+578       info.\hyperlink{classHRM_ad6fd617d1fb2fccb47c7ed93aa9b9d4d}{DeletePerson}();
+579       \textcolor{keywordflow}{break};
+580     \textcolor{keywordflow}{case} 3:
+581       cout<<\textcolor{stringliteral}{"\(\backslash\)nEnter an item to deletion"};
+582       info.\hyperlink{classHRM_a295019723e5d41b3cefe4982afa3f4b4}{UpdatePerson}();
+583       \textcolor{keywordflow}{break};
+584     \textcolor{keywordflow}{case} 4:
+585       cout<<\textcolor{stringliteral}{"\(\backslash\)nEnter an element to search"};
+586       info.\hyperlink{classHRM_ae1fb1f404ad529d8cc690be7b8d8430e}{ReportList}();
+587       \textcolor{keywordflow}{break};
+588     \textcolor{keywordflow}{case} 5:
+589       info.\hyperlink{classHRM_af83289bb1e219ccf570122c689a01adc}{SearchPerson}();
+590       \textcolor{keywordflow}{break};
+591     \textcolor{keywordflow}{default} :
+592       cout<<\textcolor{stringliteral}{"\(\backslash\)nInvalid option try again"};
+593  
+594     \}
+595     cout<<\textcolor{stringliteral}{"\(\backslash\)ndo u want to continue"};
+596     cin>>ch;
+597   \}
+598   \textcolor{keywordflow}{while}(ch==\textcolor{charliteral}{'y'}||ch==\textcolor{charliteral}{'Y'});
+599  
+600  
+601   system(\textcolor{stringliteral}{"pause"});
+602   \textcolor{keywordflow}{return} 0;
+603 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{HumanResources_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{Human\+Resources.\+cpp@{Human\+Resources.\+cpp}!check@{check}}
+\index{check@{check}!Human\+Resources.\+cpp@{Human\+Resources.\+cpp}}
+\subsubsection[{\texorpdfstring{check}{check}}]{\setlength{\rightskip}{0pt plus 5cm}int check =0}\hypertarget{HumanResources_8cpp_a5aa1731610537e057191db627c19f1ca}{}\label{HumanResources_8cpp_a5aa1731610537e057191db627c19f1ca}
+\index{Human\+Resources.\+cpp@{Human\+Resources.\+cpp}!flag@{flag}}
+\index{flag@{flag}!Human\+Resources.\+cpp@{Human\+Resources.\+cpp}}
+\subsubsection[{\texorpdfstring{flag}{flag}}]{\setlength{\rightskip}{0pt plus 5cm}bool flag =0}\hypertarget{HumanResources_8cpp_a8b3ab54ed3e81c69863d65e4e6c424a0}{}\label{HumanResources_8cpp_a8b3ab54ed3e81c69863d65e4e6c424a0}
+\index{Human\+Resources.\+cpp@{Human\+Resources.\+cpp}!h@{h}}
+\index{h@{h}!Human\+Resources.\+cpp@{Human\+Resources.\+cpp}}
+\subsubsection[{\texorpdfstring{h}{h}}]{\setlength{\rightskip}{0pt plus 5cm}string h\mbox{[}100\mbox{]}}\hypertarget{HumanResources_8cpp_aa903d317fb89b7486b45495ea763e880}{}\label{HumanResources_8cpp_aa903d317fb89b7486b45495ea763e880}
+\index{Human\+Resources.\+cpp@{Human\+Resources.\+cpp}!i@{i}}
+\index{i@{i}!Human\+Resources.\+cpp@{Human\+Resources.\+cpp}}
+\subsubsection[{\texorpdfstring{i}{i}}]{\setlength{\rightskip}{0pt plus 5cm}int i =0}\hypertarget{HumanResources_8cpp_acb559820d9ca11295b4500f179ef6392}{}\label{HumanResources_8cpp_acb559820d9ca11295b4500f179ef6392}
+\index{Human\+Resources.\+cpp@{Human\+Resources.\+cpp}!k@{k}}
+\index{k@{k}!Human\+Resources.\+cpp@{Human\+Resources.\+cpp}}
+\subsubsection[{\texorpdfstring{k}{k}}]{\setlength{\rightskip}{0pt plus 5cm}int k =0}\hypertarget{HumanResources_8cpp_ab66ed8e0098c0a86b458672a55a9cca9}{}\label{HumanResources_8cpp_ab66ed8e0098c0a86b458672a55a9cca9}
+\index{Human\+Resources.\+cpp@{Human\+Resources.\+cpp}!n@{n}}
+\index{n@{n}!Human\+Resources.\+cpp@{Human\+Resources.\+cpp}}
+\subsubsection[{\texorpdfstring{n}{n}}]{\setlength{\rightskip}{0pt plus 5cm}int n =0}\hypertarget{HumanResources_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{}\label{HumanResources_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}
+\index{Human\+Resources.\+cpp@{Human\+Resources.\+cpp}!sal@{sal}}
+\index{sal@{sal}!Human\+Resources.\+cpp@{Human\+Resources.\+cpp}}
+\subsubsection[{\texorpdfstring{sal}{sal}}]{\setlength{\rightskip}{0pt plus 5cm}double sal\mbox{[}100\mbox{]}}\hypertarget{HumanResources_8cpp_ab48abf59b03ad563091fcecb765e42ab}{}\label{HumanResources_8cpp_ab48abf59b03ad563091fcecb765e42ab}
+\index{Human\+Resources.\+cpp@{Human\+Resources.\+cpp}!x@{x}}
+\index{x@{x}!Human\+Resources.\+cpp@{Human\+Resources.\+cpp}}
+\subsubsection[{\texorpdfstring{x}{x}}]{\setlength{\rightskip}{0pt plus 5cm}int x =8248001}\hypertarget{HumanResources_8cpp_a6150e0515f7202e2fb518f7206ed97dc}{}\label{HumanResources_8cpp_a6150e0515f7202e2fb518f7206ed97dc}
+\index{Human\+Resources.\+cpp@{Human\+Resources.\+cpp}!y@{y}}
+\index{y@{y}!Human\+Resources.\+cpp@{Human\+Resources.\+cpp}}
+\subsubsection[{\texorpdfstring{y}{y}}]{\setlength{\rightskip}{0pt plus 5cm}int y\mbox{[}100\mbox{]}}\hypertarget{HumanResources_8cpp_a76e44bc53d2efde76380be19dc9ebbc3}{}\label{HumanResources_8cpp_a76e44bc53d2efde76380be19dc9ebbc3}
+\index{Human\+Resources.\+cpp@{Human\+Resources.\+cpp}!z@{z}}
+\index{z@{z}!Human\+Resources.\+cpp@{Human\+Resources.\+cpp}}
+\subsubsection[{\texorpdfstring{z}{z}}]{\setlength{\rightskip}{0pt plus 5cm}int z\mbox{[}100\mbox{]}}\hypertarget{HumanResources_8cpp_a2097171b622749a4748e4da254c3af72}{}\label{HumanResources_8cpp_a2097171b622749a4748e4da254c3af72}

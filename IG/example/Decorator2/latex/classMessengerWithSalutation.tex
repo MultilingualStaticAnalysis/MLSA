@@ -1,0 +1,106 @@
+\hypertarget{classMessengerWithSalutation}{}\section{Messenger\+With\+Salutation Class Reference}
+\label{classMessengerWithSalutation}\index{Messenger\+With\+Salutation@{Messenger\+With\+Salutation}}
+
+
+Inheritance diagram for Messenger\+With\+Salutation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classMessengerWithSalutation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Messenger\+With\+Salutation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classMessengerWithSalutation__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMessengerWithSalutation_a6ec1cb0e7c58771265dfc20f1d75573a}{Messenger\+With\+Salutation} (std\+::unique\+\_\+ptr$<$ \hyperlink{classInterface}{Interface} $>$ c, const std\+::string \&str)
+\item 
+\hyperlink{classMessengerWithSalutation_ab98288095a6f7e7ddd768a5defab7f31}{$\sim$\+Messenger\+With\+Salutation} ()
+\item 
+virtual void \hyperlink{classMessengerWithSalutation_aed33b1b35b9c5c24f80a3e898aed2487}{write} (std\+::string \&text) override
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classMessengerWithSalutation_af3a570c7b7a40656b029803aa8419c43}{salutation}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Messenger\+With\+Salutation@{Messenger\+With\+Salutation}!Messenger\+With\+Salutation@{Messenger\+With\+Salutation}}
+\index{Messenger\+With\+Salutation@{Messenger\+With\+Salutation}!Messenger\+With\+Salutation@{Messenger\+With\+Salutation}}
+\subsubsection[{\texorpdfstring{Messenger\+With\+Salutation(std\+::unique\+\_\+ptr$<$ Interface $>$ c, const std\+::string \&str)}{MessengerWithSalutation(std::unique_ptr< Interface > c, const std::string &str)}}]{\setlength{\rightskip}{0pt plus 5cm}Messenger\+With\+Salutation\+::\+Messenger\+With\+Salutation (
+\begin{DoxyParamCaption}
+\item[{std\+::unique\+\_\+ptr$<$ {\bf Interface} $>$}]{c, }
+\item[{const std\+::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMessengerWithSalutation_a6ec1cb0e7c58771265dfc20f1d75573a}{}\label{classMessengerWithSalutation_a6ec1cb0e7c58771265dfc20f1d75573a}
+
+\begin{DoxyCode}
+29 : \hyperlink{classDecorator_aee6cdf11333827f13ea5b5384ad5af88}{Decorator}(std::move(c)), \hyperlink{classMessengerWithSalutation_af3a570c7b7a40656b029803aa8419c43}{salutation}(str) \{\}
+\end{DoxyCode}
+\index{Messenger\+With\+Salutation@{Messenger\+With\+Salutation}!````~Messenger\+With\+Salutation@{$\sim$\+Messenger\+With\+Salutation}}
+\index{````~Messenger\+With\+Salutation@{$\sim$\+Messenger\+With\+Salutation}!Messenger\+With\+Salutation@{Messenger\+With\+Salutation}}
+\subsubsection[{\texorpdfstring{$\sim$\+Messenger\+With\+Salutation()}{~MessengerWithSalutation()}}]{\setlength{\rightskip}{0pt plus 5cm}Messenger\+With\+Salutation\+::$\sim$\+Messenger\+With\+Salutation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMessengerWithSalutation_ab98288095a6f7e7ddd768a5defab7f31}{}\label{classMessengerWithSalutation_ab98288095a6f7e7ddd768a5defab7f31}
+
+\begin{DoxyCode}
+30 \{std::cout << \textcolor{stringliteral}{"Messenger destructor called.\(\backslash\)n"};\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Messenger\+With\+Salutation@{Messenger\+With\+Salutation}!write@{write}}
+\index{write@{write}!Messenger\+With\+Salutation@{Messenger\+With\+Salutation}}
+\subsubsection[{\texorpdfstring{write(std\+::string \&text) override}{write(std::string &text) override}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Messenger\+With\+Salutation\+::write (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{text}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classMessengerWithSalutation_aed33b1b35b9c5c24f80a3e898aed2487}{}\label{classMessengerWithSalutation_aed33b1b35b9c5c24f80a3e898aed2487}
+
+
+Reimplemented from \hyperlink{classDecorator_ae5cad6daee450fb5eaa2b1cad6a0dd45}{Decorator}.
+
+
+\begin{DoxyCode}
+31                                                       \{
+32             text = \hyperlink{classMessengerWithSalutation_af3a570c7b7a40656b029803aa8419c43}{salutation} + \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n"} + text;
+33             \hyperlink{classDecorator_ae5cad6daee450fb5eaa2b1cad6a0dd45}{Decorator::write}(text);
+34         \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classMessengerWithSalutation_aed33b1b35b9c5c24f80a3e898aed2487_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Messenger\+With\+Salutation@{Messenger\+With\+Salutation}!salutation@{salutation}}
+\index{salutation@{salutation}!Messenger\+With\+Salutation@{Messenger\+With\+Salutation}}
+\subsubsection[{\texorpdfstring{salutation}{salutation}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Messenger\+With\+Salutation\+::salutation\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classMessengerWithSalutation_af3a570c7b7a40656b029803aa8419c43}{}\label{classMessengerWithSalutation_af3a570c7b7a40656b029803aa8419c43}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Decorator2_8cpp}{Decorator2.\+cpp}\end{DoxyCompactItemize}

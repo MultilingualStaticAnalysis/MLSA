@@ -1,0 +1,1049 @@
+Processing: /home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c.
+typedef __int128 __int128_t;
+typedef unsigned __int128 __uint128_t;
+typedef __va_list_tag __builtin_va_list[1];
+typedef typeof (ParenExpr 0x16da960 </home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:31:19, col:39> 'long'
+  (BinaryOperator 0x16da938 <col:20, col:38> 'long' '-'
+    (ParenExpr 0x16da898 <col:20, col:28> 'int *'
+      (CStyleCastExpr 0x16da870 <col:21, col:27> 'int *' <NullToPointer>
+        (IntegerLiteral 0x16da808 <col:27> 'int' 0)))
+    (ParenExpr 0x16da918 <col:30, col:38> 'int *'
+      (CStyleCastExpr 0x16da8f0 <col:31, col:37> 'int *' <NullToPointer>
+        (IntegerLiteral 0x16da8b8 <col:37> 'int' 0)))))
+ ptrdiff_t;
+typedef typeof (ParenExpr 0x16daa38 </home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:35:19, col:31> 'unsigned long'
+  (UnaryExprOrTypeTraitExpr 0x16daa18 <col:20, col:30> 'unsigned long' sizeof 'int'))
+ size_t;
+typedef int wchar_t;
+typedef unsigned char __u_char;
+typedef unsigned short __u_short;
+typedef unsigned int __u_int;
+typedef unsigned long __u_long;
+typedef signed char __int8_t;
+typedef unsigned char __uint8_t;
+typedef short __int16_t;
+typedef unsigned short __uint16_t;
+typedef int __int32_t;
+typedef unsigned int __uint32_t;
+typedef long __int64_t;
+typedef unsigned long __uint64_t;
+typedef long __quad_t;
+typedef unsigned long __u_quad_t;
+typedef unsigned long __dev_t;
+typedef unsigned int __uid_t;
+typedef unsigned int __gid_t;
+typedef unsigned long __ino_t;
+typedef unsigned long __ino64_t;
+typedef unsigned int __mode_t;
+typedef unsigned long __nlink_t;
+typedef long __off_t;
+typedef long __off64_t;
+typedef int __pid_t;
+struct {
+    int __val[2];
+};
+typedef struct __fsid_t __fsid_t;
+typedef long __clock_t;
+typedef unsigned long __rlim_t;
+typedef unsigned long __rlim64_t;
+typedef unsigned int __id_t;
+typedef long __time_t;
+typedef unsigned int __useconds_t;
+typedef long __suseconds_t;
+typedef int __daddr_t;
+typedef int __key_t;
+typedef int __clockid_t;
+typedef void *__timer_t;
+typedef long __blksize_t;
+typedef long __blkcnt_t;
+typedef long __blkcnt64_t;
+typedef unsigned long __fsblkcnt_t;
+typedef unsigned long __fsblkcnt64_t;
+typedef unsigned long __fsfilcnt_t;
+typedef unsigned long __fsfilcnt64_t;
+typedef long __fsword_t;
+typedef long __ssize_t;
+typedef long __syscall_slong_t;
+typedef unsigned long __syscall_ulong_t;
+typedef __off64_t __loff_t;
+typedef __quad_t *__qaddr_t;
+typedef char *__caddr_t;
+typedef long __intptr_t;
+typedef unsigned int __socklen_t;
+struct _IO_FILE;
+typedef struct _IO_FILE FILE;
+typedef struct _IO_FILE __FILE;
+struct {
+    int __count;
+    union {
+        unsigned int __wch;
+        char __wchb[4];
+    };
+    union <anonymous union at /usr/include/wchar.h:85:3> __value;
+};
+typedef struct __mbstate_t __mbstate_t;
+struct {
+    __off_t __pos;
+    __mbstate_t __state;
+};
+typedef struct _G_fpos_t _G_fpos_t;
+struct {
+    __off64_t __pos;
+    __mbstate_t __state;
+};
+typedef struct _G_fpos64_t _G_fpos64_t;
+typedef __builtin_va_list va_list;
+typedef __builtin_va_list __gnuc_va_list;
+struct _IO_jump_t;
+struct _IO_FILE;
+typedef void _IO_lock_t;
+struct _IO_marker {
+    struct _IO_marker *_next;
+    struct _IO_FILE *_sbuf;
+    int _pos;
+};
+enum __codecvt_result {
+    __codecvt_ok,
+    __codecvt_partial,
+    __codecvt_error,
+    __codecvt_noconv
+};
+struct _IO_FILE {
+    int _flags;
+    char *_IO_read_ptr;
+    char *_IO_read_end;
+    char *_IO_read_base;
+    char *_IO_write_base;
+    char *_IO_write_ptr;
+    char *_IO_write_end;
+    char *_IO_buf_base;
+    char *_IO_buf_end;
+    char *_IO_save_base;
+    char *_IO_backup_base;
+    char *_IO_save_end;
+    struct _IO_marker *_markers;
+    struct _IO_FILE *_chain;
+    int _fileno;
+    int _flags2;
+    __off_t _old_offset;
+    unsigned short _cur_column;
+    signed char _vtable_offset;
+    char _shortbuf[1];
+    _IO_lock_t *_lock;
+    __off64_t _offset;
+    void *__pad1;
+    void *__pad2;
+    void *__pad3;
+    void *__pad4;
+    size_t __pad5;
+    int _mode;
+    char _unused2[20];
+};
+typedef struct _IO_FILE _IO_FILE;
+struct _IO_FILE_plus;
+extern struct _IO_FILE_plus _IO_2_1_stdin_;
+extern struct _IO_FILE_plus _IO_2_1_stdout_;
+extern struct _IO_FILE_plus _IO_2_1_stderr_;
+typedef __ssize_t (__io_read_fn)(void *, char *, size_t);
+typedef __ssize_t (__io_write_fn)(void *, const char *, size_t);
+typedef int (__io_seek_fn)(void *, __off64_t *, int);
+typedef int (__io_close_fn)(void *);
+extern int __underflow(_IO_FILE *);
+extern int __uflow(_IO_FILE *);
+extern int __overflow(_IO_FILE *, int);
+extern int _IO_getc(_IO_FILE *__fp);
+extern int _IO_putc(int __c, _IO_FILE *__fp);
+extern int _IO_feof(_IO_FILE *__fp) __attribute__((nothrow));
+extern int _IO_ferror(_IO_FILE *__fp) __attribute__((nothrow));
+extern int _IO_peekc_locked(_IO_FILE *__fp);
+extern void _IO_flockfile(_IO_FILE *) __attribute__((nothrow));
+extern void _IO_funlockfile(_IO_FILE *) __attribute__((nothrow));
+extern int _IO_ftrylockfile(_IO_FILE *) __attribute__((nothrow));
+extern int _IO_vfscanf(_IO_FILE *restrict, const char *restrict, __gnuc_va_list, int *restrict);
+extern int _IO_vfprintf(_IO_FILE *restrict, const char *restrict, __gnuc_va_list);
+extern __ssize_t _IO_padn(_IO_FILE *, int, __ssize_t);
+extern size_t _IO_sgetn(_IO_FILE *, void *, size_t);
+extern __off64_t _IO_seekoff(_IO_FILE *, __off64_t, int, int);
+extern __off64_t _IO_seekpos(_IO_FILE *, __off64_t, int);
+extern void _IO_free_backup_area(_IO_FILE *) __attribute__((nothrow));
+typedef __gnuc_va_list va_list;
+typedef __off_t off_t;
+typedef __ssize_t ssize_t;
+typedef _G_fpos_t fpos_t;
+extern struct _IO_FILE *stdin;
+extern struct _IO_FILE *stdout;
+extern struct _IO_FILE *stderr;
+extern int remove(const char *__filename) __attribute__((nothrow));
+extern int rename(const char *__old, const char *__new) __attribute__((nothrow));
+extern int renameat(int __oldfd, const char *__old, int __newfd, const char *__new) __attribute__((nothrow));
+extern FILE *tmpfile();
+extern char *tmpnam(char *__s) __attribute__((nothrow));
+extern char *tmpnam_r(char *__s) __attribute__((nothrow));
+extern char *tempnam(const char *__dir, const char *__pfx) __attribute__((malloc)) __attribute__((nothrow));
+extern int fclose(FILE *__stream);
+extern int fflush(FILE *__stream);
+extern int fflush_unlocked(FILE *__stream);
+extern FILE *fopen(const char *restrict __filename, const char *restrict __modes);
+extern FILE *freopen(const char *restrict __filename, const char *restrict __modes, FILE *restrict __stream);
+extern FILE *fdopen(int __fd, const char *__modes) __attribute__((nothrow));
+extern FILE *fmemopen(void *__s, size_t __len, const char *__modes) __attribute__((nothrow));
+extern FILE *open_memstream(char **__bufloc, size_t *__sizeloc) __attribute__((nothrow));
+extern void setbuf(FILE *restrict __stream, char *restrict __buf) __attribute__((nothrow));
+extern int setvbuf(FILE *restrict __stream, char *restrict __buf, int __modes, size_t __n) __attribute__((nothrow));
+extern void setbuffer(FILE *restrict __stream, char *restrict __buf, size_t __size) __attribute__((nothrow));
+extern void setlinebuf(FILE *__stream) __attribute__((nothrow));
+int fprintf(FILE *, const char *, ...) __attribute__((format("printf", 2, 3)));
+extern int fprintf(FILE *restrict __stream, const char *restrict __format, ...) __attribute__((format("printf", 2, 3)));
+int printf(const char *, ...) __attribute__((format("printf", 1, 2)));
+extern int printf(const char *restrict __format, ...) __attribute__((format("printf", 1, 2)));
+int sprintf(char *, const char *, ...) __attribute__((format("printf", 2, 3)));
+extern int sprintf(char *restrict __s, const char *restrict __format, ...) __attribute__((nothrow)) __attribute__((format("printf", 2, 3)));
+int vfprintf() __attribute__((format("printf", 2, 0)));
+extern int vfprintf(FILE *restrict __s, const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("printf", 2, 0)));
+int vprintf(const char *, __va_list_tag *) __attribute__((format("printf", 1, 0)));
+extern int vprintf(const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("printf", 1, 0)));
+int vsprintf(char *, const char *, __va_list_tag *) __attribute__((format("printf", 2, 0)));
+extern int vsprintf(char *restrict __s, const char *restrict __format, __gnuc_va_list __arg) __attribute__((nothrow)) __attribute__((format("printf", 2, 0)));
+int snprintf(char *, unsigned long, const char *, ...) __attribute__((format("printf", 3, 4)));
+extern int snprintf(char *restrict __s, size_t __maxlen, const char *restrict __format, ...) __attribute__((format("printf", 3, 4))) __attribute__((nothrow));
+int vsnprintf(char *, unsigned long, const char *, __va_list_tag *) __attribute__((format("printf", 3, 0)));
+extern int vsnprintf(char *restrict __s, size_t __maxlen, const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("printf", 3, 0))) __attribute__((nothrow));
+extern int vdprintf(int __fd, const char *restrict __fmt, __gnuc_va_list __arg) __attribute__((format("printf", 2, 0)));
+extern int dprintf(int __fd, const char *restrict __fmt, ...) __attribute__((format("printf", 2, 3)));
+int fscanf(FILE *restrict, const char *restrict, ...) __attribute__((format("scanf", 2, 3)));
+extern int fscanf(FILE *restrict __stream, const char *restrict __format, ...) __attribute__((format("scanf", 2, 3)));
+int scanf(const char *restrict, ...) __attribute__((format("scanf", 1, 2)));
+extern int scanf(const char *restrict __format, ...) __attribute__((format("scanf", 1, 2)));
+int sscanf(const char *restrict, const char *restrict, ...) __attribute__((format("scanf", 2, 3)));
+extern int sscanf(const char *restrict __s, const char *restrict __format, ...) __attribute__((nothrow)) __attribute__((format("scanf", 2, 3)));
+extern int fscanf(FILE *restrict __stream, const char *restrict __format, ...) __attribute__((format("scanf", 2, 3)));
+extern int scanf(const char *restrict __format, ...) __attribute__((format("scanf", 1, 2)));
+extern int sscanf(const char *restrict __s, const char *restrict __format, ...) __attribute__((nothrow)) __attribute__((format("scanf", 2, 3)));
+int vfscanf(FILE *restrict, const char *restrict, __va_list_tag *) __attribute__((format("scanf", 2, 0)));
+extern int vfscanf(FILE *restrict __s, const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("scanf", 2, 0)));
+int vscanf(const char *restrict, __va_list_tag *) __attribute__((format("scanf", 1, 0)));
+extern int vscanf(const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("scanf", 1, 0)));
+int vsscanf(const char *restrict, const char *restrict, __va_list_tag *) __attribute__((format("scanf", 2, 0)));
+extern int vsscanf(const char *restrict __s, const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("scanf", 2, 0))) __attribute__((nothrow));
+extern int vfscanf(FILE *restrict __s, const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("scanf", 2, 0)));
+extern int vscanf(const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("scanf", 1, 0)));
+extern int vsscanf(const char *restrict __s, const char *restrict __format, __gnuc_va_list __arg) __attribute__((format("scanf", 2, 0))) __attribute__((nothrow));
+extern int fgetc(FILE *__stream);
+extern int getc(FILE *__stream);
+extern int getchar();
+extern int getc_unlocked(FILE *__stream);
+extern int getchar_unlocked();
+extern int fgetc_unlocked(FILE *__stream);
+extern int fputc(int __c, FILE *__stream);
+extern int putc(int __c, FILE *__stream);
+extern int putchar(int __c);
+extern int fputc_unlocked(int __c, FILE *__stream);
+extern int putc_unlocked(int __c, FILE *__stream);
+extern int putchar_unlocked(int __c);
+extern int getw(FILE *__stream);
+extern int putw(int __w, FILE *__stream);
+extern char *fgets(char *restrict __s, int __n, FILE *restrict __stream);
+extern char *gets(char *__s) __attribute__((deprecated("")));
+extern __ssize_t __getdelim(char **restrict __lineptr, size_t *restrict __n, int __delimiter, FILE *restrict __stream);
+extern __ssize_t getdelim(char **restrict __lineptr, size_t *restrict __n, int __delimiter, FILE *restrict __stream);
+extern __ssize_t getline(char **restrict __lineptr, size_t *restrict __n, FILE *restrict __stream);
+extern int fputs(const char *restrict __s, FILE *restrict __stream);
+extern int puts(const char *__s);
+extern int ungetc(int __c, FILE *__stream);
+extern size_t fread(void *restrict __ptr, size_t __size, size_t __n, FILE *restrict __stream);
+extern size_t fwrite(const void *restrict __ptr, size_t __size, size_t __n, FILE *restrict __s);
+extern size_t fread_unlocked(void *restrict __ptr, size_t __size, size_t __n, FILE *restrict __stream);
+extern size_t fwrite_unlocked(const void *restrict __ptr, size_t __size, size_t __n, FILE *restrict __stream);
+extern int fseek(FILE *__stream, long __off, int __whence);
+extern long ftell(FILE *__stream);
+extern void rewind(FILE *__stream);
+extern int fseeko(FILE *__stream, __off_t __off, int __whence);
+extern __off_t ftello(FILE *__stream);
+extern int fgetpos(FILE *restrict __stream, fpos_t *restrict __pos);
+extern int fsetpos(FILE *__stream, const fpos_t *__pos);
+extern void clearerr(FILE *__stream) __attribute__((nothrow));
+extern int feof(FILE *__stream) __attribute__((nothrow));
+extern int ferror(FILE *__stream) __attribute__((nothrow));
+extern void clearerr_unlocked(FILE *__stream) __attribute__((nothrow));
+extern int feof_unlocked(FILE *__stream) __attribute__((nothrow));
+extern int ferror_unlocked(FILE *__stream) __attribute__((nothrow));
+extern void perror(const char *__s);
+extern int sys_nerr;
+extern const char *const sys_errlist[];
+extern int fileno(FILE *__stream) __attribute__((nothrow));
+extern int fileno_unlocked(FILE *__stream) __attribute__((nothrow));
+extern FILE *popen(const char *__command, const char *__modes);
+extern int pclose(FILE *__stream);
+extern char *ctermid(char *__s) __attribute__((nothrow));
+extern void flockfile(FILE *__stream) __attribute__((nothrow));
+extern int ftrylockfile(FILE *__stream) __attribute__((nothrow));
+extern void funlockfile(FILE *__stream) __attribute__((nothrow));
+enum  {
+    P_ALL,
+    P_PID,
+    P_PGID
+};
+typedef enum idtype_t idtype_t;
+union wait {
+    int w_status;
+    struct {
+        unsigned int __w_termsig : (IntegerLiteral 0x175e080 </usr/include/x86_64-linux-gnu/bits/waitstatus.h:72:27> 'int' 7)
+;
+        unsigned int __w_coredump : (IntegerLiteral 0x175e0f8 </usr/include/x86_64-linux-gnu/bits/waitstatus.h:73:28> 'int' 1)
+;
+        unsigned int __w_retcode : (IntegerLiteral 0x175e178 </usr/include/x86_64-linux-gnu/bits/waitstatus.h:74:27> 'int' 8)
+;
+        unsigned int : (IntegerLiteral 0x175e1f8 </usr/include/x86_64-linux-gnu/bits/waitstatus.h:75:15> 'int' 16)
+;
+    };
+    struct <anonymous struct at /usr/include/x86_64-linux-gnu/bits/waitstatus.h:69:5> __wait_terminated;
+    struct {
+        unsigned int __w_stopval : (IntegerLiteral 0x175e3c0 </usr/include/x86_64-linux-gnu/bits/waitstatus.h:87:27> 'int' 8)
+;
+        unsigned int __w_stopsig : (IntegerLiteral 0x175e438 </usr/include/x86_64-linux-gnu/bits/waitstatus.h:88:27> 'int' 8)
+;
+        unsigned int : (IntegerLiteral 0x175e4b8 </usr/include/x86_64-linux-gnu/bits/waitstatus.h:89:15> 'int' 16)
+;
+    };
+    struct <anonymous struct at /usr/include/x86_64-linux-gnu/bits/waitstatus.h:84:5> __wait_stopped;
+};
+union {
+    union wait *__uptr;
+    int *__iptr;
+};
+typedef union __WAIT_STATUS __WAIT_STATUS;
+struct {
+    int quot;
+    int rem;
+};
+typedef struct div_t div_t;
+struct {
+    long quot;
+    long rem;
+};
+typedef struct ldiv_t ldiv_t;
+struct {
+    long long quot;
+    long long rem;
+};
+typedef struct lldiv_t lldiv_t;
+extern size_t __ctype_get_mb_cur_max() __attribute__((nothrow));
+extern double atof(const char *__nptr) __attribute__((nonnull(0))) __attribute__((pure)) __attribute__((nothrow));
+extern int atoi(const char *__nptr) __attribute__((nonnull(0))) __attribute__((pure)) __attribute__((nothrow));
+extern long atol(const char *__nptr) __attribute__((nonnull(0))) __attribute__((pure)) __attribute__((nothrow));
+extern long long atoll(const char *__nptr) __attribute__((nonnull(0))) __attribute__((pure)) __attribute__((nothrow));
+extern double strtod(const char *restrict __nptr, char **restrict __endptr) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern float strtof(const char *restrict __nptr, char **restrict __endptr) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern long double strtold(const char *restrict __nptr, char **restrict __endptr) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern long strtol(const char *restrict __nptr, char **restrict __endptr, int __base) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern unsigned long strtoul(const char *restrict __nptr, char **restrict __endptr, int __base) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern long long strtoq(const char *restrict __nptr, char **restrict __endptr, int __base) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern unsigned long long strtouq(const char *restrict __nptr, char **restrict __endptr, int __base) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern long long strtoll(const char *restrict __nptr, char **restrict __endptr, int __base) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern unsigned long long strtoull(const char *restrict __nptr, char **restrict __endptr, int __base) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern char *l64a(long __n) __attribute__((nothrow));
+extern long a64l(const char *__s) __attribute__((nonnull(0))) __attribute__((pure)) __attribute__((nothrow));
+typedef __u_char u_char;
+typedef __u_short u_short;
+typedef __u_int u_int;
+typedef __u_long u_long;
+typedef __quad_t quad_t;
+typedef __u_quad_t u_quad_t;
+typedef __fsid_t fsid_t;
+typedef __loff_t loff_t;
+typedef __ino_t ino_t;
+typedef __dev_t dev_t;
+typedef __gid_t gid_t;
+typedef __mode_t mode_t;
+typedef __nlink_t nlink_t;
+typedef __uid_t uid_t;
+typedef __pid_t pid_t;
+typedef __id_t id_t;
+typedef __daddr_t daddr_t;
+typedef __caddr_t caddr_t;
+typedef __key_t key_t;
+typedef __clock_t clock_t;
+typedef __time_t time_t;
+typedef __clockid_t clockid_t;
+typedef __timer_t timer_t;
+typedef unsigned long ulong;
+typedef unsigned short ushort;
+typedef unsigned int uint;
+typedef signed char int8_t;
+typedef short int16_t;
+typedef int int32_t;
+typedef long int64_t;
+typedef unsigned char u_int8_t;
+typedef unsigned short u_int16_t;
+typedef unsigned int u_int32_t;
+typedef unsigned long u_int64_t;
+typedef long register_t;
+typedef int __sig_atomic_t;
+struct {
+    unsigned long __val[16];
+};
+typedef struct __sigset_t __sigset_t;
+typedef __sigset_t sigset_t;
+struct timespec {
+    __time_t tv_sec;
+    __syscall_slong_t tv_nsec;
+};
+struct timeval {
+    __time_t tv_sec;
+    __suseconds_t tv_usec;
+};
+typedef __suseconds_t suseconds_t;
+typedef long __fd_mask;
+struct {
+    __fd_mask __fds_bits[16];
+};
+typedef struct fd_set fd_set;
+typedef __fd_mask fd_mask;
+extern int select(int __nfds, fd_set *restrict __readfds, fd_set *restrict __writefds, fd_set *restrict __exceptfds, struct timeval *restrict __timeout);
+extern int pselect(int __nfds, fd_set *restrict __readfds, fd_set *restrict __writefds, fd_set *restrict __exceptfds, const struct timespec *restrict __timeout, const __sigset_t *restrict __sigmask);
+extern unsigned int gnu_dev_major(unsigned long long __dev) __attribute__((const)) __attribute__((nothrow));
+extern unsigned int gnu_dev_minor(unsigned long long __dev) __attribute__((const)) __attribute__((nothrow));
+extern unsigned long long gnu_dev_makedev(unsigned int __major, unsigned int __minor) __attribute__((const)) __attribute__((nothrow));
+typedef __blksize_t blksize_t;
+typedef __blkcnt_t blkcnt_t;
+typedef __fsblkcnt_t fsblkcnt_t;
+typedef __fsfilcnt_t fsfilcnt_t;
+typedef unsigned long pthread_t;
+union pthread_attr_t {
+    char __size[56];
+    long __align;
+};
+typedef union pthread_attr_t pthread_attr_t;
+struct __pthread_internal_list {
+    struct __pthread_internal_list *__prev;
+    struct __pthread_internal_list *__next;
+};
+typedef struct __pthread_internal_list __pthread_list_t;
+union {
+    struct __pthread_mutex_s {
+        int __lock;
+        unsigned int __count;
+        int __owner;
+        unsigned int __nusers;
+        int __kind;
+        short __spins;
+        short __elision;
+        __pthread_list_t __list;
+    };
+    struct __pthread_mutex_s __data;
+    char __size[40];
+    long __align;
+};
+typedef union pthread_mutex_t pthread_mutex_t;
+union {
+    char __size[4];
+    int __align;
+};
+typedef union pthread_mutexattr_t pthread_mutexattr_t;
+union {
+    struct {
+        int __lock;
+        unsigned int __futex;
+        unsigned long long __total_seq;
+        unsigned long long __wakeup_seq;
+        unsigned long long __woken_seq;
+        void *__mutex;
+        unsigned int __nwaiters;
+        unsigned int __broadcast_seq;
+    };
+    struct <anonymous struct at /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:140:3> __data;
+    char __size[48];
+    long long __align;
+};
+typedef union pthread_cond_t pthread_cond_t;
+union {
+    char __size[4];
+    int __align;
+};
+typedef union pthread_condattr_t pthread_condattr_t;
+typedef unsigned int pthread_key_t;
+typedef int pthread_once_t;
+union {
+    struct {
+        int __lock;
+        unsigned int __nr_readers;
+        unsigned int __readers_wakeup;
+        unsigned int __writer_wakeup;
+        unsigned int __nr_readers_queued;
+        unsigned int __nr_writers_queued;
+        int __writer;
+        int __shared;
+        unsigned long __pad1;
+        unsigned long __pad2;
+        unsigned int __flags;
+    };
+    struct <anonymous struct at /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:176:3> __data;
+    char __size[56];
+    long __align;
+};
+typedef union pthread_rwlock_t pthread_rwlock_t;
+union {
+    char __size[8];
+    long __align;
+};
+typedef union pthread_rwlockattr_t pthread_rwlockattr_t;
+typedef volatile int pthread_spinlock_t;
+union {
+    char __size[32];
+    long __align;
+};
+typedef union pthread_barrier_t pthread_barrier_t;
+union {
+    char __size[4];
+    int __align;
+};
+typedef union pthread_barrierattr_t pthread_barrierattr_t;
+extern long random() __attribute__((nothrow));
+extern void srandom(unsigned int __seed) __attribute__((nothrow));
+extern char *initstate(unsigned int __seed, char *__statebuf, size_t __statelen) __attribute__((nonnull(1))) __attribute__((nothrow));
+extern char *setstate(char *__statebuf) __attribute__((nonnull(0))) __attribute__((nothrow));
+struct random_data {
+    int32_t *fptr;
+    int32_t *rptr;
+    int32_t *state;
+    int rand_type;
+    int rand_deg;
+    int rand_sep;
+    int32_t *end_ptr;
+};
+extern int random_r(struct random_data *restrict __buf, int32_t *restrict __result) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+extern int srandom_r(unsigned int __seed, struct random_data *__buf) __attribute__((nonnull(1))) __attribute__((nothrow));
+extern int initstate_r(unsigned int __seed, char *restrict __statebuf, size_t __statelen, struct random_data *restrict __buf) __attribute__((nonnull(1, 3))) __attribute__((nothrow));
+extern int setstate_r(char *restrict __statebuf, struct random_data *restrict __buf) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+extern int rand() __attribute__((nothrow));
+extern void srand(unsigned int __seed) __attribute__((nothrow));
+extern int rand_r(unsigned int *__seed) __attribute__((nothrow));
+extern double drand48() __attribute__((nothrow));
+extern double erand48(unsigned short __xsubi[3]) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern long lrand48() __attribute__((nothrow));
+extern long nrand48(unsigned short __xsubi[3]) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern long mrand48() __attribute__((nothrow));
+extern long jrand48(unsigned short __xsubi[3]) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern void srand48(long __seedval) __attribute__((nothrow));
+extern unsigned short *seed48(unsigned short __seed16v[3]) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern void lcong48(unsigned short __param[7]) __attribute__((nonnull(0))) __attribute__((nothrow));
+struct drand48_data {
+    unsigned short __x[3];
+    unsigned short __old_x[3];
+    unsigned short __c;
+    unsigned short __init;
+    unsigned long long __a;
+};
+extern int drand48_r(struct drand48_data *restrict __buffer, double *restrict __result) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+extern int erand48_r(unsigned short __xsubi[3], struct drand48_data *restrict __buffer, double *restrict __result) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+extern int lrand48_r(struct drand48_data *restrict __buffer, long *restrict __result) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+extern int nrand48_r(unsigned short __xsubi[3], struct drand48_data *restrict __buffer, long *restrict __result) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+extern int mrand48_r(struct drand48_data *restrict __buffer, long *restrict __result) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+extern int jrand48_r(unsigned short __xsubi[3], struct drand48_data *restrict __buffer, long *restrict __result) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+extern int srand48_r(long __seedval, struct drand48_data *__buffer) __attribute__((nonnull(1))) __attribute__((nothrow));
+extern int seed48_r(unsigned short __seed16v[3], struct drand48_data *__buffer) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+extern int lcong48_r(unsigned short __param[7], struct drand48_data *__buffer) __attribute__((nonnull(0, 1))) __attribute__((nothrow));
+void *malloc(unsigned long);
+extern void *malloc(size_t __size) __attribute__((malloc)) __attribute__((nothrow));
+void *calloc(unsigned long, unsigned long);
+extern void *calloc(size_t __nmemb, size_t __size) __attribute__((malloc)) __attribute__((nothrow));
+void *realloc(void *, unsigned long);
+extern void *realloc(void *__ptr, size_t __size) __attribute__((warn_unused_result)) __attribute__((nothrow));
+extern void free(void *__ptr) __attribute__((nothrow));
+extern void cfree(void *__ptr) __attribute__((nothrow));
+void *alloca(unsigned long);
+extern void *alloca(size_t __size) __attribute__((nothrow));
+extern void *valloc(size_t __size) __attribute__((malloc)) __attribute__((nothrow));
+extern int posix_memalign(void **__memptr, size_t __alignment, size_t __size) __attribute__((nonnull(0))) __attribute__((nothrow));
+void abort();
+extern void abort() __attribute__((nothrow));
+extern int atexit(void (*__func)(void)) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern int on_exit(void (*__func)(int, void *), void *__arg) __attribute__((nonnull(0))) __attribute__((nothrow));
+void exit(int);
+extern void exit(int __status) __attribute__((nothrow));
+void _Exit(int);
+extern void _Exit(int __status) __attribute__((nothrow));
+extern char *getenv(const char *__name) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern int putenv(char *__string) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern int setenv(const char *__name, const char *__value, int __replace) __attribute__((nonnull(1))) __attribute__((nothrow));
+extern int unsetenv(const char *__name) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern int clearenv() __attribute__((nothrow));
+extern char *mktemp(char *__template) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern int mkstemp(char *__template) __attribute__((nonnull(0)));
+extern int mkstemps(char *__template, int __suffixlen) __attribute__((nonnull(0)));
+extern char *mkdtemp(char *__template) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern int system(const char *__command);
+extern char *realpath(const char *restrict __name, char *restrict __resolved) __attribute__((nothrow));
+typedef int (*__compar_fn_t)(const void *, const void *);
+extern void *bsearch(const void *__key, const void *__base, size_t __nmemb, size_t __size, __compar_fn_t __compar) __attribute__((nonnull(0, 1, 4)));
+extern void qsort(void *__base, size_t __nmemb, size_t __size, __compar_fn_t __compar) __attribute__((nonnull(0, 3)));
+extern int abs(int __x) __attribute__((const)) __attribute__((nothrow));
+extern long labs(long __x) __attribute__((const)) __attribute__((nothrow));
+extern long long llabs(long long __x) __attribute__((const)) __attribute__((nothrow));
+extern div_t div(int __numer, int __denom) __attribute__((const)) __attribute__((nothrow));
+extern ldiv_t ldiv(long __numer, long __denom) __attribute__((const)) __attribute__((nothrow));
+extern lldiv_t lldiv(long long __numer, long long __denom) __attribute__((const)) __attribute__((nothrow));
+extern char *ecvt(double __value, int __ndigit, int *restrict __decpt, int *restrict __sign) __attribute__((nonnull(2, 3))) __attribute__((nothrow));
+extern char *fcvt(double __value, int __ndigit, int *restrict __decpt, int *restrict __sign) __attribute__((nonnull(2, 3))) __attribute__((nothrow));
+extern char *gcvt(double __value, int __ndigit, char *__buf) __attribute__((nonnull(2))) __attribute__((nothrow));
+extern char *qecvt(long double __value, int __ndigit, int *restrict __decpt, int *restrict __sign) __attribute__((nonnull(2, 3))) __attribute__((nothrow));
+extern char *qfcvt(long double __value, int __ndigit, int *restrict __decpt, int *restrict __sign) __attribute__((nonnull(2, 3))) __attribute__((nothrow));
+extern char *qgcvt(long double __value, int __ndigit, char *__buf) __attribute__((nonnull(2))) __attribute__((nothrow));
+extern int ecvt_r(double __value, int __ndigit, int *restrict __decpt, int *restrict __sign, char *restrict __buf, size_t __len) __attribute__((nonnull(2, 3, 4))) __attribute__((nothrow));
+extern int fcvt_r(double __value, int __ndigit, int *restrict __decpt, int *restrict __sign, char *restrict __buf, size_t __len) __attribute__((nonnull(2, 3, 4))) __attribute__((nothrow));
+extern int qecvt_r(long double __value, int __ndigit, int *restrict __decpt, int *restrict __sign, char *restrict __buf, size_t __len) __attribute__((nonnull(2, 3, 4))) __attribute__((nothrow));
+extern int qfcvt_r(long double __value, int __ndigit, int *restrict __decpt, int *restrict __sign, char *restrict __buf, size_t __len) __attribute__((nonnull(2, 3, 4))) __attribute__((nothrow));
+extern int mblen(const char *__s, size_t __n) __attribute__((nothrow));
+extern int mbtowc(wchar_t *restrict __pwc, const char *restrict __s, size_t __n) __attribute__((nothrow));
+extern int wctomb(char *__s, wchar_t __wchar) __attribute__((nothrow));
+extern size_t mbstowcs(wchar_t *restrict __pwcs, const char *restrict __s, size_t __n) __attribute__((nothrow));
+extern size_t wcstombs(char *restrict __s, const wchar_t *restrict __pwcs, size_t __n) __attribute__((nothrow));
+extern int rpmatch(const char *__response) __attribute__((nonnull(0))) __attribute__((nothrow));
+extern int getsubopt(char **restrict __optionp, char *const *restrict __tokens, char **restrict __valuep) __attribute__((nonnull(0, 1, 2))) __attribute__((nothrow));
+extern int getloadavg(double __loadavg[], int __nelem) __attribute__((nonnull(0))) __attribute__((nothrow));
+struct btnode {
+    int value;
+    struct btnode *r;
+    struct btnode *l;
+};
+struct btnode *root = (ImplicitCastExpr 0x17a3c30 </home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:16, col:25> 'struct btnode *' <NullToPointer>
+  (ParenExpr 0x17a3c10 <col:16, col:25> 'void *'
+    (CStyleCastExpr 0x17a3be8 <col:17, col:24> 'void *' <NullToPointer>
+      (IntegerLiteral 0x17a3bb8 <col:24> 'int' 0))))
+;
+struct btnode *temp = (ImplicitCastExpr 0x17a3d40 </home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:16, col:25> 'struct btnode *' <NullToPointer>
+  (ParenExpr 0x17a3d20 <col:16, col:25> 'void *'
+    (CStyleCastExpr 0x17a3cf8 <col:17, col:24> 'void *' <NullToPointer>
+      (IntegerLiteral 0x17a3cc8 <col:24> 'int' 0))))
+;
+void create();
+void insert();
+void add(struct btnode *t);
+void computesum(struct btnode *t);
+void display();
+int count = (IntegerLiteral 0x17a4378 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:19:13> 'int' 0)
+;
+int sum[100] = (InitListExpr 0x17a44e0 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:19:27, col:29> 'int [100]'
+  (IntegerLiteral 0x17a4478 <col:28> 'int' 0))
+;
+int max = (IntegerLiteral 0x17a45a8 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:19:38> 'int' 0)
+;
+void main() (CompoundStmt 0x17a55e8 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:22:1, line:51:1>
+  (DeclStmt 0x17a4718 <line:23:5, col:11>
+    (0x17a46c0 "int ch"))
+  (CallExpr 0x17a4800 <line:25:5, col:31> 'int'
+    (ImplicitCastExpr 0x17a47e8 <col:5> 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+      (DeclRefExpr 0x17a4730 <col:5> 'int (const char *restrict, ...)' Function 0x174e930 'printf' 'int (const char *restrict, ...)'))
+    (ImplicitCastExpr 0x17a4848 <col:12> 'const char *' <BitCast>
+      (ImplicitCastExpr 0x17a4830 <col:12> 'char *' <ArrayToPointerDecay>
+        (StringLiteral 0x17a4758 <col:12> 'char [17]' lvalue "\n OPERATIONS ---"))))
+  (CallExpr 0x17a4928 <line:26:5, col:47> 'int'
+    (ImplicitCastExpr 0x17a4910 <col:5> 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+      (DeclRefExpr 0x17a4860 <col:5> 'int (const char *restrict, ...)' Function 0x174e930 'printf' 'int (const char *restrict, ...)'))
+    (ImplicitCastExpr 0x17a4970 <col:12> 'const char *' <BitCast>
+      (ImplicitCastExpr 0x17a4958 <col:12> 'char *' <ArrayToPointerDecay>
+        (StringLiteral 0x17a48c8 <col:12> 'char [33]' lvalue "\n 1] Insert an element into tree"))))
+  (CallExpr 0x17a4a60 <line:27:5, col:69> 'int'
+    (ImplicitCastExpr 0x17a4a48 <col:5> 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+      (DeclRefExpr 0x17a4988 <col:5> 'int (const char *restrict, ...)' Function 0x174e930 'printf' 'int (const char *restrict, ...)'))
+    (ImplicitCastExpr 0x17a4aa8 <col:12> 'const char *' <BitCast>
+      (ImplicitCastExpr 0x17a4a90 <col:12> 'char *' <ArrayToPointerDecay>
+        (StringLiteral 0x17a49e8 <col:12> 'char [55]' lvalue "\n 2] Display the sum of the elements at the same level"))))
+  (CallExpr 0x17a4b98 <line:28:5, col:25> 'int'
+    (ImplicitCastExpr 0x17a4b80 <col:5> 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+      (DeclRefExpr 0x17a4ac0 <col:5> 'int (const char *restrict, ...)' Function 0x174e930 'printf' 'int (const char *restrict, ...)'))
+    (ImplicitCastExpr 0x17a4be0 <col:12> 'const char *' <BitCast>
+      (ImplicitCastExpr 0x17a4bc8 <col:12> 'char *' <ArrayToPointerDecay>
+        (StringLiteral 0x17a4b28 <col:12> 'char [11]' lvalue "\n 3] Exit "))))
+  (WhileStmt 0x17a55c0 <line:29:5, line:50:5>
+    (<<<NULL>>>)
+    (IntegerLiteral 0x17a4bf8 <line:29:12> 'int' 1)
+    (CompoundStmt 0x17a5590 <line:30:5, line:50:5>
+      (CallExpr 0x17a4cd0 <line:31:9, col:40> 'int'
+        (ImplicitCastExpr 0x17a4cb8 <col:9> 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+          (DeclRefExpr 0x17a4c18 <col:9> 'int (const char *restrict, ...)' Function 0x174e930 'printf' 'int (const char *restrict, ...)'))
+        (ImplicitCastExpr 0x17a4d18 <col:16> 'const char *' <BitCast>
+          (ImplicitCastExpr 0x17a4d00 <col:16> 'char *' <ArrayToPointerDecay>
+            (StringLiteral 0x17a4c78 <col:16> 'char [22]' lvalue "\nEnter your choice : "))))
+      (CallExpr 0x17a4e28 <line:32:9, col:24> 'int'
+        (ImplicitCastExpr 0x17a4e10 <col:9> 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+          (DeclRefExpr 0x17a4d30 <col:9> 'int (const char *restrict, ...)' Function 0x1752080 'scanf' 'int (const char *restrict, ...)'))
+        (ImplicitCastExpr 0x17a4e78 <col:15> 'const char *' <BitCast>
+          (ImplicitCastExpr 0x17a4e60 <col:15> 'char *' <ArrayToPointerDecay>
+            (StringLiteral 0x17a4d98 <col:15> 'char [3]' lvalue "%d")))
+        (UnaryOperator 0x17a4df0 <col:21, col:22> 'int *' prefix '&'
+          (DeclRefExpr 0x17a4dc8 <col:22> 'int' lvalue Var 0x17a46c0 'ch' 'int')))
+      (SwitchStmt 0x17a4ed0 <line:33:9, line:49:9>
+        (<<<NULL>>>)
+        (ImplicitCastExpr 0x17a4eb8 <line:33:17> 'int' <LValueToRValue>
+          (DeclRefExpr 0x17a4e90 <col:17> 'int' lvalue Var 0x17a46c0 'ch' 'int'))
+        (CompoundStmt 0x17a5528 <line:34:9, line:49:9>
+          (CaseStmt 0x17a4f20 <line:35:9, line:36:20>
+            (IntegerLiteral 0x17a4f00 <line:35:14> 'int' 1)
+            (<<<NULL>>>)
+            (CallExpr 0x17a4fc0 <line:36:13, col:20> 'void'
+              (ImplicitCastExpr 0x17a4fa8 <col:13> 'void (*)()' <FunctionToPointerDecay>
+                (DeclRefExpr 0x17a4f58 <col:13> 'void ()' Function 0x17a3e90 'insert' 'void ()'))))
+          (BreakStmt 0x17a4fe8 <line:37:13>)
+          (CaseStmt 0x17a5018 <line:38:9, line:39:21>
+            (IntegerLiteral 0x17a4ff8 <line:38:14> 'int' 2)
+            (<<<NULL>>>)
+            (BinaryOperator 0x17a5098 <line:39:13, col:21> 'int' '='
+              (DeclRefExpr 0x17a5050 <col:13> 'int' lvalue Var 0x17a4320 'count' 'int')
+              (IntegerLiteral 0x17a5078 <col:21> 'int' 0)))
+          (BinaryOperator 0x17a5108 <line:40:13, col:19> 'int' '='
+            (DeclRefExpr 0x17a50c0 <col:13> 'int' lvalue Var 0x17a4550 'max' 'int')
+            (IntegerLiteral 0x17a50e8 <col:19> 'int' 0))
+          (CallExpr 0x17a51f0 <line:41:13, col:28> 'void'
+            (ImplicitCastExpr 0x17a51d8 <col:13> 'void (*)(struct btnode *)' <FunctionToPointerDecay>
+              (DeclRefExpr 0x17a5130 <col:13> 'void (struct btnode *)' Function 0x17a41a0 'computesum' 'void (struct btnode *)'))
+            (ImplicitCastExpr 0x17a5220 <col:24> 'struct btnode *' <LValueToRValue>
+              (DeclRefExpr 0x17a5158 <col:24> 'struct btnode *' lvalue Var 0x17a3b60 'root' 'struct btnode *')))
+          (CallExpr 0x17a5278 <line:42:13, col:21> 'void'
+            (ImplicitCastExpr 0x17a5260 <col:13> 'void (*)()' <FunctionToPointerDecay>
+              (DeclRefExpr 0x17a5238 <col:13> 'void ()' Function 0x17a4270 'display' 'void ()')))
+          (BreakStmt 0x17a52a0 <line:43:13>)
+          (CaseStmt 0x17a52d0 <line:44:9, line:45:19>
+            (IntegerLiteral 0x17a52b0 <line:44:14> 'int' 3)
+            (<<<NULL>>>)
+            (CallExpr 0x17a5390 <line:45:13, col:19> 'void'
+              (ImplicitCastExpr 0x17a5378 <col:13> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+                (DeclRefExpr 0x17a5308 <col:13> 'void (int) __attribute__((noreturn))' Function 0x179ae20 'exit' 'void (int) __attribute__((noreturn))'))
+              (IntegerLiteral 0x17a5330 <col:18> 'int' 0)))
+          (DefaultStmt 0x17a54f8 <line:46:9, line:47:65>
+            (CallExpr 0x17a5498 <col:13, col:65> 'int'
+              (ImplicitCastExpr 0x17a5480 <col:13> 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+                (DeclRefExpr 0x17a53c0 <col:13> 'int (const char *restrict, ...)' Function 0x174e930 'printf' 'int (const char *restrict, ...)'))
+              (ImplicitCastExpr 0x17a54e0 <col:20> 'const char *' <BitCast>
+                (ImplicitCastExpr 0x17a54c8 <col:20> 'char *' <ArrayToPointerDecay>
+                  (StringLiteral 0x17a5428 <col:20> 'char [44]' lvalue "Wrong choice, Please enter correct choice  ")))))
+          (BreakStmt 0x17a5518 <line:48:13>))))))
+
+
+void create() (CompoundStmt 0x17a5e98 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:55:1, line:63:1>
+  (DeclStmt 0x17a5758 <line:56:5, col:13>
+    (0x17a5700 "int data"))
+  (CallExpr 0x17a5838 <line:58:5, col:39> 'int'
+    (ImplicitCastExpr 0x17a5820 <col:5> 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+      (DeclRefExpr 0x17a5770 <col:5> 'int (const char *restrict, ...)' Function 0x174e930 'printf' 'int (const char *restrict, ...)'))
+    (ImplicitCastExpr 0x17a5880 <col:12> 'const char *' <BitCast>
+      (ImplicitCastExpr 0x17a5868 <col:12> 'char *' <ArrayToPointerDecay>
+        (StringLiteral 0x17a57d8 <col:12> 'char [26]' lvalue "Enter the data of node : "))))
+  (CallExpr 0x17a5950 <line:59:5, col:22> 'int'
+    (ImplicitCastExpr 0x17a5938 <col:5> 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+      (DeclRefExpr 0x17a5898 <col:5> 'int (const char *restrict, ...)' Function 0x1752080 'scanf' 'int (const char *restrict, ...)'))
+    (ImplicitCastExpr 0x17a59a0 <col:11> 'const char *' <BitCast>
+      (ImplicitCastExpr 0x17a5988 <col:11> 'char *' <ArrayToPointerDecay>
+        (StringLiteral 0x17a58c0 <col:11> 'char [3]' lvalue "%d")))
+    (UnaryOperator 0x17a5918 <col:17, col:18> 'int *' prefix '&'
+      (DeclRefExpr 0x17a58f0 <col:18> 'int' lvalue Var 0x17a5700 'data' 'int')))
+  (BinaryOperator 0x17a5bd8 <line:60:5, col:62> 'struct btnode *' '='
+    (DeclRefExpr 0x17a59b8 <col:5> 'struct btnode *' lvalue Var 0x17a3c70 'temp' 'struct btnode *')
+    (CStyleCastExpr 0x17a5bb0 <col:12, col:62> 'struct btnode *' <BitCast>
+      (CallExpr 0x17a5b40 <col:30, col:62> 'void *'
+        (ImplicitCastExpr 0x17a5b28 <col:30> 'void *(*)(size_t)' <FunctionToPointerDecay>
+          (DeclRefExpr 0x17a59e0 <col:30> 'void *(size_t)' Function 0x1797800 'malloc' 'void *(size_t)'))
+        (BinaryOperator 0x17a5aa0 <col:37, col:61> 'unsigned long' '*'
+          (ImplicitCastExpr 0x17a5a88 <col:37> 'unsigned long' <IntegralCast>
+            (IntegerLiteral 0x17a5a08 <col:37> 'int' 1))
+          (ParenExpr 0x17a5a68 <col:39, col:61> 'unsigned long'
+            (UnaryExprOrTypeTraitExpr 0x17a5a48 <col:40, col:60> 'unsigned long' sizeof 'struct btnode':'struct btnode'))))))
+  (BinaryOperator 0x17a5cb0 <line:61:5, col:19> 'int' '='
+    (MemberExpr 0x17a5c40 <col:5, col:11> 'int' lvalue ->value 0x17a3430
+      (ImplicitCastExpr 0x17a5c28 <col:5> 'struct btnode *' <LValueToRValue>
+        (DeclRefExpr 0x17a5c00 <col:5> 'struct btnode *' lvalue Var 0x17a3c70 'temp' 'struct btnode *')))
+    (ImplicitCastExpr 0x17a5c98 <col:19> 'int' <LValueToRValue>
+      (DeclRefExpr 0x17a5c70 <col:19> 'int' lvalue Var 0x17a5700 'data' 'int')))
+  (BinaryOperator 0x17a5e70 <line:62:5, /home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:25> 'struct btnode *' '='
+    (MemberExpr 0x17a5d18 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:62:5, col:11> 'struct btnode *' lvalue ->l 0x17a35a0
+      (ImplicitCastExpr 0x17a5d00 <col:5> 'struct btnode *' <LValueToRValue>
+        (DeclRefExpr 0x17a5cd8 <col:5> 'struct btnode *' lvalue Var 0x17a3c70 'temp' 'struct btnode *')))
+    (BinaryOperator 0x17a5e48 <col:15, /home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:25> 'struct btnode *' '='
+      (MemberExpr 0x17a5d88 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:62:15, col:21> 'struct btnode *' lvalue ->r 0x17a3530
+        (ImplicitCastExpr 0x17a5d70 <col:15> 'struct btnode *' <LValueToRValue>
+          (DeclRefExpr 0x17a5d48 <col:15> 'struct btnode *' lvalue Var 0x17a3c70 'temp' 'struct btnode *')))
+      (ImplicitCastExpr 0x17a5e30 </home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:16, col:25> 'struct btnode *' <NullToPointer>
+        (ParenExpr 0x17a5e10 <col:16, col:25> 'void *'
+          (CStyleCastExpr 0x17a5de8 <col:17, col:24> 'void *' <NullToPointer>
+            (IntegerLiteral 0x17a5db8 <col:24> 'int' 0)))))))
+
+
+void insert() (CompoundStmt 0x17a6270 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:67:1, line:74:1>
+  (CallExpr 0x17a5fe0 <line:68:5, col:12> 'void'
+    (ImplicitCastExpr 0x17a5fc8 <col:5> 'void (*)()' <FunctionToPointerDecay>
+      (DeclRefExpr 0x17a5fa0 <col:5> 'void ()' Function 0x17a5650 'create' 'void ()')))
+  (IfStmt 0x17a6240 <line:70:5, line:73:17>
+    (<<<NULL>>>)
+    (BinaryOperator 0x17a60d8 <line:70:9, /home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:25> 'int' '=='
+      (ImplicitCastExpr 0x17a60a8 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:70:9> 'struct btnode *' <LValueToRValue>
+        (DeclRefExpr 0x17a6008 <col:9> 'struct btnode *' lvalue Var 0x17a3b60 'root' 'struct btnode *'))
+      (ImplicitCastExpr 0x17a60c0 </home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:16, col:25> 'struct btnode *' <BitCast>
+        (ParenExpr 0x17a6088 <col:16, col:25> 'void *'
+          (CStyleCastExpr 0x17a6060 <col:17, col:24> 'void *' <NullToPointer>
+            (IntegerLiteral 0x17a6030 <col:24> 'int' 0)))))
+    (BinaryOperator 0x17a6168 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:71:9, col:16> 'struct btnode *' '='
+      (DeclRefExpr 0x17a6100 <col:9> 'struct btnode *' lvalue Var 0x17a3b60 'root' 'struct btnode *')
+      (ImplicitCastExpr 0x17a6150 <col:16> 'struct btnode *' <LValueToRValue>
+        (DeclRefExpr 0x17a6128 <col:16> 'struct btnode *' lvalue Var 0x17a3c70 'temp' 'struct btnode *')))
+    (CallExpr 0x17a61f8 <line:73:9, col:17> 'void'
+      (ImplicitCastExpr 0x17a61e0 <col:9> 'void (*)(struct btnode *)' <FunctionToPointerDecay>
+        (DeclRefExpr 0x17a6190 <col:9> 'void (struct btnode *)' Function 0x17a4050 'add' 'void (struct btnode *)'))
+      (ImplicitCastExpr 0x17a6228 <col:13> 'struct btnode *' <LValueToRValue>
+        (DeclRefExpr 0x17a61b8 <col:13> 'struct btnode *' lvalue Var 0x17a3b60 'root' 'struct btnode *')))))
+
+
+void add(struct btnode *t) (CompoundStmt 0x17a7818 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:78:1, line:87:1>
+  (IfStmt 0x17a77e8 <line:79:5, line:86:16>
+    (<<<NULL>>>)
+    (BinaryOperator 0x17a66a0 <line:79:9, col:50> 'int' '&&'
+      (ParenExpr 0x17a6520 <col:9, col:32> 'int'
+        (BinaryOperator 0x17a64f8 <col:10, col:27> 'int' '>'
+          (ImplicitCastExpr 0x17a64c8 <col:10, col:16> 'int' <LValueToRValue>
+            (MemberExpr 0x17a6428 <col:10, col:16> 'int' lvalue ->value 0x17a3430
+              (ImplicitCastExpr 0x17a6410 <col:10> 'struct btnode *' <LValueToRValue>
+                (DeclRefExpr 0x17a63e8 <col:10> 'struct btnode *' lvalue Var 0x17a3c70 'temp' 'struct btnode *'))))
+          (ImplicitCastExpr 0x17a64e0 <col:24, col:27> 'int' <LValueToRValue>
+            (MemberExpr 0x17a6498 <col:24, col:27> 'int' lvalue ->value 0x17a3430
+              (ImplicitCastExpr 0x17a6480 <col:24> 'struct btnode *' <LValueToRValue>
+                (DeclRefExpr 0x17a6458 <col:24> 'struct btnode *' lvalue ParmVar 0x17a62c0 't' 'struct btnode *'))))))
+      (ParenExpr 0x17a6680 <col:37, col:50> 'int'
+        (BinaryOperator 0x17a6658 <col:38, /home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:25> 'int' '!='
+          (ImplicitCastExpr 0x17a6628 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:79:38, col:41> 'struct btnode *' <LValueToRValue>
+            (MemberExpr 0x17a6580 <col:38, col:41> 'struct btnode *' lvalue ->r 0x17a3530
+              (ImplicitCastExpr 0x17a6568 <col:38> 'struct btnode *' <LValueToRValue>
+                (DeclRefExpr 0x17a6540 <col:38> 'struct btnode *' lvalue ParmVar 0x17a62c0 't' 'struct btnode *'))))
+          (ImplicitCastExpr 0x17a6640 </home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:16, col:25> 'struct btnode *' <BitCast>
+            (ParenExpr 0x17a6608 <col:16, col:25> 'void *'
+              (CStyleCastExpr 0x17a65e0 <col:17, col:24> 'void *' <NullToPointer>
+                (IntegerLiteral 0x17a65b0 <col:24> 'int' 0)))))))
+    (CallExpr 0x17a6778 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:80:9, col:17> 'void'
+      (ImplicitCastExpr 0x17a6760 <col:9> 'void (*)(struct btnode *)' <FunctionToPointerDecay>
+        (DeclRefExpr 0x17a66c8 <col:9> 'void (struct btnode *)' Function 0x17a6340 'add' 'void (struct btnode *)'))
+      (ImplicitCastExpr 0x17a67a8 <col:13, col:16> 'struct btnode *' <LValueToRValue>
+        (MemberExpr 0x17a6730 <col:13, col:16> 'struct btnode *' lvalue ->r 0x17a3530
+          (ImplicitCastExpr 0x17a6718 <col:13> 'struct btnode *' <LValueToRValue>
+            (DeclRefExpr 0x17a66f0 <col:13> 'struct btnode *' lvalue ParmVar 0x17a62c0 't' 'struct btnode *')))))
+    (IfStmt 0x17a77b8 <line:81:10, line:86:16>
+      (<<<NULL>>>)
+      (BinaryOperator 0x17a6a78 <line:81:14, col:55> 'int' '&&'
+        (ParenExpr 0x17a68f8 <col:14, col:37> 'int'
+          (BinaryOperator 0x17a68d0 <col:15, col:32> 'int' '>'
+            (ImplicitCastExpr 0x17a68a0 <col:15, col:21> 'int' <LValueToRValue>
+              (MemberExpr 0x17a6800 <col:15, col:21> 'int' lvalue ->value 0x17a3430
+                (ImplicitCastExpr 0x17a67e8 <col:15> 'struct btnode *' <LValueToRValue>
+                  (DeclRefExpr 0x17a67c0 <col:15> 'struct btnode *' lvalue Var 0x17a3c70 'temp' 'struct btnode *'))))
+            (ImplicitCastExpr 0x17a68b8 <col:29, col:32> 'int' <LValueToRValue>
+              (MemberExpr 0x17a6870 <col:29, col:32> 'int' lvalue ->value 0x17a3430
+                (ImplicitCastExpr 0x17a6858 <col:29> 'struct btnode *' <LValueToRValue>
+                  (DeclRefExpr 0x17a6830 <col:29> 'struct btnode *' lvalue ParmVar 0x17a62c0 't' 'struct btnode *'))))))
+        (ParenExpr 0x17a6a58 <col:42, col:55> 'int'
+          (BinaryOperator 0x17a6a30 <col:43, /home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:25> 'int' '=='
+            (ImplicitCastExpr 0x17a6a00 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:81:43, col:46> 'struct btnode *' <LValueToRValue>
+              (MemberExpr 0x17a6958 <col:43, col:46> 'struct btnode *' lvalue ->r 0x17a3530
+                (ImplicitCastExpr 0x17a6940 <col:43> 'struct btnode *' <LValueToRValue>
+                  (DeclRefExpr 0x17a6918 <col:43> 'struct btnode *' lvalue ParmVar 0x17a62c0 't' 'struct btnode *'))))
+            (ImplicitCastExpr 0x17a6a18 </home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:16, col:25> 'struct btnode *' <BitCast>
+              (ParenExpr 0x17a69e0 <col:16, col:25> 'void *'
+                (CStyleCastExpr 0x17a69b8 <col:17, col:24> 'void *' <NullToPointer>
+                  (IntegerLiteral 0x17a6988 <col:24> 'int' 0)))))))
+      (BinaryOperator 0x17a6fa0 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:82:9, col:16> 'struct btnode *' '='
+        (MemberExpr 0x17a6ae0 <col:9, col:12> 'struct btnode *' lvalue ->r 0x17a3530
+          (ImplicitCastExpr 0x17a6ac8 <col:9> 'struct btnode *' <LValueToRValue>
+            (DeclRefExpr 0x17a6aa0 <col:9> 'struct btnode *' lvalue ParmVar 0x17a62c0 't' 'struct btnode *')))
+        (ImplicitCastExpr 0x17a6b38 <col:16> 'struct btnode *' <LValueToRValue>
+          (DeclRefExpr 0x17a6b10 <col:16> 'struct btnode *' lvalue Var 0x17a3c70 'temp' 'struct btnode *')))
+      (IfStmt 0x17a7788 <line:83:10, line:86:16>
+        (<<<NULL>>>)
+        (BinaryOperator 0x17a7280 <line:83:14, col:55> 'int' '&&'
+          (ParenExpr 0x17a7100 <col:14, col:37> 'int'
+            (BinaryOperator 0x17a70d8 <col:15, col:32> 'int' '<'
+              (ImplicitCastExpr 0x17a70a8 <col:15, col:21> 'int' <LValueToRValue>
+                (MemberExpr 0x17a7008 <col:15, col:21> 'int' lvalue ->value 0x17a3430
+                  (ImplicitCastExpr 0x17a6ff0 <col:15> 'struct btnode *' <LValueToRValue>
+                    (DeclRefExpr 0x17a6fc8 <col:15> 'struct btnode *' lvalue Var 0x17a3c70 'temp' 'struct btnode *'))))
+              (ImplicitCastExpr 0x17a70c0 <col:29, col:32> 'int' <LValueToRValue>
+                (MemberExpr 0x17a7078 <col:29, col:32> 'int' lvalue ->value 0x17a3430
+                  (ImplicitCastExpr 0x17a7060 <col:29> 'struct btnode *' <LValueToRValue>
+                    (DeclRefExpr 0x17a7038 <col:29> 'struct btnode *' lvalue ParmVar 0x17a62c0 't' 'struct btnode *'))))))
+          (ParenExpr 0x17a7260 <col:42, col:55> 'int'
+            (BinaryOperator 0x17a7238 <col:43, /home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:25> 'int' '!='
+              (ImplicitCastExpr 0x17a7208 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:83:43, col:46> 'struct btnode *' <LValueToRValue>
+                (MemberExpr 0x17a7160 <col:43, col:46> 'struct btnode *' lvalue ->l 0x17a35a0
+                  (ImplicitCastExpr 0x17a7148 <col:43> 'struct btnode *' <LValueToRValue>
+                    (DeclRefExpr 0x17a7120 <col:43> 'struct btnode *' lvalue ParmVar 0x17a62c0 't' 'struct btnode *'))))
+              (ImplicitCastExpr 0x17a7220 </home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:16, col:25> 'struct btnode *' <BitCast>
+                (ParenExpr 0x17a71e8 <col:16, col:25> 'void *'
+                  (CStyleCastExpr 0x17a71c0 <col:17, col:24> 'void *' <NullToPointer>
+                    (IntegerLiteral 0x17a7190 <col:24> 'int' 0)))))))
+        (CallExpr 0x17a7358 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:84:9, col:17> 'void'
+          (ImplicitCastExpr 0x17a7340 <col:9> 'void (*)(struct btnode *)' <FunctionToPointerDecay>
+            (DeclRefExpr 0x17a72a8 <col:9> 'void (struct btnode *)' Function 0x17a6340 'add' 'void (struct btnode *)'))
+          (ImplicitCastExpr 0x17a7388 <col:13, col:16> 'struct btnode *' <LValueToRValue>
+            (MemberExpr 0x17a7310 <col:13, col:16> 'struct btnode *' lvalue ->l 0x17a35a0
+              (ImplicitCastExpr 0x17a72f8 <col:13> 'struct btnode *' <LValueToRValue>
+                (DeclRefExpr 0x17a72d0 <col:13> 'struct btnode *' lvalue ParmVar 0x17a62c0 't' 'struct btnode *')))))
+        (IfStmt 0x17a7758 <line:85:10, line:86:16>
+          (<<<NULL>>>)
+          (BinaryOperator 0x17a7658 <line:85:14, col:53> 'int' '&&'
+            (ParenExpr 0x17a74d8 <col:14, col:37> 'int'
+              (BinaryOperator 0x17a74b0 <col:15, col:32> 'int' '<'
+                (ImplicitCastExpr 0x17a7480 <col:15, col:21> 'int' <LValueToRValue>
+                  (MemberExpr 0x17a73e0 <col:15, col:21> 'int' lvalue ->value 0x17a3430
+                    (ImplicitCastExpr 0x17a73c8 <col:15> 'struct btnode *' <LValueToRValue>
+                      (DeclRefExpr 0x17a73a0 <col:15> 'struct btnode *' lvalue Var 0x17a3c70 'temp' 'struct btnode *'))))
+                (ImplicitCastExpr 0x17a7498 <col:29, col:32> 'int' <LValueToRValue>
+                  (MemberExpr 0x17a7450 <col:29, col:32> 'int' lvalue ->value 0x17a3430
+                    (ImplicitCastExpr 0x17a7438 <col:29> 'struct btnode *' <LValueToRValue>
+                      (DeclRefExpr 0x17a7410 <col:29> 'struct btnode *' lvalue ParmVar 0x17a62c0 't' 'struct btnode *'))))))
+            (ParenExpr 0x17a7638 <col:42, col:53> 'int'
+              (BinaryOperator 0x17a7610 <col:43, /home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:25> 'int' '=='
+                (ImplicitCastExpr 0x17a75e0 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:85:43, col:46> 'struct btnode *' <LValueToRValue>
+                  (MemberExpr 0x17a7538 <col:43, col:46> 'struct btnode *' lvalue ->l 0x17a35a0
+                    (ImplicitCastExpr 0x17a7520 <col:43> 'struct btnode *' <LValueToRValue>
+                      (DeclRefExpr 0x17a74f8 <col:43> 'struct btnode *' lvalue ParmVar 0x17a62c0 't' 'struct btnode *'))))
+                (ImplicitCastExpr 0x17a75f8 </home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:16, col:25> 'struct btnode *' <BitCast>
+                  (ParenExpr 0x17a75c0 <col:16, col:25> 'void *'
+                    (CStyleCastExpr 0x17a7598 <col:17, col:24> 'void *' <NullToPointer>
+                      (IntegerLiteral 0x17a7568 <col:24> 'int' 0)))))))
+          (BinaryOperator 0x17a7730 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:86:9, col:16> 'struct btnode *' '='
+            (MemberExpr 0x17a76c0 <col:9, col:12> 'struct btnode *' lvalue ->l 0x17a35a0
+              (ImplicitCastExpr 0x17a76a8 <col:9> 'struct btnode *' <LValueToRValue>
+                (DeclRefExpr 0x17a7680 <col:9> 'struct btnode *' lvalue ParmVar 0x17a62c0 't' 'struct btnode *')))
+            (ImplicitCastExpr 0x17a7718 <col:16> 'struct btnode *' <LValueToRValue>
+              (DeclRefExpr 0x17a76f0 <col:16> 'struct btnode *' lvalue Var 0x17a3c70 'temp' 'struct btnode *')))
+          (<<<NULL>>>))))))
+
+
+void computesum(struct btnode *t) (CompoundStmt 0x17a8c68 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:91:1, line:111:1>
+  (IfStmt 0x17a7ba0 <line:92:5, line:96:5>
+    (<<<NULL>>>)
+    (BinaryOperator 0x17a7a58 <line:92:9, /home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:25> 'int' '=='
+      (ImplicitCastExpr 0x17a7a28 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:92:9> 'struct btnode *' <LValueToRValue>
+        (DeclRefExpr 0x17a7988 <col:9> 'struct btnode *' lvalue Var 0x17a3b60 'root' 'struct btnode *'))
+      (ImplicitCastExpr 0x17a7a40 </home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:16, col:25> 'struct btnode *' <BitCast>
+        (ParenExpr 0x17a7a08 <col:16, col:25> 'void *'
+          (CStyleCastExpr 0x17a79e0 <col:17, col:24> 'void *' <NullToPointer>
+            (IntegerLiteral 0x17a79b0 <col:24> 'int' 0)))))
+    (CompoundStmt 0x17a7b78 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:93:5, line:96:5>
+      (CallExpr 0x17a7af8 <line:94:9, col:32> 'int'
+        (ImplicitCastExpr 0x17a7ae0 <col:9> 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+          (DeclRefExpr 0x17a7a80 <col:9> 'int (const char *restrict, ...)' Function 0x174e930 'printf' 'int (const char *restrict, ...)'))
+        (ImplicitCastExpr 0x17a7b40 <col:16> 'const char *' <BitCast>
+          (ImplicitCastExpr 0x17a7b28 <col:16> 'char *' <ArrayToPointerDecay>
+            (StringLiteral 0x17a7aa8 <col:16> 'char [15]' lvalue "Tree is empty "))))
+      (ReturnStmt 0x17a7b58 <line:95:9>))
+    (<<<NULL>>>))
+  (IfStmt 0x17a7e78 <line:97:5, line:101:5>
+    (<<<NULL>>>)
+    (BinaryOperator 0x17a7ce8 <line:97:9, /home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:25> 'int' '!='
+      (ImplicitCastExpr 0x17a7cb8 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:97:9, col:12> 'struct btnode *' <LValueToRValue>
+        (MemberExpr 0x17a7c10 <col:9, col:12> 'struct btnode *' lvalue ->l 0x17a35a0
+          (ImplicitCastExpr 0x17a7bf8 <col:9> 'struct btnode *' <LValueToRValue>
+            (DeclRefExpr 0x17a7bd0 <col:9> 'struct btnode *' lvalue ParmVar 0x17a7860 't' 'struct btnode *'))))
+      (ImplicitCastExpr 0x17a7cd0 </home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:16, col:25> 'struct btnode *' <BitCast>
+        (ParenExpr 0x17a7c98 <col:16, col:25> 'void *'
+          (CStyleCastExpr 0x17a7c70 <col:17, col:24> 'void *' <NullToPointer>
+            (IntegerLiteral 0x17a7c40 <col:24> 'int' 0)))))
+    (CompoundStmt 0x17a7e50 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:98:5, line:101:5>
+      (UnaryOperator 0x17a7d38 <line:99:9, col:14> 'int' postfix '++'
+        (DeclRefExpr 0x17a7d10 <col:9> 'int' lvalue Var 0x17a4320 'count' 'int'))
+      (CallExpr 0x17a7e08 <line:100:9, col:24> 'void'
+        (ImplicitCastExpr 0x17a7df0 <col:9> 'void (*)(struct btnode *)' <FunctionToPointerDecay>
+          (DeclRefExpr 0x17a7d58 <col:9> 'void (struct btnode *)' Function 0x17a78e0 'computesum' 'void (struct btnode *)'))
+        (ImplicitCastExpr 0x17a7e38 <col:20, col:23> 'struct btnode *' <LValueToRValue>
+          (MemberExpr 0x17a7dc0 <col:20, col:23> 'struct btnode *' lvalue ->l 0x17a35a0
+            (ImplicitCastExpr 0x17a7da8 <col:20> 'struct btnode *' <LValueToRValue>
+              (DeclRefExpr 0x17a7d80 <col:20> 'struct btnode *' lvalue ParmVar 0x17a7860 't' 'struct btnode *'))))))
+    (<<<NULL>>>))
+  (BinaryOperator 0x17a87b8 <line:102:5, col:34> 'int' '='
+    (ArraySubscriptExpr 0x17a7f28 <col:5, col:14> 'int' lvalue
+      (ImplicitCastExpr 0x17a7ef8 <col:5> 'int *' <ArrayToPointerDecay>
+        (DeclRefExpr 0x17a7ea8 <col:5> 'int [100]' lvalue Var 0x17a4420 'sum' 'int [100]'))
+      (ImplicitCastExpr 0x17a7f10 <col:9> 'int' <LValueToRValue>
+        (DeclRefExpr 0x17a7ed0 <col:9> 'int' lvalue Var 0x17a4320 'count' 'int')))
+    (BinaryOperator 0x17a8790 <col:18, col:34> 'int' '+'
+      (ImplicitCastExpr 0x17a8760 <col:18, col:27> 'int' <LValueToRValue>
+        (ArraySubscriptExpr 0x17a86c8 <col:18, col:27> 'int' lvalue
+          (ImplicitCastExpr 0x17a8698 <col:18> 'int *' <ArrayToPointerDecay>
+            (DeclRefExpr 0x17a7f50 <col:18> 'int [100]' lvalue Var 0x17a4420 'sum' 'int [100]'))
+          (ImplicitCastExpr 0x17a86b0 <col:22> 'int' <LValueToRValue>
+            (DeclRefExpr 0x17a8670 <col:22> 'int' lvalue Var 0x17a4320 'count' 'int'))))
+      (ImplicitCastExpr 0x17a8778 <col:31, col:34> 'int' <LValueToRValue>
+        (MemberExpr 0x17a8730 <col:31, col:34> 'int' lvalue ->value 0x17a3430
+          (ImplicitCastExpr 0x17a8718 <col:31> 'struct btnode *' <LValueToRValue>
+            (DeclRefExpr 0x17a86f0 <col:31> 'struct btnode *' lvalue ParmVar 0x17a7860 't' 'struct btnode *'))))))
+  (IfStmt 0x17a8918 <line:103:5, line:104:15>
+    (<<<NULL>>>)
+    (BinaryOperator 0x17a8860 <line:103:9, col:15> 'int' '<'
+      (ImplicitCastExpr 0x17a8830 <col:9> 'int' <LValueToRValue>
+        (DeclRefExpr 0x17a87e0 <col:9> 'int' lvalue Var 0x17a4550 'max' 'int'))
+      (ImplicitCastExpr 0x17a8848 <col:15> 'int' <LValueToRValue>
+        (DeclRefExpr 0x17a8808 <col:15> 'int' lvalue Var 0x17a4320 'count' 'int')))
+    (BinaryOperator 0x17a88f0 <line:104:9, col:15> 'int' '='
+      (DeclRefExpr 0x17a8888 <col:9> 'int' lvalue Var 0x17a4550 'max' 'int')
+      (ImplicitCastExpr 0x17a88d8 <col:15> 'int' <LValueToRValue>
+        (DeclRefExpr 0x17a88b0 <col:15> 'int' lvalue Var 0x17a4320 'count' 'int')))
+    (<<<NULL>>>))
+  (IfStmt 0x17a8bf0 <line:105:5, line:109:5>
+    (<<<NULL>>>)
+    (BinaryOperator 0x17a8a60 <line:105:9, /home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:25> 'int' '!='
+      (ImplicitCastExpr 0x17a8a30 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:105:9, col:12> 'struct btnode *' <LValueToRValue>
+        (MemberExpr 0x17a8988 <col:9, col:12> 'struct btnode *' lvalue ->r 0x17a3530
+          (ImplicitCastExpr 0x17a8970 <col:9> 'struct btnode *' <LValueToRValue>
+            (DeclRefExpr 0x17a8948 <col:9> 'struct btnode *' lvalue ParmVar 0x17a7860 't' 'struct btnode *'))))
+      (ImplicitCastExpr 0x17a8a48 </home/frcv-lab/mlsa/mlsa/bin/clang+llvm-3.2-x86_64-linux-ubuntu-12.04/bin/../lib/clang/3.2/include/stddef.h:52:16, col:25> 'struct btnode *' <BitCast>
+        (ParenExpr 0x17a8a10 <col:16, col:25> 'void *'
+          (CStyleCastExpr 0x17a89e8 <col:17, col:24> 'void *' <NullToPointer>
+            (IntegerLiteral 0x17a89b8 <col:24> 'int' 0)))))
+    (CompoundStmt 0x17a8bc8 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:106:5, line:109:5>
+      (UnaryOperator 0x17a8ab0 <line:107:9, col:14> 'int' postfix '++'
+        (DeclRefExpr 0x17a8a88 <col:9> 'int' lvalue Var 0x17a4320 'count' 'int'))
+      (CallExpr 0x17a8b80 <line:108:9, col:24> 'void'
+        (ImplicitCastExpr 0x17a8b68 <col:9> 'void (*)(struct btnode *)' <FunctionToPointerDecay>
+          (DeclRefExpr 0x17a8ad0 <col:9> 'void (struct btnode *)' Function 0x17a78e0 'computesum' 'void (struct btnode *)'))
+        (ImplicitCastExpr 0x17a8bb0 <col:20, col:23> 'struct btnode *' <LValueToRValue>
+          (MemberExpr 0x17a8b38 <col:20, col:23> 'struct btnode *' lvalue ->r 0x17a3530
+            (ImplicitCastExpr 0x17a8b20 <col:20> 'struct btnode *' <LValueToRValue>
+              (DeclRefExpr 0x17a8af8 <col:20> 'struct btnode *' lvalue ParmVar 0x17a7860 't' 'struct btnode *'))))))
+    (<<<NULL>>>))
+  (UnaryOperator 0x17a8c48 <line:110:5, col:10> 'int' postfix '--'
+    (DeclRefExpr 0x17a8c20 <col:5> 'int' lvalue Var 0x17a4320 'count' 'int')))
+
+
+void display() (CompoundStmt 0x17a92d8 </home/frcv-lab/mlsa/mlsa/test/test0-3-2/Summation.c:115:1, line:121:1>
+  (DeclStmt 0x17a8dd8 <line:116:5, col:10>
+    (0x17a8d80 "int i"))
+  (CallExpr 0x17a8eb8 <line:118:5, col:45> 'int'
+    (ImplicitCastExpr 0x17a8ea0 <col:5> 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+      (DeclRefExpr 0x17a8df0 <col:5> 'int (const char *restrict, ...)' Function 0x174e930 'printf' 'int (const char *restrict, ...)'))
+    (ImplicitCastExpr 0x17a8f00 <col:12> 'const char *' <BitCast>
+      (ImplicitCastExpr 0x17a8ee8 <col:12> 'char *' <ArrayToPointerDecay>
+        (StringLiteral 0x17a8e58 <col:12> 'char [30]' lvalue "Sum of nodes : \n Level \t Sum "))))
+  (ForStmt 0x17a9298 <line:119:5, line:120:41>
+    (BinaryOperator 0x17a8f60 <line:119:10, col:14> 'int' '='
+      (DeclRefExpr 0x17a8f18 <col:10> 'int' lvalue Var 0x17a8d80 'i' 'int')
+      (IntegerLiteral 0x17a8f40 <col:14> 'int' 0))
+    (<<<NULL>>>)
+    (BinaryOperator 0x17a9008 <col:17, col:22> 'int' '<='
+      (ImplicitCastExpr 0x17a8fd8 <col:17> 'int' <LValueToRValue>
+        (DeclRefExpr 0x17a8f88 <col:17> 'int' lvalue Var 0x17a8d80 'i' 'int'))
+      (ImplicitCastExpr 0x17a8ff0 <col:22> 'int' <LValueToRValue>
+        (DeclRefExpr 0x17a8fb0 <col:22> 'int' lvalue Var 0x17a4550 'max' 'int')))
+    (UnaryOperator 0x17a9058 <col:27, col:28> 'int' postfix '++'
+      (DeclRefExpr 0x17a9030 <col:27> 'int' lvalue Var 0x17a8d80 'i' 'int'))
+    (CallExpr 0x17a91f8 <line:120:8, col:41> 'int'
+      (ImplicitCastExpr 0x17a91e0 <col:8> 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+        (DeclRefExpr 0x17a9078 <col:8> 'int (const char *restrict, ...)' Function 0x174e930 'printf' 'int (const char *restrict, ...)'))
+      (ImplicitCastExpr 0x17a9250 <col:15> 'const char *' <BitCast>
+        (ImplicitCastExpr 0x17a9238 <col:15> 'char *' <ArrayToPointerDecay>
+          (StringLiteral 0x17a90d8 <col:15> 'char [12]' lvalue "\n %d \t: %d ")))
+      (ImplicitCastExpr 0x17a9268 <col:32> 'int' <LValueToRValue>
+        (DeclRefExpr 0x17a9110 <col:32> 'int' lvalue Var 0x17a8d80 'i' 'int'))
+      (ImplicitCastExpr 0x17a9280 <col:35, col:40> 'int' <LValueToRValue>
+        (ArraySubscriptExpr 0x17a91b8 <col:35, col:40> 'int' lvalue
+          (ImplicitCastExpr 0x17a9188 <col:35> 'int *' <ArrayToPointerDecay>
+            (DeclRefExpr 0x17a9138 <col:35> 'int [100]' lvalue Var 0x17a4420 'sum' 'int [100]'))
+          (ImplicitCastExpr 0x17a91a0 <col:39> 'int' <LValueToRValue>
+            (DeclRefExpr 0x17a9160 <col:39> 'int' lvalue Var 0x17a8d80 'i' 'int')))))))
+
+

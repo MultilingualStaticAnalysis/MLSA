@@ -1,0 +1,169 @@
+\hypertarget{classAccount}{}\section{Account Class Reference}
+\label{classAccount}\index{Account@{Account}}
+
+
+{\ttfamily \#include $<$Account.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAccount_afde15ac73873bd15583c45db12bde2b3}{Account} (int \hyperlink{classAccount_a92e2552bc9214e93070df37a483fcc1a}{account\+Number}, double \hyperlink{classAccount_a6e41f403b4813738ba835377f212de33}{balance}=0.\+0)
+\item 
+int \hyperlink{classAccount_aab90becddea7d42ad801ea031c603b80}{get\+Account\+Number} () const 
+\item 
+double \hyperlink{classAccount_a73bfb6b16b4c29f621e3f3ddc081dc83}{get\+Balance} () const 
+\item 
+void \hyperlink{classAccount_ac426f0df93883712c99b224645748d67}{set\+Balance} (double \hyperlink{classAccount_a6e41f403b4813738ba835377f212de33}{balance})
+\item 
+void \hyperlink{classAccount_ab39def1adefa79491042c8a18e4268e0}{credit} (double amount)
+\item 
+void \hyperlink{classAccount_a3f13036bfe5d033e9664df38724eb2be}{debit} (double amount)
+\item 
+void \hyperlink{classAccount_a46e741ac1a3b502e3a9411ef9ff1c0a7}{print} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classAccount_a92e2552bc9214e93070df37a483fcc1a}{account\+Number}
+\item 
+double \hyperlink{classAccount_a6e41f403b4813738ba835377f212de33}{balance}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Account@{Account}!Account@{Account}}
+\index{Account@{Account}!Account@{Account}}
+\subsubsection[{\texorpdfstring{Account(int account\+Number, double balance=0.\+0)}{Account(int accountNumber, double balance=0.0)}}]{\setlength{\rightskip}{0pt plus 5cm}Account\+::\+Account (
+\begin{DoxyParamCaption}
+\item[{int}]{account\+Number, }
+\item[{double}]{balance = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classAccount_afde15ac73873bd15583c45db12bde2b3}{}\label{classAccount_afde15ac73873bd15583c45db12bde2b3}
+
+\begin{DoxyCode}
+8 : \hyperlink{classAccount_a92e2552bc9214e93070df37a483fcc1a}{accountNumber}(no), \hyperlink{classAccount_a6e41f403b4813738ba835377f212de33}{balance}(b) \{ \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Account@{Account}!credit@{credit}}
+\index{credit@{credit}!Account@{Account}}
+\subsubsection[{\texorpdfstring{credit(double amount)}{credit(double amount)}}]{\setlength{\rightskip}{0pt plus 5cm}void Account\+::credit (
+\begin{DoxyParamCaption}
+\item[{double}]{amount}
+\end{DoxyParamCaption}
+)}\hypertarget{classAccount_ab39def1adefa79491042c8a18e4268e0}{}\label{classAccount_ab39def1adefa79491042c8a18e4268e0}
+
+\begin{DoxyCode}
+26                                   \{
+27    \hyperlink{classAccount_ac426f0df93883712c99b224645748d67}{setBalance}(\hyperlink{classAccount_a6e41f403b4813738ba835377f212de33}{balance}+amount);
+28 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classAccount_ab39def1adefa79491042c8a18e4268e0_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Account@{Account}!debit@{debit}}
+\index{debit@{debit}!Account@{Account}}
+\subsubsection[{\texorpdfstring{debit(double amount)}{debit(double amount)}}]{\setlength{\rightskip}{0pt plus 5cm}void Account\+::debit (
+\begin{DoxyParamCaption}
+\item[{double}]{amount}
+\end{DoxyParamCaption}
+)}\hypertarget{classAccount_a3f13036bfe5d033e9664df38724eb2be}{}\label{classAccount_a3f13036bfe5d033e9664df38724eb2be}
+
+\begin{DoxyCode}
+31                                  \{
+32    \textcolor{keywordflow}{if} (amount <= \hyperlink{classAccount_a6e41f403b4813738ba835377f212de33}{balance}) \{
+33       \hyperlink{classAccount_ac426f0df93883712c99b224645748d67}{setBalance}(\hyperlink{classAccount_a6e41f403b4813738ba835377f212de33}{balance}-amount);
+34    \} \textcolor{keywordflow}{else} \{
+35       cout << \textcolor{stringliteral}{"Amount withdrawn exceeds the current balance!"} << endl;
+36    \}
+37 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{classAccount_a3f13036bfe5d033e9664df38724eb2be_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Account@{Account}!get\+Account\+Number@{get\+Account\+Number}}
+\index{get\+Account\+Number@{get\+Account\+Number}!Account@{Account}}
+\subsubsection[{\texorpdfstring{get\+Account\+Number() const }{getAccountNumber() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Account\+::get\+Account\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classAccount_aab90becddea7d42ad801ea031c603b80}{}\label{classAccount_aab90becddea7d42ad801ea031c603b80}
+
+\begin{DoxyCode}
+11                                     \{
+12    \textcolor{keywordflow}{return} \hyperlink{classAccount_a92e2552bc9214e93070df37a483fcc1a}{accountNumber};
+13 \}
+\end{DoxyCode}
+\index{Account@{Account}!get\+Balance@{get\+Balance}}
+\index{get\+Balance@{get\+Balance}!Account@{Account}}
+\subsubsection[{\texorpdfstring{get\+Balance() const }{getBalance() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Account\+::get\+Balance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classAccount_a73bfb6b16b4c29f621e3f3ddc081dc83}{}\label{classAccount_a73bfb6b16b4c29f621e3f3ddc081dc83}
+
+\begin{DoxyCode}
+16                                  \{
+17    \textcolor{keywordflow}{return} \hyperlink{classAccount_a6e41f403b4813738ba835377f212de33}{balance};
+18 \}
+\end{DoxyCode}
+\index{Account@{Account}!print@{print}}
+\index{print@{print}!Account@{Account}}
+\subsubsection[{\texorpdfstring{print() const }{print() const }}]{\setlength{\rightskip}{0pt plus 5cm}void Account\+::print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classAccount_a46e741ac1a3b502e3a9411ef9ff1c0a7}{}\label{classAccount_a46e741ac1a3b502e3a9411ef9ff1c0a7}
+
+\begin{DoxyCode}
+40                           \{
+41    cout << fixed << setprecision(2);
+42    cout << \textcolor{stringliteral}{"A/C no: "} << \hyperlink{classAccount_a92e2552bc9214e93070df37a483fcc1a}{accountNumber} << \textcolor{stringliteral}{" Balance=$"} << \hyperlink{classAccount_a6e41f403b4813738ba835377f212de33}{balance} << endl;
+43 \}\end{DoxyCode}
+\index{Account@{Account}!set\+Balance@{set\+Balance}}
+\index{set\+Balance@{set\+Balance}!Account@{Account}}
+\subsubsection[{\texorpdfstring{set\+Balance(double balance)}{setBalance(double balance)}}]{\setlength{\rightskip}{0pt plus 5cm}void Account\+::set\+Balance (
+\begin{DoxyParamCaption}
+\item[{double}]{balance}
+\end{DoxyParamCaption}
+)}\hypertarget{classAccount_ac426f0df93883712c99b224645748d67}{}\label{classAccount_ac426f0df93883712c99b224645748d67}
+
+\begin{DoxyCode}
+21                                  \{
+22    \hyperlink{classAccount_a6e41f403b4813738ba835377f212de33}{balance} = b;
+23 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Account@{Account}!account\+Number@{account\+Number}}
+\index{account\+Number@{account\+Number}!Account@{Account}}
+\subsubsection[{\texorpdfstring{account\+Number}{accountNumber}}]{\setlength{\rightskip}{0pt plus 5cm}int Account\+::account\+Number\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classAccount_a92e2552bc9214e93070df37a483fcc1a}{}\label{classAccount_a92e2552bc9214e93070df37a483fcc1a}
+\index{Account@{Account}!balance@{balance}}
+\index{balance@{balance}!Account@{Account}}
+\subsubsection[{\texorpdfstring{balance}{balance}}]{\setlength{\rightskip}{0pt plus 5cm}double Account\+::balance\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classAccount_a6e41f403b4813738ba835377f212de33}{}\label{classAccount_a6e41f403b4813738ba835377f212de33}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Account_8h}{Account.\+h}\item 
+\hyperlink{Account_8cpp}{Account.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,1483 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.38.0 (20140413.2041)
+%%Title: /home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap Call Graph
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 150 150 2400 833
+%%PageOrientation: Portrait
+<< /PageSize [2400 833] >> setpagedevice
+0 0 1 beginpage
+gsave
+150 150 2250 683 boxprim clip newpath
+0.625027 0.625027 set_scale 0 rotate 243.99 243.99 translate
+[ /CropBox [150 150 2400 833] /PAGES pdfmark
+0 0 0 graphcolor
+14 /Times-Roman set_font
+1604.92 7.8 moveto 382 (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap Call Graph) alignedtext
+% Node0x511510067
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+281.43 481.87 281.35 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+72.93 478.17 moveto 417 (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp) alignedtext
+grestore
+% Node0x329613453
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+959.47 841.87 360.75 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+712.47 845.67 moveto 494 (0x2d80158. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+901.97 830.67 moveto 115 (LeftistHeap::Insert\(i\)) alignedtext
+grestore
+% Node0x511510067->Node0x329613453
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 312.67 499.79 moveto
+368.64 532.79 492.38 604.99 598.85 661.87 curveto
+701.02 716.45 821.8 775.88 894.16 810.96 curveto
+stroke
+0 0 0 edgecolor
+newpath 892.65 814.12 moveto
+903.18 815.32 lineto
+895.7 807.82 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 892.65 814.12 moveto
+903.18 815.32 lineto
+895.7 807.82 lineto
+closepath stroke
+grestore
+% Node0x818713821
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+959.47 625.87 359.83 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+712.97 629.67 moveto 493 (0x2d81a48. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+901.97 614.67 moveto 115 (LeftistHeap::Insert\(i\)) alignedtext
+grestore
+% Node0x511510067->Node0x818713821
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 363.3 499.1 moveto
+478.7 523.68 691.82 569.07 829.24 598.34 curveto
+stroke
+0 0 0 edgecolor
+newpath 828.91 601.85 moveto
+839.42 600.51 lineto
+830.36 595 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 828.91 601.85 moveto
+839.42 600.51 lineto
+830.36 595 lineto
+closepath stroke
+grestore
+% Node0x291034832
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+959.47 481.87 360.75 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+712.47 485.67 moveto 494 (0x2d83370. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+894.47 470.67 moveto 130 (LeftistHeap::Merge\(h1\)) alignedtext
+grestore
+% Node0x511510067->Node0x291034832
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 563.26 481.87 moveto
+571.58 481.87 579.94 481.87 588.33 481.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 588.58 485.37 moveto
+598.58 481.87 lineto
+588.58 478.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 588.58 485.37 moveto
+598.58 481.87 lineto
+588.58 478.37 lineto
+closepath stroke
+grestore
+% Node0x526406971
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+959.47 229.87 360.75 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+712.47 233.67 moveto 494 (0x2d83770. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+887.97 218.67 moveto 143 (LeftistHeap::deleteMin\(x\)) alignedtext
+grestore
+% Node0x511510067->Node0x526406971
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 330.23 464.05 moveto
+444.81 421.34 736.07 312.77 878.12 259.82 curveto
+stroke
+0 0 0 edgecolor
+newpath 879.52 263.04 moveto
+887.67 256.26 lineto
+877.08 256.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 879.52 263.04 moveto
+887.67 256.26 lineto
+877.08 256.48 lineto
+closepath stroke
+grestore
+% Node0x172888913
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+959.47 157.87 358.51 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+713.97 161.67 moveto 491 (0x2d84fc0. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+895.97 146.67 moveto 127 (LeftistHeap::isEmpty\(\)) alignedtext
+grestore
+% Node0x511510067->Node0x172888913
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 295.32 463.84 moveto
+334.14 411.21 456.02 257.5 598.85 193.87 curveto
+615.17 186.6 632.31 180.5 649.89 175.4 curveto
+stroke
+0 0 0 edgecolor
+newpath 651 178.73 moveto
+659.69 172.67 lineto
+649.12 171.98 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 651 178.73 moveto
+659.69 172.67 lineto
+649.12 171.98 lineto
+closepath stroke
+grestore
+% Node0x186158274
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1716.72 949.87 358.51 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1471.22 953.67 moveto 491 (0x2d7c6f0. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1654.72 938.67 moveto 124 (LeftistHeap::Merge\(x\)) alignedtext
+grestore
+% Node0x329613453->Node0x186158274
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1127.15 865.7 moveto
+1249.38 883.18 1415.03 906.87 1539.46 924.66 curveto
+stroke
+0 0 0 edgecolor
+newpath 1539.08 928.15 moveto
+1549.47 926.1 lineto
+1540.07 921.22 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1539.08 928.15 moveto
+1549.47 926.1 lineto
+1540.07 921.22 lineto
+closepath stroke
+grestore
+% Node0x808274101
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1716.72 661.87 358.51 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1471.22 665.67 moveto 491 (0x2d7c6f0. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1654.72 650.67 moveto 124 (LeftistHeap::Merge\(x\)) alignedtext
+grestore
+% Node0x818713821->Node0x808274101
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1263.31 640.31 moveto
+1309.48 642.51 1357.2 644.78 1403.56 646.99 curveto
+stroke
+0 0 0 edgecolor
+newpath 1403.59 650.5 moveto
+1413.74 647.48 lineto
+1403.92 643.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1403.59 650.5 moveto
+1413.74 647.48 lineto
+1403.92 643.5 lineto
+closepath stroke
+grestore
+% Node0x354018506
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1716.72 553.87 359.83 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1470.22 557.67 moveto 493 (0x2d7a540. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1624.72 542.67 moveto 184 (LeftistHeap::Merge\(rhs.root.root\)) alignedtext
+grestore
+% Node0x291034832->Node0x354018506
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1182.23 503.01 moveto
+1277.12 512.06 1387.94 522.62 1483.91 531.77 curveto
+stroke
+0 0 0 edgecolor
+newpath 1483.76 535.27 moveto
+1494.05 532.74 lineto
+1484.42 528.3 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1483.76 535.27 moveto
+1494.05 532.74 lineto
+1484.42 528.3 lineto
+closepath stroke
+grestore
+% Node0x780495309
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1716.72 481.87 357.59 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1471.72 485.67 moveto 490 (0x2d7acf8. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1637.72 470.67 moveto 158 (LeftistHeap::Merge1\(h1, h2\)) alignedtext
+grestore
+% Node0x291034832->Node0x780495309
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1320.13 481.87 moveto
+1329.62 481.87 1339.12 481.87 1348.62 481.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1348.92 485.37 moveto
+1358.92 481.87 lineto
+1348.92 478.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1348.92 485.37 moveto
+1358.92 481.87 lineto
+1348.92 478.37 lineto
+closepath stroke
+grestore
+% Node0x368774659
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1716.72 409.87 359.83 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1470.22 413.67 moveto 493 (0x2d7ae18. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1637.72 398.67 moveto 158 (LeftistHeap::Merge1\(h2, h1\)) alignedtext
+grestore
+% Node0x291034832->Node0x368774659
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1182.23 460.73 moveto
+1277.12 451.68 1387.94 441.12 1483.91 431.97 curveto
+stroke
+0 0 0 edgecolor
+newpath 1484.42 435.44 moveto
+1494.05 431 lineto
+1483.76 428.47 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1484.42 435.44 moveto
+1494.05 431 lineto
+1483.76 428.47 lineto
+closepath stroke
+grestore
+% Node0x823198223
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1716.72 265.87 358.51 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1471.22 269.67 moveto 491 (0x2d7cdf0. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1658.22 254.67 moveto 117 (LeftistHeap::Merge\(\)) alignedtext
+grestore
+% Node0x526406971->Node0x823198223
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1263.58 244.32 moveto
+1309.64 246.51 1357.24 248.78 1403.48 250.99 curveto
+stroke
+0 0 0 edgecolor
+newpath 1403.49 254.49 moveto
+1413.64 251.47 lineto
+1403.82 247.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1403.49 254.49 moveto
+1413.64 251.47 lineto
+1403.82 247.5 lineto
+closepath stroke
+grestore
+% Node0x241862825
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1716.72 193.87 360.75 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1469.72 197.67 moveto 494 (0x2d7d210. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1653.22 182.67 moveto 127 (LeftistHeap::isEmpty\(\)) alignedtext
+grestore
+% Node0x526406971->Node0x241862825
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1263.58 215.42 moveto
+1309.26 213.24 1356.45 211 1402.33 208.81 curveto
+stroke
+0 0 0 edgecolor
+newpath 1402.59 212.3 moveto
+1412.41 208.33 lineto
+1402.26 205.31 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1402.59 212.3 moveto
+1412.41 208.33 lineto
+1402.26 205.31 lineto
+closepath stroke
+grestore
+% Node0x660061532
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1716.72 121.87 359.83 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1470.22 125.67 moveto 493 (0x2d7e2a0. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1653.72 110.67 moveto 126 (LeftistHeap::findMin\(\)) alignedtext
+grestore
+% Node0x526406971->Node0x660061532
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1262.51 215.3 moveto
+1282.43 209.59 1301.81 202.54 1320.1 193.87 curveto
+1340.55 184.18 1335.65 167.56 1356.1 157.87 curveto
+1371.38 150.63 1387.44 144.51 1403.93 139.36 curveto
+stroke
+0 0 0 edgecolor
+newpath 1405.11 142.66 moveto
+1413.69 136.44 lineto
+1403.11 135.95 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1405.11 142.66 moveto
+1413.69 136.44 lineto
+1403.11 135.95 lineto
+closepath stroke
+grestore
+% Node0x900462445
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+1716.72 49.87 359.83 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1470.22 53.67 moveto 493 (0x2d7e3e0. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1648.72 38.67 moveto 136 (LeftistHeap::deleteMin\(\)) alignedtext
+grestore
+% Node0x526406971->Node0x900462445
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1282.65 217.72 moveto
+1295.88 211.06 1308.46 203.18 1320.1 193.87 curveto
+1359.62 162.28 1316.58 117.46 1356.1 85.87 curveto
+1365.2 78.6 1374.87 72.19 1384.98 66.56 curveto
+stroke
+0 0 0 edgecolor
+newpath 1386.76 69.58 moveto
+1393.97 61.81 lineto
+1383.49 63.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1386.76 69.58 moveto
+1393.97 61.81 lineto
+1383.49 63.39 lineto
+closepath stroke
+grestore
+% Node0x863569584
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+2473.97 1057.87 359.83 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2227.47 1061.67 moveto 493 (0x2d7a540. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2381.97 1046.67 moveto 184 (LeftistHeap::Merge\(rhs.root.root\)) alignedtext
+grestore
+% Node0x186158274->Node0x863569584
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1842.04 975.14 moveto
+1919.76 990.28 2022.1 1009.02 2113.35 1021.87 curveto
+2151.15 1027.19 2191.3 1032.02 2230.54 1036.29 curveto
+stroke
+0 0 0 edgecolor
+newpath 2230.18 1039.77 moveto
+2240.5 1037.36 lineto
+2230.93 1032.81 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2230.18 1039.77 moveto
+2240.5 1037.36 lineto
+2230.93 1032.81 lineto
+closepath stroke
+grestore
+% Node0x527613698
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2473.97 985.87 357.59 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2228.97 989.67 moveto 490 (0x2d7acf8. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2394.97 974.67 moveto 158 (LeftistHeap::Merge1\(h1, h2\)) alignedtext
+grestore
+% Node0x186158274->Node0x527613698
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2019.75 964.27 moveto
+2066.34 966.49 2114.53 968.78 2161.32 971.01 curveto
+stroke
+0 0 0 edgecolor
+newpath 2161.44 974.52 moveto
+2171.6 971.5 lineto
+2161.78 967.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2161.44 974.52 moveto
+2171.6 971.5 lineto
+2161.78 967.53 lineto
+closepath stroke
+grestore
+% Node0x662136437
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2473.97 913.87 359.83 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2227.47 917.67 moveto 493 (0x2d7ae18. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2394.97 902.67 moveto 158 (LeftistHeap::Merge1\(h2, h1\)) alignedtext
+grestore
+% Node0x186158274->Node0x662136437
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2019.75 935.47 moveto
+2065.86 933.28 2113.54 931 2159.88 928.79 curveto
+stroke
+0 0 0 edgecolor
+newpath 2160.24 932.28 moveto
+2170.06 928.31 lineto
+2159.9 925.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2160.24 932.28 moveto
+2170.06 928.31 lineto
+2159.9 925.29 lineto
+closepath stroke
+grestore
+% Node0x922796077
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+2473.97 769.87 359.83 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2227.47 773.67 moveto 493 (0x2d7a540. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2381.97 758.67 moveto 184 (LeftistHeap::Merge\(rhs.root.root\)) alignedtext
+grestore
+% Node0x808274101->Node0x922796077
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1842.04 687.14 moveto
+1919.76 702.28 2022.1 721.02 2113.35 733.87 curveto
+2151.15 739.19 2191.3 744.02 2230.54 748.29 curveto
+stroke
+0 0 0 edgecolor
+newpath 2230.18 751.77 moveto
+2240.5 749.36 lineto
+2230.93 744.81 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2230.18 751.77 moveto
+2240.5 749.36 lineto
+2230.93 744.81 lineto
+closepath stroke
+grestore
+% Node0x578942250
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2473.97 697.87 357.59 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2228.97 701.67 moveto 490 (0x2d7acf8. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2394.97 686.67 moveto 158 (LeftistHeap::Merge1\(h1, h2\)) alignedtext
+grestore
+% Node0x808274101->Node0x578942250
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2019.75 676.27 moveto
+2066.34 678.49 2114.53 680.78 2161.32 683.01 curveto
+stroke
+0 0 0 edgecolor
+newpath 2161.44 686.52 moveto
+2171.6 683.5 lineto
+2161.78 679.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2161.44 686.52 moveto
+2171.6 683.5 lineto
+2161.78 679.53 lineto
+closepath stroke
+grestore
+% Node0x224041238
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2473.97 625.87 359.83 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2227.47 629.67 moveto 493 (0x2d7ae18. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2394.97 614.67 moveto 158 (LeftistHeap::Merge1\(h2, h1\)) alignedtext
+grestore
+% Node0x808274101->Node0x224041238
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2019.75 647.47 moveto
+2065.86 645.28 2113.54 643 2159.88 640.79 curveto
+stroke
+0 0 0 edgecolor
+newpath 2160.24 644.28 moveto
+2170.06 640.31 lineto
+2159.9 637.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2160.24 644.28 moveto
+2170.06 640.31 lineto
+2159.9 637.29 lineto
+closepath stroke
+grestore
+% Node0x742554489
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+2473.97 553.87 359.83 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2227.47 557.67 moveto 493 (0x2d7b4c8. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2383.47 542.67 moveto 181 (LeftistHeap::Merge\(h1.right, h2\)) alignedtext
+grestore
+% Node0x780495309->Node0x742554489
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1938.97 502.96 moveto
+2033.98 512.02 2145.04 522.61 2241.19 531.77 curveto
+stroke
+0 0 0 edgecolor
+newpath 2241.05 535.28 moveto
+2251.34 532.74 lineto
+2241.72 528.31 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2241.05 535.28 moveto
+2251.34 532.74 lineto
+2241.72 528.31 lineto
+closepath stroke
+grestore
+% Node0x917244719
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2473.97 481.87 360.75 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2226.97 485.67 moveto 494 (0x2d7b7b8. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2389.47 470.67 moveto 169 (LeftistHeap::swapChildren\(h1\)) alignedtext
+grestore
+% Node0x780495309->Node0x917244719
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2074.61 481.87 moveto
+2084.08 481.87 2093.56 481.87 2103.03 481.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 2103.3 485.37 moveto
+2113.3 481.87 lineto
+2103.3 478.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2103.3 485.37 moveto
+2113.3 481.87 lineto
+2103.3 478.37 lineto
+closepath stroke
+grestore
+% Node0x196231912
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+2473.97 409.87 359.83 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2227.47 413.67 moveto 493 (0x2d7b4c8. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2383.47 398.67 moveto 181 (LeftistHeap::Merge\(h1.right, h2\)) alignedtext
+grestore
+% Node0x368774659->Node0x196231912
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2076.82 409.87 moveto
+2085.81 409.87 2094.8 409.87 2103.79 409.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 2103.94 413.37 moveto
+2113.94 409.87 lineto
+2103.94 406.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2103.94 413.37 moveto
+2113.94 409.87 lineto
+2103.94 406.37 lineto
+closepath stroke
+grestore
+% Node0x885913327
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2473.97 337.87 360.75 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2226.97 341.67 moveto 494 (0x2d7b7b8. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2389.47 326.67 moveto 169 (LeftistHeap::swapChildren\(h1\)) alignedtext
+grestore
+% Node0x368774659->Node0x885913327
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1939.47 388.73 moveto
+2034.26 379.69 2144.94 369.14 2240.84 360 curveto
+stroke
+0 0 0 edgecolor
+newpath 2241.35 363.47 moveto
+2250.97 359.03 lineto
+2240.68 356.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2241.35 363.47 moveto
+2250.97 359.03 lineto
+2240.68 356.5 lineto
+closepath stroke
+grestore
+% Node0x529268587
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+2473.97 265.87 359.83 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2227.47 269.67 moveto 493 (0x2d7a540. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2381.97 254.67 moveto 184 (LeftistHeap::Merge\(rhs.root.root\)) alignedtext
+grestore
+% Node0x823198223->Node0x529268587
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2075.44 265.87 moveto
+2084.82 265.87 2094.22 265.87 2103.61 265.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 2103.79 269.37 moveto
+2113.79 265.87 lineto
+2103.79 262.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2103.79 269.37 moveto
+2113.79 265.87 lineto
+2103.79 262.37 lineto
+closepath stroke
+grestore
+% Node0x182547394
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2473.97 193.87 357.59 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2228.97 197.67 moveto 490 (0x2d7acf8. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2394.97 182.67 moveto 158 (LeftistHeap::Merge1\(h1, h2\)) alignedtext
+grestore
+% Node0x823198223->Node0x182547394
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1938.97 244.78 moveto
+2034.08 235.71 2145.28 225.11 2241.51 215.94 curveto
+stroke
+0 0 0 edgecolor
+newpath 2242.04 219.4 moveto
+2251.66 214.97 lineto
+2241.38 212.43 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2242.04 219.4 moveto
+2251.66 214.97 lineto
+2241.38 212.43 lineto
+closepath stroke
+grestore
+% Node0x478704035
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2473.97 121.87 359.83 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2227.47 125.67 moveto 493 (0x2d7ae18. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2394.97 110.67 moveto 158 (LeftistHeap::Merge1\(h2, h1\)) alignedtext
+grestore
+% Node0x823198223->Node0x478704035
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2034.44 253.33 moveto
+2049.5 246.88 2063.92 239.13 2077.35 229.87 curveto
+2106.81 209.57 2083.89 178.17 2113.35 157.87 curveto
+2123.85 150.63 2134.94 144.32 2146.48 138.83 curveto
+stroke
+0 0 0 edgecolor
+newpath 2148.15 141.91 moveto
+2155.82 134.6 lineto
+2145.26 135.54 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2148.15 141.91 moveto
+2155.82 134.6 lineto
+2145.26 135.54 lineto
+closepath stroke
+grestore
+% Node0x955751871
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3231.22 1057.87 359.83 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2984.72 1061.67 moveto 493 (0x2d7b4c8. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3140.72 1046.67 moveto 181 (LeftistHeap::Merge\(h1.right, h2\)) alignedtext
+grestore
+% Node0x527613698->Node0x955751871
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2696.21 1006.96 moveto
+2791.23 1016.02 2902.28 1026.61 2998.44 1035.77 curveto
+stroke
+0 0 0 edgecolor
+newpath 2998.3 1039.28 moveto
+3008.59 1036.74 lineto
+2998.96 1032.31 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2998.3 1039.28 moveto
+3008.59 1036.74 lineto
+2998.96 1032.31 lineto
+closepath stroke
+grestore
+% Node0x294662518
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3231.22 985.87 360.75 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2984.22 989.67 moveto 494 (0x2d7b7b8. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3146.72 974.67 moveto 169 (LeftistHeap::swapChildren\(h1\)) alignedtext
+grestore
+% Node0x527613698->Node0x294662518
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2831.86 985.87 moveto
+2841.32 985.87 2850.8 985.87 2860.28 985.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 2860.55 989.37 moveto
+2870.55 985.87 lineto
+2860.55 982.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2860.55 989.37 moveto
+2870.55 985.87 lineto
+2860.55 982.37 lineto
+closepath stroke
+grestore
+% Node0x644423528
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3231.22 913.87 359.83 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2984.72 917.67 moveto 493 (0x2d7b4c8. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3140.72 902.67 moveto 181 (LeftistHeap::Merge\(h1.right, h2\)) alignedtext
+grestore
+% Node0x662136437->Node0x644423528
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2834.07 913.87 moveto
+2843.06 913.87 2852.05 913.87 2861.04 913.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 2861.19 917.37 moveto
+2871.19 913.87 lineto
+2861.19 910.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2861.19 917.37 moveto
+2871.19 913.87 lineto
+2861.19 910.37 lineto
+closepath stroke
+grestore
+% Node0x791457461
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3231.22 841.87 360.75 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2984.22 845.67 moveto 494 (0x2d7b7b8. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3146.72 830.67 moveto 169 (LeftistHeap::swapChildren\(h1\)) alignedtext
+grestore
+% Node0x662136437->Node0x791457461
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2696.72 892.73 moveto
+2791.51 883.69 2902.19 873.14 2998.09 864 curveto
+stroke
+0 0 0 edgecolor
+newpath 2998.6 867.47 moveto
+3008.22 863.03 lineto
+2997.93 860.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2998.6 867.47 moveto
+3008.22 863.03 lineto
+2997.93 860.5 lineto
+closepath stroke
+grestore
+% Node0x373662430
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3231.22 769.87 359.83 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2984.72 773.67 moveto 493 (0x2d7b4c8. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3140.72 758.67 moveto 181 (LeftistHeap::Merge\(h1.right, h2\)) alignedtext
+grestore
+% Node0x578942250->Node0x373662430
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2696.21 718.96 moveto
+2791.23 728.02 2902.28 738.61 2998.44 747.77 curveto
+stroke
+0 0 0 edgecolor
+newpath 2998.3 751.28 moveto
+3008.59 748.74 lineto
+2998.96 744.31 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2998.3 751.28 moveto
+3008.59 748.74 lineto
+2998.96 744.31 lineto
+closepath stroke
+grestore
+% Node0x137947819
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3231.22 697.87 360.75 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2984.22 701.67 moveto 494 (0x2d7b7b8. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3146.72 686.67 moveto 169 (LeftistHeap::swapChildren\(h1\)) alignedtext
+grestore
+% Node0x578942250->Node0x137947819
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2831.86 697.87 moveto
+2841.32 697.87 2850.8 697.87 2860.28 697.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 2860.55 701.37 moveto
+2870.55 697.87 lineto
+2860.55 694.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2860.55 701.37 moveto
+2870.55 697.87 lineto
+2860.55 694.37 lineto
+closepath stroke
+grestore
+% Node0x248911638
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3231.22 625.87 359.83 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2984.72 629.67 moveto 493 (0x2d7b4c8. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3140.72 614.67 moveto 181 (LeftistHeap::Merge\(h1.right, h2\)) alignedtext
+grestore
+% Node0x224041238->Node0x248911638
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2834.07 625.87 moveto
+2843.06 625.87 2852.05 625.87 2861.04 625.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 2861.19 629.37 moveto
+2871.19 625.87 lineto
+2861.19 622.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2861.19 629.37 moveto
+2871.19 625.87 lineto
+2861.19 622.37 lineto
+closepath stroke
+grestore
+% Node0x490723557
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3231.22 553.87 360.75 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2984.22 557.67 moveto 494 (0x2d7b7b8. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3146.72 542.67 moveto 169 (LeftistHeap::swapChildren\(h1\)) alignedtext
+grestore
+% Node0x224041238->Node0x490723557
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2696.72 604.73 moveto
+2791.51 595.69 2902.19 585.14 2998.09 576 curveto
+stroke
+0 0 0 edgecolor
+newpath 2998.6 579.47 moveto
+3008.22 575.03 lineto
+2997.93 572.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2998.6 579.47 moveto
+3008.22 575.03 lineto
+2997.93 572.5 lineto
+closepath stroke
+grestore
+% Node0x623714547
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3231.22 265.87 359.83 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2984.72 269.67 moveto 493 (0x2d7b4c8. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3140.72 254.67 moveto 181 (LeftistHeap::Merge\(h1.right, h2\)) alignedtext
+grestore
+% Node0x182547394->Node0x623714547
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2696.21 214.96 moveto
+2791.23 224.02 2902.28 234.61 2998.44 243.77 curveto
+stroke
+0 0 0 edgecolor
+newpath 2998.3 247.28 moveto
+3008.59 244.74 lineto
+2998.96 240.31 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2998.3 247.28 moveto
+3008.59 244.74 lineto
+2998.96 240.31 lineto
+closepath stroke
+grestore
+% Node0x839479221
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3231.22 193.87 360.75 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2984.22 197.67 moveto 494 (0x2d7b7b8. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3146.72 182.67 moveto 169 (LeftistHeap::swapChildren\(h1\)) alignedtext
+grestore
+% Node0x182547394->Node0x839479221
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2831.86 193.87 moveto
+2841.32 193.87 2850.8 193.87 2860.28 193.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 2860.55 197.37 moveto
+2870.55 193.87 lineto
+2860.55 190.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2860.55 197.37 moveto
+2870.55 193.87 lineto
+2860.55 190.37 lineto
+closepath stroke
+grestore
+% Node0x807637268
+gsave
+1 setlinewidth
+dashed
+0 0 0 nodecolor
+3231.22 121.87 359.83 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2984.72 125.67 moveto 493 (0x2d7b4c8. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3140.72 110.67 moveto 181 (LeftistHeap::Merge\(h1.right, h2\)) alignedtext
+grestore
+% Node0x478704035->Node0x807637268
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2834.07 121.87 moveto
+2843.06 121.87 2852.05 121.87 2861.04 121.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 2861.19 125.37 moveto
+2871.19 121.87 lineto
+2861.19 118.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2861.19 125.37 moveto
+2871.19 121.87 lineto
+2861.19 118.37 lineto
+closepath stroke
+grestore
+% Node0x239600193
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3231.22 49.87 360.75 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2984.22 53.67 moveto 494 (0x2d7b7b8. \(/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3146.72 38.67 moveto 169 (LeftistHeap::swapChildren\(h1\)) alignedtext
+grestore
+% Node0x478704035->Node0x239600193
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2696.72 100.73 moveto
+2791.51 91.69 2902.19 81.14 2998.09 72 curveto
+stroke
+0 0 0 edgecolor
+newpath 2998.6 75.47 moveto
+3008.22 71.03 lineto
+2997.93 68.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2998.6 75.47 moveto
+3008.22 71.03 lineto
+2997.93 68.5 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 150 150 2400 833
+end
+restore
+%%EOF

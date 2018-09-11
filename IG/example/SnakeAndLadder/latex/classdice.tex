@@ -1,0 +1,74 @@
+\hypertarget{classdice}{}\section{dice Class Reference}
+\label{classdice}\index{dice@{dice}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdice_a928f9a4f4ba4ba2e6615aadc8d5a0de2}{dice} ()
+\item 
+int \hyperlink{classdice_a967f61248ffb11035c4b2f30b5c32bbb}{rolldice} (void)
+\item 
+\hyperlink{classdice_ab6557d0affda2992c8fc5578169a065b}{operator int} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classdice_a7815c195f434449c65d2b242fbc54942}{dice1}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{dice@{dice}!dice@{dice}}
+\index{dice@{dice}!dice@{dice}}
+\subsubsection[{\texorpdfstring{dice()}{dice()}}]{\setlength{\rightskip}{0pt plus 5cm}void dice\+::dice (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classdice_a928f9a4f4ba4ba2e6615aadc8d5a0de2}{}\label{classdice_a928f9a4f4ba4ba2e6615aadc8d5a0de2}
+
+\begin{DoxyCode}
+31 \{
+32    \hyperlink{classdice_a7815c195f434449c65d2b242fbc54942}{dice1}=0;
+33 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{dice@{dice}!operator int@{operator int}}
+\index{operator int@{operator int}!dice@{dice}}
+\subsubsection[{\texorpdfstring{operator int()}{operator int()}}]{\setlength{\rightskip}{0pt plus 5cm}dice\+::operator int (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classdice_ab6557d0affda2992c8fc5578169a065b}{}\label{classdice_ab6557d0affda2992c8fc5578169a065b}
+
+\begin{DoxyCode}
+26     \{
+27        \textcolor{keywordflow}{return} \hyperlink{classdice_a7815c195f434449c65d2b242fbc54942}{dice1}/1;
+28     \}
+\end{DoxyCode}
+\index{dice@{dice}!rolldice@{rolldice}}
+\index{rolldice@{rolldice}!dice@{dice}}
+\subsubsection[{\texorpdfstring{rolldice(void)}{rolldice(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int dice\+::rolldice (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classdice_a967f61248ffb11035c4b2f30b5c32bbb}{}\label{classdice_a967f61248ffb11035c4b2f30b5c32bbb}
+
+\begin{DoxyCode}
+35 \{
+36    randomize();
+37    \hyperlink{classdice_a7815c195f434449c65d2b242fbc54942}{dice1}=rand()%6+1;
+38    \textcolor{keywordflow}{return} \hyperlink{classdice_a7815c195f434449c65d2b242fbc54942}{dice1};
+39 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{dice@{dice}!dice1@{dice1}}
+\index{dice1@{dice1}!dice@{dice}}
+\subsubsection[{\texorpdfstring{dice1}{dice1}}]{\setlength{\rightskip}{0pt plus 5cm}int dice\+::dice1\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classdice_a7815c195f434449c65d2b242fbc54942}{}\label{classdice_a7815c195f434449c65d2b242fbc54942}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{SnakeAndLadder_8cpp}{Snake\+And\+Ladder.\+cpp}\end{DoxyCompactItemize}

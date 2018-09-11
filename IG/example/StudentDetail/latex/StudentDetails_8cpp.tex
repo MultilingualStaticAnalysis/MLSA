@@ -1,0 +1,77 @@
+\hypertarget{StudentDetails_8cpp}{}\section{Student\+Details.\+cpp File Reference}
+\label{StudentDetails_8cpp}\index{Student\+Details.\+cpp@{Student\+Details.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for Student\+Details.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{StudentDetails_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classstudent}{student}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{StudentDetails_8cpp_a392fb874e547e582e9c66a08a1f23326}{M\+AX}~10
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{StudentDetails_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{Student\+Details.\+cpp@{Student\+Details.\+cpp}!M\+AX@{M\+AX}}
+\index{M\+AX@{M\+AX}!Student\+Details.\+cpp@{Student\+Details.\+cpp}}
+\subsubsection[{\texorpdfstring{M\+AX}{MAX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+AX~10}\hypertarget{StudentDetails_8cpp_a392fb874e547e582e9c66a08a1f23326}{}\label{StudentDetails_8cpp_a392fb874e547e582e9c66a08a1f23326}
+
+
+\subsection{Function Documentation}
+\index{Student\+Details.\+cpp@{Student\+Details.\+cpp}!main@{main}}
+\index{main@{main}!Student\+Details.\+cpp@{Student\+Details.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{StudentDetails_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{StudentDetails_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+42 \{
+43     \hyperlink{classstudent}{student} \hyperlink{namespacestd}{std}[\hyperlink{StudentDetails_8cpp_a392fb874e547e582e9c66a08a1f23326}{MAX}];       \textcolor{comment}{//array of objects creation}
+44     \textcolor{keywordtype}{int} n,loop;
+45      
+46     cout << \textcolor{stringliteral}{"Enter total number of students: "};
+47     cin >> n;
+48      
+49     \textcolor{keywordflow}{for}(loop=0;loop< n; loop++)\{
+50         cout << \textcolor{stringliteral}{"Enter details of student "} << loop+1 << \textcolor{stringliteral}{":\(\backslash\)n"};
+51         std[loop].\hyperlink{classstudent_a9516948671b936201a0daac50ad4ca6f}{getDetails}();
+52     \}
+53      
+54     cout << endl;
+55      
+56     \textcolor{keywordflow}{for}(loop=0;loop< n; loop++)\{
+57         cout << \textcolor{stringliteral}{"Details of student "} << (loop+1) << \textcolor{stringliteral}{":\(\backslash\)n"};
+58         std[loop].\hyperlink{classstudent_a2de761d21703bd2b530de4cbc5eed372}{putDetails}();
+59     \}
+60      
+61     \textcolor{keywordflow}{return} 0;
+62 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{StudentDetails_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

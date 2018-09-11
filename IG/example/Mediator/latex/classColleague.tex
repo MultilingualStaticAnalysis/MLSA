@@ -1,0 +1,101 @@
+\hypertarget{classColleague}{}\section{Colleague Class Reference}
+\label{classColleague}\index{Colleague@{Colleague}}
+
+
+Inheritance diagram for Colleague\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classColleague__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Colleague\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classColleague__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classColleague_afb6563e15f8ea7f8931d5c51ad15cef6}{send\+Message} (const \hyperlink{classMediatorInterface}{Mediator\+Interface} \&, const std\+::string \&) const override
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classColleague_ac1834eb0fe9749f84294ef342b8370dc}{receive\+Message} (const \hyperlink{classColleagueInterface}{Colleague\+Interface} $\ast$, const std\+::string \&) const override
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Colleague@{Colleague}!receive\+Message@{receive\+Message}}
+\index{receive\+Message@{receive\+Message}!Colleague@{Colleague}}
+\subsubsection[{\texorpdfstring{receive\+Message(const Colleague\+Interface $\ast$, const std\+::string \&) const override}{receiveMessage(const ColleagueInterface *, const std::string &) const override}}]{\setlength{\rightskip}{0pt plus 5cm}void Colleague\+::receive\+Message (
+\begin{DoxyParamCaption}
+\item[{const {\bf Colleague\+Interface} $\ast$}]{sender, }
+\item[{const std\+::string \&}]{message}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}\hypertarget{classColleague_ac1834eb0fe9749f84294ef342b8370dc}{}\label{classColleague_ac1834eb0fe9749f84294ef342b8370dc}
+
+
+Implements \hyperlink{classColleagueInterface_ad54da6a768fff80244b2f81af95cdbc1}{Colleague\+Interface}.
+
+
+\begin{DoxyCode}
+41                                                                                                 \{
+42     std::cout << \hyperlink{classColleagueInterface_acbc50603b8b5f9e94f36bb94a53fd651}{getName}() << \textcolor{stringliteral}{" received the message from "} << sender->
+      \hyperlink{classColleagueInterface_acbc50603b8b5f9e94f36bb94a53fd651}{getName}() << \textcolor{stringliteral}{": "} << message << std::endl;           
+43 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classColleague_ac1834eb0fe9749f84294ef342b8370dc_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Colleague@{Colleague}!send\+Message@{send\+Message}}
+\index{send\+Message@{send\+Message}!Colleague@{Colleague}}
+\subsubsection[{\texorpdfstring{send\+Message(const Mediator\+Interface \&, const std\+::string \&) const override}{sendMessage(const MediatorInterface &, const std::string &) const override}}]{\setlength{\rightskip}{0pt plus 5cm}void Colleague\+::send\+Message (
+\begin{DoxyParamCaption}
+\item[{const {\bf Mediator\+Interface} \&}]{mediator, }
+\item[{const std\+::string \&}]{message}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classColleague_afb6563e15f8ea7f8931d5c51ad15cef6}{}\label{classColleague_afb6563e15f8ea7f8931d5c51ad15cef6}
+
+
+Implements \hyperlink{classColleagueInterface_a1b86fdff9280809073590a466280fd06}{Colleague\+Interface}.
+
+
+\begin{DoxyCode}
+37                                                                                               \{
+38     mediator.\hyperlink{classMediatorInterface_a6445b79436acab5998b8a957648fadb1}{distributeMessage} (\textcolor{keyword}{this}, message);
+39 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classColleague_afb6563e15f8ea7f8931d5c51ad15cef6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Mediator_8cpp}{Mediator.\+cpp}\end{DoxyCompactItemize}

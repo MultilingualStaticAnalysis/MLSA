@@ -1,0 +1,461 @@
+{
+    "body": [
+        {
+            "body": [
+                {
+                    "_type": "Print", 
+                    "nl": true, 
+                    "col_offset": 4, 
+                    "dest": null, 
+                    "values": [
+                        {
+                            "s": "what's the account number?", 
+                            "_type": "Str", 
+                            "lineno": 2, 
+                            "col_offset": 10
+                        }
+                    ], 
+                    "lineno": 2
+                }, 
+                {
+                    "value": {
+                        "_type": "Num", 
+                        "lineno": 3, 
+                        "col_offset": 11, 
+                        "n": 5
+                    }, 
+                    "_type": "Return", 
+                    "lineno": 3, 
+                    "col_offset": 4
+                }
+            ], 
+            "decorator_list": [], 
+            "_type": "FunctionDef", 
+            "name": "getAccountNumber", 
+            "col_offset": 0, 
+            "args": {
+                "_type": "arguments", 
+                "args": [], 
+                "kwarg": null, 
+                "defaults": [], 
+                "vararg": null
+            }, 
+            "lineno": 1
+        }, 
+        {
+            "body": [
+                {
+                    "_type": "Print", 
+                    "nl": true, 
+                    "col_offset": 4, 
+                    "dest": null, 
+                    "values": [
+                        {
+                            "s": "What's your PIN number?", 
+                            "_type": "Str", 
+                            "lineno": 6, 
+                            "col_offset": 10
+                        }
+                    ], 
+                    "lineno": 6
+                }, 
+                {
+                    "value": {
+                        "_type": "Num", 
+                        "lineno": 7, 
+                        "col_offset": 11, 
+                        "n": 9
+                    }, 
+                    "_type": "Return", 
+                    "lineno": 7, 
+                    "col_offset": 4
+                }
+            ], 
+            "decorator_list": [], 
+            "_type": "FunctionDef", 
+            "name": "getPIN", 
+            "col_offset": 0, 
+            "args": {
+                "_type": "arguments", 
+                "args": [
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Param"
+                        }, 
+                        "id": "n", 
+                        "col_offset": 11, 
+                        "lineno": 5
+                    }
+                ], 
+                "kwarg": null, 
+                "defaults": [], 
+                "vararg": null
+            }, 
+            "lineno": 5
+        }, 
+        {
+            "body": [
+                {
+                    "_type": "Print", 
+                    "nl": true, 
+                    "col_offset": 4, 
+                    "dest": null, 
+                    "values": [
+                        {
+                            "s": "what amount would you like to deposit?", 
+                            "_type": "Str", 
+                            "lineno": 10, 
+                            "col_offset": 10
+                        }
+                    ], 
+                    "lineno": 10
+                }, 
+                {
+                    "value": {
+                        "_type": "Num", 
+                        "lineno": 11, 
+                        "col_offset": 11, 
+                        "n": 9
+                    }, 
+                    "_type": "Return", 
+                    "lineno": 11, 
+                    "col_offset": 4
+                }
+            ], 
+            "decorator_list": [], 
+            "_type": "FunctionDef", 
+            "name": "getAmount", 
+            "col_offset": 0, 
+            "args": {
+                "_type": "arguments", 
+                "args": [], 
+                "kwarg": null, 
+                "defaults": [], 
+                "vararg": null
+            }, 
+            "lineno": 9
+        }, 
+        {
+            "body": [
+                {
+                    "_type": "Print", 
+                    "nl": true, 
+                    "col_offset": 4, 
+                    "dest": null, 
+                    "values": [
+                        {
+                            "s": "taking pic of check", 
+                            "_type": "Str", 
+                            "lineno": 14, 
+                            "col_offset": 10
+                        }
+                    ], 
+                    "lineno": 14
+                }
+            ], 
+            "decorator_list": [], 
+            "_type": "FunctionDef", 
+            "name": "takePictureOfCheck", 
+            "col_offset": 0, 
+            "args": {
+                "_type": "arguments", 
+                "args": [], 
+                "kwarg": null, 
+                "defaults": [], 
+                "vararg": null
+            }, 
+            "lineno": 13
+        }, 
+        {
+            "body": [
+                {
+                    "value": {
+                        "_type": "Call", 
+                        "col_offset": 4, 
+                        "starargs": null, 
+                        "args": [], 
+                        "lineno": 17, 
+                        "func": {
+                            "_type": "Name", 
+                            "ctx": {
+                                "_type": "Load"
+                            }, 
+                            "id": "takePictureOfCheck", 
+                            "col_offset": 4, 
+                            "lineno": 17
+                        }, 
+                        "kwargs": null, 
+                        "keywords": []
+                    }, 
+                    "_type": "Expr", 
+                    "lineno": 17, 
+                    "col_offset": 4
+                }, 
+                {
+                    "_type": "Print", 
+                    "nl": true, 
+                    "col_offset": 4, 
+                    "dest": null, 
+                    "values": [
+                        {
+                            "s": "depositing check", 
+                            "_type": "Str", 
+                            "lineno": 18, 
+                            "col_offset": 10
+                        }
+                    ], 
+                    "lineno": 18
+                }
+            ], 
+            "decorator_list": [], 
+            "_type": "FunctionDef", 
+            "name": "depositCheck", 
+            "col_offset": 0, 
+            "args": {
+                "_type": "arguments", 
+                "args": [
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Param"
+                        }, 
+                        "id": "n", 
+                        "col_offset": 17, 
+                        "lineno": 16
+                    }, 
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Param"
+                        }, 
+                        "id": "p", 
+                        "col_offset": 20, 
+                        "lineno": 16
+                    }, 
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Param"
+                        }, 
+                        "id": "a", 
+                        "col_offset": 23, 
+                        "lineno": 16
+                    }
+                ], 
+                "kwarg": null, 
+                "defaults": [], 
+                "vararg": null
+            }, 
+            "lineno": 16
+        }, 
+        {
+            "body": [
+                {
+                    "_type": "Print", 
+                    "nl": true, 
+                    "col_offset": 4, 
+                    "dest": null, 
+                    "values": [
+                        {
+                            "s": "here's the confirmation of your deposit", 
+                            "_type": "Str", 
+                            "lineno": 21, 
+                            "col_offset": 10
+                        }
+                    ], 
+                    "lineno": 21
+                }
+            ], 
+            "decorator_list": [], 
+            "_type": "FunctionDef", 
+            "name": "printConfirmation", 
+            "col_offset": 0, 
+            "args": {
+                "_type": "arguments", 
+                "args": [], 
+                "kwarg": null, 
+                "defaults": [], 
+                "vararg": null
+            }, 
+            "lineno": 20
+        }, 
+        {
+            "value": {
+                "_type": "Call", 
+                "col_offset": 16, 
+                "starargs": null, 
+                "args": [], 
+                "lineno": 23, 
+                "func": {
+                    "_type": "Name", 
+                    "ctx": {
+                        "_type": "Load"
+                    }, 
+                    "id": "getAccountNumber", 
+                    "col_offset": 16, 
+                    "lineno": 23
+                }, 
+                "kwargs": null, 
+                "keywords": []
+            }, 
+            "_type": "Assign", 
+            "lineno": 23, 
+            "col_offset": 0, 
+            "targets": [
+                {
+                    "_type": "Name", 
+                    "ctx": {
+                        "_type": "Store"
+                    }, 
+                    "id": "accountNumber", 
+                    "col_offset": 0, 
+                    "lineno": 23
+                }
+            ]
+        }, 
+        {
+            "value": {
+                "_type": "Call", 
+                "col_offset": 6, 
+                "starargs": null, 
+                "args": [], 
+                "lineno": 24, 
+                "func": {
+                    "_type": "Name", 
+                    "ctx": {
+                        "_type": "Load"
+                    }, 
+                    "id": "getPIN", 
+                    "col_offset": 6, 
+                    "lineno": 24
+                }, 
+                "kwargs": null, 
+                "keywords": []
+            }, 
+            "_type": "Assign", 
+            "lineno": 24, 
+            "col_offset": 0, 
+            "targets": [
+                {
+                    "_type": "Name", 
+                    "ctx": {
+                        "_type": "Store"
+                    }, 
+                    "id": "pin", 
+                    "col_offset": 0, 
+                    "lineno": 24
+                }
+            ]
+        }, 
+        {
+            "value": {
+                "_type": "Call", 
+                "col_offset": 9, 
+                "starargs": null, 
+                "args": [], 
+                "lineno": 25, 
+                "func": {
+                    "_type": "Name", 
+                    "ctx": {
+                        "_type": "Load"
+                    }, 
+                    "id": "getAmount", 
+                    "col_offset": 9, 
+                    "lineno": 25
+                }, 
+                "kwargs": null, 
+                "keywords": []
+            }, 
+            "_type": "Assign", 
+            "lineno": 25, 
+            "col_offset": 0, 
+            "targets": [
+                {
+                    "_type": "Name", 
+                    "ctx": {
+                        "_type": "Store"
+                    }, 
+                    "id": "amount", 
+                    "col_offset": 0, 
+                    "lineno": 25
+                }
+            ]
+        }, 
+        {
+            "value": {
+                "_type": "Call", 
+                "col_offset": 0, 
+                "starargs": null, 
+                "args": [
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Load"
+                        }, 
+                        "id": "accountNumber", 
+                        "col_offset": 13, 
+                        "lineno": 26
+                    }, 
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Load"
+                        }, 
+                        "id": "pin", 
+                        "col_offset": 28, 
+                        "lineno": 26
+                    }, 
+                    {
+                        "_type": "Name", 
+                        "ctx": {
+                            "_type": "Load"
+                        }, 
+                        "id": "amount", 
+                        "col_offset": 33, 
+                        "lineno": 26
+                    }
+                ], 
+                "lineno": 26, 
+                "func": {
+                    "_type": "Name", 
+                    "ctx": {
+                        "_type": "Load"
+                    }, 
+                    "id": "depositCheck", 
+                    "col_offset": 0, 
+                    "lineno": 26
+                }, 
+                "kwargs": null, 
+                "keywords": []
+            }, 
+            "_type": "Expr", 
+            "lineno": 26, 
+            "col_offset": 0
+        }, 
+        {
+            "value": {
+                "_type": "Call", 
+                "col_offset": 0, 
+                "starargs": null, 
+                "args": [], 
+                "lineno": 27, 
+                "func": {
+                    "_type": "Name", 
+                    "ctx": {
+                        "_type": "Load"
+                    }, 
+                    "id": "printConfirmation", 
+                    "col_offset": 0, 
+                    "lineno": 27
+                }, 
+                "kwargs": null, 
+                "keywords": []
+            }, 
+            "_type": "Expr", 
+            "lineno": 27, 
+            "col_offset": 0
+        }
+    ], 
+    "_type": "Module"
+}

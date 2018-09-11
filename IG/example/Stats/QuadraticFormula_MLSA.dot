@@ -1,0 +1,29 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/QuadraticFormula Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/QuadraticFormula Call Graph"
+	];
+
+	Node0x669145244 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/QuadraticFormula/QuadraticFormula.cpp"];
+	Node0x373828981 [shape=oval, label="0x2c51db8. (/home/labaccount/11-2-17/mlsa/IG/example/QuadraticFormula/QuadraticFormula.cpp)\ncreditsHelp()"];
+	Node0x669145244 -> Node0x373828981;
+	Node0x113935636 [shape=oval, label="0x2c53300. (/home/labaccount/11-2-17/mlsa/IG/example/QuadraticFormula/QuadraticFormula.cpp)\nQuadraticEquation::displayequation()"];
+	Node0x669145244 -> Node0x113935636;
+	Node0x874125815 [shape=oval, label="0x2c53388. (/home/labaccount/11-2-17/mlsa/IG/example/QuadraticFormula/QuadraticFormula.cpp)\nQuadraticEquation::getxintercepts()"];
+	Node0x669145244 -> Node0x874125815;
+	Node0x573420591 [shape=oval, label="0x2c43f70. (/home/labaccount/11-2-17/mlsa/IG/example/QuadraticFormula/QuadraticFormula.cpp)\nwierdGetch()"];
+	Node0x669145244 -> Node0x573420591;
+	Node0x530112997 [shape=oval, label="0x2c47748. (/home/labaccount/11-2-17/mlsa/IG/example/QuadraticFormula/QuadraticFormula.cpp)\nwierdGetch()"];
+	Node0x373828981 -> Node0x530112997;
+	Node0x630781508 [shape=oval, label="0x2c3b3f0. (/home/labaccount/11-2-17/mlsa/IG/example/QuadraticFormula/QuadraticFormula.cpp)\nsqrt(temp)"];
+	Node0x874125815 -> Node0x630781508;
+	Node0x265635366 [shape=oval, label="0x2c47d70. (/home/labaccount/11-2-17/mlsa/IG/example/QuadraticFormula/QuadraticFormula.cpp)\ngetwchar()"];
+	Node0x573420591 -> Node0x265635366;
+	Node0x246876727 [shape=oval, label="0x2c47e28. (/home/labaccount/11-2-17/mlsa/IG/example/QuadraticFormula/QuadraticFormula.cpp)\ngetwchar()"];
+	Node0x573420591 -> Node0x246876727;
+	Node0x195540066 [shape=oval, label="0x2c47d70. (/home/labaccount/11-2-17/mlsa/IG/example/QuadraticFormula/QuadraticFormula.cpp)\ngetwchar()"];
+	Node0x530112997 -> Node0x195540066;
+	Node0x487064530 [shape=oval, label="0x2c47e28. (/home/labaccount/11-2-17/mlsa/IG/example/QuadraticFormula/QuadraticFormula.cpp)\ngetwchar()"];
+	Node0x530112997 -> Node0x487064530;
+}

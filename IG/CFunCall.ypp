@@ -1,0 +1,185 @@
+%token <str>FUNC
+%token <str>TAB
+%token <str>TICK
+%token <str>CALL
+%token <str>MEMCALL
+%token <str>REF
+%token <str>FUNCTION
+%token <str>INT
+%token <str>MEMBER
+%token <str>BINOP
+%token <str>UNOP
+%token <str>STR
+%token <str>VAR
+%token <str>PARMVAR
+%token <str>SUB
+%token <str>ID
+%token <str>NAME
+%token <str>NUMBER
+%token <str>STRING
+
+%{
+	#include <iostream>
+  	#include <string>
+  	#include <vector>
+  	#include <stdio.h>
+  	#include <string.h>
+  	#include <tuple>
+	using namespace std;
+	void yyerror(string);
+	bool checkcall(bool, string, bool &, vector<tuple<int, int>> &, int, int);
+	bool checkarg(string, bool &, bool, int, int);
+	void markarg(bool &, int &, int);
+	void checkblock(vector<tuple<int, int>> &, int, bool);
+	string prefix(vector<tuple<int, int>>, bool c=false);
+	int yylex(void);
+	vector<string> sym;
+	int tabcount = 0;
+	vector<tuple<int, int>> calltab;
+	int argtab = 0;
+	bool t = false;
+	bool arg = false;
+	string sub = "";
+	string mem = "";
+	string callID = "";
+	union YYSTYPE {
+		int val;
+		char *str;
+	};
+	typedef union YYSTYPE YYSTYPE;
+%}
+
+%start input
+%type <str>keywordproductions
+%type <str>arg
+%type <str>variable
+%type <str>node
+
+%%
+
+input:
+	input chunk
+	|
+	;
+
+chunk:
+	water
+	| keywordproductions
+
+water:
+	keyword
+	| ID 											{ /*cout << "WATER ";*/ }
+	| NAME 											{ /*cout << "WATER ";*/ }
+	| NUMBER										{ /*cout << "WATER ";*/ }
+	| STRING
+
+keywordproductions:
+	tab tick node
+
+tab:
+	tab TAB 										{ tabcount++; }
+	|
+	;
+
+tick:
+	TICK 											{ t = true; }
+	|												{ t = false; }
+
+node:
+	FUNC filler NAME '\''	 						{ checkblock(calltab, tabcount, t); sym.push_back("F "+string($3)); tabcount = 0; }
+	| CALL ID										{ checkblock(calltab, tabcount, t); calltab.push_back(make_tuple(0, tabcount)); sym.push_back(string($2)); tabcount = 0; }
+	| MEMCALL ID 									{ checkblock(calltab, tabcount, t); calltab.push_back(make_tuple(1, tabcount)); sym.push_back(string($2)); tabcount = 0; }
+	| arg 											{ tabcount = 0; }
+	| NAME 											{ checkcall(t, sub, arg, calltab, tabcount, argtab); tabcount = 0; }
+
+arg:
+	REF variable
+	| UNOP 											{ if(checkcall(t, sub, arg, calltab, tabcount, argtab)){ markarg(arg, argtab, tabcount); sym.push_back(prefix(calltab)+"UNOP"); } }
+	| MEMBER filler NAME ID							{ if(checkcall(t, sub, arg, calltab, tabcount, argtab)){ cout << string($3) << endl; mem = "."+string($3)+mem; } }
+	| INT filler '\'' NUMBER						{ if(checkcall(t, sub, arg, calltab, tabcount, argtab)){ sym.push_back(prefix(calltab)+string($4)); } }
+	| STR filler STRING								{ if(checkcall(t, sub, arg, calltab, tabcount, argtab)){ sym.push_back(prefix(calltab)+string($3)); } }
+	| SUB 											{ if(checkcall(t, sub, arg, calltab, tabcount, argtab)){ sub = "[]"; markarg(arg, argtab, tabcount); } }
+	| BINOP 										{ if(checkcall(t, sub, arg, calltab, tabcount, argtab)){ markarg(arg, argtab, tabcount); sym.push_back(prefix(calltab)+"BINOP"); } }
+
+variable:
+	filler FUNCTION ID '\'' NAME '\''				{ if(calltab.size()){ sym.back() = prefix(calltab, true)+"C "+sym.back()+" "+string($5); } }
+	| filler VAR ID '\'' NAME '\''					{ if(checkcall(t, sub, arg, calltab, tabcount, argtab)){ sym.push_back(prefix(calltab)+string($5)+mem); mem = ""; } }
+	| filler PARMVAR ID '\'' NAME '\''				{ if(checkcall(t, sub, arg, calltab, tabcount, argtab)){ sym.push_back(prefix(calltab)+string($5)+sub+mem); sub = ""; } }
+
+filler:
+	filler NAME
+	| filler ID
+	| filler NUMBER
+	| filler '\''
+	|
+	;
+
+keyword:
+	VAR
+	| PARMVAR
+	| FUNCTION
+	| '\''
+
+%%
+
+void yyerror(string s) {
+	cerr << s << " " << yylval.str << endl;
+}
+
+bool checkcall(bool tck, string s, bool &a, vector<tuple<int, int>> &ct, int tc, int at) {
+	checkblock(ct, tc, tck);
+	if(!ct.size()){
+		a = false;
+		return false;
+	} else
+		return checkarg(s, a, tck, at, tc);
+}
+
+void checkblock(vector<tuple<int, int>> &ct, int tc, bool tck){
+	int tabs = ct.size();
+	for(int k = 0; k < tabs; k++){
+		if((get<1>(ct.back()) > tc)||((get<1>(ct.back()) == tc)&&(!tck))){
+			ct.pop_back();
+		}
+	}
+}
+
+bool checkarg(string s, bool &a, bool tck, int at, int tc) {
+	if(a){
+		if((at > tc)||((at == tc)&&(!tck))){
+			a = false;
+			return true;
+		} else if(s == "[]")
+			return true;
+		else
+			return false;
+	} else
+		return true;
+}
+
+void markarg(bool &a, int &at, int tc){
+	a = true;
+	at = tc;
+}
+
+string prefix(vector<tuple<int, int>> ct, bool c = false){
+	string retval = "";
+	if(c){
+		for(int k=0; k<ct.size()-1; k++)
+			retval += "A ";
+	} else {
+		for(int k=0; k<ct.size(); k++)
+			retval += "A ";
+	}
+	return retval;
+}
+
+int main(void) {
+	yyparse();
+	for(int k = 0; k < sym.size(); k++) {
+		cout << sym[k] << endl;
+	}
+	//cout << "call boolean: " << call << endl;
+	//cout << "calltab: " << calltab << endl;
+	return 0;
+}

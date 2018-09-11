@@ -1,0 +1,140 @@
+\hypertarget{classCarElementPrintVisitor}{}\section{Car\+Element\+Print\+Visitor Class Reference}
+\label{classCarElementPrintVisitor}\index{Car\+Element\+Print\+Visitor@{Car\+Element\+Print\+Visitor}}
+
+
+Inheritance diagram for Car\+Element\+Print\+Visitor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classCarElementPrintVisitor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Car\+Element\+Print\+Visitor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classCarElementPrintVisitor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCarElementPrintVisitor_a9677cd2f8d34aaf2a878ff1504e49c33}{visit} (\hyperlink{classWheel}{Wheel} \&wheel) const 
+\item 
+void \hyperlink{classCarElementPrintVisitor_afb71a1c5b2d6625bf569366f5903d531}{visit} (\hyperlink{classEngine}{Engine} \&engine) const 
+\item 
+void \hyperlink{classCarElementPrintVisitor_a4ad0bbfd79baaedfb2ee07c9e52d8f21}{visit} (\hyperlink{classBody}{Body} \&body) const 
+\item 
+void \hyperlink{classCarElementPrintVisitor_a99cb1306db917e1980d3f8c414acbc93}{visit\+Car} (\hyperlink{classCar}{Car} \&car) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Car\+Element\+Print\+Visitor@{Car\+Element\+Print\+Visitor}!visit@{visit}}
+\index{visit@{visit}!Car\+Element\+Print\+Visitor@{Car\+Element\+Print\+Visitor}}
+\subsubsection[{\texorpdfstring{visit(\+Wheel \&wheel) const }{visit(Wheel &wheel) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Car\+Element\+Print\+Visitor\+::visit (
+\begin{DoxyParamCaption}
+\item[{{\bf Wheel} \&}]{wheel}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classCarElementPrintVisitor_a9677cd2f8d34aaf2a878ff1504e49c33}{}\label{classCarElementPrintVisitor_a9677cd2f8d34aaf2a878ff1504e49c33}
+
+
+Implements \hyperlink{structCarElementVisitor_aba7f494a9b736bcb002176ec922890e4}{Car\+Element\+Visitor}.
+
+
+\begin{DoxyCode}
+106   \{ 
+107     cout << \textcolor{stringliteral}{"Visiting "} << wheel.\hyperlink{classWheel_ad0ed291d1ec488ffcba12e28cb707c38}{getName}() << \textcolor{stringliteral}{" wheel"} << endl;
+108   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classCarElementPrintVisitor_a9677cd2f8d34aaf2a878ff1504e49c33_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Car\+Element\+Print\+Visitor@{Car\+Element\+Print\+Visitor}!visit@{visit}}
+\index{visit@{visit}!Car\+Element\+Print\+Visitor@{Car\+Element\+Print\+Visitor}}
+\subsubsection[{\texorpdfstring{visit(\+Engine \&engine) const }{visit(Engine &engine) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Car\+Element\+Print\+Visitor\+::visit (
+\begin{DoxyParamCaption}
+\item[{{\bf Engine} \&}]{engine}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classCarElementPrintVisitor_afb71a1c5b2d6625bf569366f5903d531}{}\label{classCarElementPrintVisitor_afb71a1c5b2d6625bf569366f5903d531}
+
+
+Implements \hyperlink{structCarElementVisitor_aa0dabf5c22b4ebad04f01ec80f4c9eba}{Car\+Element\+Visitor}.
+
+
+\begin{DoxyCode}
+110   \{
+111     cout << \textcolor{stringliteral}{"Visiting engine"} << endl;
+112   \}
+\end{DoxyCode}
+\index{Car\+Element\+Print\+Visitor@{Car\+Element\+Print\+Visitor}!visit@{visit}}
+\index{visit@{visit}!Car\+Element\+Print\+Visitor@{Car\+Element\+Print\+Visitor}}
+\subsubsection[{\texorpdfstring{visit(\+Body \&body) const }{visit(Body &body) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Car\+Element\+Print\+Visitor\+::visit (
+\begin{DoxyParamCaption}
+\item[{{\bf Body} \&}]{body}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classCarElementPrintVisitor_a4ad0bbfd79baaedfb2ee07c9e52d8f21}{}\label{classCarElementPrintVisitor_a4ad0bbfd79baaedfb2ee07c9e52d8f21}
+
+
+Implements \hyperlink{structCarElementVisitor_afc449830fe12235c3676039af8927fce}{Car\+Element\+Visitor}.
+
+
+\begin{DoxyCode}
+114   \{
+115     cout << \textcolor{stringliteral}{"Visiting body"} << endl;
+116   \}
+\end{DoxyCode}
+\index{Car\+Element\+Print\+Visitor@{Car\+Element\+Print\+Visitor}!visit\+Car@{visit\+Car}}
+\index{visit\+Car@{visit\+Car}!Car\+Element\+Print\+Visitor@{Car\+Element\+Print\+Visitor}}
+\subsubsection[{\texorpdfstring{visit\+Car(\+Car \&car) const }{visitCar(Car &car) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Car\+Element\+Print\+Visitor\+::visit\+Car (
+\begin{DoxyParamCaption}
+\item[{{\bf Car} \&}]{car}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classCarElementPrintVisitor_a99cb1306db917e1980d3f8c414acbc93}{}\label{classCarElementPrintVisitor_a99cb1306db917e1980d3f8c414acbc93}
+
+
+Implements \hyperlink{structCarElementVisitor_a91746881206fd9dc9b10f9e2fdb5cf58}{Car\+Element\+Visitor}.
+
+
+\begin{DoxyCode}
+118   \{
+119     cout << endl << \textcolor{stringliteral}{"Visiting car"} << endl;
+120     vector<CarElement*>& elems = car.\hyperlink{classCar_a70d9577f631b92e0537ff331c8f7409b}{getElements}();
+121     \textcolor{keywordflow}{for}(vector<CarElement*>::iterator it = elems.begin();
+122       it != elems.end(); ++it )
+123     \{
+124       (*it)->accept(*\textcolor{keyword}{this}); \textcolor{comment}{// this issues the callback i.e. to this from the element  }
+125     \}
+126     cout << \textcolor{stringliteral}{"Visited car"} << endl;
+127   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{classCarElementPrintVisitor_a99cb1306db917e1980d3f8c414acbc93_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Visitor_8cpp}{Visitor.\+cpp}\end{DoxyCompactItemize}

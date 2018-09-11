@@ -1,0 +1,43 @@
+    |-CallExpr 0x2ca0330 <line:67:5, line:68:91> 'int'
+    | |-ImplicitCastExpr 0x2ca0318 <line:67:5> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x2c9fcf0 <col:5> 'int (const char *, ...)' Function 0x2c77138 'printf' 'int (const char *, ...)'
+    | |-ImplicitCastExpr 0x2ca03a8 <col:12> 'const char *' <BitCast>
+    | | `-ImplicitCastExpr 0x2ca0390 <col:12> 'char *' <ArrayToPointerDecay>
+    | |   `-StringLiteral 0x2c9fd58 <col:12> 'char [23]' lvalue "The difference is %ld\n"
+    | |-ImplicitCastExpr 0x2ca03c0 <col:39, col:46> '__time_t':'long' <LValueToRValue>
+    | | `-MemberExpr 0x2c9fdc0 <col:39, col:46> '__time_t':'long' lvalue .tv_sec 0x2c85710
+    | |   `-DeclRefExpr 0x2c9fd98 <col:39> 'struct timeval':'struct timeval' lvalue Var 0x2c9eeb8 'before' 'struct timeval':'struct timeval'
+    | |-ImplicitCastExpr 0x2ca03d8 <col:54, col:61> '__suseconds_t':'long' <LValueToRValue>
+    | | `-MemberExpr 0x2c9fe20 <col:54, col:61> '__suseconds_t':'long' lvalue .tv_usec 0x2c85790
+    | |   `-DeclRefExpr 0x2c9fdf8 <col:54> 'struct timeval':'struct timeval' lvalue Var 0x2c9eeb8 'before' 'struct timeval':'struct timeval'
+    | |-ImplicitCastExpr 0x2ca03f0 <line:68:4, col:10> '__time_t':'long' <LValueToRValue>
+    | | `-MemberExpr 0x2c9fe80 <col:4, col:10> '__time_t':'long' lvalue .tv_sec 0x2c85710
+    | |   `-DeclRefExpr 0x2c9fe58 <col:4> 'struct timeval':'struct timeval' lvalue Var 0x2c9ef50 'after' 'struct timeval':'struct timeval'
+    | |-ImplicitCastExpr 0x2ca0408 <col:18, col:24> '__suseconds_t':'long' <LValueToRValue>
+    | | `-MemberExpr 0x2c9fee0 <col:18, col:24> '__suseconds_t':'long' lvalue .tv_usec 0x2c85790
+    | |   `-DeclRefExpr 0x2c9feb8 <col:18> 'struct timeval':'struct timeval' lvalue Var 0x2c9ef50 'after' 'struct timeval':'struct timeval'
+    | |-CallExpr 0x2ca0000 <col:33, col:55> 'long'
+    | | |-ImplicitCastExpr 0x2c9ffe8 <col:33> 'long (*)(struct timeval, struct timeval)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x2c9ff18 <col:33> 'long (struct timeval, struct timeval)' Function 0x2c9dc30 'timediff' 'long (struct timeval, struct timeval)'
+    | | |-ImplicitCastExpr 0x2ca0038 <col:42> 'struct timeval':'struct timeval' <LValueToRValue>
+    | | | `-DeclRefExpr 0x2c9ff40 <col:42> 'struct timeval':'struct timeval' lvalue Var 0x2c9eeb8 'before' 'struct timeval':'struct timeval'
+    | | `-ImplicitCastExpr 0x2ca0050 <col:50> 'struct timeval':'struct timeval' <LValueToRValue>
+    | |   `-DeclRefExpr 0x2c9ff68 <col:50> 'struct timeval':'struct timeval' lvalue Var 0x2c9ef50 'after' 'struct timeval':'struct timeval'
+    | `-CallExpr 0x2ca02a8 <col:58, col:90> 'int'
+    |   |-ImplicitCastExpr 0x2ca0290 <col:58> 'int (*)(int, int *, int)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x2ca0068 <col:58> 'int (int, int *, int)' Function 0x2c9c2c0 'binary1' 'int (int, int *, int)'
+    |   |-CallExpr 0x2ca01d0 <col:66, col:83> 'int'
+    |   | |-ImplicitCastExpr 0x2ca01b8 <col:66> 'int (*)(int, int *, int)' <FunctionToPointerDecay>
+    |   | | `-DeclRefExpr 0x2ca0090 <col:66> 'int (int, int *, int)' Function 0x2c9d1f8 'binary2' 'int (int, int *, int)'
+    |   | |-BinaryOperator 0x2ca0118 <col:74, col:76> 'int' '+'
+    |   | | |-ImplicitCastExpr 0x2ca0100 <col:74> 'int' <LValueToRValue>
+    |   | | | `-DeclRefExpr 0x2ca00b8 <col:74> 'int' lvalue Var 0x2c9ecc0 'n' 'int'
+    |   | | `-IntegerLiteral 0x2ca00e0 <col:76> 'int' 2
+    |   | |-ImplicitCastExpr 0x2ca0210 <col:79> 'int *' <ArrayToPointerDecay>
+    |   | | `-DeclRefExpr 0x2ca0140 <col:79> 'int [17]' lvalue Var 0x2c9e6d8 'a' 'int [17]'
+    |   | `-ImplicitCastExpr 0x2ca0228 <col:82> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x2ca0168 <col:82> 'int' lvalue Var 0x2c9efd8 'k' 'int'
+    |   |-ImplicitCastExpr 0x2ca02e8 <col:86> 'int *' <ArrayToPointerDecay>
+    |   | `-DeclRefExpr 0x2ca0240 <col:86> 'int [17]' lvalue Var 0x2c9e6d8 'a' 'int [17]'
+    |   `-ImplicitCastExpr 0x2ca0300 <col:89> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x2ca0268 <col:89> 'int' lvalue Var 0x2c9efd8 'k' 'int'

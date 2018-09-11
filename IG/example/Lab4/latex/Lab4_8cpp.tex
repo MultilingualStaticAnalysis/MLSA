@@ -1,0 +1,140 @@
+\hypertarget{Lab4_8cpp}{}\section{Lab4.\+cpp File Reference}
+\label{Lab4_8cpp}\index{Lab4.\+cpp@{Lab4.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$pthread.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$queue$>$}\\*
+Include dependency graph for Lab4.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Lab4_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structThreadParam}{Thread\+Param}
+\item 
+class \hyperlink{classPriorityLock}{Priority\+Lock}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{Lab4_8cpp_a649e5687563f66a85f560f736a993494}{Thread\+Routine} (void $\ast$param)
+\item 
+int \hyperlink{Lab4_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPriorityLock}{Priority\+Lock} \hyperlink{Lab4_8cpp_aed51fc48bbdfd4e9f1f3c8ec0ce7586a}{plock}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Lab4.\+cpp@{Lab4.\+cpp}!main@{main}}
+\index{main@{main}!Lab4.\+cpp@{Lab4.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$argv[])}{main(int argc, char *argv[])}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{Lab4_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{}\label{Lab4_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+\begin{DoxyCode}
+85 \{
+86    pthread\_t * threads;
+87    \hyperlink{structThreadParam}{ThreadParam} * priorityParams;
+88 
+89    \textcolor{keywordtype}{int} thread\_num;
+90    \textcolor{keywordtype}{int} status, i, j;
+91 
+92    \textcolor{keywordflow}{do} \{
+93       cout <<\textcolor{stringliteral}{"How many threads to create:"};
+94       cin >> thread\_num;
+95    \} \textcolor{keywordflow}{while} (thread\_num<=1);
+96 
+97    threads = \textcolor{keyword}{new} pthread\_t[thread\_num]; \textcolor{comment}{//dynamically allocate the thread handler ...                      
+                                                                                                       }
+98 
+99    priorityParams = \textcolor{keyword}{new} \hyperlink{structThreadParam}{ThreadParam}[thread\_num];
+100 
+101    \textcolor{keywordflow}{for} (i=0; i<thread\_num; i++)\{
+102       \textcolor{comment}{//Todo: prepare the argument to be passed in thread                                                  
+                                                                                                       }
+103       \textcolor{comment}{//                                                                                                   
+                                                                                                       }
+104       priorityParams[i].\hyperlink{structThreadParam_af65f9da248fc152676a9e6040138515b}{level} = rand()%100;
+105 
+106       status = pthread\_create (&threads[i], NULL, \hyperlink{Lab4_8cpp_a649e5687563f66a85f560f736a993494}{ThreadRoutine}, (\textcolor{keywordtype}{void} *)&(priorityParams[i]))
+      ;
+107 
+108       \textcolor{keywordflow}{if} (status!=0)\{
+109          printf (\textcolor{stringliteral}{"oops, pthread\_create returned error code %d\(\backslash\)n"}, status);
+110          exit(-1);
+111       \}
+112    \}
+113 
+114    \textcolor{comment}{//EZ: Important that we wait for all threads to finish before ending the main thread ...                
+                                                                                                       }
+115    \textcolor{keywordflow}{for} (i=0; i<thread\_num; i++)\{
+116       pthread\_join (threads[i],NULL);
+117    \}
+118 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Lab4_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Lab4.\+cpp@{Lab4.\+cpp}!Thread\+Routine@{Thread\+Routine}}
+\index{Thread\+Routine@{Thread\+Routine}!Lab4.\+cpp@{Lab4.\+cpp}}
+\subsubsection[{\texorpdfstring{Thread\+Routine(void $\ast$param)}{ThreadRoutine(void *param)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ Thread\+Routine (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{param}
+\end{DoxyParamCaption}
+)}\hypertarget{Lab4_8cpp_a649e5687563f66a85f560f736a993494}{}\label{Lab4_8cpp_a649e5687563f66a85f560f736a993494}
+
+\begin{DoxyCode}
+71 \{
+72    \hyperlink{structThreadParam}{ThreadParam} * p = (\hyperlink{structThreadParam}{ThreadParam} *) param;
+73    \textcolor{keywordtype}{int} priority\_level = p->\hyperlink{structThreadParam_af65f9da248fc152676a9e6040138515b}{level};
+74 
+75    cout <<\textcolor{stringliteral}{"Thread "}<< priority\_level << \textcolor{stringliteral}{" calling enter \(\backslash\)n"};
+76    \hyperlink{Lab4_8cpp_aed51fc48bbdfd4e9f1f3c8ec0ce7586a}{plock}.\hyperlink{classPriorityLock_a8891b1ac7ee3de2ff39a0dd1791349fb}{enter} (priority\_level);
+77 
+78    cout <<\textcolor{stringliteral}{"Thread "}<< priority\_level << \textcolor{stringliteral}{" in critical section \(\backslash\)n"};
+79 
+80    \hyperlink{Lab4_8cpp_aed51fc48bbdfd4e9f1f3c8ec0ce7586a}{plock}.\hyperlink{classPriorityLock_a572356166105b668acfebe6549da71d2}{exit}();
+81    cout << \textcolor{stringliteral}{"Thread "} << priority\_level << \textcolor{stringliteral}{" is done\(\backslash\)n"};
+82 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{Lab4_8cpp_a649e5687563f66a85f560f736a993494_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{Lab4.\+cpp@{Lab4.\+cpp}!plock@{plock}}
+\index{plock@{plock}!Lab4.\+cpp@{Lab4.\+cpp}}
+\subsubsection[{\texorpdfstring{plock}{plock}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Priority\+Lock} plock}\hypertarget{Lab4_8cpp_aed51fc48bbdfd4e9f1f3c8ec0ce7586a}{}\label{Lab4_8cpp_aed51fc48bbdfd4e9f1f3c8ec0ce7586a}

@@ -1,0 +1,134 @@
+\hypertarget{classwikibooks__design__patterns_1_1Evaluator}{}\section{wikibooks\+\_\+design\+\_\+patterns\+:\+:Evaluator Class Reference}
+\label{classwikibooks__design__patterns_1_1Evaluator}\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Evaluator@{wikibooks\+\_\+design\+\_\+patterns\+::\+Evaluator}}
+
+
+Inheritance diagram for wikibooks\+\_\+design\+\_\+patterns\+:\+:Evaluator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classwikibooks__design__patterns_1_1Evaluator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for wikibooks\+\_\+design\+\_\+patterns\+:\+:Evaluator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classwikibooks__design__patterns_1_1Evaluator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwikibooks__design__patterns_1_1Evaluator_aa9d884c25c638c6bf4b9cc6048b6c0e6}{Evaluator} (\hyperlink{namespacewikibooks__design__patterns_a603d2591ea56686888d0e4389481a453}{String} expression)
+\item 
+\hyperlink{classwikibooks__design__patterns_1_1Evaluator_a8d8907ba7b681cdd76e53d451c2d1a19}{$\sim$\+Evaluator} ()
+\item 
+int \hyperlink{classwikibooks__design__patterns_1_1Evaluator_aa7ba308eda08d2fbff093f684f7a0832}{interpret} (\hyperlink{namespacewikibooks__design__patterns_adf1889a865861dea765d8a115cc66ae9}{Map} context)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structwikibooks__design__patterns_1_1Expression}{Expression} $\ast$ \hyperlink{classwikibooks__design__patterns_1_1Evaluator_a22439cc7dc84a90b755c2955c8c4ac74}{syntax\+Tree}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Evaluator@{wikibooks\+\_\+design\+\_\+patterns\+::\+Evaluator}!Evaluator@{Evaluator}}
+\index{Evaluator@{Evaluator}!wikibooks\+\_\+design\+\_\+patterns\+::\+Evaluator@{wikibooks\+\_\+design\+\_\+patterns\+::\+Evaluator}}
+\subsubsection[{\texorpdfstring{Evaluator(\+String expression)}{Evaluator(String expression)}}]{\setlength{\rightskip}{0pt plus 5cm}wikibooks\+\_\+design\+\_\+patterns\+::\+Evaluator\+::\+Evaluator (
+\begin{DoxyParamCaption}
+\item[{{\bf String}}]{expression}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwikibooks__design__patterns_1_1Evaluator_aa9d884c25c638c6bf4b9cc6048b6c0e6}{}\label{classwikibooks__design__patterns_1_1Evaluator_aa9d884c25c638c6bf4b9cc6048b6c0e6}
+
+\begin{DoxyCode}
+83                                 \{
+84         \hyperlink{namespacewikibooks__design__patterns_a3247979de240b19de03793d4ec6ede0e}{Stack} expressionStack;
+85 
+86     \textcolor{keywordtype}{size\_t} last = 0;
+87     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} next = 0; String::npos != last; last = (String::npos == next) ? next : (1+next)) \{
+88         next = expression.find(\textcolor{charliteral}{' '}, last);
+89         \hyperlink{namespacewikibooks__design__patterns_a603d2591ea56686888d0e4389481a453}{String} token( expression.substr(last, (String::npos == next) ? (expression.length()-last) : (
+      next-last)));
+90 
+91             \textcolor{keywordflow}{if}  (token == \textcolor{stringliteral}{"+"}) \{
+92         \hyperlink{structwikibooks__design__patterns_1_1Expression}{Expression}* right = expressionStack.back(); expressionStack.pop\_back();
+93                 \hyperlink{structwikibooks__design__patterns_1_1Expression}{Expression}* left = expressionStack.back(); expressionStack.pop\_back();
+94                 \hyperlink{structwikibooks__design__patterns_1_1Expression}{Expression}* subExpression = \textcolor{keyword}{new} \hyperlink{classwikibooks__design__patterns_1_1Plus}{Plus}(right, left);
+95                 expressionStack.push\_back( subExpression );
+96             \}
+97             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (token == \textcolor{stringliteral}{"-"}) \{
+98                 \textcolor{comment}{// it's necessary remove first the right operand from the stack}
+99                 \hyperlink{structwikibooks__design__patterns_1_1Expression}{Expression}* right = expressionStack.back(); expressionStack.pop\_back();
+100                 \textcolor{comment}{// ..and after the left one}
+101                 \hyperlink{structwikibooks__design__patterns_1_1Expression}{Expression}* left = expressionStack.back(); expressionStack.pop\_back();
+102                 \hyperlink{structwikibooks__design__patterns_1_1Expression}{Expression}* subExpression = \textcolor{keyword}{new} \hyperlink{classwikibooks__design__patterns_1_1Minus}{Minus}(left, right);
+103                 expressionStack.push\_back( subExpression );
+104             \}
+105             \textcolor{keywordflow}{else}                        
+106                 expressionStack.push\_back( \textcolor{keyword}{new} \hyperlink{classwikibooks__design__patterns_1_1Variable}{Variable}(token) );
+107         \}
+108 
+109         \hyperlink{classwikibooks__design__patterns_1_1Evaluator_a22439cc7dc84a90b755c2955c8c4ac74}{syntaxTree} = expressionStack.back(); expressionStack.pop\_back();
+110     \}
+\end{DoxyCode}
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Evaluator@{wikibooks\+\_\+design\+\_\+patterns\+::\+Evaluator}!````~Evaluator@{$\sim$\+Evaluator}}
+\index{````~Evaluator@{$\sim$\+Evaluator}!wikibooks\+\_\+design\+\_\+patterns\+::\+Evaluator@{wikibooks\+\_\+design\+\_\+patterns\+::\+Evaluator}}
+\subsubsection[{\texorpdfstring{$\sim$\+Evaluator()}{~Evaluator()}}]{\setlength{\rightskip}{0pt plus 5cm}wikibooks\+\_\+design\+\_\+patterns\+::\+Evaluator\+::$\sim$\+Evaluator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwikibooks__design__patterns_1_1Evaluator_a8d8907ba7b681cdd76e53d451c2d1a19}{}\label{classwikibooks__design__patterns_1_1Evaluator_a8d8907ba7b681cdd76e53d451c2d1a19}
+
+\begin{DoxyCode}
+112                   \{
+113     \textcolor{keyword}{delete} \hyperlink{classwikibooks__design__patterns_1_1Evaluator_a22439cc7dc84a90b755c2955c8c4ac74}{syntaxTree};
+114      \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Evaluator@{wikibooks\+\_\+design\+\_\+patterns\+::\+Evaluator}!interpret@{interpret}}
+\index{interpret@{interpret}!wikibooks\+\_\+design\+\_\+patterns\+::\+Evaluator@{wikibooks\+\_\+design\+\_\+patterns\+::\+Evaluator}}
+\subsubsection[{\texorpdfstring{interpret(\+Map context)}{interpret(Map context)}}]{\setlength{\rightskip}{0pt plus 5cm}int wikibooks\+\_\+design\+\_\+patterns\+::\+Evaluator\+::interpret (
+\begin{DoxyParamCaption}
+\item[{{\bf Map}}]{context}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classwikibooks__design__patterns_1_1Evaluator_aa7ba308eda08d2fbff093f684f7a0832}{}\label{classwikibooks__design__patterns_1_1Evaluator_aa7ba308eda08d2fbff093f684f7a0832}
+
+
+Implements \hyperlink{structwikibooks__design__patterns_1_1Expression_a3723a35bb367b43edf806be72385c680}{wikibooks\+\_\+design\+\_\+patterns\+::\+Expression}.
+
+
+\begin{DoxyCode}
+116                                \{
+117         \textcolor{keywordflow}{return} \hyperlink{classwikibooks__design__patterns_1_1Evaluator_a22439cc7dc84a90b755c2955c8c4ac74}{syntaxTree}->\hyperlink{structwikibooks__design__patterns_1_1Expression_a3723a35bb367b43edf806be72385c680}{interpret}(context);
+118     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwikibooks__design__patterns_1_1Evaluator_aa7ba308eda08d2fbff093f684f7a0832_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Evaluator@{wikibooks\+\_\+design\+\_\+patterns\+::\+Evaluator}!syntax\+Tree@{syntax\+Tree}}
+\index{syntax\+Tree@{syntax\+Tree}!wikibooks\+\_\+design\+\_\+patterns\+::\+Evaluator@{wikibooks\+\_\+design\+\_\+patterns\+::\+Evaluator}}
+\subsubsection[{\texorpdfstring{syntax\+Tree}{syntaxTree}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression}$\ast$ wikibooks\+\_\+design\+\_\+patterns\+::\+Evaluator\+::syntax\+Tree\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classwikibooks__design__patterns_1_1Evaluator_a22439cc7dc84a90b755c2955c8c4ac74}{}\label{classwikibooks__design__patterns_1_1Evaluator_a22439cc7dc84a90b755c2955c8c4ac74}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Interpreter_8cpp}{Interpreter.\+cpp}\end{DoxyCompactItemize}

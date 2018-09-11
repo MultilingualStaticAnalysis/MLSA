@@ -1,0 +1,80 @@
+\hypertarget{LeftListHeap_8cpp}{}\section{Left\+List\+Heap.\+cpp File Reference}
+\label{LeftListHeap_8cpp}\index{Left\+List\+Heap.\+cpp@{Left\+List\+Heap.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+Include dependency graph for Left\+List\+Heap.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{LeftListHeap_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classLeftistNode}{Leftist\+Node}
+\item 
+class \hyperlink{classLeftistHeap}{Leftist\+Heap}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{LeftListHeap_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Left\+List\+Heap.\+cpp@{Left\+List\+Heap.\+cpp}!main@{main}}
+\index{main@{main}!Left\+List\+Heap.\+cpp@{Left\+List\+Heap.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{LeftListHeap_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{LeftListHeap_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+243 \{
+244     \hyperlink{classLeftistHeap}{LeftistHeap} h;
+245     \hyperlink{classLeftistHeap}{LeftistHeap} h1;
+246     \hyperlink{classLeftistHeap}{LeftistHeap} h2;
+247     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 20; i++)
+248     \{
+249         \textcolor{keywordflow}{if} (i % 2 == 0)
+250         \{
+251             h.\hyperlink{classLeftistHeap_a1864cb85655de68ab0813579bd9b9659}{Insert}(i);
+252             cout<<\textcolor{stringliteral}{"Element"}<<i<<\textcolor{stringliteral}{" inserted in Heap 1"}<<endl;
+253         \}
+254         \textcolor{keywordflow}{else}
+255         \{
+256             h1.\hyperlink{classLeftistHeap_a1864cb85655de68ab0813579bd9b9659}{Insert}(i);
+257             cout<<\textcolor{stringliteral}{"Element"}<<i<<\textcolor{stringliteral}{" inserted in Heap 2"}<<endl;
+258         \}
+259     \}
+260     h.\hyperlink{classLeftistHeap_a30c5065cf2bd8c1816d944576f704cc7}{Merge}(h1);
+261     h2 = h;
+262     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 20; i++)
+263     \{
+264         \textcolor{keywordtype}{int} x;
+265         h2.\hyperlink{classLeftistHeap_a41ab51a043541d4372fe10cd06561028}{deleteMin}(x);
+266         cout<<\textcolor{stringliteral}{"Element "}<<x<<\textcolor{stringliteral}{" Deleted"}<<endl;
+267         \textcolor{keywordflow}{if} (h2.\hyperlink{classLeftistHeap_a107b474e1c9f2a15710842d778305ca4}{isEmpty}())
+268         \{
+269             cout<<\textcolor{stringliteral}{"The Heap is Empty"}<<endl;
+270             \textcolor{keywordflow}{break};
+271         \}
+272     \}
+273     \textcolor{keywordflow}{return} 0;
+274 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{LeftListHeap_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

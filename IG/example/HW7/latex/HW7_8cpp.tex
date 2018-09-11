@@ -1,0 +1,379 @@
+\hypertarget{HW7_8cpp}{}\section{H\+W7.\+cpp File Reference}
+\label{HW7_8cpp}\index{H\+W7.\+cpp@{H\+W7.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$cctype$>$}\\*
+Include dependency graph for H\+W7.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{HW7_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classMoney}{Money}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{HW7_8cpp_a4a62e282ba4d4926583e5d206c744870}{digit\+\_\+to\+\_\+int} (char c)
+\item 
+int \hyperlink{HW7_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\item 
+istream \& \hyperlink{HW7_8cpp_a4c8e628d575a860141c4fd4f2f38b186}{operator$>$$>$} (istream \&ins, \hyperlink{classMoney}{Money} \&amount)
+\item 
+ostream \& \hyperlink{HW7_8cpp_a8ee9f1db0adb144c0d313ae202d06b3c}{operator$<$$<$} (ostream \&outs, const \hyperlink{classMoney}{Money} \&amount)
+\item 
+\hyperlink{classMoney}{Money} \hyperlink{HW7_8cpp_a050c2304648c379e54d793631adc3595}{operator+} (const \hyperlink{classMoney}{Money} \&amount1, const \hyperlink{classMoney}{Money} \&amount2)
+\item 
+\hyperlink{classMoney}{Money} \hyperlink{HW7_8cpp_afcc9c5cd27cc1c1b770681205a45cda0}{operator-\/} (const \hyperlink{classMoney}{Money} \&amount1, const \hyperlink{classMoney}{Money} \&amount2)
+\item 
+\hyperlink{classMoney}{Money} \hyperlink{HW7_8cpp_adeefac843a57c83f4ddd1125c5e001a0}{operator-\/} (const \hyperlink{classMoney}{Money} \&amount)
+\item 
+bool \hyperlink{HW7_8cpp_adfbd10ed3dffab92c205b82c302357c6}{operator==} (const \hyperlink{classMoney}{Money} \&amount1, const \hyperlink{classMoney}{Money} \&amount2)
+\item 
+bool \hyperlink{HW7_8cpp_a31c79d588d6537e80efaa53e75747a61}{operator$<$} (const \hyperlink{classMoney}{Money} \&amount1, const \hyperlink{classMoney}{Money} \&amount2)
+\item 
+bool \hyperlink{HW7_8cpp_ad45da707c7bee0cb12440a1c6ca3dc4b}{operator$<$=} (const \hyperlink{classMoney}{Money} \&amount1, const \hyperlink{classMoney}{Money} \&amount2)
+\item 
+bool \hyperlink{HW7_8cpp_adb213c2f9318ccaadd43a702ab25d614}{operator$>$} (const \hyperlink{classMoney}{Money} \&amount1, const \hyperlink{classMoney}{Money} \&amount2)
+\item 
+bool \hyperlink{HW7_8cpp_af47b787881ddfdc6f98f3a86ba0a9d14}{operator$>$=} (const \hyperlink{classMoney}{Money} \&amount1, const \hyperlink{classMoney}{Money} \&amount2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{H\+W7.\+cpp@{H\+W7.\+cpp}!digit\+\_\+to\+\_\+int@{digit\+\_\+to\+\_\+int}}
+\index{digit\+\_\+to\+\_\+int@{digit\+\_\+to\+\_\+int}!H\+W7.\+cpp@{H\+W7.\+cpp}}
+\subsubsection[{\texorpdfstring{digit\+\_\+to\+\_\+int(char c)}{digit_to_int(char c)}}]{\setlength{\rightskip}{0pt plus 5cm}int digit\+\_\+to\+\_\+int (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{HW7_8cpp_a4a62e282ba4d4926583e5d206c744870}{}\label{HW7_8cpp_a4a62e282ba4d4926583e5d206c744870}
+
+\begin{DoxyCode}
+152 \{
+153    \textcolor{keywordflow}{return} ( static\_cast<int>(c) - static\_cast<int>(\textcolor{charliteral}{'0'}) );
+154 \}
+\end{DoxyCode}
+\index{H\+W7.\+cpp@{H\+W7.\+cpp}!main@{main}}
+\index{main@{main}!H\+W7.\+cpp@{H\+W7.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{HW7_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{HW7_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+50 \{
+51 \textcolor{comment}{/* Money amount;                                                                                           
+                                                                                                       }
+52 \textcolor{comment}{   ifstream in\_stream;                                                                                     
+                                                                                                       }
+53 \textcolor{comment}{   ofstream out\_stream;                                                                                    
+                                                                                                       }
+54 \textcolor{comment}{                                                                                                           
+                                                                                                       }
+55 \textcolor{comment}{   in\_stream.open("infile.dat");                                                                           
+                                                                                                       }
+56 \textcolor{comment}{   if (in\_stream.fail( ))                                                                                  
+                                                                                                       }
+57 \textcolor{comment}{   \{                                                                                                       
+                                                                                                       }
+58 \textcolor{comment}{      cout << "Input file opening failed.\(\backslash\)n";                                                              
+                                                                                                       }
+59 \textcolor{comment}{      exit(1);}
+60 \textcolor{comment}{   \}                                                                                                       
+                                                                                                       }
+61 \textcolor{comment}{                                                                                                           
+                                                                                                       }
+62 \textcolor{comment}{   out\_stream.open("outfile.dat");                                                                         
+                                                                                                       }
+63 \textcolor{comment}{   if (out\_stream.fail( ))                                                                                 
+                                                                                                       }
+64 \textcolor{comment}{   \{                                                                                                       
+                                                                                                       }
+65 \textcolor{comment}{      cout << "Output file opening failed.\(\backslash\)n";                                                             
+                                                                                                       }
+66 \textcolor{comment}{      exit(1);                                                                                             
+                                                                                                       }
+67 \textcolor{comment}{   \}                                                                                                       
+                                                                                                       }
+68 \textcolor{comment}{                                                                                                           
+                                                                                                       }
+69 \textcolor{comment}{   in\_stream >> amount;                                                                                    
+                                                                                                       }
+70 \textcolor{comment}{   out\_stream << amount                                                                                    
+                                                                                                       }
+71 \textcolor{comment}{              << " copied from the file infile.dat.\(\backslash\)n";                                                    
+                                                                                                       }
+72 \textcolor{comment}{   cout << amount                                                                                          
+                                                                                                       }
+73 \textcolor{comment}{        << " copied from the file infile.dat.\(\backslash\)n";                                                          
+                                                                                                       }
+74 \textcolor{comment}{                                                                                                           
+                                                                                                       }
+75 \textcolor{comment}{   in\_stream.close( );                                                                                     
+                                                                                                       }
+76 \textcolor{comment}{   out\_stream.close( );                                                                                    
+                                                                                                       }
+77 \textcolor{comment}{*/}
+78    \hyperlink{classMoney}{Money} m1(987, 45), m2(12);
+79    cout << \textcolor{stringliteral}{"m1 = $"} << m1.get\_value() << endl;
+80    cout << \textcolor{stringliteral}{"m2 = $"} << m2.get\_value() << endl;
+81    \hyperlink{classMoney}{Money} m3(m1.percent(5));
+82    \hyperlink{classMoney}{Money} m4(m2.percent(35));
+83    cout << \textcolor{stringliteral}{"5% of m1 = $"} << m3.\hyperlink{classMoney_acee1d7ddca28c78740229a57cda5874f}{get\_value}() << endl;
+84    cout << \textcolor{stringliteral}{"35% of m2 = $"} << m4.get\_value() << endl;
+85    \textcolor{keywordflow}{if} (m3 == m4)
+86       cout << \textcolor{stringliteral}{"They are equal!\(\backslash\)n"};
+87    \textcolor{keywordflow}{else}
+88       cout << \textcolor{stringliteral}{"They are NOT equal.\(\backslash\)n"};
+89    \textcolor{keywordflow}{if} (m3 < m4)
+90      cout << \textcolor{stringliteral}{"m3 is less than m4.\(\backslash\)n"};
+91    \textcolor{keywordflow}{else}
+92       cout << \textcolor{stringliteral}{"m4 is less than m3.\(\backslash\)n"};
+93    \textcolor{keywordflow}{if} (m3 > m4)
+94       cout << \textcolor{stringliteral}{"m3 is greater than m4.\(\backslash\)n"};
+95    \textcolor{keywordflow}{else}
+96       cout << \textcolor{stringliteral}{"m4 is greater than m3.\(\backslash\)n"};
+97    \textcolor{keywordflow}{if} (m3 <= m4)
+98       cout << \textcolor{stringliteral}{"m3 is less than or equal to m4.\(\backslash\)n"};
+99    \textcolor{keywordflow}{else}
+100       cout << \textcolor{stringliteral}{"m4 is less than or equal to m3.\(\backslash\)n"};
+101    \textcolor{keywordflow}{if} (m3 >= m4)
+102       cout << \textcolor{stringliteral}{"m3 is greater than or equal to m4.\(\backslash\)n"};
+103    \textcolor{keywordflow}{else}
+104       cout << \textcolor{stringliteral}{"m4 is greater than or equal to m3.\(\backslash\)n"};
+105    \hyperlink{classMoney}{Money} m5(m1 - m2);
+106    cout << \textcolor{stringliteral}{"m1 - m2 = $"} << m5.get\_value() << endl;
+107    \hyperlink{classMoney}{Money} m6(m1 + m2);
+108    cout << \textcolor{stringliteral}{"m1 + m2 = $"} << m6.get\_value() << endl;
+109    \hyperlink{classMoney}{Money} m7(-m1);
+110    cout << \textcolor{stringliteral}{"negative m1 = $"} << m7.get\_value() << endl;
+111    \textcolor{keywordflow}{return} 0;
+112 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{HW7_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{H\+W7.\+cpp@{H\+W7.\+cpp}!operator+@{operator+}}
+\index{operator+@{operator+}!H\+W7.\+cpp@{H\+W7.\+cpp}}
+\subsubsection[{\texorpdfstring{operator+(const Money \&amount1, const Money \&amount2)}{operator+(const Money &amount1, const Money &amount2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Money} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Money} \&}]{amount1, }
+\item[{const {\bf Money} \&}]{amount2}
+\end{DoxyParamCaption}
+)}\hypertarget{HW7_8cpp_a050c2304648c379e54d793631adc3595}{}\label{HW7_8cpp_a050c2304648c379e54d793631adc3595}
+
+\begin{DoxyCode}
+206 \{
+207    \hyperlink{classMoney}{Money} temp;
+208    temp.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} = amount1.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} + amount2.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents};
+209    \textcolor{keywordflow}{return} temp;
+210 \}
+\end{DoxyCode}
+\index{H\+W7.\+cpp@{H\+W7.\+cpp}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!H\+W7.\+cpp@{H\+W7.\+cpp}}
+\subsubsection[{\texorpdfstring{operator-\/(const Money \&amount1, const Money \&amount2)}{operator-(const Money &amount1, const Money &amount2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Money} operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Money} \&}]{amount1, }
+\item[{const {\bf Money} \&}]{amount2}
+\end{DoxyParamCaption}
+)}\hypertarget{HW7_8cpp_afcc9c5cd27cc1c1b770681205a45cda0}{}\label{HW7_8cpp_afcc9c5cd27cc1c1b770681205a45cda0}
+
+\begin{DoxyCode}
+213 \{
+214    \hyperlink{classMoney}{Money} temp;
+215    temp.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} = amount1.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} - amount2.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents};
+216    \textcolor{keywordflow}{return} temp;
+217 \}
+\end{DoxyCode}
+\index{H\+W7.\+cpp@{H\+W7.\+cpp}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!H\+W7.\+cpp@{H\+W7.\+cpp}}
+\subsubsection[{\texorpdfstring{operator-\/(const Money \&amount)}{operator-(const Money &amount)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Money} operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Money} \&}]{amount}
+\end{DoxyParamCaption}
+)}\hypertarget{HW7_8cpp_adeefac843a57c83f4ddd1125c5e001a0}{}\label{HW7_8cpp_adeefac843a57c83f4ddd1125c5e001a0}
+
+\begin{DoxyCode}
+220 \{
+221    \hyperlink{classMoney}{Money} temp;
+222    temp.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} = -amount.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents};
+223    \textcolor{keywordflow}{return} temp;
+224 \}
+\end{DoxyCode}
+\index{H\+W7.\+cpp@{H\+W7.\+cpp}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!H\+W7.\+cpp@{H\+W7.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$(const Money \&amount1, const Money \&amount2)}{operator<(const Money &amount1, const Money &amount2)}}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Money} \&}]{amount1, }
+\item[{const {\bf Money} \&}]{amount2}
+\end{DoxyParamCaption}
+)}\hypertarget{HW7_8cpp_a31c79d588d6537e80efaa53e75747a61}{}\label{HW7_8cpp_a31c79d588d6537e80efaa53e75747a61}
+
+\begin{DoxyCode}
+232 \{
+233    \textcolor{keywordflow}{return} (amount1.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} < amount2.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents});
+234 \}
+\end{DoxyCode}
+\index{H\+W7.\+cpp@{H\+W7.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!H\+W7.\+cpp@{H\+W7.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(ostream \&outs, const Money \&amount)}{operator<<(ostream &outs, const Money &amount)}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{outs, }
+\item[{const {\bf Money} \&}]{amount}
+\end{DoxyParamCaption}
+)}\hypertarget{HW7_8cpp_a8ee9f1db0adb144c0d313ae202d06b3c}{}\label{HW7_8cpp_a8ee9f1db0adb144c0d313ae202d06b3c}
+
+\begin{DoxyCode}
+158 \{
+159    \textcolor{keywordtype}{long} positive\_cents, dollars, cents;
+160    positive\_cents = labs(amount.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents});
+161    dollars = positive\_cents/100;
+162    cents = positive\_cents%100;
+163 
+164    \textcolor{keywordflow}{if} (amount.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} < 0)
+165       outs << \textcolor{stringliteral}{"-$"} << dollars << \textcolor{charliteral}{'.'};
+166    \textcolor{keywordflow}{else}
+167       outs << \textcolor{stringliteral}{"$"} << dollars << \textcolor{charliteral}{'.'};
+168 
+169    \textcolor{keywordflow}{if} (cents < 10)
+170       outs << \textcolor{charliteral}{'0'};
+171    outs << cents;
+172 
+173    \textcolor{keywordflow}{return} outs;
+174 \}
+\end{DoxyCode}
+\index{H\+W7.\+cpp@{H\+W7.\+cpp}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!H\+W7.\+cpp@{H\+W7.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$=(const Money \&amount1, const Money \&amount2)}{operator<=(const Money &amount1, const Money &amount2)}}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$<$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Money} \&}]{amount1, }
+\item[{const {\bf Money} \&}]{amount2}
+\end{DoxyParamCaption}
+)}\hypertarget{HW7_8cpp_ad45da707c7bee0cb12440a1c6ca3dc4b}{}\label{HW7_8cpp_ad45da707c7bee0cb12440a1c6ca3dc4b}
+
+\begin{DoxyCode}
+237 \{
+238    \textcolor{keywordflow}{return} (amount1.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} <= amount2.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents});
+239 \}
+\end{DoxyCode}
+\index{H\+W7.\+cpp@{H\+W7.\+cpp}!operator==@{operator==}}
+\index{operator==@{operator==}!H\+W7.\+cpp@{H\+W7.\+cpp}}
+\subsubsection[{\texorpdfstring{operator==(const Money \&amount1, const Money \&amount2)}{operator==(const Money &amount1, const Money &amount2)}}]{\setlength{\rightskip}{0pt plus 5cm}bool operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Money} \&}]{amount1, }
+\item[{const {\bf Money} \&}]{amount2}
+\end{DoxyParamCaption}
+)}\hypertarget{HW7_8cpp_adfbd10ed3dffab92c205b82c302357c6}{}\label{HW7_8cpp_adfbd10ed3dffab92c205b82c302357c6}
+
+\begin{DoxyCode}
+227 \{
+228    \textcolor{keywordflow}{return} (amount1.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} == amount2.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents});
+229 \}
+\end{DoxyCode}
+\index{H\+W7.\+cpp@{H\+W7.\+cpp}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!H\+W7.\+cpp@{H\+W7.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$>$(const Money \&amount1, const Money \&amount2)}{operator>(const Money &amount1, const Money &amount2)}}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Money} \&}]{amount1, }
+\item[{const {\bf Money} \&}]{amount2}
+\end{DoxyParamCaption}
+)}\hypertarget{HW7_8cpp_adb213c2f9318ccaadd43a702ab25d614}{}\label{HW7_8cpp_adb213c2f9318ccaadd43a702ab25d614}
+
+\begin{DoxyCode}
+242 \{
+243    \textcolor{keywordflow}{return} (amount1.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} > amount2.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents});
+244 \}
+\end{DoxyCode}
+\index{H\+W7.\+cpp@{H\+W7.\+cpp}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!H\+W7.\+cpp@{H\+W7.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$>$=(const Money \&amount1, const Money \&amount2)}{operator>=(const Money &amount1, const Money &amount2)}}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$>$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Money} \&}]{amount1, }
+\item[{const {\bf Money} \&}]{amount2}
+\end{DoxyParamCaption}
+)}\hypertarget{HW7_8cpp_af47b787881ddfdc6f98f3a86ba0a9d14}{}\label{HW7_8cpp_af47b787881ddfdc6f98f3a86ba0a9d14}
+
+\begin{DoxyCode}
+247 \{
+248    \textcolor{keywordflow}{return} (amount1.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} >= amount2.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents});
+249 \}
+\end{DoxyCode}
+\index{H\+W7.\+cpp@{H\+W7.\+cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!H\+W7.\+cpp@{H\+W7.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$>$$>$(istream \&ins, Money \&amount)}{operator>>(istream &ins, Money &amount)}}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{ins, }
+\item[{{\bf Money} \&}]{amount}
+\end{DoxyParamCaption}
+)}\hypertarget{HW7_8cpp_a4c8e628d575a860141c4fd4f2f38b186}{}\label{HW7_8cpp_a4c8e628d575a860141c4fd4f2f38b186}
+
+\begin{DoxyCode}
+115 \{
+116    \textcolor{keywordtype}{char} one\_char, decimal\_point,
+117       digit1, digit2; \textcolor{comment}{//digits for the amount of cents                                                     
+                                                                                                       }
+118    \textcolor{keywordtype}{long} dollars;
+119    \textcolor{keywordtype}{int} cents;
+120    \textcolor{keywordtype}{bool} negative;\textcolor{comment}{//set to true if input is negative.                                                       
+                                                                                                       }
+121 
+122    ins >> one\_char;
+123    \textcolor{keywordflow}{if} (one\_char == \textcolor{charliteral}{'-'})
+124    \{
+125       negative = \textcolor{keyword}{true};
+126       ins >> one\_char; \textcolor{comment}{//read '$'                                                                          
+                                                                                                       }
+127    \}
+128    \textcolor{keywordflow}{else}
+129       negative = \textcolor{keyword}{false};
+130    \textcolor{comment}{//if input is legal, then one\_char == '$'                                                               
+                                                                                                       }
+131 
+132    ins >> dollars >> decimal\_point >> digit1 >> digit2;
+133 
+134    \textcolor{keywordflow}{if} ( one\_char != \textcolor{charliteral}{'$'} || decimal\_point != \textcolor{charliteral}{'.'}
+135         || !isdigit(digit1) || !isdigit(digit2) )
+136    \{
+137       cout << \textcolor{stringliteral}{"Error illegal form for money input\(\backslash\)n"};
+138       exit(1);
+139    \}
+140 
+141    cents = \hyperlink{HW7_8cpp_a4a62e282ba4d4926583e5d206c744870}{digit\_to\_int}(digit1)*10 + \hyperlink{HW7_8cpp_a4a62e282ba4d4926583e5d206c744870}{digit\_to\_int}(digit2);
+142 
+143    amount.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} = dollars*100 + cents;
+144    \textcolor{keywordflow}{if} (negative)
+145       amount.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents} = -amount.\hyperlink{classMoney_a499d11509460668b7c262d9a58f7f310}{all\_cents};
+146 
+147 
+148    \textcolor{keywordflow}{return} ins;
+149 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{HW7_8cpp_a4c8e628d575a860141c4fd4f2f38b186_cgraph}
+\end{center}
+\end{figure}
+
+

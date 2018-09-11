@@ -1,0 +1,62 @@
+\hypertarget{Command_8cpp}{}\section{Command.\+cpp File Reference}
+\label{Command_8cpp}\index{Command.\+cpp@{Command.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for Command.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{Command_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCommand}{Command}
+\item 
+class \hyperlink{classLight}{Light}
+\item 
+class \hyperlink{classFlipUpCommand}{Flip\+Up\+Command}
+\item 
+class \hyperlink{classFlipDownCommand}{Flip\+Down\+Command}
+\item 
+class \hyperlink{classSwitch}{Switch}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Command_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Command.\+cpp@{Command.\+cpp}!main@{main}}
+\index{main@{main}!Command.\+cpp@{Command.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Command_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Command_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+90 \{
+91     \hyperlink{classLight}{Light} lamp;
+92     \hyperlink{classFlipUpCommand}{FlipUpCommand} switchUp(lamp);
+93     \hyperlink{classFlipDownCommand}{FlipDownCommand} switchDown(lamp);
+94 
+95     \hyperlink{classSwitch}{Switch} s(switchUp, switchDown);
+96     s.flipUp();
+97     s.flipDown();
+98 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{Command_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

@@ -1,0 +1,1444 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.38.0 (20140413.2041)
+%%Title: /home/labaccount/11-2-17/mlsa/IG/example/Hanoi Call Graph
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 150 150 2239 3150
+%%PageOrientation: Portrait
+<< /PageSize [2239 3150] >> setpagedevice
+0 0 1 beginpage
+gsave
+150 150 2089 3000 boxprim clip newpath
+1.18449 1.18449 set_scale 0 rotate 130.637 130.637 translate
+[ /CropBox [150 150 2239 3150] /PAGES pdfmark
+0 0 0 graphcolor
+14 /Times-Roman set_font
+706.17 7.8 moveto 343 (/home/labaccount/11-2-17/mlsa/IG/example/Hanoi Call Graph) alignedtext
+% Node0x683728132
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+230.73 1309.87 230.96 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+61.23 1306.17 moveto 339 (/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp) alignedtext
+grestore
+% Node0x836122675
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+802.93 1345.87 305.44 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+594.93 1349.67 moveto 416 (0x3bd4118. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+779.93 1334.67 moveto 46 (push1\(i\)) alignedtext
+grestore
+% Node0x683728132->Node0x836122675
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 410.58 1321.16 moveto
+452.94 1323.84 498.95 1326.74 544.04 1329.59 curveto
+stroke
+0 0 0 edgecolor
+newpath 544.05 1333.1 moveto
+554.25 1330.23 lineto
+544.49 1326.11 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 544.05 1333.1 moveto
+554.25 1330.23 lineto
+544.49 1326.11 lineto
+closepath stroke
+grestore
+% Node0x828379820
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+802.93 1273.87 305.44 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+594.93 1277.67 moveto 416 (0x3bd4278. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+785.93 1262.67 moveto 34 (toh\(n\)) alignedtext
+grestore
+% Node0x683728132->Node0x828379820
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 410.58 1298.58 moveto
+452.94 1295.9 498.95 1293 544.04 1290.15 curveto
+stroke
+0 0 0 edgecolor
+newpath 544.49 1293.63 moveto
+554.25 1289.51 lineto
+544.05 1286.64 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 544.49 1293.63 moveto
+554.25 1289.51 lineto
+544.05 1286.64 lineto
+closepath stroke
+grestore
+% Node0x126319080
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 2497.87 302.78 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1243.87 2501.67 moveto 412 (0x3bcfbc0. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1422.87 2486.67 moveto 54 (pow\(2, n\)) alignedtext
+grestore
+% Node0x828379820->Node0x126319080
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1079.27 1285.57 moveto
+1089.87 1292.32 1099.68 1300.36 1108.4 1309.87 curveto
+1194.96 1404.25 1057.84 2367.49 1144.4 2461.87 curveto
+1150.94 2469 1158.08 2475.3 1165.72 2480.85 curveto
+stroke
+0 0 0 edgecolor
+newpath 1163.94 2483.87 moveto
+1174.18 2486.58 lineto
+1167.86 2478.08 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1163.94 2483.87 moveto
+1174.18 2486.58 lineto
+1167.86 2478.08 lineto
+closepath stroke
+grestore
+% Node0x648824925
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 2425.87 303.2 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1243.37 2429.67 moveto 413 (0x3bcfd98. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1422.37 2414.67 moveto 55 (display1\(\)) alignedtext
+grestore
+% Node0x828379820->Node0x648824925
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1078.92 1285.39 moveto
+1089.65 1292.17 1099.58 1300.27 1108.4 1309.87 curveto
+1189.64 1398.27 1063.16 2301.47 1144.4 2389.87 curveto
+1150.95 2396.99 1158.1 2403.29 1165.74 2408.83 curveto
+stroke
+0 0 0 edgecolor
+newpath 1163.96 2411.86 moveto
+1174.21 2414.56 lineto
+1167.88 2406.06 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1163.96 2411.86 moveto
+1174.21 2414.56 lineto
+1167.88 2406.06 lineto
+closepath stroke
+grestore
+% Node0x951813154
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 2353.87 302.78 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1243.87 2357.67 moveto 412 (0x3bcfe58. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1422.37 2342.67 moveto 55 (display2\(\)) alignedtext
+grestore
+% Node0x828379820->Node0x951813154
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1078.89 1285.41 moveto
+1089.63 1292.19 1099.56 1300.28 1108.4 1309.87 curveto
+1184.33 1392.3 1068.47 2235.44 1144.4 2317.87 curveto
+1150.95 2324.99 1158.11 2331.27 1165.76 2336.81 curveto
+stroke
+0 0 0 edgecolor
+newpath 1163.99 2339.84 moveto
+1174.24 2342.53 lineto
+1167.9 2334.04 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1163.99 2339.84 moveto
+1174.24 2342.53 lineto
+1167.9 2334.04 lineto
+closepath stroke
+grestore
+% Node0x928420157
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 2281.87 301.87 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1244.37 2285.67 moveto 411 (0x3bcff18. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1422.37 2270.67 moveto 55 (display3\(\)) alignedtext
+grestore
+% Node0x828379820->Node0x928420157
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1078.86 1285.44 moveto
+1089.61 1292.22 1099.55 1300.29 1108.4 1309.87 curveto
+1179.02 1386.32 1073.78 2169.42 1144.4 2245.87 curveto
+1151.03 2253.05 1158.28 2259.38 1166.01 2264.96 curveto
+stroke
+0 0 0 edgecolor
+newpath 1164.34 2268.05 moveto
+1174.6 2270.71 lineto
+1168.24 2262.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1164.34 2268.05 moveto
+1174.6 2270.71 lineto
+1168.24 2262.23 lineto
+closepath stroke
+grestore
+% Node0x952508614
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 2209.87 305.44 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1241.87 2213.67 moveto 416 (0x3bd0000. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1410.37 2198.67 moveto 79 (top_of_stack\(\)) alignedtext
+grestore
+% Node0x828379820->Node0x952508614
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1078.82 1285.48 moveto
+1089.58 1292.24 1099.54 1300.3 1108.4 1309.87 curveto
+1173.71 1380.34 1079.09 2103.4 1144.4 2173.87 curveto
+1150.91 2180.89 1158.01 2187.11 1165.58 2192.59 curveto
+stroke
+0 0 0 edgecolor
+newpath 1163.73 2195.57 moveto
+1173.98 2198.26 lineto
+1167.65 2189.77 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1163.73 2195.57 moveto
+1173.98 2198.26 lineto
+1167.65 2189.77 lineto
+closepath stroke
+grestore
+% Node0x490130659
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 2137.87 305.44 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1241.87 2141.67 moveto 416 (0x3bd0330. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1398.37 2126.67 moveto 103 (push3\(0x3bd0298\)) alignedtext
+grestore
+% Node0x828379820->Node0x490130659
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1078.78 1285.52 moveto
+1089.55 1292.27 1099.52 1300.32 1108.4 1309.87 curveto
+1168.4 1374.37 1084.4 2037.37 1144.4 2101.87 curveto
+1150.92 2108.88 1158.03 2115.09 1165.61 2120.56 curveto
+stroke
+0 0 0 edgecolor
+newpath 1163.77 2123.54 moveto
+1174.02 2126.22 lineto
+1167.68 2117.73 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1163.77 2123.54 moveto
+1174.02 2126.22 lineto
+1167.68 2117.73 lineto
+closepath stroke
+grestore
+% Node0x639737451
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 2065.87 305.44 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1241.87 2069.67 moveto 416 (0x3bd0298. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1431.37 2054.67 moveto 37 (pop1\(\)) alignedtext
+grestore
+% Node0x828379820->Node0x639737451
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1078.72 1285.57 moveto
+1089.51 1292.31 1099.5 1300.34 1108.4 1309.87 curveto
+1163.09 1368.39 1089.71 1971.35 1144.4 2029.87 curveto
+1150.94 2036.87 1158.06 2043.06 1165.66 2048.52 curveto
+stroke
+0 0 0 edgecolor
+newpath 1163.82 2051.51 moveto
+1174.07 2054.17 lineto
+1167.72 2045.69 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1163.82 2051.51 moveto
+1174.07 2054.17 lineto
+1167.72 2045.69 lineto
+closepath stroke
+grestore
+% Node0x699616896
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 1993.87 305.44 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1241.87 1997.67 moveto 416 (0x3bd0560. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1399.87 1982.67 moveto 100 (push1\(0x3bd04f8\)) alignedtext
+grestore
+% Node0x828379820->Node0x699616896
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1078.66 1285.63 moveto
+1089.46 1292.35 1099.47 1300.37 1108.4 1309.87 curveto
+1207.16 1414.97 1045.64 1852.77 1144.4 1957.87 curveto
+1150.96 1964.85 1158.1 1971.03 1165.71 1976.48 curveto
+stroke
+0 0 0 edgecolor
+newpath 1163.88 1979.47 moveto
+1174.14 1982.11 lineto
+1167.77 1973.65 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1163.88 1979.47 moveto
+1174.14 1982.11 lineto
+1167.77 1973.65 lineto
+closepath stroke
+grestore
+% Node0x236955214
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 1921.87 304.11 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1242.87 1925.67 moveto 414 (0x3bd04f8. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1431.37 1910.67 moveto 37 (pop2\(\)) alignedtext
+grestore
+% Node0x828379820->Node0x236955214
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1078.58 1285.71 moveto
+1089.4 1292.41 1099.44 1300.4 1108.4 1309.87 curveto
+1196.55 1403.03 1056.25 1792.71 1144.4 1885.87 curveto
+1151.05 1892.9 1158.29 1899.11 1166 1904.58 curveto
+stroke
+0 0 0 edgecolor
+newpath 1164.28 1907.64 moveto
+1174.55 1910.24 lineto
+1168.14 1901.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1164.28 1907.64 moveto
+1174.55 1910.24 lineto
+1168.14 1901.8 lineto
+closepath stroke
+grestore
+% Node0x323208565
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 1849.87 305.44 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1241.87 1853.67 moveto 416 (0x3bd0790. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1398.37 1838.67 moveto 103 (push2\(0x3bd0728\)) alignedtext
+grestore
+% Node0x828379820->Node0x323208565
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1078.14 1285.6 moveto
+1089.12 1292.32 1099.3 1300.34 1108.4 1309.87 curveto
+1185.93 1391.09 1066.86 1732.65 1144.4 1813.87 curveto
+1151.08 1820.87 1158.35 1827.05 1166.08 1832.51 curveto
+stroke
+0 0 0 edgecolor
+newpath 1164.38 1835.57 moveto
+1174.66 1838.14 lineto
+1168.22 1829.72 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1164.38 1835.57 moveto
+1174.66 1838.14 lineto
+1168.22 1829.72 lineto
+closepath stroke
+grestore
+% Node0x236451938
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 1777.87 305.44 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1241.87 1781.67 moveto 416 (0x3bd0728. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1431.37 1766.67 moveto 37 (pop3\(\)) alignedtext
+grestore
+% Node0x828379820->Node0x236451938
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1078.01 1285.73 moveto
+1089.02 1292.42 1099.25 1300.4 1108.4 1309.87 curveto
+1175.33 1379.15 1077.47 1672.59 1144.4 1741.87 curveto
+1151.12 1748.83 1158.42 1754.98 1166.19 1760.4 curveto
+stroke
+0 0 0 edgecolor
+newpath 1164.5 1763.48 moveto
+1174.79 1766.01 lineto
+1168.32 1757.62 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1164.5 1763.48 moveto
+1174.79 1766.01 lineto
+1168.32 1757.62 lineto
+closepath stroke
+grestore
+% Node0x696767072
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 1705.87 305.44 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1241.87 1709.67 moveto 416 (0x3bd09d8. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1431.37 1694.67 moveto 37 (pop2\(\)) alignedtext
+grestore
+% Node0x828379820->Node0x696767072
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1077.48 1285.72 moveto
+1088.67 1292.39 1099.08 1300.38 1108.4 1309.87 curveto
+1164.74 1367.23 1088.06 1612.51 1144.4 1669.87 curveto
+1151.32 1676.92 1158.84 1683.13 1166.83 1688.6 curveto
+stroke
+0 0 0 edgecolor
+newpath 1165.01 1691.59 moveto
+1175.32 1694.02 lineto
+1168.78 1685.69 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1165.01 1691.59 moveto
+1175.32 1694.02 lineto
+1168.78 1685.69 lineto
+closepath stroke
+grestore
+% Node0x267953484
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 1633.87 304.53 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1242.37 1637.67 moveto 415 (0x3bd0ae8. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1431.37 1622.67 moveto 37 (pop3\(\)) alignedtext
+grestore
+% Node0x828379820->Node0x267953484
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1076.86 1285.8 moveto
+1088.25 1292.44 1098.86 1300.4 1108.4 1309.87 curveto
+1199.92 1400.78 1052.88 1506.96 1144.4 1597.87 curveto
+1151.48 1604.9 1159.15 1611.09 1167.29 1616.54 curveto
+stroke
+0 0 0 edgecolor
+newpath 1165.61 1619.61 moveto
+1175.94 1621.94 lineto
+1169.31 1613.67 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1165.61 1619.61 moveto
+1175.94 1621.94 lineto
+1169.31 1613.67 lineto
+closepath stroke
+grestore
+% Node0x141729631
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 1561.87 305.44 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1241.87 1565.67 moveto 416 (0x3bd0d50. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1425.37 1550.67 moveto 49 (push3\(b\)) alignedtext
+grestore
+% Node0x828379820->Node0x141729631
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1076.05 1286.09 moveto
+1087.69 1292.64 1098.58 1300.5 1108.4 1309.87 curveto
+1178.83 1377.04 1073.97 1458.7 1144.4 1525.87 curveto
+1151.77 1532.9 1159.73 1539.07 1168.17 1544.49 curveto
+stroke
+0 0 0 edgecolor
+newpath 1166.38 1547.5 moveto
+1176.75 1549.65 lineto
+1169.99 1541.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1166.38 1547.5 moveto
+1176.75 1549.65 lineto
+1169.99 1541.5 lineto
+closepath stroke
+grestore
+% Node0x675526021
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 1489.87 304.53 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1242.37 1493.67 moveto 415 (0x3bd0e58. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1425.87 1478.67 moveto 48 (push3\(a\)) alignedtext
+grestore
+% Node0x828379820->Node0x675526021
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1073.76 1286.32 moveto
+1086.15 1292.77 1097.81 1300.55 1108.4 1309.87 curveto
+1157.92 1353.46 1094.88 1410.28 1144.4 1453.87 curveto
+1152.42 1460.93 1161.06 1467.11 1170.17 1472.49 curveto
+stroke
+0 0 0 edgecolor
+newpath 1168.6 1475.62 moveto
+1179.04 1477.42 lineto
+1172 1469.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1168.6 1475.62 moveto
+1179.04 1477.42 lineto
+1172 1469.5 lineto
+closepath stroke
+grestore
+% Node0x481176082
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 1417.87 304.53 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1242.37 1421.67 moveto 415 (0x3bd10e0. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1425.87 1406.67 moveto 48 (push2\(a\)) alignedtext
+grestore
+% Node0x828379820->Node0x481176082
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1067.4 1287.5 moveto
+1081.86 1293.55 1095.66 1300.92 1108.4 1309.87 curveto
+1137.67 1330.44 1115.12 1361.3 1144.4 1381.87 curveto
+1154.44 1388.92 1165.14 1395 1176.29 1400.21 curveto
+stroke
+0 0 0 edgecolor
+newpath 1175.21 1403.56 moveto
+1185.77 1404.39 lineto
+1178.03 1397.15 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1175.21 1403.56 moveto
+1185.77 1404.39 lineto
+1178.03 1397.15 lineto
+closepath stroke
+grestore
+% Node0x782469379
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 1345.87 304.53 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1242.37 1349.67 moveto 415 (0x3bd11e8. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1425.37 1334.67 moveto 49 (push2\(b\)) alignedtext
+grestore
+% Node0x828379820->Node0x782469379
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 992.64 1294.94 moveto
+1073.64 1303.98 1168.33 1314.55 1250.38 1323.71 curveto
+stroke
+0 0 0 edgecolor
+newpath 1249.99 1327.19 moveto
+1260.32 1324.82 lineto
+1250.77 1320.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1249.99 1327.19 moveto
+1260.32 1324.82 lineto
+1250.77 1320.23 lineto
+closepath stroke
+grestore
+% Node0x357907055
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 1273.87 304.53 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1242.37 1277.67 moveto 415 (0x3bd13a0. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1425.87 1262.67 moveto 48 (push3\(a\)) alignedtext
+grestore
+% Node0x828379820->Node0x357907055
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1108.46 1273.87 moveto
+1117.13 1273.87 1125.82 1273.87 1134.5 1273.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1134.69 1277.37 moveto
+1144.69 1273.87 lineto
+1134.69 1270.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1134.69 1277.37 moveto
+1144.69 1273.87 lineto
+1134.69 1270.37 lineto
+closepath stroke
+grestore
+% Node0x294803597
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 1201.87 305.44 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1241.87 1205.67 moveto 416 (0x3bd1550. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1425.37 1190.67 moveto 49 (push2\(b\)) alignedtext
+grestore
+% Node0x828379820->Node0x294803597
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 992.64 1252.8 moveto
+1073.47 1243.78 1167.93 1233.23 1249.86 1224.09 curveto
+stroke
+0 0 0 edgecolor
+newpath 1250.49 1227.54 moveto
+1260.04 1222.95 lineto
+1249.72 1220.58 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1250.49 1227.54 moveto
+1260.04 1222.95 lineto
+1249.72 1220.58 lineto
+closepath stroke
+grestore
+% Node0x205300221
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 1129.87 304.11 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1242.87 1133.67 moveto 414 (0x3bd17f0. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1431.37 1118.67 moveto 37 (pop1\(\)) alignedtext
+grestore
+% Node0x828379820->Node0x205300221
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 872.98 1247.71 moveto
+941.04 1222.94 1048.47 1186.56 1144.4 1165.87 curveto
+1171.74 1159.97 1200.69 1154.98 1229.43 1150.77 curveto
+stroke
+0 0 0 edgecolor
+newpath 1230.19 1154.19 moveto
+1239.59 1149.31 lineto
+1229.19 1147.27 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1230.19 1154.19 moveto
+1239.59 1149.31 lineto
+1229.19 1147.27 lineto
+closepath stroke
+grestore
+% Node0x398031900
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 1057.87 305.44 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1241.87 1061.67 moveto 416 (0x3bd1900. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1431.37 1046.67 moveto 37 (pop3\(\)) alignedtext
+grestore
+% Node0x828379820->Node0x398031900
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 842.7 1247.19 moveto
+903.8 1206.61 1027.58 1130.26 1144.4 1093.87 curveto
+1165.43 1087.32 1187.61 1081.95 1210.03 1077.54 curveto
+stroke
+0 0 0 edgecolor
+newpath 1210.82 1080.95 moveto
+1219.99 1075.65 lineto
+1209.51 1074.07 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1210.82 1080.95 moveto
+1219.99 1075.65 lineto
+1209.51 1074.07 lineto
+closepath stroke
+grestore
+% Node0x935828692
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 985.87 305.44 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1241.87 989.67 moveto 416 (0x3bd1b68. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1425.37 974.67 moveto 49 (push3\(b\)) alignedtext
+grestore
+% Node0x828379820->Node0x935828692
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 830 1246.77 moveto
+883.32 1193.27 1011.09 1074.72 1144.4 1021.87 curveto
+1161.68 1015.02 1179.9 1009.37 1198.5 1004.72 curveto
+stroke
+0 0 0 edgecolor
+newpath 1199.35 1008.12 moveto
+1208.25 1002.38 lineto
+1197.71 1001.31 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1199.35 1008.12 moveto
+1208.25 1002.38 lineto
+1197.71 1001.31 lineto
+closepath stroke
+grestore
+% Node0x210988435
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 913.87 304.53 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1242.37 917.67 moveto 415 (0x3bd1c70. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1425.87 902.67 moveto 48 (push3\(a\)) alignedtext
+grestore
+% Node0x828379820->Node0x210988435
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 822.39 1247.01 moveto
+868.23 1182.76 994.48 1020.3 1144.4 949.87 curveto
+1159.16 942.94 1174.75 937.15 1190.76 932.33 curveto
+stroke
+0 0 0 edgecolor
+newpath 1192.13 935.57 moveto
+1200.78 929.45 lineto
+1190.2 928.84 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1192.13 935.57 moveto
+1200.78 929.45 lineto
+1190.2 928.84 lineto
+closepath stroke
+grestore
+% Node0x391703718
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 841.87 303.2 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1243.37 845.67 moveto 413 (0x3bd1ef8. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1425.87 830.67 moveto 48 (push1\(a\)) alignedtext
+grestore
+% Node0x828379820->Node0x391703718
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 817.65 1246.94 moveto
+856.92 1173.02 977.73 966.59 1144.4 877.87 curveto
+1157.7 870.79 1171.77 864.84 1186.3 859.85 curveto
+stroke
+0 0 0 edgecolor
+newpath 1187.49 863.14 moveto
+1195.9 856.71 lineto
+1185.31 856.49 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1187.49 863.14 moveto
+1195.9 856.71 lineto
+1185.31 856.49 lineto
+closepath stroke
+grestore
+% Node0x664376695
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 769.87 305.44 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1241.87 773.67 moveto 416 (0x3bd2000. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1425.37 758.67 moveto 49 (push1\(b\)) alignedtext
+grestore
+% Node0x828379820->Node0x664376695
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 814.24 1246.98 moveto
+847.46 1164.41 960.37 913.64 1144.4 805.87 curveto
+1156.41 798.84 1169.15 792.86 1182.33 787.81 curveto
+stroke
+0 0 0 edgecolor
+newpath 1183.81 791 moveto
+1192.01 784.29 lineto
+1181.41 784.42 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1183.81 791 moveto
+1192.01 784.29 lineto
+1181.41 784.42 lineto
+closepath stroke
+grestore
+% Node0x847606275
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 697.87 305.44 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1241.87 701.67 moveto 416 (0x3bd21b8. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1425.87 686.67 moveto 48 (push3\(a\)) alignedtext
+grestore
+% Node0x828379820->Node0x847606275
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 811.73 1246.86 moveto
+839.47 1156.17 942.66 861.19 1144.4 733.87 curveto
+1155.52 726.85 1167.33 720.85 1179.59 715.74 curveto
+stroke
+0 0 0 edgecolor
+newpath 1181.03 718.94 moveto
+1189.05 712.01 lineto
+1178.46 712.43 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1181.03 718.94 moveto
+1189.05 712.01 lineto
+1178.46 712.43 lineto
+closepath stroke
+grestore
+% Node0x231141243
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 625.87 305.44 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1241.87 629.67 moveto 416 (0x3bd2368. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1425.37 614.67 moveto 49 (push1\(b\)) alignedtext
+grestore
+% Node0x828379820->Node0x231141243
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 809.73 1246.84 moveto
+832.35 1148.69 924.47 809.26 1144.4 661.87 curveto
+1154.87 654.86 1166 648.83 1177.59 643.67 curveto
+stroke
+0 0 0 edgecolor
+newpath 1179.12 646.83 moveto
+1186.98 639.72 lineto
+1176.4 640.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1179.12 646.83 moveto
+1186.98 639.72 lineto
+1176.4 640.37 lineto
+closepath stroke
+grestore
+% Node0x306567627
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 553.87 305.44 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1241.87 557.67 moveto 416 (0x3bd2608. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1431.37 542.67 moveto 37 (pop1\(\)) alignedtext
+grestore
+% Node0x828379820->Node0x306567627
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 808.14 1246.7 moveto
+826.02 1141.39 906.03 757.65 1144.4 589.87 curveto
+1154.35 582.87 1164.94 576.83 1175.99 571.64 curveto
+stroke
+0 0 0 edgecolor
+newpath 1177.66 574.73 moveto
+1185.38 567.48 lineto
+1174.82 568.33 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1177.66 574.73 moveto
+1185.38 567.48 lineto
+1174.82 568.33 lineto
+closepath stroke
+grestore
+% Node0x901252922
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 481.87 305.44 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1241.87 485.67 moveto 416 (0x3bd2718. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1431.37 470.67 moveto 37 (pop2\(\)) alignedtext
+grestore
+% Node0x828379820->Node0x901252922
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 806.8 1246.65 moveto
+820.21 1134.65 887.27 706.4 1144.4 517.87 curveto
+1154.04 510.8 1164.33 504.69 1175.09 499.44 curveto
+stroke
+0 0 0 edgecolor
+newpath 1176.62 502.59 moveto
+1184.23 495.22 lineto
+1173.69 496.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1176.62 502.59 moveto
+1184.23 495.22 lineto
+1173.69 496.23 lineto
+closepath stroke
+grestore
+% Node0x547894753
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 409.87 305.44 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1241.87 413.67 moveto 416 (0x3bd2980. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1425.37 398.67 moveto 49 (push2\(b\)) alignedtext
+grestore
+% Node0x828379820->Node0x547894753
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 805.65 1246.98 moveto
+814.75 1129.24 867.99 655.64 1144.4 445.87 curveto
+1153.66 438.84 1163.56 432.75 1173.93 427.48 curveto
+stroke
+0 0 0 edgecolor
+newpath 1175.64 430.54 moveto
+1183.14 423.07 lineto
+1172.61 424.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1175.64 430.54 moveto
+1183.14 423.07 lineto
+1172.61 424.23 lineto
+closepath stroke
+grestore
+% Node0x636903927
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 337.87 304.53 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1242.37 341.67 moveto 415 (0x3bd2a88. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1425.87 326.67 moveto 48 (push2\(a\)) alignedtext
+grestore
+% Node0x828379820->Node0x636903927
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 804.7 1246.83 moveto
+809.84 1122.85 848.91 604.83 1144.4 373.87 curveto
+1153.48 366.77 1163.21 360.62 1173.4 355.3 curveto
+stroke
+0 0 0 edgecolor
+newpath 1175.04 358.39 moveto
+1182.47 350.83 lineto
+1171.95 352.11 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1175.04 358.39 moveto
+1182.47 350.83 lineto
+1171.95 352.11 lineto
+closepath stroke
+grestore
+% Node0x103148513
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 265.87 305.44 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1241.87 269.67 moveto 416 (0x3bd2d10. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1425.87 254.67 moveto 48 (push1\(a\)) alignedtext
+grestore
+% Node0x828379820->Node0x103148513
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 803.88 1246.94 moveto
+805.21 1117.4 829.47 554.35 1144.4 301.87 curveto
+1153.14 294.86 1162.51 288.76 1172.33 283.47 curveto
+stroke
+0 0 0 edgecolor
+newpath 1174.14 286.47 moveto
+1181.48 278.83 lineto
+1170.98 280.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1174.14 286.47 moveto
+1181.48 278.83 lineto
+1170.98 280.23 lineto
+closepath stroke
+grestore
+% Node0x871741321
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 193.87 304.53 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1242.37 197.67 moveto 415 (0x3bd2e18. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1425.37 182.67 moveto 49 (push1\(b\)) alignedtext
+grestore
+% Node0x828379820->Node0x871741321
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 803.15 1246.83 moveto
+800.89 1111.55 810.07 503.91 1144.4 229.87 curveto
+1152.99 222.83 1162.2 216.7 1171.87 211.37 curveto
+stroke
+0 0 0 edgecolor
+newpath 1173.61 214.41 moveto
+1180.88 206.71 lineto
+1170.39 208.2 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1173.61 214.41 moveto
+1180.88 206.71 lineto
+1170.39 208.2 lineto
+closepath stroke
+grestore
+% Node0x327204672
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 121.87 304.11 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1242.87 125.67 moveto 414 (0x3bd2fd0. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1425.87 110.67 moveto 48 (push2\(a\)) alignedtext
+grestore
+% Node0x828379820->Node0x327204672
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 808.14 1246.81 moveto
+832.98 1090.74 965.46 307.42 1144.4 157.87 curveto
+1152.92 150.75 1162.07 144.55 1171.7 139.17 curveto
+stroke
+0 0 0 edgecolor
+newpath 1173.45 142.2 moveto
+1180.67 134.45 lineto
+1170.19 136.01 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1173.45 142.2 moveto
+1180.67 134.45 lineto
+1170.19 136.01 lineto
+closepath stroke
+grestore
+% Node0x629499155
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1449.87 49.87 305.44 26.74 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1241.87 53.67 moveto 416 (0x3bd3180. \(/home/labaccount/11-2-17/mlsa/IG/example/Hanoi/Hanoi.cpp\)) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1425.37 38.67 moveto 49 (push1\(b\)) alignedtext
+grestore
+% Node0x828379820->Node0x629499155
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 807.6 1246.95 moveto
+830.17 1085.43 955.51 246.49 1144.4 85.87 curveto
+1152.62 78.88 1161.45 72.77 1170.73 67.45 curveto
+stroke
+0 0 0 edgecolor
+newpath 1172.63 70.4 moveto
+1179.77 62.58 lineto
+1169.31 64.24 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1172.63 70.4 moveto
+1179.77 62.58 lineto
+1169.31 64.24 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 150 150 2239 3150
+end
+restore
+%%EOF

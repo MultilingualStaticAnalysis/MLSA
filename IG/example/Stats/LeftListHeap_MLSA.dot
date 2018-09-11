@@ -1,0 +1,87 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap Call Graph"
+	];
+
+	Node0x511510067 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp"];
+	Node0x329613453 [shape=oval, label="0x2d80158. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Insert(i)"];
+	Node0x511510067 -> Node0x329613453;
+	Node0x818713821 [shape=oval, label="0x2d81a48. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Insert(i)"];
+	Node0x511510067 -> Node0x818713821;
+	Node0x291034832 [shape=oval, label="0x2d83370. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge(h1)"];
+	Node0x511510067 -> Node0x291034832;
+	Node0x526406971 [shape=oval, label="0x2d83770. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::deleteMin(x)"];
+	Node0x511510067 -> Node0x526406971;
+	Node0x172888913 [shape=oval, label="0x2d84fc0. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::isEmpty()"];
+	Node0x511510067 -> Node0x172888913;
+	Node0x186158274 [shape=oval, label="0x2d7c6f0. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge(x)"];
+	Node0x329613453 -> Node0x186158274;
+	Node0x808274101 [shape=oval, label="0x2d7c6f0. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge(x)"];
+	Node0x818713821 -> Node0x808274101;
+	Node0x354018506 [shape=oval, style=dashed, label="0x2d7a540. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge(rhs.root.root)"];
+	Node0x291034832 -> Node0x354018506;
+	Node0x780495309 [shape=oval, label="0x2d7acf8. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge1(h1, h2)"];
+	Node0x291034832 -> Node0x780495309;
+	Node0x368774659 [shape=oval, label="0x2d7ae18. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge1(h2, h1)"];
+	Node0x291034832 -> Node0x368774659;
+	Node0x823198223 [shape=oval, label="0x2d7cdf0. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge()"];
+	Node0x526406971 -> Node0x823198223;
+	Node0x241862825 [shape=oval, label="0x2d7d210. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::isEmpty()"];
+	Node0x526406971 -> Node0x241862825;
+	Node0x660061532 [shape=oval, label="0x2d7e2a0. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::findMin()"];
+	Node0x526406971 -> Node0x660061532;
+	Node0x900462445 [shape=oval, style=dashed, label="0x2d7e3e0. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::deleteMin()"];
+	Node0x526406971 -> Node0x900462445;
+	Node0x863569584 [shape=oval, style=dashed, label="0x2d7a540. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge(rhs.root.root)"];
+	Node0x186158274 -> Node0x863569584;
+	Node0x527613698 [shape=oval, label="0x2d7acf8. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge1(h1, h2)"];
+	Node0x186158274 -> Node0x527613698;
+	Node0x662136437 [shape=oval, label="0x2d7ae18. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge1(h2, h1)"];
+	Node0x186158274 -> Node0x662136437;
+	Node0x922796077 [shape=oval, style=dashed, label="0x2d7a540. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge(rhs.root.root)"];
+	Node0x808274101 -> Node0x922796077;
+	Node0x578942250 [shape=oval, label="0x2d7acf8. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge1(h1, h2)"];
+	Node0x808274101 -> Node0x578942250;
+	Node0x224041238 [shape=oval, label="0x2d7ae18. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge1(h2, h1)"];
+	Node0x808274101 -> Node0x224041238;
+	Node0x742554489 [shape=oval, style=dashed, label="0x2d7b4c8. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge(h1.right, h2)"];
+	Node0x780495309 -> Node0x742554489;
+	Node0x917244719 [shape=oval, label="0x2d7b7b8. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::swapChildren(h1)"];
+	Node0x780495309 -> Node0x917244719;
+	Node0x196231912 [shape=oval, style=dashed, label="0x2d7b4c8. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge(h1.right, h2)"];
+	Node0x368774659 -> Node0x196231912;
+	Node0x885913327 [shape=oval, label="0x2d7b7b8. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::swapChildren(h1)"];
+	Node0x368774659 -> Node0x885913327;
+	Node0x529268587 [shape=oval, style=dashed, label="0x2d7a540. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge(rhs.root.root)"];
+	Node0x823198223 -> Node0x529268587;
+	Node0x182547394 [shape=oval, label="0x2d7acf8. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge1(h1, h2)"];
+	Node0x823198223 -> Node0x182547394;
+	Node0x478704035 [shape=oval, label="0x2d7ae18. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge1(h2, h1)"];
+	Node0x823198223 -> Node0x478704035;
+	Node0x955751871 [shape=oval, style=dashed, label="0x2d7b4c8. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge(h1.right, h2)"];
+	Node0x527613698 -> Node0x955751871;
+	Node0x294662518 [shape=oval, label="0x2d7b7b8. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::swapChildren(h1)"];
+	Node0x527613698 -> Node0x294662518;
+	Node0x644423528 [shape=oval, style=dashed, label="0x2d7b4c8. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge(h1.right, h2)"];
+	Node0x662136437 -> Node0x644423528;
+	Node0x791457461 [shape=oval, label="0x2d7b7b8. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::swapChildren(h1)"];
+	Node0x662136437 -> Node0x791457461;
+	Node0x373662430 [shape=oval, style=dashed, label="0x2d7b4c8. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge(h1.right, h2)"];
+	Node0x578942250 -> Node0x373662430;
+	Node0x137947819 [shape=oval, label="0x2d7b7b8. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::swapChildren(h1)"];
+	Node0x578942250 -> Node0x137947819;
+	Node0x248911638 [shape=oval, style=dashed, label="0x2d7b4c8. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge(h1.right, h2)"];
+	Node0x224041238 -> Node0x248911638;
+	Node0x490723557 [shape=oval, label="0x2d7b7b8. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::swapChildren(h1)"];
+	Node0x224041238 -> Node0x490723557;
+	Node0x623714547 [shape=oval, style=dashed, label="0x2d7b4c8. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge(h1.right, h2)"];
+	Node0x182547394 -> Node0x623714547;
+	Node0x839479221 [shape=oval, label="0x2d7b7b8. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::swapChildren(h1)"];
+	Node0x182547394 -> Node0x839479221;
+	Node0x807637268 [shape=oval, style=dashed, label="0x2d7b4c8. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::Merge(h1.right, h2)"];
+	Node0x478704035 -> Node0x807637268;
+	Node0x239600193 [shape=oval, label="0x2d7b7b8. (/home/labaccount/11-2-17/mlsa/IG/example/LeftListHeap/LeftListHeap.cpp)\nLeftistHeap::swapChildren(h1)"];
+	Node0x478704035 -> Node0x239600193;
+}

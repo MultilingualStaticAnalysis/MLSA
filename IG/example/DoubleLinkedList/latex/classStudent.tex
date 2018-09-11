@@ -1,0 +1,332 @@
+\hypertarget{classStudent}{}\section{Student Class Reference}
+\label{classStudent}\index{Student@{Student}}
+
+
+{\ttfamily \#include $<$Student.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classStudent_af9168cedbfa5565cf0b20c1a9d3f5c9d}{Student} ()
+\item 
+\hyperlink{classStudent_a557917f9af87042e5fa25bd7b1aeaa30}{Student} (string f, string l, char m, int s, int a)
+\item 
+\hyperlink{classStudent_a9b3d40ac356f6794eeae74ce473a5617}{Student} (const \hyperlink{classStudent}{Student} \&s)
+\item 
+void \hyperlink{classStudent_a30731c688a4d7e3c047605de86c78007}{set\+Name} (string f, string l, char m)
+\item 
+void \hyperlink{classStudent_a46dafabdf7259d22c2ed038d187018d6}{set\+S\+SN} (int s)
+\item 
+void \hyperlink{classStudent_aae26ec99b719c86b60b33e19bc4f3986}{set\+Age} (int a)
+\item 
+string \hyperlink{classStudent_ac0c4ea968202c325e11b33ef38087701}{get\+First\+Name} () const 
+\item 
+string \hyperlink{classStudent_ae58e20cf8d78eecdbbd34c04f7a2c846}{get\+Last\+Name} () const 
+\item 
+char \hyperlink{classStudent_a9f266c04ecea344e544f9e772921d17c}{get\+Middle\+Initial} () const 
+\item 
+int \hyperlink{classStudent_acb222ca39f470aaa1562a25d329e8378}{get\+S\+SN} () const 
+\item 
+int \hyperlink{classStudent_a05e941545afe646579a8e91dfc8f1953}{get\+Age} () const 
+\item 
+void \hyperlink{classStudent_afeae2ddd8936ba4f37064a8d751f51eb}{read} (istream \&in)
+\item 
+void \hyperlink{classStudent_a17a6f00e4ec4637f77a50c2769e69721}{print} (ostream \&out)
+\item 
+bool \hyperlink{classStudent_a3f82e382259835b187fd92f2b15fcb42}{operator$>$} (const \hyperlink{classStudent}{Student} \&s) const 
+\item 
+bool \hyperlink{classStudent_a4add57e859306b4a543368201ca0922f}{operator$<$} (const \hyperlink{classStudent}{Student} \&s) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classStudent_a333c7d227c87fdfa821d0232e21f9006}{fname}
+\item 
+string \hyperlink{classStudent_a6c934004d6a468a354916bcf0f998190}{lname}
+\item 
+char \hyperlink{classStudent_afd8d4557f2ac6bb7681c32e691248328}{mi}
+\item 
+int \hyperlink{classStudent_aa7181a8aac86888176481f901bee2cbd}{ssn}
+\item 
+int \hyperlink{classStudent_a552a431a43ffc545d180424597d51f97}{age}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classStudent_a6db9d28bd448a131448276ee03de1e6d}{Node}
+\item 
+ostream \& \hyperlink{classStudent_a8ed16acc8384ea29641694cb182ac764}{operator$<$$<$} (ostream \&outs, const \hyperlink{classStudent}{Student} \&s)
+\item 
+istream \& \hyperlink{classStudent_a2d76cee765e6e0d66e66a27d10fa0a68}{operator$>$$>$} (istream \&ins, \hyperlink{classStudent}{Student} \&s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Student@{Student}!Student@{Student}}
+\index{Student@{Student}!Student@{Student}}
+\subsubsection[{\texorpdfstring{Student()}{Student()}}]{\setlength{\rightskip}{0pt plus 5cm}Student\+::\+Student (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classStudent_af9168cedbfa5565cf0b20c1a9d3f5c9d}{}\label{classStudent_af9168cedbfa5565cf0b20c1a9d3f5c9d}
+
+\begin{DoxyCode}
+32 : \hyperlink{classStudent_a333c7d227c87fdfa821d0232e21f9006}{fname}(\textcolor{stringliteral}{""}), \hyperlink{classStudent_a6c934004d6a468a354916bcf0f998190}{lname}(\textcolor{stringliteral}{""}), \hyperlink{classStudent_afd8d4557f2ac6bb7681c32e691248328}{mi}(\textcolor{charliteral}{' '}), \hyperlink{classStudent_aa7181a8aac86888176481f901bee2cbd}{ssn}(0), \hyperlink{classStudent_a552a431a43ffc545d180424597d51f97}{age}(0) \{\} \textcolor{comment}{//default constructor                 
+                                                                                                             }
+\end{DoxyCode}
+\index{Student@{Student}!Student@{Student}}
+\index{Student@{Student}!Student@{Student}}
+\subsubsection[{\texorpdfstring{Student(string f, string l, char m, int s, int a)}{Student(string f, string l, char m, int s, int a)}}]{\setlength{\rightskip}{0pt plus 5cm}Student\+::\+Student (
+\begin{DoxyParamCaption}
+\item[{string}]{f, }
+\item[{string}]{l, }
+\item[{char}]{m, }
+\item[{int}]{s, }
+\item[{int}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classStudent_a557917f9af87042e5fa25bd7b1aeaa30}{}\label{classStudent_a557917f9af87042e5fa25bd7b1aeaa30}
+
+\begin{DoxyCode}
+33 : \hyperlink{classStudent_a333c7d227c87fdfa821d0232e21f9006}{fname}(f), \hyperlink{classStudent_a6c934004d6a468a354916bcf0f998190}{lname}(l), \hyperlink{classStudent_afd8d4557f2ac6bb7681c32e691248328}{mi}(m), \hyperlink{classStudent_aa7181a8aac86888176481f901bee2cbd}{ssn}(s), \hyperlink{classStudent_a552a431a43ffc545d180424597d51f97}{age}(a) \{\}
+\end{DoxyCode}
+\index{Student@{Student}!Student@{Student}}
+\index{Student@{Student}!Student@{Student}}
+\subsubsection[{\texorpdfstring{Student(const Student \&s)}{Student(const Student &s)}}]{\setlength{\rightskip}{0pt plus 5cm}Student\+::\+Student (
+\begin{DoxyParamCaption}
+\item[{const {\bf Student} \&}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{classStudent_a9b3d40ac356f6794eeae74ce473a5617}{}\label{classStudent_a9b3d40ac356f6794eeae74ce473a5617}
+
+\begin{DoxyCode}
+14 \{
+15    \hyperlink{classStudent_a333c7d227c87fdfa821d0232e21f9006}{fname} = s.\hyperlink{classStudent_a333c7d227c87fdfa821d0232e21f9006}{fname};
+16    \hyperlink{classStudent_a6c934004d6a468a354916bcf0f998190}{lname} = s.\hyperlink{classStudent_a6c934004d6a468a354916bcf0f998190}{lname};
+17    \hyperlink{classStudent_afd8d4557f2ac6bb7681c32e691248328}{mi} = s.\hyperlink{classStudent_afd8d4557f2ac6bb7681c32e691248328}{mi};
+18    \hyperlink{classStudent_aa7181a8aac86888176481f901bee2cbd}{ssn} = s.\hyperlink{classStudent_aa7181a8aac86888176481f901bee2cbd}{ssn};
+19    \hyperlink{classStudent_a552a431a43ffc545d180424597d51f97}{age} = s.\hyperlink{classStudent_a552a431a43ffc545d180424597d51f97}{age};
+20 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Student@{Student}!get\+Age@{get\+Age}}
+\index{get\+Age@{get\+Age}!Student@{Student}}
+\subsubsection[{\texorpdfstring{get\+Age() const }{getAge() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Student\+::get\+Age (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classStudent_a05e941545afe646579a8e91dfc8f1953}{}\label{classStudent_a05e941545afe646579a8e91dfc8f1953}
+
+\begin{DoxyCode}
+60 \{
+61    \textcolor{keywordflow}{return} \hyperlink{classStudent_a552a431a43ffc545d180424597d51f97}{age};
+62 \}
+\end{DoxyCode}
+\index{Student@{Student}!get\+First\+Name@{get\+First\+Name}}
+\index{get\+First\+Name@{get\+First\+Name}!Student@{Student}}
+\subsubsection[{\texorpdfstring{get\+First\+Name() const }{getFirstName() const }}]{\setlength{\rightskip}{0pt plus 5cm}string Student\+::get\+First\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classStudent_ac0c4ea968202c325e11b33ef38087701}{}\label{classStudent_ac0c4ea968202c325e11b33ef38087701}
+
+\begin{DoxyCode}
+40 \{
+41    \textcolor{keywordflow}{return} \hyperlink{classStudent_a333c7d227c87fdfa821d0232e21f9006}{fname};
+42 \}
+\end{DoxyCode}
+\index{Student@{Student}!get\+Last\+Name@{get\+Last\+Name}}
+\index{get\+Last\+Name@{get\+Last\+Name}!Student@{Student}}
+\subsubsection[{\texorpdfstring{get\+Last\+Name() const }{getLastName() const }}]{\setlength{\rightskip}{0pt plus 5cm}string Student\+::get\+Last\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classStudent_ae58e20cf8d78eecdbbd34c04f7a2c846}{}\label{classStudent_ae58e20cf8d78eecdbbd34c04f7a2c846}
+
+\begin{DoxyCode}
+45 \{
+46    \textcolor{keywordflow}{return} \hyperlink{classStudent_a6c934004d6a468a354916bcf0f998190}{lname};
+47 \}
+\end{DoxyCode}
+\index{Student@{Student}!get\+Middle\+Initial@{get\+Middle\+Initial}}
+\index{get\+Middle\+Initial@{get\+Middle\+Initial}!Student@{Student}}
+\subsubsection[{\texorpdfstring{get\+Middle\+Initial() const }{getMiddleInitial() const }}]{\setlength{\rightskip}{0pt plus 5cm}char Student\+::get\+Middle\+Initial (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classStudent_a9f266c04ecea344e544f9e772921d17c}{}\label{classStudent_a9f266c04ecea344e544f9e772921d17c}
+
+\begin{DoxyCode}
+50 \{
+51    \textcolor{keywordflow}{return} \hyperlink{classStudent_afd8d4557f2ac6bb7681c32e691248328}{mi};
+52 \}
+\end{DoxyCode}
+\index{Student@{Student}!get\+S\+SN@{get\+S\+SN}}
+\index{get\+S\+SN@{get\+S\+SN}!Student@{Student}}
+\subsubsection[{\texorpdfstring{get\+S\+S\+N() const }{getSSN() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Student\+::get\+S\+SN (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classStudent_acb222ca39f470aaa1562a25d329e8378}{}\label{classStudent_acb222ca39f470aaa1562a25d329e8378}
+
+\begin{DoxyCode}
+55 \{
+56    \textcolor{keywordflow}{return} \hyperlink{classStudent_aa7181a8aac86888176481f901bee2cbd}{ssn};
+57 \}
+\end{DoxyCode}
+\index{Student@{Student}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Student@{Student}}
+\subsubsection[{\texorpdfstring{operator$<$(const Student \&s) const }{operator<(const Student &s) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Student\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Student} \&}]{s}
+\end{DoxyParamCaption}
+) const}\hypertarget{classStudent_a4add57e859306b4a543368201ca0922f}{}\label{classStudent_a4add57e859306b4a543368201ca0922f}
+
+\begin{DoxyCode}
+94 \{
+95    \textcolor{keywordflow}{return} (\hyperlink{classStudent_a6c934004d6a468a354916bcf0f998190}{lname}.compare(s.\hyperlink{classStudent_a6c934004d6a468a354916bcf0f998190}{lname}) < 0);
+96 \}\end{DoxyCode}
+\index{Student@{Student}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Student@{Student}}
+\subsubsection[{\texorpdfstring{operator$>$(const Student \&s) const }{operator>(const Student &s) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Student\+::operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Student} \&}]{s}
+\end{DoxyParamCaption}
+) const}\hypertarget{classStudent_a3f82e382259835b187fd92f2b15fcb42}{}\label{classStudent_a3f82e382259835b187fd92f2b15fcb42}
+
+\begin{DoxyCode}
+89 \{
+90    \textcolor{keywordflow}{return} (\hyperlink{classStudent_a6c934004d6a468a354916bcf0f998190}{lname}.compare(s.\hyperlink{classStudent_a6c934004d6a468a354916bcf0f998190}{lname}) > 0);
+91 \}
+\end{DoxyCode}
+\index{Student@{Student}!print@{print}}
+\index{print@{print}!Student@{Student}}
+\subsubsection[{\texorpdfstring{print(ostream \&out)}{print(ostream &out)}}]{\setlength{\rightskip}{0pt plus 5cm}void Student\+::print (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out}
+\end{DoxyParamCaption}
+)}\hypertarget{classStudent_a17a6f00e4ec4637f77a50c2769e69721}{}\label{classStudent_a17a6f00e4ec4637f77a50c2769e69721}
+
+\begin{DoxyCode}
+80 \{
+81    out << \hyperlink{classStudent_a333c7d227c87fdfa821d0232e21f9006}{fname} << endl;
+82    out << \hyperlink{classStudent_a6c934004d6a468a354916bcf0f998190}{lname} << endl;
+83    out << \hyperlink{classStudent_afd8d4557f2ac6bb7681c32e691248328}{mi} << endl;
+84    out << \hyperlink{classStudent_aa7181a8aac86888176481f901bee2cbd}{ssn} << endl;
+85    out << \hyperlink{classStudent_a552a431a43ffc545d180424597d51f97}{age} << endl;
+86 \}
+\end{DoxyCode}
+\index{Student@{Student}!read@{read}}
+\index{read@{read}!Student@{Student}}
+\subsubsection[{\texorpdfstring{read(istream \&in)}{read(istream &in)}}]{\setlength{\rightskip}{0pt plus 5cm}void Student\+::read (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{in}
+\end{DoxyParamCaption}
+)}\hypertarget{classStudent_afeae2ddd8936ba4f37064a8d751f51eb}{}\label{classStudent_afeae2ddd8936ba4f37064a8d751f51eb}
+\index{Student@{Student}!set\+Age@{set\+Age}}
+\index{set\+Age@{set\+Age}!Student@{Student}}
+\subsubsection[{\texorpdfstring{set\+Age(int a)}{setAge(int a)}}]{\setlength{\rightskip}{0pt plus 5cm}void Student\+::set\+Age (
+\begin{DoxyParamCaption}
+\item[{int}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{classStudent_aae26ec99b719c86b60b33e19bc4f3986}{}\label{classStudent_aae26ec99b719c86b60b33e19bc4f3986}
+
+\begin{DoxyCode}
+35 \{
+36    \hyperlink{classStudent_a552a431a43ffc545d180424597d51f97}{age} = a;
+37 \}
+\end{DoxyCode}
+\index{Student@{Student}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!Student@{Student}}
+\subsubsection[{\texorpdfstring{set\+Name(string f, string l, char m)}{setName(string f, string l, char m)}}]{\setlength{\rightskip}{0pt plus 5cm}void Student\+::set\+Name (
+\begin{DoxyParamCaption}
+\item[{string}]{f, }
+\item[{string}]{l, }
+\item[{char}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{classStudent_a30731c688a4d7e3c047605de86c78007}{}\label{classStudent_a30731c688a4d7e3c047605de86c78007}
+
+\begin{DoxyCode}
+23 \{
+24    \hyperlink{classStudent_a333c7d227c87fdfa821d0232e21f9006}{fname} = f;
+25    \hyperlink{classStudent_a6c934004d6a468a354916bcf0f998190}{lname} = l;
+26    \hyperlink{classStudent_afd8d4557f2ac6bb7681c32e691248328}{mi} = m;
+27 \}
+\end{DoxyCode}
+\index{Student@{Student}!set\+S\+SN@{set\+S\+SN}}
+\index{set\+S\+SN@{set\+S\+SN}!Student@{Student}}
+\subsubsection[{\texorpdfstring{set\+S\+S\+N(int s)}{setSSN(int s)}}]{\setlength{\rightskip}{0pt plus 5cm}void Student\+::set\+S\+SN (
+\begin{DoxyParamCaption}
+\item[{int}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{classStudent_a46dafabdf7259d22c2ed038d187018d6}{}\label{classStudent_a46dafabdf7259d22c2ed038d187018d6}
+
+\begin{DoxyCode}
+30 \{
+31    \hyperlink{classStudent_aa7181a8aac86888176481f901bee2cbd}{ssn} = s;
+32 \}
+\end{DoxyCode}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Student@{Student}!Node@{Node}}
+\index{Node@{Node}!Student@{Student}}
+\subsubsection[{\texorpdfstring{Node}{Node}}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Node}\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classStudent_a6db9d28bd448a131448276ee03de1e6d}{}\label{classStudent_a6db9d28bd448a131448276ee03de1e6d}
+\index{Student@{Student}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Student@{Student}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{outs, }
+\item[{const {\bf Student} \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classStudent_a8ed16acc8384ea29641694cb182ac764}{}\label{classStudent_a8ed16acc8384ea29641694cb182ac764}
+
+\begin{DoxyCode}
+65 \{
+66    cout << \textcolor{stringliteral}{"Student:\(\backslash\)t\(\backslash\)t  "} << s.\hyperlink{classStudent_a6c934004d6a468a354916bcf0f998190}{lname} << \textcolor{stringliteral}{", "} << s.\hyperlink{classStudent_a333c7d227c87fdfa821d0232e21f9006}{fname} << \textcolor{stringliteral}{" "} << s.
+      \hyperlink{classStudent_afd8d4557f2ac6bb7681c32e691248328}{mi} << endl;
+67    cout << \textcolor{stringliteral}{"Social Security number:\(\backslash\)t  "} << s.\hyperlink{classStudent_aa7181a8aac86888176481f901bee2cbd}{ssn} << endl;
+68    cout << \textcolor{stringliteral}{"Age:\(\backslash\)t\(\backslash\)t\(\backslash\)t  "} << s.\hyperlink{classStudent_a552a431a43ffc545d180424597d51f97}{age} << endl;
+69    cout << \textcolor{stringliteral}{"------------------------------------------------------"} << endl;
+70 
+71    \textcolor{keywordflow}{return} outs;
+72 \}
+\end{DoxyCode}
+\index{Student@{Student}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Student@{Student}}
+\subsubsection[{\texorpdfstring{operator$>$$>$}{operator>>}}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{ins, }
+\item[{{\bf Student} \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classStudent_a2d76cee765e6e0d66e66a27d10fa0a68}{}\label{classStudent_a2d76cee765e6e0d66e66a27d10fa0a68}
+
+\begin{DoxyCode}
+75 \{
+76    ins >> s.\hyperlink{classStudent_a333c7d227c87fdfa821d0232e21f9006}{fname} >> s.\hyperlink{classStudent_a6c934004d6a468a354916bcf0f998190}{lname} >> s.\hyperlink{classStudent_afd8d4557f2ac6bb7681c32e691248328}{mi} >> s.\hyperlink{classStudent_aa7181a8aac86888176481f901bee2cbd}{ssn} >> s.\hyperlink{classStudent_a552a431a43ffc545d180424597d51f97}{age};
+77 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Student@{Student}!age@{age}}
+\index{age@{age}!Student@{Student}}
+\subsubsection[{\texorpdfstring{age}{age}}]{\setlength{\rightskip}{0pt plus 5cm}int Student\+::age\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classStudent_a552a431a43ffc545d180424597d51f97}{}\label{classStudent_a552a431a43ffc545d180424597d51f97}
+\index{Student@{Student}!fname@{fname}}
+\index{fname@{fname}!Student@{Student}}
+\subsubsection[{\texorpdfstring{fname}{fname}}]{\setlength{\rightskip}{0pt plus 5cm}string Student\+::fname\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classStudent_a333c7d227c87fdfa821d0232e21f9006}{}\label{classStudent_a333c7d227c87fdfa821d0232e21f9006}
+\index{Student@{Student}!lname@{lname}}
+\index{lname@{lname}!Student@{Student}}
+\subsubsection[{\texorpdfstring{lname}{lname}}]{\setlength{\rightskip}{0pt plus 5cm}string Student\+::lname\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classStudent_a6c934004d6a468a354916bcf0f998190}{}\label{classStudent_a6c934004d6a468a354916bcf0f998190}
+\index{Student@{Student}!mi@{mi}}
+\index{mi@{mi}!Student@{Student}}
+\subsubsection[{\texorpdfstring{mi}{mi}}]{\setlength{\rightskip}{0pt plus 5cm}char Student\+::mi\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classStudent_afd8d4557f2ac6bb7681c32e691248328}{}\label{classStudent_afd8d4557f2ac6bb7681c32e691248328}
+\index{Student@{Student}!ssn@{ssn}}
+\index{ssn@{ssn}!Student@{Student}}
+\subsubsection[{\texorpdfstring{ssn}{ssn}}]{\setlength{\rightskip}{0pt plus 5cm}int Student\+::ssn\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classStudent_aa7181a8aac86888176481f901bee2cbd}{}\label{classStudent_aa7181a8aac86888176481f901bee2cbd}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Student_8h}{Student.\+h}\item 
+\hyperlink{Student_8cpp}{Student.\+cpp}\end{DoxyCompactItemize}

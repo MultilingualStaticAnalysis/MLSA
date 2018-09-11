@@ -1,0 +1,106 @@
+\hypertarget{classMessengerWithValediction}{}\section{Messenger\+With\+Valediction Class Reference}
+\label{classMessengerWithValediction}\index{Messenger\+With\+Valediction@{Messenger\+With\+Valediction}}
+
+
+Inheritance diagram for Messenger\+With\+Valediction\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{classMessengerWithValediction__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Messenger\+With\+Valediction\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{classMessengerWithValediction__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMessengerWithValediction_a15972054fa38938f0213b3f0749a6148}{Messenger\+With\+Valediction} (std\+::unique\+\_\+ptr$<$ \hyperlink{classInterface}{Interface} $>$ c, const std\+::string \&str)
+\item 
+\hyperlink{classMessengerWithValediction_a9205d11f633fdf1099f62436aa638a1e}{$\sim$\+Messenger\+With\+Valediction} ()
+\item 
+virtual void \hyperlink{classMessengerWithValediction_a93f7e5fc32a11b58b3c57b54544ec8a2}{write} (std\+::string \&text) override
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classMessengerWithValediction_ad8c759fc057a3b7d2331ec6a84a38895}{valediction}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Messenger\+With\+Valediction@{Messenger\+With\+Valediction}!Messenger\+With\+Valediction@{Messenger\+With\+Valediction}}
+\index{Messenger\+With\+Valediction@{Messenger\+With\+Valediction}!Messenger\+With\+Valediction@{Messenger\+With\+Valediction}}
+\subsubsection[{\texorpdfstring{Messenger\+With\+Valediction(std\+::unique\+\_\+ptr$<$ Interface $>$ c, const std\+::string \&str)}{MessengerWithValediction(std::unique_ptr< Interface > c, const std::string &str)}}]{\setlength{\rightskip}{0pt plus 5cm}Messenger\+With\+Valediction\+::\+Messenger\+With\+Valediction (
+\begin{DoxyParamCaption}
+\item[{std\+::unique\+\_\+ptr$<$ {\bf Interface} $>$}]{c, }
+\item[{const std\+::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMessengerWithValediction_a15972054fa38938f0213b3f0749a6148}{}\label{classMessengerWithValediction_a15972054fa38938f0213b3f0749a6148}
+
+\begin{DoxyCode}
+41 : \hyperlink{classDecorator_aee6cdf11333827f13ea5b5384ad5af88}{Decorator}(std::move(c)), \hyperlink{classMessengerWithValediction_ad8c759fc057a3b7d2331ec6a84a38895}{valediction}(str) \{\}
+\end{DoxyCode}
+\index{Messenger\+With\+Valediction@{Messenger\+With\+Valediction}!````~Messenger\+With\+Valediction@{$\sim$\+Messenger\+With\+Valediction}}
+\index{````~Messenger\+With\+Valediction@{$\sim$\+Messenger\+With\+Valediction}!Messenger\+With\+Valediction@{Messenger\+With\+Valediction}}
+\subsubsection[{\texorpdfstring{$\sim$\+Messenger\+With\+Valediction()}{~MessengerWithValediction()}}]{\setlength{\rightskip}{0pt plus 5cm}Messenger\+With\+Valediction\+::$\sim$\+Messenger\+With\+Valediction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMessengerWithValediction_a9205d11f633fdf1099f62436aa638a1e}{}\label{classMessengerWithValediction_a9205d11f633fdf1099f62436aa638a1e}
+
+\begin{DoxyCode}
+42 \{std::cout << \textcolor{stringliteral}{"MessengerWithValediction destructor called.\(\backslash\)n"};\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Messenger\+With\+Valediction@{Messenger\+With\+Valediction}!write@{write}}
+\index{write@{write}!Messenger\+With\+Valediction@{Messenger\+With\+Valediction}}
+\subsubsection[{\texorpdfstring{write(std\+::string \&text) override}{write(std::string &text) override}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Messenger\+With\+Valediction\+::write (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{text}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classMessengerWithValediction_a93f7e5fc32a11b58b3c57b54544ec8a2}{}\label{classMessengerWithValediction_a93f7e5fc32a11b58b3c57b54544ec8a2}
+
+
+Reimplemented from \hyperlink{classDecorator_ae5cad6daee450fb5eaa2b1cad6a0dd45}{Decorator}.
+
+
+\begin{DoxyCode}
+43                                                       \{
+44             \hyperlink{classDecorator_ae5cad6daee450fb5eaa2b1cad6a0dd45}{Decorator::write}(text);
+45             text += \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n"} + \hyperlink{classMessengerWithValediction_ad8c759fc057a3b7d2331ec6a84a38895}{valediction};
+46         \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{classMessengerWithValediction_a93f7e5fc32a11b58b3c57b54544ec8a2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Messenger\+With\+Valediction@{Messenger\+With\+Valediction}!valediction@{valediction}}
+\index{valediction@{valediction}!Messenger\+With\+Valediction@{Messenger\+With\+Valediction}}
+\subsubsection[{\texorpdfstring{valediction}{valediction}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Messenger\+With\+Valediction\+::valediction\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classMessengerWithValediction_ad8c759fc057a3b7d2331ec6a84a38895}{}\label{classMessengerWithValediction_ad8c759fc057a3b7d2331ec6a84a38895}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Decorator2_8cpp}{Decorator2.\+cpp}\end{DoxyCompactItemize}

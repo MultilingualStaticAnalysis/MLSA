@@ -1,0 +1,331 @@
+\hypertarget{classNode}{}\section{Node Class Reference}
+\label{classNode}\index{Node@{Node}}
+
+
+{\ttfamily \#include $<$Calculo\+Tempo\+\_\+node.\+h$>$}
+
+
+
+Collaboration diagram for Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classNode__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNode_ad7a34779cad45d997bfd6d3d8043c75f}{Node} ()
+\item 
+\hyperlink{classNode_a2d13f7f1172705cddb79039c2fabbba6}{Node} (int x, int y, \hyperlink{classNode}{Node} $\ast$\+\_\+parent=0, int t=0)
+\item 
+int \hyperlink{classNode_a81aba8cc7d7ebd60051bb7cba210f587}{getx\+Pos} () const 
+\item 
+int \hyperlink{classNode_a7d26325d2355b29184cd6b428a78508b}{gety\+Pos} () const 
+\item 
+float \hyperlink{classNode_ab72b743b5abe69381e9066f4225793d2}{getG} () const 
+\item 
+float \hyperlink{classNode_ae6f0fa0586f0bba0a33ec57323849d89}{getH} () const 
+\item 
+float \hyperlink{classNode_ad22eea937020953945d47dc25667baf3}{getF} () const 
+\item 
+\hyperlink{classNode}{Node} $\ast$ \hyperlink{classNode_aee7fa50380cd3d5fd82c022e45ba2d37}{get\+Parent} () const 
+\item 
+void \hyperlink{classNode_a95d9ff38e9706097f752df46e1c912d9}{setx\+Pos} (int)
+\item 
+void \hyperlink{classNode_afcef18b84545fc9097c67ba6b48f31cb}{sety\+Pos} (int)
+\item 
+void \hyperlink{classNode_ac269852dd9117461a6069589470c39f1}{setG} (float)
+\item 
+void \hyperlink{classNode_aa10f28d0b00917bc5106373c73eb636f}{setH} (\hyperlink{classNode}{Node} $\ast$meta)
+\item 
+void \hyperlink{classNode_a77ef44966d6056821545f6b8acee2031}{setF} (float)
+\item 
+void \hyperlink{classNode_aaed3b50ac429bae4e3460f19c23a9f71}{set\+Parent} (\hyperlink{classNode}{Node} $\ast$)
+\item 
+void \hyperlink{classNode_aedfbcdc45d98f312e507e34e18b26093}{calculaF} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classNode_ab61bfe3b52ba63f10939bf88270321e0}{tamanho}
+\item 
+int \hyperlink{classNode_a59a543130a10c95f1e8642cf8c5645e8}{id}
+\item 
+\hyperlink{classNode}{Node} $\ast$ \hyperlink{classNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classNode_a4c5b1e397eba5f462edc72d5c031b33e}{x\+Pos}
+\item 
+int \hyperlink{classNode_ace45ec1cc1cc78ef699918a7adeb1dad}{y\+Pos}
+\item 
+float \hyperlink{classNode_a3c6a67023068f762eaaa8a4861ab3e9f}{G}
+\item 
+float \hyperlink{classNode_a26426055f336a81dc05680b981e4c270}{H}
+\item 
+float \hyperlink{classNode_aa68bc86c2839aca9c05e43541dc973a5}{F}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{\texorpdfstring{Node()}{Node()}}]{\setlength{\rightskip}{0pt plus 5cm}Node\+::\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classNode_ad7a34779cad45d997bfd6d3d8043c75f}{}\label{classNode_ad7a34779cad45d997bfd6d3d8043c75f}
+
+\begin{DoxyCode}
+19 : \hyperlink{classNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}(0) \{\}
+\end{DoxyCode}
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{\texorpdfstring{Node(int x, int y, Node $\ast$\+\_\+parent=0, int t=0)}{Node(int x, int y, Node *_parent=0, int t=0)}}]{\setlength{\rightskip}{0pt plus 5cm}Node\+::\+Node (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{{\bf Node} $\ast$}]{\+\_\+parent = {\ttfamily 0}, }
+\item[{int}]{t = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classNode_a2d13f7f1172705cddb79039c2fabbba6}{}\label{classNode_a2d13f7f1172705cddb79039c2fabbba6}
+
+\begin{DoxyCode}
+22 : \hyperlink{classNode_a4c5b1e397eba5f462edc72d5c031b33e}{xPos}(x),\hyperlink{classNode_ace45ec1cc1cc78ef699918a7adeb1dad}{yPos}(y),\hyperlink{classNode_a3c6a67023068f762eaaa8a4861ab3e9f}{G}(0),\hyperlink{classNode_a26426055f336a81dc05680b981e4c270}{H}(0),\hyperlink{classNode_ab61bfe3b52ba63f10939bf88270321e0}{tamanho}(t),\hyperlink{classNode_a59a543130a10c95f1e8642cf8c5645e8}{id}(y*\hyperlink{classNode_ab61bfe3b52ba63f10939bf88270321e0}{tamanho}+x),
+      \hyperlink{classNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}(\_parent)\{\};
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNode_a2d13f7f1172705cddb79039c2fabbba6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Node@{Node}!calculaF@{calculaF}}
+\index{calculaF@{calculaF}!Node@{Node}}
+\subsubsection[{\texorpdfstring{calcula\+F()}{calculaF()}}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::calculaF (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNode_aedfbcdc45d98f312e507e34e18b26093}{}\label{classNode_aedfbcdc45d98f312e507e34e18b26093}
+
+\begin{DoxyCode}
+109 \{
+110     this->\hyperlink{classNode_aa68bc86c2839aca9c05e43541dc973a5}{F} = this->\hyperlink{classNode_a3c6a67023068f762eaaa8a4861ab3e9f}{G} + this->\hyperlink{classNode_a26426055f336a81dc05680b981e4c270}{H};
+111 \}
+\end{DoxyCode}
+\index{Node@{Node}!getF@{getF}}
+\index{getF@{getF}!Node@{Node}}
+\subsubsection[{\texorpdfstring{get\+F() const }{getF() const }}]{\setlength{\rightskip}{0pt plus 5cm}float Node\+::getF (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNode_ad22eea937020953945d47dc25667baf3}{}\label{classNode_ad22eea937020953945d47dc25667baf3}
+
+\begin{DoxyCode}
+76 \{
+77     \textcolor{keywordflow}{return} this->\hyperlink{classNode_aa68bc86c2839aca9c05e43541dc973a5}{F};
+78 \}
+\end{DoxyCode}
+\index{Node@{Node}!getG@{getG}}
+\index{getG@{getG}!Node@{Node}}
+\subsubsection[{\texorpdfstring{get\+G() const }{getG() const }}]{\setlength{\rightskip}{0pt plus 5cm}float Node\+::getG (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNode_ab72b743b5abe69381e9066f4225793d2}{}\label{classNode_ab72b743b5abe69381e9066f4225793d2}
+
+\begin{DoxyCode}
+68 \{
+69     \textcolor{keywordflow}{return} this->\hyperlink{classNode_a3c6a67023068f762eaaa8a4861ab3e9f}{G}; 
+70 \}
+\end{DoxyCode}
+\index{Node@{Node}!getH@{getH}}
+\index{getH@{getH}!Node@{Node}}
+\subsubsection[{\texorpdfstring{get\+H() const }{getH() const }}]{\setlength{\rightskip}{0pt plus 5cm}float Node\+::getH (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNode_ae6f0fa0586f0bba0a33ec57323849d89}{}\label{classNode_ae6f0fa0586f0bba0a33ec57323849d89}
+
+\begin{DoxyCode}
+72 \{
+73     \textcolor{keywordflow}{return} this->\hyperlink{classNode_a26426055f336a81dc05680b981e4c270}{H};
+74 \}
+\end{DoxyCode}
+\index{Node@{Node}!get\+Parent@{get\+Parent}}
+\index{get\+Parent@{get\+Parent}!Node@{Node}}
+\subsubsection[{\texorpdfstring{get\+Parent() const }{getParent() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node} $\ast$ Node\+::get\+Parent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNode_aee7fa50380cd3d5fd82c022e45ba2d37}{}\label{classNode_aee7fa50380cd3d5fd82c022e45ba2d37}
+
+\begin{DoxyCode}
+80 \{
+81     \textcolor{keywordflow}{return} this->\hyperlink{classNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent};
+82 \}
+\end{DoxyCode}
+\index{Node@{Node}!getx\+Pos@{getx\+Pos}}
+\index{getx\+Pos@{getx\+Pos}!Node@{Node}}
+\subsubsection[{\texorpdfstring{getx\+Pos() const }{getxPos() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Node\+::getx\+Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNode_a81aba8cc7d7ebd60051bb7cba210f587}{}\label{classNode_a81aba8cc7d7ebd60051bb7cba210f587}
+
+\begin{DoxyCode}
+60 \{
+61     \textcolor{keywordflow}{return} this->\hyperlink{classNode_a4c5b1e397eba5f462edc72d5c031b33e}{xPos};
+62 \}
+\end{DoxyCode}
+\index{Node@{Node}!gety\+Pos@{gety\+Pos}}
+\index{gety\+Pos@{gety\+Pos}!Node@{Node}}
+\subsubsection[{\texorpdfstring{gety\+Pos() const }{getyPos() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Node\+::gety\+Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNode_a7d26325d2355b29184cd6b428a78508b}{}\label{classNode_a7d26325d2355b29184cd6b428a78508b}
+
+\begin{DoxyCode}
+64 \{
+65     \textcolor{keywordflow}{return} this->\hyperlink{classNode_ace45ec1cc1cc78ef699918a7adeb1dad}{yPos};
+66 \}
+\end{DoxyCode}
+\index{Node@{Node}!setF@{setF}}
+\index{setF@{setF}!Node@{Node}}
+\subsubsection[{\texorpdfstring{set\+F(float)}{setF(float)}}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::setF (
+\begin{DoxyParamCaption}
+\item[{float}]{F}
+\end{DoxyParamCaption}
+)}\hypertarget{classNode_a77ef44966d6056821545f6b8acee2031}{}\label{classNode_a77ef44966d6056821545f6b8acee2031}
+
+\begin{DoxyCode}
+101 \{
+102     this->\hyperlink{classNode_aa68bc86c2839aca9c05e43541dc973a5}{F} = \hyperlink{classNode_aa68bc86c2839aca9c05e43541dc973a5}{F};
+103 \}
+\end{DoxyCode}
+\index{Node@{Node}!setG@{setG}}
+\index{setG@{setG}!Node@{Node}}
+\subsubsection[{\texorpdfstring{set\+G(float)}{setG(float)}}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::setG (
+\begin{DoxyParamCaption}
+\item[{float}]{G}
+\end{DoxyParamCaption}
+)}\hypertarget{classNode_ac269852dd9117461a6069589470c39f1}{}\label{classNode_ac269852dd9117461a6069589470c39f1}
+
+\begin{DoxyCode}
+93 \{
+94     this->\hyperlink{classNode_a3c6a67023068f762eaaa8a4861ab3e9f}{G} = \hyperlink{classNode_a3c6a67023068f762eaaa8a4861ab3e9f}{G};
+95 \}
+\end{DoxyCode}
+\index{Node@{Node}!setH@{setH}}
+\index{setH@{setH}!Node@{Node}}
+\subsubsection[{\texorpdfstring{set\+H(\+Node $\ast$meta)}{setH(Node *meta)}}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::setH (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{meta}
+\end{DoxyParamCaption}
+)}\hypertarget{classNode_aa10f28d0b00917bc5106373c73eb636f}{}\label{classNode_aa10f28d0b00917bc5106373c73eb636f}
+
+\begin{DoxyCode}
+97 \{
+98     this->\hyperlink{classNode_a26426055f336a81dc05680b981e4c270}{H} = (sqrt(((meta->\hyperlink{classNode_a81aba8cc7d7ebd60051bb7cba210f587}{getxPos}()-this->\hyperlink{classNode_a4c5b1e397eba5f462edc72d5c031b33e}{xPos})*(meta->\hyperlink{classNode_a81aba8cc7d7ebd60051bb7cba210f587}{getxPos}()-this->
+      \hyperlink{classNode_a4c5b1e397eba5f462edc72d5c031b33e}{xPos}))+((meta->\hyperlink{classNode_a7d26325d2355b29184cd6b428a78508b}{getyPos}()-this->\hyperlink{classNode_ace45ec1cc1cc78ef699918a7adeb1dad}{yPos})*(meta->\hyperlink{classNode_a7d26325d2355b29184cd6b428a78508b}{getyPos}()-this->
+      \hyperlink{classNode_ace45ec1cc1cc78ef699918a7adeb1dad}{yPos}))));
+99 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{classNode_aa10f28d0b00917bc5106373c73eb636f_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Node@{Node}!set\+Parent@{set\+Parent}}
+\index{set\+Parent@{set\+Parent}!Node@{Node}}
+\subsubsection[{\texorpdfstring{set\+Parent(\+Node $\ast$)}{setParent(Node *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::set\+Parent (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\hypertarget{classNode_aaed3b50ac429bae4e3460f19c23a9f71}{}\label{classNode_aaed3b50ac429bae4e3460f19c23a9f71}
+
+\begin{DoxyCode}
+105 \{
+106     this->parent = \hyperlink{classNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent};
+107 \}
+\end{DoxyCode}
+\index{Node@{Node}!setx\+Pos@{setx\+Pos}}
+\index{setx\+Pos@{setx\+Pos}!Node@{Node}}
+\subsubsection[{\texorpdfstring{setx\+Pos(int)}{setxPos(int)}}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::setx\+Pos (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classNode_a95d9ff38e9706097f752df46e1c912d9}{}\label{classNode_a95d9ff38e9706097f752df46e1c912d9}
+
+\begin{DoxyCode}
+85 \{
+86     this->\hyperlink{classNode_a4c5b1e397eba5f462edc72d5c031b33e}{xPos} = x;
+87 \}
+\end{DoxyCode}
+\index{Node@{Node}!sety\+Pos@{sety\+Pos}}
+\index{sety\+Pos@{sety\+Pos}!Node@{Node}}
+\subsubsection[{\texorpdfstring{sety\+Pos(int)}{setyPos(int)}}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::sety\+Pos (
+\begin{DoxyParamCaption}
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{classNode_afcef18b84545fc9097c67ba6b48f31cb}{}\label{classNode_afcef18b84545fc9097c67ba6b48f31cb}
+
+\begin{DoxyCode}
+89 \{
+90     this->\hyperlink{classNode_ace45ec1cc1cc78ef699918a7adeb1dad}{yPos} = y;
+91 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Node@{Node}!F@{F}}
+\index{F@{F}!Node@{Node}}
+\subsubsection[{\texorpdfstring{F}{F}}]{\setlength{\rightskip}{0pt plus 5cm}float Node\+::F\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNode_aa68bc86c2839aca9c05e43541dc973a5}{}\label{classNode_aa68bc86c2839aca9c05e43541dc973a5}
+\index{Node@{Node}!G@{G}}
+\index{G@{G}!Node@{Node}}
+\subsubsection[{\texorpdfstring{G}{G}}]{\setlength{\rightskip}{0pt plus 5cm}float Node\+::G\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNode_a3c6a67023068f762eaaa8a4861ab3e9f}{}\label{classNode_a3c6a67023068f762eaaa8a4861ab3e9f}
+\index{Node@{Node}!H@{H}}
+\index{H@{H}!Node@{Node}}
+\subsubsection[{\texorpdfstring{H}{H}}]{\setlength{\rightskip}{0pt plus 5cm}float Node\+::H\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNode_a26426055f336a81dc05680b981e4c270}{}\label{classNode_a26426055f336a81dc05680b981e4c270}
+\index{Node@{Node}!id@{id}}
+\index{id@{id}!Node@{Node}}
+\subsubsection[{\texorpdfstring{id}{id}}]{\setlength{\rightskip}{0pt plus 5cm}int Node\+::id}\hypertarget{classNode_a59a543130a10c95f1e8642cf8c5645e8}{}\label{classNode_a59a543130a10c95f1e8642cf8c5645e8}
+\index{Node@{Node}!parent@{parent}}
+\index{parent@{parent}!Node@{Node}}
+\subsubsection[{\texorpdfstring{parent}{parent}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$ Node\+::parent}\hypertarget{classNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{}\label{classNode_ad8184598cdea70e4bbdfd76f2b0f9e85}
+\index{Node@{Node}!tamanho@{tamanho}}
+\index{tamanho@{tamanho}!Node@{Node}}
+\subsubsection[{\texorpdfstring{tamanho}{tamanho}}]{\setlength{\rightskip}{0pt plus 5cm}int Node\+::tamanho}\hypertarget{classNode_ab61bfe3b52ba63f10939bf88270321e0}{}\label{classNode_ab61bfe3b52ba63f10939bf88270321e0}
+\index{Node@{Node}!x\+Pos@{x\+Pos}}
+\index{x\+Pos@{x\+Pos}!Node@{Node}}
+\subsubsection[{\texorpdfstring{x\+Pos}{xPos}}]{\setlength{\rightskip}{0pt plus 5cm}int Node\+::x\+Pos\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNode_a4c5b1e397eba5f462edc72d5c031b33e}{}\label{classNode_a4c5b1e397eba5f462edc72d5c031b33e}
+\index{Node@{Node}!y\+Pos@{y\+Pos}}
+\index{y\+Pos@{y\+Pos}!Node@{Node}}
+\subsubsection[{\texorpdfstring{y\+Pos}{yPos}}]{\setlength{\rightskip}{0pt plus 5cm}int Node\+::y\+Pos\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNode_ace45ec1cc1cc78ef699918a7adeb1dad}{}\label{classNode_ace45ec1cc1cc78ef699918a7adeb1dad}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{CalculoTempo__node_8h}{Calculo\+Tempo\+\_\+node.\+h}\item 
+\hyperlink{CalculoTempo__node_8cpp}{Calculo\+Tempo\+\_\+node.\+cpp}\end{DoxyCompactItemize}

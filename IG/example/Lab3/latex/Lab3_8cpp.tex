@@ -1,0 +1,168 @@
+\hypertarget{Lab3_8cpp}{}\section{Lab3.\+cpp File Reference}
+\label{Lab3_8cpp}\index{Lab3.\+cpp@{Lab3.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$pthread.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+Include dependency graph for Lab3.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Lab3_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structThreadReturn}{Thread\+Return}
+\item 
+struct \hyperlink{structThreadParam}{Thread\+Param}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{Lab3_8cpp_a309dddc4f36d285135261c13128963c1}{Search} (void $\ast$arg)
+\item 
+int \hyperlink{Lab3_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Lab3.\+cpp@{Lab3.\+cpp}!main@{main}}
+\index{main@{main}!Lab3.\+cpp@{Lab3.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$argv[])}{main(int argc, char *argv[])}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{Lab3_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{}\label{Lab3_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+\begin{DoxyCode}
+74 \{
+75    pthread\_t * threads;
+76    \hyperlink{structThreadParam}{ThreadParam} * threadsParams;
+77 
+78    \textcolor{keyword}{const} \textcolor{keywordtype}{int} MAX\_SIZE=10000;
+79    \textcolor{keywordtype}{int} BigArray[MAX\_SIZE];
+80 
+81    \textcolor{keywordtype}{int} thread\_num;
+82    \textcolor{keywordtype}{int} status, i;
+83    \textcolor{keywordtype}{int} pos, value;
+84 
+85    \textcolor{comment}{//Todo: prepare the array to be sorted for                                                              
+                                                                                                       }
+86    \textcolor{comment}{// You can fill the array with random numbers (taking values in the range of 1...100)                   
+                                                                                                       }
+87 
+88    \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=0; k<MAX\_SIZE; k++)
+89    \{
+90       BigArray[k] = rand()%200+1;
+91    \}
+92 
+93    cout <<\textcolor{stringliteral}{"What values to search:"};
+94    cin >> value;
+95 
+96    \textcolor{keywordflow}{do} \{
+97       cout <<\textcolor{stringliteral}{"How many threads to create:"};
+98       cin >> thread\_num;
+99    \} \textcolor{keywordflow}{while} (thread\_num<=1);
+100 
+101    \textcolor{comment}{//threads = new pthread\_t[thread\_num]; //dynamically allocate the thread handler ...                    
+                                                                                                       }
+102    pthread\_t threads[thread\_num];
+103 
+104    \textcolor{comment}{//threadsParams = new ThreadParam[thread\_num];                                                          
+                                                                                                       }
+105    \hyperlink{structThreadParam}{ThreadParam} threadsParams[thread\_num];
+106 
+107    \textcolor{keywordtype}{int} increase = (MAX\_SIZE / thread\_num) - 1;
+108    \textcolor{keywordtype}{int} start = 0;
+109    \textcolor{keywordtype}{int} end = increase;
+110 
+111    \textcolor{keywordflow}{for} (i=0; i<thread\_num; i++)\{
+112       \textcolor{comment}{//Todo: prepare the argument to be passed to i-th Search thread                                      
+                                                                                                       }
+113       \textcolor{comment}{//                                                                                                   
+                                                                                                       }
+114       threadsParams[i].\hyperlink{structThreadParam_a67d5841b5ec120d0265bc55eeb8bac6b}{value} = value;
+115       threadsParams[i].\hyperlink{structThreadParam_a48b6fa880b0369abac96f8f54bf12e08}{startIndex} = start;
+116       threadsParams[i].\hyperlink{structThreadParam_a88bf854942e7037fbdd9269b434612d6}{endIndex} = end;
+117       threadsParams[i].\hyperlink{structThreadParam_aec444b4eb12a9a8fea3e8689e149c222}{array} = BigArray;
+118 
+119       status = pthread\_create (&threads[i], NULL, \hyperlink{Lab3_8cpp_a309dddc4f36d285135261c13128963c1}{Search}, (\textcolor{keywordtype}{void} *)&(threadsParams[i]));
+120 
+121       \textcolor{keywordflow}{if} (status!=0)\{
+122          printf (\textcolor{stringliteral}{"oops, pthread\_create returned error code %d\(\backslash\)n"}, status);
+123          exit(-1);
+124 
+125       \}
+126       start += increase;
+127       end += increase;
+128       \textcolor{comment}{//printf("Search function address = %p\(\backslash\)n", Search);                                                  
+                                                                                                       }
+129 
+130    \}
+131 
+132    \textcolor{keywordtype}{void} * ret;
+133    \textcolor{comment}{//EZ: Important that we wait for all threads to finish before ending the main thread ...                
+                                                                                                       }
+134    \textcolor{keywordflow}{for} (i=0; i<thread\_num; i++)\{
+135       pthread\_join (threads[i],(\textcolor{keywordtype}{void} **)&ret);
+136       cout << \textcolor{stringliteral}{"Thread "} << i << \textcolor{stringliteral}{" returns having counted "}
+137            << ((\hyperlink{structThreadReturn}{ThreadReturn} *)ret)->count << \textcolor{stringliteral}{" instances of the number "}
+138            << value << \textcolor{stringliteral}{" with the first instance being at position "}
+139            << ((\hyperlink{structThreadReturn}{ThreadReturn} *)ret)->pos << endl;
+140    \}
+141 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{Lab3_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Lab3.\+cpp@{Lab3.\+cpp}!Search@{Search}}
+\index{Search@{Search}!Lab3.\+cpp@{Lab3.\+cpp}}
+\subsubsection[{\texorpdfstring{Search(void $\ast$arg)}{Search(void *arg)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ Search (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)}\hypertarget{Lab3_8cpp_a309dddc4f36d285135261c13128963c1}{}\label{Lab3_8cpp_a309dddc4f36d285135261c13128963c1}
+
+\begin{DoxyCode}
+45 \{
+46    \hyperlink{structThreadParam}{ThreadParam} * param = (\hyperlink{structThreadParam}{ThreadParam} *) arg;
+47    \textcolor{keywordtype}{int} * array = param->\hyperlink{structThreadParam_aec444b4eb12a9a8fea3e8689e149c222}{array};
+48    \textcolor{keywordtype}{int} start = param->\hyperlink{structThreadParam_a48b6fa880b0369abac96f8f54bf12e08}{startIndex};
+49    \textcolor{keywordtype}{int} end = param->\hyperlink{structThreadParam_a88bf854942e7037fbdd9269b434612d6}{endIndex};
+50    \textcolor{keywordtype}{int} value = param->\hyperlink{structThreadParam_a67d5841b5ec120d0265bc55eeb8bac6b}{value};
+51    \textcolor{keywordtype}{int} count = 0;
+52    \textcolor{keywordtype}{int} pos = 0;
+53 
+54    cout <<\textcolor{stringliteral}{"Search array["}<<start<<\textcolor{stringliteral}{"..."}<<end<<\textcolor{stringliteral}{"] for value "}<<
+55       value<<endl;
+56    \textcolor{comment}{//search through designated area for the target number and first position                               
+                                                                                                       }
+57    \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=start; k<=end; k++)
+58    \{
+59       \textcolor{keywordflow}{if}(array[k] == value)
+60       \{
+61          count++;
+62          \textcolor{keywordflow}{if}(count == 1)
+63             pos = k;
+64       \}
+65    \}
+66    \hyperlink{structThreadReturn}{ThreadReturn} * r = \textcolor{keyword}{new} \hyperlink{structThreadReturn}{ThreadReturn};
+67    r->\hyperlink{structThreadReturn_ada06b95a1d8c2688d8f7ff617ca82074}{count} = count;
+68    r->\hyperlink{structThreadReturn_acee40ef3ef81baf05c35b71761d7ffad}{pos} = pos;
+69    \textcolor{keywordflow}{return} (\textcolor{keywordtype}{void} *)r;
+70 \}
+\end{DoxyCode}

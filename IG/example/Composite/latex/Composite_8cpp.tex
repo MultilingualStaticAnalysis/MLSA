@@ -1,0 +1,79 @@
+\hypertarget{Composite_8cpp}{}\section{Composite.\+cpp File Reference}
+\label{Composite_8cpp}\index{Composite.\+cpp@{Composite.\+cpp}}
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+Include dependency graph for Composite.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{Composite_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classGraphic}{Graphic}
+\item 
+class \hyperlink{classEllipse}{Ellipse}
+\item 
+class \hyperlink{classCompositeGraphic}{Composite\+Graphic}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Composite_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Composite.\+cpp@{Composite.\+cpp}!main@{main}}
+\index{main@{main}!Composite.\+cpp@{Composite.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Composite_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Composite_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+40 \{
+41   \textcolor{comment}{// Initialize four ellipses}
+42   \textcolor{keyword}{const} \hyperlink{classEllipse}{Ellipse}* ellipse1(\textcolor{keyword}{new} \hyperlink{classEllipse}{Ellipse}());
+43   \textcolor{keyword}{const} \hyperlink{classEllipse}{Ellipse}* ellipse2(\textcolor{keyword}{new} \hyperlink{classEllipse}{Ellipse}());
+44   \textcolor{keyword}{const} \hyperlink{classEllipse}{Ellipse}* ellipse3(\textcolor{keyword}{new} \hyperlink{classEllipse}{Ellipse}());
+45   \textcolor{keyword}{const} \hyperlink{classEllipse}{Ellipse}* ellipse4(\textcolor{keyword}{new} \hyperlink{classEllipse}{Ellipse}());
+46  
+47   \textcolor{comment}{// Initialize three composite graphics}
+48   \textcolor{keyword}{const} \hyperlink{classCompositeGraphic}{CompositeGraphic}* graphic(\textcolor{keyword}{new} \hyperlink{classCompositeGraphic}{CompositeGraphic}());
+49   \textcolor{keyword}{const} \hyperlink{classCompositeGraphic}{CompositeGraphic}* graphic1(\textcolor{keyword}{new} \hyperlink{classCompositeGraphic}{CompositeGraphic}());
+50   \textcolor{keyword}{const} \hyperlink{classCompositeGraphic}{CompositeGraphic}* graphic2(\textcolor{keyword}{new} \hyperlink{classCompositeGraphic}{CompositeGraphic}());
+51  
+52   \textcolor{comment}{// Composes the graphics}
+53   graphic1->add(ellipse1);
+54   graphic1->add(ellipse2);
+55   graphic1->add(ellipse3);
+56  
+57   graphic2->add(ellipse4);
+58  
+59   graphic->add(graphic1);
+60   graphic->add(graphic2);
+61  
+62   \textcolor{comment}{// Prints the complete graphic (four times the string "Ellipse")}
+63   graphic->print();
+64   \textcolor{keywordflow}{return} 0;
+65 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{Composite_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

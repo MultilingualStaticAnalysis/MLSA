@@ -1,0 +1,104 @@
+\hypertarget{HugeInteger_8cpp}{}\section{Huge\+Integer.\+cpp File Reference}
+\label{HugeInteger_8cpp}\index{Huge\+Integer.\+cpp@{Huge\+Integer.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}Huge\+Integer.\+h\char`\"{}}\\*
+Include dependency graph for Huge\+Integer.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{HugeInteger_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{HugeInteger_8cpp_aa9a08688da0c2e4f6983a36161b3d008}{operator$<$$<$} (ostream \&outs, const \hyperlink{classHugeInteger}{Huge\+Integer} \&hi)
+\item 
+istream \& \hyperlink{HugeInteger_8cpp_afeff4742c40990020c005d43e8de8e64}{operator$>$$>$} (istream \&ins, \hyperlink{classHugeInteger}{Huge\+Integer} \&hi)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Huge\+Integer.\+cpp@{Huge\+Integer.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Huge\+Integer.\+cpp@{Huge\+Integer.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(ostream \&outs, const Huge\+Integer \&hi)}{operator<<(ostream &outs, const HugeInteger &hi)}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{outs, }
+\item[{const {\bf Huge\+Integer} \&}]{hi}
+\end{DoxyParamCaption}
+)}\hypertarget{HugeInteger_8cpp_aa9a08688da0c2e4f6983a36161b3d008}{}\label{HugeInteger_8cpp_aa9a08688da0c2e4f6983a36161b3d008}
+
+\begin{DoxyCode}
+295 \{
+296    \textcolor{keywordflow}{if}(hi.\hyperlink{classHugeInteger_a0ac2a85dbda0bd78e0df91fb6d6e2397}{sign} == \textcolor{charliteral}{'-'})
+297       cout << hi.\hyperlink{classHugeInteger_a0ac2a85dbda0bd78e0df91fb6d6e2397}{sign};
+298    \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=0; k<hi.\hyperlink{classHugeInteger_a3d21e9f761dfb49fb6559389685af830}{num}.size(); k++)
+299       outs << hi.\hyperlink{classHugeInteger_a3d21e9f761dfb49fb6559389685af830}{num}[k];
+300    \textcolor{keywordflow}{return} outs;
+301 \}
+\end{DoxyCode}
+\index{Huge\+Integer.\+cpp@{Huge\+Integer.\+cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Huge\+Integer.\+cpp@{Huge\+Integer.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$>$$>$(istream \&ins, Huge\+Integer \&hi)}{operator>>(istream &ins, HugeInteger &hi)}}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{ins, }
+\item[{{\bf Huge\+Integer} \&}]{hi}
+\end{DoxyParamCaption}
+)}\hypertarget{HugeInteger_8cpp_afeff4742c40990020c005d43e8de8e64}{}\label{HugeInteger_8cpp_afeff4742c40990020c005d43e8de8e64}
+
+\begin{DoxyCode}
+304 \{
+305    \textcolor{keywordtype}{char} c, d;
+306    \textcolor{keywordtype}{int} i;
+307    vector<char> v;
+308 
+309    \textcolor{keywordflow}{do} \textcolor{comment}{//weeds through input until a number or comma is found                                               
+                                                                                                       }
+310    \{
+311       ins >> c;
+312       i = c;\textcolor{comment}{// converts c into an integer using the ASCII value chart                                      
+                                                                                                       }
+313    \}\textcolor{keywordflow}{while}(!((i >= 48 && i <= 57)||(i == 44)));
+314 
+315    ins.putback(c); \textcolor{comment}{//puts retrieved input value back so that another variable can retrieve it              
+                                                                                                       }
+316 
+317    \textcolor{keywordflow}{while}((i >= 48 && i <= 57)||(i == 44)) \textcolor{comment}{//48 - 57 corresponds to characters 0-9 and 44 corresponds to the
+       comma character                                                                                 }
+318    \{
+319       ins >> d;
+320       \textcolor{keywordflow}{if}(i >= 48 && i <=57) \textcolor{comment}{//excludes commas from the vector                                              
+                                                                                                       }
+321          v.push\_back(d);
+322       c = ins.peek(); \textcolor{comment}{//sees the first input value, but does not retrieve it                               
+                                                                                                       }
+323       i = c;
+324    \}
+325 
+326    \textcolor{keywordflow}{if}(hi.\hyperlink{classHugeInteger_a714314b2e1b79827d8796d8c52016e5a}{overflow}(v)) \textcolor{comment}{//if the input vector's size exceeds MAXDIGITS, a bad HugeInteger will be
+       returned                                                                                                    }
+327       hi = hi.\hyperlink{classHugeInteger_a6d9c7e76adbd02057a8a4a1048e05870}{returnBad}();
+328    \textcolor{keywordflow}{else}
+329    \{
+330       \hyperlink{classHugeInteger}{HugeInteger} h(v);
+331       hi = h;
+332    \}
+333 
+334    \textcolor{keywordflow}{return} ins;
+335 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{HugeInteger_8cpp_afeff4742c40990020c005d43e8de8e64_cgraph}
+\end{center}
+\end{figure}
+
+

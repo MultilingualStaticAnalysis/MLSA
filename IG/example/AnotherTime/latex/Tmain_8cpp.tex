@@ -1,0 +1,74 @@
+\hypertarget{Tmain_8cpp}{}\section{Tmain.\+cpp File Reference}
+\label{Tmain_8cpp}\index{Tmain.\+cpp@{Tmain.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}Time.\+h\char`\"{}}\\*
+Include dependency graph for Tmain.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{Tmain_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Tmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Tmain.\+cpp@{Tmain.\+cpp}!main@{main}}
+\index{main@{main}!Tmain.\+cpp@{Tmain.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Tmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Tmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+6            \{
+7    \hyperlink{classTime}{Time} t1(23, 59, 59);   \textcolor{comment}{// Test constructor}
+8  
+9    \textcolor{comment}{// Test all public member functions}
+10    t1.print();       \textcolor{comment}{// 23:59:59}
+11    t1.setHour(12);
+12    t1.setMinute(30);
+13    t1.setSecond(15);
+14    t1.print();       \textcolor{comment}{// 12:30:15}
+15    cout << \textcolor{stringliteral}{"Hour is "}   << t1.getHour()   << endl;
+16    cout << \textcolor{stringliteral}{"Minute is "} << t1.getMinute() << endl;
+17    cout << \textcolor{stringliteral}{"Second is "} << t1.getSecond() << endl;
+18  
+19    \hyperlink{classTime}{Time} t2;     \textcolor{comment}{// Test constructor with default values for hour, minute and second}
+20    t2.\hyperlink{classTime_acd9b7522e50fc667d81468219c5756e8}{print}();  \textcolor{comment}{// 00:00:00}
+21    t2.\hyperlink{classTime_ae05f94882a72debabb02e0889054d89a}{setTime}(1, 2, 3);
+22    t2.\hyperlink{classTime_acd9b7522e50fc667d81468219c5756e8}{print}();  \textcolor{comment}{// 01:02:03}
+23  
+24    \hyperlink{classTime}{Time} t3(12); \textcolor{comment}{// Use default values for minute and second}
+25    t3.print();  \textcolor{comment}{// 12:00:00}
+26  
+27    \textcolor{comment}{// Test nextSecond()}
+28    \hyperlink{classTime}{Time} t4(23, 59, 58);
+29    t4.print();
+30    t4.nextSecond();
+31    t4.print();
+32    t4.nextSecond();
+33    t4.print();
+34  
+35    \textcolor{comment}{// No input validation}
+36    \hyperlink{classTime}{Time} t5(25, 61, 99); \textcolor{comment}{// values out of range}
+37    t5.print();  \textcolor{comment}{// 25:61:99}
+38 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{Tmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

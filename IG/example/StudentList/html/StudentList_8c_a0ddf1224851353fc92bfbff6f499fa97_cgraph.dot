@@ -1,0 +1,17 @@
+digraph "main"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$StudentList_8c.html#a8996476759e6f48be17f008b26455ec8"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="readStudentList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$StudentList_8c.html#a06ff31ab1d0e694ba9c35eb08e583950"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="put",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$StudentList_8c.html#a6101248c9fd871a298acb034a6e16a52"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="writeStudentList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$StudentList_8c.html#a1b41f1bf22121a8616fa316bfa258262"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="getX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$StudentList_8c.html#a6d3ac345eba2405cff0faa7a85bac468"];
+}

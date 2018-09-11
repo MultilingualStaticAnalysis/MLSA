@@ -1,0 +1,80 @@
+\hypertarget{classwikibooks__design__patterns_1_1Variable}{}\section{wikibooks\+\_\+design\+\_\+patterns\+:\+:Variable Class Reference}
+\label{classwikibooks__design__patterns_1_1Variable}\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Variable@{wikibooks\+\_\+design\+\_\+patterns\+::\+Variable}}
+
+
+Inheritance diagram for wikibooks\+\_\+design\+\_\+patterns\+:\+:Variable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classwikibooks__design__patterns_1_1Variable__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for wikibooks\+\_\+design\+\_\+patterns\+:\+:Variable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classwikibooks__design__patterns_1_1Variable__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwikibooks__design__patterns_1_1Variable_af253b16d4857b12246ef05128e21fa7f}{Variable} (\hyperlink{namespacewikibooks__design__patterns_a603d2591ea56686888d0e4389481a453}{String} \hyperlink{classwikibooks__design__patterns_1_1Variable_a68aaf6361a65a56622f5b91661921413}{name})
+\item 
+int \hyperlink{classwikibooks__design__patterns_1_1Variable_a4b0fe47e343d6991a62ee6b0d2179e2f}{interpret} (\hyperlink{namespacewikibooks__design__patterns_adf1889a865861dea765d8a115cc66ae9}{Map} variables)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacewikibooks__design__patterns_a603d2591ea56686888d0e4389481a453}{String} \hyperlink{classwikibooks__design__patterns_1_1Variable_a68aaf6361a65a56622f5b91661921413}{name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Variable@{wikibooks\+\_\+design\+\_\+patterns\+::\+Variable}!Variable@{Variable}}
+\index{Variable@{Variable}!wikibooks\+\_\+design\+\_\+patterns\+::\+Variable@{wikibooks\+\_\+design\+\_\+patterns\+::\+Variable}}
+\subsubsection[{\texorpdfstring{Variable(\+String name)}{Variable(String name)}}]{\setlength{\rightskip}{0pt plus 5cm}wikibooks\+\_\+design\+\_\+patterns\+::\+Variable\+::\+Variable (
+\begin{DoxyParamCaption}
+\item[{{\bf String}}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwikibooks__design__patterns_1_1Variable_af253b16d4857b12246ef05128e21fa7f}{}\label{classwikibooks__design__patterns_1_1Variable_af253b16d4857b12246ef05128e21fa7f}
+
+\begin{DoxyCode}
+70 \{ this->\hyperlink{classwikibooks__design__patterns_1_1Variable_a68aaf6361a65a56622f5b91661921413}{name} = \hyperlink{classwikibooks__design__patterns_1_1Variable_a68aaf6361a65a56622f5b91661921413}{name}; \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Variable@{wikibooks\+\_\+design\+\_\+patterns\+::\+Variable}!interpret@{interpret}}
+\index{interpret@{interpret}!wikibooks\+\_\+design\+\_\+patterns\+::\+Variable@{wikibooks\+\_\+design\+\_\+patterns\+::\+Variable}}
+\subsubsection[{\texorpdfstring{interpret(\+Map variables)}{interpret(Map variables)}}]{\setlength{\rightskip}{0pt plus 5cm}int wikibooks\+\_\+design\+\_\+patterns\+::\+Variable\+::interpret (
+\begin{DoxyParamCaption}
+\item[{{\bf Map}}]{variables}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classwikibooks__design__patterns_1_1Variable_a4b0fe47e343d6991a62ee6b0d2179e2f}{}\label{classwikibooks__design__patterns_1_1Variable_a4b0fe47e343d6991a62ee6b0d2179e2f}
+
+
+Implements \hyperlink{structwikibooks__design__patterns_1_1Expression_a3723a35bb367b43edf806be72385c680}{wikibooks\+\_\+design\+\_\+patterns\+::\+Expression}.
+
+
+\begin{DoxyCode}
+71                                   \{ 
+72         \textcolor{keywordflow}{if}(variables.end() == variables.find(\hyperlink{classwikibooks__design__patterns_1_1Variable_a68aaf6361a65a56622f5b91661921413}{name})) \textcolor{keywordflow}{return} 0;
+73         \textcolor{keywordflow}{return} variables[\hyperlink{classwikibooks__design__patterns_1_1Variable_a68aaf6361a65a56622f5b91661921413}{name}]->interpret(variables); 
+74     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Variable@{wikibooks\+\_\+design\+\_\+patterns\+::\+Variable}!name@{name}}
+\index{name@{name}!wikibooks\+\_\+design\+\_\+patterns\+::\+Variable@{wikibooks\+\_\+design\+\_\+patterns\+::\+Variable}}
+\subsubsection[{\texorpdfstring{name}{name}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf String} wikibooks\+\_\+design\+\_\+patterns\+::\+Variable\+::name\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classwikibooks__design__patterns_1_1Variable_a68aaf6361a65a56622f5b91661921413}{}\label{classwikibooks__design__patterns_1_1Variable_a68aaf6361a65a56622f5b91661921413}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Interpreter_8cpp}{Interpreter.\+cpp}\end{DoxyCompactItemize}

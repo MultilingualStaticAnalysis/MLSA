@@ -1,0 +1,19 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/Solovay-Strassen Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/Solovay-Strassen Call Graph"
+	];
+
+	Node0x234310642 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/Solovay-Strassen/Solovay-Strassen.cpp"];
+	Node0x530117319 [shape=oval, label="0x317cc60. (/home/labaccount/11-2-17/mlsa/IG/example/Solovay-Strassen/Solovay-Strassen.cpp)\nSolovoy(num, iteration)"];
+	Node0x234310642 -> Node0x530117319;
+	Node0x617785819 [shape=oval, label="0x317b480. (/home/labaccount/11-2-17/mlsa/IG/example/Solovay-Strassen/Solovay-Strassen.cpp)\nrand()"];
+	Node0x530117319 -> Node0x617785819;
+	Node0x406319630 [shape=oval, label="0x317b7d0. (/home/labaccount/11-2-17/mlsa/IG/example/Solovay-Strassen/Solovay-Strassen.cpp)\ncalculateJacobian(a, p)"];
+	Node0x530117319 -> Node0x406319630;
+	Node0x150995476 [shape=oval, label="0x317bbd0. (/home/labaccount/11-2-17/mlsa/IG/example/Solovay-Strassen/Solovay-Strassen.cpp)\nmodulo(a, BINOP, p)"];
+	Node0x530117319 -> Node0x150995476;
+	Node0x216701314 [shape=oval, label="0x317a3f0. (/home/labaccount/11-2-17/mlsa/IG/example/Solovay-Strassen/Solovay-Strassen.cpp)\nswap(a, n)"];
+	Node0x406319630 -> Node0x216701314;
+}

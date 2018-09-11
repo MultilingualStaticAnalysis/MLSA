@@ -1,0 +1,88 @@
+\hypertarget{classFlyweightCharacter}{}\section{Flyweight\+Character Class Reference}
+\label{classFlyweightCharacter}\index{Flyweight\+Character@{Flyweight\+Character}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFlyweightCharacter_a6d2fea212508e56523ab4d4d7ad583d4}{Flyweight\+Character} (unsigned short \hyperlink{classFlyweightCharacter_ad2633bab3a73c5fac2b3d251bf5c2bfe}{font\+Size\+Index}, unsigned short \hyperlink{classFlyweightCharacter_ab528a214bcb91ccc0016fd0cbae331af}{font\+Name\+Index}, unsigned short \hyperlink{classFlyweightCharacter_a55c3d15287653717920c8b498d904a08}{position\+In\+Stream})
+\item 
+void \hyperlink{classFlyweightCharacter_abd3d3cf3508cf18403546e835280ca50}{print} ()
+\item 
+\hyperlink{classFlyweightCharacter_af7272d0e63182f2bd32032d09d38198d}{$\sim$\+Flyweight\+Character} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned short \hyperlink{classFlyweightCharacter_ad2633bab3a73c5fac2b3d251bf5c2bfe}{font\+Size\+Index}
+\item 
+unsigned short \hyperlink{classFlyweightCharacter_ab528a214bcb91ccc0016fd0cbae331af}{font\+Name\+Index}
+\item 
+unsigned \hyperlink{classFlyweightCharacter_a55c3d15287653717920c8b498d904a08}{position\+In\+Stream}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Flyweight\+Character@{Flyweight\+Character}!Flyweight\+Character@{Flyweight\+Character}}
+\index{Flyweight\+Character@{Flyweight\+Character}!Flyweight\+Character@{Flyweight\+Character}}
+\subsubsection[{\texorpdfstring{Flyweight\+Character(unsigned short font\+Size\+Index, unsigned short font\+Name\+Index, unsigned short position\+In\+Stream)}{FlyweightCharacter(unsigned short fontSizeIndex, unsigned short fontNameIndex, unsigned short positionInStream)}}]{\setlength{\rightskip}{0pt plus 5cm}Flyweight\+Character\+::\+Flyweight\+Character (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{font\+Size\+Index, }
+\item[{unsigned short}]{font\+Name\+Index, }
+\item[{unsigned short}]{position\+In\+Stream}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classFlyweightCharacter_a6d2fea212508e56523ab4d4d7ad583d4}{}\label{classFlyweightCharacter_a6d2fea212508e56523ab4d4d7ad583d4}
+
+\begin{DoxyCode}
+48                                                                                                            
+              :
+49         \hyperlink{classFlyweightCharacter_ad2633bab3a73c5fac2b3d251bf5c2bfe}{fontSizeIndex}(\hyperlink{classFlyweightCharacter_ad2633bab3a73c5fac2b3d251bf5c2bfe}{fontSizeIndex}), \hyperlink{classFlyweightCharacter_ab528a214bcb91ccc0016fd0cbae331af}{fontNameIndex}(
+      \hyperlink{classFlyweightCharacter_ab528a214bcb91ccc0016fd0cbae331af}{fontNameIndex}), \hyperlink{classFlyweightCharacter_a55c3d15287653717920c8b498d904a08}{positionInStream}(\hyperlink{classFlyweightCharacter_a55c3d15287653717920c8b498d904a08}{positionInStream}) \{\}
+\end{DoxyCode}
+\index{Flyweight\+Character@{Flyweight\+Character}!````~Flyweight\+Character@{$\sim$\+Flyweight\+Character}}
+\index{````~Flyweight\+Character@{$\sim$\+Flyweight\+Character}!Flyweight\+Character@{Flyweight\+Character}}
+\subsubsection[{\texorpdfstring{$\sim$\+Flyweight\+Character()}{~FlyweightCharacter()}}]{\setlength{\rightskip}{0pt plus 5cm}Flyweight\+Character\+::$\sim$\+Flyweight\+Character (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classFlyweightCharacter_af7272d0e63182f2bd32032d09d38198d}{}\label{classFlyweightCharacter_af7272d0e63182f2bd32032d09d38198d}
+
+\begin{DoxyCode}
+55 \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Flyweight\+Character@{Flyweight\+Character}!print@{print}}
+\index{print@{print}!Flyweight\+Character@{Flyweight\+Character}}
+\subsubsection[{\texorpdfstring{print()}{print()}}]{\setlength{\rightskip}{0pt plus 5cm}void Flyweight\+Character\+::print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classFlyweightCharacter_abd3d3cf3508cf18403546e835280ca50}{}\label{classFlyweightCharacter_abd3d3cf3508cf18403546e835280ca50}
+
+\begin{DoxyCode}
+50                  \{
+51         std::cout << \textcolor{stringliteral}{"Font Size: "} << 
+      \hyperlink{classFlyweightCharacterAbstractBuilder_ad218358c55dae716e3ac08f453e5ab0a}{FlyweightCharacterAbstractBuilder::fontSizes}[
+      \hyperlink{classFlyweightCharacter_ad2633bab3a73c5fac2b3d251bf5c2bfe}{fontSizeIndex}]
+52             << \textcolor{stringliteral}{", font Name: "} << \hyperlink{classFlyweightCharacterAbstractBuilder_a9b25dfdcb7fb87b00acb05616ba50dc2}{FlyweightCharacterAbstractBuilder::fontNames}
+      [\hyperlink{classFlyweightCharacter_ab528a214bcb91ccc0016fd0cbae331af}{fontNameIndex}]
+53             << \textcolor{stringliteral}{", character stream position: "} << \hyperlink{classFlyweightCharacter_a55c3d15287653717920c8b498d904a08}{positionInStream} << std::endl;
+54     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Flyweight\+Character@{Flyweight\+Character}!font\+Name\+Index@{font\+Name\+Index}}
+\index{font\+Name\+Index@{font\+Name\+Index}!Flyweight\+Character@{Flyweight\+Character}}
+\subsubsection[{\texorpdfstring{font\+Name\+Index}{fontNameIndex}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short Flyweight\+Character\+::font\+Name\+Index\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classFlyweightCharacter_ab528a214bcb91ccc0016fd0cbae331af}{}\label{classFlyweightCharacter_ab528a214bcb91ccc0016fd0cbae331af}
+\index{Flyweight\+Character@{Flyweight\+Character}!font\+Size\+Index@{font\+Size\+Index}}
+\index{font\+Size\+Index@{font\+Size\+Index}!Flyweight\+Character@{Flyweight\+Character}}
+\subsubsection[{\texorpdfstring{font\+Size\+Index}{fontSizeIndex}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short Flyweight\+Character\+::font\+Size\+Index\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classFlyweightCharacter_ad2633bab3a73c5fac2b3d251bf5c2bfe}{}\label{classFlyweightCharacter_ad2633bab3a73c5fac2b3d251bf5c2bfe}
+\index{Flyweight\+Character@{Flyweight\+Character}!position\+In\+Stream@{position\+In\+Stream}}
+\index{position\+In\+Stream@{position\+In\+Stream}!Flyweight\+Character@{Flyweight\+Character}}
+\subsubsection[{\texorpdfstring{position\+In\+Stream}{positionInStream}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Flyweight\+Character\+::position\+In\+Stream\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classFlyweightCharacter_a55c3d15287653717920c8b498d904a08}{}\label{classFlyweightCharacter_a55c3d15287653717920c8b498d904a08}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Flyweight_8cpp}{Flyweight.\+cpp}\end{DoxyCompactItemize}

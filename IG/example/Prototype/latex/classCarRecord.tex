@@ -1,0 +1,109 @@
+\hypertarget{classCarRecord}{}\section{Car\+Record Class Reference}
+\label{classCarRecord}\index{Car\+Record@{Car\+Record}}
+
+
+Inheritance diagram for Car\+Record\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classCarRecord__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Car\+Record\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classCarRecord__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCarRecord_ab1ff8a8eb47b4792718a2eff6012656e}{Car\+Record} (string car\+Name, int ID)
+\item 
+void \hyperlink{classCarRecord_a84789b5f6a61048c481d115c7058d664}{print} () override
+\item 
+\hyperlink{classRecord}{Record} $\ast$ \hyperlink{classCarRecord_a190ab69e95107c689455fd85099f3630}{clone} () override
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classCarRecord_a11d736579cd5caeb73076ec2b5ca59ba}{m\+\_\+car\+Name}
+\item 
+int \hyperlink{classCarRecord_a2ec8ef22ca91cb79481b189cfa9dce7c}{m\+\_\+\+ID}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classCarRecord}{Car\+Record} is a Concrete Prototype 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Car\+Record@{Car\+Record}!Car\+Record@{Car\+Record}}
+\index{Car\+Record@{Car\+Record}!Car\+Record@{Car\+Record}}
+\subsubsection[{\texorpdfstring{Car\+Record(string car\+Name, int I\+D)}{CarRecord(string carName, int ID)}}]{\setlength{\rightskip}{0pt plus 5cm}Car\+Record\+::\+Car\+Record (
+\begin{DoxyParamCaption}
+\item[{string}]{car\+Name, }
+\item[{int}]{ID}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCarRecord_ab1ff8a8eb47b4792718a2eff6012656e}{}\label{classCarRecord_ab1ff8a8eb47b4792718a2eff6012656e}
+
+\begin{DoxyCode}
+25                                       : \hyperlink{classCarRecord_a11d736579cd5caeb73076ec2b5ca59ba}{m\_carName}(carName), \hyperlink{classCarRecord_a2ec8ef22ca91cb79481b189cfa9dce7c}{m\_ID}(ID)
+26     \{
+27     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Car\+Record@{Car\+Record}!clone@{clone}}
+\index{clone@{clone}!Car\+Record@{Car\+Record}}
+\subsubsection[{\texorpdfstring{clone() override}{clone() override}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Record}$\ast$ Car\+Record\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classCarRecord_a190ab69e95107c689455fd85099f3630}{}\label{classCarRecord_a190ab69e95107c689455fd85099f3630}
+
+
+Implements \hyperlink{classRecord_a78dec14d71a48508de135ee06fe48373}{Record}.
+
+
+\begin{DoxyCode}
+37     \{
+38         \textcolor{keywordflow}{return} \textcolor{keyword}{new} \hyperlink{classCarRecord_ab1ff8a8eb47b4792718a2eff6012656e}{CarRecord}(*\textcolor{keyword}{this});
+39     \}
+\end{DoxyCode}
+\index{Car\+Record@{Car\+Record}!print@{print}}
+\index{print@{print}!Car\+Record@{Car\+Record}}
+\subsubsection[{\texorpdfstring{print() override}{print() override}}]{\setlength{\rightskip}{0pt plus 5cm}void Car\+Record\+::print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classCarRecord_a84789b5f6a61048c481d115c7058d664}{}\label{classCarRecord_a84789b5f6a61048c481d115c7058d664}
+
+
+Implements \hyperlink{classRecord_ad218b1bea934fb19a23a35b0b987e033}{Record}.
+
+
+\begin{DoxyCode}
+30     \{
+31         cout << \textcolor{stringliteral}{"Car Record"} << endl
+32              << \textcolor{stringliteral}{"Name  : "}   << \hyperlink{classCarRecord_a11d736579cd5caeb73076ec2b5ca59ba}{m\_carName} << endl
+33              << \textcolor{stringliteral}{"Number: "}   << \hyperlink{classCarRecord_a2ec8ef22ca91cb79481b189cfa9dce7c}{m\_ID} << endl << endl;
+34     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Car\+Record@{Car\+Record}!m\+\_\+car\+Name@{m\+\_\+car\+Name}}
+\index{m\+\_\+car\+Name@{m\+\_\+car\+Name}!Car\+Record@{Car\+Record}}
+\subsubsection[{\texorpdfstring{m\+\_\+car\+Name}{m_carName}}]{\setlength{\rightskip}{0pt plus 5cm}string Car\+Record\+::m\+\_\+car\+Name\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCarRecord_a11d736579cd5caeb73076ec2b5ca59ba}{}\label{classCarRecord_a11d736579cd5caeb73076ec2b5ca59ba}
+\index{Car\+Record@{Car\+Record}!m\+\_\+\+ID@{m\+\_\+\+ID}}
+\index{m\+\_\+\+ID@{m\+\_\+\+ID}!Car\+Record@{Car\+Record}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+ID}{m_ID}}]{\setlength{\rightskip}{0pt plus 5cm}int Car\+Record\+::m\+\_\+\+ID\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCarRecord_a2ec8ef22ca91cb79481b189cfa9dce7c}{}\label{classCarRecord_a2ec8ef22ca91cb79481b189cfa9dce7c}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Prototype_8cpp}{Prototype.\+cpp}\end{DoxyCompactItemize}

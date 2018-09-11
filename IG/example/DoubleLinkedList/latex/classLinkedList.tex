@@ -1,0 +1,583 @@
+\hypertarget{classLinkedList}{}\section{Linked\+List$<$ T $>$ Class Template Reference}
+\label{classLinkedList}\index{Linked\+List$<$ T $>$@{Linked\+List$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Linked\+List.\+h$>$}
+
+
+
+Inheritance diagram for Linked\+List$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classLinkedList__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLinkedList_a3c20fcfec867e867f541061a09fc640c}{Linked\+List} ()
+\item 
+\hyperlink{classLinkedList_a6d0ec2b365564af3f855d245a85bcbef}{Linked\+List} (const \hyperlink{classLinkedList}{Linked\+List}$<$ T $>$ \&l, bool sort=false)
+\item 
+\hyperlink{classLinkedList_a7c37609df3b83bc4eb0281b852f93fd7}{$\sim$\+Linked\+List} ()
+\item 
+int \hyperlink{classLinkedList_ae04dbbcae32f8fb03dce3e174854981f}{get\+Num\+Node} () const 
+\item 
+\hyperlink{classNode}{Node}$<$ T $>$ $\ast$ \hyperlink{classLinkedList_af59e26b062e8e9549974adfa5bb51eb2}{get\+Head} () const 
+\item 
+virtual void \hyperlink{classLinkedList_ac2f92598858e9ba02af8722fba803c53}{append} (\hyperlink{classNode}{Node}$<$ T $>$ $\ast$n)
+\item 
+virtual void \hyperlink{classLinkedList_a62a89a30509d38b88c75177b8efa9a98}{delete\+At\+Pos} (int pos)
+\item 
+void \hyperlink{classLinkedList_afddb5dbcc39e687add40de41b975cd8d}{display} () const 
+\item 
+void \hyperlink{classLinkedList_a7ed3bb4986b76cbfd3547d0b262ffff3}{display\+Node} (\hyperlink{classNode}{Node}$<$ T $>$ $\ast$curr) const 
+\item 
+bool \hyperlink{classLinkedList_a1b28b1e19e5aa68f3d89352e307928f6}{is\+Empty} () const 
+\item 
+void \hyperlink{classLinkedList_a718246359a2199be67212703be951071}{insert} (\hyperlink{classNode}{Node}$<$ T $>$ $\ast$n)
+\item 
+virtual void \hyperlink{classLinkedList_aa7b12c5f9bb22be91012d68c9da0b431}{insert\+At\+Pos} (\hyperlink{classNode}{Node}$<$ T $>$ $\ast$n, int pos)
+\item 
+void \hyperlink{classLinkedList_aa644d66bfb879e71d1805a794a78b928}{bubble\+Sort} ()
+\item 
+void \hyperlink{classLinkedList_abd329a83adcec046dc482f7566cf91f4}{selection\+Sort} ()
+\item 
+void \hyperlink{classLinkedList_adea39e4b5d8f3fcb608c11f7746790ed}{swap} (\hyperlink{classNode}{Node}$<$ T $>$ $\ast$\&f, \hyperlink{classNode}{Node}$<$ T $>$ $\ast$\&l, int f\+Pos, int l\+Pos)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNode}{Node}$<$ T $>$ $\ast$ \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Linked\+List@{Linked\+List}!Linked\+List@{Linked\+List}}
+\index{Linked\+List@{Linked\+List}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{Linked\+List()}{LinkedList()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Linked\+List}$<$ T $>$\+::{\bf Linked\+List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLinkedList_a3c20fcfec867e867f541061a09fc640c}{}\label{classLinkedList_a3c20fcfec867e867f541061a09fc640c}
+
+\begin{DoxyCode}
+16 \{
+17    \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head} = NULL;
+18 \}
+\end{DoxyCode}
+\index{Linked\+List@{Linked\+List}!Linked\+List@{Linked\+List}}
+\index{Linked\+List@{Linked\+List}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{Linked\+List(const Linked\+List$<$ T $>$ \&l, bool sort=false)}{LinkedList(const LinkedList< T > &l, bool sort=false)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Linked\+List}$<$ T $>$\+::{\bf Linked\+List} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Linked\+List}$<$ T $>$ \&}]{l, }
+\item[{bool}]{sort = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\hypertarget{classLinkedList_a6d0ec2b365564af3f855d245a85bcbef}{}\label{classLinkedList_a6d0ec2b365564af3f855d245a85bcbef}
+
+\begin{DoxyCode}
+21 \{
+22    \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head} = NULL;
+23    \hyperlink{classNode}{Node}* nPtr;
+24    \hyperlink{classStudent}{Student}* sPtr;
+25    \textcolor{keywordflow}{if}(!l.\hyperlink{classLinkedList_a1b28b1e19e5aa68f3d89352e307928f6}{isEmpty}())
+26    \{
+27       \hyperlink{classNode}{Node}* curr = l.\hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head};
+28       \textcolor{keywordflow}{while}(curr)
+29       \{
+30          nPtr = \textcolor{keyword}{new} \hyperlink{classNode_a0ac1d44cfe588be564acf25485029bd8}{Node}(*curr); \textcolor{comment}{//creates new Node with the copy Student                              
+                                                                                                           }
+31          \textcolor{keywordflow}{if}(sort && \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head}) \textcolor{comment}{//if the user requested the list sorted and the list has at least one Node   
+                                                                                                           }
+32             \hyperlink{classLinkedList_a718246359a2199be67212703be951071}{insert}(nPtr);
+33          \textcolor{keywordflow}{else} \textcolor{comment}{//if the user did not request the list to be sorted OR is the list is just beginning         
+                                                                                                       }
+34             \hyperlink{classLinkedList_ac2f92598858e9ba02af8722fba803c53}{append}(nPtr);
+35          curr = curr -> \hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}();
+36       \}
+37    \}
+38 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classLinkedList_a6d0ec2b365564af3f855d245a85bcbef_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Linked\+List@{Linked\+List}!````~Linked\+List@{$\sim$\+Linked\+List}}
+\index{````~Linked\+List@{$\sim$\+Linked\+List}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{$\sim$\+Linked\+List()}{~LinkedList()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Linked\+List}$<$ T $>$\+::$\sim${\bf Linked\+List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLinkedList_a7c37609df3b83bc4eb0281b852f93fd7}{}\label{classLinkedList_a7c37609df3b83bc4eb0281b852f93fd7}
+
+\begin{DoxyCode}
+41 \{
+42    \hyperlink{classNode}{Node}* curr = \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head};
+43    \hyperlink{classNode}{Node}* del;
+44    \textcolor{keywordflow}{while}(curr)
+45    \{
+46       del = curr;
+47       curr = curr -> \hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}();
+48       \textcolor{keyword}{delete} del; \textcolor{comment}{//releases the Node memory                                                               
+                                                                                                       }
+49    \}
+50    del = NULL;
+51    \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head} = NULL;
+52 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Linked\+List@{Linked\+List}!append@{append}}
+\index{append@{append}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{append(\+Node$<$ T $>$ $\ast$n)}{append(Node< T > *n)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Linked\+List}$<$ T $>$\+::append (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLinkedList_ac2f92598858e9ba02af8722fba803c53}{}\label{classLinkedList_ac2f92598858e9ba02af8722fba803c53}
+
+
+Reimplemented in \hyperlink{classDoubleLinkedList_a5732ebaac8186c9847363c2569a1bf49}{Double\+Linked\+List$<$ T $>$}.
+
+
+\begin{DoxyCode}
+72 \{
+73    \hyperlink{classNode}{Node}* curr;
+74    \textcolor{keywordflow}{if}(\hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head} == NULL)
+75       \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head} = n; \textcolor{comment}{//first Node added to the list                                                         
+                                                                                                           }
+76    \textcolor{keywordflow}{else}
+77    \{
+78       curr = \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head};
+79       \textcolor{keywordflow}{while}(curr -> \hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}() != NULL) \textcolor{comment}{//finds the last Node in the list                            
+                                                                                                              }
+80          curr = curr -> \hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}();
+81       curr -> \hyperlink{classNode_a0f69ba4f73cd616755f4ec0ae9fa7f96}{setNext}(n); \textcolor{comment}{//appends Node onto the end of the list                                   
+                                                                                                              }
+82    \}
+83 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{classLinkedList_ac2f92598858e9ba02af8722fba803c53_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Linked\+List@{Linked\+List}!bubble\+Sort@{bubble\+Sort}}
+\index{bubble\+Sort@{bubble\+Sort}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{bubble\+Sort()}{bubbleSort()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Linked\+List}$<$ T $>$\+::bubble\+Sort (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLinkedList_aa644d66bfb879e71d1805a794a78b928}{}\label{classLinkedList_aa644d66bfb879e71d1805a794a78b928}
+
+\begin{DoxyCode}
+195 \{
+196    \textcolor{keywordtype}{bool} sorted = \textcolor{keyword}{false};
+197 
+198    \textcolor{keywordflow}{if}(!\hyperlink{classLinkedList_a1b28b1e19e5aa68f3d89352e307928f6}{isEmpty}()) \textcolor{comment}{//checks if there are nodes in the list                                           
+                                                                                                              }
+199    \{
+200       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=0; k<\hyperlink{classLinkedList_ae04dbbcae32f8fb03dce3e174854981f}{getNumNode}()-1 && !sorted; k++)
+201       \{
+202          \hyperlink{classNode}{Node}* curr = \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head}; \textcolor{comment}{//starts at beginning of the list                                      
+                                                                                                               }
+203          \textcolor{keywordtype}{int} currPos = 1;
+204          \hyperlink{classNode}{Node}* nextNode = \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head}->getNext(); \textcolor{comment}{//compares top node with second node                    
+                                                                                                               }
+205          \textcolor{keywordtype}{int} nextPos = 2;
+206          sorted = \textcolor{keyword}{true}; \textcolor{comment}{//if sorted is true, that means the list is sorted and the loop will not continue
+       checking                                                                                          }
+207          \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0; j < \hyperlink{classLinkedList_ae04dbbcae32f8fb03dce3e174854981f}{getNumNode}()-1-k; j++)
+208          \{
+209             \textcolor{keywordflow}{if}(curr->getStudent().getLastName().compare(nextNode->getStudent().getLastName()) < 0) \textcolor{comment}{//if the
+       bottom student is higher in the alphabet}
+210             \{
+211                \hyperlink{classLinkedList_adea39e4b5d8f3fcb608c11f7746790ed}{swap}(curr, nextNode, currPos, nextPos); \textcolor{comment}{//swaps the two nodes                           
+                                                                                                           }
+212                sorted = \textcolor{keyword}{false};
+213             \}
+214             curr = curr->\hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}(); \textcolor{comment}{//goes to next node                                             
+                                                                                                              }
+215             currPos++;
+216             nextNode = nextNode->\hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}();
+217             nextPos++;
+218          \}
+219       \}
+220    \}
+221 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{classLinkedList_aa644d66bfb879e71d1805a794a78b928_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Linked\+List@{Linked\+List}!delete\+At\+Pos@{delete\+At\+Pos}}
+\index{delete\+At\+Pos@{delete\+At\+Pos}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{delete\+At\+Pos(int pos)}{deleteAtPos(int pos)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Linked\+List}$<$ T $>$\+::delete\+At\+Pos (
+\begin{DoxyParamCaption}
+\item[{int}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLinkedList_a62a89a30509d38b88c75177b8efa9a98}{}\label{classLinkedList_a62a89a30509d38b88c75177b8efa9a98}
+
+
+Reimplemented in \hyperlink{classDoubleLinkedList_a13520ddb52ec28efe42b5c29e9ba27e0}{Double\+Linked\+List$<$ T $>$}.
+
+
+\begin{DoxyCode}
+107 \{
+108    \hyperlink{classNode}{Node}* curr = \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head};
+109    \hyperlink{classNode}{Node}* \hyperlink{classNode_ac953360c5f7ffae6ad13762189d34d9c}{prev} = NULL; \textcolor{comment}{//prev starts at NULL because curr starts at head                            
+                                                                                                               }
+110    \textcolor{keywordflow}{if}(pos <= \hyperlink{classLinkedList_ae04dbbcae32f8fb03dce3e174854981f}{getNumNode}() && pos > 0) \textcolor{comment}{//if position is in list parameters and the list is not
+       empty                                                                                                         }
+111    \{
+112       \textcolor{keywordflow}{if}(pos == 1) \textcolor{comment}{//node is at the beginning of the list                                                  
+                                                                                                       }
+113          \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head} = curr->\hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}(); \textcolor{comment}{//takes node out of list                                       
+                                                                                                                  }
+114       \textcolor{keywordflow}{else} \textcolor{comment}{//node is in the middle of the list or at the end                                               
+                                                                                                       }
+115       \{
+116          \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=1; k<pos; k++) \textcolor{comment}{//loop to arrive at the position                                         
+                                                                                                       }
+117          \{
+118             prev = curr; \textcolor{comment}{//goes to next node                                                               
+                                                                                                       }
+119             curr = curr->\hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}();
+120          \}
+121          prev->\hyperlink{classNode_a0f69ba4f73cd616755f4ec0ae9fa7f96}{setNext}(curr->\hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}()); \textcolor{comment}{//takes node out of the list                        
+                                                                                                                  
+         }
+122       \}
+123       \textcolor{keyword}{delete} curr; \textcolor{comment}{//deletes node                                                                          
+                                                                                                       }
+124       curr = NULL;
+125    \}
+126 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classLinkedList_a62a89a30509d38b88c75177b8efa9a98_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Linked\+List@{Linked\+List}!display@{display}}
+\index{display@{display}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{display() const }{display() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Linked\+List}$<$ T $>$\+::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classLinkedList_afddb5dbcc39e687add40de41b975cd8d}{}\label{classLinkedList_afddb5dbcc39e687add40de41b975cd8d}
+
+\begin{DoxyCode}
+129 \{
+130    \hyperlink{classLinkedList_a7ed3bb4986b76cbfd3547d0b262ffff3}{displayNode}(\hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head});
+131 \}
+\end{DoxyCode}
+\index{Linked\+List@{Linked\+List}!display\+Node@{display\+Node}}
+\index{display\+Node@{display\+Node}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{display\+Node(\+Node$<$ T $>$ $\ast$curr) const }{displayNode(Node< T > *curr) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Linked\+List}$<$ T $>$\+::display\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{curr}
+\end{DoxyParamCaption}
+) const}\hypertarget{classLinkedList_a7ed3bb4986b76cbfd3547d0b262ffff3}{}\label{classLinkedList_a7ed3bb4986b76cbfd3547d0b262ffff3}
+
+\begin{DoxyCode}
+134 \{
+135    \textcolor{keywordflow}{if}(curr) \textcolor{comment}{//checks to see if curr is not NULL                                                            
+                                                                                                       }
+136    \{
+137       cout << curr -> getStudent() << endl; \textcolor{comment}{//displays Student information                                 
+                                                                                                       }
+138       \hyperlink{classLinkedList_a7ed3bb4986b76cbfd3547d0b262ffff3}{displayNode}(curr -> \hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}()); \textcolor{comment}{//calls display with the next Node in the list     
+                                                                                                                  
+             }
+139    \}
+140 \}
+\end{DoxyCode}
+\index{Linked\+List@{Linked\+List}!get\+Head@{get\+Head}}
+\index{get\+Head@{get\+Head}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{get\+Head() const }{getHead() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Node}$<$ T $>$ $\ast$ {\bf Linked\+List}$<$ T $>$\+::get\+Head (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classLinkedList_af59e26b062e8e9549974adfa5bb51eb2}{}\label{classLinkedList_af59e26b062e8e9549974adfa5bb51eb2}
+
+\begin{DoxyCode}
+67 \{
+68    \textcolor{keywordflow}{return} \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head};
+69 \}
+\end{DoxyCode}
+\index{Linked\+List@{Linked\+List}!get\+Num\+Node@{get\+Num\+Node}}
+\index{get\+Num\+Node@{get\+Num\+Node}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{get\+Num\+Node() const }{getNumNode() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ int {\bf Linked\+List}$<$ T $>$\+::get\+Num\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classLinkedList_ae04dbbcae32f8fb03dce3e174854981f}{}\label{classLinkedList_ae04dbbcae32f8fb03dce3e174854981f}
+
+\begin{DoxyCode}
+55 \{
+56    \hyperlink{classNode}{Node}* curr = \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head};
+57    \textcolor{keywordtype}{int} count = 0;
+58    \textcolor{keywordflow}{while}(curr)
+59    \{
+60      count++; \textcolor{comment}{//adds to count for every Node in the list                                                   
+                                                                                                      }
+61       curr = curr -> \hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}();
+62    \}
+63    \textcolor{keywordflow}{return} count;
+64 \}
+\end{DoxyCode}
+\index{Linked\+List@{Linked\+List}!insert@{insert}}
+\index{insert@{insert}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{insert(\+Node$<$ T $>$ $\ast$n)}{insert(Node< T > *n)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Linked\+List}$<$ T $>$\+::insert (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{classLinkedList_a718246359a2199be67212703be951071}{}\label{classLinkedList_a718246359a2199be67212703be951071}
+
+\begin{DoxyCode}
+151 \{
+152    \textcolor{keywordtype}{bool} foundPos = \textcolor{keyword}{false};
+153    \hyperlink{classNode}{Node}* curr = \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head};
+154    \textcolor{keywordtype}{int} pos = 1;
+155    \textcolor{keywordflow}{while}(curr && !foundPos) \textcolor{comment}{//finds the last Node in the list                                              
+                                                                                                       }
+156    \{
+157       \textcolor{keywordflow}{if}(n->getStudent().getLastName().compare(curr->getStudent().getLastName()) > 0) \textcolor{comment}{//student's last name
+       is father down in the alphabet                                                                  }
+158       \{
+159          curr = curr->\hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}(); \textcolor{comment}{//go to next node                                                  
+                                                                                                              }
+160          pos++;
+161       \}
+162       \textcolor{keywordflow}{else} \textcolor{comment}{//student is at the right place alphabetically                                                  
+                                                                                                       }
+163       \{
+164          \hyperlink{classLinkedList_aa7b12c5f9bb22be91012d68c9da0b431}{insertAtPos}(n, pos); \textcolor{comment}{//insert node at that position                                    
+                                                                                                                  }
+165          foundPos = \textcolor{keyword}{true};
+166       \}
+167    \}
+168    \textcolor{keywordflow}{if}(!foundPos) \textcolor{comment}{//student is last in list alphabetically                                                  
+                                                                                                       }
+169       \hyperlink{classLinkedList_ac2f92598858e9ba02af8722fba803c53}{append}(n); \textcolor{comment}{//add to end of list                                                                
+                                                                                                             }
+170 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{classLinkedList_a718246359a2199be67212703be951071_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Linked\+List@{Linked\+List}!insert\+At\+Pos@{insert\+At\+Pos}}
+\index{insert\+At\+Pos@{insert\+At\+Pos}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{insert\+At\+Pos(\+Node$<$ T $>$ $\ast$n, int pos)}{insertAtPos(Node< T > *n, int pos)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Linked\+List}$<$ T $>$\+::insert\+At\+Pos (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{n, }
+\item[{int}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLinkedList_aa7b12c5f9bb22be91012d68c9da0b431}{}\label{classLinkedList_aa7b12c5f9bb22be91012d68c9da0b431}
+
+
+Reimplemented in \hyperlink{classDoubleLinkedList_abd88472eeb1c4904b9e92d712e652d45}{Double\+Linked\+List$<$ T $>$}.
+
+
+\begin{DoxyCode}
+173 \{
+174    \hyperlink{classNode}{Node}* before = NULL;
+175    \hyperlink{classNode}{Node}* after = \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head};
+176    \textcolor{keywordflow}{if}(pos <= \hyperlink{classLinkedList_ae04dbbcae32f8fb03dce3e174854981f}{getNumNode}() && pos > 0) \textcolor{comment}{//if position is in list parameters and the list is not
+       empty                                                                                                         }
+177    \{
+178       \textcolor{keywordflow}{if}(pos == 1) \textcolor{comment}{//if the node should be placed at the beginning of the list                             
+                                                                                                       }
+179          \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head} = n; \textcolor{comment}{//insert node at beginning}
+180       \textcolor{keywordflow}{else}
+181       \{
+182          \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=1; k<pos; k++) \textcolor{comment}{//loop to arrive at the position requested                               
+                                                                                                       }
+183          \{
+184             before = after;
+185             after = after->\hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}();
+186          \}
+187          before->\hyperlink{classNode_a0f69ba4f73cd616755f4ec0ae9fa7f96}{setNext}(n); \textcolor{comment}{//insert node                                                          
+                                                                                                              }
+188       \}
+189       n->\hyperlink{classNode_a0f69ba4f73cd616755f4ec0ae9fa7f96}{setNext}(after);
+190       after = NULL;
+191    \}
+192 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{classLinkedList_aa7b12c5f9bb22be91012d68c9da0b431_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Linked\+List@{Linked\+List}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{is\+Empty() const }{isEmpty() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool {\bf Linked\+List}$<$ T $>$\+::is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classLinkedList_a1b28b1e19e5aa68f3d89352e307928f6}{}\label{classLinkedList_a1b28b1e19e5aa68f3d89352e307928f6}
+
+\begin{DoxyCode}
+143 \{
+144    \textcolor{keywordtype}{bool} empty = \textcolor{keyword}{false};
+145    \textcolor{keywordflow}{if}(\hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head} == NULL) \textcolor{comment}{//is head is NULL, then there is no list of Nodes                                  
+                                                                                                           }
+146       empty = \textcolor{keyword}{true};
+147    \textcolor{keywordflow}{return} empty;
+148 \}
+\end{DoxyCode}
+\index{Linked\+List@{Linked\+List}!selection\+Sort@{selection\+Sort}}
+\index{selection\+Sort@{selection\+Sort}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{selection\+Sort()}{selectionSort()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Linked\+List}$<$ T $>$\+::selection\+Sort (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLinkedList_abd329a83adcec046dc482f7566cf91f4}{}\label{classLinkedList_abd329a83adcec046dc482f7566cf91f4}
+
+\begin{DoxyCode}
+224 \{
+225    \textcolor{keywordflow}{if}(!\hyperlink{classLinkedList_a1b28b1e19e5aa68f3d89352e307928f6}{isEmpty}()) \textcolor{comment}{//checks if there are nodes in the list                                           
+                                                                                                              }
+226    \{
+227       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=\hyperlink{classLinkedList_ae04dbbcae32f8fb03dce3e174854981f}{getNumNode}()-1; k>=0; k--)
+228       \{
+229          \hyperlink{classNode}{Node}* curr = \hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head};
+230          \hyperlink{classNode}{Node}* largest = curr; \textcolor{comment}{//student with name farthest in the alphabet. Default start at head     
+                                                                                                           }
+231          \textcolor{keywordtype}{int} currPos = 1;
+232          \textcolor{keywordtype}{int} largestPos = currPos; \textcolor{comment}{//position of the largest node is defaulted to the first node in the
+       list                                                                                                }
+233          \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0; j<=k; j++)
+234          \{
+235             \textcolor{keywordflow}{if}(curr->getStudent().getLastName().compare(largest->getStudent().getLastName()) > 0) \textcolor{comment}{//if the
+       student is farther down in the alphabet than the largest                                         }
+236             \{
+237                largest = curr; \textcolor{comment}{//that student is the new largest                                           
+                                                                                                       }
+238                largestPos = currPos;
+239             \}
+240             \textcolor{keywordflow}{if}(currPos <= k) \textcolor{comment}{//moves to net node only if currPos is less than or equal to k                
+                                                                                                       }
+241             \{
+242                curr = curr->\hyperlink{classNode_af8f2d178f274dd254e6e1965971f0fd0}{getNext}(); \textcolor{comment}{//go to the next node                                        
+                                                                                                              }
+243                currPos++;
+244             \}
+245          \}
+246          \textcolor{keywordflow}{if}((largestPos != currPos) && (currPos != 1)) \textcolor{comment}{//if the largest node is not the last node          
+                                                                                                       }
+247             \hyperlink{classLinkedList_adea39e4b5d8f3fcb608c11f7746790ed}{swap}(largest, curr, largestPos, currPos); \textcolor{comment}{//swaps the largest node with the last node      
+                                                                                                           }
+248       \}
+249    \}
+250 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{classLinkedList_abd329a83adcec046dc482f7566cf91f4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Linked\+List@{Linked\+List}!swap@{swap}}
+\index{swap@{swap}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{swap(\+Node$<$ T $>$ $\ast$\&f, Node$<$ T $>$ $\ast$\&l, int f\+Pos, int l\+Pos)}{swap(Node< T > *&f, Node< T > *&l, int fPos, int lPos)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Linked\+List}$<$ T $>$\+::swap (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$\&}]{f, }
+\item[{{\bf Node}$<$ T $>$ $\ast$\&}]{l, }
+\item[{int}]{f\+Pos, }
+\item[{int}]{l\+Pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classLinkedList_adea39e4b5d8f3fcb608c11f7746790ed}{}\label{classLinkedList_adea39e4b5d8f3fcb608c11f7746790ed}
+
+\begin{DoxyCode}
+253 \{
+254    \hyperlink{classNode}{Node}* fTemp = \textcolor{keyword}{new} \hyperlink{classNode_a0ac1d44cfe588be564acf25485029bd8}{Node}(*f); \textcolor{comment}{//create new nodes that are identical to the ones being swapped     
+                                                                                                               }
+255    \hyperlink{classNode}{Node}* lTemp = \textcolor{keyword}{new} \hyperlink{classNode_a0ac1d44cfe588be564acf25485029bd8}{Node}(*l);
+256 
+257    \hyperlink{classLinkedList_a62a89a30509d38b88c75177b8efa9a98}{deleteAtPos}(fPos); \textcolor{comment}{//deletes first of the two nodes                                          
+                                                                                                                  }
+258    \hyperlink{classLinkedList_aa7b12c5f9bb22be91012d68c9da0b431}{insertAtPos}(lTemp, fPos); \textcolor{comment}{//places copied node in that position                              
+                                                                                                                  }
+259    \hyperlink{classLinkedList_a62a89a30509d38b88c75177b8efa9a98}{deleteAtPos}(lPos); \textcolor{comment}{//deletes second node                                                     
+                                                                                                                  }
+260    \textcolor{keywordflow}{if}(lPos > \hyperlink{classLinkedList_ae04dbbcae32f8fb03dce3e174854981f}{getNumNode}()) \textcolor{comment}{//if one of the nodes was the last node in the list, append the node  
+                                                                                                                 }
+261       \hyperlink{classLinkedList_ac2f92598858e9ba02af8722fba803c53}{append}(fTemp);
+262    \textcolor{keywordflow}{else}
+263       \hyperlink{classLinkedList_aa7b12c5f9bb22be91012d68c9da0b431}{insertAtPos}(fTemp, lPos); \textcolor{comment}{//insert node at the position in the list                       
+                                                                                                                  }
+264 
+265    f = lTemp; \textcolor{comment}{//swap the pointers that were passed by reference                                            
+                                                                                                       }
+266    l = fTemp;
+267 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Linked\+List@{Linked\+List}!head@{head}}
+\index{head@{head}!Linked\+List@{Linked\+List}}
+\subsubsection[{\texorpdfstring{head}{head}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Node}$<$T$>$$\ast$ {\bf Linked\+List}$<$ T $>$\+::head\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{}\label{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{LinkedList_8h}{Linked\+List.\+h}\item 
+\hyperlink{LinkedList_8cpp}{Linked\+List.\+cpp}\end{DoxyCompactItemize}

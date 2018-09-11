@@ -1,0 +1,87 @@
+\hypertarget{HWK10__main_8c}{}\section{H\+W\+K10\+\_\+main.\+c File Reference}
+\label{HWK10__main_8c}\index{H\+W\+K10\+\_\+main.\+c@{H\+W\+K10\+\_\+main.\+c}}
+{\ttfamily \#include \char`\"{}H\+W\+K10\+\_\+stringarray.\+h\char`\"{}}\\*
+Include dependency graph for H\+W\+K10\+\_\+main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{HWK10__main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{HWK10__main_8c_a78d344caabde729a4559393a0552bf1c}{A\+R\+R\+A\+Y\+S\+I\+ZE}~2000
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{HWK10__main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{H\+W\+K10\+\_\+main.\+c@{H\+W\+K10\+\_\+main.\+c}!A\+R\+R\+A\+Y\+S\+I\+ZE@{A\+R\+R\+A\+Y\+S\+I\+ZE}}
+\index{A\+R\+R\+A\+Y\+S\+I\+ZE@{A\+R\+R\+A\+Y\+S\+I\+ZE}!H\+W\+K10\+\_\+main.\+c@{H\+W\+K10\+\_\+main.\+c}}
+\subsubsection[{\texorpdfstring{A\+R\+R\+A\+Y\+S\+I\+ZE}{ARRAYSIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+R\+R\+A\+Y\+S\+I\+ZE~2000}\hypertarget{HWK10__main_8c_a78d344caabde729a4559393a0552bf1c}{}\label{HWK10__main_8c_a78d344caabde729a4559393a0552bf1c}
+
+
+\subsection{Function Documentation}
+\index{H\+W\+K10\+\_\+main.\+c@{H\+W\+K10\+\_\+main.\+c}!main@{main}}
+\index{main@{main}!H\+W\+K10\+\_\+main.\+c@{H\+W\+K10\+\_\+main.\+c}}
+\subsubsection[{\texorpdfstring{main(void)}{main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{HWK10__main_8c_a840291bc02cba5474a4cb46a9b9566fe}{}\label{HWK10__main_8c_a840291bc02cba5474a4cb46a9b9566fe}
+
+\begin{DoxyCode}
+10               \{
+11   \textcolor{keywordtype}{int} n;
+12   \hyperlink{HWK10__stringarray_8h_a9e38333c54335607829268149cf3855a}{linetype} linearray[\hyperlink{HWK10__main_8c_a78d344caabde729a4559393a0552bf1c}{ARRAYSIZE}];
+13   \hyperlink{HWK10__stringarray_8h_a9e38333c54335607829268149cf3855a}{linetype} who;
+14   \textcolor{keywordtype}{int} where;
+15   FILE *fdw;  \textcolor{comment}{/* FILE descriptor used for "who.dat" */}
+16   FILE *fda;  \textcolor{comment}{/* File descriptor used for "answers.dat" */}
+17   
+18   \textcolor{comment}{/* Read unsorted.dat into linearray and return number of lines read */}
+19   n = \hyperlink{HWK10__stringarray_8c_ae87b96e9c69a38ef44d8915a2a76a2d6}{getStringArray}(\textcolor{stringliteral}{"unsorted.dat"}, linearray, \hyperlink{HWK10__main_8c_a78d344caabde729a4559393a0552bf1c}{ARRAYSIZE});
+20   \textcolor{keywordflow}{if} (n==0)\{
+21     printf(\textcolor{stringliteral}{"The unsorted.dat file is empty. Good bye.\(\backslash\)n"});
+22     exit(0);
+23   \}
+24   \textcolor{comment}{/* Sort the first n lines of linearray */}
+25   \hyperlink{HWK10__stringarray_8c_ac29b7bb6177ffab2b99341426b422b03}{stringBubble}(linearray,n);
+26   \textcolor{comment}{/* Save the sorted array to sorted.dat */}
+27   \hyperlink{HWK10__stringarray_8c_a15bea2142e99a70219bb49e6ff400f9d}{writeStringArray}(\textcolor{stringliteral}{"sorted.dat"},linearray,n);
+28   \textcolor{comment}{/* Open for reading who.dat */}
+29   \textcolor{keywordflow}{if}((fdw=fopen(\textcolor{stringliteral}{"who.dat"},\textcolor{stringliteral}{"r"}))==NULL)\{
+30     perror(\textcolor{stringliteral}{"fopen"});
+31     exit(1);
+32   \}
+33   \textcolor{comment}{/* Open for writing answers.dat */}
+34   \textcolor{keywordflow}{if}((fda=fopen(\textcolor{stringliteral}{"answers.dat"},\textcolor{stringliteral}{"w"}))==NULL)\{
+35     perror(\textcolor{stringliteral}{"fopen"});
+36     exit(1);
+37   \}
+38   \textcolor{keywordflow}{while} (\hyperlink{HWK10__stringarray_8c_afe9546ca2b716582998ebfac1ca6ff99}{getlineX}(fdw,who,\hyperlink{HWK10__stringarray_8h_a0095c1e0ae26941efea12c77f2232f2f}{LINESIZE}-1)!=EOF)\{   \textcolor{comment}{/* Read a line from "who.dat" */}
+39     where = \hyperlink{HWK10__stringarray_8c_a594e6934fc18035c2a074fa079a50515}{stringBinary}(linearray,n,who);    \textcolor{comment}{/* See where it is in table */}
+40     fprintf(fda,\textcolor{stringliteral}{"%d\(\backslash\)n"},where);            \textcolor{comment}{/* Write position to "answer.dat*/}
+41   \}
+42   fclose(fdw);
+43   fclose(fda);
+44 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{HWK10__main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}
+
+

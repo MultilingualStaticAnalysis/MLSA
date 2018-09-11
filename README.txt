@@ -46,20 +46,83 @@ Next, cd to the test folder. All calls to testcode.py will automatically diff th
 
 
 If you get no differences reported for all these, then your MLSA installation is operating correctly and you can go ahead and use MLSA! 
+A good place to start is with the mlcg.py program in bin. This program will invoke the multilingual call graph pipeline on the programs and/or folders you give it as argument. For example, in the MLSA mlsa/test folder if you type:
 
-A good place to start is with the mlcg.py program in bin. This program will invoke the multilingual call graph pipeline on the programs and/or folders you give it as argument. For example, in the MLSA mlsa/test/test0 folder if you type:
-
-	mlcg.py
+	mlcg.py test0
 
 Then the multlingual pipeline is called for all the (C/C++, Python or Javascript) programs in test0 and a single call graph generated. Procedure calling between files in the same and different languages will be identified (for the limited set of interoperability calls that have been implemented) and the call graph will reflect this, but programs with no procedure calls in common are fine too. The resulting call graph is a forest of trees. Recursion is flagged after one full cycle and several other kind of interlanguage calls are flagged also.
-
-To run a dependency analysis and create a dependency graph, just cd into the folder that you want to run the analysis on and type:
-
-	mldg.py
-
-This command can easily be run on any of the test folders in mlsa by cd-ing into mlsa/test/test[0-5] and typing the command. You can change the target Interoperability API's printed out in the metrics/target_files.txt file
-
 To get deeper into MLSA you will need to know more about the individual filter programs and pipelines that have been implemented. You can also build new pipelines or add new filters.
+
+-------------------------------------
+-------------------------------------
+MLSA Open Source Static Analysis Tools
+
+Call Graph Tools
+
+- generate monolingual call graphs for Python, Javascript and C/C++ (and some Objective C/C++)
+  static analysis but with the ability to handle some dynamic dispatch such as iterators etc.
+
+- Scans individual files or folders
+
+- Based on flexible, Island Grammar specification that processes compiler AST output, so its robust to
+  changes in the AST format with new compiler versions and relatively easy to change (only the grammar changes).
+  Currently uses Clang, SpiderMoney and Python ast for input.
+  
+- output in CSV tabular format for easy processing by other modules, with utilities to generate graph output
+
+- interoperability filter programs for C/C++ calls Python, Python calls JavaScript and JavaScript calls Python
+  that process the monolingual tabular data from multiple monolingual/multilingual files and generates the
+  composite call graph fromall files or composite multilingual call graph.
+
+Control Flow Analysis Tools
+
+- generates monolingual control flow information by processing compiler AST and generating control flow at 
+  the statement level (more accurate than the line number level)
+
+- output in CSV tabular format for easy processing by other modules
+
+- Written as a two pass process, where the first pass is language dependent and the second is language independent.
+  Designed to work with Python, Javascript and C/C++ but only C/C++ and Javascript have been tested
+
+Assignment Collection Tools
+
+- scans monolingual files and collected all variable assignment statements at the statement level (more accurate 
+  than the line number level). 
+
+- does some simple static evaluation for assignments to constant numbers and strings. Is written to allow integration of
+  a more sophisticated static evaluation module.
+
+- Designed to work with Python, Javascript and C/C++ but only the C/C++ and JavaScript have been implemented and tested.
+
+- output in CSV tabular format for easy processing by other modules
+
+Reaching Definitions Tools
+
+- Uses the information from Control flow analysis and Assignment collection to do a Reaching Definitions Analysis
+  for all variables using a worklist algorithm (Nielsen et al 1999). 
+
+- Handles both interprocedure and intraprocedure flows
+
+- output is statement ID of last assignment for every variable, or if the last assignment was to a constant, then that value
+
+- Output in CSV tabular format for easy processing by other modules
+
+Dependencies Tools
+
+- scans folders and generates dependency graph information for multilingual codebases
+
+- handles C/C++ includes, Python imports and JavaScript import and require
+
+- based on a flexible, Island Grammar specification that processes source code directly and
+  is relatively easy to update (only the grammar changes).
+
+- output in CSV tabular format for easy processing by other modules, with utilities to generate graph output
+
+- also generates statistics about file types and numbers, degree of inclusion etc.
+
+
+
+
 
 Fordham University Multilingual Software Analysis Research Group 
 

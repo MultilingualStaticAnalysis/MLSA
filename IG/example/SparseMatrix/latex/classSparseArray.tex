@@ -1,0 +1,154 @@
+\hypertarget{classSparseArray}{}\section{Sparse\+Array Class Reference}
+\label{classSparseArray}\index{Sparse\+Array@{Sparse\+Array}}
+
+
+Collaboration diagram for Sparse\+Array\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classSparseArray__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSparseArray_a5c8fafe693c3954efcd607026fa97beb}{Sparse\+Array} (int \hyperlink{classSparseArray_af5a1db82e35f728926e98d3301a29130}{index})
+\item 
+void \hyperlink{classSparseArray_a9950c0e59ecf391266e1031863b18984}{store} (int \hyperlink{classSparseArray_af5a1db82e35f728926e98d3301a29130}{index}, int value)
+\item 
+int \hyperlink{classSparseArray_a818714dcef93b33775bdca60b99e97d7}{fetch} (int \hyperlink{classSparseArray_af5a1db82e35f728926e98d3301a29130}{index})
+\item 
+int \hyperlink{classSparseArray_a73aa431df6e8d5dfeea682d9e2016acd}{element\+Count} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classList}{List} $\ast$ \hyperlink{classSparseArray_a57186d34f863d9aeb8fb8b9979db63c5}{start}
+\item 
+int \hyperlink{classSparseArray_af5a1db82e35f728926e98d3301a29130}{index}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Sparse\+Array@{Sparse\+Array}!Sparse\+Array@{Sparse\+Array}}
+\index{Sparse\+Array@{Sparse\+Array}!Sparse\+Array@{Sparse\+Array}}
+\subsubsection[{\texorpdfstring{Sparse\+Array(int index)}{SparseArray(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}Sparse\+Array\+::\+Sparse\+Array (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSparseArray_a5c8fafe693c3954efcd607026fa97beb}{}\label{classSparseArray_a5c8fafe693c3954efcd607026fa97beb}
+
+\begin{DoxyCode}
+99         \{
+100             \hyperlink{classSparseArray_a57186d34f863d9aeb8fb8b9979db63c5}{start} = \textcolor{keyword}{new} \hyperlink{classList}{List}();
+101             this->\hyperlink{classSparseArray_af5a1db82e35f728926e98d3301a29130}{index} = \hyperlink{classSparseArray_af5a1db82e35f728926e98d3301a29130}{index};
+102         \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Sparse\+Array@{Sparse\+Array}!element\+Count@{element\+Count}}
+\index{element\+Count@{element\+Count}!Sparse\+Array@{Sparse\+Array}}
+\subsubsection[{\texorpdfstring{element\+Count()}{elementCount()}}]{\setlength{\rightskip}{0pt plus 5cm}int Sparse\+Array\+::element\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSparseArray_a73aa431df6e8d5dfeea682d9e2016acd}{}\label{classSparseArray_a73aa431df6e8d5dfeea682d9e2016acd}
+
+\begin{DoxyCode}
+126         \{
+127             \textcolor{keywordflow}{return} \hyperlink{classSparseArray_a57186d34f863d9aeb8fb8b9979db63c5}{start}->\hyperlink{classList_a5ee9aff9e61a566f7ce0ac9c6153cda5}{elementCount}();
+128         \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSparseArray_a73aa431df6e8d5dfeea682d9e2016acd_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sparse\+Array@{Sparse\+Array}!fetch@{fetch}}
+\index{fetch@{fetch}!Sparse\+Array@{Sparse\+Array}}
+\subsubsection[{\texorpdfstring{fetch(int index)}{fetch(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}int Sparse\+Array\+::fetch (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSparseArray_a818714dcef93b33775bdca60b99e97d7}{}\label{classSparseArray_a818714dcef93b33775bdca60b99e97d7}
+
+\begin{DoxyCode}
+116         \{
+117             \textcolor{keywordflow}{if} (\hyperlink{classSparseArray_af5a1db82e35f728926e98d3301a29130}{index} >= 0 && index < this->\hyperlink{classSparseArray_af5a1db82e35f728926e98d3301a29130}{index})
+118                 \textcolor{keywordflow}{return} \hyperlink{classSparseArray_a57186d34f863d9aeb8fb8b9979db63c5}{start}->\hyperlink{classList_a7c24ac131f6731a4909424cde96064d0}{fetch}(index);
+119             \textcolor{keywordflow}{else} 
+120             \{
+121                 cout<<\textcolor{stringliteral}{"INDEX OUT OF BOUNDS"}<<endl;
+122                 \textcolor{keywordflow}{return} NULL;
+123             \}
+124         \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{classSparseArray_a818714dcef93b33775bdca60b99e97d7_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sparse\+Array@{Sparse\+Array}!store@{store}}
+\index{store@{store}!Sparse\+Array@{Sparse\+Array}}
+\subsubsection[{\texorpdfstring{store(int index, int value)}{store(int index, int value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sparse\+Array\+::store (
+\begin{DoxyParamCaption}
+\item[{int}]{index, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSparseArray_a9950c0e59ecf391266e1031863b18984}{}\label{classSparseArray_a9950c0e59ecf391266e1031863b18984}
+
+\begin{DoxyCode}
+104         \{
+105             \textcolor{keywordflow}{if} (\hyperlink{classSparseArray_af5a1db82e35f728926e98d3301a29130}{index} >= 0 && index < this->\hyperlink{classSparseArray_af5a1db82e35f728926e98d3301a29130}{index})
+106             \{
+107                 \textcolor{keywordflow}{if} (value != NULL)
+108                     \hyperlink{classSparseArray_a57186d34f863d9aeb8fb8b9979db63c5}{start}->\hyperlink{classList_ae769414aa9a0fc3374df51f3b787c5e9}{store}(index, value);
+109             \} 
+110             \textcolor{keywordflow}{else}
+111             \{
+112                 cout<<\textcolor{stringliteral}{"INDEX OUT OF BOUNDS"}<<endl;
+113             \}
+114         \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{classSparseArray_a9950c0e59ecf391266e1031863b18984_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Sparse\+Array@{Sparse\+Array}!index@{index}}
+\index{index@{index}!Sparse\+Array@{Sparse\+Array}}
+\subsubsection[{\texorpdfstring{index}{index}}]{\setlength{\rightskip}{0pt plus 5cm}int Sparse\+Array\+::index\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSparseArray_af5a1db82e35f728926e98d3301a29130}{}\label{classSparseArray_af5a1db82e35f728926e98d3301a29130}
+\index{Sparse\+Array@{Sparse\+Array}!start@{start}}
+\index{start@{start}!Sparse\+Array@{Sparse\+Array}}
+\subsubsection[{\texorpdfstring{start}{start}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List}$\ast$ Sparse\+Array\+::start\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSparseArray_a57186d34f863d9aeb8fb8b9979db63c5}{}\label{classSparseArray_a57186d34f863d9aeb8fb8b9979db63c5}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{SparseMatrix_8cpp}{Sparse\+Matrix.\+cpp}\end{DoxyCompactItemize}

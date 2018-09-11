@@ -1,0 +1,15 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/SegmentedSieve Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/SegmentedSieve Call Graph"
+	];
+
+	Node0x203997411 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/SegmentedSieve/SegmentedSieve.cpp"];
+	Node0x342618785 [shape=oval, label="0x2e0e218. (/home/labaccount/11-2-17/mlsa/IG/example/SegmentedSieve/SegmentedSieve.cpp)\nsieve()"];
+	Node0x203997411 -> Node0x342618785;
+	Node0x237359746 [shape=oval, label="0x2e10ce0. (/home/labaccount/11-2-17/mlsa/IG/example/SegmentedSieve/SegmentedSieve.cpp)\nsegmented_sieve(a, b)"];
+	Node0x203997411 -> Node0x237359746;
+	Node0x980185305 [shape=oval, label="0x2e0c690. (/home/labaccount/11-2-17/mlsa/IG/example/SegmentedSieve/SegmentedSieve.cpp)\nmemset(segment, 0, segment)"];
+	Node0x237359746 -> Node0x980185305;
+}

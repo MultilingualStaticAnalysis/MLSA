@@ -1,0 +1,137 @@
+\hypertarget{classStatisticBoard}{}\section{Statistic\+Board Class Reference}
+\label{classStatisticBoard}\index{Statistic\+Board@{Statistic\+Board}}
+
+
+Inheritance diagram for Statistic\+Board\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classStatisticBoard__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Statistic\+Board\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatisticBoard__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classStatisticBoard_aec1eb00966e7d219ac20a97f0810bc93}{Statistic\+Board} (\hyperlink{classParaWeatherData}{Para\+Weather\+Data} \&a)
+\item 
+void \hyperlink{classStatisticBoard_a6594f0aac96b441cc8b6c1db1633df55}{show} ()
+\item 
+void \hyperlink{classStatisticBoard_a9798b65093467a16cd52b2b6f813dbed}{update} (float h, float t, float p)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classStatisticBoard_ae44658877f1ef0413ab0212671de455a}{m\+\_\+maxt}
+\item 
+float \hyperlink{classStatisticBoard_a7d8f109c876c413a035c356e19f59b6f}{m\+\_\+mint}
+\item 
+float \hyperlink{classStatisticBoard_a942352228021cc8ab83848ffd2c2e92e}{m\+\_\+avet}
+\item 
+int \hyperlink{classStatisticBoard_ad08df42fbc4bfd6a738d70c7bb275d27}{m\+\_\+count}
+\item 
+\hyperlink{classParaWeatherData}{Para\+Weather\+Data} \& \hyperlink{classStatisticBoard_a53d2b170ec3d9127fe13bd9d3cc751d7}{m\+\_\+data}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Statistic\+Board@{Statistic\+Board}!Statistic\+Board@{Statistic\+Board}}
+\index{Statistic\+Board@{Statistic\+Board}!Statistic\+Board@{Statistic\+Board}}
+\subsubsection[{\texorpdfstring{Statistic\+Board(\+Para\+Weather\+Data \&a)}{StatisticBoard(ParaWeatherData &a)}}]{\setlength{\rightskip}{0pt plus 5cm}Statistic\+Board\+::\+Statistic\+Board (
+\begin{DoxyParamCaption}
+\item[{{\bf Para\+Weather\+Data} \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classStatisticBoard_aec1eb00966e7d219ac20a97f0810bc93}{}\label{classStatisticBoard_aec1eb00966e7d219ac20a97f0810bc93}
+
+\begin{DoxyCode}
+104                                       :\hyperlink{classStatisticBoard_ae44658877f1ef0413ab0212671de455a}{m\_maxt}(-1000),\hyperlink{classStatisticBoard_a7d8f109c876c413a035c356e19f59b6f}{m\_mint}(1000),
+      \hyperlink{classStatisticBoard_a942352228021cc8ab83848ffd2c2e92e}{m\_avet}(0),\hyperlink{classStatisticBoard_ad08df42fbc4bfd6a738d70c7bb275d27}{m\_count}(0),\hyperlink{classStatisticBoard_a53d2b170ec3d9127fe13bd9d3cc751d7}{m\_data}(a)
+105     \{
+106         \hyperlink{classStatisticBoard_a53d2b170ec3d9127fe13bd9d3cc751d7}{m\_data}.\hyperlink{classParaWeatherData_a97816831a5acc55f92e1ef3712d1ab37}{registerOb}(\textcolor{keyword}{this});
+107     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Statistic\+Board@{Statistic\+Board}!show@{show}}
+\index{show@{show}!Statistic\+Board@{Statistic\+Board}}
+\subsubsection[{\texorpdfstring{show()}{show()}}]{\setlength{\rightskip}{0pt plus 5cm}void Statistic\+Board\+::show (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classStatisticBoard_a6594f0aac96b441cc8b6c1db1633df55}{}\label{classStatisticBoard_a6594f0aac96b441cc8b6c1db1633df55}
+
+
+Implements \hyperlink{classDisplayBoardInterface_a6a7a21b34415a4b92d290752c75e6f15}{Display\+Board\+Interface}.
+
+
+\begin{DoxyCode}
+110     \{
+111         cout<<\textcolor{stringliteral}{"\_\_\_\_\_\_\_\_StatisticBoard\_\_\_\_\_\_\_\_\_"}<<endl;
+112         cout<<\textcolor{stringliteral}{"lowest  temperature: "}<<\hyperlink{classStatisticBoard_a7d8f109c876c413a035c356e19f59b6f}{m\_mint}<<endl;
+113         cout<<\textcolor{stringliteral}{"highest temperature: "}<<\hyperlink{classStatisticBoard_ae44658877f1ef0413ab0212671de455a}{m\_maxt}<<endl;
+114         cout<<\textcolor{stringliteral}{"average temperature: "}<<\hyperlink{classStatisticBoard_a942352228021cc8ab83848ffd2c2e92e}{m\_avet}<<endl;
+115         cout<<\textcolor{stringliteral}{"\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_"}<<endl;
+116     \}
+\end{DoxyCode}
+\index{Statistic\+Board@{Statistic\+Board}!update@{update}}
+\index{update@{update}!Statistic\+Board@{Statistic\+Board}}
+\subsubsection[{\texorpdfstring{update(float h, float t, float p)}{update(float h, float t, float p)}}]{\setlength{\rightskip}{0pt plus 5cm}void Statistic\+Board\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{h, }
+\item[{float}]{t, }
+\item[{float}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classStatisticBoard_a9798b65093467a16cd52b2b6f813dbed}{}\label{classStatisticBoard_a9798b65093467a16cd52b2b6f813dbed}
+
+
+Implements \hyperlink{classObserverBoardInterface_ae480934d1ef4e49ed6d862ea9f926573}{Observer\+Board\+Interface}.
+
+
+\begin{DoxyCode}
+119     \{
+120         ++\hyperlink{classStatisticBoard_ad08df42fbc4bfd6a738d70c7bb275d27}{m\_count};
+121         \textcolor{keywordflow}{if} (t>\hyperlink{classStatisticBoard_ae44658877f1ef0413ab0212671de455a}{m\_maxt})
+122         \{
+123             \hyperlink{classStatisticBoard_ae44658877f1ef0413ab0212671de455a}{m\_maxt} = t;
+124         \}
+125         \textcolor{keywordflow}{if} (t<\hyperlink{classStatisticBoard_a7d8f109c876c413a035c356e19f59b6f}{m\_mint})
+126         \{
+127             \hyperlink{classStatisticBoard_a7d8f109c876c413a035c356e19f59b6f}{m\_mint} = t;
+128         \}
+129         \hyperlink{classStatisticBoard_a942352228021cc8ab83848ffd2c2e92e}{m\_avet} = (\hyperlink{classStatisticBoard_a942352228021cc8ab83848ffd2c2e92e}{m\_avet} * (\hyperlink{classStatisticBoard_ad08df42fbc4bfd6a738d70c7bb275d27}{m\_count}-1) + t)/\hyperlink{classStatisticBoard_ad08df42fbc4bfd6a738d70c7bb275d27}{m\_count};
+130     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Statistic\+Board@{Statistic\+Board}!m\+\_\+avet@{m\+\_\+avet}}
+\index{m\+\_\+avet@{m\+\_\+avet}!Statistic\+Board@{Statistic\+Board}}
+\subsubsection[{\texorpdfstring{m\+\_\+avet}{m_avet}}]{\setlength{\rightskip}{0pt plus 5cm}float Statistic\+Board\+::m\+\_\+avet\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classStatisticBoard_a942352228021cc8ab83848ffd2c2e92e}{}\label{classStatisticBoard_a942352228021cc8ab83848ffd2c2e92e}
+\index{Statistic\+Board@{Statistic\+Board}!m\+\_\+count@{m\+\_\+count}}
+\index{m\+\_\+count@{m\+\_\+count}!Statistic\+Board@{Statistic\+Board}}
+\subsubsection[{\texorpdfstring{m\+\_\+count}{m_count}}]{\setlength{\rightskip}{0pt plus 5cm}int Statistic\+Board\+::m\+\_\+count\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classStatisticBoard_ad08df42fbc4bfd6a738d70c7bb275d27}{}\label{classStatisticBoard_ad08df42fbc4bfd6a738d70c7bb275d27}
+\index{Statistic\+Board@{Statistic\+Board}!m\+\_\+data@{m\+\_\+data}}
+\index{m\+\_\+data@{m\+\_\+data}!Statistic\+Board@{Statistic\+Board}}
+\subsubsection[{\texorpdfstring{m\+\_\+data}{m_data}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Para\+Weather\+Data}\& Statistic\+Board\+::m\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classStatisticBoard_a53d2b170ec3d9127fe13bd9d3cc751d7}{}\label{classStatisticBoard_a53d2b170ec3d9127fe13bd9d3cc751d7}
+\index{Statistic\+Board@{Statistic\+Board}!m\+\_\+maxt@{m\+\_\+maxt}}
+\index{m\+\_\+maxt@{m\+\_\+maxt}!Statistic\+Board@{Statistic\+Board}}
+\subsubsection[{\texorpdfstring{m\+\_\+maxt}{m_maxt}}]{\setlength{\rightskip}{0pt plus 5cm}float Statistic\+Board\+::m\+\_\+maxt\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classStatisticBoard_ae44658877f1ef0413ab0212671de455a}{}\label{classStatisticBoard_ae44658877f1ef0413ab0212671de455a}
+\index{Statistic\+Board@{Statistic\+Board}!m\+\_\+mint@{m\+\_\+mint}}
+\index{m\+\_\+mint@{m\+\_\+mint}!Statistic\+Board@{Statistic\+Board}}
+\subsubsection[{\texorpdfstring{m\+\_\+mint}{m_mint}}]{\setlength{\rightskip}{0pt plus 5cm}float Statistic\+Board\+::m\+\_\+mint\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classStatisticBoard_a7d8f109c876c413a035c356e19f59b6f}{}\label{classStatisticBoard_a7d8f109c876c413a035c356e19f59b6f}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Observer_8cpp}{Observer.\+cpp}\end{DoxyCompactItemize}

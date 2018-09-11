@@ -1,0 +1,124 @@
+\hypertarget{classCurrentConditionBoard}{}\section{Current\+Condition\+Board Class Reference}
+\label{classCurrentConditionBoard}\index{Current\+Condition\+Board@{Current\+Condition\+Board}}
+
+
+Inheritance diagram for Current\+Condition\+Board\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classCurrentConditionBoard__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Current\+Condition\+Board\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCurrentConditionBoard__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCurrentConditionBoard_ae25ee112ee83575673b3e4f8448f1da7}{Current\+Condition\+Board} (\hyperlink{classParaWeatherData}{Para\+Weather\+Data} \&a)
+\item 
+void \hyperlink{classCurrentConditionBoard_a5cd2077415a0e7019c15bc0f28cfb7fe}{show} ()
+\item 
+void \hyperlink{classCurrentConditionBoard_a3d7bea56331de46f30db9e93f8f2c7d3}{update} (float h, float t, float p)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classCurrentConditionBoard_a0fb59476afc70b786750c2b0e87ced7a}{m\+\_\+h}
+\item 
+float \hyperlink{classCurrentConditionBoard_a443f62d33750e33fc12554c084b57c7f}{m\+\_\+t}
+\item 
+float \hyperlink{classCurrentConditionBoard_ab36a854fdba3f5b6fc30624bdefa18f3}{m\+\_\+p}
+\item 
+\hyperlink{classParaWeatherData}{Para\+Weather\+Data} \& \hyperlink{classCurrentConditionBoard_abb74e202395a04791f3526d2bab123dd}{m\+\_\+data}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Current\+Condition\+Board@{Current\+Condition\+Board}!Current\+Condition\+Board@{Current\+Condition\+Board}}
+\index{Current\+Condition\+Board@{Current\+Condition\+Board}!Current\+Condition\+Board@{Current\+Condition\+Board}}
+\subsubsection[{\texorpdfstring{Current\+Condition\+Board(\+Para\+Weather\+Data \&a)}{CurrentConditionBoard(ParaWeatherData &a)}}]{\setlength{\rightskip}{0pt plus 5cm}Current\+Condition\+Board\+::\+Current\+Condition\+Board (
+\begin{DoxyParamCaption}
+\item[{{\bf Para\+Weather\+Data} \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCurrentConditionBoard_ae25ee112ee83575673b3e4f8448f1da7}{}\label{classCurrentConditionBoard_ae25ee112ee83575673b3e4f8448f1da7}
+
+\begin{DoxyCode}
+73                                              :\hyperlink{classCurrentConditionBoard_abb74e202395a04791f3526d2bab123dd}{m\_data}(a)
+74     \{
+75         \hyperlink{classCurrentConditionBoard_abb74e202395a04791f3526d2bab123dd}{m\_data}.\hyperlink{classParaWeatherData_a97816831a5acc55f92e1ef3712d1ab37}{registerOb}(\textcolor{keyword}{this});
+76     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Current\+Condition\+Board@{Current\+Condition\+Board}!show@{show}}
+\index{show@{show}!Current\+Condition\+Board@{Current\+Condition\+Board}}
+\subsubsection[{\texorpdfstring{show()}{show()}}]{\setlength{\rightskip}{0pt plus 5cm}void Current\+Condition\+Board\+::show (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classCurrentConditionBoard_a5cd2077415a0e7019c15bc0f28cfb7fe}{}\label{classCurrentConditionBoard_a5cd2077415a0e7019c15bc0f28cfb7fe}
+
+
+Implements \hyperlink{classDisplayBoardInterface_a6a7a21b34415a4b92d290752c75e6f15}{Display\+Board\+Interface}.
+
+
+\begin{DoxyCode}
+78     \{
+79         cout<<\textcolor{stringliteral}{"\_\_\_\_\_CurrentConditionBoard\_\_\_\_\_"}<<endl;
+80         cout<<\textcolor{stringliteral}{"humidity: "}<<\hyperlink{classCurrentConditionBoard_a0fb59476afc70b786750c2b0e87ced7a}{m\_h}<<endl;
+81         cout<<\textcolor{stringliteral}{"temperature: "}<<\hyperlink{classCurrentConditionBoard_a443f62d33750e33fc12554c084b57c7f}{m\_t}<<endl;
+82         cout<<\textcolor{stringliteral}{"pressure: "}<<\hyperlink{classCurrentConditionBoard_ab36a854fdba3f5b6fc30624bdefa18f3}{m\_p}<<endl;
+83         cout<<\textcolor{stringliteral}{"\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_"}<<endl;
+84     \}
+\end{DoxyCode}
+\index{Current\+Condition\+Board@{Current\+Condition\+Board}!update@{update}}
+\index{update@{update}!Current\+Condition\+Board@{Current\+Condition\+Board}}
+\subsubsection[{\texorpdfstring{update(float h, float t, float p)}{update(float h, float t, float p)}}]{\setlength{\rightskip}{0pt plus 5cm}void Current\+Condition\+Board\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{h, }
+\item[{float}]{t, }
+\item[{float}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classCurrentConditionBoard_a3d7bea56331de46f30db9e93f8f2c7d3}{}\label{classCurrentConditionBoard_a3d7bea56331de46f30db9e93f8f2c7d3}
+
+
+Implements \hyperlink{classObserverBoardInterface_ae480934d1ef4e49ed6d862ea9f926573}{Observer\+Board\+Interface}.
+
+
+\begin{DoxyCode}
+87     \{
+88         \hyperlink{classCurrentConditionBoard_a0fb59476afc70b786750c2b0e87ced7a}{m\_h} = h;
+89         \hyperlink{classCurrentConditionBoard_a443f62d33750e33fc12554c084b57c7f}{m\_t} = t;
+90         \hyperlink{classCurrentConditionBoard_ab36a854fdba3f5b6fc30624bdefa18f3}{m\_p} = p;
+91     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Current\+Condition\+Board@{Current\+Condition\+Board}!m\+\_\+data@{m\+\_\+data}}
+\index{m\+\_\+data@{m\+\_\+data}!Current\+Condition\+Board@{Current\+Condition\+Board}}
+\subsubsection[{\texorpdfstring{m\+\_\+data}{m_data}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Para\+Weather\+Data}\& Current\+Condition\+Board\+::m\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCurrentConditionBoard_abb74e202395a04791f3526d2bab123dd}{}\label{classCurrentConditionBoard_abb74e202395a04791f3526d2bab123dd}
+\index{Current\+Condition\+Board@{Current\+Condition\+Board}!m\+\_\+h@{m\+\_\+h}}
+\index{m\+\_\+h@{m\+\_\+h}!Current\+Condition\+Board@{Current\+Condition\+Board}}
+\subsubsection[{\texorpdfstring{m\+\_\+h}{m_h}}]{\setlength{\rightskip}{0pt plus 5cm}float Current\+Condition\+Board\+::m\+\_\+h\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCurrentConditionBoard_a0fb59476afc70b786750c2b0e87ced7a}{}\label{classCurrentConditionBoard_a0fb59476afc70b786750c2b0e87ced7a}
+\index{Current\+Condition\+Board@{Current\+Condition\+Board}!m\+\_\+p@{m\+\_\+p}}
+\index{m\+\_\+p@{m\+\_\+p}!Current\+Condition\+Board@{Current\+Condition\+Board}}
+\subsubsection[{\texorpdfstring{m\+\_\+p}{m_p}}]{\setlength{\rightskip}{0pt plus 5cm}float Current\+Condition\+Board\+::m\+\_\+p\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCurrentConditionBoard_ab36a854fdba3f5b6fc30624bdefa18f3}{}\label{classCurrentConditionBoard_ab36a854fdba3f5b6fc30624bdefa18f3}
+\index{Current\+Condition\+Board@{Current\+Condition\+Board}!m\+\_\+t@{m\+\_\+t}}
+\index{m\+\_\+t@{m\+\_\+t}!Current\+Condition\+Board@{Current\+Condition\+Board}}
+\subsubsection[{\texorpdfstring{m\+\_\+t}{m_t}}]{\setlength{\rightskip}{0pt plus 5cm}float Current\+Condition\+Board\+::m\+\_\+t\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCurrentConditionBoard_a443f62d33750e33fc12554c084b57c7f}{}\label{classCurrentConditionBoard_a443f62d33750e33fc12554c084b57c7f}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Observer_8cpp}{Observer.\+cpp}\end{DoxyCompactItemize}

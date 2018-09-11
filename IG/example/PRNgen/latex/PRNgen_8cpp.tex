@@ -1,0 +1,65 @@
+\hypertarget{PRNgen_8cpp}{}\section{P\+R\+Ngen.\+cpp File Reference}
+\label{PRNgen_8cpp}\index{P\+R\+Ngen.\+cpp@{P\+R\+Ngen.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for P\+R\+Ngen.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{PRNgen_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classmRND}{m\+R\+ND}
+\item 
+class \hyperlink{classMS__RND}{M\+S\+\_\+\+R\+ND}
+\item 
+class \hyperlink{classBSD__RND}{B\+S\+D\+\_\+\+R\+ND}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{PRNgen_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{P\+R\+Ngen.\+cpp@{P\+R\+Ngen.\+cpp}!main@{main}}
+\index{main@{main}!P\+R\+Ngen.\+cpp@{P\+R\+Ngen.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$argv[])}{main(int argc, char *argv[])}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{PRNgen_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{}\label{PRNgen_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+\begin{DoxyCode}
+56 \{
+57     \hyperlink{classBSD__RND}{BSD\_RND} bsd\_rnd;
+58     \hyperlink{classMS__RND}{MS\_RND} ms\_rnd;
+59  
+60     cout << \textcolor{stringliteral}{"MS RAND:"} << endl << \textcolor{stringliteral}{"========"} << endl;
+61     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = 0; x < 10; x++)
+62         cout << ms\_rnd.\hyperlink{classMS__RND_a5a32e10e7fac99adae8961a9ef388af3}{rnd}() << endl;
+63  
+64     cout << endl << \textcolor{stringliteral}{"BSD RAND:"} << endl << \textcolor{stringliteral}{"========="} << endl;
+65     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = 0; x < 10; x++)
+66         cout << bsd\_rnd.\hyperlink{classBSD__RND_ae9e9c4d2fe83f34692f512908d2630c0}{rnd}() << endl;
+67  
+68     \textcolor{keywordflow}{return} 0;
+69 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{PRNgen_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+
+

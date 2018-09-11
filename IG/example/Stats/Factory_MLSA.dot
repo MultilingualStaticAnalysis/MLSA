@@ -1,0 +1,27 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/Factory Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/Factory Call Graph"
+	];
+
+	Node0x171116415 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/Factory/Factory.cpp"];
+	Node0x664804393 [shape=oval, label="0x2cc0300. (/home/labaccount/11-2-17/mlsa/IG/example/Factory/Factory.cpp)\npizza_information(HamMushroom)"];
+	Node0x171116415 -> Node0x664804393;
+	Node0x445089965 [shape=oval, label="0x2cc0438. (/home/labaccount/11-2-17/mlsa/IG/example/Factory/Factory.cpp)\npizza_information(Deluxe)"];
+	Node0x171116415 -> Node0x445089965;
+	Node0x398465887 [shape=oval, label="0x2cc0570. (/home/labaccount/11-2-17/mlsa/IG/example/Factory/Factory.cpp)\npizza_information(Hawaiian)"];
+	Node0x171116415 -> Node0x398465887;
+	Node0x881828402 [shape=oval, label="0x2cbdfc0. (/home/labaccount/11-2-17/mlsa/IG/example/Factory/Factory.cpp)\nPizzaFactory::PizzaType::createPizza(pizzatype)"];
+	Node0x664804393 -> Node0x881828402;
+	Node0x193971912 [shape=oval, label="0x2cbefe8. (/home/labaccount/11-2-17/mlsa/IG/example/Factory/Factory.cpp)\nPizza::getPrice()"];
+	Node0x664804393 -> Node0x193971912;
+	Node0x732253831 [shape=oval, label="0x2cbdfc0. (/home/labaccount/11-2-17/mlsa/IG/example/Factory/Factory.cpp)\nPizzaFactory::PizzaType::createPizza(pizzatype)"];
+	Node0x445089965 -> Node0x732253831;
+	Node0x701178299 [shape=oval, label="0x2cbefe8. (/home/labaccount/11-2-17/mlsa/IG/example/Factory/Factory.cpp)\nPizza::getPrice()"];
+	Node0x445089965 -> Node0x701178299;
+	Node0x387088859 [shape=oval, label="0x2cbdfc0. (/home/labaccount/11-2-17/mlsa/IG/example/Factory/Factory.cpp)\nPizzaFactory::PizzaType::createPizza(pizzatype)"];
+	Node0x398465887 -> Node0x387088859;
+	Node0x781719058 [shape=oval, label="0x2cbefe8. (/home/labaccount/11-2-17/mlsa/IG/example/Factory/Factory.cpp)\nPizza::getPrice()"];
+	Node0x398465887 -> Node0x781719058;
+}

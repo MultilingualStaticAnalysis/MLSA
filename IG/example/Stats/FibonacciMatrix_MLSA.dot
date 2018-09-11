@@ -1,0 +1,19 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/FibonacciMatrix Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/FibonacciMatrix Call Graph"
+	];
+
+	Node0x871489306 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/FibonacciMatrix/FibonacciMatrix.cpp"];
+	Node0x377897286 [shape=oval, label="0x2d560c0. (/home/labaccount/11-2-17/mlsa/IG/example/FibonacciMatrix/FibonacciMatrix.cpp)\nfibo_matrix(n)"];
+	Node0x871489306 -> Node0x377897286;
+	Node0x831049618 [shape=oval, label="0x2d55158. (/home/labaccount/11-2-17/mlsa/IG/example/FibonacciMatrix/FibonacciMatrix.cpp)\npower(F, BINOP)"];
+	Node0x377897286 -> Node0x831049618;
+	Node0x121927465 [shape=oval, style=dashed, label="0x2d54560. (/home/labaccount/11-2-17/mlsa/IG/example/FibonacciMatrix/FibonacciMatrix.cpp)\npower(F, BINOP)"];
+	Node0x831049618 -> Node0x121927465;
+	Node0x461375134 [shape=oval, label="0x2d546f0. (/home/labaccount/11-2-17/mlsa/IG/example/FibonacciMatrix/FibonacciMatrix.cpp)\nmultiply(F, F)"];
+	Node0x831049618 -> Node0x461375134;
+	Node0x338586903 [shape=oval, label="0x2d54910. (/home/labaccount/11-2-17/mlsa/IG/example/FibonacciMatrix/FibonacciMatrix.cpp)\nmultiply(F, M)"];
+	Node0x831049618 -> Node0x338586903;
+}

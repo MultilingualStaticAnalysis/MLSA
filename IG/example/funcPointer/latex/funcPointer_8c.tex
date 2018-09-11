@@ -1,0 +1,67 @@
+\hypertarget{funcPointer_8c}{}\section{func\+Pointer.\+c File Reference}
+\label{funcPointer_8c}\index{func\+Pointer.\+c@{func\+Pointer.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+Include dependency graph for func\+Pointer.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{funcPointer_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{funcPointer_8c_a880383ca2c18d840f9aa2dd41b50b022}{my\+\_\+int\+\_\+func} (int x)
+\item 
+int \hyperlink{funcPointer_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{func\+Pointer.\+c@{func\+Pointer.\+c}!main@{main}}
+\index{main@{main}!func\+Pointer.\+c@{func\+Pointer.\+c}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{funcPointer_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{funcPointer_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+9 \{
+10     void (*foo)(int);
+11     foo = &\hyperlink{funcPointer_8c_a880383ca2c18d840f9aa2dd41b50b022}{my\_int\_func};
+12 
+13     \textcolor{comment}{/* call my\_int\_func (note that you do not need to write (*foo)(2) ) */}
+14     foo( 2 );
+15     \textcolor{comment}{/* but if you want to, you may */}
+16     (*foo)( 2 );
+17 
+18     \textcolor{keywordflow}{return} 0;
+19 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{funcPointer_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{func\+Pointer.\+c@{func\+Pointer.\+c}!my\+\_\+int\+\_\+func@{my\+\_\+int\+\_\+func}}
+\index{my\+\_\+int\+\_\+func@{my\+\_\+int\+\_\+func}!func\+Pointer.\+c@{func\+Pointer.\+c}}
+\subsubsection[{\texorpdfstring{my\+\_\+int\+\_\+func(int x)}{my_int_func(int x)}}]{\setlength{\rightskip}{0pt plus 5cm}void my\+\_\+int\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{funcPointer_8c_a880383ca2c18d840f9aa2dd41b50b022}{}\label{funcPointer_8c_a880383ca2c18d840f9aa2dd41b50b022}
+
+\begin{DoxyCode}
+3 \{
+4     printf( \textcolor{stringliteral}{"%d\(\backslash\)n"}, x );
+5 \}
+\end{DoxyCode}

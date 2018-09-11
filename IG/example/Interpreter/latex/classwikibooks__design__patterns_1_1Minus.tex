@@ -1,0 +1,117 @@
+\hypertarget{classwikibooks__design__patterns_1_1Minus}{}\section{wikibooks\+\_\+design\+\_\+patterns\+:\+:Minus Class Reference}
+\label{classwikibooks__design__patterns_1_1Minus}\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Minus@{wikibooks\+\_\+design\+\_\+patterns\+::\+Minus}}
+
+
+Inheritance diagram for wikibooks\+\_\+design\+\_\+patterns\+:\+:Minus\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classwikibooks__design__patterns_1_1Minus__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for wikibooks\+\_\+design\+\_\+patterns\+:\+:Minus\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classwikibooks__design__patterns_1_1Minus__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwikibooks__design__patterns_1_1Minus_aded0c8005567ff815dc4ecf6053db1d7}{Minus} (\hyperlink{structwikibooks__design__patterns_1_1Expression}{Expression} $\ast$left, \hyperlink{structwikibooks__design__patterns_1_1Expression}{Expression} $\ast$right)
+\item 
+\hyperlink{classwikibooks__design__patterns_1_1Minus_adb1a9cef8d8bfa63f15a7c53c4da2787}{$\sim$\+Minus} ()
+\item 
+int \hyperlink{classwikibooks__design__patterns_1_1Minus_a6f2e1d5e4281ecee45dff5859af3978f}{interpret} (\hyperlink{namespacewikibooks__design__patterns_adf1889a865861dea765d8a115cc66ae9}{Map} variables)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structwikibooks__design__patterns_1_1Expression}{Expression} $\ast$ \hyperlink{classwikibooks__design__patterns_1_1Minus_af0a888e3e728165e0142bf230f0c2366}{left\+Operand}
+\item 
+\hyperlink{structwikibooks__design__patterns_1_1Expression}{Expression} $\ast$ \hyperlink{classwikibooks__design__patterns_1_1Minus_af555c67688bb374cb76ed7d99aa67220}{right\+Operand}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Minus@{wikibooks\+\_\+design\+\_\+patterns\+::\+Minus}!Minus@{Minus}}
+\index{Minus@{Minus}!wikibooks\+\_\+design\+\_\+patterns\+::\+Minus@{wikibooks\+\_\+design\+\_\+patterns\+::\+Minus}}
+\subsubsection[{\texorpdfstring{Minus(\+Expression $\ast$left, Expression $\ast$right)}{Minus(Expression *left, Expression *right)}}]{\setlength{\rightskip}{0pt plus 5cm}wikibooks\+\_\+design\+\_\+patterns\+::\+Minus\+::\+Minus (
+\begin{DoxyParamCaption}
+\item[{{\bf Expression} $\ast$}]{left, }
+\item[{{\bf Expression} $\ast$}]{right}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwikibooks__design__patterns_1_1Minus_aded0c8005567ff815dc4ecf6053db1d7}{}\label{classwikibooks__design__patterns_1_1Minus_aded0c8005567ff815dc4ecf6053db1d7}
+
+\begin{DoxyCode}
+53                                                \{ 
+54         \hyperlink{classwikibooks__design__patterns_1_1Minus_af0a888e3e728165e0142bf230f0c2366}{leftOperand} = left; 
+55         \hyperlink{classwikibooks__design__patterns_1_1Minus_af555c67688bb374cb76ed7d99aa67220}{rightOperand} = right;
+56     \}
+\end{DoxyCode}
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Minus@{wikibooks\+\_\+design\+\_\+patterns\+::\+Minus}!````~Minus@{$\sim$\+Minus}}
+\index{````~Minus@{$\sim$\+Minus}!wikibooks\+\_\+design\+\_\+patterns\+::\+Minus@{wikibooks\+\_\+design\+\_\+patterns\+::\+Minus}}
+\subsubsection[{\texorpdfstring{$\sim$\+Minus()}{~Minus()}}]{\setlength{\rightskip}{0pt plus 5cm}wikibooks\+\_\+design\+\_\+patterns\+::\+Minus\+::$\sim$\+Minus (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwikibooks__design__patterns_1_1Minus_adb1a9cef8d8bfa63f15a7c53c4da2787}{}\label{classwikibooks__design__patterns_1_1Minus_adb1a9cef8d8bfa63f15a7c53c4da2787}
+
+\begin{DoxyCode}
+57             \{ 
+58     \textcolor{keyword}{delete} \hyperlink{classwikibooks__design__patterns_1_1Minus_af0a888e3e728165e0142bf230f0c2366}{leftOperand};
+59     \textcolor{keyword}{delete} \hyperlink{classwikibooks__design__patterns_1_1Minus_af555c67688bb374cb76ed7d99aa67220}{rightOperand};
+60     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Minus@{wikibooks\+\_\+design\+\_\+patterns\+::\+Minus}!interpret@{interpret}}
+\index{interpret@{interpret}!wikibooks\+\_\+design\+\_\+patterns\+::\+Minus@{wikibooks\+\_\+design\+\_\+patterns\+::\+Minus}}
+\subsubsection[{\texorpdfstring{interpret(\+Map variables)}{interpret(Map variables)}}]{\setlength{\rightskip}{0pt plus 5cm}int wikibooks\+\_\+design\+\_\+patterns\+::\+Minus\+::interpret (
+\begin{DoxyParamCaption}
+\item[{{\bf Map}}]{variables}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classwikibooks__design__patterns_1_1Minus_a6f2e1d5e4281ecee45dff5859af3978f}{}\label{classwikibooks__design__patterns_1_1Minus_a6f2e1d5e4281ecee45dff5859af3978f}
+
+
+Implements \hyperlink{structwikibooks__design__patterns_1_1Expression_a3723a35bb367b43edf806be72385c680}{wikibooks\+\_\+design\+\_\+patterns\+::\+Expression}.
+
+
+\begin{DoxyCode}
+62                                   \{ 
+63         \textcolor{keywordflow}{return} \hyperlink{classwikibooks__design__patterns_1_1Minus_af0a888e3e728165e0142bf230f0c2366}{leftOperand}->\hyperlink{structwikibooks__design__patterns_1_1Expression_a3723a35bb367b43edf806be72385c680}{interpret}(variables) - 
+      \hyperlink{classwikibooks__design__patterns_1_1Minus_af555c67688bb374cb76ed7d99aa67220}{rightOperand}->\hyperlink{structwikibooks__design__patterns_1_1Expression_a3723a35bb367b43edf806be72385c680}{interpret}(variables);
+64     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwikibooks__design__patterns_1_1Minus_a6f2e1d5e4281ecee45dff5859af3978f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Minus@{wikibooks\+\_\+design\+\_\+patterns\+::\+Minus}!left\+Operand@{left\+Operand}}
+\index{left\+Operand@{left\+Operand}!wikibooks\+\_\+design\+\_\+patterns\+::\+Minus@{wikibooks\+\_\+design\+\_\+patterns\+::\+Minus}}
+\subsubsection[{\texorpdfstring{left\+Operand}{leftOperand}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression}$\ast$ wikibooks\+\_\+design\+\_\+patterns\+::\+Minus\+::left\+Operand\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classwikibooks__design__patterns_1_1Minus_af0a888e3e728165e0142bf230f0c2366}{}\label{classwikibooks__design__patterns_1_1Minus_af0a888e3e728165e0142bf230f0c2366}
+\index{wikibooks\+\_\+design\+\_\+patterns\+::\+Minus@{wikibooks\+\_\+design\+\_\+patterns\+::\+Minus}!right\+Operand@{right\+Operand}}
+\index{right\+Operand@{right\+Operand}!wikibooks\+\_\+design\+\_\+patterns\+::\+Minus@{wikibooks\+\_\+design\+\_\+patterns\+::\+Minus}}
+\subsubsection[{\texorpdfstring{right\+Operand}{rightOperand}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression}$\ast$ wikibooks\+\_\+design\+\_\+patterns\+::\+Minus\+::right\+Operand\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classwikibooks__design__patterns_1_1Minus_af555c67688bb374cb76ed7d99aa67220}{}\label{classwikibooks__design__patterns_1_1Minus_af555c67688bb374cb76ed7d99aa67220}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Interpreter_8cpp}{Interpreter.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,29 @@
+digraph "/home/labaccount/11-2-17/mlsa/IG/example/Polymorphism Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="/home/labaccount/11-2-17/mlsa/IG/example/Polymorphism Call Graph"
+	];
+
+	Node0x497722974 [shape=oval, label="/home/labaccount/11-2-17/mlsa/IG/example/Polymorphism/Polymorphism.cpp"];
+	Node0x382481298 [shape=oval, label="0x3692c60. (/home/labaccount/11-2-17/mlsa/IG/example/Polymorphism/Polymorphism.cpp)\nB_class::put_author(<< Tom Clancy >>)"];
+	Node0x497722974 -> Node0x382481298;
+	Node0x529893118 [shape=oval, label="0x3693300. (/home/labaccount/11-2-17/mlsa/IG/example/Polymorphism/Polymorphism.cpp)\nB_class::put_author(<< William Shakespeare >>)"];
+	Node0x497722974 -> Node0x529893118;
+	Node0x104223838 [shape=oval, label="0x36933c0. (/home/labaccount/11-2-17/mlsa/IG/example/Polymorphism/Polymorphism.cpp)\nB_class::show_author()"];
+	Node0x497722974 -> Node0x104223838;
+	Node0x600574886 [shape=oval, label="0x3693448. (/home/labaccount/11-2-17/mlsa/IG/example/Polymorphism/Polymorphism.cpp)\nB_class::show_author()"];
+	Node0x497722974 -> Node0x600574886;
+	Node0x949878567 [shape=oval, label="0x36939a8. (/home/labaccount/11-2-17/mlsa/IG/example/Polymorphism/Polymorphism.cpp)\nD_class::put_title(<< The Tempest >>)"];
+	Node0x497722974 -> Node0x949878567;
+	Node0x909859023 [shape=oval, label="0x3693a80. (/home/labaccount/11-2-17/mlsa/IG/example/Polymorphism/Polymorphism.cpp)\nB_class::show_author()"];
+	Node0x497722974 -> Node0x909859023;
+	Node0x513027437 [shape=oval, label="0x3693b20. (/home/labaccount/11-2-17/mlsa/IG/example/Polymorphism/Polymorphism.cpp)\nD_class::show_title()"];
+	Node0x497722974 -> Node0x513027437;
+	Node0x278203296 [shape=oval, label="0x368cfe0. (/home/labaccount/11-2-17/mlsa/IG/example/Polymorphism/Polymorphism.cpp)\nstrcpy(s.author)"];
+	Node0x382481298 -> Node0x278203296;
+	Node0x990365621 [shape=oval, label="0x368cfe0. (/home/labaccount/11-2-17/mlsa/IG/example/Polymorphism/Polymorphism.cpp)\nstrcpy(s.author)"];
+	Node0x529893118 -> Node0x990365621;
+	Node0x997591906 [shape=oval, label="0x3691478. (/home/labaccount/11-2-17/mlsa/IG/example/Polymorphism/Polymorphism.cpp)\nstrcpy(num.title)"];
+	Node0x949878567 -> Node0x997591906;
+}
