@@ -1,3 +1,4 @@
+%define parse.lac full 
 %token <str>FUNC
 %token <str>MEMFUNC
 %token <str>ID
@@ -40,6 +41,7 @@ input:
 chunk:
 	water
 	| keywordproductions
+        | error
 
 water:
 	keyword

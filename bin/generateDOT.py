@@ -332,6 +332,7 @@ def setFunctionCalls():
     global system, functionCalls, progCallDict, PROGRAM_CSV_CALL_FIELD
     #progCallDict = {'1':['py()', 'js()'], '2':['js()', 'c()', 'cpp()'], '3':['py()', 'c()', 'cpp()']}
     temp = []
+    #print "%%%%%5", system
     for program in system:
         for c in program.csv:
             #c[3].split('.')[-1] gets the suffix of the program (ex: .c, .py...)

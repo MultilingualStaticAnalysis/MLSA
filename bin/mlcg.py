@@ -72,9 +72,11 @@ if csvfiles:
     print "the merged csv can be found in "+cgCsv
     print "creating DOT file..."
     generateDOT.main(cgCsv, title, cgDot)
+    print "DOT file output",cgCsv, title, cgDot
     print "generating call graph..."
     os.system("dot -Tps2 "+cgDot+" -o "+cgPs)
     os.system("ps2pdf "+cgPs+" "+cgPdf)
+    print "ps2pdf "+cgPs+" "+cgPdf
     print "the callgraph can be found in "+cgPdf
 else:
     sys.exit(ERROR+"no language-specific callgraphs found")

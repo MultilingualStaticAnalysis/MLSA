@@ -101,7 +101,7 @@ def deleteLineNo(arg):
         #call deleteLineNo on each object and attribute
         for a in arg.split('.'):
             tempArg = tempArg+'.'+deleteLineNo(a)
-        #tempArg[1:] gets rid of the first . that is added in the for loop
+        #tempArg[1:] gets rid of the first . that is added in the for loop           
         #ex: .callObj.memberVar
         return tempArg[1:]
     #variable
@@ -135,6 +135,7 @@ def compareFuncs(funcList, funcprog, call):
                 prog = '/'+p[x]+prog
             prog = prog[1:]
         if funcprog == prog and call == f[CSV_SCOPE]:
+            #print f[0],"---------------",call
             return f[0], call
     return "", ""
 
@@ -144,6 +145,8 @@ def integrate(call, funcList, progname):
     b = ""
     if '.' in call and call[:4] != 'OBJ.': #program name
         funcprog = call.split('.')[0]+'.'+progname.split('.')[LAST_ELEMENT]
+        #print "row[csv_func]--->",call
+        print funcprog
         c = call.split('.')[LAST_ELEMENT]
         a, b = compareFuncs(funcList, funcprog, c)
     if "::" in call: #member function (probably from a different program)
@@ -161,11 +164,11 @@ def integrate(call, funcList, progname):
 #---------------------------Main Function--------------------------------#
 
 def main(files, funcs, outputCsv):
+
     functions = setFuncs(funcs)
     calls = []
     global typeDict, error
     #typeDict = {'cpp':1, 'c':1, 'py':2, 'js':3}
-
     for filename in files:
         try:
             with open(filename, "r") as csvfile:
@@ -180,6 +183,7 @@ def main(files, funcs, outputCsv):
                     if(typeDict[progType] != 1):
                         row = modifyArgs(row)
                     fprog, row[CSV_FUNCTION] = integrate(row[CSV_FUNCTION], functions, progname)
+                    #print "*",row[CSV_FUNCTION], functions, progname,"\n"
                     row.insert(0, fprog)
                     #adds the program type to the beginning of the csv line
                     row.insert(0, typeDict[progType])
@@ -206,3 +210,4 @@ def main(files, funcs, outputCsv):
 
 #sys.argv.pop(0)
 #main(sys.argv, 'mlcsv')
+#main(sys.argv[1],sys.argv[2],sys.argv[3])

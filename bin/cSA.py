@@ -40,8 +40,9 @@ def main(cfile, funcfile):
     finalCsv = cfile+'_finalcall.csv'
 
     #generate ast
-    os.system('clang-check-3.8 -ast-dump ' + cfile + ' --extra-arg="-fno-color-diagnostics" -- > ' + astfile)
-
+    os.system('clang-check-3.8 -ast-dump --extra-arg-before="-std=c++11" ' + cfile + ' --extra-arg="-fno-color-diagnostics" -- > ' + astfile)
+    #jj='clang-check-3.8 -ast-dump --extra-arg-before="-std=c++11" ' + cfile + ' --extra-arg="-fno-color-diagnostics" -- > ' + astfile
+    #print(jj)
     # cFunCall2 generates a function call csv file (csvfile)
     cFunCall2.main(astfile, cfile, csvfile, funcfile)
     #cRDA generates an rda csv file (rdafile)

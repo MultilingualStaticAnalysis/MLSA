@@ -1,0 +1,86 @@
+%define parse.lac full 
+%token <str>FUNC
+%token <str>MEMFUNC
+%token <str>ID
+%token <str>NAME
+%token <str>NUMBER
+%token <str>STRING
+%token <str>FILENAME
+
+%{
+	#include <iostream>
+  	#include <string>
+  	#include <vector>
+  	#include <stdio.h>
+  	#include <string.h>
+  	#include "Function.h"
+	using namespace std;
+	void yyerror(string);
+	int yylex(void);
+	vector<Function*> funcs;
+	int p = 0;
+	bool i = false;
+	string filename = "";
+	union YYSTYPE {
+		int val;
+		char *str;
+	};
+	typedef union YYSTYPE YYSTYPE;
+%}
+
+%start input
+%type <str>keywordproductions
+
+%%
+
+input:
+	input chunk
+	|
+	;
+
+chunk:
+	water
+	| keywordproductions
+        | error
+
+water:
+	keyword
+	| ID
+	| NAME
+	| NUMBER
+	| STRING
+
+keywordproductions:
+	FUNC ID filler NAME '\''								{ funcs.push_back(new Function(string($4), string($2), filename)); }
+	| MEMFUNC ID filler NAME '\'' 							{ funcs.push_back(new Function(string($4), string($2), filename, true)); }
+
+
+filler:
+	filler NAME
+	| filler ID
+	| filler NUMBER
+	| filler '\''
+	| filler FILENAME 											{ filename = string($2); }
+	|
+	;
+
+keyword:
+	'\''
+	| FILENAME													{ filename = string($1); }
+
+%%
+
+void yyerror(string s) {
+	cerr << s << " " << yylval.str << endl;
+}
+
+int main(void) {
+	yyparse();
+	for(int k = 0; k < funcs.size(); k++) {
+		cout << funcs[k]->print() << endl;
+	}
+	for(int j=0; j<funcs.size(); j++) {
+		delete funcs[j];
+	}
+	return 0;
+}

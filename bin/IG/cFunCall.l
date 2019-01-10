@@ -25,14 +25,16 @@
 	/* tab in AST (sets apart blocks) */
 "|"																			{
 																				yylval.str = strdup(yytext);
-																				//cout << "TAB: " << yylval.str << endl;
+																				
+//cout << "TAB: " << yylval.str << endl;
 																				return TAB;
 																			}
 
 	/* tick in AST (shows that the line is still inside the block) */
 "`"																			{
 																				yylval.str = strdup(yytext);
-																				//cout << "TICK: " << yylval.str << endl;
+																				
+//cout << "TICK: " << yylval.str << endl;
 																				return TICK;
 																			}
 
@@ -87,24 +89,30 @@
 	/* variable ID number */
 "0x"[a-z0-9]*																{
 																				yylval.str = strdup(yytext);
-																				// **line below for debugging IG
-																				//cout << "ID: " << yylval.str << endl;
+																				
+// **line below for debugging IG
+																				
+//cout << "ID: " << yylval.str << endl;
 																				return ID;
 																			}
 
 	/* variable or function name */
 [~a-zA-Z_-][a-zA-Z0-9_:-]*														{
 																				yylval.str = strdup(yytext);
-																				// **line below for debugging IG
-																				//cout << "NAME: " << yylval.str << endl;
+																				
+// **line below for debugging IG
+																				
+//cout << "NAME: " << yylval.str << endl;
 																				return NAME;
 																			}
 
 	/* number */
 "-"?[0-9]+"."?[0-9]*														{
 																				yylval.str = strdup(yytext);
-																				// **line below for debugging IG
-																				//cout << "Number: " << yylval.str << endl;
+																				
+// **line below for debugging IG
+																				
+//cout << "Number: " << yylval.str << endl;
 																				return NUMBER;
 																			}
 
@@ -112,8 +120,10 @@
 "\""(\\.|[^"\\])*"\""														{
 																				yytext[strlen(yytext)-1] = 0;
 																				yylval.str = strdup(&yytext[1]);
-																				// **line below for debugging IG
-																				//cout << "STRING: " << yylval.str << endl;
+																				
+// **line below for debugging IG
+																			
+//cout << "STRING: " << yylval.str << endl;
 																				return STRING;
 																			}
 
@@ -134,6 +144,7 @@
 
 %%
 
-int yywrap(void) {
+int yywrap(void) 
+{
 	return 1;
 }
