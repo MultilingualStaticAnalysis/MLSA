@@ -97,7 +97,7 @@ arg:
 	| UNOP 													{ parser.addOp(tabcount, t, "UNOP"); }
 	| MEMBER filler '\'' dynamclass '\'' filler NAME ID		{ parser.addMem(tabcount, t, string($7)); }
 	| INT filler '\'' NUMBER								{ parser.addArgument(tabcount, t, string($4)); }
-	| STR filler STRING										{ parser.addArgument(tabcount, t, "<< "+string($3)+" >>"); }
+	| STR filler STRING										{ parser.addArgument(tabcount, t, "<"+string($3)+">"); }
 	| SUB filler '\'' dynamclass '\''						{ parser.addSub(tabcount, t); }
 	| BINOP 												{ parser.addOp(tabcount, t, "BINOP"); }
 	| DYNAM filler '\'' dynamclass '\''						{ parser.checkcall(tabcount, t); }

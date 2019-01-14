@@ -1629,7 +1629,7 @@ yyreduce:
 
   case 28:
 #line 100 "cFunCall.ypp" /* yacc.c:1646  */
-    { parser.addArgument(tabcount, t, "<< "+string((yyvsp[0].str))+" >>"); }
+    { parser.addArgument(tabcount, t, "<"+string((yyvsp[0].str))+">"); }
 #line 1634 "cFunCall.tab.cpp" /* yacc.c:1646  */
     break;
 

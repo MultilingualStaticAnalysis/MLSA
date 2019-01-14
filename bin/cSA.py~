@@ -46,7 +46,7 @@ def main(cfile, funcfile):
     # cFunCall2 generates a function call csv file (csvfile)
     cFunCall2.main(astfile, cfile, csvfile, funcfile)
     #cRDA generates an rda csv file (rdafile)
-    #cRDAGroup.main(astfile, cfile, rdafile)
+    cRDAGroup.main(astfile, cfile, rdafile)
     #pyViaC generates another function call csv file but with Python file substitution
     pyViaC.main(csvfile, cfile, rdafile, finalCsv)
 
