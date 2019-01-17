@@ -125,6 +125,7 @@ def setFuncs(funcList):
 #this is important for calling functions defined in another program
 def compareFuncs(funcList, funcprog, call):
     numSlashes = len(funcprog.split('/'))
+    funcprog_c=funcprog.split('.')[0]+'.cpp'
     for f in funcList:
         p = f[0].split('/')
         prog = ''
@@ -135,20 +136,27 @@ def compareFuncs(funcList, funcprog, call):
                 prog = '/'+p[x]+prog
             prog = prog[1:]
         if funcprog == prog and call == f[CSV_SCOPE]:
-            #print f[0],"---------------",call
             return f[0], call
+#This checks for c++ being called by python(using pybind)
+#Checks if the module is for c++ file e.g.,example.cpp
+        if funcprog_c == prog and call==f[CSV_SCOPE]:
+            return f[0], call
+
     return "", ""
 
 #this is important for calling functions defined in another program
 def integrate(call, funcList, progname):
+
     a = ""
     b = ""
     if '.' in call and call[:4] != 'OBJ.': #program name
+        
         funcprog = call.split('.')[0]+'.'+progname.split('.')[LAST_ELEMENT]
-        #print "row[csv_func]--->",call
-        print funcprog
+
         c = call.split('.')[LAST_ELEMENT]
+
         a, b = compareFuncs(funcList, funcprog, c)
+
     if "::" in call: #member function (probably from a different program)
         funcprog = call.split('::')[0]+'.'+progname.split('.')[LAST_ELEMENT]
         c = call.split('::')[LAST_ELEMENT]
@@ -164,7 +172,7 @@ def integrate(call, funcList, progname):
 #---------------------------Main Function--------------------------------#
 
 def main(files, funcs, outputCsv):
-
+    #print files,"----",funcs,"----",outputCsv
     functions = setFuncs(funcs)
     calls = []
     global typeDict, error
@@ -183,7 +191,6 @@ def main(files, funcs, outputCsv):
                     if(typeDict[progType] != 1):
                         row = modifyArgs(row)
                     fprog, row[CSV_FUNCTION] = integrate(row[CSV_FUNCTION], functions, progname)
-                    #print "*",row[CSV_FUNCTION], functions, progname,"\n"
                     row.insert(0, fprog)
                     #adds the program type to the beginning of the csv line
                     row.insert(0, typeDict[progType])

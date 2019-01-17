@@ -1,0 +1,31 @@
+digraph "test-pybind Call Graph" {
+	graph [dpi=300
+		rankdir=LR
+		size="7.5, 10"
+		label="test-pybind Call Graph"
+	];
+
+	Node0x242905392 [shape=rectangle, label="test-pybind/test.py"];
+	Node0x901595627 [shape=rectangle, label="9. (test-pybind/test.py)\nX()"];
+	Node0x242905392 -> Node0x901595627;
+	Node0x821839517 [shape=rectangle, label="10. (test-pybind/test.py)\nY()"];
+	Node0x242905392 -> Node0x821839517;
+	Node0x483455356 [shape=oval, label="0. (/home/labaccount/mlsa/MLSA/test/test-pybind/example.cpp)\nadd(<2>)"];
+	Node0x901595627 -> Node0x483455356;
+	Node0x367037531 [shape=oval, label="1. (/home/labaccount/mlsa/MLSA/test/test-pybind/example.cpp)\nadd(<3>)"];
+	Node0x901595627 -> Node0x367037531;
+	Node0x643770032 [shape=oval, label="2. (/home/labaccount/mlsa/MLSA/test/test-pybind/example.cpp)\nsubt(<7>, <5>)"];
+	Node0x901595627 -> Node0x643770032;
+	Node0x499761598 [shape=rectangle, label="3. (test-pybind/test.py)\nOBJ.sum1(<5>, <3>)"];
+	Node0x901595627 -> Node0x499761598;
+	Node0x604219606 [shape=rectangle, label="4. (test-pybind/test.py)\nOBJ.diff(<4>, <2>)"];
+	Node0x901595627 -> Node0x604219606;
+	Node0x382742737 [shape=oval, label="5. (/home/labaccount/mlsa/MLSA/test/test-pybind/example2.cpp)\nadd(<5>)"];
+	Node0x821839517 -> Node0x382742737;
+	Node0x194765997 [shape=oval, label="6. (/home/labaccount/mlsa/MLSA/test/test-pybind/example2.cpp)\nsubt(<9>, <3>)"];
+	Node0x821839517 -> Node0x194765997;
+	Node0x590087013 [shape=oval, label="7. (/home/labaccount/mlsa/MLSA/test/test-pybind/example3.cpp)\nadd(<2>, <4>)"];
+	Node0x821839517 -> Node0x590087013;
+	Node0x676997206 [shape=rectangle, label="8. (test-pybind/test.py)\nexample3.subtract(<4>, <1>)"];
+	Node0x821839517 -> Node0x676997206;
+}

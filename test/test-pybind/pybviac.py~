@@ -1,0 +1,30 @@
+import glob
+import os
+import csv
+import sys
+#read csv file
+with open('example.cpp_call.csv','r') as f: #read python function call file
+    reader = csv.reader(f)
+    my_list=list(reader)
+    for row in my_list:           
+        if row[3]=='pybind11_init_wrapper' and row[2][:4]=='init':
+            
+            mod=row[2][4:]
+            print mod
+            filename=str(mod)+'.py_finalcall.csv'
+            temp='pybind11_init_'+str(mod)
+            print "yayy!!!",filename
+            with open(filename,'w') as ff:
+                writer = csv.writer(ff)
+
+                for row in my_list:
+                    if row[3]=='OBJ.def' and row[2]==temp:
+
+                        func=row[4][1:-1]
+                        print func
+                        for row in my_list:
+                            #print row[2]
+                            if row[2]== func:
+                               print "hurray"
+                               writer.writerows([row])
+            

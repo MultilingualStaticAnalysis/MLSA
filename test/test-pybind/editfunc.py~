@@ -1,0 +1,19 @@
+import glob
+import os
+import csv
+import sys
+
+with open('test.py_finalcall.csv','r') as f: #read python function call file
+    reader = csv.reader(f)
+    my_list=list(reader)
+    for row in my_list:           #search for module name in python csv file
+        if '.' in row[3]:
+            program=row[3].split('.')[0]+'.py'
+            func=row[3].split('.')[-1]
+            edit_func = [program,'GLOBAL',func] 
+          
+            print edit_func
+            with open('xx_funcs.csv', 'a') as csvFile:
+                writer = csv.writer(csvFile)
+                writer.writerow(edit_func)
+            csvFile.close()

@@ -50,14 +50,14 @@ FUNC_NAME = 2
 # calls the IG and collects the function calls printed in a list
 def collectCalls(astfile, calls):
 	i = commands.getstatusoutput(path+"cFunCall < "+astfile) # returns output of the IG to variable 
-        #i = commands.getstatusoutput("./test < "+astfile) 
+
 
 	# only accept programs that were successfully parsed by the IG
 
-        boo= "syntax error" in i[ISLAND_GRAMMAR_CALLS]
-        boo= False
-	if i[ISLAND_GRAMMAR_STATUS] == 0 and i[ISLAND_GRAMMAR_CALLS] != "" and not boo: # and "syntax error" not in i[ISLAND_GRAMMAR_CALLS]: ---fix it latr
-		
+        syn_error= "syntax error" in i[ISLAND_GRAMMAR_CALLS]
+        syn_error= False
+	if i[ISLAND_GRAMMAR_STATUS] == 0 and i[ISLAND_GRAMMAR_CALLS] != "" and not syn_error:
+ 
                 c = i[ISLAND_GRAMMAR_CALLS].split('\n')
 		for d in c:
 			#id,MEMBER/GLOBAL,scope,name,args...
@@ -68,7 +68,6 @@ def collectCalls(astfile, calls):
 def refineCalls(cfile, calls, fileCalls):
 	for c in calls:                
 		if len(c) > CALL_SCOPE:
-                        ##print c[CALL_SCOPE]
 			# change the main program to the name of the C/C++ file (for the call graph)
 			if c[CALL_SCOPE] == "main":
 				c[CALL_SCOPE] = cfile
@@ -76,7 +75,6 @@ def refineCalls(cfile, calls, fileCalls):
 	for c in calls:
 		# find all the calls inside the body of the program and deep copy them
 		# must be deep copy because they are lists
-                ##print c[CALL_FILE]
 		if cfile in c[CALL_FILE]:
 			fileCalls.append(deepcopy(c))
 			# the name of the file is only important for this function
@@ -88,9 +86,9 @@ def refineCalls(cfile, calls, fileCalls):
 def collectFuncs(astfile, functions):
 	i = commands.getstatusoutput(path+"cFuncDecl < "+astfile)
 
-        boo1= "syntax error" in i[ISLAND_GRAMMAR_CALLS]
-        boo1=False  
-	if i[ISLAND_GRAMMAR_STATUS] == 0 and i[ISLAND_GRAMMAR_FUNCS] != "" and not boo1:# and "syntax error" not in i[ISLAND_GRAMMAR_FUNCS]:----fix it
+        syn_error1= "syntax error" in i[ISLAND_GRAMMAR_CALLS]
+        syn_error1=False  
+	if i[ISLAND_GRAMMAR_STATUS] == 0 and i[ISLAND_GRAMMAR_FUNCS] != "" and not syn_error1:
 		c = i[ISLAND_GRAMMAR_FUNCS].split('\n')
 		for d in c:
 			#filename,MEMBER/GLOBAL,functionName
@@ -99,9 +97,7 @@ def collectFuncs(astfile, functions):
 
 # only include functions defined in the program
 def refineFuncs(cfile, functions, fileFunctions):
-        ##print("$$$$",cfile)
 	for f in functions:
-                #print("#####",functions)
 		add = True
 		if cfile in f[FUNC_FILE]:
 			#make sure that you are not adding a duplicate (this happens)
@@ -114,7 +110,6 @@ def refineFuncs(cfile, functions, fileFunctions):
 # print the function calls to CSV file filename.c[pp]_call.csv
 def printCalls(csvfile, fileCalls):
 	try:
-                #print(fileCalls)
 		with open(csvfile, 'w') as f:
 			writer = csv.writer(f)
 			writer.writerows(fileCalls)
@@ -124,7 +119,6 @@ def printCalls(csvfile, fileCalls):
 # print the functions to the CSV file codebaseName_funcs.csv
 def printFuncs(funcfile, fileFunctions):
 	try:
-               ## print("------",fileFunctions)
 		with open(funcfile, 'a') as f:
 			writer = csv.writer(f)
 			writer.writerows(fileFunctions)
